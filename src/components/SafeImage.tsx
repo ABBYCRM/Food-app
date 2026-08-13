@@ -1,16 +1,21 @@
 import { useState, type ImgHTMLAttributes } from "react";
 import { fallbackFor, type ArtSize } from "@/lib/recipeArt";
+import { imageIsLikelyGood, markImageFailed, markImageLoaded } from "@/lib/imageCache";
 
 /**
  * Smart image with three states:
  *   1. loading skeleton (cream gradient with subtle shimmer)
  *   2. real image (Pollinations.ai or whatever the src is)
- *   3. per-recipe themed SVG fallback (only when src fails)
+ *   3. per-recipe themed SVG fallback (only when src fails or is known-bad)
  *
  * The fallback is generated from the recipe's slug so the failure state
  * still looks like the dish — never a blank box or a "broken image" icon.
  *
- * If the slug isn't recognized, the generic Mestizo Umami mark is used.
+ * Integrates with the global image cache:
+ *   - On mount: if the URL is known-failed, render the fallback immediately
+ *     without ever trying the network.
+ *   - On load: mark the URL as known-good.
+ *   - On error: mark the URL as known-bad and render the fallback.
  */
 
 type Props = ImgHTMLAttributes<HTMLImageElement> & {
@@ -18,6 +23,13 @@ type Props = ImgHTMLAttributes<HTMLImageElement> & {
   recipeSlug?: string;
   /** Aspect ratio hint for the fallback art. Defaults to "hero". */
   fallbackSize?: ArtSize;
+  /**
+   * If true, render the per-recipe fallback art as the primary image instead
+   * of the network src. Use this on dense card grids to avoid hammering
+   * image CDNs with concurrent requests (which triggers 429 rate-limits).
+   * The real image will still load on the recipe detail page.
+   */
+  preferArt?: boolean;
 };
 
 function buildFallback(slug?: string, size: ArtSize = "hero"): string {
@@ -48,12 +60,23 @@ export function SafeImage({
   className,
   recipeSlug,
   fallbackSize = "hero",
+  preferArt = false,
   ...rest
 }: Props) {
-  const [errored, setErrored] = useState(false);
-  const [loaded, setLoaded] = useState(false);
   const fallbackSrc = buildFallback(recipeSlug, fallbackSize);
-  const showSrc = errored || !src ? fallbackSrc : src;
+
+  // If we know the URL has failed recently, skip the network attempt entirely
+  // and render the fallback directly. This is the main lever against the
+  // Pollinations 429 storm — we stop hammering a known-broken URL.
+  const [shouldAttempt] = useState(() => !!src && imageIsLikelyGood(src));
+
+  // If preferArt is set, force the per-recipe art (no network attempt).
+  const forceFallback = preferArt;
+
+  const [errored, setErrored] = useState<boolean>(forceFallback || !shouldAttempt);
+  const [loaded, setLoaded] = useState(false);
+  const showSrc = errored || !src ? fallbackSrc : src!;
+
   return (
     <>
       {!loaded && !errored ? (
@@ -73,8 +96,16 @@ export function SafeImage({
         referrerPolicy="no-referrer-when-downgrade"
         className={className}
         style={{ ...rest.style, opacity: loaded || errored ? 1 : 0, transition: "opacity 320ms ease" }}
-        onLoad={(e) => { setLoaded(true); onLoad?.(e); }}
-        onError={(e) => { setErrored(true); onError?.(e); }}
+        onLoad={(e) => {
+          setLoaded(true);
+          if (src) markImageLoaded(src);
+          onLoad?.(e);
+        }}
+        onError={(e) => {
+          setErrored(true);
+          if (src) markImageFailed(src);
+          onError?.(e);
+        }}
       />
     </>
   );

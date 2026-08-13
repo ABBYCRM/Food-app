@@ -123,6 +123,7 @@ export function PlannerPage() {
                     src={r.thumb}
                     recipeSlug={r.slug}
                     fallbackSize="thumb"
+                    preferArt
                     alt=""
                     className="w-12 h-12 rounded-input object-cover shrink-0"
                   />
@@ -232,6 +233,7 @@ export function PlannerPage() {
                       src={r.thumb}
                       recipeSlug={r.slug}
                       fallbackSize="thumb"
+                      preferArt
                       alt=""
                       className="w-10 h-10 rounded-md object-cover shrink-0"
                     />

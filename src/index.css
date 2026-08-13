@@ -357,6 +357,10 @@
     text-transform: uppercase;
     letter-spacing: 0.14em;
     border-radius: var(--radius-pill);
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .flavor-chip {
     display: inline-flex;

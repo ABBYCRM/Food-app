@@ -30,14 +30,15 @@ export function RecipeCard({ recipe, big = false }: { recipe: Recipe; big?: bool
           src={recipe.hero}
           recipeSlug={recipe.slug}
           fallbackSize={big ? "phone" : "thumb"}
+          preferArt
           alt={recipe.title[locale]}
           loading="lazy"
           className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.04]"
         />
         {/* Two-stop gradient: top is faint, bottom 60% darkens for title legibility regardless of photo brightness. */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/0" />
-        <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">
-          <span className="pill bg-chili/95 text-bone-50">
+        <div className="absolute top-3 left-3 right-14 flex flex-wrap gap-1.5 pointer-events-none">
+          <span className="pill bg-chili/95 text-bone-50 max-w-full">
             {recipe.origin[locale]}
           </span>
         </div>
