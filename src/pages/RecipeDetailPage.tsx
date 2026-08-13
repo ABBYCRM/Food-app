@@ -1,7 +1,8 @@
 import { useMemo, useState } from "react";
 import { useLocation } from "wouter";
 import {
-  ArrowLeft, Bookmark, Share2, CalendarPlus, GitFork, Clock, Flame, Sparkles, ShieldAlert, ChefHat,
+  ArrowLeft, Bookmark, Share2, CalendarPlus, GitFork, Clock, Flame, Sparkles, ShieldAlert, ChefHat, X,
+  Coffee, Sun, Moon, Cookie,
 } from "lucide-react";
 import { Layout } from "@/components/Layout";
 import { SafeImage } from "@/components/SafeImage";
@@ -11,7 +12,7 @@ import { ShoppingPanel } from "@/components/ShoppingPanel";
 import { VendorPanel } from "@/components/VendorPanel";
 import { ChefPanel } from "@/components/ChefPanel";
 import { PaywallModal } from "@/components/PaywallModal";
-import { useUser } from "@/context/UserContext";
+import { useUser, type MealSlot, MEAL_SLOTS } from "@/context/UserContext";
 import { useTrial } from "@/context/TrialContext";
 import { dict } from "@/i18n";
 import type { Ingredient } from "@/data/recipes";
@@ -20,12 +21,16 @@ import { recipeBySlug, relatedRecipes } from "@/data/recipes";
 import { scaledIngredientParts } from "@/lib/scaling";
 import { cn } from "@/lib/cn";
 
+const SLOT_ICON: Record<MealSlot, typeof Coffee> = {
+  breakfast: Coffee, lunch: Sun, dinner: Moon, snack: Cookie,
+};
+
 function findRecipe(slug: string) {
   return recipeBySlug(slug) ?? allRecipesForCalendar().find((r) => r.slug === slug);
 }
 
 export function RecipeDetailPage({ slug }: { slug: string }) {
-  const { locale, isFavorite, toggleFavorite, getNote, setNote, planDay, addUserRecipe } = useUser();
+  const { locale, isFavorite, toggleFavorite, getNote, setNote, planSlot, addUserRecipe } = useUser();
   const { canWrite } = useTrial();
   const [, navigate] = useLocation();
   const t = dict[locale];
@@ -34,6 +39,7 @@ export function RecipeDetailPage({ slug }: { slug: string }) {
   const [servings, setServings] = useState<number>(found?.serves ?? 4);
   const [planFeedback, setPlanFeedback] = useState(false);
   const [paywallOpen, setPaywallOpen] = useState(false);
+  const [slotPickerOpen, setSlotPickerOpen] = useState(false);
 
   if (!found) {
     return (
@@ -70,10 +76,10 @@ export function RecipeDetailPage({ slug }: { slug: string }) {
     action();
   };
 
-  function addToPlanner() {
+  function addToPlanner(slot: MealSlot) {
     const today = new Date();
     const dayKey = today.toISOString().slice(0, 10);
-    planDay(dayKey, recipe.slug);
+    planSlot(dayKey, slot, recipe.slug);
     setPlanFeedback(true);
     setTimeout(() => setPlanFeedback(false), 1800);
   }
@@ -316,7 +322,7 @@ export function RecipeDetailPage({ slug }: { slug: string }) {
       <section className="page-pad pt-5 pb-2 grid grid-cols-2 gap-3">
         <button
           type="button"
-          onClick={() => requireWrite(addToPlanner)}
+          onClick={() => requireWrite(() => setSlotPickerOpen(true))}
           className={cn("btn btn-teal", planFeedback && "!bg-jade")}
         >
           <CalendarPlus size={15} /> {planFeedback ? t.recipe.addedToPlanner : t.recipe.addToPlanner}
@@ -329,6 +335,50 @@ export function RecipeDetailPage({ slug }: { slug: string }) {
           <GitFork size={15} /> {t.recipe.forkToNotebook}
         </button>
       </section>
+
+      {/* Slot picker modal — choose which meal to add this recipe to */}
+      {slotPickerOpen ? (
+        <div className="fixed inset-0 z-modal bg-ink/55 backdrop-blur-sm grid place-items-center px-4" role="dialog" aria-modal="true" aria-label={t.recipe.addToPlanner}>
+          <div className="max-w-[420px] w-full bg-bone-50 rounded-card-lg overflow-hidden card-surface">
+            <div className="px-4 py-3 border-b border-line-soft flex items-center justify-between">
+              <div className="font-display text-lg">{t.recipe.addToPlanner}</div>
+              <button type="button" onClick={() => setSlotPickerOpen(false)} className="p-1 rounded-pill hover:bg-ink/[0.06]" aria-label={t.common.cancel}>
+                <X size={16} />
+              </button>
+            </div>
+            <div className="p-3 space-y-2">
+              {MEAL_SLOTS.map((slot) => {
+                const Icon = SLOT_ICON[slot];
+                return (
+                  <button
+                    key={slot}
+                    type="button"
+                    onClick={() => { addToPlanner(slot); setSlotPickerOpen(false); }}
+                    className={cn(
+                      "w-full flex items-center gap-3 px-3 py-3 rounded-input text-left",
+                      "border border-line hover:border-chili hover:bg-chili/[0.04] transition-colors"
+                    )}
+                  >
+                    <span
+                      className={cn(
+                        "w-9 h-9 grid place-items-center rounded-pill shrink-0",
+                        slot === "breakfast" ? "bg-corn/20 text-corn-600"
+                        : slot === "lunch" ? "bg-jade/15 text-jade-600"
+                        : slot === "dinner" ? "bg-chili/15 text-chili-600"
+                        : "bg-teal/15 text-teal-600"
+                      )}
+                    >
+                      <Icon size={16} />
+                    </span>
+                    <span className="flex-1 text-sm font-semibold">{t.planner.slot[slot]}</span>
+                    <span className="text-[10px] uppercase tracking-[0.14em] text-ink-muted">{t.planner.slotShort[slot]}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      ) : null}
 
       {/* Related */}
       {related.length > 0 ? (

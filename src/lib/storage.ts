@@ -49,7 +49,7 @@ export function exportAll(): string {
 }
 
 const ALLOWED_KEYS = new Set([
-  "locale", "zip", "favorites", "notes", "userRecipes", "planner", "avoiding", "dietary",
+  "locale", "zip", "favorites", "notes", "userRecipes", "planner", "plannerSlots", "avoiding", "dietary",
   "trialStartedAt", "trialUnlockedAt", "trialDismissedAt",
 ]);
 

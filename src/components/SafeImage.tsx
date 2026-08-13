@@ -1,21 +1,23 @@
-import { useState, type ImgHTMLAttributes } from "react";
+import { useEffect, useRef, useState, type ImgHTMLAttributes } from "react";
 import { fallbackFor, type ArtSize } from "@/lib/recipeArt";
 import { imageIsLikelyGood, markImageFailed, markImageLoaded } from "@/lib/imageCache";
 
 /**
  * Smart image with three states:
- *   1. loading skeleton (cream gradient with subtle shimmer)
+ *   1. loading skeleton (cream gradient)
  *   2. real image (Pollinations.ai or whatever the src is)
- *   3. per-recipe themed SVG fallback (only when src fails or is known-bad)
+ *   3. per-recipe themed SVG fallback (when src fails, times out, or
+ *      is opted-out via preferArt)
  *
- * The fallback is generated from the recipe's slug so the failure state
- * still looks like the dish — never a blank box or a "broken image" icon.
- *
- * Integrates with the global image cache:
- *   - On mount: if the URL is known-failed, render the fallback immediately
- *     without ever trying the network.
- *   - On load: mark the URL as known-good.
- *   - On error: mark the URL as known-bad and render the fallback.
+ * Reliability rules:
+ *   - 8-second timeout: if the real image hasn't loaded by then, switch to
+ *     the fallback. Pollinations can take 5-10s for a new image; for cached
+ *     images it's <1s. The 8s budget gives the network a fair shot without
+ *     leaving the user staring at a skeleton.
+ *   - The fallback is generated from the recipe slug so the failure state
+ *     still looks like the dish — never a blank box or a "broken image" icon.
+ *   - The global image cache (imageCache.ts) blacklists URLs that fail
+ *     once so we don't hammer them on every component mount.
  */
 
 type Props = ImgHTMLAttributes<HTMLImageElement> & {
@@ -30,6 +32,11 @@ type Props = ImgHTMLAttributes<HTMLImageElement> & {
    * The real image will still load on the recipe detail page.
    */
   preferArt?: boolean;
+  /**
+   * Timeout for the real image load before falling back to the per-recipe
+   * art. Defaults to 8s. Pass 0 to disable.
+   */
+  timeoutMs?: number;
 };
 
 function buildFallback(slug?: string, size: ArtSize = "hero"): string {
@@ -61,6 +68,7 @@ export function SafeImage({
   recipeSlug,
   fallbackSize = "hero",
   preferArt = false,
+  timeoutMs = 8000,
   ...rest
 }: Props) {
   const fallbackSrc = buildFallback(recipeSlug, fallbackSize);
@@ -71,11 +79,29 @@ export function SafeImage({
   const [shouldAttempt] = useState(() => !!src && imageIsLikelyGood(src));
 
   // If preferArt is set, force the per-recipe art (no network attempt).
-  const forceFallback = preferArt;
-
-  const [errored, setErrored] = useState<boolean>(forceFallback || !shouldAttempt);
+  const forceFallback = preferArt || !shouldAttempt;
+  const [errored, setErrored] = useState<boolean>(forceFallback);
   const [loaded, setLoaded] = useState(false);
   const showSrc = errored || !src ? fallbackSrc : src!;
+
+  // Timeout: if the image hasn't loaded by `timeoutMs`, fail over to the
+  // fallback. This catches the case where Pollinations is taking 30s
+  // (which it does for cold-cache prompts) or returning a non-image.
+  const timerRef = useRef<number | null>(null);
+  useEffect(() => {
+    if (forceFallback || loaded || errored) return;
+    if (timeoutMs <= 0) return;
+    timerRef.current = window.setTimeout(() => {
+      setErrored(true);
+      if (src) markImageFailed(src);
+    }, timeoutMs);
+    return () => {
+      if (timerRef.current !== null) {
+        window.clearTimeout(timerRef.current);
+        timerRef.current = null;
+      }
+    };
+  }, [forceFallback, loaded, errored, timeoutMs, src]);
 
   return (
     <>
@@ -98,11 +124,19 @@ export function SafeImage({
         style={{ ...rest.style, opacity: loaded || errored ? 1 : 0, transition: "opacity 320ms ease" }}
         onLoad={(e) => {
           setLoaded(true);
+          if (timerRef.current !== null) {
+            window.clearTimeout(timerRef.current);
+            timerRef.current = null;
+          }
           if (src) markImageLoaded(src);
           onLoad?.(e);
         }}
         onError={(e) => {
           setErrored(true);
+          if (timerRef.current !== null) {
+            window.clearTimeout(timerRef.current);
+            timerRef.current = null;
+          }
           if (src) markImageFailed(src);
           onError?.(e);
         }}

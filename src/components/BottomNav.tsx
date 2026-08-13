@@ -1,5 +1,5 @@
 import { useLocation } from "wouter";
-import { Home, BookOpen, CalendarDays, NotebookPen, ChefHat } from "lucide-react";
+import { Home, BookOpen, CalendarDays, NotebookPen } from "lucide-react";
 import { useUser } from "@/context/UserContext";
 import { dict, locales, type Locale } from "@/i18n";
 import { cn } from "@/lib/cn";
@@ -12,7 +12,6 @@ export function BottomNav() {
   const tabs = [
     { key: "home", to: "/", label: t.nav.home, icon: Home },
     { key: "recipes", to: "/recipes", label: t.nav.recipes, icon: BookOpen },
-    { key: "chefs", to: "/chefs", label: t.nav.chefs, icon: ChefHat },
     { key: "planner", to: "/planner", label: t.nav.planner, icon: CalendarDays },
     { key: "notebook", to: "/notebook", label: t.nav.notebook, icon: NotebookPen },
   ];

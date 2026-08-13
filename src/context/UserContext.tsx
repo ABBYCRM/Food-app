@@ -18,13 +18,23 @@ export type UserRecipe = {
 
 export type PlannerEntry = { dayKey: string; recipeSlug: string };
 
+/** Meal slot for the daily planner. Each day has 4 slots. */
+export type MealSlot = "breakfast" | "lunch" | "dinner" | "snack";
+export const MEAL_SLOTS: MealSlot[] = ["breakfast", "lunch", "dinner", "snack"];
+
+/** New shape: plannerSlots[dayKey][slot] = recipeSlug | undefined. */
+export type PlannerDaySlots = Partial<Record<MealSlot, string>>;
+
 type State = {
   locale: Locale;
   zip: string;
   favorites: string[];
   notesByRecipe: Record<string, string>;
   userRecipes: UserRecipe[];
+  /** Legacy single-slot per day. Kept for migration; new code uses plannerSlots. */
   planner: Record<string, string>;
+  /** Multi-slot per day. Each day has up to 4 slots (breakfast/lunch/dinner/snack). */
+  plannerSlots: Record<string, PlannerDaySlots>;
   avoiding: Allergen[];
   dietary: Dietary[];
 };
@@ -39,7 +49,11 @@ type Actions = {
   addUserRecipe: (r: Omit<UserRecipe, "id" | "createdAt">) => UserRecipe;
   updateUserRecipe: (id: string, r: Partial<UserRecipe>) => void;
   deleteUserRecipe: (id: string) => void;
+  /** Legacy single-slot setter. Maps to plannerSlots[dayKey].dinner for back-compat. */
   planDay: (dayKey: string, slug: string | null) => void;
+  /** New multi-slot setter. */
+  planSlot: (dayKey: string, slot: MealSlot, slug: string | null) => void;
+  getSlot: (dayKey: string, slot: MealSlot) => string | null;
   toggleAvoiding: (a: Allergen) => void;
   toggleDietary: (d: Dietary) => void;
   resetFilters: () => void;
@@ -62,6 +76,7 @@ export function UserProvider({ children }: { children: ReactNode }) {
   const [notesByRecipe, setNotesByRecipe] = useState<Record<string, string>>(() => load("notes", {}));
   const [userRecipes, setUserRecipes] = useState<UserRecipe[]>(() => load("userRecipes", []));
   const [planner, setPlanner] = useState<Record<string, string>>(() => load("planner", {}));
+  const [plannerSlots, setPlannerSlots] = useState<Record<string, PlannerDaySlots>>(() => load("plannerSlots", {}));
   const [avoiding, setAvoiding] = useState<Allergen[]>(() => load("avoiding", []));
   const [dietary, setDietary] = useState<Dietary[]>(() => load("dietary", []));
 
@@ -71,6 +86,7 @@ export function UserProvider({ children }: { children: ReactNode }) {
   useEffect(() => { save("notes", notesByRecipe); }, [notesByRecipe]);
   useEffect(() => { save("userRecipes", userRecipes); }, [userRecipes]);
   useEffect(() => { save("planner", planner); }, [planner]);
+  useEffect(() => { save("plannerSlots", plannerSlots); }, [plannerSlots]);
   useEffect(() => { save("avoiding", avoiding); }, [avoiding]);
   useEffect(() => { save("dietary", dietary); }, [dietary]);
 
@@ -111,7 +127,42 @@ export function UserProvider({ children }: { children: ReactNode }) {
       else next[dayKey] = slug;
       return next;
     });
+    // Also write to the new multi-slot map under "dinner" so the new
+    // planner UI sees the value.
+    setPlannerSlots((prev) => {
+      const next = { ...prev };
+      const day = { ...(next[dayKey] ?? {}) };
+      if (slug === null) {
+        delete day.dinner;
+      } else {
+        day.dinner = slug;
+      }
+      if (Object.keys(day).length === 0) delete next[dayKey];
+      else next[dayKey] = day;
+      return next;
+    });
   }, []);
+
+  const planSlot = useCallback((dayKey: string, slot: MealSlot, slug: string | null) => {
+    setPlannerSlots((prev) => {
+      const next = { ...prev };
+      const day = { ...(next[dayKey] ?? {}) };
+      if (slug === null) {
+        delete day[slot];
+      } else {
+        day[slot] = slug;
+      }
+      if (Object.keys(day).length === 0) delete next[dayKey];
+      else next[dayKey] = day;
+      return next;
+    });
+  }, []);
+
+  const getSlot = useCallback((dayKey: string, slot: MealSlot): string | null => {
+    // Prefer the new multi-slot map; fall back to the legacy single-slot
+    // map (which we always mirror into "dinner" via planDay).
+    return plannerSlots[dayKey]?.[slot] ?? (slot === "dinner" ? planner[dayKey] ?? null : null);
+  }, [plannerSlots, planner]);
 
   const toggleAvoiding = useCallback((a: Allergen) => {
     setAvoiding((prev) => (prev.includes(a) ? prev.filter((x) => x !== a) : [...prev, a]));
@@ -126,15 +177,15 @@ export function UserProvider({ children }: { children: ReactNode }) {
 
   const value = useMemo(
     () => ({
-      locale, zip, favorites, notesByRecipe, userRecipes, planner, avoiding, dietary,
+      locale, zip, favorites, notesByRecipe, userRecipes, planner, plannerSlots, avoiding, dietary,
       setLocale, setZip, toggleFavorite, isFavorite,
       setNote, getNote,
       addUserRecipe, updateUserRecipe, deleteUserRecipe,
-      planDay, toggleAvoiding, toggleDietary, resetFilters,
+      planDay, planSlot, getSlot, toggleAvoiding, toggleDietary, resetFilters,
     }),
-    [locale, zip, favorites, notesByRecipe, userRecipes, planner, avoiding, dietary,
+    [locale, zip, favorites, notesByRecipe, userRecipes, planner, plannerSlots, avoiding, dietary,
      toggleFavorite, isFavorite, setNote, getNote, addUserRecipe, updateUserRecipe, deleteUserRecipe,
-     planDay, toggleAvoiding, toggleDietary, resetFilters],
+     planDay, planSlot, getSlot, toggleAvoiding, toggleDietary, resetFilters],
   );
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;

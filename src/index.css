@@ -567,10 +567,9 @@
     left: 0;
     right: 0;
     z-index: var(--z-bottom-nav);
-    background: color-mix(in srgb, var(--color-bone-50) 92%, transparent);
-    backdrop-filter: saturate(140%) blur(18px);
-    -webkit-backdrop-filter: saturate(140%) blur(18px);
-    border-top: 1px solid var(--color-line-soft);
+    background: var(--color-bone-50);
+    border-top: 1px solid var(--color-line);
+    box-shadow: 0 -8px 24px -16px rgba(28, 20, 14, 0.18);
     padding-block-end: max(0.5rem, env(safe-area-inset-bottom));
   }
   @supports (padding-block-end: max(0.5rem, env(safe-area-inset-bottom))) {
