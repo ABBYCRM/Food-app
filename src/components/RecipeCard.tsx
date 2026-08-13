@@ -27,10 +27,9 @@ export function RecipeCard({ recipe, big = false }: { recipe: Recipe; big?: bool
     >
       <div className={cn("relative w-full overflow-hidden bg-bone-200", big ? "aspect-[4/5]" : "aspect-[5/4]")}>
         <SafeImage
-          src={recipe.hero}
+          src={recipe.thumb}
           recipeSlug={recipe.slug}
           fallbackSize={big ? "phone" : "thumb"}
-          preferArt
           alt={recipe.title[locale]}
           loading="lazy"
           className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.04]"

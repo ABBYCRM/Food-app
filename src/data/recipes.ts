@@ -123,9 +123,6 @@ export function recipeHero(slug: string, w = 1600, h = 1000): string {
   return aiImage("Editorial top-down food photography, Mexican-Asian fusion dish, dark wood, natural light, Michelin plating, photorealistic 4k", seedFromSlug(slug), w, h);
 }
 
-/* Legacy helper kept for any caller still passing photo IDs — now routed through AI. */
-const img = (id: string, w = 1600) => aiImage(`Editorial food photography 4k ${id}`, seedFromSlug(id), w, Math.round(w * 0.625));
-
 export const recipes: Recipe[] = [
   {
     slug: "miso-mole-short-rib-tacos",

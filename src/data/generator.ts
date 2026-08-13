@@ -455,33 +455,6 @@ const finishes: Array<{ name: Tri; allergens: Allergen[] }> = [
   { name: { en: "crisped lardon and lime", es: "tocino crujiente y lima", pt: "torresmo crocante e lima" }, allergens: ["pork"] },
 ];
 
-const heroImages = [
-  "photo-1565299624946-b28f40a0ae38",
-  "photo-1551782450-a2132b4ba21d",
-  "photo-1559339352-11d035aa65de",
-  "photo-1496116218417-1a781b1c416c",
-  "photo-1569718212165-3a8278d5f624",
-  "photo-1578849278619-e73505e9610f",
-  "photo-1488477181946-6428a0291777",
-  "photo-1527477396000-e27163b481c2",
-  "photo-1551024601-bec78aea704b",
-  "photo-1546069901-ba9599a7e63c",
-  "photo-1565958011703-44f9829ba187",
-  "photo-1432139509613-5c4255815697",
-  "photo-1504674900247-0877df9cc836",
-  "photo-1467003909585-2f8a72700288",
-  "photo-1483918793747-5adbf82956c4",
-  "photo-1540420773420-3366772f4999",
-  "photo-1574484284002-952d92456975",
-  "photo-1517248135467-4c7edcad34c4",
-  "photo-1543353071-873f17a7a088",
-  "photo-1601314167099-cb6ed9aef0e1",
-  "photo-1432139509613-5c4255815697",
-  "photo-1604908554007-2f7e7b2bf7a7",
-  "photo-1576402187878-974f70c890a5",
-  "photo-1606756790138-261d2b21cd75",
-];
-
 function tri(en: string, es: string, pt: string): Tri {
   return { en, es, pt };
 }
@@ -507,11 +480,6 @@ function buildPrompt(protein: string, formatTitle: string, marinade: string, fin
   return `Editorial overhead photo of ${clean(protein)} ${clean(formatTitle).toLowerCase()} glazed with ${clean(marinade)}, finished with ${clean(finish)}, plated on dark ceramic, soft natural light, dark wood background, Michelin-star food magazine styling, photorealistic 4k, hyper-detailed, garnishes visible, cilantro, lime, sesame seeds`;
 }
 
-function img(id: string, w = 1600) {
-  return aiImage(`Editorial food photography 4k ${id}`, seedFromSlug(id), w, Math.round(w * 0.625));
-}
-
-
 function dedupe<T>(arr: T[]): T[] {
   return Array.from(new Set(arr));
 }
@@ -533,7 +501,6 @@ export function generateRecipe(index: number): Recipe {
   const prot = proteins[Math.floor(rng() * proteins.length)];
   const mar = marinades[Math.floor(rng() * marinades.length)];
   const fin = finishes[Math.floor(rng() * finishes.length)];
-  const heroId = heroImages[Math.floor(rng() * heroImages.length)];
   const spice = (1 + Math.floor(rng() * 5)) as 1 | 2 | 3 | 4 | 5;
   const umami = (2 + Math.floor(rng() * 4)) as 2 | 3 | 4 | 5;
 
