@@ -9,3 +9,8 @@ dist/
 .idea/
 .vscode/
 coverage/
+
+# QA artifacts
+qa.py
+qa-*.py
+qa-shots/

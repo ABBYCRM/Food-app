@@ -772,9 +772,11 @@ const ART: Record<string, RecipeArt> = {
 
 export function fallbackFor(slug: string, size: ArtSize): string {
   const art = ART[slug] ?? Generic;
+  let raw: string;
   switch (size) {
-    case "hero": return art.hero();
-    case "thumb": return art.thumb();
-    case "phone": return art.phone();
+    case "hero": raw = art.hero(); break;
+    case "thumb": raw = art.thumb(); break;
+    case "phone": raw = art.phone(); break;
   }
+  return `data:image/svg+xml;utf8,${encodeURIComponent(raw)}`;
 }
