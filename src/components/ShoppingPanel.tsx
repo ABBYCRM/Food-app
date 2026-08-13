@@ -1,10 +1,20 @@
-import { useMemo, useState } from "react";
-import { ShoppingCart, ExternalLink, Check } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
+import { ShoppingCart, ExternalLink, Check, LoaderCircle, AlertCircle } from "lucide-react";
 import type { Ingredient, Recipe } from "@/data/recipes";
 import {
   combinedSearchUrl, ingredientQuery, multiRetailerUrls, openInNewTab, openMany, retailerUrl, type Retailer,
 } from "@/lib/shopping";
+import {
+  AMAZON_ASSOCIATE_DISCLOSURE,
+  isAmazonAffiliateConfigured,
+  recordAffiliateClick,
+} from "@/lib/affiliate";
+import {
+  createInstacartRecipeLink,
+  createInstacartShoppingListLink,
+} from "@/lib/instacart";
 import { useUser } from "@/context/UserContext";
+import { useAuth } from "@/context/AuthContext";
 import { dict } from "@/i18n";
 import { cn } from "@/lib/cn";
 
@@ -19,16 +29,28 @@ const retailers: { key: Retailer; label: keyof typeof dict.en.shopping; color: s
 export function ShoppingPanel({
   recipe,
   scaledIngredients,
+  servings,
 }: {
   recipe: Recipe;
   scaledIngredients: Ingredient[];
+  servings: number;
 }) {
   const { locale, zip, setZip } = useUser();
+  const { session } = useAuth();
   const t = dict[locale];
   const [selected, setSelected] = useState<Retailer>("instacart");
+  const [instacartLoading, setInstacartLoading] = useState(false);
+  const [shoppingError, setShoppingError] = useState<string | null>(null);
+  const [popupBlocked, setPopupBlocked] = useState(false);
   const [picked, setPicked] = useState<Set<number>>(
     () => new Set(scaledIngredients.map((_, i) => i)),
   );
+
+  useEffect(() => {
+    setPicked(new Set(scaledIngredients.map((_, index) => index)));
+    setShoppingError(null);
+    setPopupBlocked(false);
+  }, [recipe.slug, scaledIngredients]);
 
   const togglePicked = (idx: number) =>
     setPicked((prev) => {
@@ -42,24 +64,80 @@ export function ShoppingPanel({
     [scaledIngredients, picked],
   );
 
-  const [popupBlocked, setPopupBlocked] = useState(false);
+  const openInstacart = async (createLink: () => Promise<string>) => {
+    if (instacartLoading) return;
+    setInstacartLoading(true);
+    setShoppingError(null);
+    setPopupBlocked(false);
+
+    const pendingTab = window.open("about:blank", "_blank");
+    if (pendingTab) {
+      pendingTab.opener = null;
+      pendingTab.document.title = t.shopping.creatingCart;
+      pendingTab.document.body.textContent = t.shopping.creatingCart;
+    }
+
+    try {
+      const url = await createLink();
+      if (pendingTab && !pendingTab.closed) pendingTab.location.replace(url);
+      else window.location.assign(url);
+    } catch {
+      pendingTab?.close();
+      setShoppingError(t.shopping.cartError);
+    } finally {
+      setInstacartLoading(false);
+    }
+  };
 
   const openAll = () => {
+    if (selected === "instacart") {
+      void openInstacart(() =>
+        createInstacartRecipeLink({
+          recipe,
+          ingredients: activeIngredients,
+          locale,
+          servings,
+          partnerLinkbackUrl: window.location.href,
+          csrfToken: session?.csrfToken ?? "",
+        }),
+      );
+      return;
+    }
+
+    setShoppingError(null);
     setPopupBlocked(false);
     const urls = multiRetailerUrls(selected, activeIngredients, zip);
+    recordAffiliateClick(selected, urls.length, session?.csrfToken ?? "");
     const result = openMany(urls);
-    /* If browser blocked the popups, we wait a tick and surface a single
-       consolidated-search fallback link the user can click. */
-    setTimeout(() => {
-      if (result.opened === 0 || (urls.length > 1 && result.blocked >= urls.length - 1)) {
-        setPopupBlocked(true);
-      }
-    }, urls.length * 240 + 200);
+    if (result.blocked > 0) setPopupBlocked(true);
   };
 
   const openCombined = () => {
     setPopupBlocked(false);
+    recordAffiliateClick(selected, 1, session?.csrfToken ?? "");
     openInNewTab(combinedSearchUrl(selected, activeIngredients, zip));
+  };
+
+  const openOne = (ingredient: Ingredient) => {
+    if (selected !== "instacart") {
+      recordAffiliateClick(selected, 1, session?.csrfToken ?? "");
+      openInNewTab(retailerUrl(selected, ingredientQuery(ingredient), zip));
+      return;
+    }
+
+    void openInstacart(() =>
+      createInstacartShoppingListLink({
+        title: ingredient.name[locale],
+        ingredients: [
+          {
+            name: ingredientQuery(ingredient),
+            displayText: ingredient.name[locale],
+          },
+        ],
+        partnerLinkbackUrl: window.location.href,
+        csrfToken: session?.csrfToken ?? "",
+      }),
+    );
   };
 
   return (
@@ -97,6 +175,7 @@ export function ShoppingPanel({
             key={r.key}
             type="button"
             onClick={() => setSelected(r.key)}
+            aria-pressed={selected === r.key}
             className={cn(
               "px-3 py-1.5 rounded-full text-[11px] font-semibold tracking-wide transition-all border",
               selected === r.key
@@ -111,7 +190,6 @@ export function ShoppingPanel({
 
       <ul className="space-y-1.5">
         {scaledIngredients.map((ing, idx) => {
-          const url = retailerUrl(selected, ingredientQuery(ing), zip);
           const inList = picked.has(idx);
           return (
             <li
@@ -135,7 +213,8 @@ export function ShoppingPanel({
               <span className="flex-1 text-sm">{ing.name[locale]}</span>
               <button
                 type="button"
-                onClick={() => openInNewTab(url)}
+                onClick={() => openOne(ing)}
+                disabled={instacartLoading}
                 className="text-xs font-semibold inline-flex items-center gap-1 text-[var(--color-chili)] hover:underline"
               >
                 {t.recipe.shopOne} <ExternalLink size={11} />
@@ -149,12 +228,14 @@ export function ShoppingPanel({
         type="button"
         onClick={openAll}
         className="btn-primary w-full justify-center"
-        disabled={activeIngredients.length === 0}
+        disabled={activeIngredients.length === 0 || instacartLoading}
       >
-        {selected === "amazon" || selected === "amazonFresh"
+        {instacartLoading ? (
+          <><LoaderCircle size={14} className="animate-spin" /> {t.shopping.creatingCart}</>
+        ) : selected === "amazon" || selected === "amazonFresh"
           ? t.shopping.openOnAmazon
           : selected === "instacart"
-          ? t.shopping.openOnInstacart
+          ? t.shopping.shopOnInstacart
           : selected === "wholeFoods"
           ? t.shopping.openOnWholeFoods
           : `${t.shopping.shopWith} ${t.shopping[retailers.find((r) => r.key === selected)!.label as keyof typeof t.shopping] as string}`}
@@ -166,11 +247,21 @@ export function ShoppingPanel({
           onClick={openCombined}
           className="w-full text-xs font-semibold text-[var(--color-chili)] underline underline-offset-2 py-1"
         >
-          ↗ Browser blocked multiple tabs — open one combined search instead
+          ↗ {t.shopping.popupBlocked}
         </button>
       ) : null}
 
+      {shoppingError ? (
+        <p role="alert" className="text-xs text-[var(--color-chili)] flex items-start gap-1.5">
+          <AlertCircle size={13} className="mt-0.5 shrink-0" /> {shoppingError}
+        </p>
+      ) : null}
+
       <p className="text-[10.5px] text-[var(--color-ink-muted)] leading-snug">{t.shopping.note}</p>
+      <div className="text-[10.5px] text-[var(--color-ink-muted)] leading-snug border-t border-[rgba(28,20,14,0.08)] pt-2 space-y-1">
+        <p>{t.shopping.affiliateDisclosure}</p>
+        {isAmazonAffiliateConfigured() ? <p>{AMAZON_ASSOCIATE_DISCLOSURE}</p> : null}
+      </div>
     </section>
   );
 }

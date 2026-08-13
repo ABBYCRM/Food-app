@@ -7,6 +7,9 @@ import { useUser } from "@/context/UserContext";
 import { dict, type Locale } from "@/i18n";
 import { allRecipesForCalendar, recipeForDate } from "@/data/calendar";
 import { recipes, type Recipe } from "@/data/recipes";
+import { InstallButton } from "@/components/InstallButton";
+import { AccountControls } from "@/components/AccountControls";
+import { SafeImage } from "@/components/SafeImage";
 
 export function HomePage() {
   const { locale, setLocale } = useUser();
@@ -20,13 +23,17 @@ export function HomePage() {
     <Layout hideHeader>
       <div className="relative px-5 pt-3 pb-2 flex items-center justify-between bg-[var(--color-chili)] text-[var(--color-bone-50)] sticky top-0 z-20">
         <span className="font-display font-semibold tracking-tight">{t.brand}</span>
-        <span className="text-[10px] uppercase tracking-[0.22em] opacity-80">{t.tagline}</span>
+        <div className="flex items-center gap-1">
+          <span className="text-[10px] uppercase tracking-[0.22em] opacity-80 hidden lg:inline mr-2">{t.tagline}</span>
+          <InstallButton className="!border-white/30 !text-white !px-3 !py-1.5 !text-[11px] hover:!bg-white/10" />
+          <AccountControls light />
+        </div>
       </div>
 
       {/* Hero with editorial image */}
       <section className="px-5 sm:px-8 lg:px-12 pt-5">
         <div className="relative aspect-[4/5] sm:aspect-[3/2] lg:aspect-[16/9] lg:max-h-[420px] rounded-[1.4rem] overflow-hidden">
-          <img src={heroFeature.hero} alt="" className="absolute inset-0 w-full h-full object-cover object-center" loading="eager" />
+          <SafeImage src={heroFeature.hero} alt={heroFeature.title[locale]} className="absolute inset-0 w-full h-full object-cover object-center" loading="eager" fetchPriority="high" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-black/0" />
           <span className="absolute top-4 left-4 pill bg-[var(--color-chili)] text-[var(--color-bone-50)]">
             {t.home.eyebrow}
@@ -60,7 +67,7 @@ export function HomePage() {
           className="mt-3 w-full card-surface overflow-hidden text-left group"
         >
           <div className="relative aspect-[16/10] lg:aspect-[2/1] lg:max-h-[320px]">
-            <img src={today.hero} alt="" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
+            <SafeImage src={today.hero} alt={today.title[locale]} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/55 to-black/0" />
             <div className="absolute bottom-3 left-4 right-4 text-white">
               <span className="text-[10px] uppercase tracking-[0.22em] opacity-85">{today.origin[locale]}</span>

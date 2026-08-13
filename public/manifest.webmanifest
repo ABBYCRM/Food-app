@@ -1,0 +1,27 @@
+{
+  "id": "/",
+  "name": "Mestizo Umami — The Trilingual Kitchen",
+  "short_name": "Mestizo Umami",
+  "description": "Mexican-Asian fusion recipes, weekly planning, allergy filters, and supported retailer shopping in English, Spanish, and Portuguese.",
+  "lang": "en",
+  "dir": "ltr",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#f5ece0",
+  "theme_color": "#b8362c",
+  "categories": ["food", "lifestyle", "shopping"],
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Browse recipes", "short_name": "Recipes", "url": "/recipes?source=pwa-shortcut", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Open weekly planner", "short_name": "Planner", "url": "/planner?source=pwa-shortcut", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}
+

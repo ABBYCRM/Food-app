@@ -12,17 +12,16 @@ export function RecipeCard({ recipe, big = false }: { recipe: Recipe; big?: bool
   const t = dict[locale];
   const fav = isFavorite(recipe.slug);
   return (
-    <button
-      type="button"
-      onClick={() => navigate(`/recipe/${recipe.slug}`)}
+    <article
       className={cn(
-        "group card-surface overflow-hidden text-left w-full transition-all",
+        "group card-surface overflow-hidden text-left w-full transition-all relative",
         "hover:shadow-[0_18px_44px_-22px_rgba(28,20,14,0.4)] hover:-translate-y-0.5"
       )}
     >
-      <div className={cn("relative w-full overflow-hidden bg-[var(--color-bone-200)]", big ? "aspect-[4/5]" : "aspect-[5/4]")}>
+      <button type="button" onClick={() => navigate(`/recipe/${recipe.slug}`)} className="block w-full text-left">
+        <div className={cn("relative w-full overflow-hidden bg-[var(--color-bone-200)]", big ? "aspect-[4/5]" : "aspect-[5/4]")}>
         <SafeImage
-          src={recipe.hero}
+          src={recipe.thumb}
           alt={recipe.title[locale]}
           loading="lazy"
           className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.04]"
@@ -34,17 +33,6 @@ export function RecipeCard({ recipe, big = false }: { recipe: Recipe; big?: bool
             {recipe.origin[locale]}
           </span>
         </div>
-        <button
-          type="button"
-          onClick={(e) => { e.stopPropagation(); toggleFavorite(recipe.slug); }}
-          aria-label={fav ? t.recipe.saved : t.recipe.save}
-          className={cn(
-            "absolute top-3 right-3 w-9 h-9 grid place-items-center rounded-full transition-all",
-            fav ? "bg-[var(--color-chili)] text-white" : "bg-white/85 text-[var(--color-ink)] hover:bg-white"
-          )}
-        >
-          <Bookmark size={16} fill={fav ? "currentColor" : "none"} />
-        </button>
         <div className="absolute bottom-3 left-3 right-3 text-white">
           <h3
             className={cn(
@@ -58,8 +46,8 @@ export function RecipeCard({ recipe, big = false }: { recipe: Recipe; big?: bool
             {recipe.title[locale]}
           </h3>
         </div>
-      </div>
-      <div className="px-4 py-3 flex items-center justify-between gap-3 text-xs text-[var(--color-ink-muted)]">
+        </div>
+        <div className="px-4 py-3 flex items-center justify-between gap-3 text-xs text-[var(--color-ink-muted)]">
         <span className="flex items-center gap-1.5">
           <Clock size={13} /> {recipe.prepMinutes + recipe.cookMinutes} {t.recipes.minutes}
         </span>
@@ -69,7 +57,19 @@ export function RecipeCard({ recipe, big = false }: { recipe: Recipe; big?: bool
         <span className="flex items-center gap-1.5">
           <Sparkles size={13} /> {t.meta.umami[recipe.umami - 1]}
         </span>
-      </div>
-    </button>
+        </div>
+      </button>
+      <button
+        type="button"
+        onClick={() => toggleFavorite(recipe.slug)}
+        aria-label={fav ? t.recipe.saved : t.recipe.save}
+        className={cn(
+          "absolute top-3 right-3 z-10 w-9 h-9 grid place-items-center rounded-full transition-all",
+          fav ? "bg-[var(--color-chili)] text-white" : "bg-white/85 text-[var(--color-ink)] hover:bg-white"
+        )}
+      >
+        <Bookmark size={16} fill={fav ? "currentColor" : "none"} />
+      </button>
+    </article>
   );
 }

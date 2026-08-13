@@ -1,15 +1,23 @@
-import { useMemo, useState } from "react";
-import { MapPin, Phone, ExternalLink } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
+import { MapPin, ExternalLink } from "lucide-react";
 import { useUser } from "@/context/UserContext";
 import { dict } from "@/i18n";
-import { vendorsForZip } from "@/lib/vendor";
+import { vendorSearchesForLocation, type VendorSearchKind } from "@/lib/vendor";
 
 export function VendorPanel() {
   const { locale, zip, setZip } = useUser();
   const t = dict[locale];
   const [draft, setDraft] = useState(zip);
 
-  const vendors = useMemo(() => vendorsForZip(zip), [zip]);
+  useEffect(() => setDraft(zip), [zip]);
+
+  const searches = useMemo(() => vendorSearchesForLocation(zip), [zip]);
+  const labels: Record<VendorSearchKind, string> = {
+    asian: t.vendor.searchAsian,
+    mexican: t.vendor.searchMexican,
+    market: t.vendor.searchMarket,
+    international: t.vendor.searchInternational,
+  };
 
   return (
     <section className="card-surface px-4 py-4 space-y-3">
@@ -22,7 +30,10 @@ export function VendorPanel() {
         </p>
       </div>
       <form
-        onSubmit={(e) => { e.preventDefault(); setZip(draft.trim()); }}
+        onSubmit={(e) => {
+          e.preventDefault();
+          setZip(draft.trim().replace(/[^0-9A-Za-z -]/g, "").slice(0, 16));
+        }}
         className="flex items-center gap-2"
       >
         <input
@@ -37,33 +48,20 @@ export function VendorPanel() {
         </button>
       </form>
 
-      {vendors.length > 0 ? (
-        <ul className="space-y-2">
-          {vendors.map((v) => (
-            <li key={v.name} className="flex items-start justify-between gap-3 px-3 py-2.5 rounded-lg bg-[rgba(28,20,14,0.04)]">
-              <div>
-                <div className="text-sm font-semibold">{v.name}</div>
-                <div className="text-xs text-[var(--color-ink-muted)]">
-                  {v.city}, {v.state} · {t.vendor.distance(v.miles)} · {v.kind}
-                </div>
-              </div>
-              <div className="flex items-center gap-2">
-                {v.phone ? (
-                  <a href={`tel:${v.phone}`} className="text-[var(--color-chili)]" aria-label={t.vendor.callToOrder}>
-                    <Phone size={14} />
-                  </a>
-                ) : null}
-                {v.url ? (
-                  <a href={v.url} target="_blank" rel="noreferrer" className="text-[var(--color-chili)]">
-                    <ExternalLink size={14} />
-                  </a>
-                ) : null}
-              </div>
-            </li>
-          ))}
-        </ul>
-      ) : zip ? (
-        <p className="text-xs text-[var(--color-ink-muted)] leading-relaxed">{t.vendor.none}</p>
+      {searches.length > 0 ? (
+        <>
+          <ul className="grid sm:grid-cols-2 gap-2">
+            {searches.map((search) => (
+              <li key={search.kind}>
+                <a href={search.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between gap-3 px-3 py-3 rounded-lg bg-[rgba(28,20,14,0.04)] hover:bg-[rgba(28,20,14,0.08)] transition-colors">
+                  <span className="text-sm font-semibold">{labels[search.kind]}</span>
+                  <ExternalLink size={14} className="text-[var(--color-chili)] shrink-0" />
+                </a>
+              </li>
+            ))}
+          </ul>
+          <p className="text-[10.5px] text-[var(--color-ink-muted)] leading-snug">{t.vendor.liveNote}</p>
+        </>
       ) : null}
 
       <p className="text-[10.5px] text-[var(--color-ink-muted)] leading-snug border-t border-[rgba(28,20,14,0.06)] pt-2.5">

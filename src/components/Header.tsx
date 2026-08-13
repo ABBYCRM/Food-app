@@ -2,6 +2,7 @@ import { ChevronLeft, Search } from "lucide-react";
 import { useLocation } from "wouter";
 import { useUser } from "@/context/UserContext";
 import { dict } from "@/i18n";
+import { AccountControls } from "./AccountControls";
 
 export function Header({ section, showBack = false }: { section?: string; showBack?: boolean }) {
   const { locale } = useUser();
@@ -42,6 +43,7 @@ export function Header({ section, showBack = false }: { section?: string; showBa
         >
           <Search size={18} />
         </button>
+        <AccountControls light />
       </div>
     </header>
   );

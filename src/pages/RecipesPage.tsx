@@ -128,7 +128,7 @@ export function RecipesPage() {
             onClick={() => setVisible((v) => v + 24)}
             className="btn-ghost w-full justify-center"
           >
-            +24
+            {t.recipes.loadMore}
           </button>
         </section>
       ) : (

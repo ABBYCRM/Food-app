@@ -6,6 +6,11 @@ import path from "path";
 const rawPort = process.env.PORT;
 const port = rawPort ? Number(rawPort) : 5174;
 const basePath = process.env.BASE_PATH ?? "/";
+const apiTarget = process.env.DEV_API_TARGET ?? "http://127.0.0.1:8080";
+const proxy = Object.fromEntries(
+  ["/api", "/healthz", "/readyz", "/robots.txt", "/sitemap.xml", "/llms.txt"]
+    .map((route) => [route, { target: apiTarget }]),
+);
 
 export default defineConfig({
   base: basePath,
@@ -26,6 +31,7 @@ export default defineConfig({
     strictPort: true,
     host: "0.0.0.0",
     allowedHosts: true,
+    proxy,
   },
   preview: {
     port,

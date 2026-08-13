@@ -1,12 +1,21 @@
 import { useMemo, useState } from "react";
 import { useLocation } from "wouter";
-import { Plus, X, ShoppingCart, ExternalLink } from "lucide-react";
+import { Plus, X, ShoppingCart, ExternalLink, LoaderCircle, AlertCircle } from "lucide-react";
 import { Layout } from "@/components/Layout";
 import { useUser } from "@/context/UserContext";
+import { useAuth } from "@/context/AuthContext";
+import { SafeImage } from "@/components/SafeImage";
 import { dict } from "@/i18n";
 import { allRecipesForCalendar } from "@/data/calendar";
 import { consolidateForWeek, openMany, retailerUrl, type Retailer } from "@/lib/shopping";
+import { createInstacartShoppingListLink } from "@/lib/instacart";
+import {
+  AMAZON_ASSOCIATE_DISCLOSURE,
+  isAmazonAffiliateConfigured,
+  recordAffiliateClick,
+} from "@/lib/affiliate";
 import { cn } from "@/lib/cn";
+import { localDateKey } from "@/lib/date";
 
 const ALL = allRecipesForCalendar();
 
@@ -26,17 +35,20 @@ function fmtMD(d: Date, locale: string) {
 
 export function PlannerPage() {
   const { locale, planner, planDay, zip } = useUser();
+  const { session } = useAuth();
   const [, navigate] = useLocation();
   const t = dict[locale];
   const [pickingDay, setPickingDay] = useState<string | null>(null);
   const [query, setQuery] = useState("");
+  const [shoppingLoading, setShoppingLoading] = useState(false);
+  const [shoppingError, setShoppingError] = useState<string | null>(null);
 
   const week = useMemo(() => {
     const start = startOfWeek(new Date());
     return Array.from({ length: 7 }, (_, i) => {
       const d = new Date(start);
       d.setDate(start.getDate() + i);
-      return { date: d, key: d.toISOString().slice(0, 10) };
+      return { date: d, key: localDateKey(d) };
     });
   }, []);
 
@@ -58,8 +70,41 @@ export function PlannerPage() {
     return ALL.filter((r) => r.title[locale].toLowerCase().includes(q) || r.subtitle[locale].toLowerCase().includes(q)).slice(0, 36);
   }, [query, locale]);
 
-  function openConsolidated(retailer: Retailer) {
+  async function openConsolidated(retailer: Retailer) {
+    setShoppingError(null);
+    if (retailer === "instacart") {
+      if (shoppingLoading) return;
+      setShoppingLoading(true);
+      const pendingTab = window.open("about:blank", "_blank");
+      if (pendingTab) {
+        pendingTab.opener = null;
+        pendingTab.document.title = t.shopping.creatingCart;
+        pendingTab.document.body.textContent = t.shopping.creatingCart;
+      }
+
+      try {
+        const url = await createInstacartShoppingListLink({
+          title: `${t.shopping.consolidated} · ${fmtMD(week[0].date, locale)}–${fmtMD(week[6].date, locale)}`,
+          ingredients: consolidated.map((item) => ({
+            name: item.query,
+            displayText: item.display,
+          })),
+          partnerLinkbackUrl: window.location.href,
+          csrfToken: session?.csrfToken ?? "",
+        });
+        if (pendingTab && !pendingTab.closed) pendingTab.location.replace(url);
+        else window.location.assign(url);
+      } catch {
+        pendingTab?.close();
+        setShoppingError(t.shopping.cartError);
+      } finally {
+        setShoppingLoading(false);
+      }
+      return;
+    }
+
     const urls = consolidated.map((c) => retailerUrl(retailer, c.query, zip));
+    recordAffiliateClick(retailer, urls.length, session?.csrfToken ?? "");
     openMany(urls);
   }
 
@@ -83,7 +128,7 @@ export function PlannerPage() {
               </div>
               {r ? (
                 <button type="button" onClick={() => navigate(`/recipe/${r.slug}`)} className="flex-1 text-left flex items-center gap-3">
-                  <img src={r.thumb} alt="" className="w-12 h-12 rounded-lg object-cover" />
+                  <SafeImage src={r.thumb} alt={r.title[locale]} className="w-12 h-12 rounded-lg object-cover" />
                   <div className="flex-1 min-w-0">
                     <div className="text-sm font-semibold leading-tight truncate">{r.title[locale]}</div>
                     <div className="text-[11px] text-[var(--color-ink-muted)] truncate">{r.origin[locale]}</div>
@@ -132,12 +177,22 @@ export function PlannerPage() {
                 ))}
               </ul>
               <div className="grid grid-cols-2 gap-2">
-                <button type="button" onClick={() => openConsolidated("instacart")} className="btn-primary justify-center !py-2.5 !text-sm">
-                  {t.shopping.openOnInstacart} <ExternalLink size={13} />
+                <button type="button" onClick={() => void openConsolidated("instacart")} disabled={shoppingLoading} className="btn-primary justify-center !py-2.5 !text-sm">
+                  {shoppingLoading ? <LoaderCircle size={13} className="animate-spin" /> : <ExternalLink size={13} />}
+                  {shoppingLoading ? t.shopping.creatingCart : t.shopping.shopOnInstacart}
                 </button>
-                <button type="button" onClick={() => openConsolidated("amazonFresh")} className="btn-teal justify-center !py-2.5 !text-sm">
+                <button type="button" onClick={() => void openConsolidated("amazonFresh")} className="btn-teal justify-center !py-2.5 !text-sm">
                   {t.shopping.openOnAmazon} <ExternalLink size={13} />
                 </button>
+              </div>
+              {shoppingError ? (
+                <p role="alert" className="text-xs text-[var(--color-chili)] flex items-start gap-1.5">
+                  <AlertCircle size={13} className="mt-0.5 shrink-0" /> {shoppingError}
+                </p>
+              ) : null}
+              <div className="text-[10.5px] text-[var(--color-ink-muted)] leading-snug border-t border-[rgba(28,20,14,0.08)] pt-2 space-y-1">
+                <p>{t.shopping.affiliateDisclosure}</p>
+                {isAmazonAffiliateConfigured() ? <p>{AMAZON_ASSOCIATE_DISCLOSURE}</p> : null}
               </div>
             </>
           )}
@@ -172,7 +227,7 @@ export function PlannerPage() {
                     onClick={() => { planDay(pickingDay, r.slug); setPickingDay(null); setQuery(""); }}
                     className="w-full flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-[rgba(28,20,14,0.05)] text-left"
                   >
-                    <img src={r.thumb} alt="" className="w-10 h-10 rounded-md object-cover" />
+                    <SafeImage src={r.thumb} alt={r.title[locale]} className="w-10 h-10 rounded-md object-cover" />
                     <div className="flex-1 min-w-0">
                       <div className="text-sm font-medium truncate">{r.title[locale]}</div>
                       <div className="text-[11px] text-[var(--color-ink-muted)] truncate">{r.origin[locale]}</div>

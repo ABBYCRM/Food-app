@@ -6,27 +6,50 @@
   "description": "Mestizo Umami — trilingual Mexican-Asian fusion recipe app. 365-day rotating recipes, serving scaler, allergy filters, week planner, retailer deep-links, local vendor lookup by ZIP.",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
-    "build": "vite build",
+    "dev:server": "NODE_ENV=development node --env-file-if-exists=.env.local --watch server/index.js",
+    "seo:generate": "node --import tsx scripts/generate-seo.ts",
+    "build": "npm run seo:generate && vite build",
+    "start": "NODE_ENV=production node --env-file-if-exists=.env.local server/index.js",
+    "migrate": "node --env-file-if-exists=.env.local server/migrate.js",
     "preview": "vite preview --host 0.0.0.0",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "vitest run tests/e2e",
+    "check": "npm run typecheck && npm test && npm run build"
+  },
+  "engines": {
+    "node": "22.x"
   },
   "dependencies": {
     "clsx": "^2.1.1",
+    "compression": "^1.8.1",
+    "express": "^5.2.1",
     "framer-motion": "^12.23.24",
+    "helmet": "^8.3.0",
     "lucide-react": "^0.545.0",
+    "openid-client": "^6.8.5",
+    "postgres": "^3.4.9",
     "react": "19.1.0",
     "react-dom": "19.1.0",
+    "stripe": "^22.5.0",
     "tailwind-merge": "^3.3.1",
-    "wouter": "^3.3.5"
+    "wouter": "^3.3.5",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@electric-sql/pglite": "^0.5.4",
     "@tailwindcss/vite": "^4.1.14",
+    "@types/compression": "^1.8.1",
+    "@types/express": "^5.0.6",
     "@types/node": "^22.10.0",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^5.0.4",
     "tailwindcss": "^4.1.14",
+    "tsx": "^4.23.12",
     "typescript": "^5.7.0",
-    "vite": "^7.3.2"
+    "vite": "^7.3.2",
+    "vitest": "^4.1.10",
+    "yaml": "^2.9.0"
   }
 }

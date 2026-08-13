@@ -1,7 +1,7 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useLocation } from "wouter";
 import {
-  ArrowLeft, Bookmark, Share2, CalendarPlus, GitFork, Clock, Flame, Sparkles, ShieldAlert, ChefHat,
+  ArrowLeft, Bookmark, Share2, CalendarPlus, GitFork, Clock, Flame, Sparkles, ChefHat,
 } from "lucide-react";
 import { Layout } from "@/components/Layout";
 import { SafeImage } from "@/components/SafeImage";
@@ -13,10 +13,11 @@ import { ChefPanel } from "@/components/ChefPanel";
 import { useUser } from "@/context/UserContext";
 import { dict } from "@/i18n";
 import type { Ingredient } from "@/data/recipes";
-import { allRecipesForCalendar } from "@/data/calendar";
-import { recipeBySlug, relatedRecipes } from "@/data/recipes";
+import { allRecipesForCalendar, relatedCalendarRecipes } from "@/data/calendar";
+import { recipeBySlug } from "@/data/recipes";
 import { scaledIngredientParts } from "@/lib/scaling";
 import { cn } from "@/lib/cn";
+import { localDateKey } from "@/lib/date";
 
 function findRecipe(slug: string) {
   return recipeBySlug(slug) ?? allRecipesForCalendar().find((r) => r.slug === slug);
@@ -30,6 +31,10 @@ export function RecipeDetailPage({ slug }: { slug: string }) {
 
   const [servings, setServings] = useState<number>(found?.serves ?? 4);
   const [planFeedback, setPlanFeedback] = useState(false);
+
+  useEffect(() => {
+    if (found) setServings(found.serves);
+  }, [found?.serves, found?.slug]);
 
   if (!found) {
     return (
@@ -53,14 +58,13 @@ export function RecipeDetailPage({ slug }: { slug: string }) {
   const fav = isFavorite(recipe.slug);
   const note = getNote(recipe.slug);
 
-  const related = relatedRecipes(recipe.slug, 3);
+  const related = relatedCalendarRecipes(recipe, 3);
 
   const totalMinutes = recipe.prepMinutes + recipe.cookMinutes;
-  const isDraft = recipe.slug.startsWith("day-");
 
   function addToPlanner() {
     const today = new Date();
-    const dayKey = today.toISOString().slice(0, 10);
+    const dayKey = localDateKey(today);
     planDay(dayKey, recipe.slug);
     setPlanFeedback(true);
     setTimeout(() => setPlanFeedback(false), 1800);
@@ -97,7 +101,7 @@ export function RecipeDetailPage({ slug }: { slug: string }) {
       {/* Full-bleed hero */}
       <section className="relative">
         <div className="relative aspect-[4/5] sm:aspect-[16/10] lg:aspect-[16/9] lg:max-h-[440px] overflow-hidden">
-          <SafeImage src={recipe.hero} alt="" className="absolute inset-0 w-full h-full object-cover object-center" />
+          <SafeImage src={recipe.hero} alt={recipe.title[locale]} className="absolute inset-0 w-full h-full object-cover object-center" loading="eager" fetchPriority="high" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-black/30" />
           <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
             <button
@@ -150,23 +154,6 @@ export function RecipeDetailPage({ slug }: { slug: string }) {
           <Metric icon={<Sparkles size={14} />} label={t.recipe.umamiDepth} value={t.meta.umami[recipe.umami - 1]} />
         </div>
       </section>
-
-      {/* Draft notice for generated calendar variants */}
-      {isDraft ? (
-        <section className="page-pad pt-3">
-          <div className="card-surface px-4 py-3 flex items-start gap-3 border-l-4 !border-l-[var(--color-corn)]">
-            <ShieldAlert size={16} className="text-[var(--color-corn)] mt-0.5 shrink-0" />
-            <div>
-              <div className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--color-ink)]">
-                {t.meta.draft}
-              </div>
-              <p className="text-xs text-[var(--color-ink-muted)] leading-snug mt-0.5">
-                {t.meta.draftNote}
-              </p>
-            </div>
-          </div>
-        </section>
-      ) : null}
 
       {/* Story */}
       <section className="page-pad pt-5">
@@ -234,7 +221,7 @@ export function RecipeDetailPage({ slug }: { slug: string }) {
 
       {/* Shopping */}
       <section className="page-pad pt-5">
-        <ShoppingPanel recipe={recipe} scaledIngredients={scaled} />
+        <ShoppingPanel recipe={recipe} scaledIngredients={scaled} servings={servings} />
       </section>
 
       {/* Vendor */}

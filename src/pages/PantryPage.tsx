@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Layout } from "@/components/Layout";
 import { useUser } from "@/context/UserContext";
 import { dict } from "@/i18n";
+import { SafeImage } from "@/components/SafeImage";
 import { pantry } from "@/data/pantry";
 
 export function PantryPage() {
@@ -25,7 +26,7 @@ export function PantryPage() {
           <article key={p.slug} className="card-surface overflow-hidden">
             <div className="grid grid-cols-[110px_1fr] gap-3">
               <div className="relative aspect-square">
-                <img src={p.hero} alt="" className="absolute inset-0 w-full h-full object-cover" />
+                <SafeImage src={p.hero} alt={p.name[locale]} className="absolute inset-0 w-full h-full object-cover" />
               </div>
               <div className="py-3 pr-3">
                 <div className="text-[10px] uppercase tracking-[0.22em] text-[var(--color-ink-muted)]">{p.category[locale]}</div>

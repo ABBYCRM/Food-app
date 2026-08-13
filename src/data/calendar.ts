@@ -8,7 +8,6 @@ import { generateRecipe } from "./generator";
 const TOTAL = 365;
 
 const cached: (Recipe | null)[] = new Array(TOTAL).fill(null);
-const slugsByIndex: Map<number, string> = new Map();
 const allSlugs: Set<string> = new Set();
 
 function build(index: number): Recipe {
@@ -25,20 +24,22 @@ function build(index: number): Recipe {
 
 export function recipeForCalendarIndex(index: number): Recipe {
   const i = ((index % TOTAL) + TOTAL) % TOTAL;
-  let r = cached[i];
-  if (!r) {
-    r = build(i);
-    cached[i] = r;
-    slugsByIndex.set(i, r.slug);
-    allSlugs.add(r.slug);
+  // Always fill from day one through the requested day. Collision resolution
+  // is therefore independent of navigation order and matches the SEO build.
+  for (let cursor = 0; cursor <= i; cursor++) {
+    if (cached[cursor]) continue;
+    const recipe = build(cursor);
+    cached[cursor] = recipe;
+    allSlugs.add(recipe.slug);
   }
-  return r;
+  return cached[i]!;
 }
 
 export function recipeForDate(d: Date = new Date()): Recipe {
-  const start = new Date(d.getFullYear(), 0, 0);
-  const diff = d.getTime() - start.getTime();
-  const dayOfYear = Math.floor(diff / 86400000); // 1..365/366
+  const year = d.getFullYear();
+  const dayOfYear = Math.floor(
+    (Date.UTC(year, d.getMonth(), d.getDate()) - Date.UTC(year, 0, 0)) / 86_400_000,
+  ); // 1..365/366, independent of daylight-saving transitions
   return recipeForCalendarIndex(dayOfYear - 1);
 }
 
@@ -49,6 +50,23 @@ export function allRecipesForCalendar(): Recipe[] {
   for (let i = 0; i < TOTAL; i++) out.push(recipeForCalendarIndex(i));
   _all = out;
   return out;
+}
+
+export function relatedCalendarRecipes(current: Recipe, limit = 3): Recipe[] {
+  return allRecipesForCalendar()
+    .filter((recipe) => recipe.slug !== current.slug)
+    .map((recipe) => ({
+      recipe,
+      score:
+        (recipe.category === current.category ? 4 : 0)
+        + (recipe.season === current.season ? 2 : 0)
+        + recipe.meals.filter((meal) => current.meals.includes(meal)).length
+        - Math.abs(recipe.spice - current.spice) * 0.5
+        - Math.abs(recipe.umami - current.umami) * 0.5,
+    }))
+    .sort((left, right) => right.score - left.score || left.recipe.slug.localeCompare(right.recipe.slug))
+    .slice(0, Math.max(0, limit))
+    .map(({ recipe }) => recipe);
 }
 
 export const CALENDAR_LENGTH = TOTAL;

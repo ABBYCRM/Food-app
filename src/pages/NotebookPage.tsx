@@ -4,25 +4,29 @@ import { Plus, Trash2, Share2, Download, Upload, GitFork, Edit2, X } from "lucid
 import { Layout } from "@/components/Layout";
 import { useUser, type UserRecipe } from "@/context/UserContext";
 import { dict } from "@/i18n";
-import { exportAll, importAll } from "@/lib/storage";
 import { cn } from "@/lib/cn";
+import { encodeSharedRecipe } from "@/lib/sharedRecipe";
 
 type Tab = "notes" | "forks" | "mine";
 
 export function NotebookPage() {
-  const { locale, notesByRecipe, userRecipes, deleteUserRecipe, addUserRecipe, updateUserRecipe } = useUser();
+  const {
+    locale, notesByRecipe, userRecipes, deleteUserRecipe, addUserRecipe,
+    updateUserRecipe, exportData, importData, syncError,
+  } = useUser();
   const [, navigate] = useLocation();
   const t = dict[locale];
   const [tab, setTab] = useState<Tab>("mine");
   const [editing, setEditing] = useState<UserRecipe | null>(null);
   const [creating, setCreating] = useState(false);
+  const [shareError, setShareError] = useState<string | null>(null);
   const importRef = useRef<HTMLInputElement>(null);
 
   const forks = useMemo(() => userRecipes.filter((u) => u.forkedFrom), [userRecipes]);
   const owns = useMemo(() => userRecipes.filter((u) => !u.forkedFrom), [userRecipes]);
 
-  function doExport() {
-    const json = exportAll();
+  async function doExport() {
+    const json = await exportData();
     const blob = new Blob([json], { type: "application/json" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -34,21 +38,28 @@ export function NotebookPage() {
 
   function onImportFile(file: File) {
     const reader = new FileReader();
-    reader.onload = () => {
+    reader.onload = async () => {
       if (typeof reader.result === "string") {
-        if (importAll(reader.result)) window.location.reload();
+        const confirmed = window.confirm("Importing replaces the recipes and workspace currently saved to this account. Continue?");
+        if (confirmed && await importData(reader.result)) window.location.reload();
       }
     };
     reader.readAsText(file);
   }
 
   async function shareRecipe(r: UserRecipe) {
-    const payload = btoa(unescape(encodeURIComponent(JSON.stringify(r))));
-    const url = `${window.location.origin}/recipe-shared#${payload}`;
-    if (navigator.share) {
-      try { await navigator.share({ title: r.title, url }); return; } catch { /* */ }
+    setShareError(null);
+    try {
+      const payload = encodeSharedRecipe(r);
+      const url = `${window.location.origin}/recipe-shared#${payload}`;
+      if (navigator.share) {
+        try { await navigator.share({ title: r.title, url }); return; } catch { /* fall back to copy */ }
+      }
+      await navigator.clipboard.writeText(url);
+      alert(t.notebook.shareCopied);
+    } catch {
+      setShareError(t.notebook.shareError);
     }
-    try { await navigator.clipboard.writeText(url); alert(t.notebook.shareCopied); } catch { /* */ }
   }
 
   return (
@@ -82,7 +93,7 @@ export function NotebookPage() {
         <button type="button" onClick={() => setCreating(true)} className="btn-primary !py-2 !px-3.5 !text-sm">
           <Plus size={14} /> {t.notebook.newRecipe}
         </button>
-        <button type="button" onClick={doExport} className="btn-ghost !py-2 !px-3.5 !text-xs">
+        <button type="button" onClick={() => void doExport()} className="btn-ghost !py-2 !px-3.5 !text-xs">
           <Download size={13} /> {t.notebook.export}
         </button>
         <button type="button" onClick={() => importRef.current?.click()} className="btn-ghost !py-2 !px-3.5 !text-xs">
@@ -96,6 +107,17 @@ export function NotebookPage() {
           className="hidden"
         />
       </section>
+
+      {syncError ? (
+        <section className="page-pad pt-3">
+          <p role="alert" className="text-xs text-[var(--color-chili)]">{syncError}</p>
+        </section>
+      ) : null}
+      {shareError ? (
+        <section className="page-pad pt-3">
+          <p role="alert" className="text-xs text-[var(--color-chili)]">{shareError}</p>
+        </section>
+      ) : null}
 
       <section className="page-pad pt-5 space-y-3">
         {tab === "mine" ? (

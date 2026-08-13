@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Layout } from "@/components/Layout";
 import { RecipeCard } from "@/components/RecipeCard";
 import { useUser } from "@/context/UserContext";
@@ -13,6 +13,7 @@ const all = allRecipesForCalendar();
 export function AllergyMenuPage() {
   const { locale, avoiding, dietary, toggleAvoiding, toggleDietary, resetFilters } = useUser();
   const t = dict[locale];
+  const [visible, setVisible] = useState(60);
 
   const avoidSet = useMemo(() => new Set(avoiding), [avoiding]);
   const dietSet = useMemo(() => new Set(dietary), [dietary]);
@@ -21,6 +22,8 @@ export function AllergyMenuPage() {
     () => all.filter((r) => recipeMatchesFilters(r, avoidSet, dietSet)),
     [avoidSet, dietSet],
   );
+
+  useEffect(() => setVisible(60), [avoiding, dietary]);
 
   return (
     <Layout section={t.nav.allergy}>
@@ -84,11 +87,25 @@ export function AllergyMenuPage() {
         </button>
       </section>
 
-      <section className="page-pad pt-3 pb-6 grid grid-cols-2 gap-3">
-        {safe.slice(0, 60).map((r) => (
+      <section className="page-pad pt-3">
+        <p className="card-surface px-4 py-3 text-xs leading-relaxed text-[var(--color-ink-soft)]" role="note">
+          {t.allergy.disclaimer}
+        </p>
+      </section>
+
+      <section className="page-pad pt-3 pb-4 grid grid-cols-2 gap-3">
+        {safe.slice(0, visible).map((r) => (
           <RecipeCard key={r.slug} recipe={r} />
         ))}
       </section>
+
+      {visible < safe.length ? (
+        <section className="page-pad pb-6">
+          <button type="button" onClick={() => setVisible((value) => value + 24)} className="btn-ghost w-full justify-center">
+            {t.recipes.loadMore}
+          </button>
+        </section>
+      ) : <section className="pb-2" />}
     </Layout>
   );
 }

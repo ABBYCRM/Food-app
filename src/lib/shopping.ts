@@ -1,6 +1,10 @@
 import type { Ingredient, Recipe } from "@/data/recipes";
+import {
+  applyAffiliateAttribution,
+  type AffiliateRetailer,
+} from "@/lib/affiliate";
 
-export type Retailer = "amazon" | "amazonFresh" | "wholeFoods" | "instacart" | "walmart" | "diy";
+export type Retailer = AffiliateRetailer;
 
 export function ingredientQuery(ing: Ingredient): string {
   return ing.shopQuery ?? ing.name.en;
@@ -8,21 +12,29 @@ export function ingredientQuery(ing: Ingredient): string {
 
 export function retailerUrl(retailer: Retailer, query: string, zip?: string): string {
   const q = encodeURIComponent(query);
+  let destination: string;
   switch (retailer) {
     case "amazon":
-      return `https://www.amazon.com/s?k=${q}`;
+      destination = `https://www.amazon.com/s?k=${q}`;
+      break;
     case "amazonFresh":
-      return `https://www.amazon.com/alm/storefront?almBrandId=QW1hem9uIEZyZXNo&k=${q}`;
+      destination = `https://www.amazon.com/alm/storefront?almBrandId=QW1hem9uIEZyZXNo&k=${q}`;
+      break;
     case "wholeFoods":
-      return `https://www.amazon.com/s?k=${q}&i=wholefoods`;
+      destination = `https://www.amazon.com/s?k=${q}&i=wholefoods`;
+      break;
     case "instacart":
-      return `https://www.instacart.com/store/s?k=${q}${zip ? `&zip=${encodeURIComponent(zip)}` : ""}`;
+      destination = `https://www.instacart.com/store/s?k=${q}${zip ? `&zip=${encodeURIComponent(zip)}` : ""}`;
+      break;
     case "walmart":
-      return `https://www.walmart.com/search?q=${q}`;
+      destination = `https://www.walmart.com/search?q=${q}`;
+      break;
     case "diy":
     default:
-      return `https://www.google.com/search?q=${q}+near+me`;
+      destination = `https://www.google.com/search?q=${q}+near+me`;
+      break;
   }
+  return applyAffiliateAttribution(retailer, destination);
 }
 
 export function multiRetailerUrls(retailer: Retailer, ingredients: Ingredient[], zip?: string): string[] {
@@ -59,28 +71,28 @@ export type OpenResult = { opened: number; blocked: number; total: number };
 
 export function openInNewTab(url: string): boolean {
   if (typeof window === "undefined") return false;
-  const win = window.open(url, "_blank", "noopener,noreferrer");
-  return win !== null;
+  const win = window.open("about:blank", "_blank");
+  if (!win) return false;
+
+  // Sever the opener before navigation so the destination cannot control the
+  // application tab. Opening the blank tab first also gives popup blockers an
+  // accurate success signal; browsers may return null when `noopener` is used
+  // directly even though the destination opened successfully.
+  win.opener = null;
+  win.location.replace(url);
+  return true;
 }
 
-/** Opens many URLs while detecting popup-blocker rejections. The first URL opens
- *  inside the user gesture; subsequent URLs are scheduled and reported as blocked
- *  if the browser refuses them. Caller can fall back to a single consolidated URL. */
+/** Opens all URLs during the click gesture and reports popup-blocker rejections. */
 export function openMany(urls: string[]): OpenResult {
   if (typeof window === "undefined" || urls.length === 0) {
     return { opened: 0, blocked: 0, total: urls.length };
   }
   let opened = 0;
   let blocked = 0;
-  const first = urls[0];
-  if (openInNewTab(first)) opened++;
-  else blocked++;
-  for (let i = 1; i < urls.length; i++) {
-    setTimeout(() => {
-      const ok = openInNewTab(urls[i]);
-      if (ok) opened++;
-      else blocked++;
-    }, i * 220);
+  for (const url of urls) {
+    if (openInNewTab(url)) opened++;
+    else blocked++;
   }
   return { opened, blocked, total: urls.length };
 }

@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Layout } from "@/components/Layout";
 import { useUser } from "@/context/UserContext";
 import { dict } from "@/i18n";
+import { SafeImage } from "@/components/SafeImage";
 import { recipes } from "@/data/recipes";
 
 export function PhilosophyPage() {
@@ -15,7 +16,7 @@ export function PhilosophyPage() {
     <Layout section={t.philosophy.section} showBack>
       <section className="page-pad pt-4">
         <div className="relative rounded-[1.4rem] overflow-hidden aspect-[5/6]">
-          <img src={hero.hero} alt="" className="absolute inset-0 w-full h-full object-cover" />
+          <SafeImage src={hero.hero} alt={hero.title[locale]} className="absolute inset-0 w-full h-full object-cover" loading="eager" fetchPriority="high" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-black/0" />
           <span className="absolute top-4 left-4 pill bg-[var(--color-chili)] text-[var(--color-bone-50)]">
             {t.philosophy.section}

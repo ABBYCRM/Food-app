@@ -9,9 +9,9 @@ function buildLinks(query: string, zip: string) {
   const q = encodeURIComponent(query);
   const z = encodeURIComponent(zip);
   return [
-    { key: "takeAChef", url: `https://www.takeachef.com/en/search?cuisine=${q}${zip ? `&zip_code=${z}` : ""}` },
-    { key: "cozyMeal", url: `https://www.cozymeal.com/private-chefs?search=${q}${zip ? `&zip=${z}` : ""}` },
-    { key: "hireAChef", url: `https://hireachef.com/find-a-chef${zip ? `?zip=${z}` : ""}` },
+    { key: "takeAChef", url: "https://www.takeachef.com/" },
+    { key: "cozyMeal", url: "https://www.cozymeal.com/private-chefs" },
+    { key: "hireAChef", url: "https://www.hireachef.com/" },
     { key: "yelpCatering", url: `https://www.yelp.com/search?find_desc=${q}+catering${zip ? `&find_loc=${z}` : ""}` },
   ] as const;
 }
