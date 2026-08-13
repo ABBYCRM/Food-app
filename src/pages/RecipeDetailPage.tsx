@@ -231,7 +231,7 @@ export function RecipeDetailPage({ slug }: { slug: string }) {
           ) : (
             <div className="flex flex-wrap gap-1.5">
               {recipe.allergens.map((a) => (
-                <span key={a} className="pill bg-chili/10 text-chili-700">
+                <span key={a} className="pill pill-tag bg-chili/10 text-chili-700">
                   {t.allergy.flags[a]}
                 </span>
               ))}
@@ -242,7 +242,7 @@ export function RecipeDetailPage({ slug }: { slug: string }) {
               <div className="eyebrow mt-3 mb-2">{t.recipe.freeOf}</div>
               <div className="flex flex-wrap gap-1.5">
                 {recipe.dietary.map((d) => (
-                  <span key={d} className="pill bg-jade/10 text-jade">
+                  <span key={d} className="pill pill-tag bg-jade/10 text-jade">
                     {t.allergy.dietary[d]}
                   </span>
                 ))}

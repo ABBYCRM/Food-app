@@ -365,6 +365,16 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  /* Origin tag on dark recipe cards. The base .pill's 0.14em tracking eats
+     2-3 chars of width per word and makes short uppercase phrases feel
+     cramped on mobile. Tighter tracking + slightly larger type keeps
+     "MEXICO CITY" / "OAXACA × KYOTO" legible. */
+  .pill-tag {
+    letter-spacing: 0.06em;
+    font-size: 0.75rem;
+    padding: 0.3125rem 0.75rem;
+    font-weight: 700;
+  }
   .flavor-chip {
     display: inline-flex;
     align-items: center;
