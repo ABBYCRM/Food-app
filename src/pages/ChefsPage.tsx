@@ -3,6 +3,13 @@ import { ChefPanel } from "@/components/ChefPanel";
 import { useUser } from "@/context/UserContext";
 import { dict } from "@/i18n";
 
+/**
+ * Chefs page — the chef-booking integration is paused. The ChefPanel
+ * component renders a single "coming soon" card with no functional
+ * inputs (no ZIP lookup, no form, no marketplace deep-links, no mailto).
+ * The page itself is kept as a route so the bottom-nav / quick-tile
+ * entry points still resolve to a coherent surface.
+ */
 export function ChefsPage() {
   const { locale } = useUser();
   const t = dict[locale];
