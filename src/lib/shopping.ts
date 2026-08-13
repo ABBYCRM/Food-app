@@ -1,0 +1,97 @@
+import type { Ingredient, Recipe } from "@/data/recipes";
+
+export type Retailer = "amazon" | "amazonFresh" | "wholeFoods" | "instacart" | "walmart" | "diy";
+
+export function ingredientQuery(ing: Ingredient): string {
+  return ing.shopQuery ?? ing.name.en;
+}
+
+export function retailerUrl(retailer: Retailer, query: string, zip?: string): string {
+  const q = encodeURIComponent(query);
+  switch (retailer) {
+    case "amazon":
+      return `https://www.amazon.com/s?k=${q}`;
+    case "amazonFresh":
+      return `https://www.amazon.com/alm/storefront?almBrandId=QW1hem9uIEZyZXNo&k=${q}`;
+    case "wholeFoods":
+      return `https://www.amazon.com/s?k=${q}&i=wholefoods`;
+    case "instacart":
+      return `https://www.instacart.com/store/s?k=${q}${zip ? `&zip=${encodeURIComponent(zip)}` : ""}`;
+    case "walmart":
+      return `https://www.walmart.com/search?q=${q}`;
+    case "diy":
+    default:
+      return `https://www.google.com/search?q=${q}+near+me`;
+  }
+}
+
+export function multiRetailerUrls(retailer: Retailer, ingredients: Ingredient[], zip?: string): string[] {
+  return ingredients.map((i) => retailerUrl(retailer, ingredientQuery(i), zip));
+}
+
+export type ConsolidatedItem = {
+  query: string;
+  display: string;
+  sources: string[];
+};
+
+export function consolidateForWeek(recipes: Recipe[], locale: "en" | "es" | "pt" = "en"): ConsolidatedItem[] {
+  const map = new Map<string, ConsolidatedItem>();
+  for (const r of recipes) {
+    for (const ing of r.ingredients) {
+      const q = ingredientQuery(ing);
+      const key = q.toLowerCase();
+      if (!map.has(key)) {
+        map.set(key, {
+          query: q,
+          display: ing.name[locale] ?? ing.name.en,
+          sources: [r.slug],
+        });
+      } else {
+        map.get(key)!.sources.push(r.slug);
+      }
+    }
+  }
+  return Array.from(map.values()).sort((a, b) => a.display.localeCompare(b.display));
+}
+
+export type OpenResult = { opened: number; blocked: number; total: number };
+
+export function openInNewTab(url: string): boolean {
+  if (typeof window === "undefined") return false;
+  const win = window.open(url, "_blank", "noopener,noreferrer");
+  return win !== null;
+}
+
+/** Opens many URLs while detecting popup-blocker rejections. The first URL opens
+ *  inside the user gesture; subsequent URLs are scheduled and reported as blocked
+ *  if the browser refuses them. Caller can fall back to a single consolidated URL. */
+export function openMany(urls: string[]): OpenResult {
+  if (typeof window === "undefined" || urls.length === 0) {
+    return { opened: 0, blocked: 0, total: urls.length };
+  }
+  let opened = 0;
+  let blocked = 0;
+  const first = urls[0];
+  if (openInNewTab(first)) opened++;
+  else blocked++;
+  for (let i = 1; i < urls.length; i++) {
+    setTimeout(() => {
+      const ok = openInNewTab(urls[i]);
+      if (ok) opened++;
+      else blocked++;
+    }, i * 220);
+  }
+  return { opened, blocked, total: urls.length };
+}
+
+/** Build a single URL that searches for many ingredients at once — used as a
+ *  popup-blocker fallback so the user can still complete shopping in one tab. */
+export function combinedSearchUrl(retailer: Retailer, ingredients: Ingredient[], zip?: string): string {
+  const combined = ingredients
+    .map(ingredientQuery)
+    .filter(Boolean)
+    .slice(0, 12)
+    .join(", ");
+  return retailerUrl(retailer, combined, zip);
+}

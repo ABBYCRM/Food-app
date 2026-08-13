@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Mestizo Umami"
+version = "0.1.0"
+id = "artifacts/mestizo-umami"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22049
+
+[services.development]
+run = "pnpm --filter @workspace/mestizo-umami run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/mestizo-umami", "run", "build" ]
+publicDir = "artifacts/mestizo-umami/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22049"
+BASE_PATH = "/"

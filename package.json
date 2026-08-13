@@ -1,0 +1,32 @@
+{
+  "name": "food-app",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Mestizo Umami — trilingual Mexican-Asian fusion recipe app. 365-day rotating recipes, serving scaler, allergy filters, week planner, retailer deep-links, local vendor lookup by ZIP.",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.23.24",
+    "lucide-react": "^0.545.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "tailwind-merge": "^3.3.1",
+    "wouter": "^3.3.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.14",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.0.4",
+    "tailwindcss": "^4.1.14",
+    "typescript": "^5.7.0",
+    "vite": "^7.3.2"
+  }
+}
