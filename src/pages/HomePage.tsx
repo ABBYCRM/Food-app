@@ -160,9 +160,9 @@ function CtaButton({
 }) {
   const cls = variant === "chili" ? "btn btn-primary" : variant === "teal" ? "btn btn-teal" : "btn btn-ghost";
   return (
-    <button type="button" onClick={onClick} className={cn(cls, "btn-block")}>
+    <button type="button" onClick={onClick} className={cn(cls, "btn-lg", "btn-block")}>
       <span>{label}</span>
-      <ArrowRight size={16} strokeWidth={2.2} />
+      <ArrowRight size={18} strokeWidth={2.2} />
     </button>
   );
 }

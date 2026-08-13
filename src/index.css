@@ -396,7 +396,16 @@
     box-shadow: var(--shadow-card);
   }
 
-  /* ----- Buttons (harmonized: same shape, only color varies) ----- */
+  /* ============================================================
+     BUTTON SYSTEM
+     One shape, four sizes, five colors. All buttons share the same
+     border-radius, font, focus ring, and motion. The only axes that
+     vary are: size (xs/sm/md/lg), color (primary/teal/jade/corn/ghost),
+     and width (block). Callsites never override padding or font-size
+     with !py-* / !text-*; pick a size class instead.
+     ============================================================ */
+
+  /* Shape (applied to all button classes) */
   .btn,
   .btn-primary,
   .btn-teal,
@@ -407,10 +416,10 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    min-height: 2.75rem;
-    padding: 0.625rem 1.1rem;
+    min-height: 2.75rem;        /* default (md) — 44px touch target */
+    padding: 0.625rem 1.125rem;
     font-family: var(--font-sans);
-    font-size: 0.9375rem;
+    font-size: 0.9375rem;       /* 15px */
     font-weight: 600;
     letter-spacing: 0.005em;
     line-height: 1;
@@ -419,6 +428,7 @@
     cursor: pointer;
     user-select: none;
     -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
     transition:
       background-color var(--duration-base) var(--ease-out-soft),
       color var(--duration-base) var(--ease-out-soft),
@@ -428,14 +438,16 @@
     text-decoration: none;
     white-space: nowrap;
   }
+
   .btn:disabled,
   .btn[aria-busy="true"] {
     cursor: not-allowed;
-    opacity: 0.55;
+    opacity: 0.5;
     transform: none;
+    box-shadow: none;
   }
   .btn:focus-visible {
-    outline: 3px solid var(--color-focus);
+    outline: 2px solid var(--color-focus);
     outline-offset: 3px;
   }
   @media (hover: hover) and (pointer: fine) {
@@ -443,6 +455,36 @@
       transform: translateY(-1px);
     }
   }
+
+  /* ===== Sizes (apply to any color variant) =====
+     xs — toolbar pill, lang picker, language pills
+     sm — inline actions, picker rows, table-row buttons
+     md — (default; no class needed) primary CTAs, form actions
+     lg — hero CTAs, paywall unlock, install CTA */
+
+  .btn-xs {
+    min-height: 2rem;          /* 32px */
+    padding: 0.25rem 0.75rem;
+    font-size: 0.6875rem;       /* 11px */
+    letter-spacing: 0.04em;
+  }
+  .btn-sm {
+    min-height: 2.25rem;        /* 36px */
+    padding: 0.4375rem 0.875rem;
+    font-size: 0.8125rem;       /* 13px */
+  }
+  .btn-lg {
+    min-height: 3.25rem;        /* 52px */
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;            /* 16px */
+  }
+
+  /* Full-width (e.g. picker rows, paywall unlock) */
+  .btn-block {
+    width: 100%;
+  }
+
+  /* ===== Colors ===== */
 
   /* primary: chili */
   .btn-primary {
@@ -503,23 +545,6 @@
       background: var(--color-ink-08);
       border-color: var(--color-line-strong);
     }
-  }
-
-  /* Sizes */
-  .btn-sm {
-    min-height: 2.25rem;
-    padding: 0.45rem 0.85rem;
-    font-size: 0.8125rem;
-  }
-  .btn-lg {
-    min-height: 3.25rem;
-    padding: 0.85rem 1.4rem;
-    font-size: 1rem;
-  }
-
-  /* Full-width modifier for the home CTAs */
-  .btn-block {
-    width: 100%;
   }
 
   /* ----- Header & bottom nav ----- */
@@ -671,15 +696,16 @@
   }
 
   .lang-pill {
-    padding: 0.4rem 0.75rem;
+    padding: 0.25rem 0.625rem;
     border-radius: var(--radius-pill);
-    font-size: 0.6875rem;
+    font-size: 0.625rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.12em;
     color: var(--color-ink-muted);
     transition: all var(--duration-base) var(--ease-out-soft);
-    min-height: 1.75rem;
+    min-height: 1.5rem;
+    -webkit-tap-highlight-color: transparent;
   }
   .lang-pill[aria-pressed="true"] {
     background: var(--color-chili);
@@ -712,6 +738,18 @@
     transition:
       border-color var(--duration-fast) var(--ease-out-soft),
       box-shadow var(--duration-fast) var(--ease-out-soft);
+  }
+
+  /* Compact input — table cells, picker rows, scale controls. */
+  .input.input-sm {
+    padding: 0.4375rem 0.625rem;
+    font-size: 0.8125rem;
+    min-height: 2.25rem;
+  }
+  .input.input-xs {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.6875rem;
+    min-height: 1.75rem;
   }
   .input:focus-visible,
   .textarea:focus-visible,

@@ -90,7 +90,7 @@ export function ShoppingPanel({
           value={zip}
           onChange={(e) => setZip(e.target.value.replace(/[^0-9A-Za-z-]/g, "").slice(0, 8))}
           placeholder={t.shopping.zipPlaceholder}
-          className="input flex-1 !text-sm !py-1.5 !min-h-0"
+          className="input input-sm flex-1"
         />
       </label>
 

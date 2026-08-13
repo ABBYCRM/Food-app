@@ -30,9 +30,9 @@ export function VendorPanel() {
           value={draft}
           onChange={(e) => setDraft(e.target.value)}
           placeholder={t.shopping.zipPlaceholder}
-          className="input flex-1 !text-sm !py-2"
+          className="input input-sm flex-1"
         />
-        <button type="submit" className="btn btn-primary !text-sm !py-2 !px-4">
+        <button type="submit" className="btn btn-primary btn-sm">
           {t.vendor.findButton}
         </button>
       </form>

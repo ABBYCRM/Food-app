@@ -121,31 +121,31 @@ export function RecipeDetailPage({ slug }: { slug: string }) {
             <button
               type="button"
               onClick={() => window.history.length > 1 ? window.history.back() : navigate("/recipes")}
-              className="w-9 h-9 grid place-items-center rounded-pill bg-black/35 backdrop-blur text-white"
+              className="w-9 h-9 grid place-items-center rounded-pill bg-black/35 backdrop-blur text-white transition-colors hover:bg-black/45"
               aria-label={t.common.back}
             >
-              <ArrowLeft size={16} />
+              <ArrowLeft size={18} />
             </button>
             <div className="flex items-center gap-2">
               <button
                 type="button"
                 onClick={share}
-                className="w-9 h-9 grid place-items-center rounded-pill bg-black/35 backdrop-blur text-white"
+                className="w-9 h-9 grid place-items-center rounded-pill bg-black/35 backdrop-blur text-white transition-colors hover:bg-black/45"
                 aria-label={t.recipe.share}
               >
-                <Share2 size={15} />
+                <Share2 size={16} />
               </button>
               <button
                 type="button"
                 onClick={() => requireWrite(() => toggleFavorite(recipe.slug))}
                 className={cn(
                   "w-9 h-9 grid place-items-center rounded-pill transition-colors",
-                  fav ? "bg-chili text-white" : "bg-black/35 backdrop-blur text-white"
+                  fav ? "bg-chili text-white" : "bg-black/35 backdrop-blur text-white hover:bg-black/45"
                 )}
                 aria-label={fav ? t.recipe.saved : t.recipe.save}
                 aria-pressed={fav}
               >
-                <Bookmark size={15} fill={fav ? "currentColor" : "none"} />
+                <Bookmark size={16} fill={fav ? "currentColor" : "none"} />
               </button>
             </div>
           </div>
@@ -323,16 +323,16 @@ export function RecipeDetailPage({ slug }: { slug: string }) {
         <button
           type="button"
           onClick={() => requireWrite(() => setSlotPickerOpen(true))}
-          className={cn("btn btn-teal", planFeedback && "!bg-jade")}
+          className={cn("btn btn-teal", planFeedback && "btn-jade")}
         >
-          <CalendarPlus size={15} /> {planFeedback ? t.recipe.addedToPlanner : t.recipe.addToPlanner}
+          <CalendarPlus size={16} /> {planFeedback ? t.recipe.addedToPlanner : t.recipe.addToPlanner}
         </button>
         <button
           type="button"
           onClick={() => requireWrite(forkToNotebook)}
           className="btn btn-primary"
         >
-          <GitFork size={15} /> {t.recipe.forkToNotebook}
+          <GitFork size={16} /> {t.recipe.forkToNotebook}
         </button>
       </section>
 

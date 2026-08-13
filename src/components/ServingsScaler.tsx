@@ -45,7 +45,7 @@ export function ServingsScaler({
             max={50}
             value={servings}
             onChange={(e) => setServings(Math.max(1, Math.min(50, Number(e.target.value) || baseServes)))}
-            className="input !w-14 !px-2 !py-1 text-center text-sm font-semibold !min-h-0"
+            className="input input-xs !w-14 text-center font-semibold"
             aria-label={t.scale.customLabel}
           />
         </label>

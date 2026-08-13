@@ -120,21 +120,21 @@ export function NotebookPage() {
         <button
           type="button"
           onClick={() => requireWrite(() => setCreating(true))}
-          className="btn btn-primary !py-2 !px-3.5 !text-sm"
+          className="btn btn-primary btn-sm"
         >
           <Plus size={14} /> {t.notebook.newRecipe}
         </button>
         <button
           type="button"
           onClick={() => requireWrite(doExport)}
-          className="btn btn-ghost !py-2 !px-3.5 !text-xs"
+          className="btn btn-ghost btn-xs"
         >
           <Download size={13} /> {t.notebook.export}
         </button>
         <button
           type="button"
           onClick={() => requireWrite(() => importRef.current?.click())}
-          className="btn btn-ghost !py-2 !px-3.5 !text-xs"
+          className="btn btn-ghost btn-xs"
         >
           <Upload size={13} /> {t.notebook.import}
         </button>

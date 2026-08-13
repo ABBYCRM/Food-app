@@ -266,10 +266,10 @@ export function PlannerPage() {
                 ))}
               </ul>
               <div className="grid grid-cols-2 gap-2">
-                <button type="button" onClick={() => openConsolidated("instacart")} className="btn btn-primary !py-2.5 !text-sm">
+                <button type="button" onClick={() => openConsolidated("instacart")} className="btn btn-primary btn-sm">
                   {t.shopping.openOnInstacart} <ExternalLink size={13} />
                 </button>
-                <button type="button" onClick={() => openConsolidated("amazonFresh")} className="btn btn-teal !py-2.5 !text-sm">
+                <button type="button" onClick={() => openConsolidated("amazonFresh")} className="btn btn-teal btn-sm">
                   {t.shopping.openOnAmazon} <ExternalLink size={13} />
                 </button>
               </div>
@@ -297,7 +297,7 @@ export function PlannerPage() {
                 onChange={(e) => setQuery(e.target.value)}
                 autoFocus
                 placeholder={t.search.placeholder}
-                className="input !text-sm"
+                className="input input-sm"
               />
             </div>
             <ul className="flex-1 overflow-auto px-2 py-2">
