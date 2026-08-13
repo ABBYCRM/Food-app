@@ -263,7 +263,10 @@
   }
   .prose-rail {
     margin-inline: auto;
-    width: 100%;
+    /* No `width: 100%` — a static block already fills its container, and
+       forcing it breaks absolutely-positioned users (the recipe hero caption
+       sets left/right insets, which width:100% overrode, pushing the title
+       past the right edge on narrow screens). */
     max-width: 65ch;
   }
 
@@ -601,6 +604,72 @@
     outline: 2px solid var(--color-focus);
     outline-offset: -2px;
   }
+  /* ----- Desktop primary nav (lg+) ----- */
+  .top-nav {
+    display: none;
+  }
+  @media (min-width: 1024px) {
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: var(--z-bottom-nav);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.5rem var(--space-page-x-desktop);
+      background: var(--color-bone-50);
+      border-bottom: 1px solid var(--color-line);
+    }
+    /* The bottom tab bar is a phone pattern — TopNav replaces it here. */
+    .lang-bottom-nav {
+      display: none;
+    }
+  }
+  .top-nav-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.85rem;
+    border-radius: var(--radius-pill);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--color-ink-muted);
+    transition: color var(--duration-fast) var(--ease-out-soft),
+      background var(--duration-fast) var(--ease-out-soft);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .top-nav-tab:hover {
+      color: var(--color-ink);
+      background: var(--color-ink-08);
+    }
+  }
+  .top-nav-tab[aria-current="page"] {
+    color: var(--color-chili);
+    background: var(--color-chili-50);
+  }
+  .top-nav-tab:focus-visible,
+  .top-nav-search:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+  .top-nav-search {
+    display: grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: var(--radius-pill);
+    color: var(--color-ink-muted);
+    transition: color var(--duration-fast) var(--ease-out-soft),
+      background var(--duration-fast) var(--ease-out-soft);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .top-nav-search:hover {
+      color: var(--color-ink);
+      background: var(--color-ink-08);
+    }
+  }
+
   .lang-pill {
     padding: 0.4rem 0.75rem;
     border-radius: var(--radius-pill);

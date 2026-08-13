@@ -459,25 +459,19 @@ function tri(en: string, es: string, pt: string): Tri {
   return { en, es, pt };
 }
 
-/* Pollinations.ai — same engine as recipes.ts. */
-function aiImage(prompt: string, seed: number, w = 1600, h = 1000): string {
-  const p = encodeURIComponent(prompt);
-  return `https://image.pollinations.ai/prompt/${p}?width=${w}&height=${h}&model=flux&nologo=true&seed=${seed}&enhance=true`;
-}
+/**
+ * Generated-calendar photography.
+ *
+ * The 356 generated dishes can't each have a bespoke photo, but every one is
+ * built from a `format` (taco, bao, bowl, ramen …), and scripts/fetch-imagery.mjs
+ * renders one photograph per format. Keying off the format gives each dish a
+ * picture that actually looks like what it is, rather than the single repeated
+ * brand-mark placeholder these used to fall back to.
+ */
+const IMG_BASE = `${import.meta.env.BASE_URL}img`;
 
-function seedFromSlug(slug: string): number {
-  let h = 2166136261;
-  for (let i = 0; i < slug.length; i++) {
-    h ^= slug.charCodeAt(i);
-    h = Math.imul(h, 16777619);
-  }
-  return Math.abs(h | 0) || 1;
-}
-
-function buildPrompt(protein: string, formatTitle: string, marinade: string, finish: string): string {
-  /* Strip parenthetical asides (e.g., "(white miso + chipotle)") so the prompt stays tight. */
-  const clean = (s: string) => s.split(" (")[0];
-  return `Editorial overhead photo of ${clean(protein)} ${clean(formatTitle).toLowerCase()} glazed with ${clean(marinade)}, finished with ${clean(finish)}, plated on dark ceramic, soft natural light, dark wood background, Michelin-star food magazine styling, photorealistic 4k, hyper-detailed, garnishes visible, cilantro, lime, sesame seeds`;
+function formatImage(formatKey: string, variant: "hero" | "thumb"): string {
+  return `${IMG_BASE}/formats/${formatKey}-${variant}.jpg`;
 }
 
 function dedupe<T>(arr: T[]): T[] {
@@ -585,16 +579,14 @@ export function generateRecipe(index: number): Recipe {
   if (!allergens.includes("pork")) dietary.push("pork");
 
   const slug = `day-${(index + 1).toString().padStart(3, "0")}-${fmt.key}-${prot.key}-${mar.key}`;
-  const heroPrompt = buildPrompt(prot.name.en, fmt.title.en, mar.name.en, fin.name.en);
-  const heroSeed = seedFromSlug(slug);
   return {
     slug,
     category: fmt.category,
     title,
     subtitle,
     origin: tri("Mexico × Asia", "México × Asia", "México × Ásia"),
-    hero: aiImage(heroPrompt, heroSeed, 1800, 1100),
-    thumb: aiImage(heroPrompt, heroSeed, 900, 700),
+    hero: formatImage(fmt.key, "hero"),
+    thumb: formatImage(fmt.key, "thumb"),
     prepMinutes: fmt.prep,
     cookMinutes: fmt.cook,
     serves: fmt.serves,

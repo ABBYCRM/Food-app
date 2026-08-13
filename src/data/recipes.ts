@@ -77,50 +77,25 @@ export type Recipe = {
   season: Season;
 };
 
-/* Pollinations.ai image generator — no API key, deterministic per-prompt via seed.
-   Renders 1600x1000 by default, browser scales for retina. Each dish gets a hand-written
-   prompt below so the picture always matches the description. */
-function aiImage(prompt: string, seed: number, w = 1920, h = 1200): string {
-  const p = encodeURIComponent(prompt);
-  return `https://image.pollinations.ai/prompt/${p}?width=${w}&height=${h}&model=flux&nologo=true&seed=${seed}&enhance=true&quality=hd`;
-}
+/**
+ * Recipe photography is rendered ahead of time and vendored into public/img/
+ * by scripts/fetch-imagery.mjs. These used to be live image.pollinations.ai
+ * URLs built per render, which made every card a cold image-generation request
+ * — slow, rate-limited (429) once a grid mounted, and frequently timed out into
+ * the SVG fallback. Local files are instant, deterministic, service-worker
+ * cacheable, and work offline.
+ */
+const IMG_BASE = `${import.meta.env.BASE_URL}img`;
 
-/* Hash slug to a stable integer seed so the same dish renders the same image every visit. */
-function seedFromSlug(slug: string): number {
-  let h = 2166136261;
-  for (let i = 0; i < slug.length; i++) {
-    h ^= slug.charCodeAt(i);
-    h = Math.imul(h, 16777619);
-  }
-  return Math.abs(h | 0) || 1;
-}
-
-/* Per-recipe hero prompts — each captures the dish's actual look. */
-const HERO_PROMPT: Record<string, string> = {
-  "miso-mole-short-rib-tacos":
-    "Editorial overhead photo of three open small white corn tortillas on a dark slate plate, glossy lacquered braised beef short rib, scattered toasted sesame seeds, magenta yuzu-pickled red onion ribbons, fresh cilantro leaves, flaky sea salt, candlelight, dark wood background, Michelin star plating, photorealistic 4k",
-  "kimchi-elote":
-    "Editorial top-down photo of two charred grilled corn on the cob coated in creamy white kimchi crema, sprinkled with crimson gochugaru chile flakes, crumbled queso fresco, fresh cilantro, thin nori shreds, lime wedges, on a black slate plate, moody natural light, fine dining, photorealistic 4k",
-  "yuzu-aguachile-hamachi":
-    "Editorial top-down photo of translucent diamond-cut hamachi yellowtail sashimi pieces floating in pale yellow yuzu-serrano broth on a chilled white ceramic shallow bowl, thin cucumber petals overlapping, deep green shiso leaves, micro cilantro, toasted sesame seeds, sea salt flakes, Japanese minimalism, soft daylight, photorealistic 4k",
-  "al-pastor-bao":
-    "Editorial photo of fluffy white pillowy steamed bao buns filled with deep red-glazed al pastor pork shoulder, charred caramelized pineapple cubes, fresh cilantro, diced white onion, vivid red salsa macha drizzle, on a dark slate board, warm tungsten light, street-food editorial style, photorealistic 4k",
-  "ramen-pozole-rojo":
-    "Editorial top-down photo of a deep ceramic ramen bowl filled with milky white tonkotsu pork broth, a swirling ruby-red guajillo chile oil ribbon on the surface, white pozole hominy kernels, curly fresh ramen noodles, halved soy-marinated soft egg with orange yolk, shredded cabbage, red radish slices, scallion rings, on dark moody bar table, photorealistic 4k",
-  "chamoy-furikake-popcorn":
-    "Editorial overhead photo of a black bowl of buttery popcorn glistening with sticky red-orange chamoy syrup, sprinkled with green-black furikake seaweed seasoning and red Tajín chile lime salt, lime wedges nearby, on dark wood, cinema snack still life, moody side light, photorealistic 4k",
-  "miso-mezcal-flan":
-    "Editorial top-down photo of a single silken caramel flan custard inverted onto a small white porcelain plate, dark amber caramel pool around the base, generous topping of black and white sesame seed brittle shards, soft warm window light, dessert magazine editorial, photorealistic 4k",
-  "tamarindo-shoyu-glazed-wings":
-    "Editorial top-down photo of a pile of glossy mahogany dark-brown chicken wings glazed in sticky tamarind-shoyu lacquer, sprinkled with toasted white sesame seeds and thin green scallion rings, sliced red Fresno chile, lime wedges, on a black slate board, moody side light, photorealistic 4k",
-  "horchata-tres-leches-matcha":
-    "Editorial overhead photo of a square slice of soaked tres leches cake on a pure white plate, thick smooth white whipped cream layer on top, a wide diagonal stripe of vivid emerald-green ceremonial matcha powder dusted across, subtle cinnamon shadow, soft bright daylight, pastry editorial, photorealistic 4k",
-};
-
-export function recipeHero(slug: string, w = 1600, h = 1000): string {
-  const prompt = HERO_PROMPT[slug];
-  if (prompt) return aiImage(prompt, seedFromSlug(slug), w, h);
-  return aiImage("Editorial top-down food photography, Mexican-Asian fusion dish, dark wood, natural light, Michelin plating, photorealistic 4k", seedFromSlug(slug), w, h);
+/**
+ * Resolves a signature dish's vendored photograph.
+ *
+ * `hero` is the 1600x1000 full-bleed variant used on detail pages and the home
+ * feature slot; `thumb` is the lighter 800x600 crop used by card grids, where
+ * a page can mount two dozen images at once.
+ */
+export function recipeHero(slug: string, variant: "hero" | "thumb" = "hero"): string {
+  return `${IMG_BASE}/recipes/${slug}-${variant}.jpg`;
 }
 
 export const recipes: Recipe[] = [
@@ -134,8 +109,8 @@ export const recipes: Recipe[] = [
       pt: "Cocção lenta de 12h. Tortilhas de milho branco. Cebola roxa ao yuzu.",
     },
     origin: { en: "Oaxaca × Kyoto", es: "Oaxaca × Kioto", pt: "Oaxaca × Quioto" },
-    hero: recipeHero("miso-mole-short-rib-tacos", 1920, 1200),
-    thumb: recipeHero("miso-mole-short-rib-tacos", 1200, 900),
+    hero: recipeHero("miso-mole-short-rib-tacos"),
+    thumb: recipeHero("miso-mole-short-rib-tacos", "thumb"),
     prepMinutes: 30,
     cookMinutes: 720,
     serves: 4,
@@ -216,8 +191,8 @@ export const recipes: Recipe[] = [
       pt: "Milho carbonizado, creme de kimchi, queijo fresco, gochugaru.",
     },
     origin: { en: "Mexico City × Seoul", es: "Ciudad de México × Seúl", pt: "Cidade do México × Seul" },
-    hero: recipeHero("kimchi-elote", 1920, 1200),
-    thumb: recipeHero("kimchi-elote", 1200, 900),
+    hero: recipeHero("kimchi-elote"),
+    thumb: recipeHero("kimchi-elote", "thumb"),
     prepMinutes: 10,
     cookMinutes: 12,
     serves: 4,
@@ -285,8 +260,8 @@ export const recipes: Recipe[] = [
       pt: "Hamachi em cortes diamante, caldo de serrano-yuzu, pepino, shiso.",
     },
     origin: { en: "Sinaloa × Hokkaido", es: "Sinaloa × Hokkaido", pt: "Sinaloa × Hokkaido" },
-    hero: recipeHero("yuzu-aguachile-hamachi", 1920, 1200),
-    thumb: recipeHero("yuzu-aguachile-hamachi", 1200, 900),
+    hero: recipeHero("yuzu-aguachile-hamachi"),
+    thumb: recipeHero("yuzu-aguachile-hamachi", "thumb"),
     prepMinutes: 25,
     cookMinutes: 0,
     serves: 2,
@@ -350,8 +325,8 @@ export const recipes: Recipe[] = [
       pt: "Porco com tempero de trompo, bao de leite, abacaxi tostado, coentro.",
     },
     origin: { en: "CDMX × Taipei", es: "CDMX × Taipéi", pt: "CDMX × Taipé" },
-    hero: recipeHero("al-pastor-bao", 1920, 1200),
-    thumb: recipeHero("al-pastor-bao", 1200, 900),
+    hero: recipeHero("al-pastor-bao"),
+    thumb: recipeHero("al-pastor-bao", "thumb"),
     prepMinutes: 40,
     cookMinutes: 30,
     serves: 6,
@@ -415,8 +390,8 @@ export const recipes: Recipe[] = [
     title: { en: "Ramen-Pozole Rojo", es: "Pozole Rojo Ramen", pt: "Pozole Vermelho Ramen" },
     subtitle: { en: "Tonkotsu base, guajillo-arbol oil, hominy, soft egg.", es: "Base tonkotsu, aceite guajillo-árbol, maíz pozolero, huevo blando.", pt: "Base tonkotsu, óleo guajillo-árbol, milho pozole, ovo mole." },
     origin: { en: "Jalisco × Fukuoka", es: "Jalisco × Fukuoka", pt: "Jalisco × Fukuoka" },
-    hero: recipeHero("ramen-pozole-rojo", 1920, 1200),
-    thumb: recipeHero("ramen-pozole-rojo", 1200, 900),
+    hero: recipeHero("ramen-pozole-rojo"),
+    thumb: recipeHero("ramen-pozole-rojo", "thumb"),
     prepMinutes: 20,
     cookMinutes: 90,
     serves: 4,
@@ -480,8 +455,8 @@ export const recipes: Recipe[] = [
     title: { en: "Chamoy-Furikake Popcorn", es: "Palomitas de Chamoy y Furikake", pt: "Pipoca de Chamoy e Furikake" },
     subtitle: { en: "Salty-sweet-sour-spicy. Three-minute snack, ten-second decision.", es: "Salado-dulce-ácido-picante. Botana de tres minutos.", pt: "Salgado-doce-ácido-picante. Petisco de três minutos." },
     origin: { en: "Tijuana × Osaka", es: "Tijuana × Osaka", pt: "Tijuana × Osaka" },
-    hero: recipeHero("chamoy-furikake-popcorn", 1920, 1200),
-    thumb: recipeHero("chamoy-furikake-popcorn", 1200, 900),
+    hero: recipeHero("chamoy-furikake-popcorn"),
+    thumb: recipeHero("chamoy-furikake-popcorn", "thumb"),
     prepMinutes: 3,
     cookMinutes: 5,
     serves: 4,
@@ -536,8 +511,8 @@ export const recipes: Recipe[] = [
     title: { en: "Miso-Mezcal Flan", es: "Flan de Miso y Mezcal", pt: "Pudim de Missô e Mezcal" },
     subtitle: { en: "Silken egg custard, white miso, smoke caramel, sesame brittle.", es: "Flan sedoso, miso blanco, caramelo ahumado, crocante de ajonjolí.", pt: "Pudim sedoso, missô branco, caramelo defumado, crocante de gergelim." },
     origin: { en: "Veracruz × Tokyo", es: "Veracruz × Tokio", pt: "Veracruz × Tóquio" },
-    hero: recipeHero("miso-mezcal-flan", 1920, 1200),
-    thumb: recipeHero("miso-mezcal-flan", 1200, 900),
+    hero: recipeHero("miso-mezcal-flan"),
+    thumb: recipeHero("miso-mezcal-flan", "thumb"),
     prepMinutes: 20,
     cookMinutes: 50,
     serves: 6,
@@ -597,8 +572,8 @@ export const recipes: Recipe[] = [
     title: { en: "Tamarind-Shoyu Glazed Wings", es: "Alitas Glaseadas Tamarindo-Shoyu", pt: "Asinhas Glaceadas Tamarindo-Shoyu" },
     subtitle: { en: "Crackling skin, sticky glaze, scallion, lime ash.", es: "Piel crujiente, glaseado pegajoso, cebollín, ceniza de lima.", pt: "Pele crocante, glace pegajoso, cebolinha, cinza de lima." },
     origin: { en: "Yucatán × Bangkok-meets-Kyoto", es: "Yucatán × Bangkok-Kioto", pt: "Yucatán × Bangkok-Quioto" },
-    hero: recipeHero("tamarindo-shoyu-glazed-wings", 1920, 1200),
-    thumb: recipeHero("tamarindo-shoyu-glazed-wings", 1200, 900),
+    hero: recipeHero("tamarindo-shoyu-glazed-wings"),
+    thumb: recipeHero("tamarindo-shoyu-glazed-wings", "thumb"),
     prepMinutes: 15,
     cookMinutes: 45,
     serves: 4,
@@ -655,8 +630,8 @@ export const recipes: Recipe[] = [
     title: { en: "Horchata–Tres Leches with Matcha", es: "Tres Leches de Horchata con Matcha", pt: "Tres Leches de Horchata com Matcha" },
     subtitle: { en: "Cinnamon-rice sponge soaked in three milks, dusted ceremonial green.", es: "Bizcocho de arroz-canela bañado en tres leches, espolvoreado de verde ceremonial.", pt: "Pão-de-ló de arroz-canela embebido em três leites, polvilhado de verde cerimonial." },
     origin: { en: "Guadalajara × Uji", es: "Guadalajara × Uji", pt: "Guadalajara × Uji" },
-    hero: recipeHero("horchata-tres-leches-matcha", 1920, 1200),
-    thumb: recipeHero("horchata-tres-leches-matcha", 1200, 900),
+    hero: recipeHero("horchata-tres-leches-matcha"),
+    thumb: recipeHero("horchata-tres-leches-matcha", "thumb"),
     prepMinutes: 25,
     cookMinutes: 30,
     serves: 8,

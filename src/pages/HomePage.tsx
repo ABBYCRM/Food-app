@@ -3,7 +3,6 @@ import { ArrowRight, CalendarDays, NotebookPen, ShieldAlert, MapPin, ChefHat, Su
 import { useMemo, useState } from "react";
 import { Layout } from "@/components/Layout";
 import { RecipeCard } from "@/components/RecipeCard";
-import { InstallButton } from "@/components/InstallButton";
 import { TrialBanner } from "@/components/TrialBanner";
 import { PaywallModal } from "@/components/PaywallModal";
 import { SafeImage } from "@/components/SafeImage";
@@ -26,20 +25,20 @@ export function HomePage() {
   const trialExpired = status === "expired";
 
   return (
-    <Layout hideHeader>
-      <div className="relative px-5 pt-3 pb-2 flex items-center justify-between bg-chili text-bone-50 sticky top-0 z-header">
-        <span className="font-display font-semibold tracking-tight">{t.brand}</span>
-        <div className="flex items-center gap-3">
-          <span className="text-[10px] uppercase tracking-[0.22em] opacity-80 hidden sm:inline">{t.tagline}</span>
-          <InstallButton className="bg-white/10 text-bone-50 border border-white/20 hover:bg-white/20" />
-        </div>
-      </div>
-
+    // Home used to hand-roll its own brand bar, which put it *below* the
+    // desktop nav and gave it a different shape (no search) from every other
+    // page. It now uses the shared Header like the rest of the app, with the
+    // tagline passed through as the section label.
+    <Layout section={t.tagline}>
       <TrialBanner />
 
       {/* Hero with editorial image */}
       <section className="px-5 sm:px-8 lg:px-12 pt-5">
-        <div className="relative aspect-[4/5] sm:aspect-[3/2] lg:aspect-[16/9] lg:max-h-[420px] rounded-card-lg overflow-hidden">
+        {/* Height is capped at lg via an explicit height rather than aspect + max-h:
+            pairing `aspect-*` with `max-h-*` makes CSS resolve the height first and
+            then derive the width from the ratio, which shrinks the hero to 747px
+            inside a 1180px shell instead of filling it. */}
+        <div className="relative aspect-[4/5] sm:aspect-[3/2] lg:aspect-auto lg:h-[420px] rounded-card-lg overflow-hidden">
           <SafeImage
             src={heroFeature.hero}
             recipeSlug={heroFeature.slug}
@@ -80,7 +79,7 @@ export function HomePage() {
           onClick={() => navigate(`/recipe/${today.slug}`)}
           className="mt-3 w-full card-surface overflow-hidden text-left group"
         >
-          <div className="relative aspect-[16/10] lg:aspect-[2/1] lg:max-h-[320px]">
+          <div className="relative aspect-[16/10] lg:aspect-auto lg:h-[320px]">
             <SafeImage
               src={today.hero}
               recipeSlug={today.slug}
@@ -238,7 +237,12 @@ function MealRow({
           {ctaLabel} →
         </button>
       </div>
-      <div className="mt-3 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3">
+      {/* 6 items, so the column count stays a divisor of 6 (2 or 3) and every
+          breakpoint lands on full rows instead of a ragged trailing one. The
+          old xl:grid-cols-6 squeezed cards to ~170px, which truncated the meta
+          stats ("Profou…"); wider cards on desktop read better than more of
+          them, and each row already has a "see all" CTA for depth. */}
+      <div className="mt-3 grid grid-cols-2 sm:grid-cols-3 gap-3">
         {items.map((r) => (
           <RecipeCard key={r.slug} recipe={r} />
         ))}

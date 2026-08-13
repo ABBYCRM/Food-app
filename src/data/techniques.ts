@@ -11,8 +11,9 @@ export type Technique = {
   steps: Record<Locale, string[]>;
 };
 
-const img = (id: string, w = 1200) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
+/* Photography is rendered ahead of time into public/img/ by
+   scripts/fetch-imagery.mjs — see the note in data/recipes.ts. */
+const img = (slug: string) => `${import.meta.env.BASE_URL}img/techniques/${slug}.jpg`;
 
 export const techniques: Technique[] = [
   {
@@ -28,7 +29,7 @@ export const techniques: Technique[] = [
       pt: "Os 60 segundos que decidem todo molho mexicano-asiático.",
     },
     origin: { en: "Universal", es: "Universal", pt: "Universal" },
-    hero: img("photo-1518110925495-b37653ef6d72"),
+    hero: img("chile-bloom"),
     steps: {
       en: [
         "Wipe chiles with a dry cloth — never wash.",
@@ -63,7 +64,7 @@ export const techniques: Technique[] = [
       pt: "Caldo de kombu-osso em 15 minutos para pratos transcontinentais.",
     },
     origin: { en: "Tokyo × Tlaxcala", es: "Tokio × Tlaxcala", pt: "Tóquio × Tlaxcala" },
-    hero: img("photo-1547592180-85f173990554"),
+    hero: img("dashi-meets-caldo"),
     steps: {
       en: [
         "Cover 500 g pork or chicken bones with cold water + a 10 cm strip of kombu.",
@@ -98,7 +99,7 @@ export const techniques: Technique[] = [
       pt: "Masa fresca, duas folhas plásticas, trinta segundos no comal quente.",
     },
     origin: { en: "Oaxaca", es: "Oaxaca", pt: "Oaxaca" },
-    hero: img("photo-1599974579688-8dbdd335c77f"),
+    hero: img("tortilla-press"),
     steps: {
       en: [
         "Mix masa harina with warm water (1:1 by volume) until it feels like soft Play-Doh.",
