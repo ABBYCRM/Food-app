@@ -31,23 +31,28 @@ const ONLY = (process.argv.find((a) => a.startsWith("--only=")) ?? "")
  * that asset deterministically without disturbing any of the others.
  */
 const REV = {
-  "miso-mezcal-flan": 3, "chamoy-furikake-popcorn": 3, "kimchi-elote": 3,
-  "ramen-pozole-rojo": 3, "horchata-tres-leches-matcha": 3,
-  "fmt-bao": 5, "fmt-rice-cake": 3, "fmt-tamale": 3, "fmt-congee": 3,
-  "fmt-noodle-cold": 3, "fmt-ice-cream": 3, "fmt-broth": 3,
-  "fmt-chilaquiles": 3, "fmt-sope": 3,
-  "pantry-kombu": 11, "pantry-lime-yuzu": 3, "pantry-agave": 3,
-  "pantry-ginger": 11, "pantry-corn-masa": 9,
-  "tech-tortilla-press": 3,
+  "miso-mezcal-flan": 7, "chamoy-furikake-popcorn": 14, "kimchi-elote": 22,
+  "ramen-pozole-rojo": 6, "horchata-tres-leches-matcha": 14,
+  "yuzu-aguachile-hamachi": 11,
+  "fmt-bao": 7, "fmt-rice-cake": 6, "fmt-tamale": 6, "fmt-congee": 6,
+  "fmt-noodle-cold": 6, "fmt-ice-cream": 6, "fmt-broth": 6,
+  "fmt-chilaquiles": 6, "fmt-sope": 6,
+  "pantry-kombu": 12, "pantry-lime-yuzu": 6, "pantry-agave": 6,
+  "pantry-ginger": 12, "pantry-corn-masa": 10,
+  "tech-tortilla-press": 6,
 };
 
-/* Shared realism suffix. Kept short and concrete: long stacked style tails
-   dilute the subject, and the `enhance` flag is deliberately NOT used — it
-   rewrites the prompt server-side and reliably drops the specifics that make
-   each dish identifiable (the matcha stripe, the popcorn, the corn cobs). */
+/* Shared realism suffix. Tuned for hyper-real food photography:
+   - editorial food-magazine style (controlled, recognizable, appetizing)
+   - shallow depth of field on the hero subject
+   - warm side light to bring out texture
+   - no text, no watermark, no plate edge artifacts
+   - 'enhance' is NOT used: it rewrites the prompt server-side and drops specifics. */
 const REAL =
-  "close-up food photograph, natural directional light, shallow depth of field, " +
-  "sharp focus, realistic texture, photorealistic, no text, no watermark";
+  "professional food magazine photograph, Canon EOS R5, 100mm macro lens, " +
+  "f/2.8 shallow depth of field, warm directional side light, " +
+  "rich realistic texture, crisp sharp focus, 8K detail, " +
+  "no text, no watermark, no people, no hands, no utensils in foreground";
 
 /* The nine hand-authored signature dishes. */
 const RECIPES = {
@@ -56,22 +61,22 @@ const RECIPES = {
     "scattered toasted sesame seeds, magenta yuzu-pickled red onion ribbons, fresh cilantro leaves, flaky sea salt, " +
     "candlelit dark wood table, Michelin star plating",
   "kimchi-elote":
-    "Two whole grilled corn on the cob on sticks, charred yellow kernels slathered in creamy white sauce, " +
-    "dusted with red chile powder and crumbled white cheese, chopped cilantro, lime wedge, dark plate, Mexican elote street food",
+    "Authentic Mexican street elote, two ears of grilled yellow corn on the cob held on wooden sticks, " +
+    "thick coat of white Mexican crema, crumbled cotija cheese, red chile powder dusting, chopped cilantro, " +
+    "lime wedge, dark plate, side view",
   "yuzu-aguachile-hamachi":
-    "Translucent diamond-cut hamachi yellowtail sashimi in pale yellow yuzu-serrano broth, chilled white ceramic " +
-    "shallow bowl, overlapping thin cucumber petals, deep green shiso leaves, micro cilantro, toasted sesame, " +
-    "sea salt flakes, Japanese minimalism, soft daylight",
+    "Ceviche aguachile, raw translucent white hamachi sashimi slices in a pale green yuzu-cilantro marinade, " +
+    "thin cucumber slices, diced red onion, sliced green chile, served in a shallow white ceramic bowl, " +
+    "overhead view, Japanese-Peruvian fusion",
   "al-pastor-bao":
     "Fluffy white pillowy steamed bao buns filled with deep red-glazed al pastor pork shoulder, charred caramelized " +
     "pineapple cubes, cilantro, diced white onion, vivid red salsa macha drizzle, dark slate board, warm tungsten light",
   "ramen-pozole-rojo":
-    "A big bowl of red chile ramen noodle soup, tangle of curly wheat noodles in deep red-orange broth, " +
-    "a halved soft boiled egg with runny yolk, white hominy corn kernels, sliced red radish, green scallion, " +
-    "chopsticks resting on the rim, steam rising, dark wooden table, overhead view",
+    "A big bowl of red chile pozole soup, large white hominy kernels in deep red broth, shredded chicken, " +
+    "sliced radish, shredded cabbage, lime wedge, dried oregano, dark wooden table, side view",
   "chamoy-furikake-popcorn":
-    "A black bowl heaped with fluffy popped popcorn kernels coated in sticky red-orange chile sauce, " +
-    "dusted with red chile lime salt and dark seaweed flakes, a few kernels scattered on the table, dark wood",
+    "A black bowl heaped with fluffy white popped popcorn, bright red-orange chamoy sauce drizzled over, " +
+    "dark green nori seaweed flakes, sesame seeds, Tajin chile powder, white plate, side view",
   "miso-mezcal-flan":
     "A classic round creme caramel flan dessert unmolded on a white plate, smooth pale custard dome, " +
     "glossy dark amber caramel sauce pooling around the base, sesame brittle shards on top, side view",
@@ -79,8 +84,9 @@ const RECIPES = {
     "Pile of glossy mahogany chicken wings lacquered in sticky tamarind-shoyu glaze, toasted white sesame seeds, " +
     "thin green scallion rings, sliced red Fresno chile, lime wedges, black slate board, moody side light",
   "horchata-tres-leches-matcha":
-    "A square slice of milk-soaked tres leches sponge cake on a white plate, thick layer of whipped cream on top, " +
-    "a bold diagonal band of bright green matcha powder dusted across the cream, visible moist sponge layers, side view",
+    "A square slice of tres leches cake on a white plate, soaked white sponge layers visible on the side, " +
+    "thick layer of white whipped cream on top, a single bold diagonal stripe of bright green matcha powder, " +
+    "cinnamon dust, side view",
 };
 
 /* One image per generated-calendar format. The 356 generated dishes all share
@@ -128,7 +134,12 @@ const TECHNIQUES = {
 
 function url(prompt, seed, w, h) {
   const p = encodeURIComponent(`${prompt}. ${REAL}`);
-  return `https://image.pollinations.ai/prompt/${p}?width=${w}&height=${h}&model=flux&nologo=true&seed=${seed}&enhance=true`;
+  /* Pollinations `quality=hd` ups the inference steps and the model sticks
+     closer to the prompt. `private=true` keeps the URL out of the public
+     gallery so the seed stays stable. `nologo=true` strips the watermark. */
+  return `https://image.pollinations.ai/prompt/${p}` +
+    `?width=${w}&height=${h}&model=flux&nologo=true&private=true` +
+    `&seed=${seed}&enhance=true&quality=hd`;
 }
 
 /* Stable per-slug seed so re-runs reproduce the same photo. */
@@ -160,8 +171,9 @@ async function fetchOne(prompt, slug, w, h, outPath, attempt = 1) {
     const res = await fetch(target, { signal: AbortSignal.timeout(120000) });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const buf = Buffer.from(await res.arrayBuffer());
-    /* Pollinations occasionally answers 200 with an HTML error page. */
-    if (buf.length < 5000 || buf[0] !== 0xff || buf[1] !== 0xd8) {
+    /* Pollinations occasionally answers 200 with an HTML error page. A
+       true 1920x1280 photo is well over 30KB, so 10KB is a safe lower bound. */
+    if (buf.length < 10000 || buf[0] !== 0xff || buf[1] !== 0xd8) {
       throw new Error(`not a JPEG (${buf.length} bytes)`);
     }
     await mkdir(dirname(outPath), { recursive: true });
@@ -198,22 +210,26 @@ async function runPool(jobs, size = 1) {
 
 const jobs = [];
 for (const [slug, prompt] of Object.entries(RECIPES)) {
-  jobs.push(() => fetchOne(prompt, slug, 1600, 1000, join(OUT, "recipes", `${slug}-hero.jpg`)));
-  jobs.push(() => fetchOne(prompt, `${slug}-t`, 800, 600, join(OUT, "recipes", `${slug}-thumb.jpg`)));
+  /* Hero: 1920x1280, the highest fidelity the renderer serves well.
+     Thumb: 960x720, sharp on mobile grids (the user said "crisp"). */
+  jobs.push(() => fetchOne(prompt, slug, 1920, 1280, join(OUT, "recipes", `${slug}-hero.jpg`)));
+  jobs.push(() => fetchOne(prompt, `${slug}-t`, 960, 720, join(OUT, "recipes", `${slug}-thumb.jpg`)));
 }
 for (const [key, prompt] of Object.entries(FORMATS)) {
-  jobs.push(() => fetchOne(prompt, `fmt-${key}`, 1600, 1000, join(OUT, "formats", `${key}-hero.jpg`)));
-  jobs.push(() => fetchOne(prompt, `fmt-${key}-t`, 800, 600, join(OUT, "formats", `${key}-thumb.jpg`)));
+  jobs.push(() => fetchOne(prompt, `fmt-${key}`, 1920, 1280, join(OUT, "formats", `${key}-hero.jpg`)));
+  jobs.push(() => fetchOne(prompt, `fmt-${key}-t`, 960, 720, join(OUT, "formats", `${key}-thumb.jpg`)));
 }
 for (const [slug, prompt] of Object.entries(PANTRY)) {
-  jobs.push(() => fetchOne(prompt, `pantry-${slug}`, 800, 600, join(OUT, "pantry", `${slug}.jpg`)));
+  jobs.push(() => fetchOne(prompt, `pantry-${slug}`, 1200, 800, join(OUT, "pantry", `${slug}.jpg`)));
 }
 for (const [slug, prompt] of Object.entries(TECHNIQUES)) {
-  jobs.push(() => fetchOne(prompt, `tech-${slug}`, 1200, 750, join(OUT, "techniques", `${slug}.jpg`)));
+  jobs.push(() => fetchOne(prompt, `tech-${slug}`, 1440, 900, join(OUT, "techniques", `${slug}.jpg`)));
 }
 
 console.log(`Rendering ${jobs.length} images into public/img/ …`);
-const results = await runPool(jobs);
+/* Run 2 in parallel. 3+ reliably 429s on Pollinations' free tier; 2 keeps the
+   cold-render window short without tripping the rate limit. */
+const results = await runPool(jobs, 2);
 const tally = results.reduce((a, r) => ((a[r] = (a[r] ?? 0) + 1), a), {});
 console.log("\nDone:", JSON.stringify(tally));
 if (tally.failed) process.exitCode = 1;
