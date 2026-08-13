@@ -455,62 +455,24 @@ const finishes: Array<{ name: Tri; allergens: Allergen[] }> = [
   { name: { en: "crisped lardon and lime", es: "tocino crujiente y lima", pt: "torresmo crocante e lima" }, allergens: ["pork"] },
 ];
 
-const heroImages = [
-  "photo-1565299624946-b28f40a0ae38",
-  "photo-1551782450-a2132b4ba21d",
-  "photo-1559339352-11d035aa65de",
-  "photo-1496116218417-1a781b1c416c",
-  "photo-1569718212165-3a8278d5f624",
-  "photo-1578849278619-e73505e9610f",
-  "photo-1488477181946-6428a0291777",
-  "photo-1527477396000-e27163b481c2",
-  "photo-1551024601-bec78aea704b",
-  "photo-1546069901-ba9599a7e63c",
-  "photo-1565958011703-44f9829ba187",
-  "photo-1432139509613-5c4255815697",
-  "photo-1504674900247-0877df9cc836",
-  "photo-1467003909585-2f8a72700288",
-  "photo-1483918793747-5adbf82956c4",
-  "photo-1540420773420-3366772f4999",
-  "photo-1574484284002-952d92456975",
-  "photo-1517248135467-4c7edcad34c4",
-  "photo-1543353071-873f17a7a088",
-  "photo-1601314167099-cb6ed9aef0e1",
-  "photo-1432139509613-5c4255815697",
-  "photo-1604908554007-2f7e7b2bf7a7",
-  "photo-1576402187878-974f70c890a5",
-  "photo-1606756790138-261d2b21cd75",
-];
-
 function tri(en: string, es: string, pt: string): Tri {
   return { en, es, pt };
 }
 
-/* Pollinations.ai — same engine as recipes.ts. */
-function aiImage(prompt: string, seed: number, w = 1600, h = 1000): string {
-  const p = encodeURIComponent(prompt);
-  return `https://image.pollinations.ai/prompt/${p}?width=${w}&height=${h}&model=flux&nologo=true&seed=${seed}&enhance=true`;
-}
+/**
+ * Generated-calendar photography.
+ *
+ * The 356 generated dishes can't each have a bespoke photo, but every one is
+ * built from a `format` (taco, bao, bowl, ramen …), and scripts/fetch-imagery.mjs
+ * renders one photograph per format. Keying off the format gives each dish a
+ * picture that actually looks like what it is, rather than the single repeated
+ * brand-mark placeholder these used to fall back to.
+ */
+const IMG_BASE = `${import.meta.env.BASE_URL}img`;
 
-function seedFromSlug(slug: string): number {
-  let h = 2166136261;
-  for (let i = 0; i < slug.length; i++) {
-    h ^= slug.charCodeAt(i);
-    h = Math.imul(h, 16777619);
-  }
-  return Math.abs(h | 0) || 1;
+function formatImage(formatKey: string, variant: "hero" | "thumb"): string {
+  return `${IMG_BASE}/formats/${formatKey}-${variant}.jpg`;
 }
-
-function buildPrompt(protein: string, formatTitle: string, marinade: string, finish: string): string {
-  /* Strip parenthetical asides (e.g., "(white miso + chipotle)") so the prompt stays tight. */
-  const clean = (s: string) => s.split(" (")[0];
-  return `Editorial overhead photo of ${clean(protein)} ${clean(formatTitle).toLowerCase()} glazed with ${clean(marinade)}, finished with ${clean(finish)}, plated on dark ceramic, soft natural light, dark wood background, Michelin-star food magazine styling, photorealistic 4k, hyper-detailed, garnishes visible, cilantro, lime, sesame seeds`;
-}
-
-function img(id: string, w = 1600) {
-  return aiImage(`Editorial food photography 4k ${id}`, seedFromSlug(id), w, Math.round(w * 0.625));
-}
-
 
 function dedupe<T>(arr: T[]): T[] {
   return Array.from(new Set(arr));
@@ -533,7 +495,6 @@ export function generateRecipe(index: number): Recipe {
   const prot = proteins[Math.floor(rng() * proteins.length)];
   const mar = marinades[Math.floor(rng() * marinades.length)];
   const fin = finishes[Math.floor(rng() * finishes.length)];
-  const heroId = heroImages[Math.floor(rng() * heroImages.length)];
   const spice = (1 + Math.floor(rng() * 5)) as 1 | 2 | 3 | 4 | 5;
   const umami = (2 + Math.floor(rng() * 4)) as 2 | 3 | 4 | 5;
 
@@ -618,16 +579,14 @@ export function generateRecipe(index: number): Recipe {
   if (!allergens.includes("pork")) dietary.push("pork");
 
   const slug = `day-${(index + 1).toString().padStart(3, "0")}-${fmt.key}-${prot.key}-${mar.key}`;
-  const heroPrompt = buildPrompt(prot.name.en, fmt.title.en, mar.name.en, fin.name.en);
-  const heroSeed = seedFromSlug(slug);
   return {
     slug,
     category: fmt.category,
     title,
     subtitle,
     origin: tri("Mexico × Asia", "México × Asia", "México × Ásia"),
-    hero: aiImage(heroPrompt, heroSeed, 1800, 1100),
-    thumb: aiImage(heroPrompt, heroSeed, 900, 700),
+    hero: formatImage(fmt.key, "hero"),
+    thumb: formatImage(fmt.key, "thumb"),
     prepMinutes: fmt.prep,
     cookMinutes: fmt.cook,
     serves: fmt.serves,

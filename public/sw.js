@@ -48,7 +48,8 @@ self.addEventListener("fetch", (event) => {
   if (req.method !== "GET") return;
   const url = new URL(req.url);
   if (url.origin !== self.location.origin) {
-    // Cross-origin (Pollinations, Unsplash) — stale-while-revalidate
+    // Cross-origin — stale-while-revalidate. Recipe photography is now
+    // same-origin under /img/ and is handled by the static-asset branch below.
     event.respondWith(
       (async () => {
         const cache = await caches.open(IMAGE_CACHE);

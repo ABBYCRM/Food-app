@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type ImgHTMLAttributes } from "react";
 import { fallbackFor, type ArtSize } from "@/lib/recipeArt";
-import { imageIsLikelyGood, markImageFailed, markImageLoaded } from "@/lib/imageCache";
+import { imageHasFailed, markImageFailed, markImageLoaded } from "@/lib/imageCache";
 
 /**
  * Smart image with three states:
@@ -10,14 +10,14 @@ import { imageIsLikelyGood, markImageFailed, markImageLoaded } from "@/lib/image
  *      is opted-out via preferArt)
  *
  * Reliability rules:
- *   - 8-second timeout: if the real image hasn't loaded by then, switch to
- *     the fallback. Pollinations can take 5-10s for a new image; for cached
- *     images it's <1s. The 8s budget gives the network a fair shot without
- *     leaving the user staring at a skeleton.
+ *   - Timeout: if the image hasn't loaded in `timeoutMs`, fall back. Now that
+ *     photography is vendored under public/img/ this is a backstop for a
+ *     missing/corrupt file rather than the routine path it was when every
+ *     src was a live image-generation request.
  *   - The fallback is generated from the recipe slug so the failure state
  *     still looks like the dish — never a blank box or a "broken image" icon.
  *   - The global image cache (imageCache.ts) blacklists URLs that fail
- *     once so we don't hammer them on every component mount.
+ *     once so we don't retry them on every component mount.
  */
 
 type Props = ImgHTMLAttributes<HTMLImageElement> & {
@@ -73,13 +73,13 @@ export function SafeImage({
 }: Props) {
   const fallbackSrc = buildFallback(recipeSlug, fallbackSize);
 
-  // If we know the URL has failed recently, skip the network attempt entirely
-  // and render the fallback directly. This is the main lever against the
-  // Pollinations 429 storm — we stop hammering a known-broken URL.
-  const [shouldAttempt] = useState(() => !!src && imageIsLikelyGood(src));
+  // Skip the load only for a URL we've actually seen fail — anything else gets
+  // a real attempt. (This previously gated on "is known good", which is false
+  // for every URL on a cold load, so no image was ever fetched.)
+  const [knownBad] = useState(() => !!src && imageHasFailed(src));
 
   // If preferArt is set, force the per-recipe art (no network attempt).
-  const forceFallback = preferArt || !shouldAttempt;
+  const forceFallback = preferArt || knownBad;
   const [errored, setErrored] = useState<boolean>(forceFallback);
   const [loaded, setLoaded] = useState(false);
   const showSrc = errored || !src ? fallbackSrc : src!;

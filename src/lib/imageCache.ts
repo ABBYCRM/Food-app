@@ -26,18 +26,26 @@ function isFresh(ts: number) {
 }
 
 /**
- * Returns true if the URL has recently loaded successfully (or is in flight
- * and likely to succeed). Returns false if it has failed or is unknown.
+ * Returns true only for URLs we have actually seen fail.
  *
- * Components use this to short-circuit: if they know the URL is bad, they
- * render the per-recipe fallback immediately and skip the network attempt.
+ * This is the predicate components should gate on. The distinction matters:
+ * "not known to be good" is the state of every URL on a cold page load, so
+ * treating that as a reason to skip the network means the real image is never
+ * requested at all and every image renders as fallback art forever.
+ */
+export function imageHasFailed(url: string): boolean {
+  return !!url && failed.has(url);
+}
+
+/**
+ * Returns true if the URL has recently loaded successfully. Unknown URLs
+ * return false — use `imageHasFailed` to decide whether to skip a load.
  */
 export function imageIsLikelyGood(url: string): boolean {
   if (!url) return false;
   if (failed.has(url)) return false;
   const ts = successCache.get(url);
   if (ts && isFresh(ts)) return true;
-  // in-flight: assume good (we don't know yet)
   if (inflight.has(url)) return true;
   return false;
 }

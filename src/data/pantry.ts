@@ -11,8 +11,9 @@ export type PantryItem = {
   bridges: LString;
 };
 
-const img = (id: string, w = 600) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
+/* Photography is rendered ahead of time into public/img/ by
+   scripts/fetch-imagery.mjs — see the note in data/recipes.ts. */
+const img = (slug: string) => `${import.meta.env.BASE_URL}img/pantry/${slug}.jpg`;
 
 export const pantry: PantryItem[] = [
   {
@@ -24,7 +25,7 @@ export const pantry: PantryItem[] = [
       es: "Columna vertebral del umami asiático. Oscura para color, ligera para sal.",
       pt: "Espinha dorsal do umami asiático. Escura para cor, leve para sal.",
     },
-    hero: img("photo-1607522370275-f14206abe5d3"),
+    hero: img("soy-sauce"),
     bridges: {
       en: "Splash into mole verde for instant depth.",
       es: "Un chorrito en mole verde da profundidad inmediata.",
@@ -40,7 +41,7 @@ export const pantry: PantryItem[] = [
       es: "Guajillo para brillo, ancho para pasa, árbol para golpe.",
       pt: "Guajillo para brilho, ancho para passa, árbol para impacto.",
     },
-    hero: img("photo-1583847268964-b28dc8f51f92"),
+    hero: img("dried-chiles"),
     bridges: {
       en: "Toast and grind into furikake for chile-laced rice.",
       es: "Tuesta y muele dentro de furikake para arroz con chile.",
@@ -56,7 +57,7 @@ export const pantry: PantryItem[] = [
       es: "Calor sin picante. La sección rítmica de toda armonía aromática asiática.",
       pt: "Calor sem picância. A seção rítmica de toda harmonia aromática asiática.",
     },
-    hero: img("photo-1599598425947-5ec73d425a73"),
+    hero: img("ginger"),
     bridges: {
       en: "Microplane raw into salsa verde — surprise lift.",
       es: "Ralla crudo a la salsa verde — sorpresa que eleva.",
@@ -72,7 +73,7 @@ export const pantry: PantryItem[] = [
       es: "Cimiento del pan diario de México. El álcali transforma el maíz en sabor y nutrición.",
       pt: "Base do pão diário do México. O álcali transforma o milho em sabor e nutrição.",
     },
-    hero: img("photo-1620650804123-8bf67bb9a8b6"),
+    hero: img("corn-masa"),
     bridges: {
       en: "Use as the wrapper for any dumpling-style filling.",
       es: "Úsala como envoltura para cualquier relleno tipo dumpling.",
@@ -88,7 +89,7 @@ export const pantry: PantryItem[] = [
       es: "Sal, funk, dulce. Blanco delicado, rojo audaz, negro siniestro.",
       pt: "Sal, funk, doce. Branco delicado, vermelho ousado, preto sinistro.",
     },
-    hero: img("photo-1568901346375-23c9450c58cd"),
+    hero: img("miso"),
     bridges: {
       en: "Stir 1 tbsp into mole and refuse to explain yourself.",
       es: "Integra 1 cda al mole y rehúsate a explicar por qué.",
@@ -104,7 +105,7 @@ export const pantry: PantryItem[] = [
       es: "La lima aterriza, el yuzu canta. Úsalos en tándem para brillo alto-bajo.",
       pt: "A lima aterra, o yuzu canta. Use em tandem para brilho alto-baixo.",
     },
-    hero: img("photo-1622957461168-202399317b89"),
+    hero: img("lime-yuzu"),
     bridges: {
       en: "50/50 yuzu-lime is the perfect aguachile cure.",
       es: "Yuzu-lima 50/50 es el cura perfecto para aguachile.",
@@ -120,7 +121,7 @@ export const pantry: PantryItem[] = [
       es: "Alga seca, naturalmente rica en MSG. Una hoja eleva cualquier caldo.",
       pt: "Alga seca, naturalmente rica em MSG. Uma folha eleva qualquer caldo.",
     },
-    hero: img("photo-1607301406259-dfb186e15de8"),
+    hero: img("kombu"),
     bridges: {
       en: "Steep in pozole stock for 20 minutes — invisible but transformative.",
       es: "Reposa en caldo de pozole 20 minutos — invisible pero transformador.",
@@ -136,7 +137,7 @@ export const pantry: PantryItem[] = [
       es: "Glicémicamente más bajo que el azúcar, con notas de miel vegetal. El mirin mexicano.",
       pt: "Glicemicamente menor que o açúcar, com notas de mel vegetal. O mirin mexicano.",
     },
-    hero: img("photo-1606923829579-0cb981a83e2e"),
+    hero: img("agave"),
     bridges: {
       en: "Substitute 1:1 for mirin in teriyaki and you'll never go back.",
       es: "Sustituye 1:1 el mirin en teriyaki y no querrás volver.",

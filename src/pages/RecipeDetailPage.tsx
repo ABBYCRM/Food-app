@@ -114,7 +114,7 @@ export function RecipeDetailPage({ slug }: { slug: string }) {
     <Layout hideHeader>
       {/* Full-bleed hero */}
       <section className="relative">
-        <div className="relative aspect-[4/5] sm:aspect-[16/10] lg:aspect-[16/9] lg:max-h-[440px] overflow-hidden">
+        <div className="relative aspect-[4/5] sm:aspect-[16/10] lg:aspect-auto lg:h-[440px] overflow-hidden">
           <SafeImage src={recipe.hero} recipeSlug={recipe.slug} fallbackSize="hero" alt="" className="absolute inset-0 w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-black/30" />
           <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
