@@ -338,8 +338,8 @@ export function RecipeDetailPage({ slug }: { slug: string }) {
 
       {/* Slot picker modal — choose which meal to add this recipe to */}
       {slotPickerOpen ? (
-        <div className="fixed inset-0 z-modal bg-ink/55 backdrop-blur-sm grid place-items-center px-4" role="dialog" aria-modal="true" aria-label={t.recipe.addToPlanner}>
-          <div className="max-w-[420px] w-full bg-bone-50 rounded-card-lg overflow-hidden card-surface">
+        <div className="fixed inset-0 z-modal bg-ink/55 backdrop-blur-sm grid place-items-center p-4 overflow-y-auto" role="dialog" aria-modal="true" aria-label={t.recipe.addToPlanner}>
+          <div className="max-w-[420px] w-full bg-bone-50 rounded-card-lg overflow-hidden card-surface my-auto">
             <div className="px-4 py-3 border-b border-line-soft flex items-center justify-between">
               <div className="font-display text-lg">{t.recipe.addToPlanner}</div>
               <button type="button" onClick={() => setSlotPickerOpen(false)} className="p-1 rounded-pill hover:bg-ink/[0.06]" aria-label={t.common.cancel}>
