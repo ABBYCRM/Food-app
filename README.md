@@ -85,3 +85,4 @@ npm run preview     # serve locally
 ## License
 
 MIT.
+# Auto-deploy verified 2026-08-13T17:21:36Z
