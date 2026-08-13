@@ -1,8 +1,11 @@
 import { useLocation } from "wouter";
 import { ArrowRight, CalendarDays, NotebookPen, ShieldAlert, MapPin, ChefHat, Sunrise, Sun, Moon, Leaf } from "lucide-react";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { Layout } from "@/components/Layout";
 import { RecipeCard } from "@/components/RecipeCard";
+import { InstallButton } from "@/components/InstallButton";
+import { TrialBanner } from "@/components/TrialBanner";
+import { PaywallModal } from "@/components/PaywallModal";
 import { useUser } from "@/context/UserContext";
 import { dict, type Locale } from "@/i18n";
 import { allRecipesForCalendar, recipeForDate } from "@/data/calendar";
@@ -13,6 +16,7 @@ export function HomePage() {
   const [, navigate] = useLocation();
   const t = dict[locale];
   const today = recipeForDate();
+  const [paywallOpen, setPaywallOpen] = useState(false);
 
   const heroFeature = recipes[0];
 
@@ -20,8 +24,13 @@ export function HomePage() {
     <Layout hideHeader>
       <div className="relative px-5 pt-3 pb-2 flex items-center justify-between bg-[var(--color-chili)] text-[var(--color-bone-50)] sticky top-0 z-20">
         <span className="font-display font-semibold tracking-tight">{t.brand}</span>
-        <span className="text-[10px] uppercase tracking-[0.22em] opacity-80">{t.tagline}</span>
+        <div className="flex items-center gap-3">
+          <span className="text-[10px] uppercase tracking-[0.22em] opacity-80 hidden sm:inline">{t.tagline}</span>
+          <InstallButton className="bg-white/10 text-bone-50 border border-white/20 hover:bg-white/20" />
+        </div>
       </div>
+
+      <TrialBanner />
 
       {/* Hero with editorial image */}
       <section className="px-5 sm:px-8 lg:px-12 pt-5">

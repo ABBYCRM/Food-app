@@ -50,6 +50,7 @@ export function exportAll(): string {
 
 const ALLOWED_KEYS = new Set([
   "locale", "zip", "favorites", "notes", "userRecipes", "planner", "avoiding", "dietary",
+  "trialStartedAt", "trialUnlockedAt", "trialDismissedAt",
 ]);
 
 export function importAll(json: string): boolean {

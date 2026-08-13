@@ -281,4 +281,39 @@ export const es: Dict = {
     next: "Siguiente",
     back: "Atrás",
   },
+  trial: {
+    banner: (days: number) =>
+      days > 1
+        ? `${days} días restantes en tu prueba gratuita.`
+        : days === 1
+          ? `1 día restante en tu prueba gratuita.`
+          : `Último día de tu prueba gratuita.`,
+    installLabel: "Instalar en mi dispositivo",
+    installTitle: "Añade Mestizo Umami a tu pantalla de inicio",
+    installBody: "Instala la app para recetas sin conexión, lanzamientos más rápidos y una experiencia de cocina a pantalla completa. Gratis por 7 días.",
+    installCta: "Instalar app",
+    installIosCta: "Cómo instalar",
+    installIosStep1: "Toca el botón Compartir",
+    installIosStep2: "Desplázate y toca “Añadir a pantalla de inicio”",
+    installIosStep3: "Toca “Añadir” arriba a la derecha",
+    installIosNote: "En iPhone / iPad, el icono de compartir es el cuadrado con la flecha hacia arriba en la parte inferior de Safari.",
+    installLater: "Quizá más tarde",
+    installInstalled: "Instalada — ábrela desde tu pantalla de inicio.",
+    paywallTitle: "Tu prueba gratuita ha terminado.",
+    paywallBody: "Para seguir usando el planificador, cuaderno, favoritos y vendedores guardados, elige un plan. Navegar recetas siempre es gratis.",
+    paywallPrice: "$4.99 / mes",
+    paywallSub: "O $39 / año — ahorra 35%",
+    paywallUnlock: "Desbloquear acceso completo",
+    paywallContinue: "Seguir navegando gratis",
+    paywallLocked: "Suscríbete para guardar",
+    paywallFeaturesTitle: "Lo que obtienes:",
+    paywallFeaturePlanner: "Planificador semanal con lista de compras al toque",
+    paywallFeatureNotebook: "Cuaderno personal, forks y tus propias recetas",
+    paywallFeatureFavorites: "Favoritos y notas ilimitados",
+    paywallFeatureOffline: "Acceso sin conexión a las recetas",
+    paywallFeatureVendors: "Vendedores locales guardados por código postal",
+    paywallFeatureUpdates: "Platos nuevos cada semana, todo el año",
+    trialBadge: "Prueba",
+    proBadge: "Pro",
+  },
 };

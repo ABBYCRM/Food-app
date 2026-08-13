@@ -2,6 +2,7 @@ import { ChevronLeft, Search } from "lucide-react";
 import { useLocation } from "wouter";
 import { useUser } from "@/context/UserContext";
 import { dict } from "@/i18n";
+import { InstallButton } from "./InstallButton";
 
 export function Header({ section, showBack = false }: { section?: string; showBack?: boolean }) {
   const { locale } = useUser();
@@ -9,13 +10,13 @@ export function Header({ section, showBack = false }: { section?: string; showBa
   const t = dict[locale];
   return (
     <header className="header-band">
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 min-w-0">
         {showBack ? (
           <button
             type="button"
             aria-label={t.common.back}
             onClick={() => window.history.length > 1 ? window.history.back() : navigate("/")}
-            className="p-1 -ml-1 rounded-full hover:bg-white/10 transition-colors"
+            className="header-icon-btn"
           >
             <ChevronLeft size={20} />
           </button>
@@ -23,22 +24,23 @@ export function Header({ section, showBack = false }: { section?: string; showBa
         <button
           type="button"
           onClick={() => navigate("/")}
-          className="font-display font-semibold text-[1.05rem] tracking-tight leading-none"
+          className="font-display font-semibold text-[1.05rem] tracking-tight leading-none truncate"
         >
           {t.brand}
         </button>
       </div>
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-1.5 sm:gap-2">
         {section ? (
-          <span className="text-[10px] uppercase tracking-[0.22em] opacity-80 hidden sm:inline">
+          <span className="text-[10px] uppercase tracking-[0.22em] opacity-80 hidden sm:inline truncate max-w-[20ch]">
             {section}
           </span>
         ) : null}
+        <InstallButton className="bg-white/10 text-bone-50 border border-white/20 hover:bg-white/20" />
         <button
           type="button"
           onClick={() => navigate("/search")}
           aria-label={t.nav.search}
-          className="p-1 rounded-full hover:bg-white/10 transition-colors"
+          className="header-icon-btn"
         >
           <Search size={18} />
         </button>

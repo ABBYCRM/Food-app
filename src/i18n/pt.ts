@@ -281,4 +281,39 @@ export const pt: Dict = {
     next: "Próximo",
     back: "Voltar",
   },
+  trial: {
+    banner: (days: number) =>
+      days > 1
+        ? `${days} dias restantes no seu teste gratuito.`
+        : days === 1
+          ? `1 dia restante no seu teste gratuito.`
+          : `Último dia do seu teste gratuito.`,
+    installLabel: "Instalar no meu dispositivo",
+    installTitle: "Adicione o Mestizo Umami à sua tela inicial",
+    installBody: "Instale o app para receitas offline, abertura mais rápida e uma cozinha em tela cheia. Grátis por 7 dias.",
+    installCta: "Instalar app",
+    installIosCta: "Como instalar",
+    installIosStep1: "Toque no botão Compartilhar",
+    installIosStep2: "Role e toque em “Adicionar à tela inicial”",
+    installIosStep3: "Toque em “Adicionar” no canto superior direito",
+    installIosNote: "No iPhone / iPad, o ícone de compartilhar é o quadrado com a seta para cima na parte de baixo do Safari.",
+    installLater: "Talvez depois",
+    installInstalled: "Instalado — abra pela sua tela inicial.",
+    paywallTitle: "Seu teste gratuito terminou.",
+    paywallBody: "Para continuar usando o planejador, caderno, favoritos e fornecedores salvos, escolha um plano. Navegar pelas receitas é sempre grátis.",
+    paywallPrice: "R$ 24,90 / mês",
+    paywallSub: "Ou R$ 199 / ano — economize 35%",
+    paywallUnlock: "Desbloquear acesso completo",
+    paywallContinue: "Continuar navegando grátis",
+    paywallLocked: "Assine para salvar",
+    paywallFeaturesTitle: "O que você ganha:",
+    paywallFeaturePlanner: "Planejador semanal com lista de compras em um toque",
+    paywallFeatureNotebook: "Caderno pessoal, forks e suas próprias receitas",
+    paywallFeatureFavorites: "Favoritos e notas ilimitados",
+    paywallFeatureOffline: "Acesso offline às receitas",
+    paywallFeatureVendors: "Fornecedores locais salvos por CEP",
+    paywallFeatureUpdates: "Pratos novos toda semana, o ano todo",
+    trialBadge: "Teste",
+    proBadge: "Pro",
+  },
 };

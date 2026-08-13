@@ -279,4 +279,39 @@ export const en = {
     next: "Next",
     back: "Back",
   },
+  trial: {
+    banner: (days: number) =>
+      days > 1
+        ? `${days} days left in your free trial.`
+        : days === 1
+          ? `1 day left in your free trial.`
+          : `Last day of your free trial.`,
+    installLabel: "Install on my device",
+    installTitle: "Add Mestizo Umami to your home screen",
+    installBody: "Install the app for offline recipes, faster launches, and a full-screen kitchen experience. Free for 7 days.",
+    installCta: "Install app",
+    installIosCta: "How to install",
+    installIosStep1: "Tap the Share button",
+    installIosStep2: "Scroll and tap “Add to Home Screen”",
+    installIosStep3: "Tap “Add” in the top right",
+    installIosNote: "On iPhone / iPad, the share icon is the box with the up-arrow at the bottom of Safari.",
+    installLater: "Maybe later",
+    installInstalled: "Installed — launch from your home screen.",
+    paywallTitle: "Your free trial has ended.",
+    paywallBody: "To keep using the planner, notebook, favorites, and your saved vendors, pick a plan. Browsing recipes is always free.",
+    paywallPrice: "$4.99 / month",
+    paywallSub: "Or $39 / year — save 35%",
+    paywallUnlock: "Unlock full access",
+    paywallContinue: "Continue browsing free",
+    paywallLocked: "Subscribe to save",
+    paywallFeaturesTitle: "What you get:",
+    paywallFeaturePlanner: "Weekly planner with one-tap shopping list",
+    paywallFeatureNotebook: "Personal notebook, forks, and your own recipes",
+    paywallFeatureFavorites: "Unlimited favorites and notes",
+    paywallFeatureOffline: "Offline recipe access — anywhere",
+    paywallFeatureVendors: "Saved local vendors by ZIP",
+    paywallFeatureUpdates: "New dishes every week, all year",
+    trialBadge: "Trial",
+    proBadge: "Pro",
+  },
 };
