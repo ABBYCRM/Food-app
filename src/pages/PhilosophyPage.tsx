@@ -24,7 +24,7 @@ export function PhilosophyPage() {
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-black/0" />
-          <span className="absolute top-4 left-4 pill bg-chili text-bone-50">
+          <span className="absolute top-4 left-4 pill pill-tag bg-chili text-bone-50">
             {t.philosophy.section}
           </span>
         </div>

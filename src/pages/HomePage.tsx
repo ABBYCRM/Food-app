@@ -48,7 +48,7 @@ export function HomePage() {
             loading="eager"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-black/0" />
-          <span className="absolute top-4 left-4 pill bg-chili text-bone-50">
+          <span className="absolute top-4 left-4 pill pill-tag bg-chili text-bone-50">
             {t.home.eyebrow}
           </span>
         </div>

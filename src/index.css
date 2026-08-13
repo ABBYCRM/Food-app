@@ -379,12 +379,12 @@
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    padding: 0.5rem 0.75rem;
+    padding: 0.4375rem 0.75rem;
     border-radius: var(--radius-pill);
-    font-size: 0.6875rem;
-    font-weight: 600;
+    font-size: 0.75rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.06em;
   }
   .ink-link {
     text-decoration: underline;
@@ -708,10 +708,10 @@
   .lang-pill {
     padding: 0.25rem 0.625rem;
     border-radius: var(--radius-pill);
-    font-size: 0.625rem;
-    font-weight: 600;
+    font-size: 0.6875rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.06em;
     color: var(--color-ink-muted);
     transition: all var(--duration-base) var(--ease-out-soft);
     min-height: 1.5rem;

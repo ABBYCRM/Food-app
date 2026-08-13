@@ -31,7 +31,7 @@ export function ChefPanel({ dishLabel: _dishLabel }: { dishLabel: string }) {
       <p className="text-sm text-ink-soft leading-relaxed mt-2 max-w-[28rem] mx-auto">
         {t.chef.comingSoonBody}
       </p>
-      <span className="inline-flex items-center gap-1.5 mt-4 pill bg-ink/10 text-ink-soft">
+      <span className="inline-flex items-center gap-1.5 mt-4 pill pill-tag bg-ink/10 text-ink-soft">
         <Sparkles size={12} /> {t.chef.comingSoonNote}
       </span>
     </section>
