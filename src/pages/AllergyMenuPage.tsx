@@ -26,7 +26,7 @@ export function AllergyMenuPage() {
     <Layout section={t.nav.allergy}>
       <section className="page-pad pt-5">
         <h1 className="display-lg">{t.allergy.title}</h1>
-        <p className="mt-2 text-sm text-[var(--color-ink-soft)] leading-relaxed">{t.allergy.subtitle}</p>
+        <p className="mt-2 text-sm text-ink-soft leading-relaxed">{t.allergy.subtitle}</p>
       </section>
 
       <section className="page-pad pt-5">
@@ -39,11 +39,10 @@ export function AllergyMenuPage() {
                 key={a}
                 type="button"
                 onClick={() => toggleAvoiding(a)}
+                aria-pressed={active}
                 className={cn(
-                  "px-3 py-1.5 rounded-full text-xs font-semibold transition-all border",
-                  active
-                    ? "bg-[var(--color-chili)] text-white border-transparent"
-                    : "bg-white text-[var(--color-ink)] border-[rgba(28,20,14,0.12)] hover:border-[var(--color-ink)]"
+                  "chip",
+                  active ? "bg-chili text-white border-chili" : "bg-white text-ink border-line hover:border-ink"
                 )}
               >
                 {active ? "✕ " : ""}{t.allergy.flags[a]}
@@ -63,11 +62,10 @@ export function AllergyMenuPage() {
                 key={d}
                 type="button"
                 onClick={() => toggleDietary(d)}
+                aria-pressed={active}
                 className={cn(
-                  "px-3 py-1.5 rounded-full text-xs font-semibold transition-all border",
-                  active
-                    ? "bg-[var(--color-jade)] text-white border-transparent"
-                    : "bg-white text-[var(--color-ink)] border-[rgba(28,20,14,0.12)] hover:border-[var(--color-ink)]"
+                  "chip",
+                  active ? "bg-jade text-white border-jade" : "bg-white text-ink border-line hover:border-ink"
                 )}
               >
                 {active ? "✓ " : ""}{t.allergy.dietary[d]}
@@ -78,8 +76,8 @@ export function AllergyMenuPage() {
       </section>
 
       <section className="page-pad pt-4 flex items-center justify-between">
-        <p className="text-xs font-semibold text-[var(--color-jade)]">{t.allergy.results(safe.length)}</p>
-        <button type="button" onClick={resetFilters} className="text-xs underline underline-offset-2 text-[var(--color-ink-muted)]">
+        <p className="text-xs font-semibold text-jade tabular">{t.allergy.results(safe.length)}</p>
+        <button type="button" onClick={resetFilters} className="text-xs underline underline-offset-2 text-ink-muted hover:text-ink">
           {t.allergy.reset}
         </button>
       </section>

@@ -1,6 +1,7 @@
 import { useLocation } from "wouter";
 import { ArrowRight } from "lucide-react";
 import { Layout } from "@/components/Layout";
+import { SafeImage } from "@/components/SafeImage";
 import { useUser } from "@/context/UserContext";
 import { dict } from "@/i18n";
 import { pantry } from "@/data/pantry";
@@ -15,7 +16,7 @@ export function PantryPage() {
       <section className="page-pad pt-5">
         <div className="eyebrow">{t.pantry.eyebrow}</div>
         <h1 className="display-lg mt-2">{t.pantry.title}</h1>
-        <p className="mt-3 text-sm text-[var(--color-ink-soft)] leading-relaxed">
+        <p className="mt-3 text-sm text-ink-soft leading-relaxed">
           {t.pantry.body}
         </p>
       </section>
@@ -25,13 +26,19 @@ export function PantryPage() {
           <article key={p.slug} className="card-surface overflow-hidden">
             <div className="grid grid-cols-[110px_1fr] gap-3">
               <div className="relative aspect-square">
-                <img src={p.hero} alt="" className="absolute inset-0 w-full h-full object-cover" />
+                <SafeImage
+                  src={p.hero}
+                  recipeSlug={`pantry-${p.slug}`}
+                  fallbackSize="thumb"
+                  alt=""
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
               </div>
               <div className="py-3 pr-3">
-                <div className="text-[10px] uppercase tracking-[0.22em] text-[var(--color-ink-muted)]">{p.category[locale]}</div>
+                <div className="text-[10px] uppercase tracking-[0.22em] text-ink-muted">{p.category[locale]}</div>
                 <h3 className="font-display text-lg leading-tight mt-0.5">{p.name[locale]}</h3>
-                <p className="text-xs text-[var(--color-ink-soft)] leading-snug mt-1.5">{p.short[locale]}</p>
-                <p className="text-xs italic text-[var(--color-chili)] mt-1.5">→ {p.bridges[locale]}</p>
+                <p className="text-xs text-ink-soft leading-snug mt-1.5">{p.short[locale]}</p>
+                <p className="text-xs italic text-chili mt-1.5">→ {p.bridges[locale]}</p>
               </div>
             </div>
           </article>
@@ -39,7 +46,7 @@ export function PantryPage() {
       </section>
 
       <section className="page-pad pt-6 pb-6">
-        <button type="button" onClick={() => navigate("/recipes")} className="btn-primary w-full justify-center">
+        <button type="button" onClick={() => navigate("/recipes")} className="btn btn-primary btn-block">
           {t.pantry.next} <ArrowRight size={15} />
         </button>
       </section>

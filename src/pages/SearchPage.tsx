@@ -30,25 +30,26 @@ export function SearchPage() {
     <Layout section={t.nav.search} showBack>
       <section className="page-pad pt-5">
         <div className="card-surface px-3 py-2.5 flex items-center gap-2">
-          <Search size={16} className="text-[var(--color-ink-muted)]" />
+          <Search size={16} className="text-ink-muted shrink-0" />
           <input
             type="text"
             value={q}
             onChange={(e) => setQ(e.target.value)}
             autoFocus
             placeholder={t.search.placeholder}
-            className="flex-1 bg-transparent text-sm focus:outline-none"
+            aria-label={t.search.placeholder}
+            className="flex-1 bg-transparent text-sm focus:outline-none placeholder:text-ink-muted"
           />
         </div>
       </section>
 
-      <section className="page-pad pt-3 text-xs text-[var(--color-ink-muted)]">
+      <section className="page-pad pt-3 text-xs text-ink-muted tabular">
         {q ? t.search.results(results.length) : null}
       </section>
 
       <section className="page-pad pt-3 pb-6 grid grid-cols-2 gap-3">
         {results.length === 0 ? (
-          <p className="col-span-full text-center text-sm italic text-[var(--color-ink-muted)] py-10">
+          <p className="col-span-full text-center text-sm italic text-ink-muted py-10">
             {t.search.empty}
           </p>
         ) : results.map((r) => <RecipeCard key={r.slug} recipe={r} />)}

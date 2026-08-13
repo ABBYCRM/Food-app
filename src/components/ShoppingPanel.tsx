@@ -8,6 +8,9 @@ import { useUser } from "@/context/UserContext";
 import { dict } from "@/i18n";
 import { cn } from "@/lib/cn";
 
+/* Retailer brand colors — kept as the official brand swatches so the chips
+   look like the actual retailer's product. These are intentionally
+   NOT design tokens; they're brand identifiers. */
 const retailers: { key: Retailer; label: keyof typeof dict.en.shopping; color: string }[] = [
   { key: "amazonFresh", label: "amazonFresh", color: "bg-[#146eb4] text-white" },
   { key: "wholeFoods", label: "wholeFoods", color: "bg-[#0a5f0a] text-white" },
@@ -69,17 +72,17 @@ export function ShoppingPanel({
           <div className="eyebrow flex items-center gap-2">
             <ShoppingCart size={12} /> {t.shopping.title}
           </div>
-          <p className="text-sm text-[var(--color-ink-muted)] mt-1 leading-snug">
+          <p className="text-sm text-ink-muted mt-1 leading-snug">
             {t.shopping.subtitle}
           </p>
         </div>
-        <div className="text-xs font-semibold text-[var(--color-chili)]">
+        <div className="text-xs font-semibold text-chili">
           {t.shopping.items(activeIngredients.length)}
         </div>
       </div>
 
       <label className="flex items-center gap-2 text-xs">
-        <span className="text-[var(--color-ink-muted)] uppercase tracking-[0.14em] font-medium">
+        <span className="text-ink-muted uppercase tracking-[0.14em] font-medium">
           {t.shopping.deliverTo}
         </span>
         <input
@@ -87,26 +90,30 @@ export function ShoppingPanel({
           value={zip}
           onChange={(e) => setZip(e.target.value.replace(/[^0-9A-Za-z-]/g, "").slice(0, 8))}
           placeholder={t.shopping.zipPlaceholder}
-          className="flex-1 px-3 py-1.5 rounded-md border border-[rgba(28,20,14,0.15)] bg-white text-sm focus:outline-none focus:border-[var(--color-chili)]"
+          className="input flex-1 !text-sm !py-1.5 !min-h-0"
         />
       </label>
 
       <div className="flex flex-wrap gap-1.5">
-        {retailers.map((r) => (
-          <button
-            key={r.key}
-            type="button"
-            onClick={() => setSelected(r.key)}
-            className={cn(
-              "px-3 py-1.5 rounded-full text-[11px] font-semibold tracking-wide transition-all border",
-              selected === r.key
-                ? `${r.color} border-transparent`
-                : "bg-white text-[var(--color-ink)] border-[rgba(28,20,14,0.12)] hover:border-[var(--color-ink)]"
-            )}
-          >
-            {t.shopping[r.label as keyof typeof t.shopping] as string}
-          </button>
-        ))}
+        {retailers.map((r) => {
+          const isSelected = selected === r.key;
+          return (
+            <button
+              key={r.key}
+              type="button"
+              onClick={() => setSelected(r.key)}
+              aria-pressed={isSelected}
+              className={cn(
+                "chip",
+                isSelected
+                  ? `${r.color} border-transparent`
+                  : "bg-white text-ink border-line hover:border-ink"
+              )}
+            >
+              {t.shopping[r.label as keyof typeof t.shopping] as string}
+            </button>
+          );
+        })}
       </div>
 
       <ul className="space-y-1.5">
@@ -117,17 +124,18 @@ export function ShoppingPanel({
             <li
               key={idx}
               className={cn(
-                "flex items-center gap-2 px-3 py-2 rounded-lg transition-colors",
-                inList ? "bg-[rgba(184,54,44,0.06)]" : "bg-[rgba(28,20,14,0.03)]"
+                "flex items-center gap-2 px-3 py-2 rounded-input transition-colors",
+                inList ? "bg-chili/[0.06]" : "bg-ink/[0.03]"
               )}
             >
               <button
                 type="button"
                 onClick={() => togglePicked(idx)}
                 aria-label={inList ? t.shopping.inList : t.shopping.addToList}
+                aria-pressed={inList}
                 className={cn(
                   "w-5 h-5 rounded-md grid place-items-center transition-colors",
-                  inList ? "bg-[var(--color-chili)] text-white" : "border border-[rgba(28,20,14,0.25)]"
+                  inList ? "bg-chili text-white" : "border border-line-strong"
                 )}
               >
                 {inList ? <Check size={12} /> : null}
@@ -136,7 +144,7 @@ export function ShoppingPanel({
               <button
                 type="button"
                 onClick={() => openInNewTab(url)}
-                className="text-xs font-semibold inline-flex items-center gap-1 text-[var(--color-chili)] hover:underline"
+                className="text-xs font-semibold inline-flex items-center gap-1 text-chili hover:underline"
               >
                 {t.recipe.shopOne} <ExternalLink size={11} />
               </button>
@@ -148,7 +156,7 @@ export function ShoppingPanel({
       <button
         type="button"
         onClick={openAll}
-        className="btn-primary w-full justify-center"
+        className="btn btn-primary btn-block"
         disabled={activeIngredients.length === 0}
       >
         {selected === "amazon" || selected === "amazonFresh"
@@ -164,13 +172,13 @@ export function ShoppingPanel({
         <button
           type="button"
           onClick={openCombined}
-          className="w-full text-xs font-semibold text-[var(--color-chili)] underline underline-offset-2 py-1"
+          className="w-full text-xs font-semibold text-chili underline underline-offset-2 py-1"
         >
           ↗ Browser blocked multiple tabs — open one combined search instead
         </button>
       ) : null}
 
-      <p className="text-[10.5px] text-[var(--color-ink-muted)] leading-snug">{t.shopping.note}</p>
+      <p className="text-[10.5px] text-ink-muted leading-snug">{t.shopping.note}</p>
     </section>
   );
 }

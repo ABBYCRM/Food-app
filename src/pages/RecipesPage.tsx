@@ -52,61 +52,63 @@ export function RecipesPage() {
       <section className="page-pad pt-5 prose-rail">
         <div className="eyebrow">{t.recipes.eyebrow}</div>
         <h1 className="display-lg mt-2">{t.recipes.title}</h1>
-        <p className="mt-3 text-sm text-[var(--color-ink-soft)] leading-relaxed">
+        <p className="mt-3 text-sm text-ink-soft leading-relaxed">
           {t.recipes.subtitle}
         </p>
       </section>
 
       {/* Meal-time pills */}
       <section className="page-pad pt-5">
-        <div className="flex items-center gap-1.5 overflow-x-auto pb-1">
-          <MealPill active={mealFilter === null} onClick={() => setMealFilter(null)}>{t.recipes.filterAll}</MealPill>
-          <MealPill active={mealFilter === "breakfast"} onClick={() => setMealFilter(mealFilter === "breakfast" ? null : "breakfast")}>
+        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-stable">
+          <FilterPill active={mealFilter === null} onClick={() => setMealFilter(null)}>{t.recipes.filterAll}</FilterPill>
+          <FilterPill
+            active={mealFilter === "breakfast"}
+            onClick={() => setMealFilter(mealFilter === "breakfast" ? null : "breakfast")}
+            variant="teal"
+          >
             <Sunrise size={12} /> {t.recipes.filterBreakfast}
-          </MealPill>
-          <MealPill active={mealFilter === "lunch"} onClick={() => setMealFilter(mealFilter === "lunch" ? null : "lunch")}>
+          </FilterPill>
+          <FilterPill
+            active={mealFilter === "lunch"}
+            onClick={() => setMealFilter(mealFilter === "lunch" ? null : "lunch")}
+            variant="teal"
+          >
             <Sun size={12} /> {t.recipes.filterLunch}
-          </MealPill>
-          <MealPill active={mealFilter === "dinner"} onClick={() => setMealFilter(mealFilter === "dinner" ? null : "dinner")}>
+          </FilterPill>
+          <FilterPill
+            active={mealFilter === "dinner"}
+            onClick={() => setMealFilter(mealFilter === "dinner" ? null : "dinner")}
+            variant="teal"
+          >
             <Moon size={12} /> {t.recipes.filterDinner}
-          </MealPill>
-          <button
-            type="button"
+          </FilterPill>
+          <FilterPill
+            active={healthyOnly}
             onClick={() => setHealthyOnly((v) => !v)}
-            className={cn(
-              "shrink-0 inline-flex items-center gap-1 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-colors",
-              healthyOnly
-                ? "bg-[var(--color-jade)] text-white"
-                : "bg-[rgba(28,20,14,0.06)] text-[var(--color-ink)] hover:bg-[rgba(28,20,14,0.1)]"
-            )}
+            variant="jade"
           >
             <Leaf size={12} /> {t.recipes.filterHealthy}
-          </button>
+          </FilterPill>
         </div>
       </section>
 
       {/* Category pills */}
       <section className="page-pad pt-3">
-        <div className="flex items-center gap-1.5 overflow-x-auto pb-1">
+        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-stable">
           {filters.map((f) => (
-            <button
+            <FilterPill
               key={f.key}
-              type="button"
+              active={filter === f.key}
               onClick={() => setFilter(f.key)}
-              className={cn(
-                "shrink-0 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-colors",
-                filter === f.key
-                  ? "bg-[var(--color-chili)] text-[var(--color-bone-50)]"
-                  : "bg-[rgba(28,20,14,0.06)] text-[var(--color-ink)] hover:bg-[rgba(28,20,14,0.1)]"
-              )}
+              variant="chili"
             >
               {f.label}
-            </button>
+            </FilterPill>
           ))}
         </div>
       </section>
 
-      <section className="page-pad pt-4 text-[11px] uppercase tracking-[0.18em] text-[var(--color-ink-muted)]">
+      <section className="page-pad pt-4 text-[11px] uppercase tracking-[0.18em] text-ink-muted tabular">
         {t.recipes.showing(Math.min(visible, filtered.length), filtered.length)}
       </section>
 
@@ -115,7 +117,7 @@ export function RecipesPage() {
           <RecipeCard key={r.slug} recipe={r} />
         ))}
         {filtered.length === 0 ? (
-          <div className="text-center text-sm text-[var(--color-ink-muted)] py-8 col-span-full">
+          <div className="text-center text-sm text-ink-muted py-8 col-span-full">
             {t.recipes.empty}
           </div>
         ) : null}
@@ -126,7 +128,7 @@ export function RecipesPage() {
           <button
             type="button"
             onClick={() => setVisible((v) => v + 24)}
-            className="btn-ghost w-full justify-center"
+            className="btn btn-ghost btn-block"
           >
             +24
           </button>
@@ -138,16 +140,27 @@ export function RecipesPage() {
   );
 }
 
-function MealPill({ active, onClick, children }: { active: boolean; onClick: () => void; children: React.ReactNode }) {
+type PillVariant = "chili" | "teal" | "jade";
+const PILL_ACTIVE: Record<PillVariant, string> = {
+  chili: "bg-chili text-bone-50 border-chili",
+  teal: "bg-teal text-white border-teal",
+  jade: "bg-jade text-white border-jade",
+};
+const PILL_INACTIVE = "bg-ink/[0.06] text-ink border-transparent hover:bg-ink/[0.1]";
+
+function FilterPill({
+  active, onClick, variant = "chili", children,
+}: {
+  active: boolean; onClick: () => void; variant?: PillVariant; children: React.ReactNode;
+}) {
   return (
     <button
       type="button"
       onClick={onClick}
+      aria-pressed={active}
       className={cn(
-        "shrink-0 inline-flex items-center gap-1 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-colors",
-        active
-          ? "bg-[var(--color-teal)] text-white"
-          : "bg-[rgba(28,20,14,0.06)] text-[var(--color-ink)] hover:bg-[rgba(28,20,14,0.1)]"
+        "shrink-0 chip",
+        active ? PILL_ACTIVE[variant] : PILL_INACTIVE,
       )}
     >
       {children}

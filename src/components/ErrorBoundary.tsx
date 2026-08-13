@@ -34,23 +34,23 @@ export class ErrorBoundary extends Component<Props, State> {
     if (this.state.error) {
       if (this.props.fallback) return this.props.fallback(this.state.error, this.reset);
       return (
-        <div className="min-h-screen grid place-items-center px-6 bg-[var(--color-bone)] text-[var(--color-ink)]">
+        <div className="min-h-screen grid place-items-center px-6 bg-bone text-ink">
           <div className="max-w-sm w-full card-surface px-5 py-6 text-center">
             <div className="eyebrow mb-2">Something burned in the kitchen</div>
-            <p className="text-sm text-[var(--color-ink-soft)] leading-relaxed">
+            <p className="text-sm text-ink-soft leading-relaxed">
               The page hit an error. Your saved data is safe.
             </p>
-            <p className="text-[11px] text-[var(--color-ink-muted)] mt-3 font-mono break-words">
+            <p className="text-[11px] text-ink-muted mt-3 font-mono break-words">
               {this.state.error.message}
             </p>
             <div className="grid grid-cols-2 gap-2 mt-5">
-              <button type="button" onClick={this.reset} className="btn-ghost justify-center">
+              <button type="button" onClick={this.reset} className="btn btn-ghost">
                 Try again
               </button>
               <button
                 type="button"
                 onClick={() => { window.location.href = "/"; }}
-                className="btn-primary justify-center"
+                className="btn btn-primary"
               >
                 Home
               </button>

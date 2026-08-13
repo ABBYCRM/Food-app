@@ -8,11 +8,11 @@ export function VendorPage() {
   const t = dict[locale];
   return (
     <Layout section={t.home.nearMe} showBack>
-      <section className="px-5 pt-5">
+      <section className="page-pad pt-5">
         <h1 className="display-lg">{t.vendor.title}</h1>
-        <p className="mt-2 text-sm text-[var(--color-ink-soft)] leading-relaxed">{t.vendor.subtitle}</p>
+        <p className="mt-2 text-sm text-ink-soft leading-relaxed">{t.vendor.subtitle}</p>
       </section>
-      <section className="px-5 pt-5 pb-6">
+      <section className="page-pad pt-5 pb-6">
         <VendorPanel />
       </section>
     </Layout>

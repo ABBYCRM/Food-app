@@ -1,6 +1,7 @@
 import { useLocation } from "wouter";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Layout } from "@/components/Layout";
+import { SafeImage } from "@/components/SafeImage";
 import { useUser } from "@/context/UserContext";
 import { dict } from "@/i18n";
 import { recipes } from "@/data/recipes";
@@ -14,10 +15,16 @@ export function PhilosophyPage() {
   return (
     <Layout section={t.philosophy.section} showBack>
       <section className="page-pad pt-4">
-        <div className="relative rounded-[1.4rem] overflow-hidden aspect-[5/6]">
-          <img src={hero.hero} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="relative rounded-card-lg overflow-hidden aspect-[5/6]">
+          <SafeImage
+            src={hero.hero}
+            recipeSlug={hero.slug}
+            fallbackSize="hero"
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-black/0" />
-          <span className="absolute top-4 left-4 pill bg-[var(--color-chili)] text-[var(--color-bone-50)]">
+          <span className="absolute top-4 left-4 pill bg-chili text-bone-50">
             {t.philosophy.section}
           </span>
         </div>
@@ -34,27 +41,27 @@ export function PhilosophyPage() {
             <div className="flex items-center justify-between mb-1.5">
               <span className="eyebrow">{code === "en" ? "English" : code === "es" ? "Español" : "Português"}</span>
             </div>
-            <p className="text-sm text-[var(--color-ink-soft)] leading-relaxed">
+            <p className="text-sm text-ink-soft leading-relaxed">
               {dict[code].philosophy.body}
             </p>
           </article>
         ))}
       </section>
 
-      <section className="page-pad pt-6 flex items-center gap-3">
-        <div className="flavor-chip bg-[var(--color-chili)]/12 text-[var(--color-chili-700)]">
+      <section className="page-pad pt-6 flex items-center gap-3 flex-wrap">
+        <div className="flavor-chip bg-chili/10 text-chili-700">
           🌶️ {t.philosophy.spice}
         </div>
-        <div className="flavor-chip bg-[var(--color-teal)]/12 text-[var(--color-teal-600)]">
+        <div className="flavor-chip bg-teal/10 text-teal-600">
           🌊 {t.philosophy.umami}
         </div>
       </section>
 
       <section className="page-pad pt-6 pb-6 grid grid-cols-2 gap-3">
-        <button type="button" onClick={() => navigate("/")} className="btn-ghost justify-center">
+        <button type="button" onClick={() => navigate("/")} className="btn btn-ghost">
           <ArrowLeft size={15} /> {t.philosophy.back}
         </button>
-        <button type="button" onClick={() => navigate("/pantry")} className="btn-primary justify-center">
+        <button type="button" onClick={() => navigate("/pantry")} className="btn btn-primary">
           {t.philosophy.next} <ArrowRight size={15} />
         </button>
       </section>

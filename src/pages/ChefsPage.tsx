@@ -11,7 +11,7 @@ export function ChefsPage() {
       <section className="page-pad pt-5 prose-rail">
         <div className="eyebrow">{t.chef.eyebrow}</div>
         <h1 className="display-lg mt-2">{t.chef.title}</h1>
-        <p className="mt-2 text-sm text-[var(--color-ink-soft)] leading-relaxed">{t.chef.subtitle}</p>
+        <p className="mt-2 text-sm text-ink-soft leading-relaxed">{t.chef.subtitle}</p>
       </section>
       <section className="page-pad pt-5 pb-6 prose-rail">
         <ChefPanel dishLabel="Mestizo Umami fusion dinner" />

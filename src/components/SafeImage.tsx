@@ -1,22 +1,31 @@
 import { useState, type ImgHTMLAttributes } from "react";
+import { fallbackFor, type ArtSize } from "@/lib/recipeArt";
 
-const FALLBACK =
-  "data:image/svg+xml;utf8," +
-  encodeURIComponent(
-    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
-       <defs>
-         <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
-           <stop offset="0" stop-color="#3a2c20"/>
-           <stop offset="1" stop-color="#7a1f1a"/>
-         </linearGradient>
-       </defs>
-       <rect width="800" height="600" fill="url(#g)"/>
-       <text x="50%" y="50%" font-family="Georgia,serif" font-size="48" font-weight="600"
-             fill="#f5e7d3" text-anchor="middle" dominant-baseline="middle" opacity="0.85">
-         Mestizo Umami
-       </text>
-     </svg>`
-  );
+/**
+ * Smart image with three states:
+ *   1. loading skeleton (cream gradient with subtle shimmer)
+ *   2. real image (Pollinations.ai or whatever the src is)
+ *   3. per-recipe themed SVG fallback (only when src fails)
+ *
+ * The fallback is generated from the recipe's slug so the failure state
+ * still looks like the dish — never a blank box or a "broken image" icon.
+ *
+ * If the slug isn't recognized, the generic Mestizo Umami mark is used.
+ */
+
+type Props = ImgHTMLAttributes<HTMLImageElement> & {
+  /** Recipe slug — used to pick the per-recipe themed fallback art. */
+  recipeSlug?: string;
+  /** Aspect ratio hint for the fallback art. Defaults to "hero". */
+  fallbackSize?: ArtSize;
+};
+
+function buildFallback(slug?: string, size: ArtSize = "hero"): string {
+  if (slug) {
+    try { return fallbackFor(slug, size); } catch { /* fall through */ }
+  }
+  return fallbackFor("__generic__", size);
+}
 
 const LOADING_BG =
   "data:image/svg+xml;utf8," +
@@ -32,13 +41,19 @@ const LOADING_BG =
      </svg>`
   );
 
-type Props = ImgHTMLAttributes<HTMLImageElement>;
-
-/** Image with three states: loading skeleton (cream gradient), real image, or branded fallback. */
-export function SafeImage({ src, onError, onLoad, className, ...rest }: Props) {
+export function SafeImage({
+  src,
+  onError,
+  onLoad,
+  className,
+  recipeSlug,
+  fallbackSize = "hero",
+  ...rest
+}: Props) {
   const [errored, setErrored] = useState(false);
   const [loaded, setLoaded] = useState(false);
-  const showSrc = errored || !src ? FALLBACK : src;
+  const fallbackSrc = buildFallback(recipeSlug, fallbackSize);
+  const showSrc = errored || !src ? fallbackSrc : src;
   return (
     <>
       {!loaded && !errored ? (
@@ -64,4 +79,3 @@ export function SafeImage({ src, onError, onLoad, className, ...rest }: Props) {
     </>
   );
 }
-

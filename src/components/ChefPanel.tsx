@@ -2,7 +2,6 @@ import { useState } from "react";
 import { ChefHat, ExternalLink, Mail, Users, Calendar } from "lucide-react";
 import { useUser } from "@/context/UserContext";
 import { dict } from "@/i18n";
-import { cn } from "@/lib/cn";
 
 /** Build deep-links into real chef-marketplace search results. */
 function buildLinks(query: string, zip: string) {
@@ -52,7 +51,7 @@ export function ChefPanel({ dishLabel }: { dishLabel: string }) {
           <ChefHat size={12} /> {t.chef.eyebrow}
         </div>
         <h3 className="display-md mt-1">{t.chef.title}</h3>
-        <p className="mt-2 text-sm text-[var(--color-ink-soft)] leading-relaxed">
+        <p className="mt-2 text-sm text-ink-soft leading-relaxed">
           {t.chef.subtitle}
         </p>
       </div>
@@ -65,7 +64,7 @@ export function ChefPanel({ dishLabel }: { dishLabel: string }) {
             value={zip}
             onChange={(e) => setZip(e.target.value.replace(/[^0-9A-Za-z-]/g, "").slice(0, 8))}
             placeholder="—"
-            className="w-full px-3 py-2 rounded-md border border-[rgba(28,20,14,0.15)] bg-white text-sm focus:outline-none focus:border-[var(--color-chili)]"
+            className="input !text-sm"
           />
         </label>
         <label className="text-xs">
@@ -76,7 +75,7 @@ export function ChefPanel({ dishLabel }: { dishLabel: string }) {
             max={200}
             value={partySize}
             onChange={(e) => setPartySize(Math.max(1, Math.min(200, Number(e.target.value) || 1)))}
-            className="w-full px-3 py-2 rounded-md border border-[rgba(28,20,14,0.15)] bg-white text-sm focus:outline-none focus:border-[var(--color-chili)]"
+            className="input !text-sm"
           />
         </label>
         <label className="text-xs">
@@ -85,7 +84,7 @@ export function ChefPanel({ dishLabel }: { dishLabel: string }) {
             type="date"
             value={whenStr}
             onChange={(e) => setWhenStr(e.target.value)}
-            className="w-full px-3 py-2 rounded-md border border-[rgba(28,20,14,0.15)] bg-white text-sm focus:outline-none focus:border-[var(--color-chili)]"
+            className="input !text-sm"
           />
         </label>
       </div>
@@ -97,22 +96,19 @@ export function ChefPanel({ dishLabel }: { dishLabel: string }) {
             href={l.url}
             target="_blank"
             rel="noopener noreferrer"
-            className={cn(
-              "card-surface px-4 py-3 text-sm font-semibold flex items-center justify-between gap-2",
-              "hover:-translate-y-0.5 hover:shadow-md transition-all"
-            )}
+            className="card-surface px-4 py-3 text-sm font-semibold flex items-center justify-between gap-2 hover:-translate-y-0.5 hover:shadow-card-hover transition-all"
           >
             <span>{t.chef[l.key as "takeAChef" | "cozyMeal" | "hireAChef" | "yelpCatering"]}</span>
-            <ExternalLink size={14} className="text-[var(--color-chili)]" />
+            <ExternalLink size={14} className="text-chili" />
           </a>
         ))}
       </div>
 
-      <button type="button" onClick={openMail} className="btn-primary w-full justify-center">
+      <button type="button" onClick={openMail} className="btn btn-primary btn-block">
         <Mail size={15} /> {t.chef.requestQuote}
       </button>
 
-      <p className="text-[10.5px] text-[var(--color-ink-muted)] leading-snug">{t.chef.note}</p>
+      <p className="text-[10.5px] text-ink-muted leading-snug">{t.chef.note}</p>
     </section>
   );
 }
