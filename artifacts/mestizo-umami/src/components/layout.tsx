@@ -208,7 +208,8 @@ export function Layout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-[100dvh] flex flex-col relative w-full bg-background text-foreground overflow-x-hidden">
       <Nav />
-      <main className="flex-1 w-full pt-0 md:pt-16 lg:pt-20 pb-16 md:pb-0 relative z-10 flex flex-col">
+      {/* pb-28: mobile bottom nav = locale strip (~36px) + tab bar (56px) ≈ 92px → safe 112px */}
+      <main className="flex-1 w-full pt-0 md:pt-16 lg:pt-20 pb-28 md:pb-0 relative z-10 flex flex-col">
         {children}
       </main>
       <Footer />

@@ -16,7 +16,7 @@ export function LocaleSwitcher({ compact = true }: Props) {
   if (compact) {
     return (
       <div
-        className="flex items-center rounded-full border border-white/15 overflow-hidden bg-black/20 backdrop-blur-sm"
+        className="flex items-center rounded-full overflow-hidden border border-primary/40"
         role="group"
         aria-label="Language selector"
       >
@@ -26,11 +26,12 @@ export function LocaleSwitcher({ compact = true }: Props) {
             onClick={() => setLocale(code)}
             title={title}
             aria-pressed={locale === code}
+            style={{ minWidth: 32 }}
             className={`
-              px-2.5 py-1 text-[10px] font-semibold tracking-widest uppercase transition-colors
+              px-3 py-1.5 text-[11px] font-bold tracking-widest uppercase transition-all
               ${locale === code
                 ? "bg-primary text-background"
-                : "text-muted-foreground hover:text-primary hover:bg-white/5"}
+                : "bg-transparent text-primary/60 hover:text-primary hover:bg-primary/10"}
             `}
           >
             {label}
