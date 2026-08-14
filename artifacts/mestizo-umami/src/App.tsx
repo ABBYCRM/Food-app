@@ -12,6 +12,7 @@ import {
 } from 'wouter';
 import { AnimatePresence } from 'framer-motion';
 
+import { LocaleProvider } from './lib/locale';
 import { Layout } from './components/layout';
 import { Home } from './pages/home';
 import { RecipesGallery } from './pages/recipes';
@@ -55,10 +56,12 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')}>
-          <Router />
-        </WouterRouter>
-        <Toaster />
+        <LocaleProvider>
+          <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')}>
+            <Router />
+          </WouterRouter>
+          <Toaster />
+        </LocaleProvider>
       </TooltipProvider>
     </QueryClientProvider>
   );
