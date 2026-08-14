@@ -5,7 +5,7 @@ import { imageHasFailed, markImageFailed, markImageLoaded } from "@/lib/imageCac
 /**
  * Smart image with three states:
  *   1. loading skeleton (cream gradient)
- *   2. real image (Pollinations.ai or whatever the src is)
+ *   2. verified local image
  *   3. per-recipe themed SVG fallback (when src fails, times out, or
  *      is opted-out via preferArt)
  *
@@ -26,10 +26,7 @@ type Props = ImgHTMLAttributes<HTMLImageElement> & {
   /** Aspect ratio hint for the fallback art. Defaults to "hero". */
   fallbackSize?: ArtSize;
   /**
-   * If true, render the per-recipe fallback art as the primary image instead
-   * of the network src. Use this on dense card grids to avoid hammering
-   * image CDNs with concurrent requests (which triggers 429 rate-limits).
-   * The real image will still load on the recipe detail page.
+   * If true, render the per-recipe fallback art as the primary image.
    */
   preferArt?: boolean;
   /**
@@ -72,27 +69,51 @@ export function SafeImage({
   ...rest
 }: Props) {
   const fallbackSrc = buildFallback(recipeSlug, fallbackSize);
+  const forceFallback = preferArt || !src || imageHasFailed(src);
+  const sourceKey = `${src ?? ""}|${fallbackSrc}|${forceFallback}`;
 
-  // Skip the load only for a URL we've actually seen fail — anything else gets
-  // a real attempt. (This previously gated on "is known good", which is false
-  // for every URL on a cold load, so no image was ever fetched.)
-  const [knownBad] = useState(() => !!src && imageHasFailed(src));
+  return (
+    <SafeImageLoader
+      key={sourceKey}
+      {...rest}
+      src={src}
+      onError={onError}
+      onLoad={onLoad}
+      className={className}
+      fallbackSrc={fallbackSrc}
+      forceFallback={forceFallback}
+      timeoutMs={timeoutMs}
+    />
+  );
+}
 
-  // If preferArt is set, force the per-recipe art (no network attempt).
-  const forceFallback = preferArt || knownBad;
-  const [errored, setErrored] = useState<boolean>(forceFallback);
-  const [loaded, setLoaded] = useState(false);
-  const showSrc = errored || !src ? fallbackSrc : src!;
+type LoaderProps = ImgHTMLAttributes<HTMLImageElement> & {
+  fallbackSrc: string;
+  forceFallback: boolean;
+  timeoutMs: number;
+};
 
-  // Timeout: if the image hasn't loaded by `timeoutMs`, fail over to the
-  // fallback. This catches the case where Pollinations is taking 30s
-  // (which it does for cold-cache prompts) or returning a non-image.
+function SafeImageLoader({
+  src,
+  onError,
+  onLoad,
+  className,
+  fallbackSrc,
+  forceFallback,
+  timeoutMs,
+  ...rest
+}: LoaderProps) {
+  const [phase, setPhase] = useState<"loading" | "ready" | "fallback" | "failed">(
+    forceFallback ? "fallback" : "loading",
+  );
+  const showSrc = phase === "fallback" || forceFallback || !src ? fallbackSrc : src;
+
   const timerRef = useRef<number | null>(null);
   useEffect(() => {
-    if (forceFallback || loaded || errored) return;
+    if (phase !== "loading") return;
     if (timeoutMs <= 0) return;
     timerRef.current = window.setTimeout(() => {
-      setErrored(true);
+      setPhase("fallback");
       if (src) markImageFailed(src);
     }, timeoutMs);
     return () => {
@@ -101,11 +122,11 @@ export function SafeImage({
         timerRef.current = null;
       }
     };
-  }, [forceFallback, loaded, errored, timeoutMs, src]);
+  }, [phase, timeoutMs, src]);
 
   return (
     <>
-      {!loaded && !errored ? (
+      {phase === "loading" || phase === "failed" ? (
         <img
           {...rest}
           src={LOADING_BG}
@@ -121,23 +142,31 @@ export function SafeImage({
         decoding="async"
         referrerPolicy="no-referrer-when-downgrade"
         className={className}
-        style={{ ...rest.style, opacity: loaded || errored ? 1 : 0, transition: "opacity 320ms ease" }}
+        style={{ ...rest.style, opacity: phase === "ready" || phase === "fallback" ? 1 : 0, transition: "opacity 320ms ease" }}
         onLoad={(e) => {
-          setLoaded(true);
           if (timerRef.current !== null) {
             window.clearTimeout(timerRef.current);
             timerRef.current = null;
           }
-          if (src) markImageLoaded(src);
+          if (phase === "loading" && src) {
+            markImageLoaded(src);
+            setPhase("ready");
+          } else if (phase === "fallback") {
+            setPhase("fallback");
+          }
           onLoad?.(e);
         }}
         onError={(e) => {
-          setErrored(true);
           if (timerRef.current !== null) {
             window.clearTimeout(timerRef.current);
             timerRef.current = null;
           }
-          if (src) markImageFailed(src);
+          if (phase === "loading" && src) {
+            markImageFailed(src);
+            setPhase("fallback");
+          } else {
+            setPhase("failed");
+          }
           onError?.(e);
         }}
       />

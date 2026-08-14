@@ -1,7 +1,7 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useLocation } from "wouter";
 import {
-  ArrowLeft, Bookmark, Share2, CalendarPlus, GitFork, Clock, Flame, Sparkles, ShieldAlert, ChefHat, X,
+  ArrowLeft, Bookmark, Share2, CalendarPlus, GitFork, Clock, Flame, Sparkles, ChefHat, X,
   Coffee, Sun, Moon, Cookie,
 } from "lucide-react";
 import { Layout } from "@/components/Layout";
@@ -16,17 +16,17 @@ import { useUser, type MealSlot, MEAL_SLOTS } from "@/context/UserContext";
 import { useTrial } from "@/context/TrialContext";
 import { dict } from "@/i18n";
 import type { Ingredient } from "@/data/recipes";
-import { allRecipesForCalendar } from "@/data/calendar";
 import { recipeBySlug, relatedRecipes } from "@/data/recipes";
 import { scaledIngredientParts } from "@/lib/scaling";
 import { cn } from "@/lib/cn";
+import { localDateKey } from "@/lib/date";
 
 const SLOT_ICON: Record<MealSlot, typeof Coffee> = {
   breakfast: Coffee, lunch: Sun, dinner: Moon, snack: Cookie,
 };
 
 function findRecipe(slug: string) {
-  return recipeBySlug(slug) ?? allRecipesForCalendar().find((r) => r.slug === slug);
+  return recipeBySlug(slug);
 }
 
 export function RecipeDetailPage({ slug }: { slug: string }) {
@@ -40,6 +40,10 @@ export function RecipeDetailPage({ slug }: { slug: string }) {
   const [planFeedback, setPlanFeedback] = useState(false);
   const [paywallOpen, setPaywallOpen] = useState(false);
   const [slotPickerOpen, setSlotPickerOpen] = useState(false);
+
+  useEffect(() => {
+    if (found) setServings(found.serves);
+  }, [found?.slug, found?.serves]);
 
   if (!found) {
     return (
@@ -66,8 +70,6 @@ export function RecipeDetailPage({ slug }: { slug: string }) {
   const related = relatedRecipes(recipe.slug, 3);
 
   const totalMinutes = recipe.prepMinutes + recipe.cookMinutes;
-  const isDraft = recipe.slug.startsWith("day-");
-
   const requireWrite = (action: () => void) => {
     if (!canWrite) {
       setPaywallOpen(true);
@@ -77,8 +79,7 @@ export function RecipeDetailPage({ slug }: { slug: string }) {
   };
 
   function addToPlanner(slot: MealSlot) {
-    const today = new Date();
-    const dayKey = today.toISOString().slice(0, 10);
+    const dayKey = localDateKey();
     planSlot(dayKey, slot, recipe.slug);
     setPlanFeedback(true);
     setTimeout(() => setPlanFeedback(false), 1800);
@@ -115,7 +116,7 @@ export function RecipeDetailPage({ slug }: { slug: string }) {
       {/* Full-bleed hero */}
       <section className="relative">
         <div className="relative aspect-[4/5] sm:aspect-[16/10] lg:aspect-auto lg:h-[440px] overflow-hidden">
-          <SafeImage src={recipe.hero} recipeSlug={recipe.slug} fallbackSize="hero" alt="" className="absolute inset-0 w-full h-full object-cover object-center" />
+          <SafeImage src={recipe.hero} recipeSlug={recipe.slug} fallbackSize="hero" alt={recipe.title[locale]} className="absolute inset-0 w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-black/30" />
           <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
             <button
@@ -163,30 +164,13 @@ export function RecipeDetailPage({ slug }: { slug: string }) {
 
       {/* Quick metrics */}
       <section className="page-pad pt-5">
-        <div className="card-surface px-4 py-3 grid grid-cols-4 gap-2 text-center">
+        <div className="card-surface px-4 py-3 grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
           <Metric icon={<Clock size={14} />} label={t.recipe.time} value={`${totalMinutes} ${t.recipes.minutes}`} />
           <Metric icon={<ChefHat size={14} />} label={t.recipe.difficulty} value={t.recipes.difficulty[recipe.difficulty]} />
           <Metric icon={<Flame size={14} />} label={t.recipe.spiceLevel} value={t.meta.spice[recipe.spice - 1]} />
           <Metric icon={<Sparkles size={14} />} label={t.recipe.umamiDepth} value={t.meta.umami[recipe.umami - 1]} />
         </div>
       </section>
-
-      {/* Draft notice for generated calendar variants */}
-      {isDraft ? (
-        <section className="page-pad pt-3">
-          <div className="card-surface px-4 py-3 flex items-start gap-3 border-l-4 !border-l-corn">
-            <ShieldAlert size={16} className="text-corn mt-0.5 shrink-0" />
-            <div>
-              <div className="text-xs font-semibold uppercase tracking-[0.16em] text-ink">
-                {t.meta.draft}
-              </div>
-              <p className="text-xs text-ink-muted leading-snug mt-0.5">
-                {t.meta.draftNote}
-              </p>
-            </div>
-          </div>
-        </section>
-      ) : null}
 
       {/* Story */}
       <section className="page-pad pt-5">
@@ -319,7 +303,7 @@ export function RecipeDetailPage({ slug }: { slug: string }) {
       </section>
 
       {/* Actions — gated writes */}
-      <section className="page-pad pt-5 pb-2 grid grid-cols-2 gap-3">
+      <section className="page-pad pt-5 pb-2 grid grid-cols-1 sm:grid-cols-2 gap-3">
         <button
           type="button"
           onClick={() => requireWrite(() => setSlotPickerOpen(true))}

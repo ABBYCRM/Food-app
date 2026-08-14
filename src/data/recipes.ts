@@ -78,12 +78,10 @@ export type Recipe = {
 };
 
 /**
- * Recipe photography is rendered ahead of time and vendored into public/img/
- * by scripts/fetch-imagery.mjs. These used to be live image.pollinations.ai
- * URLs built per render, which made every card a cold image-generation request
- * — slow, rate-limited (429) once a grid mounted, and frequently timed out into
- * the SVG fallback. Local files are instant, deterministic, service-worker
- * cacheable, and work offline.
+ * Recipe photography is art-directed ahead of time and vendored into
+ * public/img/. The checked-in images are deterministic, service-worker
+ * cacheable, and available offline. Run `npm run validate:images` after any
+ * photography change.
  */
 const IMG_BASE = `${import.meta.env.BASE_URL}img`;
 

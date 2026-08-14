@@ -15,11 +15,11 @@ paths = [ "/" ]
 localPort = 22049
 
 [services.development]
-run = "pnpm --filter @workspace/mestizo-umami run dev"
+run = "npm run dev"
 
 [services.production]
-build = [ "pnpm", "--filter", "@workspace/mestizo-umami", "run", "build" ]
-publicDir = "artifacts/mestizo-umami/dist/public"
+build = [ "npm", "run", "build" ]
+publicDir = "dist"
 serve = "static"
 
 [[services.production.rewrites]]

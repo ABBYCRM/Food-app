@@ -20,7 +20,7 @@ export function PhilosophyPage() {
             src={hero.hero}
             recipeSlug={hero.slug}
             fallbackSize="hero"
-            alt=""
+            alt={hero.title[locale]}
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-black/0" />
@@ -57,7 +57,7 @@ export function PhilosophyPage() {
         </div>
       </section>
 
-      <section className="page-pad pt-6 pb-6 grid grid-cols-2 gap-3">
+      <section className="page-pad pt-6 pb-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
         <button type="button" onClick={() => navigate("/")} className="btn btn-ghost">
           <ArrowLeft size={15} /> {t.philosophy.back}
         </button>

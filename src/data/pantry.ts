@@ -11,8 +11,7 @@ export type PantryItem = {
   bridges: LString;
 };
 
-/* Photography is rendered ahead of time into public/img/ by
-   scripts/fetch-imagery.mjs — see the note in data/recipes.ts. */
+/* Curated photography lives in public/img/ — see the note in data/recipes.ts. */
 const img = (slug: string) => `${import.meta.env.BASE_URL}img/pantry/${slug}.jpg`;
 
 export const pantry: PantryItem[] = [

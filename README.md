@@ -2,7 +2,7 @@
 
 > The trilingual kitchen — Mexican fire meets Asian umami.
 
-A 365-day rotating recipe app with serving scaler, allergy filters, week planner, personal notebook, retailer deep-links, and local-vendor lookup by ZIP.
+A curated daily-rotation recipe app with serving scaler, allergy filters, week planner, personal notebook, retailer deep-links, and local-vendor lookup by ZIP.
 
 Originally scaffolded as the `mestizo-umami` artifact in `paisabrazilfl-cpu/SIXTEEN`. Now self-contained here at `ABBYCRM/Food-app`.
 
@@ -37,9 +37,9 @@ Output lands in `dist/`.
 | Concern | Location |
 | --- | --- |
 | i18n (EN/ES/PT) | `src/i18n/{en,es,pt}.ts` |
-| Hero recipes (hand-crafted) | `src/data/recipes.ts` |
-| Generated daily variants | `src/data/generator.ts` |
-| 365-day calendar | `src/data/calendar.ts` |
+| Verified signature recipes | `src/data/recipes.ts` |
+| Curated daily rotation | `src/data/calendar.ts` |
+| Photography integrity check | `scripts/validate-imagery.mjs` |
 | Pantry & techniques | `src/data/{pantry,techniques}.ts` |
 | Allergy filtering | `src/lib/allergens.ts` |
 | Serving scaler | `src/lib/scaling.ts` |

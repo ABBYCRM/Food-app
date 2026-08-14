@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Mestizo Umami — trilingual Mexican-Asian fusion recipe app. 365-day rotating recipes, serving scaler, allergy filters, week planner, retailer deep-links, local vendor lookup by ZIP.",
+  "description": "Mestizo Umami — a curated trilingual Mexican-Asian fusion recipe app with a daily rotation, serving scaler, allergy filters, week planner, and shopping links.",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
     "preview": "vite preview --host 0.0.0.0",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "validate:images": "node scripts/validate-imagery.mjs",
+    "test:smoke": "node scripts/smoke-app.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",

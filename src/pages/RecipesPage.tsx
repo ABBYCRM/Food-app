@@ -112,7 +112,7 @@ export function RecipesPage() {
         {t.recipes.showing(Math.min(visible, filtered.length), filtered.length)}
       </section>
 
-      <section className="page-pad pt-3 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-3 sm:gap-4">
+      <section className="page-pad pt-3 grid grid-cols-1 min-[420px]:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
         {filtered.slice(0, visible).map((r) => (
           <RecipeCard key={r.slug} recipe={r} />
         ))}

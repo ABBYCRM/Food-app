@@ -51,13 +51,9 @@ export function ShoppingPanel({
     setPopupBlocked(false);
     const urls = multiRetailerUrls(selected, activeIngredients, zip);
     const result = openMany(urls);
-    /* If browser blocked the popups, we wait a tick and surface a single
-       consolidated-search fallback link the user can click. */
-    setTimeout(() => {
-      if (result.opened === 0 || (urls.length > 1 && result.blocked >= urls.length - 1)) {
-        setPopupBlocked(true);
-      }
-    }, urls.length * 240 + 200);
+    if (result.opened === 0 || (urls.length > 1 && result.blocked >= urls.length - 1)) {
+      setPopupBlocked(true);
+    }
   };
 
   const openCombined = () => {

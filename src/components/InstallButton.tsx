@@ -38,11 +38,11 @@ export function InstallButton({ className }: { className?: string }) {
 
   // Both android-prompt and ios-instructions show the same button — different popover content.
   return (
-    <div className={cn("relative", className)}>
+    <div className="relative">
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="btn btn-ghost btn-sm"
+        className={cn("btn btn-ghost btn-sm", className)}
         aria-haspopup="dialog"
         aria-expanded={open}
       >

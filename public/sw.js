@@ -4,25 +4,21 @@
    - Images: stale-while-revalidate
    - Everything else: network-first with cache fallback
    Bump the version to invalidate old caches on deploy.
-   v1.1.0 — invalidate caches from the Pollinations-era bundle so the new
-   /img/ paths land cleanly on every device.
+   v2.0.0 — invalidate earlier mismatched photography and app bundles.
 */
-const VERSION = "v1.1.0";
+const VERSION = "v2.0.0";
 const SHELL_CACHE = `mestizo-shell-${VERSION}`;
 const IMAGE_CACHE = `mestizo-images-${VERSION}`;
 const RUNTIME_CACHE = `mestizo-runtime-${VERSION}`;
 
+const BASE_PATH = new URL(self.registration.scope).pathname.replace(/\/$/, "");
+const atBase = (path) => `${BASE_PATH}${path}` || "/";
 const SHELL_ASSETS = [
-  "/",
-  "/index.html",
-  "/manifest.webmanifest",
-  "/favicon.svg",
-  "/icons/icon-192.png",
-  "/icons/icon-512.png",
-  "/icons/maskable-192.png",
-  "/icons/maskable-512.png",
+  "/", "/index.html", "/manifest.webmanifest", "/favicon.svg",
+  "/icons/icon-192.png", "/icons/icon-512.png",
+  "/icons/maskable-192.png", "/icons/maskable-512.png",
   "/icons/apple-touch-icon.png",
-];
+].map(atBase);
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
@@ -78,7 +74,7 @@ self.addEventListener("fetch", (event) => {
           cache.put(req, fresh.clone()).catch(() => undefined);
           return fresh;
         } catch {
-          const cached = await caches.match(req) || (await caches.match("/"));
+          const cached = await caches.match(req) || (await caches.match(atBase("/")));
           return cached || new Response("Offline", { status: 503 });
         }
       })(),
@@ -86,8 +82,26 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // Static assets — cache-first
-  if (/\.(?:js|css|woff2?|svg|png|jpg|jpeg|webp|avif|ico|webmanifest)(?:\?|$)/i.test(url.pathname)) {
+  // Photography — stale-while-revalidate in its own cache.
+  if (/\.(?:png|jpg|jpeg|webp|avif)(?:\?|$)/i.test(url.pathname)) {
+    event.respondWith(
+      (async () => {
+        const cache = await caches.open(IMAGE_CACHE);
+        const cached = await cache.match(req);
+        const network = fetch(req)
+          .then((res) => {
+            if (res.ok) cache.put(req, res.clone()).catch(() => undefined);
+            return res;
+          })
+          .catch(() => cached);
+        return cached || network;
+      })(),
+    );
+    return;
+  }
+
+  // Versioned app assets — cache-first with background revalidation.
+  if (/\.(?:js|css|woff2?|svg|ico|webmanifest)(?:\?|$)/i.test(url.pathname)) {
     event.respondWith(
       (async () => {
         const cache = await caches.open(SHELL_CACHE);

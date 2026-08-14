@@ -1,9 +1,9 @@
 /**
  * Per-recipe themed fallback art.
  *
- * Renders when the Pollinations.ai image fails to load. The art is hand-drawn
- * SVG that captures the dish's actual look (composition + palette), so a
- * network failure still feels intentional rather than "broken image".
+ * Renders when a checked-in photograph fails to load. The hand-drawn SVG
+ * captures the named dish's composition and palette, so a missing asset still
+ * feels intentional rather than showing a broken-image icon.
  *
  * Each recipe gets:
  *   - A 4:3 hero composition (1600x1200) — used as the main image fallback
@@ -770,68 +770,14 @@ const ART: Record<string, RecipeArt> = {
   "horchata-tres-leches-matcha": Matcha,
 };
 
-/**
- * The 365-day generated calendar (src/data/generator.ts) builds slugs as
- * `day-NNN-{format}-{protein}-{marinade}`, e.g. `day-014-bowl-tofu-...`.
- * Those dishes aren't in ART above, so without this they'd all render the
- * same blank "Mestizo Umami" brand mark — 350+ identical placeholder tiles.
- * Instead, match the format segment to the closest existing composition
- * (a bowl dish gets the ramen-bowl art, a taco gets the taco art, etc.) so
- * the fallback at least looks like the kind of dish it stands in for.
- * Longer/more specific needles are listed first so e.g. "breakfast-taco"
- * matches before the plain "taco" fallback.
- */
-const FORMAT_ART: Array<[needle: string, art: RecipeArt]> = [
-  ["breakfast-taco", Tacos],
-  ["tostada", Tacos],
-  ["taco", Tacos],
-  ["rice-cake", Bao],
-  ["tamale", Bao],
-  ["sope", Bao],
-  ["dumpling", Bao],
-  ["bao", Bao],
-  ["noodle-cold", Ramen],
-  ["oat-bowl", Ramen],
-  ["fruit-acai", Ramen],
-  ["congee", Ramen],
-  ["broth", Ramen],
-  ["bowl", Ramen],
-  ["ceviche", Hamachi],
-  ["stir-fry", Wings],
-  ["skewer", Wings],
-  ["salad", Elote],
-  ["ice-cream", Flan],
-  ["chilaquiles", Popcorn],
-];
-
-function matchByFormat(slug: string): RecipeArt | undefined {
-  for (const [needle, art] of FORMAT_ART) {
-    if (slug.includes(needle)) return art;
-  }
-  return undefined;
-}
-
-/**
- * The named compositions bake their own dish name into a caption band at
- * the bottom of the artwork. That's correct when the art matches the exact
- * dish (the 9 hero recipes) but wrong when it's borrowed for a same-format
- * generated dish with a different name — every caller already overlays the
- * real recipe title as HTML on top of the image, so strip the band instead
- * of showing a mismatched caption.
- */
-function stripCaptionBand(raw: string): string {
-  return raw.replace(/<rect x="0" y="(1040|680|1300)"[\s\S]*<\/svg>$/, "</svg>");
-}
-
 export function fallbackFor(slug: string, size: ArtSize): string {
   const exact = ART[slug];
-  const art = exact ?? matchByFormat(slug) ?? Generic;
+  const art = exact ?? Generic;
   let raw: string;
   switch (size) {
     case "hero": raw = art.hero(); break;
     case "thumb": raw = art.thumb(); break;
     case "phone": raw = art.phone(); break;
   }
-  if (!exact && art !== Generic) raw = stripCaptionBand(raw);
   return `data:image/svg+xml;utf8,${encodeURIComponent(raw)}`;
 }

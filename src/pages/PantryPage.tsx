@@ -24,17 +24,17 @@ export function PantryPage() {
       <section className="page-pad pt-5 space-y-3">
         {pantry.map((p) => (
           <article key={p.slug} className="card-surface overflow-hidden">
-            <div className="grid grid-cols-[110px_1fr] gap-3">
-              <div className="relative aspect-square">
+            <div className="grid grid-cols-1 min-[420px]:grid-cols-[140px_1fr] gap-3">
+              <div className="relative aspect-[4/3] min-[420px]:aspect-square">
                 <SafeImage
                   src={p.hero}
                   recipeSlug={`pantry-${p.slug}`}
                   fallbackSize="thumb"
-                  alt=""
+                  alt={p.name[locale]}
                   className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
-              <div className="py-3 pr-3">
+              <div className="px-3 pb-4 min-[420px]:pl-0 min-[420px]:pr-3 min-[420px]:py-3">
                 <div className="text-[10px] uppercase tracking-[0.22em] text-ink-muted">{p.category[locale]}</div>
                 <h3 className="font-display text-lg leading-tight mt-0.5">{p.name[locale]}</h3>
                 <p className="text-xs text-ink-soft leading-snug mt-1.5">{p.short[locale]}</p>

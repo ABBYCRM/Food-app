@@ -10,7 +10,7 @@ export function Header({ section, showBack = false }: { section?: string; showBa
   const t = dict[locale];
   return (
     <header className="header-band">
-      <div className="flex items-center gap-2 min-w-0">
+      <div className="flex flex-1 items-center gap-2 min-w-0">
         {showBack ? (
           <button
             type="button"
@@ -24,14 +24,14 @@ export function Header({ section, showBack = false }: { section?: string; showBa
         <button
           type="button"
           onClick={() => navigate("/")}
-          className="font-display font-semibold text-[1.05rem] tracking-tight leading-none truncate"
+          className="font-display font-semibold text-[1.05rem] tracking-tight leading-tight text-left break-words"
         >
           {t.brand}
         </button>
       </div>
       <div className="flex items-center gap-1.5 sm:gap-2">
         {section ? (
-          <span className="text-[10px] uppercase tracking-[0.22em] opacity-80 hidden sm:inline truncate max-w-[20ch]">
+          <span className="text-[10px] uppercase tracking-[0.16em] leading-tight text-right opacity-80 hidden sm:inline max-w-[20ch]">
             {section}
           </span>
         ) : null}

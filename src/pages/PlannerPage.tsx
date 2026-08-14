@@ -10,6 +10,7 @@ import { dict } from "@/i18n";
 import { allRecipesForCalendar } from "@/data/calendar";
 import { consolidateForWeek, openMany, retailerUrl, type Retailer } from "@/lib/shopping";
 import { cn } from "@/lib/cn";
+import { localDateKey } from "@/lib/date";
 
 const ALL = allRecipesForCalendar();
 
@@ -48,7 +49,7 @@ export function PlannerPage() {
     return Array.from({ length: 7 }, (_, i) => {
       const d = new Date(start);
       d.setDate(start.getDate() + i);
-      return { date: d, key: d.toISOString().slice(0, 10) };
+      return { date: d, key: localDateKey(d) };
     });
   }, []);
 
@@ -143,7 +144,7 @@ export function PlannerPage() {
                       <span
                         key={slot}
                         className={cn(
-                          "inline-flex items-center gap-1 px-2 py-0.5 rounded-pill text-[10px] font-semibold uppercase tracking-[0.12em]",
+                          "inline-flex items-center justify-center gap-1 px-2 py-1 rounded-pill text-[10px] leading-tight text-center font-semibold uppercase tracking-[0.08em] whitespace-normal",
                           slug
                             ? slot === "breakfast" ? "bg-corn/20 text-corn-600"
                             : slot === "lunch" ? "bg-jade/15 text-jade-600"
@@ -185,37 +186,43 @@ export function PlannerPage() {
                       >
                         <Icon size={13} />
                       </span>
-                      <div className="flex-1 min-w-0">
-                        <div className="text-[10px] uppercase tracking-[0.14em] text-ink-muted font-semibold">
-                          {t.planner.slot[slot]}
-                        </div>
-                        {r ? (
-                          <button
-                            type="button"
-                            onClick={() => navigate(`/recipe/${r.slug}`)}
-                            className="block text-sm font-medium leading-tight truncate text-left w-full hover:text-chili"
-                          >
-                            {r.title[locale]}
-                          </button>
-                        ) : (
-                          <button
-                            type="button"
-                            onClick={() => requireWrite(() => setPicking({ dayKey: d.key, slot }))}
-                            className="block text-xs italic text-ink-muted hover:text-chili text-left w-full"
-                          >
-                            {t.planner.emptySlot.replace("{slot}", t.planner.slot[slot].toLowerCase())}
-                          </button>
-                        )}
-                      </div>
                       {r ? (
-                        <SafeImage
-                          src={r.thumb}
-                          recipeSlug={r.slug}
-                          fallbackSize="thumb"
-                          alt=""
-                          className="w-9 h-9 rounded-md object-cover shrink-0"
-                        />
-                      ) : null}
+                        <button
+                          type="button"
+                          onClick={() => navigate(`/recipe/${r.slug}`)}
+                          className="flex-1 min-w-0 flex items-center gap-2.5 text-left rounded-md hover:text-chili"
+                          aria-label={`${t.planner.slot[slot]}: ${r.title[locale]}`}
+                        >
+                          <span className="flex-1 min-w-0">
+                            <span className="block text-[10px] uppercase tracking-[0.1em] text-ink-muted font-semibold">
+                              {t.planner.slot[slot]}
+                            </span>
+                            <span className="block text-sm font-medium leading-snug break-words">
+                              {r.title[locale]}
+                            </span>
+                          </span>
+                          <SafeImage
+                            src={r.thumb}
+                            recipeSlug={r.slug}
+                            fallbackSize="thumb"
+                            alt={r.title[locale]}
+                            className="w-11 h-11 rounded-md object-cover shrink-0"
+                          />
+                        </button>
+                      ) : (
+                        <button
+                          type="button"
+                          onClick={() => requireWrite(() => setPicking({ dayKey: d.key, slot }))}
+                          className="flex-1 min-w-0 text-left hover:text-chili"
+                        >
+                          <span className="block text-[10px] uppercase tracking-[0.1em] text-ink-muted font-semibold">
+                            {t.planner.slot[slot]}
+                          </span>
+                          <span className="block text-xs italic text-ink-muted leading-snug">
+                            {t.planner.emptySlot.replace("{slot}", t.planner.slot[slot].toLowerCase())}
+                          </span>
+                        </button>
+                      )}
                       {r ? (
                         <button
                           type="button"
@@ -312,12 +319,12 @@ export function PlannerPage() {
                       src={r.thumb}
                       recipeSlug={r.slug}
                       fallbackSize="thumb"
-                      alt=""
+                      alt={r.title[locale]}
                       className="w-10 h-10 rounded-md object-cover shrink-0"
                     />
                     <div className="flex-1 min-w-0">
-                      <div className="text-sm font-medium truncate">{r.title[locale]}</div>
-                      <div className="text-[11px] text-ink-muted truncate">{r.origin[locale]}</div>
+                      <div className="text-sm font-medium leading-snug break-words">{r.title[locale]}</div>
+                      <div className="text-[11px] text-ink-muted leading-snug break-words">{r.origin[locale]}</div>
                     </div>
                   </button>
                 </li>

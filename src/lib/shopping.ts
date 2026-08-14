@@ -63,24 +63,18 @@ export function openInNewTab(url: string): boolean {
   return win !== null;
 }
 
-/** Opens many URLs while detecting popup-blocker rejections. The first URL opens
- *  inside the user gesture; subsequent URLs are scheduled and reported as blocked
- *  if the browser refuses them. Caller can fall back to a single consolidated URL. */
+/** Opens URLs synchronously inside the user's click gesture and reports any
+ *  popup-blocker rejections. Delaying later calls loses gesture authorization
+ *  and made the previous result object permanently report stale counters. */
 export function openMany(urls: string[]): OpenResult {
   if (typeof window === "undefined" || urls.length === 0) {
     return { opened: 0, blocked: 0, total: urls.length };
   }
   let opened = 0;
   let blocked = 0;
-  const first = urls[0];
-  if (openInNewTab(first)) opened++;
-  else blocked++;
-  for (let i = 1; i < urls.length; i++) {
-    setTimeout(() => {
-      const ok = openInNewTab(urls[i]);
-      if (ok) opened++;
-      else blocked++;
-    }, i * 220);
+  for (const url of urls) {
+    if (openInNewTab(url)) opened++;
+    else blocked++;
   }
   return { opened, blocked, total: urls.length };
 }

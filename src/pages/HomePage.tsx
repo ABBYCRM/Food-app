@@ -43,7 +43,7 @@ export function HomePage() {
             src={heroFeature.hero}
             recipeSlug={heroFeature.slug}
             fallbackSize="hero"
-            alt=""
+            alt={heroFeature.title[locale]}
             className="absolute inset-0 w-full h-full object-cover object-center"
             loading="eager"
           />
@@ -84,18 +84,18 @@ export function HomePage() {
               src={today.hero}
               recipeSlug={today.slug}
               fallbackSize="hero"
-              alt=""
+              alt={today.title[locale]}
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/55 to-black/0" />
             <div className="absolute bottom-3 left-4 right-4 text-white">
               <span className="text-[10px] uppercase tracking-[0.22em] opacity-85">{today.origin[locale]}</span>
-              <h3 className="font-display text-[1.6rem] sm:text-2xl leading-[1.15] mt-1 drop-shadow-md clamp-2">
+              <h3 className="font-display text-[1.6rem] sm:text-2xl leading-[1.15] mt-1 drop-shadow-md break-words">
                 {today.title[locale]}
               </h3>
             </div>
           </div>
-          <div className="px-4 py-3 text-sm text-ink-soft leading-relaxed clamp-2">
+          <div className="px-4 py-3 text-sm text-ink-soft leading-relaxed">
             {today.subtitle[locale]}
           </div>
         </button>
@@ -242,7 +242,7 @@ function MealRow({
           old xl:grid-cols-6 squeezed cards to ~170px, which truncated the meta
           stats ("Profou…"); wider cards on desktop read better than more of
           them, and each row already has a "see all" CTA for depth. */}
-      <div className="mt-3 grid grid-cols-2 sm:grid-cols-3 gap-3">
+      <div className="mt-3 grid grid-cols-1 min-[420px]:grid-cols-2 sm:grid-cols-3 gap-3">
         {items.map((r) => (
           <RecipeCard key={r.slug} recipe={r} />
         ))}

@@ -40,8 +40,9 @@ function ServiceWorkerBoot() {
     if (proto !== "http:" && proto !== "https:") return;
     if (import.meta.env?.DEV) return; // skip in dev to avoid HMR conflicts
     const onLoad = () => {
+      const base = import.meta.env.BASE_URL;
       navigator.serviceWorker
-        .register("/sw.js", { scope: "/" })
+        .register(`${base}sw.js`, { scope: base })
         .catch((err) => {
           console.warn("[Mestizo Umami] SW registration failed:", err);
         });

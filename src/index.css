@@ -361,9 +361,10 @@
     letter-spacing: 0.14em;
     border-radius: var(--radius-pill);
     max-width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    text-align: center;
+    line-height: 1.25;
   }
   /* Origin tag on dark recipe cards. The base .pill's 0.14em tracking eats
      2-3 chars of width per word and makes short uppercase phrases feel
@@ -374,6 +375,7 @@
     font-size: 0.75rem;
     padding: 0.3125rem 0.75rem;
     font-weight: 700;
+    justify-content: center;
   }
   .flavor-chip {
     display: inline-flex;
@@ -432,7 +434,7 @@
     font-size: 0.9375rem;       /* 15px */
     font-weight: 600;
     letter-spacing: 0.005em;
-    line-height: 1;
+    line-height: 1.2;
     border-radius: var(--radius-pill);
     border: 1px solid transparent;
     cursor: pointer;
@@ -446,7 +448,9 @@
       transform var(--duration-fast) var(--ease-out-soft),
       box-shadow var(--duration-base) var(--ease-out-soft);
     text-decoration: none;
-    white-space: nowrap;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    text-align: center;
   }
 
   .btn:disabled,
@@ -813,6 +817,9 @@
     color: var(--color-ink-soft);
     border: 1px solid var(--color-line-soft);
     transition: all var(--duration-fast) var(--ease-out-soft);
+    white-space: normal;
+    overflow-wrap: anywhere;
+    text-align: center;
   }
   .chip[aria-pressed="true"] {
     background: var(--color-chili);

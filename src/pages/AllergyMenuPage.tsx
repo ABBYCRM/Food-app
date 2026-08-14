@@ -82,7 +82,7 @@ export function AllergyMenuPage() {
         </button>
       </section>
 
-      <section className="page-pad pt-3 pb-6 grid grid-cols-2 gap-3">
+      <section className="page-pad pt-3 pb-6 grid grid-cols-1 min-[420px]:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
         {safe.slice(0, 60).map((r) => (
           <RecipeCard key={r.slug} recipe={r} />
         ))}
