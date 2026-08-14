@@ -284,9 +284,14 @@ export function PlannerPage() {
                 ))}
               </ul>
               <div className="grid grid-cols-2 gap-2">
-                <button type="button" onClick={() => openConsolidated("instacart")} className="btn btn-primary btn-sm">
-                  {t.shopping.openOnInstacart} <ExternalLink size={13} />
-                </button>
+                <div className="flex flex-col gap-1">
+                  <button type="button" onClick={() => openConsolidated("instacart")} className="btn btn-primary btn-sm">
+                    {t.shopping.openOnInstacart} <ExternalLink size={13} />
+                  </button>
+                  <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-chili/80 text-center">
+                    ✨ {t.shopping.instacartComingSoon}
+                  </span>
+                </div>
                 <button type="button" onClick={() => openConsolidated("amazonFresh")} className="btn btn-teal btn-sm">
                   {t.shopping.openOnAmazon} <ExternalLink size={13} />
                 </button>

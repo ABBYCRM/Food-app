@@ -162,20 +162,27 @@ export function ShoppingPanel({
         })}
       </ul>
 
-      <button
-        type="button"
-        onClick={openAll}
-        className="btn btn-primary btn-block"
-        disabled={activeIngredients.length === 0}
-      >
-        {selected === "amazon" || selected === "amazonFresh"
-          ? t.shopping.openOnAmazon
-          : selected === "instacart"
-          ? t.shopping.openOnInstacart
-          : selected === "wholeFoods"
-          ? t.shopping.openOnWholeFoods
-          : `${t.shopping.shopWith} ${t.shopping[retailers.find((r) => r.key === selected)!.label as keyof typeof t.shopping] as string}`}
-      </button>
+      <div className="flex flex-col gap-1.5">
+        <button
+          type="button"
+          onClick={openAll}
+          className="btn btn-primary btn-block"
+          disabled={activeIngredients.length === 0}
+        >
+          {selected === "amazon" || selected === "amazonFresh"
+            ? t.shopping.openOnAmazon
+            : selected === "instacart"
+            ? t.shopping.openOnInstacart
+            : selected === "wholeFoods"
+            ? t.shopping.openOnWholeFoods
+            : `${t.shopping.shopWith} ${t.shopping[retailers.find((r) => r.key === selected)!.label as keyof typeof t.shopping] as string}`}
+        </button>
+        {selected === "instacart" ? (
+          <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-chili/80 text-center">
+            ✨ {t.shopping.instacartComingSoon}
+          </span>
+        ) : null}
+      </div>
 
       {popupBlocked ? (
         <button

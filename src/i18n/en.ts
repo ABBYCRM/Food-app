@@ -171,6 +171,7 @@ export const en = {
     zipPlaceholder: "ZIP / postal code",
     openOnAmazon: "Open all on Amazon",
     openOnInstacart: "Add all to Instacart",
+    instacartComingSoon: "One-tap add-to-cart — coming soon",
     openOnWholeFoods: "Open all on Whole Foods",
     note: "We never see your retailer account. Each link opens in your logged-in session.",
     consolidated: "Consolidated week list",
