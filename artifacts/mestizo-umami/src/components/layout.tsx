@@ -3,6 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Search, Heart, ChefHat, Calendar, Home as HomeIcon, Menu, X, MapPin, Download } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { LocaleSwitcher } from "@/components/locale-switcher";
+import { AccountButton } from "@/components/account-button";
 import { useLocale } from "@/lib/locale";
 import { usePWAInstall } from "@/lib/use-pwa-install";
 
@@ -74,6 +75,7 @@ function Nav() {
           <Link href="/notebook" data-testid="link-nav-notebook-icon" className="p-2 rounded-full hover:bg-white/5 transition-colors">
             <Heart className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors" />
           </Link>
+          <AccountButton />
         </div>
       </nav>
 
@@ -85,6 +87,7 @@ function Nav() {
 
         <div className="flex items-center gap-3">
           <LocaleSwitcher compact />
+          <AccountButton />
           <Link href="/search" className="p-2 rounded-full hover:bg-white/5 transition-colors">
             <Search className="w-5 h-5 text-muted-foreground" />
           </Link>

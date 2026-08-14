@@ -1,0 +1,333 @@
+Use the following as an implementation specification.
+Multi-Tenant Application Security Instructions
+Core invariant
+Treat tenant identity as server-owned state.
+For every authenticated request:
+opaque session credential
+→ server-side session lookup
+→ verified user
+→ req.user
+→ userId-scoped database operation
+
+Never allow:
+request body/query/path userId
+→ authorization decision
+
+The client may specify which resource it wants to operate on. It must never specify which user owns the operation.
+1. Implement authentication using OIDC + PKCE
+Use a trusted OIDC identity provider.
+Generate a cryptographically random PKCE verifier for each login.
+Generate the corresponding PKCE challenge.
+Redirect to the provider's authorization endpoint.
+Validate the callback, including state/OIDC protections required by the client library.
+Exchange the authorization code using the original PKCE verifier.
+Cryptographically validate the returned tokens using the OIDC library/provider metadata.
+Obtain the stable provider identity from the verified sub claim.
+Use that identity to look up/upsert the application's user.
+Never accept sub, userId, email, or another identity identifier supplied by the frontend as proof of identity.
+Do not implement a custom authentication protocol.
+2. Use opaque server-side sessions
+Create a sessions table conceptually containing:
+id              cryptographically random session ID
+userId          owning user
+accessToken
+refreshToken
+expiresAt
+createdAt
+
+The web browser should receive only an opaque session identifier.
+Configure its cookie with at least:
+HttpOnly
+Secure
+SameSite=<appropriate policy>
+Path=/
+
+Set an explicit expiration/max-age as required by the application's session policy.
+Do not put access tokens, refresh tokens, emails, or user IDs into a browser-readable session.
+For native/mobile clients where cookies are unsuitable, issue an opaque session credential and store it using the platform's secure credential storage.
+3. Resolve identity independently on every request
+Authentication middleware must perform:
+const sid = getSessionCredential(req);
+
+if (!sid) {
+  return anonymous();
+}
+
+const session = await getSession(sid);
+
+if (!session || session.expiresAt <= now) {
+  return anonymous();
+}
+
+const user = await getUser(session.userId);
+
+if (!user) {
+  return anonymous();
+}
+
+req.user = user;
+
+If token refresh is necessary:
+session
+→ detect expired provider token
+→ refresh server-side
+→ persist replacement tokens
+→ continue
+
+A failed lookup, refresh, validation, or database operation must never result in another user's identity being selected.
+There must be no default/fallback user.
+4. Never accept tenant identity from API input
+Authenticated routes must obtain the current user's identity exclusively from authenticated server context:
+req.user.id
+
+Bad API:
+GET /workspace/saved?userId=123
+
+Bad implementation:
+const userId = req.body.userId;
+
+Correct API:
+GET /workspace/saved
+
+Correct implementation:
+const userId = req.user.id;
+
+If the frontend submits a userId anyway, ignore/reject it. Never use it for authorization or ownership assignment.
+5. Put an ownership column on every tenant-owned table
+Every user-owned record must have an explicit ownership relationship.
+For example:
+users
+  id
+
+saved_tools
+  id
+  user_id → users.id
+
+search_history
+  id
+  user_id → users.id
+
+Apply this principle to every tenant-owned entity: projects, preferences, files, conversations, bookmarks, API objects, and so on.
+Use foreign keys and appropriate indexes, particularly indexes supporting common (userId, id) or userId queries.
+For organization-level tenancy, use the same pattern with tenantId/organizationId, with membership/role authorization layered on top.
+6. Scope every SELECT
+Never query a tenant-owned collection globally and filter it in application or frontend code.
+Bad:
+db.select().from(savedTools);
+
+Correct:
+db
+  .select()
+  .from(savedTools)
+  .where(eq(savedTools.userId, req.user.id));
+
+The database should never return another tenant's rows to the request handler unnecessarily.
+7. Stamp ownership server-side on every INSERT
+Bad:
+db.insert(savedTools).values(req.body);
+
+Correct:
+const data = validatedInput(req.body);
+
+await db.insert(savedTools).values({
+  ...data,
+  userId: req.user.id,
+});
+
+Prefer input schemas that do not contain userId at all.
+Never spread unvalidated client objects after assigning security-sensitive properties:
+// DANGEROUS
+{
+  userId: req.user.id,
+  ...req.body
+}
+
+because the client can overwrite userId.
+8. Scope every UPDATE
+Treat updates as IDOR-sensitive operations.
+Bad:
+db
+  .update(savedTools)
+  .set(data)
+  .where(eq(savedTools.id, rowId));
+
+Correct:
+db
+  .update(savedTools)
+  .set(validatedData)
+  .where(
+    and(
+      eq(savedTools.id, rowId),
+      eq(savedTools.userId, req.user.id)
+    )
+  );
+
+Do not allow userId to be modified through ordinary update payloads.
+9. Scope every DELETE
+Never authorize deletion based only on a resource ID.
+Bad:
+where(eq(savedTools.id, rowId))
+
+Correct:
+where(
+  and(
+    eq(savedTools.id, rowId),
+    eq(savedTools.userId, req.user.id)
+  )
+)
+
+Apply this rule even when IDs are UUIDs and difficult to guess. Unpredictable identifiers are not authorization.
+10. Scope single-record reads too
+This requirement applies equally to routes such as:
+GET /projects/:id
+GET /files/:id
+GET /history/:id
+
+Use:
+WHERE id = :resourceId
+  AND user_id = :authenticatedUserId
+
+Do not retrieve the object by ID and assume possession of its ID proves ownership.
+11. Centralize scoping where practical
+Make unsafe operations difficult to express.
+Prefer repository/data-access methods such as:
+getSavedToolsForUser(userId)
+getProjectForUser(userId, projectId)
+updateProjectForUser(userId, projectId, input)
+deleteProjectForUser(userId, projectId)
+
+over generic functions such as:
+getProject(id)
+deleteProject(id)
+
+For particularly sensitive systems, consider database-level isolation such as PostgreSQL Row-Level Security as an additional boundary. Application filtering and RLS can reinforce each other.
+12. Keep user-specific state out of global server memory
+Never implement:
+let currentUser;
+let currentTenant;
+
+Request A and request B can execute concurrently.
+Identity must remain request/session scoped:
+req.user
+
+Caches must also include the tenant identity in their keys:
+BAD:  project:42
+GOOD: user:123:project:42
+
+The same rule applies to queues, temporary files, WebSocket state, background jobs, search indexes, object storage paths, and AI conversation state.
+13. Fail closed
+If authentication cannot establish identity:
+401 Unauthorized
+
+If authenticated but lacking authorization:
+403 Forbidden
+
+Where revealing whether another user's resource exists would leak information, consider returning 404 for inaccessible resource IDs.
+Never recover authentication errors using:
+first user in database
+previous request's user
+cached global user
+development/default account
+client-provided userId
+
+14. Make logout and expiration revoke the session
+Logout should:
+Identify the current opaque session.
+Delete/revoke its server-side session record.
+Clear the browser credential.
+Attempt provider logout when appropriate.
+Consider the local application logged out even if provider logout fails.
+An expired/revoked/invalid session must become unauthenticated, not partially authenticated.
+15. Treat frontend authorization as UX only
+The frontend may:
+Show the signed-in user's information.
+Hide or lock authenticated features.
+Display a login modal.
+Preserve an intended destination through login.
+Handle 401 by prompting for authentication.
+None of this is a security boundary.
+Assume a hostile client can directly construct arbitrary HTTP requests.
+All authorization must therefore survive complete removal of the frontend.
+16. Audit every database operation
+For every tenant-owned table, mechanically locate every:
+SELECT
+INSERT
+UPDATE
+DELETE
+UPSERT
+raw SQL query
+batch operation
+background-job query
+
+Verify:
+Operation
+Required invariant
+SELECT
+userId/tenantId = authenticated tenant
+INSERT
+Ownership assigned server-side
+UPDATE
+Resource ID + authenticated tenant
+DELETE
+Resource ID + authenticated tenant
+UPSERT
+Tenant included in lookup/conflict boundary
+Cache
+Tenant included in cache key
+Job
+Tenant identity persisted and revalidated appropriately
+Do not limit this audit to HTTP route handlers.
+17. Prove isolation with two-user tests
+Create two genuinely independent identities:
+User A
+User B
+
+Seed:
+A owns resource A1
+B owns resource B1
+
+Then explicitly prove:
+A can list A1
+A cannot list B1
+
+A can read A1
+A cannot read B1 by ID
+
+A can update A1
+A cannot update B1 by ID
+
+A can delete A1
+A cannot delete B1 by ID
+
+A cannot create a resource owned by B
+A cannot change A1's owner to B
+
+B passes the inverse tests
+
+Also test:
+Missing session.
+Expired session.
+Invalid/random session.
+Deleted/revoked session.
+Failed token refresh.
+Concurrent requests from A and B.
+Injected userId in query parameters.
+Injected userId in JSON bodies.
+Tenant IDs embedded in nested payloads.
+Cache isolation.
+Background jobs where applicable.
+18. The final acceptance criterion
+A multi-tenant feature is complete only when this statement is true:
+Given a fully malicious client and knowledge of another user's resource IDs, the client cannot read, create, modify, delete, or otherwise affect data belonging to that other user because tenant identity and ownership authorization are derived and enforced server-side.
+The implementation rule can be reduced to:
+Authenticate server-side
+        ↓
+derive user/tenant
+        ↓
+never trust client identity
+        ↓
+scope EVERY data operation
+        ↓
+test with two adversarial users
+
+That is the wall. The frontend should never be responsible for maintaining multi-tenant isolation.

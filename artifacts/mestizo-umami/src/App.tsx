@@ -14,6 +14,7 @@ import { AnimatePresence } from 'framer-motion';
 
 import { LocaleProvider } from './lib/locale';
 import { PushNotificationsProvider } from './lib/push-context';
+import { AuthProvider } from './lib/auth-context';
 import { Layout } from './components/layout';
 import { Home } from './pages/home';
 import { RecipesGallery } from './pages/recipes';
@@ -58,12 +59,14 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <LocaleProvider>
-          <PushNotificationsProvider>
-            <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')}>
-              <Router />
-            </WouterRouter>
-            <Toaster />
-          </PushNotificationsProvider>
+          <AuthProvider>
+            <PushNotificationsProvider>
+              <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')}>
+                <Router />
+              </WouterRouter>
+              <Toaster />
+            </PushNotificationsProvider>
+          </AuthProvider>
         </LocaleProvider>
       </TooltipProvider>
     </QueryClientProvider>

@@ -1,6 +1,7 @@
-import app from "./app";
-import { logger } from "./lib/logger";
-import { startPushScheduler } from "./lib/push-scheduler";
+import app from "./app.js";
+import { logger } from "./lib/logger.js";
+import { startPushScheduler } from "./lib/push-scheduler.js";
+import { runMigrations } from "./lib/migrate.js";
 import { pool } from "@workspace/db";
 
 const rawPort = process.env["PORT"];
@@ -17,9 +18,17 @@ if (Number.isNaN(port) || port <= 0) {
   throw new Error(`Invalid PORT value: "${rawPort}"`);
 }
 
-// ── Startup migration ─────────────────────────────────────────────────────────
-// Runs before the server accepts traffic so production deployments always have
-// the push_subscriptions table available without a separate migration step.
+// ── Database migrations ───────────────────────────────────────────────────────
+// Runs all numbered SQL files in migrations/ then applies the push_subscriptions
+// table before the server accepts traffic.
+try {
+  const applied = await runMigrations();
+  logger.info({ count: applied.length }, "startup migrations: all applied");
+} catch (err) {
+  logger.error({ err }, "startup migrations: failed — continuing with existing schema");
+}
+
+// push_subscriptions table (push notifications, standalone — not in numbered migrations)
 try {
   await pool.query(`
     CREATE TABLE IF NOT EXISTS push_subscriptions (
@@ -32,9 +41,8 @@ try {
       updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
     )
   `);
-  logger.info("startup migration: push_subscriptions table ready");
 } catch (err) {
-  logger.error({ err }, "startup migration: failed");
+  logger.error({ err }, "startup migration: push_subscriptions failed");
 }
 
 app.listen(port, (err) => {
