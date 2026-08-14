@@ -3501,8 +3501,8 @@ export const breakfastRecipes: Recipe[] = [
     healthy: true
   },
   {
-    slug: "huevos-rancheros-miso-verde",
-    title: "Huevos Rancheros with Miso Verde",
+    slug: "huevos-rancheros-miso-verde-sunny",
+    title: "Huevos Rancheros with Miso Verde (Sunny Side)",
     subtitle: "Mexico's greatest morning plate, fermented and brightened.",
     story: "Stirring white miso into salsa verde creates a sauce with the tang and heat of the original but a new depth that makes the runny yolk even more luxurious when broken into it.",
     category: "Eggs",

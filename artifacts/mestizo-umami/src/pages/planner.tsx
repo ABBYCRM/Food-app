@@ -6,6 +6,7 @@ import {
   getRecentSlugs, MealPlan,
 } from "../lib/storage";
 import { recipes } from "../data/recipes";
+import { toStoreLabel } from "../lib/store-format";
 import {
   Calendar, Plus, X, Search, Wand2, Printer, Sun,
   UtensilsCrossed, Moon, Apple, ChevronDown, ChevronUp,
@@ -24,10 +25,10 @@ const SLOTS = ["breakfast", "lunch", "dinner", "snack"] as const;
 type Slot = typeof SLOTS[number];
 
 const SLOT_CONFIG: Record<Slot, { label: string; icon: React.ReactNode; color: string; mealTypes: string[] }> = {
-  breakfast: { label: "Breakfast", icon: <Sun className="w-3.5 h-3.5" />, color: "text-amber-400",   mealTypes: ["breakfast", "brunch"] },
-  lunch:     { label: "Lunch",     icon: <UtensilsCrossed className="w-3.5 h-3.5" />, color: "text-teal-400",  mealTypes: ["lunch"] },
-  dinner:    { label: "Dinner",    icon: <Moon className="w-3.5 h-3.5" />, color: "text-orange-400", mealTypes: ["dinner"] },
-  snack:     { label: "Snack",     icon: <Apple className="w-3.5 h-3.5" />, color: "text-purple-400", mealTypes: ["snack", "dessert", "side"] },
+  breakfast: { label: "Breakfast", icon: <Sun className="w-3.5 h-3.5" />,            color: "text-amber-400",   mealTypes: ["breakfast", "brunch"] },
+  lunch:     { label: "Lunch",     icon: <UtensilsCrossed className="w-3.5 h-3.5" />, color: "text-teal-400",   mealTypes: ["lunch"] },
+  dinner:    { label: "Dinner",    icon: <Moon className="w-3.5 h-3.5" />,            color: "text-orange-400", mealTypes: ["dinner"] },
+  snack:     { label: "Snack",     icon: <Apple className="w-3.5 h-3.5" />,           color: "text-purple-400", mealTypes: ["snack", "dessert", "side"] },
 };
 
 // ─── Fraction helpers ─────────────────────────────────────────────────────────
@@ -67,6 +68,177 @@ function scaleQty(qty: string, base: number, target: number): string {
   const n = parseQty(qty);
   if (n === 0) return qty;
   return formatQty(n * (target / base));
+}
+
+function scaleNum(qty: string, base: number, target: number): number {
+  const n = parseQty(qty);
+  return n * (target / base);
+}
+
+// ─── Serving size description ─────────────────────────────────────────────────
+
+function servingDescription(recipe: typeof recipes[0], servings: number): string {
+  const base = recipe.servings;
+  const ratio = servings / base;
+
+  // Estimate portions based on category / meal slot
+  const slot = recipe.mealSlots[0];
+  const cat = recipe.category.toLowerCase();
+
+  let portionNote = "";
+  if (cat.includes("soup") || cat.includes("stew") || cat.includes("ramen") || cat.includes("pozole")) {
+    portionNote = `≈ ${servings} bowl${servings !== 1 ? "s" : ""}`;
+  } else if (cat.includes("taco") || cat.includes("wrap")) {
+    const tacos = Math.round(servings * 3);
+    portionNote = `≈ ${tacos} taco${tacos !== 1 ? "s" : ""}`;
+  } else if (cat.includes("salad")) {
+    portionNote = `≈ ${servings} side salad${servings !== 1 ? "s" : ""} or ${Math.ceil(servings / 2)} main`;
+  } else if (slot === "snack" || slot === "dessert") {
+    portionNote = `≈ ${servings} snack portion${servings !== 1 ? "s" : ""}`;
+  } else if (cat.includes("egg") || cat.includes("toast") || cat.includes("pancake")) {
+    portionNote = `${servings} plate${servings !== 1 ? "s" : ""}`;
+  } else {
+    portionNote = `feeds ${servings} ${servings === 1 ? "person" : "people"}`;
+  }
+
+  return portionNote;
+}
+
+// ─── Print shopping list (opens a new window for reliable PDF output) ─────────
+
+function buildPrintHTML(
+  meals: { day: Day; slot: Slot; recipe: typeof recipes[0] }[],
+  servingsMap: Record<string, number>,
+): string {
+  const date = new Date().toLocaleDateString("en-US", {
+    weekday: "long", year: "numeric", month: "long", day: "numeric",
+  });
+
+  const sections = meals.map(({ day, slot, recipe }) => {
+    const target = servingsMap[recipe.slug] ?? recipe.servings;
+    const base = recipe.servings;
+    const slotLabel = SLOT_CONFIG[slot].label;
+    const servDesc = servingDescription(recipe, target);
+
+    const rows = recipe.ingredients.map((ing) => {
+      const scaledNum = scaleNum(ing.qty, base, target);
+      const storeFmt = toStoreLabel(ing, scaledNum);
+      const noteHtml = ing.note ? `<span class="note">(${ing.note})</span>` : "";
+      return `<li>${storeFmt}${noteHtml}</li>`;
+    }).join("\n");
+
+    return `
+      <div class="meal-section">
+        <div class="meal-header">
+          <div>
+            <span class="day-slot">${day} · ${slotLabel}</span>
+            <h2>${recipe.title}</h2>
+          </div>
+          <div class="servings-badge">${target} serving${target !== 1 ? "s" : ""} — ${servDesc}</div>
+        </div>
+        <ul>${rows}</ul>
+      </div>`;
+  }).join("\n");
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mestizo Umami — Weekly Shopping List</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 13px;
+      color: #1a1a1a;
+      background: #fff;
+      padding: 32px 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    header {
+      border-bottom: 2px solid #b45309;
+      padding-bottom: 12px;
+      margin-bottom: 28px;
+    }
+    header h1 {
+      font-size: 26px;
+      color: #b45309;
+      letter-spacing: 0.02em;
+    }
+    header p { font-size: 11px; color: #666; margin-top: 4px; }
+    .meal-section {
+      break-inside: avoid;
+      margin-bottom: 24px;
+      page-break-inside: avoid;
+    }
+    .meal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 8px;
+      gap: 12px;
+    }
+    .day-slot {
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #b45309;
+      display: block;
+      margin-bottom: 2px;
+    }
+    .meal-header h2 {
+      font-size: 15px;
+      color: #111;
+    }
+    .servings-badge {
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      color: #555;
+      text-align: right;
+      white-space: nowrap;
+      padding: 3px 8px;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      flex-shrink: 0;
+    }
+    ul {
+      list-style: none;
+      columns: 2;
+      column-gap: 24px;
+    }
+    li {
+      padding: 4px 0;
+      border-bottom: 1px solid #eee;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    li::before {
+      content: "□ ";
+      color: #b45309;
+      font-weight: bold;
+    }
+    .note {
+      font-size: 10px;
+      color: #888;
+      margin-left: 4px;
+    }
+    @media print {
+      body { padding: 16px 24px; }
+      .meal-section { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mestizo Umami — Weekly Shopping List</h1>
+    <p>Generated ${date}</p>
+  </header>
+  ${sections}
+  <script>window.onload = function() { window.print(); }<\/script>
+</body>
+</html>`;
 }
 
 // ─── SlotCell ─────────────────────────────────────────────────────────────────
@@ -126,12 +298,11 @@ function SlotCell({
   );
 }
 
-// ─── PrintView ────────────────────────────────────────────────────────────────
+// ─── ShoppingListPreview (on-screen before printing) ─────────────────────────
 
-function PrintView({ plan, onClose }: { plan: MealPlan; onClose: () => void }) {
+function ShoppingListPreview({ plan, onClose }: { plan: MealPlan; onClose: () => void }) {
   const [servingsMap, setServingsMap] = useState<Record<string, number>>({});
 
-  // Build ordered list of filled slots
   const meals: { day: Day; slot: Slot; recipe: typeof recipes[0] }[] = [];
   for (const day of DAYS) {
     for (const slot of SLOTS) {
@@ -143,10 +314,20 @@ function PrintView({ plan, onClose }: { plan: MealPlan; onClose: () => void }) {
     }
   }
 
-  const getServings = (r: typeof recipes[0]) =>
-    servingsMap[r.slug] ?? r.servings;
+  const getServings = (r: typeof recipes[0]) => servingsMap[r.slug] ?? r.servings;
 
-  const handlePrint = () => window.print();
+  const handlePrint = () => {
+    const html = buildPrintHTML(meals, servingsMap);
+    const win = window.open("", "_blank", "width=900,height=700");
+    if (!win) {
+      alert("Popup blocked — please allow popups for this site and try again.");
+      return;
+    }
+    win.document.open();
+    win.document.write(html);
+    win.document.close();
+    // print() is triggered by window.onload inside the HTML
+  };
 
   if (meals.length === 0) {
     return (
@@ -161,45 +342,46 @@ function PrintView({ plan, onClose }: { plan: MealPlan; onClose: () => void }) {
 
   return (
     <div>
-      {/* Screen-only header */}
-      <div className="print:hidden flex items-center justify-between mb-6">
+      {/* Header */}
+      <div className="flex items-center justify-between mb-6">
         <div>
           <h2 className="font-display text-2xl text-primary">Weekly Shopping List</h2>
-          <p className="text-xs text-muted-foreground mt-1">Adjust servings, then print.</p>
+          <p className="text-xs text-muted-foreground mt-1">
+            Adjust servings per meal, then click <strong>Download PDF</strong> to open a print-ready page.
+          </p>
         </div>
         <button
           onClick={handlePrint}
           data-testid="button-print"
-          className="flex items-center gap-2 bg-primary text-background px-4 py-2 rounded-full text-sm font-medium hover:bg-primary/90 transition-colors"
+          className="flex items-center gap-2 bg-primary text-background px-4 py-2 rounded-full text-sm font-medium hover:bg-primary/90 transition-colors shrink-0"
         >
-          <Printer className="w-4 h-4" /> Print List
+          <Printer className="w-4 h-4" /> Download PDF
         </button>
       </div>
 
-      {/* Print header (print-only) */}
-      <div className="hidden print:block mb-8">
-        <h1 className="text-3xl font-bold">Mestizo Umami — Weekly Shopping List</h1>
-        <p className="text-sm text-gray-500 mt-1">{new Date().toLocaleDateString("en-US", { weekday:"long", year:"numeric", month:"long", day:"numeric" })}</p>
-        <hr className="mt-4" />
-      </div>
-
-      <div className="space-y-8 print:space-y-6">
+      <div className="space-y-8">
         {meals.map(({ day, slot, recipe }) => {
           const cfg = SLOT_CONFIG[slot];
           const target = getServings(recipe);
           const base = recipe.servings;
+          const servDesc = servingDescription(recipe, target);
+
           return (
-            <div key={`${day}-${slot}`} className="break-inside-avoid">
+            <div key={`${day}-${slot}`}>
               {/* Meal header */}
-              <div className="flex items-center justify-between mb-3 print:mb-2">
+              <div className="flex items-center justify-between mb-3 flex-wrap gap-3">
                 <div>
-                  <span className={`text-[10px] uppercase tracking-widest ${cfg.color} flex items-center gap-1 print:text-gray-500`}>
+                  <span className={`text-[10px] uppercase tracking-widest ${cfg.color} flex items-center gap-1`}>
                     {cfg.icon}{day} · {cfg.label}
                   </span>
                   <h3 className="font-display text-lg leading-tight mt-0.5">{recipe.title}</h3>
+                  {/* Serving size context */}
+                  <p className="text-[11px] text-muted-foreground mt-0.5 italic">
+                    {target} serving{target !== 1 ? "s" : ""} — {servDesc}
+                  </p>
                 </div>
-                {/* Servings control — screen only */}
-                <div className="print:hidden flex items-center gap-2 shrink-0">
+                {/* Servings control */}
+                <div className="flex items-center gap-2 shrink-0">
                   <span className="text-xs text-muted-foreground">Servings</span>
                   <div className="flex items-center border border-white/20 rounded-full overflow-hidden">
                     <button
@@ -215,21 +397,23 @@ function PrintView({ plan, onClose }: { plan: MealPlan; onClose: () => void }) {
                     >+</button>
                   </div>
                 </div>
-                {/* Print-only servings */}
-                <span className="hidden print:inline text-sm text-gray-600">Serves {target}</span>
               </div>
 
-              {/* Ingredient list */}
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1 print:grid-cols-2 print:gap-0.5">
-                {recipe.ingredients.map((ing, i) => (
-                  <li key={i} className="flex items-baseline gap-1.5 text-sm print:text-xs border-b border-white/5 print:border-gray-100 pb-1">
-                    <span className="font-medium tabular-nums shrink-0 text-primary print:text-black">
-                      {scaleQty(ing.qty, base, target)} {ing.unit}
-                    </span>
-                    <span className="text-foreground/80 print:text-gray-800">{ing.item}</span>
-                    {ing.note && <span className="text-muted-foreground text-[10px] print:text-gray-500">({ing.note})</span>}
-                  </li>
-                ))}
+              {/* Ingredient list — supermarket format */}
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1">
+                {recipe.ingredients.map((ing, i) => {
+                  const scaledNum = scaleNum(ing.qty, base, target);
+                  const label = toStoreLabel(ing, scaledNum);
+                  return (
+                    <li key={i} className="flex items-baseline gap-1.5 text-sm border-b border-white/5 pb-1">
+                      <span className="text-primary shrink-0">□</span>
+                      <span className="text-foreground/85">{label}</span>
+                      {ing.note && (
+                        <span className="text-muted-foreground text-[10px]">({ing.note})</span>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           );
@@ -286,13 +470,11 @@ export function Planner() {
       newPlan[day] = {};
       for (const slot of SLOTS) {
         const slotTypes = SLOT_CONFIG[slot].mealTypes;
-        // Priority 1: not used in 90 days, not used this week
         let candidates = recipes.filter(r =>
           r.mealSlots.some((ms: string) => slotTypes.includes(ms)) &&
           !recentSlugs.has(r.slug) &&
           !usedThisWeek.has(r.slug)
         );
-        // Fallback: allow recently used but not this week
         if (candidates.length === 0) {
           candidates = recipes.filter(r =>
             r.mealSlots.some((ms: string) => slotTypes.includes(ms)) &&
@@ -317,7 +499,6 @@ export function Planner() {
     });
   }, [toast]);
 
-  // Filter recipes for the picker — by slot type and search term
   const filteredRecipes = (() => {
     const base = activeSelect
       ? recipes.filter(r => r.mealSlots.some((ms: string) => SLOT_CONFIG[activeSelect.slot].mealTypes.includes(ms)))
@@ -379,15 +560,14 @@ export function Planner() {
             className="flex items-center gap-2 border border-white/20 text-muted-foreground hover:text-primary hover:border-primary/40 px-4 py-2.5 rounded-full text-sm transition-colors shrink-0"
           >
             <Printer className="w-4 h-4" />
-            Print List
+            Shopping List
           </button>
         </div>
       </div>
 
-      {/* ── Desktop Calendar (lg+): rows = slots, columns = days ── */}
+      {/* ── Desktop Calendar (lg+) ── */}
       <div className="hidden lg:block overflow-x-auto">
         <div className="min-w-[900px]">
-          {/* Day headers */}
           <div className="grid grid-cols-[80px_repeat(7,1fr)] gap-2 mb-2">
             <div />
             {DAYS.map(day => (
@@ -397,27 +577,20 @@ export function Planner() {
               </div>
             ))}
           </div>
-
-          {/* Slot rows */}
           {SLOTS.map(slot => {
             const cfg = SLOT_CONFIG[slot];
             return (
               <div key={slot} className="grid grid-cols-[80px_repeat(7,1fr)] gap-2 mb-2">
-                {/* Slot label */}
                 <div className={`flex flex-col items-center justify-center gap-1 py-2 ${cfg.color}`}>
                   {cfg.icon}
                   <span className="text-[9px] uppercase tracking-widest opacity-70">{cfg.label}</span>
                 </div>
-                {/* Cells */}
                 {DAYS.map(day => {
                   const slug = plan[day]?.[slot as string];
                   const recipe = slug ? recipes.find(r => r.slug === slug) ?? null : null;
                   return (
                     <SlotCell
-                      key={day}
-                      day={day}
-                      slot={slot}
-                      recipe={recipe}
+                      key={day} day={day} slot={slot} recipe={recipe}
                       onAdd={() => openPicker(day, slot)}
                       onRemove={(e) => handleRemove(e, day, slot)}
                     />
@@ -429,7 +602,7 @@ export function Planner() {
         </div>
       </div>
 
-      {/* ── Tablet Grid (sm–lg): 3-column day grid ── */}
+      {/* ── Tablet Grid (sm–lg) ── */}
       <div className="hidden sm:grid lg:hidden grid-cols-2 md:grid-cols-3 gap-4">
         {DAYS.map(day => (
           <div key={day} className="flex flex-col gap-2 border border-white/8 rounded-xl p-3">
@@ -439,10 +612,7 @@ export function Planner() {
               const recipe = slug ? recipes.find(r => r.slug === slug) ?? null : null;
               return (
                 <SlotCell
-                  key={slot}
-                  day={day}
-                  slot={slot}
-                  recipe={recipe}
+                  key={slot} day={day} slot={slot} recipe={recipe}
                   onAdd={() => openPicker(day, slot)}
                   onRemove={(e) => handleRemove(e, day, slot)}
                 />
@@ -467,9 +637,7 @@ export function Planner() {
                 <span className="font-display text-lg text-primary">{day}</span>
                 <div className="flex items-center gap-2">
                   {dayFilled > 0 && (
-                    <span className="text-[10px] text-muted-foreground">
-                      {dayFilled}/{SLOTS.length}
-                    </span>
+                    <span className="text-[10px] text-muted-foreground">{dayFilled}/{SLOTS.length}</span>
                   )}
                   {expanded ? <ChevronUp className="w-4 h-4 text-muted-foreground" /> : <ChevronDown className="w-4 h-4 text-muted-foreground" />}
                 </div>
@@ -490,10 +658,7 @@ export function Planner() {
                         const recipe = slug ? recipes.find(r => r.slug === slug) ?? null : null;
                         return (
                           <SlotCell
-                            key={slot}
-                            day={day}
-                            slot={slot}
-                            recipe={recipe}
+                            key={slot} day={day} slot={slot} recipe={recipe}
                             onAdd={() => openPicker(day, slot)}
                             onRemove={(e) => handleRemove(e, day, slot)}
                           />
@@ -543,11 +708,7 @@ export function Planner() {
                 data-testid={`button-pick-recipe-${r.slug}`}
                 className="flex gap-3 p-3 rounded-xl border border-white/5 bg-secondary hover:border-primary cursor-pointer transition-colors group text-left"
               >
-                <img
-                  src={r.thumbImage}
-                  alt={r.title}
-                  className="w-16 h-16 object-cover rounded-lg shrink-0"
-                />
+                <img src={r.thumbImage} alt={r.title} className="w-16 h-16 object-cover rounded-lg shrink-0" />
                 <div className="flex flex-col justify-center min-w-0">
                   <div className="text-[9px] uppercase tracking-widest text-primary mb-1">{r.category}</div>
                   <h5 className="font-display text-base leading-tight group-hover:text-primary transition-colors line-clamp-2">
@@ -565,20 +726,15 @@ export function Planner() {
         </DialogContent>
       </Dialog>
 
-      {/* ── Print Shopping List Dialog ── */}
+      {/* ── Shopping List Dialog ── */}
       <Dialog open={printOpen} onOpenChange={setPrintOpen}>
         <DialogTrigger className="hidden" />
-        <DialogContent className="bg-background border border-white/10 max-w-3xl w-[95vw] max-h-[90vh] flex flex-col p-6 print:hidden">
+        <DialogContent className="bg-background border border-white/10 max-w-3xl w-[95vw] max-h-[90vh] flex flex-col p-6">
           <div className="flex-1 overflow-y-auto">
-            <PrintView plan={plan} onClose={() => setPrintOpen(false)} />
+            <ShoppingListPreview plan={plan} onClose={() => setPrintOpen(false)} />
           </div>
         </DialogContent>
       </Dialog>
-
-      {/* ── Print-only full-page shopping list ── */}
-      <div className="hidden print:block">
-        <PrintView plan={plan} onClose={() => {}} />
-      </div>
     </motion.div>
   );
 }

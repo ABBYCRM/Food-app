@@ -294,7 +294,12 @@ export function RecipeDetail() {
                 >
                   <Minus className="w-3 h-3" />
                 </button>
-                <span className="text-xs w-20 text-center font-medium">{servings} servings</span>
+                <span className="text-xs w-24 text-center font-medium leading-tight">
+                  {servings} serving{servings !== 1 ? "s" : ""}
+                  <span className="block text-[10px] text-muted-foreground font-normal">
+                    feeds&nbsp;{servings}&nbsp;{servings === 1 ? "person" : "people"}
+                  </span>
+                </span>
                 <button
                   onClick={() => setServings(s => Math.min(20, s + 1))}
                   data-testid="button-scaler-plus"

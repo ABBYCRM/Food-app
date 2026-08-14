@@ -15,7 +15,7 @@ interface Store {
 }
 
 function distanceMiles(lat1: number, lon1: number, lat2: number, lon2: number): number {
-  const R = 3958.8; // miles
+  const R = 3958.8;
   const dLat = (lat2 - lat1) * Math.PI / 180;
   const dLon = (lon2 - lon1) * Math.PI / 180;
   const a = Math.sin(dLat/2)**2 + Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.sin(dLon/2)**2;
@@ -43,57 +43,57 @@ export function StoresPage() {
     setHasSearched(true);
 
     try {
-      // 1. Geocode ZIP
-      const geoRes = await fetch(`https://nominatim.openstreetmap.org/search?postalcode=${zip}&countrycodes=us&format=json&limit=1`);
-      if (!geoRes.ok) throw new Error("Failed to find location.");
-      
+      // 1. Geocode ZIP via server-side proxy (avoids CORS / User-Agent issues)
+      const geoRes = await fetch(`/api/geocode?zip=${encodeURIComponent(zip)}`);
+      if (!geoRes.ok) {
+        const body = await geoRes.json().catch(() => ({}));
+        throw new Error(body.error || "Failed to find location.");
+      }
       const geoData = await geoRes.json();
-      if (!geoData || geoData.length === 0) {
-        throw new Error("Location not found for this ZIP code.");
+      if (!Array.isArray(geoData) || geoData.length === 0) {
+        throw new Error("No location found for this ZIP code. Try another.");
       }
 
       const lat = parseFloat(geoData[0].lat);
       const lon = parseFloat(geoData[0].lon);
 
-      // 2. Overpass Query
-      const query = `[out:json][timeout:15];(node["shop"~"supermarket|grocery|specialty_food|health_food|asian_supermarket|food"](around:8000,${lat},${lon});way["shop"~"supermarket|grocery"](around:8000,${lat},${lon}););out center;`;
-      
-      const overpassRes = await fetch("https://overpass-api.de/api/interpreter", {
+      // 2. Find nearby stores via server-side Overpass proxy
+      const storeRes = await fetch("/api/stores", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: `data=${encodeURIComponent(query)}`
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ lat, lon }),
       });
+      if (!storeRes.ok) {
+        const body = await storeRes.json().catch(() => ({}));
+        throw new Error(body.error || "Failed to fetch nearby stores.");
+      }
+      const storeData = await storeRes.json();
 
-      if (!overpassRes.ok) throw new Error("Failed to fetch stores from map data.");
-      
-      const overpassData = await overpassRes.json();
-      
       // 3. Process results
       const results: Store[] = [];
-      for (const el of overpassData.elements) {
-        const storeLat = el.lat || el.center?.lat;
-        const storeLon = el.lon || el.center?.lon;
-        
+      for (const el of storeData.elements ?? []) {
+        const storeLat = el.lat ?? el.center?.lat;
+        const storeLon = el.lon ?? el.center?.lon;
         if (!storeLat || !storeLon) continue;
-        
-        const dist = distanceMiles(lat, lon, storeLat, storeLon);
-        
         results.push({
           id: el.id,
           name: el.tags?.name || "Unnamed Store",
           type: el.tags?.shop || "grocery",
           lat: storeLat,
           lon: storeLon,
-          distance: dist
+          distance: distanceMiles(lat, lon, storeLat, storeLon),
         });
       }
 
-      // Sort by distance and take top 20
       results.sort((a, b) => a.distance - b.distance);
-      setStores(results.slice(0, 20));
+      const top = results.slice(0, 20);
+      setStores(top);
 
+      if (top.length === 0) {
+        setError("No stores found within 5 miles. Try a different ZIP code.");
+      }
     } catch (err: any) {
-      setError(err.message || "An unexpected error occurred.");
+      setError(err.message || "An unexpected error occurred. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -124,8 +124,8 @@ export function StoresPage() {
           className="h-14 text-lg bg-black/40 border-white/10 text-white placeholder:text-muted-foreground"
           required
         />
-        <Button 
-          type="submit" 
+        <Button
+          type="submit"
           disabled={loading}
           className="h-14 px-8 text-sm uppercase tracking-widest font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
         >
@@ -178,14 +178,14 @@ export function StoresPage() {
                   <span>{store.distance.toFixed(1)} miles</span>
                 </div>
               </div>
-              
-              <Button 
-                variant="ghost" 
-                size="icon" 
+
+              <Button
+                variant="ghost"
+                size="icon"
                 asChild
                 className="shrink-0 hover:text-primary hover:bg-primary/10 rounded-full h-10 w-10"
               >
-                <a 
+                <a
                   href={`https://maps.google.com/?q=${encodeURIComponent(store.name)},${store.lat},${store.lon}`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -203,17 +203,13 @@ export function StoresPage() {
       <section className="mt-20 pt-16 border-t border-white/10 text-center">
         <div className="max-w-2xl mx-auto bg-gradient-to-b from-primary/10 to-transparent border border-primary/20 p-8 md:p-12 rounded-3xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 blur-[100px] rounded-full -z-10 translate-x-1/2 -translate-y-1/2 pointer-events-none" />
-          
           <ShoppingBag className="w-12 h-12 text-primary mx-auto mb-6" />
-          
           <h2 className="font-display text-3xl md:text-4xl text-primary mb-4">
             Instant Cart Integration Coming Soon
           </h2>
-          
           <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
             Add all ingredients from any recipe directly to your cart at your nearest store — with one tap.
           </p>
-          
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <div className="relative group">
               <Button
@@ -229,7 +225,6 @@ export function StoresPage() {
                 <span className="text-xs uppercase tracking-widest text-primary font-medium">Coming Soon</span>
               </div>
             </div>
-            
             <Button
               onClick={handleWaitlist}
               size="lg"
