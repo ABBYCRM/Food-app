@@ -25,21 +25,26 @@ export function retailerUrl(retailer: Retailer, query: string, zip?: string): st
   }
 }
 
-/* Instacart Shopping List deep-link. Opens a single tab on Instacart's
-   shopping-list page with every ingredient pre-added; the user then taps
-   "Add all to cart" once in Instacart instead of opening 11 popup-blocked
-   tabs. The `add_items` parameter accepts a comma-separated list and works
-   on web + mobile (the Instacart app picks it up via universal link). */
+/* Instacart store-search deep-link. Opens a single tab on Instacart's
+   store search with every ingredient packed into one query — the user
+   sees the full list on a single results page, picks what they need,
+   and adds to cart from there.
+
+   Why not the shopping-list API? The `?add_items=` parameter is only
+   available on Connect-API-generated shopping list pages
+   (https://docs.instacart.com/developer_platform_api/...). The public
+   site's /store/shopping_list path 404s, so we use the working public
+   search endpoint. One tab, no popup blocker, no API approval. */
 export function instacartShoppingListUrl(queries: string[], zip?: string): string {
   const cleaned = queries
     .map((q) => q.trim())
     .filter(Boolean)
-    .slice(0, 30)
-    .map((q) => q.replace(/,/g, " "))  /* commas inside an item would break the list */
-    .join(",");
-  const params = new URLSearchParams({ add_items: cleaned });
+    .slice(0, 8)
+    .map((q) => q.replace(/[+&]/g, " "))  /* plus/ampersand break the k= search */
+    .join(" ");
+  const params = new URLSearchParams({ k: cleaned });
   if (zip) params.set("zip", zip);
-  return `https://www.instacart.com/store/shopping_list?${params.toString()}`;
+  return `https://www.instacart.com/store/s?${params.toString()}`;
 }
 
 export function multiRetailerUrls(retailer: Retailer, ingredients: Ingredient[], zip?: string): string[] {
