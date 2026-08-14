@@ -3,10 +3,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
 import { recipes } from "../data/recipes";
 import { Search, ArrowRight } from "lucide-react";
+import { useLocale } from "@/lib/locale";
 
 export function SearchPage() {
   const [query, setQuery] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
+  const { locale } = useLocale();
 
   useEffect(() => {
     // Slight delay to ensure page is rendered before focus
@@ -15,13 +17,17 @@ export function SearchPage() {
   }, []);
 
   const results = query.length > 1
-    ? recipes.filter(r =>
-        r.title.toLowerCase().includes(query.toLowerCase()) ||
-        r.category.toLowerCase().includes(query.toLowerCase()) ||
-        r.tags.some(t => t.toLowerCase().includes(query.toLowerCase())) ||
-        r.origin.toLowerCase().includes(query.toLowerCase()) ||
-        r.subtitle.toLowerCase().includes(query.toLowerCase())
-      )
+    ? recipes.filter(r => {
+        const loc = r.locales?.[locale as "es" | "pt"];
+        const titleSearch = (loc?.title ?? r.title).toLowerCase();
+        const subSearch = (loc?.subtitle ?? r.subtitle).toLowerCase();
+        const q = query.toLowerCase();
+        return titleSearch.includes(q) ||
+          r.category.toLowerCase().includes(q) ||
+          r.tags.some(t => t.toLowerCase().includes(q)) ||
+          r.origin.toLowerCase().includes(q) ||
+          subSearch.includes(q);
+      })
     : [];
 
   return (
@@ -68,7 +74,7 @@ export function SearchPage() {
                   <div className="w-16 h-16 sm:w-24 sm:h-24 md:w-28 md:h-28 shrink-0 rounded-lg overflow-hidden border border-white/10">
                     <img
                       src={recipe.thumbImage}
-                      alt={recipe.title}
+                      alt={recipe.locales?.[locale as "es"|"pt"]?.title ?? recipe.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     />
                   </div>
@@ -77,10 +83,10 @@ export function SearchPage() {
                       {recipe.category} • {recipe.origin}
                     </div>
                     <h3 className="font-display text-xl sm:text-2xl md:text-3xl text-foreground group-hover:text-primary transition-colors mb-1 md:mb-2 leading-tight">
-                      {recipe.title}
+                      {recipe.locales?.[locale as "es"|"pt"]?.title ?? recipe.title}
                     </h3>
                     <p className="text-muted-foreground text-xs md:text-sm line-clamp-1 hidden sm:block">
-                      {recipe.subtitle}
+                      {recipe.locales?.[locale as "es"|"pt"]?.subtitle ?? recipe.subtitle}
                     </p>
                   </div>
                   <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-2 transition-all shrink-0" />

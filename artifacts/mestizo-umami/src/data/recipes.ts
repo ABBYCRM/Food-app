@@ -12,6 +12,15 @@ import { breakfastRecipes } from "./breakfast-recipes";
 import { lunchRecipes } from "./lunch-recipes";
 import { dinnerRecipes } from "./dinner-recipes";
 import { snackRecipes } from "./snack-recipes";
+import { recipeLocales } from "./recipe-locales";
+
+export interface RecipeLocale {
+  title: string;
+  subtitle: string;
+  story: string;
+  chefNotes: string;
+  method: { step: number; text: string }[];
+}
 
 export interface Recipe {
   slug: string;
@@ -36,6 +45,8 @@ export interface Recipe {
   pairing: string;
   mealSlots: ("breakfast" | "brunch" | "lunch" | "dinner" | "snack" | "dessert" | "side")[];
   healthy: boolean;
+  /** Translations for non-English locales */
+  locales?: { es?: RecipeLocale; pt?: RecipeLocale };
 }
 
 export const existingRecipes: Recipe[] = [
@@ -402,13 +413,20 @@ export const existingRecipes: Recipe[] = [
   }
 ];
 
+/** Merge locale translations into every recipe at load time */
+function withLocales(r: Recipe): Recipe {
+  const loc = recipeLocales[r.slug];
+  if (!loc) return r;
+  return { ...r, locales: loc };
+}
+
 export const recipes: Recipe[] = [
   ...existingRecipes,
   ...dinnerRecipes,
   ...breakfastRecipes,
   ...lunchRecipes,
   ...snackRecipes,
-];
+].map(withLocales);
 
 export function getRecipeBySlug(slug: string): Recipe | undefined {
   return recipes.find(r => r.slug === slug);

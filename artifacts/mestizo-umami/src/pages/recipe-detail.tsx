@@ -75,7 +75,15 @@ export function RecipeDetail() {
   const [match, params] = useRoute("/recipe/:slug");
   const slug = params?.slug;
   const recipe = slug ? getRecipeBySlug(slug) : undefined;
-  const { t, unitSystem } = useLocale();
+  const { t, unitSystem, locale } = useLocale();
+
+  // Resolve locale-specific content, falling back to English fields
+  const localeContent = recipe?.locales?.[locale as "es" | "pt"];
+  const displayTitle = localeContent?.title ?? recipe?.title ?? "";
+  const displaySubtitle = localeContent?.subtitle ?? recipe?.subtitle ?? "";
+  const displayStory = localeContent?.story ?? recipe?.story ?? "";
+  const displayChefNotes = localeContent?.chefNotes ?? recipe?.chefNotes ?? "";
+  const displayMethod = localeContent?.method ?? recipe?.method ?? [];
 
   const [saved, setSaved] = useState(false);
   const [servings, setServings] = useState<number>(1);
@@ -127,7 +135,6 @@ export function RecipeDetail() {
   // ── Print handler ────────────────────────────────────────────────────────
   function printRecipe() {
     if (!recipe) return;
-    const locale = unitSystem === "imperial" ? "en" : "es";
     const lang = locale === "en" ? "en" : locale === "es" ? "es" : "pt";
 
     const LABELS: Record<string, Record<string, string>> = {
@@ -153,8 +160,8 @@ export function RecipeDetail() {
       return `<li><span class="qty">${disp.qty}${disp.unit ? "&thinsp;" + disp.unit : ""}</span>${ing.item}${note}</li>`;
     }).join("\n");
 
-    // Build method steps (temperature-localized)
-    const stepRows = recipe.method.map((step) => {
+    // Build method steps (temperature-localized, using active locale)
+    const stepRows = displayMethod.map((step) => {
       const text = localizeTemp(step.text, unitSystem);
       return `<div class="step"><span class="step-num">${String(step.step).padStart(2, "0")}</span><p>${text}</p></div>`;
     }).join("\n");
@@ -171,7 +178,7 @@ export function RecipeDetail() {
 <html lang="${lang}">
 <head>
   <meta charset="UTF-8" />
-  <title>Mestizo Umami — ${recipe.title}</title>
+  <title>Mestizo Umami — ${displayTitle}</title>
   <style>
     @page {
       size: letter portrait;
@@ -388,7 +395,7 @@ export function RecipeDetail() {
   <div class="page-header">
     <div>
       <div class="brand">Mestizo Umami</div>
-      <div class="recipe-title">${recipe.title}</div>
+      <div class="recipe-title">${displayTitle}</div>
       <div class="recipe-origin">${recipe.origin}</div>
     </div>
     <div style="text-align:right; padding-top:6pt;">
@@ -437,7 +444,7 @@ export function RecipeDetail() {
 
   <div class="notes-section">
     <div class="section-heading">${L.notes}</div>
-    <blockquote>${recipe.chefNotes}</blockquote>
+    <blockquote>${displayChefNotes}</blockquote>
     <div class="pairing-line">
       <strong>${L.pairing}</strong>
       ${recipe.pairing}
@@ -446,7 +453,7 @@ export function RecipeDetail() {
 
   <div class="page-footer">
     <span>mestizo-umami.com</span>
-    <span>${recipe.title}</span>
+    <span>${displayTitle}</span>
   </div>
 
   <script>window.onload = function() { window.print(); }<\/script>
@@ -480,7 +487,7 @@ export function RecipeDetail() {
         </Link>
 
         <div className="absolute inset-0 z-0">
-          <img src={recipe.heroImage} alt={recipe.title} className="w-full h-full object-cover" />
+          <img src={recipe.heroImage} alt={displayTitle} className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
         </div>
 
@@ -497,7 +504,7 @@ export function RecipeDetail() {
               ))}
             </div>
             <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-none text-white mb-3">
-              {recipe.title}
+              {displayTitle}
             </h1>
             <p className="text-base md:text-xl text-white/80 font-light italic font-display">
               {recipe.origin}
@@ -572,7 +579,7 @@ export function RecipeDetail() {
           {/* Story */}
           <div>
             <h3 className="font-display text-2xl md:text-3xl mb-4 text-primary">{t("recipe.story")}</h3>
-            <p className="text-muted-foreground leading-relaxed text-sm md:text-base">{recipe.story}</p>
+            <p className="text-muted-foreground leading-relaxed text-sm md:text-base">{displayStory}</p>
           </div>
 
           {/* Ingredients */}
@@ -636,7 +643,7 @@ export function RecipeDetail() {
             {t("recipe.method")}
           </h3>
           <div className="flex flex-col gap-10 md:gap-12">
-            {recipe.method.map((step) => (
+            {displayMethod.map((step) => (
               <div key={step.step} className="flex gap-5 md:gap-8">
                 <div className="font-display text-4xl md:text-5xl lg:text-6xl text-white/10 select-none shrink-0 w-10 md:w-12">
                   {String(step.step).padStart(2, "0")}
@@ -649,7 +656,7 @@ export function RecipeDetail() {
           </div>
 
           {/* Plating Guide */}
-          <PlatingGuide method={recipe.method} recipeName={recipe.title} />
+          <PlatingGuide method={displayMethod} recipeName={displayTitle} />
 
           {/* Chef Notes & Pairing */}
           <div className="mt-16 md:mt-20 p-6 md:p-10 border border-primary/20 bg-primary/5 rounded-2xl">
@@ -658,7 +665,7 @@ export function RecipeDetail() {
               {t("recipe.chefNotes")}
             </h4>
             <p className="text-muted-foreground leading-relaxed mb-6 font-display italic text-base md:text-lg">
-              "{recipe.chefNotes}"
+              "{displayChefNotes}"
             </p>
             <div className="pt-6 border-t border-primary/10">
               <div className="text-xs uppercase tracking-widest text-primary mb-2">{t("recipe.pairing")}</div>

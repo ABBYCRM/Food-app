@@ -5,9 +5,13 @@ import { recipes } from "../data/recipes";
 import { Heart } from "lucide-react";
 import { isRecipeSaved, saveRecipe, unsaveRecipe } from "../lib/storage";
 import { useEffect } from "react";
+import { useLocale } from "@/lib/locale";
 
 function RecipeCard({ recipe, index }: { recipe: typeof recipes[0]; index: number }) {
   const [saved, setSaved] = useState(false);
+  const { locale } = useLocale();
+  const loc = recipe.locales?.[locale as "es" | "pt"];
+  const title = loc?.title ?? recipe.title;
 
   useEffect(() => {
     setSaved(isRecipeSaved(recipe.slug));
@@ -36,7 +40,7 @@ function RecipeCard({ recipe, index }: { recipe: typeof recipes[0]; index: numbe
           <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors z-10" />
           <img
             src={recipe.thumbImage}
-            alt={recipe.title}
+            alt={title}
             className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
           />
           <button
@@ -64,7 +68,7 @@ function RecipeCard({ recipe, index }: { recipe: typeof recipes[0]; index: numbe
             {recipe.category} • {recipe.origin}
           </div>
           <h3 className="font-display text-xl md:text-2xl text-foreground mb-2 group-hover:text-primary transition-colors leading-tight">
-            {recipe.title}
+            {title}
           </h3>
           <div className="flex items-center gap-3 md:gap-4 text-sm text-muted-foreground flex-wrap">
             <span>{recipe.prepTime} Prep</span>
