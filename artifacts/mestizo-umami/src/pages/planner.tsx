@@ -8,7 +8,7 @@ import {
 import { recipes } from "../data/recipes";
 import { toStoreLabel } from "../lib/store-format";
 import { useLocale } from "@/lib/locale";
-import { usePushNotifications } from "@/lib/use-push-notifications";
+import { usePushNotifications } from "@/lib/push-context";
 import { NotificationPrompt } from "@/components/notification-prompt";
 import {
   Calendar, Plus, X, Search, Wand2, Printer, Sun,

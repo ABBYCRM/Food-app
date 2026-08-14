@@ -48,33 +48,40 @@ async function sendDailyReminders(log: Logger) {
 
   for (const row of rows) {
     const dayPlan = (row.mealPlan as Record<string, Record<string, string>>)[tomorrow] ?? {};
-    const slots = Object.entries(dayPlan); // [["breakfast","slug"], ...]
+    const slots   = Object.entries(dayPlan); // [["breakfast","slug"], ...]
+    if (slots.length === 0) continue;
 
-    for (const [slot, slug] of slots) {
-      const emoji  = SLOT_EMOJI[slot] ?? "🍽";
-      const slotLabel = slot.charAt(0).toUpperCase() + slot.slice(1);
-      const title  = `Tomorrow's ${slotLabel} ${emoji}`;
-      const body   = slug.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
-      const url    = `/recipe/${slug}`;
+    // Aggregate all tomorrow's slots into one notification
+    const lines  = slots.map(([slot, slug]) => {
+      const emoji = SLOT_EMOJI[slot] ?? "🍽";
+      const name  = slug.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+      return `${emoji} ${name}`;
+    });
 
-      const pushPayload = JSON.stringify({ title, body, url });
-      const pushSub = {
-        endpoint: row.endpoint,
-        keys: { p256dh: row.p256dh, auth: row.auth },
-      };
+    // Deep-link to first recipe; full list is in the body
+    const [, firstSlug] = slots[0];
+    const title = `Tomorrow's menu 🍽`;
+    const body  = lines.join("  ·  ");
+    const url   = `/recipe/${firstSlug}`;
+    const tag   = `meal-reminder-${tomorrow.toLowerCase()}`;
 
-      try {
-        await webpush.sendNotification(pushSub, pushPayload);
-      } catch (err: unknown) {
-        const status = (err as { statusCode?: number }).statusCode;
-        // 410 = subscription expired / unsubscribed — clean it up
-        if (status === 410 || status === 404) {
-          await db.delete(pushSubscriptions)
-            .where(eq(pushSubscriptions.endpoint, row.endpoint));
-          log.info({ endpoint: row.endpoint }, "push-scheduler: removed stale subscription");
-        } else {
-          log.warn({ err, endpoint: row.endpoint }, "push-scheduler: send failed");
-        }
+    const pushPayload = JSON.stringify({ title, body, url, tag });
+    const pushSub = {
+      endpoint: row.endpoint,
+      keys: { p256dh: row.p256dh, auth: row.auth },
+    };
+
+    try {
+      await webpush.sendNotification(pushSub, pushPayload);
+    } catch (err: unknown) {
+      const status = (err as { statusCode?: number }).statusCode;
+      // 410 / 404 = subscription expired or invalid — clean it up
+      if (status === 410 || status === 404) {
+        await db.delete(pushSubscriptions)
+          .where(eq(pushSubscriptions.endpoint, row.endpoint));
+        log.info({ endpoint: row.endpoint }, "push-scheduler: removed stale subscription");
+      } else {
+        log.warn({ err, endpoint: row.endpoint }, "push-scheduler: send failed");
       }
     }
   }

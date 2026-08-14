@@ -8,7 +8,7 @@
 import { useState, useEffect } from "react";
 import { Bell, BellOff, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { usePushNotifications } from "@/lib/use-push-notifications";
+import { usePushNotifications } from "@/lib/push-context";
 import type { MealPlan } from "@/lib/storage";
 
 const DISMISSED_KEY = "mestizo_push_prompt_dismissed";

@@ -54,7 +54,7 @@ self.addEventListener('push', (event) => {
   let payload = {};
   try { payload = event.data.json(); } catch { return; }
 
-  const { title = 'Mestizo Umami', body = '', url = '/' } = payload;
+  const { title = 'Mestizo Umami', body = '', url = '/', tag = 'meal-reminder' } = payload;
 
   event.waitUntil(
     self.registration.showNotification(title, {
@@ -63,7 +63,7 @@ self.addEventListener('push', (event) => {
       badge:   '/favicon-32.png',
       image:   '/icon-512.png',
       vibrate: [200, 100, 200],
-      tag:     'meal-reminder',          // replaces previous notification of same type
+      tag,                               // unique per day (e.g. "meal-reminder-monday")
       renotify: false,
       data:    { url },
       actions: [
