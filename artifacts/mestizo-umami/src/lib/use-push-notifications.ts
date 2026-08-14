@@ -12,11 +12,13 @@ const BASE = import.meta.env.BASE_URL.replace(/\/$/, "");
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
-function urlBase64ToUint8Array(b64: string): Uint8Array {
+function urlBase64ToUint8Array(b64: string): Uint8Array<ArrayBuffer> {
   const padding = "=".repeat((4 - (b64.length % 4)) % 4);
   const base64  = (b64 + padding).replace(/-/g, "+").replace(/_/g, "/");
   const raw     = atob(base64);
-  return Uint8Array.from([...raw].map(c => c.charCodeAt(0)));
+  const arr     = new Uint8Array(raw.length);
+  for (let i = 0; i < raw.length; i++) arr[i] = raw.charCodeAt(i);
+  return arr;
 }
 
 async function fetchVapidKey(): Promise<string | null> {

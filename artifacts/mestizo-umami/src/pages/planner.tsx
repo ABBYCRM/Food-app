@@ -8,6 +8,8 @@ import {
 import { recipes } from "../data/recipes";
 import { toStoreLabel } from "../lib/store-format";
 import { useLocale } from "@/lib/locale";
+import { usePushNotifications } from "@/lib/use-push-notifications";
+import { NotificationPrompt } from "@/components/notification-prompt";
 import {
   Calendar, Plus, X, Search, Wand2, Printer, Sun,
   UtensilsCrossed, Moon, Apple, ChevronDown, ChevronUp,
@@ -440,6 +442,7 @@ export function Planner() {
   const [expandedDays, setExpandedDays] = useState<Set<string>>(new Set([DAYS[0]]));
   const { toast } = useToast();
   const { locale } = useLocale();
+  const { isSubscribed, syncPlan } = usePushNotifications();
 
   useEffect(() => {
     setPlan(getMealPlan());
@@ -447,6 +450,13 @@ export function Planner() {
     window.addEventListener("storage-update", handleStorage);
     return () => window.removeEventListener("storage-update", handleStorage);
   }, []);
+
+  // Keep server-side meal plan snapshot in sync whenever the plan changes
+  useEffect(() => {
+    if (isSubscribed) {
+      syncPlan(plan).catch(() => {});
+    }
+  }, [plan, isSubscribed, syncPlan]);
 
   const openPicker = (day: string, slot: Slot) => {
     setActiveSelect({ day, slot });
@@ -732,6 +742,9 @@ export function Planner() {
           </div>
         </DialogContent>
       </Dialog>
+
+      {/* ── Notification opt-in (shows after first meal is added) ── */}
+      <NotificationPrompt mealPlan={plan} hasMeals={filledCount > 0} />
 
       {/* ── Shopping List Dialog ── */}
       <Dialog open={printOpen} onOpenChange={setPrintOpen}>

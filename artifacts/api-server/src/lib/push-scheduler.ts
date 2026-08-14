@@ -11,7 +11,8 @@
  *   Data  : { url: "/recipe/<slug>" }
  */
 import webpush from "web-push";
-import { db, pushSubscriptions } from "@workspace/db";
+import { db, pushSubscriptions, type PushSubscription } from "@workspace/db";
+import { eq } from "drizzle-orm";
 import type { Logger } from "pino";
 
 const SLOT_EMOJI: Record<string, string> = {
@@ -37,7 +38,7 @@ async function sendDailyReminders(log: Logger) {
   const tomorrow = tomorrowDayName();
   log.info({ tomorrow }, "push-scheduler: sending daily reminders");
 
-  let rows: Awaited<ReturnType<typeof db.select>>; 
+  let rows: PushSubscription[];
   try {
     rows = await db.select().from(pushSubscriptions);
   } catch (err) {
@@ -69,7 +70,7 @@ async function sendDailyReminders(log: Logger) {
         // 410 = subscription expired / unsubscribed — clean it up
         if (status === 410 || status === 404) {
           await db.delete(pushSubscriptions)
-            .where((t: typeof pushSubscriptions) => t.endpoint === row.endpoint);
+            .where(eq(pushSubscriptions.endpoint, row.endpoint));
           log.info({ endpoint: row.endpoint }, "push-scheduler: removed stale subscription");
         } else {
           log.warn({ err, endpoint: row.endpoint }, "push-scheduler: send failed");

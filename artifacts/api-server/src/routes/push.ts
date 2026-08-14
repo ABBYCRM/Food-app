@@ -1,14 +1,14 @@
 /**
  * Push-notification routes.
  *
- * GET  /api/push/vapid-public-key  → return VAPID public key for the browser
- * POST /api/push/subscribe         → upsert a push subscription + initial meal plan
- * POST /api/push/sync              → update meal plan for an existing subscription
- * DELETE /api/push/unsubscribe     → remove a subscription
+ * GET    /api/push/vapid-public-key  → return VAPID public key for the browser
+ * POST   /api/push/subscribe         → upsert a push subscription + initial meal plan
+ * POST   /api/push/sync              → update meal plan for an existing subscription
+ * DELETE /api/push/unsubscribe       → remove a subscription
  */
 import { Router } from "express";
 import webpush from "web-push";
-import { z } from "zod/v4";
+import { z } from "zod";
 import { db, pushSubscriptions } from "@workspace/db";
 import { eq } from "drizzle-orm";
 
@@ -25,25 +25,28 @@ if (VAPID_PUBLIC && VAPID_PRIVATE) {
   );
 }
 
-// ── Zod schemas ───────────────────────────────────────────────────────────────
+// ── Zod schemas (Zod v3 syntax) ───────────────────────────────────────────────
 
 const SubscribeBody = z.object({
   subscription: z.object({
-    endpoint: z.url(),
+    endpoint: z.string().url(),
     keys: z.object({
       p256dh: z.string().min(1),
       auth:   z.string().min(1),
     }),
   }),
-  mealPlan: z.record(z.string(), z.record(z.string(), z.string())).optional().default({}),
+  mealPlan: z
+    .record(z.string(), z.record(z.string(), z.string()))
+    .optional()
+    .default({}),
 });
 
 const SyncBody = z.object({
-  endpoint: z.url(),
+  endpoint: z.string().url(),
   mealPlan: z.record(z.string(), z.record(z.string(), z.string())),
 });
 
-const UnsubBody = z.object({ endpoint: z.url() });
+const UnsubBody = z.object({ endpoint: z.string().url() });
 
 // ── Router ────────────────────────────────────────────────────────────────────
 
@@ -64,6 +67,7 @@ router.post("/push/subscribe", async (req, res) => {
   if (!parsed.success) { res.status(400).json({ error: "Invalid body" }); return; }
 
   const { subscription, mealPlan } = parsed.data;
+
   await db
     .insert(pushSubscriptions)
     .values({
