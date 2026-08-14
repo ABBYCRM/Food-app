@@ -14,3 +14,6 @@ coverage/
 qa.py
 qa-*.py
 qa-shots/
+test-results/
+playwright-report/
+blob-report/

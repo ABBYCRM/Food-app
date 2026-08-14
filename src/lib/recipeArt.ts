@@ -104,10 +104,6 @@ const Tacos: RecipeArt = {
         </g>
       `).join("")}
     </g>
-    <!-- Caption band -->
-    <rect x="0" y="1040" width="1600" height="160" fill="${PALETTE.chili}" opacity="0.92"/>
-    <text x="60" y="1130" font-family="Georgia, serif" font-size="40" font-weight="600" fill="${PALETTE.bone50}">Miso-Mole Short Rib Tacos</text>
-    <text x="60" y="1170" font-family="Inter, sans-serif" font-size="18" letter-spacing="3" fill="${PALETTE.bone50}" opacity="0.8">MEXICAN × JAPANESE</text>
   `),
   thumb: () => svg(800, 800, `
     <rect width="800" height="800" fill="${PALETTE.ink}"/>
@@ -126,8 +122,6 @@ const Tacos: RecipeArt = {
         </g>
       `).join("")}
     </g>
-    <rect x="0" y="680" width="800" height="120" fill="${PALETTE.chili}" opacity="0.92"/>
-    <text x="40" y="745" font-family="Georgia, serif" font-size="28" font-weight="600" fill="${PALETTE.bone50}">Miso-Mole Short Rib Tacos</text>
   `),
   phone: () => svg(1200, 1500, `
     <rect width="1200" height="1500" fill="${PALETTE.ink}"/>
@@ -146,9 +140,6 @@ const Tacos: RecipeArt = {
         </g>
       `).join("")}
     </g>
-    <rect x="0" y="1300" width="1200" height="200" fill="${PALETTE.chili}" opacity="0.92"/>
-    <text x="50" y="1410" font-family="Georgia, serif" font-size="40" font-weight="600" fill="${PALETTE.bone50}">Miso-Mole Short Rib Tacos</text>
-    <text x="50" y="1465" font-family="Inter, sans-serif" font-size="20" letter-spacing="3" fill="${PALETTE.bone50}" opacity="0.8">MEXICAN × JAPANESE</text>
   `),
 };
 
@@ -198,9 +189,6 @@ const Elote: RecipeArt = {
       <path d="M0 0 L40 -25 L0 -50 Z" fill="${PALETTE.jade}"/>
       <path d="M0 0 L40 -25 L0 -50 Z" fill="${PALETTE.cream}" opacity="0.4"/>
     </g>
-    <rect x="0" y="1040" width="1600" height="160" fill="${PALETTE.chili}" opacity="0.92"/>
-    <text x="60" y="1130" font-family="Georgia, serif" font-size="40" font-weight="600" fill="${PALETTE.bone50}">Kimchi Elote</text>
-    <text x="60" y="1170" font-family="Inter, sans-serif" font-size="18" letter-spacing="3" fill="${PALETTE.bone50}" opacity="0.8">MEXICAN × KOREAN</text>
   `),
   thumb: () => svg(800, 800, `
     <rect width="800" height="800" fill="${PALETTE.ink}"/>
@@ -215,8 +203,6 @@ const Elote: RecipeArt = {
         </g>
       `).join("")}
     </g>
-    <rect x="0" y="680" width="800" height="120" fill="${PALETTE.chili}" opacity="0.92"/>
-    <text x="40" y="745" font-family="Georgia, serif" font-size="28" font-weight="600" fill="${PALETTE.bone50}">Kimchi Elote</text>
   `),
   phone: () => svg(1200, 1500, `
     <rect width="1200" height="1500" fill="${PALETTE.ink}"/>
@@ -231,9 +217,6 @@ const Elote: RecipeArt = {
         </g>
       `).join("")}
     </g>
-    <rect x="0" y="1300" width="1200" height="200" fill="${PALETTE.chili}" opacity="0.92"/>
-    <text x="50" y="1410" font-family="Georgia, serif" font-size="40" font-weight="600" fill="${PALETTE.bone50}">Kimchi Elote</text>
-    <text x="50" y="1465" font-family="Inter, sans-serif" font-size="20" letter-spacing="3" fill="${PALETTE.bone50}" opacity="0.8">MEXICAN × KOREAN</text>
   `),
 };
 
@@ -278,9 +261,6 @@ const Hamachi: RecipeArt = {
     </g>
     <!-- Sesame -->
     ${Array.from({ length: 30 }, (_, k) => sesame(600 + (k * 37) % 400, 540 + ((k * 23) % 240), PALETTE.ink)).join("")}
-    <rect x="0" y="1040" width="1600" height="160" fill="${PALETTE.teal}" opacity="0.92"/>
-    <text x="60" y="1130" font-family="Georgia, serif" font-size="40" font-weight="600" fill="${PALETTE.bone50}">Yuzu Aguachile Hamachi</text>
-    <text x="60" y="1170" font-family="Inter, sans-serif" font-size="18" letter-spacing="3" fill="${PALETTE.bone50}" opacity="0.8">JAPANESE × MEXICAN</text>
   `),
   thumb: () => svg(800, 800, `
     <rect width="800" height="800" fill="${PALETTE.bone}"/>
@@ -294,8 +274,6 @@ const Hamachi: RecipeArt = {
         </g>
       `).join("")}
     </g>
-    <rect x="0" y="680" width="800" height="120" fill="${PALETTE.teal}" opacity="0.92"/>
-    <text x="40" y="745" font-family="Georgia, serif" font-size="28" font-weight="600" fill="${PALETTE.bone50}">Yuzu Aguachile</text>
   `),
   phone: () => svg(1200, 1500, `
     <rect width="1200" height="1500" fill="${PALETTE.bone}"/>
@@ -309,9 +287,6 @@ const Hamachi: RecipeArt = {
         </g>
       `).join("")}
     </g>
-    <rect x="0" y="1300" width="1200" height="200" fill="${PALETTE.teal}" opacity="0.92"/>
-    <text x="50" y="1410" font-family="Georgia, serif" font-size="40" font-weight="600" fill="${PALETTE.bone50}">Yuzu Aguachile Hamachi</text>
-    <text x="50" y="1465" font-family="Inter, sans-serif" font-size="20" letter-spacing="3" fill="${PALETTE.bone50}" opacity="0.8">JAPANESE × MEXICAN</text>
   `),
 };
 
@@ -355,9 +330,6 @@ const Bao: RecipeArt = {
         </g>
       `).join("")}
     </g>
-    <rect x="0" y="1040" width="1600" height="160" fill="${PALETTE.chili}" opacity="0.92"/>
-    <text x="60" y="1130" font-family="Georgia, serif" font-size="40" font-weight="600" fill="${PALETTE.bone50}">Al Pastor Bao</text>
-    <text x="60" y="1170" font-family="Inter, sans-serif" font-size="18" letter-spacing="3" fill="${PALETTE.bone50}" opacity="0.8">MEXICAN × CHINESE</text>
   `),
   thumb: () => svg(800, 800, `
     <rect width="800" height="800" fill="${PALETTE.ink}"/>
@@ -373,8 +345,6 @@ const Bao: RecipeArt = {
         </g>
       `).join("")}
     </g>
-    <rect x="0" y="680" width="800" height="120" fill="${PALETTE.chili}" opacity="0.92"/>
-    <text x="40" y="745" font-family="Georgia, serif" font-size="28" font-weight="600" fill="${PALETTE.bone50}">Al Pastor Bao</text>
   `),
   phone: () => svg(1200, 1500, `
     <rect width="1200" height="1500" fill="${PALETTE.ink}"/>
@@ -389,9 +359,6 @@ const Bao: RecipeArt = {
         </g>
       `).join("")}
     </g>
-    <rect x="0" y="1300" width="1200" height="200" fill="${PALETTE.chili}" opacity="0.92"/>
-    <text x="50" y="1410" font-family="Georgia, serif" font-size="40" font-weight="600" fill="${PALETTE.bone50}">Al Pastor Bao</text>
-    <text x="50" y="1465" font-family="Inter, sans-serif" font-size="20" letter-spacing="3" fill="${PALETTE.bone50}" opacity="0.8">MEXICAN × CHINESE</text>
   `),
 };
 
@@ -445,9 +412,6 @@ const Ramen: RecipeArt = {
     }).join("")}
     <!-- Scallion rings (green) -->
     ${Array.from({ length: 10 }, () => `<circle cx="${500 + Math.random() * 600}" cy="${540 + Math.random() * 120}" r="4" fill="${PALETTE.jade}"/>`).join("")}
-    <rect x="0" y="1040" width="1600" height="160" fill="${PALETTE.chili}" opacity="0.92"/>
-    <text x="60" y="1130" font-family="Georgia, serif" font-size="40" font-weight="600" fill="${PALETTE.bone50}">Ramen Pozole Rojo</text>
-    <text x="60" y="1170" font-family="Inter, sans-serif" font-size="18" letter-spacing="3" fill="${PALETTE.bone50}" opacity="0.8">JAPANESE × MEXICAN</text>
   `),
   thumb: () => svg(800, 800, `
     <rect width="800" height="800" fill="${PALETTE.ink}"/>
@@ -459,8 +423,6 @@ const Ramen: RecipeArt = {
       <ellipse cx="0" cy="0" rx="30" ry="22" fill="${PALETTE.cream}"/>
       <ellipse cx="0" cy="0" rx="22" ry="14" fill="#d97a1a"/>
     </g>
-    <rect x="0" y="680" width="800" height="120" fill="${PALETTE.chili}" opacity="0.92"/>
-    <text x="40" y="745" font-family="Georgia, serif" font-size="28" font-weight="600" fill="${PALETTE.bone50}">Ramen Pozole Rojo</text>
   `),
   phone: () => svg(1200, 1500, `
     <rect width="1200" height="1500" fill="${PALETTE.ink}"/>
@@ -472,9 +434,6 @@ const Ramen: RecipeArt = {
       <ellipse cx="0" cy="0" rx="40" ry="30" fill="${PALETTE.cream}"/>
       <ellipse cx="0" cy="0" rx="30" ry="20" fill="#d97a1a"/>
     </g>
-    <rect x="0" y="1300" width="1200" height="200" fill="${PALETTE.chili}" opacity="0.92"/>
-    <text x="50" y="1410" font-family="Georgia, serif" font-size="40" font-weight="600" fill="${PALETTE.bone50}">Ramen Pozole Rojo</text>
-    <text x="50" y="1465" font-family="Inter, sans-serif" font-size="20" letter-spacing="3" fill="${PALETTE.bone50}" opacity="0.8">JAPANESE × MEXICAN</text>
   `),
 };
 
@@ -509,9 +468,6 @@ const Popcorn: RecipeArt = {
     ${Array.from({ length: 60 }, () => chiliDots(500 + Math.random() * 600, 500 + Math.random() * 200, PALETTE.ink)).join("")}
     <!-- Tajin red specks -->
     ${Array.from({ length: 80 }, () => chiliDots(500 + Math.random() * 600, 500 + Math.random() * 200, PALETTE.chili)).join("")}
-    <rect x="0" y="1040" width="1600" height="160" fill="${PALETTE.chili}" opacity="0.92"/>
-    <text x="60" y="1130" font-family="Georgia, serif" font-size="40" font-weight="600" fill="${PALETTE.bone50}">Chamoy Furikake Popcorn</text>
-    <text x="60" y="1170" font-family="Inter, sans-serif" font-size="18" letter-spacing="3" fill="${PALETTE.bone50}" opacity="0.8">MEXICAN × JAPANESE</text>
   `),
   thumb: () => svg(800, 800, `
     <rect width="800" height="800" fill="${PALETTE.ink}"/>
@@ -527,8 +483,6 @@ const Popcorn: RecipeArt = {
       }).join("")}
     </g>
     ${Array.from({ length: 30 }, () => chiliDots(300 + Math.random() * 200, 350 + Math.random() * 150, PALETTE.chili)).join("")}
-    <rect x="0" y="680" width="800" height="120" fill="${PALETTE.chili}" opacity="0.92"/>
-    <text x="40" y="745" font-family="Georgia, serif" font-size="28" font-weight="600" fill="${PALETTE.bone50}">Chamoy Furikake Popcorn</text>
   `),
   phone: () => svg(1200, 1500, `
     <rect width="1200" height="1500" fill="${PALETTE.ink}"/>
@@ -544,9 +498,6 @@ const Popcorn: RecipeArt = {
       }).join("")}
     </g>
     ${Array.from({ length: 50 }, () => chiliDots(400 + Math.random() * 400, 580 + Math.random() * 240, PALETTE.chili)).join("")}
-    <rect x="0" y="1300" width="1200" height="200" fill="${PALETTE.chili}" opacity="0.92"/>
-    <text x="50" y="1410" font-family="Georgia, serif" font-size="40" font-weight="600" fill="${PALETTE.bone50}">Chamoy Furikake Popcorn</text>
-    <text x="50" y="1465" font-family="Inter, sans-serif" font-size="20" letter-spacing="3" fill="${PALETTE.bone50}" opacity="0.8">MEXICAN × JAPANESE</text>
   `),
 };
 
@@ -581,9 +532,6 @@ const Flan: RecipeArt = {
         ${Array.from({ length: 6 }, () => `<circle cx="${Math.random() * 16 - 8}" cy="${Math.random() * 16 - 8}" r="1" fill="${PALETTE.ink}"/>`).join("")}
       </g>`;
     }).join("")}
-    <rect x="0" y="1040" width="1600" height="160" fill="${PALETTE.chili}" opacity="0.92"/>
-    <text x="60" y="1130" font-family="Georgia, serif" font-size="40" font-weight="600" fill="${PALETTE.bone50}">Miso-Mezcal Flan</text>
-    <text x="60" y="1170" font-family="Inter, sans-serif" font-size="18" letter-spacing="3" fill="${PALETTE.bone50}" opacity="0.8">DESSERT · MEXICAN × JAPANESE</text>
   `),
   thumb: () => svg(800, 800, `
     <rect width="800" height="800" fill="${PALETTE.bone}"/>
@@ -592,8 +540,6 @@ const Flan: RecipeArt = {
     <path d="M 200 420 Q 200 280 400 280 Q 600 280 600 420 Z" fill="${PALETTE.cream}"/>
     <ellipse cx="400" cy="282" rx="200" ry="14" fill="#7a3508"/>
     ${Array.from({ length: 12 }, () => `<polygon points="${380 + Math.random() * 40},${300 + Math.random() * 30} ${390 + Math.random() * 30},${300 + Math.random() * 30} ${400 + Math.random() * 20},${310 + Math.random() * 30} ${390 + Math.random() * 20},${320 + Math.random() * 30}" fill="${PALETTE.corn}" opacity="0.7"/>`).join("")}
-    <rect x="0" y="680" width="800" height="120" fill="${PALETTE.chili}" opacity="0.92"/>
-    <text x="40" y="745" font-family="Georgia, serif" font-size="28" font-weight="600" fill="${PALETTE.bone50}">Miso-Mezcal Flan</text>
   `),
   phone: () => svg(1200, 1500, `
     <rect width="1200" height="1500" fill="${PALETTE.bone}"/>
@@ -601,9 +547,6 @@ const Flan: RecipeArt = {
     <ellipse cx="600" cy="700" rx="380" ry="130" fill="#8a4513" opacity="0.7"/>
     <path d="M 320 700 Q 320 500 600 500 Q 880 500 880 700 Z" fill="${PALETTE.cream}"/>
     <ellipse cx="600" cy="503" rx="270" ry="18" fill="#7a3508"/>
-    <rect x="0" y="1300" width="1200" height="200" fill="${PALETTE.chili}" opacity="0.92"/>
-    <text x="50" y="1410" font-family="Georgia, serif" font-size="40" font-weight="600" fill="${PALETTE.bone50}">Miso-Mezcal Flan</text>
-    <text x="50" y="1465" font-family="Inter, sans-serif" font-size="20" letter-spacing="3" fill="${PALETTE.bone50}" opacity="0.8">DESSERT · MEXICAN × JAPANESE</text>
   `),
 };
 
@@ -636,9 +579,6 @@ const Wings: RecipeArt = {
       <!-- Fresno chile slices -->
       ${Array.from({ length: 6 }, () => `<circle cx="${-200 + Math.random() * 400}" cy="${-120 + Math.random() * 240}" r="10" fill="${PALETTE.chili}"/>`).join("")}
     </g>
-    <rect x="0" y="1040" width="1600" height="160" fill="${PALETTE.chili}" opacity="0.92"/>
-    <text x="60" y="1130" font-family="Georgia, serif" font-size="40" font-weight="600" fill="${PALETTE.bone50}">Tamarindo-Shoyu Wings</text>
-    <text x="60" y="1170" font-family="Inter, sans-serif" font-size="18" letter-spacing="3" fill="${PALETTE.bone50}" opacity="0.8">MEXICAN × JAPANESE</text>
   `),
   thumb: () => svg(800, 800, `
     <rect width="800" height="800" fill="${PALETTE.ink}"/>
@@ -652,8 +592,6 @@ const Wings: RecipeArt = {
       }).join("")}
     </g>
     ${Array.from({ length: 15 }, () => sesame(300 + Math.random() * 200, 350 + Math.random() * 150, PALETTE.cream)).join("")}
-    <rect x="0" y="680" width="800" height="120" fill="${PALETTE.chili}" opacity="0.92"/>
-    <text x="40" y="745" font-family="Georgia, serif" font-size="28" font-weight="600" fill="${PALETTE.bone50}">Tamarindo-Shoyu Wings</text>
   `),
   phone: () => svg(1200, 1500, `
     <rect width="1200" height="1500" fill="${PALETTE.ink}"/>
@@ -667,9 +605,6 @@ const Wings: RecipeArt = {
       }).join("")}
     </g>
     ${Array.from({ length: 20 }, () => sesame(400 + Math.random() * 400, 580 + Math.random() * 240, PALETTE.cream)).join("")}
-    <rect x="0" y="1300" width="1200" height="200" fill="${PALETTE.chili}" opacity="0.92"/>
-    <text x="50" y="1410" font-family="Georgia, serif" font-size="40" font-weight="600" fill="${PALETTE.bone50}">Tamarindo-Shoyu Wings</text>
-    <text x="50" y="1465" font-family="Inter, sans-serif" font-size="20" letter-spacing="3" fill="${PALETTE.bone50}" opacity="0.8">MEXICAN × JAPANESE</text>
   `),
 };
 
@@ -698,9 +633,6 @@ const Matcha: RecipeArt = {
     </g>
     <!-- Cinnamon shadow ring -->
     <ellipse cx="800" cy="700" rx="280" ry="40" fill="#8a4513" opacity="0.15"/>
-    <rect x="0" y="1040" width="1600" height="160" fill="${PALETTE.jade}" opacity="0.92"/>
-    <text x="60" y="1130" font-family="Georgia, serif" font-size="40" font-weight="600" fill="${PALETTE.bone50}">Horchata Tres Leches Matcha</text>
-    <text x="60" y="1170" font-family="Inter, sans-serif" font-size="18" letter-spacing="3" fill="${PALETTE.bone50}" opacity="0.8">DESSERT · MEXICAN × JAPANESE</text>
   `),
   thumb: () => svg(800, 800, `
     <rect width="800" height="800" fill="${PALETTE.bone}"/>
@@ -710,8 +642,6 @@ const Matcha: RecipeArt = {
       <rect x="-160" y="-60" width="320" height="30" fill="${PALETTE.white}"/>
       <polygon points="-160,-60 160,-60 0,30" fill="${PALETTE.jade}"/>
     </g>
-    <rect x="0" y="680" width="800" height="120" fill="${PALETTE.jade}" opacity="0.92"/>
-    <text x="40" y="745" font-family="Georgia, serif" font-size="26" font-weight="600" fill="${PALETTE.bone50}">Horchata Tres Leches Matcha</text>
   `),
   phone: () => svg(1200, 1500, `
     <rect width="1200" height="1500" fill="${PALETTE.bone}"/>
@@ -721,9 +651,6 @@ const Matcha: RecipeArt = {
       <rect x="-200" y="-80" width="400" height="30" fill="${PALETTE.white}"/>
       <polygon points="-200,-80 200,-80 0,30" fill="${PALETTE.jade}"/>
     </g>
-    <rect x="0" y="1300" width="1200" height="200" fill="${PALETTE.jade}" opacity="0.92"/>
-    <text x="50" y="1410" font-family="Georgia, serif" font-size="38" font-weight="600" fill="${PALETTE.bone50}">Horchata Tres Leches Matcha</text>
-    <text x="50" y="1465" font-family="Inter, sans-serif" font-size="20" letter-spacing="3" fill="${PALETTE.bone50}" opacity="0.8">DESSERT · MEXICAN × JAPANESE</text>
   `),
 };
 
