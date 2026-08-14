@@ -34,7 +34,7 @@ _Describe the high-level user-facing capabilities of this app once they exist._
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+- After every change, always push to GitHub (`ABBYCRM/Food-app.git`, PAT in `GITHUB_PAT` secret) and trigger a DigitalOcean deployment (App ID `7cc29839-6e3a-4520-ab4c-de16a64a366e`, token in `DIGITALOCEAN_TOKEN` secret). Confirm the deploy reaches ACTIVE before reporting done.
 
 ## Gotchas
 
