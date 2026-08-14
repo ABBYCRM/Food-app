@@ -40,55 +40,87 @@ const UA = "MestizoUmami/1.0 (https://food-app-locf2.ondigitalocean.app; contact
 
 /* Each entry: search queries in priority order, the first hit wins.
    Queries are written in Wikipedia's vocabulary so the search ranks real
-   plates of the dish, not ingredient shots or restaurant logos. */
+   plates of the dish, not ingredient shots or restaurant logos. The longer
+   the list, the higher the chance of a perfect match — extra queries are
+   cheap (~1s each), the cost is in the absence of a real photo at all. */
 const SOURCES = {
   recipes: {
-    "miso-mole-short-rib-tacos": ["mole_taco", "taco_mole", "tacos_al_pastor"],
-    "kimchi-elote":               ["elote_mexican", "elote_grilled_corn", "mexican_corn_cob"],
-    "yuzu-aguachile-hamachi":     ["ceviche_peruvian", "aguachile", "hamachi_sashimi"],
-    "al-pastor-bao":              ["gua_bao", "bao_bun_steamed", "xiao_long_bao"],
-    "ramen-pozole-rojo":          ["pozole_rojo", "pozole_mexican", "ramen_broth_bowl"],
-    "chamoy-furikake-popcorn":    ["popcorn_bowl", "furikake", "snack_mix_bowl"],
-    "miso-mezcal-flan":           ["flan_dessert", "creme_caramel", "mexican_flan"],
-    "tamarindo-shoyu-glazed-wings": ["chicken_wings_glazed", "tamarind_chicken", "buffalo_wings_plate"],
-    "horchata-tres-leches-matcha": ["tres_leches", "matcha_cake", "horchata_dessert"],
+    "miso-mole-short-rib-tacos": [
+      "mole_taco", "taco_mole", "tacos_al_pastor", "mole_poblano_plate",
+      "mexican_braised_short_ribs", "taco_plate_mexican",
+    ],
+    "kimchi-elote": [
+      "elote_mexican", "elote_grilled_corn", "mexican_corn_cob",
+      "elote_chile_lime", "mexican_street_corn", "grilled_corn_cob",
+    ],
+    "yuzu-aguachile-hamachi": [
+      "aguachile_verde", "aguachile_mexican", "shrimp_aguachile",
+      "hamachi_sashimi", "yellowtail_citrus", "tiradito_peruvian",
+      "hamachi_yuzu_ceviche", "ceviche_peruvian",
+    ],
+    "al-pastor-bao": [
+      "gua_bao", "bao_bun_steamed", "xiao_long_bao", "bao_pork",
+      "stuffed_bao", "bao_burger",
+    ],
+    "ramen-pozole-rojo": [
+      "pozole_rojo", "pozole_mexican", "pozole_bowl", "pozole_hominy",
+      "ramen_broth_bowl", "ramen_red",
+    ],
+    "chamoy-furikake-popcorn": [
+      "flavored_popcorn", "spicy_popcorn", "tajin_popcorn",
+      "mexican_popcorn", "furikake_rice", "japanese_seasoning",
+      "snack_bowl", "chili_popcorn",
+    ],
+    "miso-mezcal-flan": [
+      "flan_dessert", "creme_caramel", "mexican_flan",
+      "flan_plate", "homemade_flan", "caramel_custard",
+    ],
+    "tamarindo-shoyu-glazed-wings": [
+      "asian_chicken_wings", "glazed_wings", "korean_wings",
+      "tamarind_chicken", "sticky_wings", "chicken_wings_plate",
+      "buffalo_wings",
+    ],
+    "horchata-tres-leches-matcha": [
+      "tres_leches_cake", "tres_leches_slice", "matcha_cake",
+      "horchata_dessert", "milk_cake_slice", "mexican_pastry",
+    ],
   },
   formats: {
-    taco:            ["mexican_taco_plate", "tacos_al_pastor"],
-    bao:             ["gua_bao", "bao_burger"],
-    tostada:         ["tostada_mexican", "tostadas_sencillas"],
-    bowl:            ["rice_bowl_japanese", "donburi"],
-    dumpling:        ["gyoza_plate", "dumplings_plate", "jiaozi"],
-    broth:           ["ramen_broth_bowl", "pho_broth"],
-    ceviche:         ["ceviche_peruvian", "coctel_de_camaron"],
-    skewer:          ["yakitori_skewer", "kebabs_grilled"],
-    "stir-fry":      ["wok_stir_fry", "stir_fry_pan"],
-    salad:           ["garden_salad_plated", "asian_salad"],
-    "rice-cake":     ["tteokbokki", "korean_rice_cake"],
-    tamale:          ["tamales_mexicanos", "tamal_plate"],
-    "noodle-cold":   ["cold_noodles", "sesame_noodles_bowl"],
-    sope:            ["sopes_mexican", "sopes_de_frijol"],
-    "ice-cream":     ["ice_cream_scoops", "gelato_plate"],
-    chilaquiles:     ["chilaquiles", "chilaquiles_rojos"],
-    congee:          ["congee_bowl", "rice_porridge_chinese"],
-    "breakfast-taco":["breakfast_taco", "huevos_taco"],
-    "oat-bowl":      ["oatmeal_bowl", "porridge_bowl_fruit"],
-    "fruit-acai":    ["acai_bowl", "smoothie_bowl"],
+    taco:            ["mexican_taco_plate", "tacos_al_pastor", "taco_truck"],
+    bao:             ["gua_bao", "bao_burger", "bao_stuffed", "bao_pork"],
+    tostada:         ["tostada_mexican", "tostadas_sencillas", "tostada_plate"],
+    bowl:            ["rice_bowl_japanese", "donburi", "grain_bowl"],
+    dumpling:        ["gyoza_plate", "dumplings_plate", "jiaozi", "potsticker"],
+    broth:           ["ramen_broth_bowl", "pho_broth", "noodle_soup_bowl"],
+    ceviche:         ["ceviche_peruvian", "coctel_de_camaron", "shrimp_ceviche"],
+    skewer:          ["yakitori_skewer", "kebabs_grilled", "satay_skewer"],
+    "stir-fry":      ["wok_stir_fry", "stir_fry_pan", "asian_stir_fry"],
+    salad:           ["garden_salad_plated", "asian_salad", "noodle_salad"],
+    "rice-cake":     ["tteokbokki", "korean_rice_cake", "rice_cake_dish"],
+    tamale:          ["tamales_mexicanos", "tamal_plate", "mexican_tamale"],
+    "noodle-cold":   ["cold_noodles", "sesame_noodles_bowl", "cold_noodle_dish"],
+    sope:            ["sopes_mexican", "sopes_de_frijol", "mexican_sopes"],
+    "ice-cream":     ["ice_cream_scoops", "gelato_plate", "ice_cream_bowl"],
+    chilaquiles:     ["chilaquiles", "chilaquiles_rojos", "mexican_chilaquiles"],
+    congee:          ["congee_bowl", "rice_porridge_chinese", "jook"],
+    "breakfast-taco":["breakfast_taco", "huevos_taco", "egg_taco"],
+    "oat-bowl":      ["oatmeal_bowl", "porridge_bowl_fruit", "oats_breakfast"],
+    "fruit-acai":    ["acai_bowl", "smoothie_bowl", "pitaya_bowl"],
   },
   pantry: {
-    "soy-sauce":     ["soy_sauce_bottle", "shoyu"],
-    "dried-chiles":  ["dried_chiles", "chile_seco"],
-    ginger:          ["ginger_root", "fresh_ginger"],
-    "corn-masa":     ["corn_tortillas_stack", "masa_dough"],
-    miso:            ["miso_paste_bowl", "miso_paste"],
-    "lime-yuzu":     ["yuzu_citrus", "limes_cut"],
-    kombu:           ["dashi_kombu", "dried_kelp"],
-    agave:           ["agave_syrup", "agave_plant"],
+    "soy-sauce":     ["soy_sauce_bottle", "shoyu", "soy_sauce_dish"],
+    "dried-chiles":  ["dried_chiles", "chile_seco", "mexican_dried_peppers"],
+    ginger:          ["ginger_root", "fresh_ginger", "ginger_pile"],
+    "corn-masa":     ["corn_tortillas_stack", "masa_dough", "tortilla_dough"],
+    miso:            ["miso_paste_bowl", "miso_paste", "miso_jar"],
+    "lime-yuzu":     ["yuzu_citrus", "limes_cut", "citrus_fruit"],
+    kombu:           ["dashi_kombu", "dried_kelp", "kombu_seaweed"],
+    agave:           ["agave_syrup", "agave_plant", "blue_agave"],
   },
   techniques: {
-    "chile-bloom":         ["dried_chiles_toasting", "tostado_chiles"],
-    "dashi-meets-caldo":   ["dashi_pot", "broth_simmering_pot"],
-    "tortilla-press":      ["tortilla_press", "tortilla_making"],
+    "chile-bloom":         ["dried_chiles_toasting", "tostado_chiles", "roasting_chiles"],
+    "dashi-meets-caldo":   ["dashi_pot", "broth_simmering_pot", "caldo_pollo"],
+    "tortilla-press":      ["tortilla_press", "tortilla_making", "making_tortillas"],
   },
 };
 
@@ -96,9 +128,10 @@ const SOURCES = {
    (e.g. a search for "elote" might return an image of an "elote" bus
    in Mexico, not corn on the cob.) */
 const BLOCKLIST = [
-  "logo", "map", "graph", "chart", "diagram", "icon", "sign ",
+  "logo", "brand", "map", "graph", "chart", "diagram", "icon", "sign ",
   "advert", "menu_card", "package", "carton", "tin", "t-shirt",
-  "text", "wikipedia", "brand",
+  "text", "wikipedia", "sponsor", "comic", "cartoon",
+  "_bag", "pack_", "wrap_", "label_", "tag_", "sticker", "mascot",
 ];
 
 async function exists(p) {
@@ -160,18 +193,47 @@ async function download(url, outPath, attempt = 1) {
   }
 }
 
+/* Fallback to the Pollinations AI renders from the previously-merged
+   claude/build-harmonize-imagery-2yd3ag branch. The git working tree
+   is the source of truth, so this expects the operator to have run
+   `git checkout origin/claude/build-harmonize-imagery-2yd3ag -- public/img/`
+   at some point and the resulting tree to live at FALLBACK_ROOT. */
+const FALLBACK_ROOT = "/tmp/pollinations-fallback";
+
+async function copyFallback(outPath) {
+  /* Map public/img/recipes/miso-mole-short-rib-tacos-hero.jpg →
+     /tmp/pollinations-fallback/recipes/miso-mole-short-rib-tacos-hero.jpg */
+  const rel = outPath.split("/img/").pop();
+  const src = join(FALLBACK_ROOT, rel);
+  try {
+    await access(src);
+    await mkdir(dirname(outPath), { recursive: true });
+    const { copyFile } = await import("node:fs/promises");
+    await copyFile(src, outPath);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 /* Pick the first hit that isn't blocked and is a JPEG/PNG of plausible size. */
 async function findPhoto(queries, widthHint = 1280) {
   for (const q of queries) {
     const json = await api(
       `/api.php?action=query&generator=search` +
       `&gsrsearch=${encodeURIComponent(q)}` +
-      `&gsrnamespace=6&gsrlimit=10` +
+      `&gsrnamespace=6&gsrlimit=20` +
       `&prop=imageinfo&iiprop=url|size&iiurlwidth=${widthHint}` +
       `&format=json`
     );
     const pages = json?.query?.pages ?? {};
-    for (const page of Object.values(pages)) {
+    /* Sort by title length ascending — shorter titles like "Taco al pastor.jpg"
+       tend to be on-subject photo files; long descriptive titles tend to be
+       press / event / academic images. */
+    const sorted = Object.values(pages).sort(
+      (a, b) => (a.title?.length ?? 99) - (b.title?.length ?? 99)
+    );
+    for (const page of sorted) {
       const title = (page.title ?? "").replace(/^File:/, "").toLowerCase();
       if (!/\.(jpe?g|png)$/.test(title)) continue;
       if (BLOCKLIST.some((bad) => title.includes(bad))) continue;
@@ -182,7 +244,7 @@ async function findPhoto(queries, widthHint = 1280) {
       /* Reject obvious non-photos: 1x1 logos, super-tall infographics, etc. */
       if (w < 600 || h < 400) continue;
       if (w / h < 0.6 || w / h > 2.2) continue;
-      return { thumburl: info.thumburl ?? info.url, original: info.url, title };
+      return { thumburl: info.thumburl ?? info.url, original: info.url, title, query: q };
     }
   }
   return null;
@@ -199,19 +261,29 @@ async function fetchOne(group, slug, queries, outPath) {
      1280 so the recipe detail page stays crisp on retina. */
   const widthHint = outPath.endsWith("-thumb.jpg") ? 640 : 1280;
   const hit = await findPhoto(queries, widthHint);
-  if (!hit) {
-    process.stdout.write(`  MISS  ${rel} — no Wikimedia hit for any of: ${queries.join(", ")}\n`);
-    return "missed";
+  if (hit) {
+    try {
+      await download(hit.thumburl, outPath);
+      const stat = await (await import("node:fs/promises")).stat(outPath);
+      process.stdout.write(`  ok    ${rel} ← ${hit.title} via '${hit.query}' (${Math.round(stat.size / 1024)}KB)\n`);
+      return "ok";
+    } catch (err) {
+      process.stdout.write(`  fail  ${rel} (download) — ${err.message}\n`);
+      /* fall through to fallback */
+    }
+  } else {
+    process.stdout.write(`  miss  ${rel} — no Wikimedia hit for any of: ${queries.slice(0, 3).join(", ")}${queries.length > 3 ? `, +${queries.length - 3} more` : ""}\n`);
   }
-  try {
-    await download(hit.thumburl, outPath);
-    const stat = await (await import("node:fs/promises")).stat(outPath);
-    process.stdout.write(`  ok    ${rel} ← ${hit.title} (${Math.round(stat.size / 1024)}KB)\n`);
-    return "ok";
-  } catch (err) {
-    process.stdout.write(`  FAIL  ${rel} — ${err.message}\n`);
-    return "failed";
+  /* Wikimedia failed → fall back to the Pollinations AI render from the
+     previously-merged branch. These are hyper-real in style even if the
+     model sometimes misses the exact subject. */
+  const copied = await copyFallback(outPath);
+  if (copied) {
+    process.stdout.write(`  fall  ${rel} ← Pollinations AI render\n`);
+    return "fallback";
   }
+  process.stdout.write(`  NONE  ${rel} — no Wikimedia hit and no fallback image\n`);
+  return "none";
 }
 
 const jobs = [];
@@ -246,4 +318,4 @@ await Promise.all(
 );
 const tally = results.reduce((a, r) => ((a[r] = (a[r] ?? 0) + 1), a), {});
 console.log("\nDone:", JSON.stringify(tally));
-if (tally.missed || tally.failed) process.exitCode = 1;
+if (tally.none) process.exitCode = 1;
