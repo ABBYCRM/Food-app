@@ -14,15 +14,12 @@ function optionalEnv(key: string): string | undefined {
   return process.env[key]?.trim() || undefined;
 }
 
+import { createHash } from "node:crypto";
+
 function parseEncryptionKey(raw: string): Buffer {
-  const key = Buffer.from(raw, "base64");
-  if (key.byteLength !== 32) {
-    throw new Error(
-      `TOKEN_ENCRYPTION_KEY must decode to exactly 32 bytes (got ${key.byteLength}). ` +
-      `Generate one with: openssl rand -base64 32`,
-    );
-  }
-  return key;
+  // Derive a stable 32-byte AES key via SHA-256 so any non-empty string works
+  // regardless of base64 padding or length — no format constraints on the secret.
+  return createHash("sha256").update(raw).digest();
 }
 
 export interface AuthConfig {
