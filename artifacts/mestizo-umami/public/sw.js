@@ -39,3 +39,59 @@ self.addEventListener('fetch', (event) => {
     )
   );
 });
+
+// ── Push notifications ────────────────────────────────────────────────────────
+
+const SLOT_EMOJI = { breakfast: '☀️', lunch: '🥗', dinner: '🌙', snack: '🍵' };
+
+/**
+ * Incoming payload shape:
+ *   { title: "Tomorrow's Dinner 🌙", body: "Miso-Mole Short Rib Tacos", url: "/recipe/miso-mole-short-rib-tacos" }
+ */
+self.addEventListener('push', (event) => {
+  if (!event.data) return;
+
+  let payload = {};
+  try { payload = event.data.json(); } catch { return; }
+
+  const { title = 'Mestizo Umami', body = '', url = '/' } = payload;
+
+  event.waitUntil(
+    self.registration.showNotification(title, {
+      body,
+      icon:    '/icon-192.png',
+      badge:   '/favicon-32.png',
+      image:   '/icon-512.png',
+      vibrate: [200, 100, 200],
+      tag:     'meal-reminder',          // replaces previous notification of same type
+      renotify: false,
+      data:    { url },
+      actions: [
+        { action: 'open',    title: 'View recipe' },
+        { action: 'dismiss', title: 'Dismiss' },
+      ],
+    })
+  );
+});
+
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+  if (event.action === 'dismiss') return;
+
+  const url = event.notification.data?.url ?? '/';
+
+  event.waitUntil(
+    clients.matchAll({ type: 'window', includeUncontrolled: true }).then((clientList) => {
+      // Focus an existing tab if one is already open
+      for (const client of clientList) {
+        if (client.url.includes(self.location.origin) && 'focus' in client) {
+          client.focus();
+          client.navigate(url);
+          return;
+        }
+      }
+      // Otherwise open a new window
+      return clients.openWindow(url);
+    })
+  );
+});
