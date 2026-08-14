@@ -34,7 +34,7 @@ export interface Recipe {
   method: { step: number; text: string }[];
   chefNotes: string;
   pairing: string;
-  mealSlots: ("breakfast" | "lunch" | "dinner" | "snack" | "dessert")[];
+  mealSlots: ("breakfast" | "brunch" | "lunch" | "dinner" | "snack" | "dessert" | "side")[];
   healthy: boolean;
 }
 
