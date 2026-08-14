@@ -95,8 +95,8 @@ async function fetchStores(
 
   const query = `[out:json][timeout:20];
 (
-  node["shop"~"supermarket|convenience|greengrocer|butcher|seafood|bakery|organic|deli|health_food"](${bbox});
-  way["shop"~"supermarket|convenience|greengrocer|butcher|seafood|bakery|organic|deli|health_food"](${bbox});
+  node["shop"~"supermarket|greengrocer|butcher|seafood|bakery|organic|deli|health_food"](${bbox});
+  way["shop"~"supermarket|greengrocer|butcher|seafood|bakery|organic|deli|health_food"](${bbox});
   node["amenity"="marketplace"](${bbox});
   way["amenity"="marketplace"](${bbox});
 );
@@ -149,6 +149,13 @@ out body center 60;`;
     /* dedupe by name+lat (Overpass sometimes returns the same store twice
        as both node and way centroid). */
     .filter((s, i, arr) => arr.findIndex((x) => x.name === s.name && Math.abs(x.lat - s.lat) < 0.001) === i)
+    /* Drop "Pet Supermarket" and other pet stores that OSM tags as
+       shop=supermarket because the brand has "Supermarket" in its name. */
+    .filter((s) => {
+      const n = s.name.toLowerCase();
+      const b = (s.brand ?? "").toLowerCase();
+      return !n.includes("pet") && !b.includes("pet");
+    })
     .filter((s) => s.name !== "Local market");
 }
 
