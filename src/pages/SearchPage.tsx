@@ -44,7 +44,7 @@ export function SearchPage() {
       </section>
 
       <section className="page-pad pt-3 text-xs text-ink-muted tabular">
-        {q ? t.search.results(results.length) : null}
+        {q.trim() ? t.search.results(results.length) : null}
       </section>
 
       <section className="page-pad pt-3 pb-6 grid grid-cols-1 min-[420px]:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">

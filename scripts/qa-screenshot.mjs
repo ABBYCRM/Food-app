@@ -41,7 +41,7 @@ for (const arg of routeArgs) {
     const url = new URL(route, baseURL).toString();
     try {
       await page.goto(url, { waitUntil: "networkidle", timeout: 20000 });
-      await page.waitForTimeout(250);
+      await page.waitForTimeout(1500);
       const file = path.join(outDir, `${label}__${vpName}.png`);
       await page.screenshot({ path: file, fullPage: true });
       console.log(`OK  ${url} [${vpName}] -> ${file}`);
