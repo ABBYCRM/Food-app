@@ -3,10 +3,14 @@ import { Link } from "wouter";
 import { recipes } from "../data/recipes";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLocale } from "@/lib/locale";
 
 export function Home() {
+  const { locale } = useLocale();
   const featured = recipes[0];
   const carousel = recipes.slice(1, 6);
+  const featuredTitle = featured.locales?.[locale as "es" | "pt"]?.title ?? featured.title;
+  const featuredSubtitle = featured.locales?.[locale as "es" | "pt"]?.subtitle ?? featured.subtitle;
 
   const categories = ["All", "Tacos", "Seafood", "Rice & Noodles", "Snacks", "Desserts", "Wings"];
 
@@ -23,7 +27,7 @@ export function Home() {
         <div className="absolute inset-0 z-0">
           <img
             src={featured.heroImage}
-            alt={featured.title}
+            alt={featuredTitle}
             className="w-full h-full object-cover scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
@@ -40,10 +44,10 @@ export function Home() {
               Today's Featured
             </div>
             <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-tight mb-4 text-white">
-              {featured.title}
+              {featuredTitle}
             </h1>
             <p className="text-base sm:text-xl md:text-2xl text-white/80 font-light mb-8 max-w-2xl">
-              {featured.subtitle}
+              {featuredSubtitle}
             </p>
             <Link href={`/recipe/${featured.slug}`} data-testid="link-hero-start-cooking">
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-sm tracking-wider uppercase h-12 md:h-14 px-6 md:px-8 group">
@@ -118,11 +122,11 @@ export function Home() {
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10" />
                   <img
                     src={recipe.thumbImage}
-                    alt={recipe.title}
+                    alt={recipe.locales?.[locale as "es"|"pt"]?.title ?? recipe.title}
                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                   />
                   <div className="absolute inset-x-0 bottom-0 p-5 md:p-6 bg-gradient-to-t from-black via-black/80 to-transparent z-20 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <h3 className="font-display text-xl md:text-2xl text-white mb-2 leading-tight">{recipe.title}</h3>
+                    <h3 className="font-display text-xl md:text-2xl text-white mb-2 leading-tight">{recipe.locales?.[locale as "es"|"pt"]?.title ?? recipe.title}</h3>
                     <div className="flex items-center gap-3 text-xs tracking-widest text-primary uppercase">
                       <span>{recipe.prepTime} Prep</span>
                       <span>•</span>

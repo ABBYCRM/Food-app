@@ -7,6 +7,7 @@ import {
 } from "../lib/storage";
 import { recipes } from "../data/recipes";
 import { toStoreLabel } from "../lib/store-format";
+import { useLocale } from "@/lib/locale";
 import {
   Calendar, Plus, X, Search, Wand2, Printer, Sun,
   UtensilsCrossed, Moon, Apple, ChevronDown, ChevronUp,
@@ -109,6 +110,7 @@ function servingDescription(recipe: typeof recipes[0], servings: number): string
 function buildPrintHTML(
   meals: { day: Day; slot: Slot; recipe: typeof recipes[0] }[],
   servingsMap: Record<string, number>,
+  locale?: string,
 ): string {
   const date = new Date().toLocaleDateString("en-US", {
     weekday: "long", year: "numeric", month: "long", day: "numeric",
@@ -119,6 +121,7 @@ function buildPrintHTML(
     const base = recipe.servings;
     const slotLabel = SLOT_CONFIG[slot].label;
     const servDesc = servingDescription(recipe, target);
+    const recipeTitle = recipe.locales?.[locale as "es"|"pt"]?.title ?? recipe.title;
 
     const rows = recipe.ingredients.map((ing) => {
       const scaledNum = scaleNum(ing.qty, base, target);
@@ -132,7 +135,7 @@ function buildPrintHTML(
         <div class="meal-header">
           <div>
             <span class="day-slot">${day} · ${slotLabel}</span>
-            <h2>${recipe.title}</h2>
+            <h2>${recipeTitle}</h2>
           </div>
           <div class="servings-badge">${target} serving${target !== 1 ? "s" : ""} — ${servDesc}</div>
         </div>
@@ -252,7 +255,9 @@ function SlotCell({
   onRemove: (e: React.MouseEvent) => void;
 }) {
   const cfg = SLOT_CONFIG[slot];
+  const { locale } = useLocale();
   if (recipe) {
+    const displayTitle = recipe.locales?.[locale as "es"|"pt"]?.title ?? recipe.title;
     return (
       <div className="relative rounded-lg border border-white/10 overflow-hidden group bg-card hover:border-primary/40 transition-colors h-28">
         <Link
@@ -262,7 +267,7 @@ function SlotCell({
         >
           <img
             src={recipe.thumbImage}
-            alt={recipe.title}
+            alt={displayTitle}
             className="absolute inset-0 w-full h-full object-cover opacity-35 group-hover:opacity-55 transition-opacity"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/50 to-transparent" />
@@ -270,7 +275,7 @@ function SlotCell({
             <span className={`text-[8px] uppercase tracking-widest mb-0.5 flex items-center gap-1 ${cfg.color}`}>
               {cfg.icon}{cfg.label}
             </span>
-            <h4 className="font-display text-[11px] leading-tight line-clamp-2">{recipe.title}</h4>
+            <h4 className="font-display text-[11px] leading-tight line-clamp-2">{displayTitle}</h4>
           </div>
         </Link>
         <button
@@ -302,6 +307,7 @@ function SlotCell({
 
 function ShoppingListPreview({ plan, onClose }: { plan: MealPlan; onClose: () => void }) {
   const [servingsMap, setServingsMap] = useState<Record<string, number>>({});
+  const { locale } = useLocale();
 
   const meals: { day: Day; slot: Slot; recipe: typeof recipes[0] }[] = [];
   for (const day of DAYS) {
@@ -317,7 +323,7 @@ function ShoppingListPreview({ plan, onClose }: { plan: MealPlan; onClose: () =>
   const getServings = (r: typeof recipes[0]) => servingsMap[r.slug] ?? r.servings;
 
   const handlePrint = () => {
-    const html = buildPrintHTML(meals, servingsMap);
+    const html = buildPrintHTML(meals, servingsMap, locale);
     const win = window.open("", "_blank", "width=900,height=700");
     if (!win) {
       alert("Popup blocked — please allow popups for this site and try again.");
@@ -374,7 +380,7 @@ function ShoppingListPreview({ plan, onClose }: { plan: MealPlan; onClose: () =>
                   <span className={`text-[10px] uppercase tracking-widest ${cfg.color} flex items-center gap-1`}>
                     {cfg.icon}{day} · {cfg.label}
                   </span>
-                  <h3 className="font-display text-lg leading-tight mt-0.5">{recipe.title}</h3>
+                  <h3 className="font-display text-lg leading-tight mt-0.5">{recipe.locales?.[locale as "es"|"pt"]?.title ?? recipe.title}</h3>
                   {/* Serving size context */}
                   <p className="text-[11px] text-muted-foreground mt-0.5 italic">
                     {target} serving{target !== 1 ? "s" : ""} — {servDesc}
@@ -433,6 +439,7 @@ export function Planner() {
   const [printOpen, setPrintOpen] = useState(false);
   const [expandedDays, setExpandedDays] = useState<Set<string>>(new Set([DAYS[0]]));
   const { toast } = useToast();
+  const { locale } = useLocale();
 
   useEffect(() => {
     setPlan(getMealPlan());

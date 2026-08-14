@@ -5,9 +5,11 @@ import { getSavedRecipes, unsaveRecipe } from "../lib/storage";
 import { recipes } from "../data/recipes";
 import { HeartCrack, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLocale } from "@/lib/locale";
 
 export function Notebook() {
   const [savedSlugs, setSavedSlugs] = useState<string[]>([]);
+  const { locale } = useLocale();
 
   useEffect(() => {
     setSavedSlugs(getSavedRecipes());
@@ -79,7 +81,7 @@ export function Notebook() {
                       <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors z-10" />
                       <img
                         src={recipe.thumbImage}
-                        alt={recipe.title}
+                        alt={recipe.locales?.[locale as "es"|"pt"]?.title ?? recipe.title}
                         className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                       />
 
@@ -98,7 +100,7 @@ export function Notebook() {
                           {recipe.category}
                         </div>
                         <h3 className="font-display text-xl md:text-2xl text-foreground group-hover:text-primary transition-colors leading-tight">
-                          {recipe.title}
+                          {recipe.locales?.[locale as "es"|"pt"]?.title ?? recipe.title}
                         </h3>
                       </div>
                     </div>
