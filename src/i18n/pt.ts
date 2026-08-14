@@ -186,13 +186,15 @@ export const pt: Dict = {
   },
   vendor: {
     title: "Fornecedores locais perto de você",
-    subtitle: "Mercados e mercearias dentro do raio de entrega. Insira um CEP para começar.",
+    subtitle: "Busca em tempo real de supermercados, mercados e mercearias perto do seu CEP. Dados do OpenStreetMap.",
     findButton: "Buscar fornecedores",
-    none: "Ainda não há fornecedores salvos para este CEP. Use os serviços abaixo enquanto ampliamos a cobertura.",
-    nearbyRegion: "Região próxima (sem correspondência exata para este CEP)",
+    searching: "Buscando lojas próximas…",
+    none: "Nenhuma loja encontrada no raio. Tente um CEP próximo ou use os serviços abaixo.",
+    resultsNear: (n: number, city: string, state: string) => `${n} lojas perto de ${city}, ${state}`,
     distance: (mi: number) => `${mi.toFixed(1)} mi`,
     deliveryServices: "Serviços de entrega disponíveis em qualquer lugar",
     callToOrder: "Ligar para pedir",
+    visitWebsite: "Visitar site",
   },
   planner: {
     title: "Planeje sua semana.",

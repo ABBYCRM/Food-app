@@ -184,13 +184,15 @@ export const en = {
   },
   vendor: {
     title: "Local vendors near you",
-    subtitle: "Markets, mercados, and grocers within delivery range. Enter a ZIP to start.",
+    subtitle: "Live search of supermarkets, mercados, and grocers near your ZIP. Powered by OpenStreetMap.",
     findButton: "Find vendors",
-    none: "No vendors saved yet for this ZIP. Use the delivery services below while we expand coverage.",
-    nearbyRegion: "Nearby region (no exact match for this ZIP yet)",
+    searching: "Searching nearby stores…",
+    none: "No stores found within range. Try a nearby ZIP or use the delivery services below.",
+    resultsNear: (n: number, city: string, state: string) => `${n} stores near ${city}, ${state}`,
     distance: (mi: number) => `${mi.toFixed(1)} mi`,
     deliveryServices: "Delivery services available everywhere",
     callToOrder: "Call to order",
+    visitWebsite: "Visit website",
   },
   planner: {
     title: "Plan your week.",

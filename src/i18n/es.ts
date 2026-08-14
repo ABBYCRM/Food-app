@@ -186,13 +186,15 @@ export const es: Dict = {
   },
   vendor: {
     title: "Vendedores locales cerca de ti",
-    subtitle: "Mercados y tiendas dentro del rango de entrega. Ingresa un CP para empezar.",
+    subtitle: "Búsqueda en vivo de supermercados, mercados y tiendas cerca de tu CP. Impulsado por OpenStreetMap.",
     findButton: "Buscar vendedores",
-    none: "Aún no hay vendedores guardados para este CP. Usa los servicios abajo mientras ampliamos cobertura.",
-    nearbyRegion: "Región cercana (sin coincidencia exacta para este CP)",
+    searching: "Buscando tiendas cercanas…",
+    none: "No se encontraron tiendas dentro del rango. Prueba con un CP cercano o usa los servicios abajo.",
+    resultsNear: (n: number, city: string, state: string) => `${n} tiendas cerca de ${city}, ${state}`,
     distance: (mi: number) => `${mi.toFixed(1)} mi`,
     deliveryServices: "Servicios de entrega disponibles en todas partes",
     callToOrder: "Llamar para ordenar",
+    visitWebsite: "Visitar sitio web",
   },
   planner: {
     title: "Planea tu semana.",
