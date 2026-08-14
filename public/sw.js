@@ -4,8 +4,10 @@
    - Images: stale-while-revalidate
    - Everything else: network-first with cache fallback
    Bump the version to invalidate old caches on deploy.
+   v1.1.0 — invalidate caches from the Pollinations-era bundle so the new
+   /img/ paths land cleanly on every device.
 */
-const VERSION = "v1.0.0";
+const VERSION = "v1.1.0";
 const SHELL_CACHE = `mestizo-shell-${VERSION}`;
 const IMAGE_CACHE = `mestizo-images-${VERSION}`;
 const RUNTIME_CACHE = `mestizo-runtime-${VERSION}`;
