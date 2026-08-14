@@ -36,8 +36,8 @@ export function RecipeCard({ recipe, big = false }: { recipe: Recipe; big?: bool
         />
         {/* Two-stop gradient: top is faint, bottom 60% darkens for title legibility regardless of photo brightness. */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/0" />
-        <div className="absolute top-3 left-3 right-12 flex flex-wrap gap-1.5 pointer-events-none">
-          <span className="pill pill-tag bg-chili/95 text-bone-50 max-w-full">
+        <div className="absolute top-3 left-3 right-14 flex flex-wrap items-start gap-1.5 pointer-events-none">
+          <span className="pill pill-tag bg-chili/95 text-bone-50 max-w-full truncate">
             {recipe.origin[locale]}
           </span>
         </div>
