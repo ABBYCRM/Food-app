@@ -33,11 +33,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "4", unit: "cups", item: "neutral oil", note: "for frying" }
     ],
     method: [
-      { step: 1, text: "In a bowl, combine the chicken with the soy sauce, vinegar, smashed garlic, and black peppercorns. Marinate in the fridge for at least 30 minutes to tenderize the meat." },
-      { step: 2, text: "Drain the chicken well, discarding the garlic and peppercorns. Pat the chicken slightly dry so the starch adheres properly." },
-      { step: 3, text: "Heat the oil in a heavy pot to 350°F (175°C), ensuring you have enough depth to submerge the chicken." },
-      { step: 4, text: "Dredge each piece of chicken in the potato starch, shaking off the excess, and carefully drop into the hot oil." },
-      { step: 5, text: "Fry in batches for about 4-5 minutes until golden brown and crispy. Drain on a wire rack to prevent sogginess, and serve with lime wedges." }
+      { step: 1, text: "Combine the 1.5 lbs boneless skinless chicken thighs, cut into bite-sized pieces, with the 1/4 cup soy sauce and 1 tsp black peppercorns." },
+      { step: 2, text: "Cover the bowl and refrigerate the 1.5 lbs chicken in the 1/4 cup soy sauce with the 1 tsp black peppercorns for at least 30 minutes." },
+      { step: 3, text: "Pour the 4 cups neutral oil into a heavy pot, leaving headroom, and heat it to 350°F (175°C) before frying." },
+      { step: 4, text: "Drain the 1.5 lbs chicken from the 1/4 cup soy sauce, remove the 1 tsp black peppercorns, and pat the pieces dry." },
+      { step: 5, text: "Fry the 1.5 lbs chicken in batches in the 4 cups neutral oil for 4–5 minutes per batch, until golden brown and crisp." },
+      { step: 6, text: "Transfer the fried 1.5 lbs chicken to a wire rack and let it drain for 2 minutes, keeping the coating crisp before serving." }
     ],
     chefNotes: "Potato starch is the secret to karaage. It creates a lighter, crispier, and longer-lasting crust than wheat flour.",
     pairing: "Sparkling sake or a highball",
@@ -70,11 +71,13 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "toasted sesame seeds" }
     ],
     method: [
-      { step: 1, text: "Preheat oven to 400°F (200°C). Pat the chicken thighs completely dry to ensure crispy skin." },
-      { step: 2, text: "In a small saucepan, whisk the mole paste, chicken stock, soy sauce, and sesame oil until smooth and slightly reduced." },
-      { step: 3, text: "Season chicken with salt and roast on a foil-lined baking sheet for 25 minutes until mostly cooked." },
-      { step: 4, text: "Brush the chicken generously with the mole glaze. Return to the oven and broil for 3-5 minutes until bubbling and charred at the edges." },
-      { step: 5, text: "Garnish with toasted sesame seeds and serve immediately alongside steamed white rice." }
+      { step: 1, text: "Preheat the oven to 400°F (200°C), then pat the 4 bone-in, skin-on chicken thighs completely dry." },
+      { step: 2, text: "Whisk the 1/2 cup prepared mole negro paste, 1/4 cup chicken stock, 1 tbsp soy sauce, and 1 tbsp sesame oil in a saucepan." },
+      { step: 3, text: "Cook the mole mixture over medium-low heat for 3 minutes, stirring constantly, until smooth and slightly reduced." },
+      { step: 4, text: "Arrange the 4 chicken thighs skin-side up on a foil-lined baking sheet and roast for 25 minutes, until mostly cooked." },
+      { step: 5, text: "Brush the 4 chicken thighs with the glaze made from 1/2 cup mole negro paste, 1/4 cup chicken stock, 1 tbsp soy sauce, and 1 tbsp sesame oil." },
+      { step: 6, text: "Broil the glazed 4 chicken thighs for 3–5 minutes, until the glaze bubbles and the edges are visibly charred." },
+      { step: 7, text: "Sprinkle the 1 tbsp toasted sesame seeds over the 4 glazed chicken thighs and serve immediately while hot." }
     ],
     chefNotes: "Keep a close eye during the broiling stage—the chocolate and sugar in the mole will go from caramelized to burnt in seconds.",
     pairing: "A robust Zinfandel or Mezcal on the rocks",
@@ -107,11 +110,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "neutral oil" }
     ],
     method: [
-      { step: 1, text: "In a small bowl, whisk together the soy sauce, mirin, sugar, and pureed chipotle until the sugar dissolves." },
-      { step: 2, text: "Heat the oil in a large skillet over medium-high heat. Add the chicken chunks in a single layer." },
-      { step: 3, text: "Sear the chicken undisturbed for 4 minutes to develop a deep brown crust, then flip." },
-      { step: 4, text: "Pour the chipotle teriyaki sauce into the pan. It will bubble vigorously. Reduce heat and simmer until the sauce thickens into a glaze." },
-      { step: 5, text: "Toss the chicken to coat completely. Serve over hot rice with sliced scallions." }
+      { step: 1, text: "Pour the 1/4 cup soy sauce into a small bowl and set it aside to add after the chicken has browned." },
+      { step: 2, text: "Heat the 1 tbsp neutral oil in a large skillet over medium-high heat until it shimmers, then add the 1.5 lbs chicken chunks." },
+      { step: 3, text: "Sear the 1.5 lbs chicken in the 1 tbsp neutral oil without moving it for 4 minutes, then flip and cook 3–4 minutes." },
+      { step: 4, text: "Pour the 1/4 cup soy sauce into the skillet with the 1.5 lbs chicken and bring it to a vigorous bubble." },
+      { step: 5, text: "Reduce the skillet to medium heat and simmer the 1.5 lbs chicken with the 1/4 cup soy sauce for 3–5 minutes, until glazed and opaque." },
+      { step: 6, text: "Toss the 1.5 lbs cooked chicken in the thickened 1/4 cup soy sauce until evenly coated, then serve immediately." }
     ],
     chefNotes: "Do not move the chicken when it first hits the pan. The Maillard reaction needs time to build that crucial crust.",
     pairing: "Cold Japanese lager",
@@ -146,11 +150,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "soy sauce" }
     ],
     method: [
-      { step: 1, text: "Poach the chicken breast in the chicken broth until cooked through. Remove the chicken, shred it, and reserve the broth." },
-      { step: 2, text: "In a separate pot, sauté the sliced onions until deeply caramelized and sweet." },
-      { step: 3, text: "Stir in the crushed tomatoes, chipotle, and soy sauce, cooking until the mixture thickens slightly." },
-      { step: 4, text: "Pour the reserved chicken broth into the tomato mixture, bringing it to a simmer to meld the flavors." },
-      { step: 5, text: "Cook the ramen noodles according to package instructions. Divide among bowls, ladle the hot tinga broth over top, and garnish with shredded chicken and soft-boiled egg." }
+      { step: 1, text: "Heat a 10-inch nonstick skillet over medium heat, add the 1 lb chicken breast (sliced), and cook 6–8 minutes until opaque throughout." },
+      { step: 2, text: "Turn the 1 lb chicken breast (sliced) during cooking, then transfer it to a plate when the center reaches 165°F (74°C)." },
+      { step: 3, text: "Return the cooked 1 lb chicken breast (sliced) to the skillet, add the 1 tbsp soy sauce, and cook for 1 minute until glossy." },
+      { step: 4, text: "Bring a large pot of water to a rolling boil, add the 4 portions fresh ramen noodles (halved), and cook 2–3 minutes until tender." },
+      { step: 5, text: "Drain the 4 portions fresh ramen noodles (halved), divide them between bowls, and top with the cooked 1 lb chicken breast (sliced)." }
     ],
     chefNotes: "Use fresh ramen noodles if possible, which have an alkaline bounce that holds up perfectly to the acidic tomato broth.",
     pairing: "Mexican Coke or a light pilsner",
@@ -184,11 +188,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1/4", unit: "head", item: "green cabbage", note: "finely shredded" }
     ],
     method: [
-      { step: 1, text: "Set up a breading station with three shallow dishes: flour, beaten eggs, and panko breadcrumbs." },
-      { step: 2, text: "Season the pounded chicken breasts with salt and pepper. Dredge in flour, dip in egg, and coat thoroughly with panko, pressing to adhere." },
-      { step: 3, text: "Heat oil in a large skillet to 350°F (175°C). Carefully lower the cutlets into the oil." },
-      { step: 4, text: "Fry for 3-4 minutes per side until golden brown and crispy. Transfer to a wire rack and season with salt immediately." },
-      { step: 5, text: "Slice the katsu into strips. Serve alongside shredded cabbage and drizzle generously with salsa verde." }
+      { step: 1, text: "Set three shallow dishes beside a 12-inch skillet, placing the 1 cup all-purpose flour in one and the 2 cups panko in another." },
+      { step: 2, text: "Coat each of the 4 chicken breasts (pounded to 1/2-inch thickness) with the 1 cup flour, then press on the 2 cups panko." },
+      { step: 3, text: "Heat the 2 cups neutral oil in the 12-inch skillet to 350°F (175°C), using a thermometer before adding the chicken." },
+      { step: 4, text: "Fry the 4 chicken breasts in batches for 3–4 minutes per side until golden brown, crisp, and cooked through at 165°F (74°C)." },
+      { step: 5, text: "Transfer the fried 4 chicken breasts to a wire rack and rest for 2 minutes until excess oil stops dripping from the crust." },
+      { step: 6, text: "Slice the 4 chicken breasts into strips and serve them with the 1/4 head green cabbage (finely shredded) on a platter." }
     ],
     chefNotes: "Pounding the chicken ensures it cooks evenly and quickly before the panko crust burns. Use a meat mallet or a heavy rolling pin.",
     pairing: "A crisp Sauvignon Blanc",
@@ -222,11 +227,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "3", unit: "cups", item: "vegetable oil", note: "for frying" }
     ],
     method: [
-      { step: 1, text: "In a mixing bowl, toss the chicken chunks with soy sauce, lime juice, and chile powder. Let sit for 15 minutes." },
-      { step: 2, text: "Drain any excess liquid from the chicken so the starch doesn't clump up too thickly." },
-      { step: 3, text: "Heat the vegetable oil to 350°F (175°C). Coat each chicken piece evenly in potato starch." },
-      { step: 4, text: "Fry the chicken in batches for 4-5 minutes until deeply golden and crispy. Remove to a paper towel-lined plate." },
-      { step: 5, text: "Immediately sprinkle the hot fried chicken with Tajín so the seasoning sticks to the residual oil." }
+      { step: 1, text: "Place the 1.5 lbs boneless chicken thighs (cut into chunks) in a bowl, add the 2 tbsp soy sauce, and toss thoroughly." },
+      { step: 2, text: "Cover the bowl containing the 1.5 lbs boneless chicken thighs and 2 tbsp soy sauce, then let it stand for 15 minutes." },
+      { step: 3, text: "Drain excess liquid from the 1.5 lbs boneless chicken thighs, leaving the pieces lightly coated with the 2 tbsp soy sauce." },
+      { step: 4, text: "Heat the 2 tbsp soy sauce in a 10-inch skillet to 350°F (175°C), watching closely so it is hot but not smoking." },
+      { step: 5, text: "Add the 1.5 lbs boneless chicken thighs in batches and cook 4–5 minutes per side until deeply browned and the centers reach 165°F (74°C)." },
+      { step: 6, text: "Transfer the cooked 1.5 lbs boneless chicken thighs to a plate and rest for 2 minutes until the surfaces look crisp and dry." }
     ],
     chefNotes: "Sprinkling Tajín on the chicken immediately out of the fryer ensures the spices bloom and stick perfectly.",
     pairing: "Margarita on the rocks",
@@ -260,12 +266,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "black peppercorns" }
     ],
     method: [
-      { step: 1, text: "Preheat the oven to 400°F (200°C). Pat the entire chicken completely dry inside and out." },
-      { step: 2, text: "In a bowl, whisk together the miso, soy sauce, vinegar, and honey to form a thick glaze." },
-      { step: 3, text: "Stuff the cavity of the chicken with the halved garlic head and black peppercorns, and tie the legs together." },
-      { step: 4, text: "Rub half the glaze under the skin over the breasts, and brush the remaining glaze all over the outside." },
-      { step: 5, text: "Roast for about 1 hour and 15 minutes, until the juices run clear and the skin is deeply bronzed and lacquered." },
-      { step: 6, text: "Let the chicken rest for 15 minutes before carving to allow juices to redistribute." }
+      { step: 1, text: "Preheat the oven to 400°F (200°C), then pat the 1 whole chicken (about 4 lbs) completely dry inside and out." },
+      { step: 2, text: "Place the 3 tbsp white miso paste (halved horizontally) in a small bowl and stir until smooth and spreadable." },
+      { step: 3, text: "Put the 1 tbsp black peppercorns inside the cavity of the 1 whole chicken (about 4 lbs), then tie the legs together." },
+      { step: 4, text: "Rub half of the 3 tbsp white miso paste under the chicken skin over the breasts, then spread the rest over the skin." },
+      { step: 5, text: "Roast the 1 whole chicken (about 4 lbs) in a roasting pan for about 1 hour 15 minutes, until juices run clear and skin is deeply bronzed." },
+      { step: 6, text: "Transfer the roasted 1 whole chicken (about 4 lbs) to a board and rest it for 15 minutes before carving, while juices redistribute." }
     ],
     chefNotes: "Getting the glaze under the skin ensures the meat itself absorbs the umami, not just the surface.",
     pairing: "Chardonnay with a touch of oak",
@@ -299,11 +305,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1/4", unit: "cup", item: "cilantro", note: "chopped" }
     ],
     method: [
-      { step: 1, text: "Preheat the oven to 375°F (190°C). In a small saucepan, gently heat the salsa roja and whisk in the red miso until completely dissolved." },
-      { step: 2, text: "Warm the corn tortillas in a dry skillet until pliable so they don't crack when rolled." },
-      { step: 3, text: "Dip each tortilla lightly in the miso salsa, fill with shredded chicken and a pinch of cheese, and roll tightly." },
-      { step: 4, text: "Place the rolls seam-side down in a baking dish. Pour the remaining miso salsa over the top and blanket with the rest of the cheese." },
-      { step: 5, text: "Bake for 20 minutes until the cheese is bubbling and golden brown. Garnish with crema and cilantro." }
+      { step: 1, text: "Preheat the oven to 375°F (190°C), and place the 2 cups cooked chicken (shredded) in a medium bowl." },
+      { step: 2, text: "Stir the 1 tbsp red miso paste (shredded) into the 2 cups cooked chicken (shredded) until evenly distributed." },
+      { step: 3, text: "Warm the 8 corn tortillas in a dry skillet over medium heat for about 30 seconds per side, until pliable but not crisp." },
+      { step: 4, text: "Divide the 2 cups cooked chicken (shredded) among the 8 corn tortillas, roll each tightly, and place them seam-side down in a 9×13-inch baking dish." },
+      { step: 5, text: "Bake the 8 filled corn tortillas for 20 minutes, until hot and lightly crisp at the edges, then garnish with the 1/4 cup Mexican crema (chopped)." }
     ],
     chefNotes: "Warming the tortillas before rolling is crucial. Cold tortillas will split and ruin the texture of the bake.",
     pairing: "Amber ale or a light stout",
@@ -336,11 +342,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "8", unit: "", item: "bamboo skewers", note: "soaked in water" }
     ],
     method: [
-      { step: 1, text: "In a small saucepan, combine soy sauce, mirin, chipotle puree, and sugar. Simmer for 5 minutes until it thickens into a glaze." },
-      { step: 2, text: "Thread the chicken pieces tightly onto the soaked bamboo skewers." },
-      { step: 3, text: "Preheat a grill or a grill pan to medium-high heat. Oil the grates to prevent sticking." },
-      { step: 4, text: "Grill the skewers for 3 minutes per side until they begin to char and cook through." },
-      { step: 5, text: "During the last two minutes of cooking, brush the skewers heavily with the chipotle glaze, letting it caramelize on the fire." }
+      { step: 1, text: "Combine the 1/4 cup soy sauce (pureed) and 1 tbsp sugar (soaked in water) in a small saucepan over medium heat." },
+      { step: 2, text: "Simmer the 1/4 cup soy sauce (pureed) and 1 tbsp sugar (soaked in water) for 5 minutes, until glossy and thickened into a glaze." },
+      { step: 3, text: "Thread the 1.5 lbs boneless skinless chicken thighs (cut into 1-inch pieces) tightly onto bamboo skewers." },
+      { step: 4, text: "Preheat a grill or grill pan to medium-high heat, then arrange the skewers and cook for 3 minutes per side, until lightly charred and cooked through." },
+      { step: 5, text: "During the last 2 minutes, brush the skewers with the 1/4 cup soy sauce (pureed) and 1 tbsp sugar (soaked in water) glaze until caramelized." }
     ],
     chefNotes: "Soaking bamboo skewers for at least 30 minutes prevents them from catching fire over the open grill.",
     pairing: "Ice-cold Mexican lager",
@@ -375,11 +381,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "Kewpie mayo" }
     ],
     method: [
-      { step: 1, text: "Marinate the chicken pieces in soy sauce for 15 minutes, then drain well." },
-      { step: 2, text: "In a bowl, toss the shredded cabbage with rice vinegar and Kewpie mayo to create a quick slaw." },
-      { step: 3, text: "Heat oil to 350°F (175°C). Dredge the chicken in potato starch and fry until golden and crispy, about 5 minutes." },
-      { step: 4, text: "Warm the flour tortillas over an open flame or in a dry skillet until slightly blistered." },
-      { step: 5, text: "Assemble the tacos by placing crispy chicken in each tortilla, topped generously with the dressed cabbage slaw." }
+      { step: 1, text: "Marinate the 1 lb chicken thighs in the 1/4 cup soy sauce for 15 minutes, then drain thoroughly." },
+      { step: 2, text: "Toss the 2 cups shredded cabbage with the 2 tbsp rice vinegar and 2 tbsp Kewpie mayo until evenly coated." },
+      { step: 3, text: "Heat a 10-inch nonstick skillet over medium-high heat, then add the drained 1 lb chicken pieces in one layer." },
+      { step: 4, text: "Cook the 1 lb chicken for about 5 minutes, turning often, until browned outside and no longer pink inside." },
+      { step: 5, text: "Warm the 8 small flour tortillas in a dry skillet over medium heat for 30 seconds per side, until lightly blistered." },
+      { step: 6, text: "Divide the cooked 1 lb chicken among the 8 small flour tortillas, then top each with the dressed 2 cups cabbage." }
     ],
     chefNotes: "Kewpie mayo is richer than American mayo because it uses only egg yolks. It's essential for the slaw's creamy texture.",
     pairing: "Sparkling water with yuzu or lime",
@@ -414,11 +421,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "12", unit: "", item: "corn tortillas" }
     ],
     method: [
-      { step: 1, text: "Toast the dried chiles in a dry pan until fragrant, then rehydrate them in warm water for 20 minutes." },
-      { step: 2, text: "Blend the chiles, onion, garlic, and a splash of broth until very smooth, then strain the mixture." },
-      { step: 3, text: "In a heavy pot, sear the chicken thighs skin-side down until golden brown. Pour the strained chile sauce and remaining broth over the chicken." },
-      { step: 4, text: "Simmer covered on low heat for 1.5 hours until the chicken falls off the bone." },
-      { step: 5, text: "Remove the chicken and shred it. Whisk the sesame paste into the hot broth to create a rich consommé. Serve with tortillas for dipping." }
+      { step: 1, text: "Preheat the oven to 375°F (190°C) and place the 2 lbs bone-in chicken thighs in a 9×13-inch baking dish." },
+      { step: 2, text: "Scatter the 4 peeled garlic cloves around the 2 lbs chicken thighs, keeping the chicken in a single layer." },
+      { step: 3, text: "Cover the 9×13-inch dish tightly with foil and roast for 60 minutes, until the chicken reaches 175°F and is tender." },
+      { step: 4, text: "Remove the foil, shred the 2 lbs chicken from the bones, and return the meat to the hot garlic-scented juices." },
+      { step: 5, text: "Warm the 12 corn tortillas in a dry skillet over medium heat for 30 seconds per side, until flexible and lightly toasted." },
+      { step: 6, text: "Serve the shredded 2 lbs chicken with the 12 warm corn tortillas, spooning the hot pan juices over each portion." }
     ],
     chefNotes: "Toasted sesame paste is much darker and nuttier than tahini. If using tahini, add a teaspoon of toasted sesame oil to compensate.",
     pairing: "Mexican Coke or a dark lager",
@@ -453,11 +461,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "8", unit: "", item: "bamboo skewers", note: "soaked" }
     ],
     method: [
-      { step: 1, text: "In a bowl, mix the ground chicken, panko, egg, and minced garlic until sticky and cohesive." },
-      { step: 2, text: "Form the mixture into oblong meatballs and thread them onto the soaked bamboo skewers." },
-      { step: 3, text: "In a small saucepan, boil the soy sauce, vinegar, and brown sugar until it reduces to a thick glaze." },
-      { step: 4, text: "Grill or broil the skewers for 4-5 minutes per side until cooked through." },
-      { step: 5, text: "Brush the cooked skewers heavily with the adobo glaze and grill for one more minute until caramelized." }
+      { step: 1, text: "Mix the 1 lb ground chicken, 1/4 cup minced panko breadcrumbs, and 1/4 cup soy sauce until sticky and cohesive." },
+      { step: 2, text: "Let the 1 lb chicken mixture stand for 10 minutes, allowing the 1/4 cup panko breadcrumbs to absorb the soy sauce." },
+      { step: 3, text: "Shape the 1 lb mixture into evenly sized oblong patties, each about 3 inches long and 1 inch thick." },
+      { step: 4, text: "Heat a broiler to high and arrange the 1 lb chicken patties on a foil-lined baking sheet without touching." },
+      { step: 5, text: "Broil the 1 lb chicken patties for 4–5 minutes per side, turning once, until browned and cooked through." },
+      { step: 6, text: "Check that the 1 lb chicken patties reach 165°F at the center, with clear juices and no pink meat, before serving." }
     ],
     chefNotes: "Using dark meat ground chicken ensures the meatballs stay juicy under the high heat of the broiler.",
     pairing: "Sake or a cold IPA",
@@ -490,11 +499,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "2", unit: "", item: "carrots", note: "cut into chunks" }
     ],
     method: [
-      { step: 1, text: "Preheat oven to 400°F (200°C). In a large bowl, whisk together the miso, chipotle puree, and olive oil." },
-      { step: 2, text: "Add the chicken thighs, potatoes, and carrots to the bowl. Toss everything until evenly coated in the paste." },
-      { step: 3, text: "Arrange the vegetables in an even layer on a baking sheet, and place the chicken thighs on top, skin-side up." },
-      { step: 4, text: "Roast for 35-40 minutes until the chicken skin is crispy and the potatoes are tender." },
-      { step: 5, text: "Let rest for 5 minutes before serving to allow the chicken juices to settle." }
+      { step: 1, text: "Preheat the oven to 400°F (200°C), and prepare a large rimmed baking sheet for the 6 bone-in, skin-on chicken thighs." },
+      { step: 2, text: "Toss the 2 carrots, cut into chunks, with half of the 2 tbsp olive oil until every piece is lightly coated." },
+      { step: 3, text: "Coat the 6 bone-in, skin-on chicken thighs (pureed) with the remaining half of the 2 tbsp olive oil." },
+      { step: 4, text: "Arrange the 2 carrots on the baking sheet, place the 6 chicken thighs on top, and roast at 400°F for 35–40 minutes." },
+      { step: 5, text: "Check the 6 chicken thighs after 35 minutes; serve when the skin is crisp, the juices run clear, and the centers reach 165°F." },
+      { step: 6, text: "Remove the 6 chicken thighs and 2 carrots from the oven, then let them rest on the baking sheet for 5 minutes before serving." }
     ],
     chefNotes: "If the skin is getting too dark before the potatoes are done, tent loosely with foil.",
     pairing: "Amber ale",
@@ -527,11 +537,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "2", unit: "cups", item: "cooked short-grain rice" }
     ],
     method: [
-      { step: 1, text: "In a small pan, simmer the soy sauce, mirin, and Mexican oregano until slightly thickened to make a quick tare sauce." },
-      { step: 2, text: "Heat a cast-iron skillet or grill pan until smoking hot. Add the chicken and scallions in a single layer." },
-      { step: 3, text: "Cook undisturbed for 3 minutes to develop a strong char, then toss and cook until done." },
-      { step: 4, text: "Pour half the tare sauce into the pan, tossing the chicken and scallions until glazed and sticky." },
-      { step: 5, text: "Divide the hot rice into bowls. Top with the glazed chicken and drizzle with the remaining sauce." }
+      { step: 1, text: "Pour the 1/4 cup soy sauce into a small saucepan and simmer over medium heat for 3–4 minutes until slightly thickened." },
+      { step: 2, text: "Heat a 12-inch cast-iron skillet or grill pan over medium-high heat until very hot, then add the 1 lb sliced chicken thighs." },
+      { step: 3, text: "Add the 1 bunch scallions, cut into 2-inch pieces, and cook the 1 lb chicken undisturbed for 3 minutes until browned." },
+      { step: 4, text: "Toss the 1 lb chicken thighs and 1 bunch scallions, then cook for 4–6 minutes until the chicken is opaque and fully cooked." },
+      { step: 5, text: "Pour the reduced 1/4 cup soy sauce into the skillet and toss for 1–2 minutes until the 1 lb chicken is glossy and coated." },
+      { step: 6, text: "Divide the 2 cups cooked short-grain rice among bowls, then top each bowl with the glazed 1 lb chicken and 1 bunch scallions." }
     ],
     chefNotes: "Mexican oregano has citrusy, floral notes that differ greatly from Italian oregano, pairing beautifully with the sweet mirin.",
     pairing: "Green tea or a light lager",
@@ -565,11 +576,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1/4", unit: "cup", item: "cilantro", note: "chopped" }
     ],
     method: [
-      { step: 1, text: "In a large pot, whisk the mole verde paste into the cold chicken broth until completely dissolved." },
-      { step: 2, text: "Bring the mixture to a gentle simmer. Add the soy sauce to bump up the umami profile." },
-      { step: 3, text: "Allow the broth to simmer on low heat for 15 minutes, skimming any foam from the top." },
-      { step: 4, text: "Cook the ramen noodles in a separate pot of boiling water according to package directions, then drain." },
-      { step: 5, text: "Divide the noodles into bowls, pour over the hot green mole broth, and top with chicken, egg, and fresh cilantro." }
+      { step: 1, text: "Place the 1 cup prepared mole verde paste in a 2-quart saucepan and set it over low heat." },
+      { step: 2, text: "Warm the 1 cup prepared mole verde paste for 3 minutes, stirring constantly so it heats evenly without scorching." },
+      { step: 3, text: "Increase the heat to medium-low and cook the 1 cup prepared mole verde paste for 5 minutes until fragrant and glossy." },
+      { step: 4, text: "Stir the 1 cup prepared mole verde paste every minute and scrape the saucepan bottom whenever the paste begins to stick." },
+      { step: 5, text: "Remove the 1 cup prepared mole verde paste from the heat after 8 minutes, when it is hot throughout and visibly loosened." }
     ],
     chefNotes: "Mole verde relies on fresh herbs, so don't boil the broth vigorously or it will lose its vibrant green color.",
     pairing: "A crisp Pilsner or chilled sake",
@@ -602,11 +613,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "olive oil" }
     ],
     method: [
-      { step: 1, text: "In a small bowl, mix the white miso, kosher salt, brown sugar, and black pepper into a paste." },
-      { step: 2, text: "Rub the paste completely over the chicken, including under the skin. Refrigerate uncovered for at least 12 hours." },
-      { step: 3, text: "Preheat oven to 425°F (220°C). Rub the chicken with olive oil." },
-      { step: 4, text: "Roast the chicken in a cast-iron skillet for about 1 hour and 15 minutes, or until the juices run clear." },
-      { step: 5, text: "Let the chicken rest for 15-20 minutes before carving to keep the meat juicy." }
+      { step: 1, text: "Mix the 1/4 cup white miso paste, 2 tbsp kosher salt, 1 tbsp brown sugar, and 1 tbsp black pepper into a smooth paste." },
+      { step: 2, text: "Rub the paste over the 1 whole chicken (about 4 lbs), working it under the skin and across the entire exterior." },
+      { step: 3, text: "Place the 1 whole chicken (about 4 lbs) uncovered in the refrigerator for at least 12 hours so the seasoning can penetrate." },
+      { step: 4, text: "Preheat the oven to 425°F (220°C), then rub the 1 whole chicken (about 4 lbs) with the 2 tbsp olive oil." },
+      { step: 5, text: "Set the 1 whole chicken (about 4 lbs) in a cast-iron skillet and roast for about 1 hour 15 minutes, until golden and juices run clear." },
+      { step: 6, text: "Rest the roasted 1 whole chicken (about 4 lbs) for 15–20 minutes before carving, allowing the juices to settle and the meat to stay moist." }
     ],
     chefNotes: "Leaving the chicken uncovered in the fridge allows the skin to dry out, which is essential for a crispy finish.",
     pairing: "A buttery Chardonnay",
@@ -640,11 +652,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "red pepper flakes" }
     ],
     method: [
-      { step: 1, text: "Mix the parsley, oregano, garlic, ponzu, olive oil, and red pepper flakes in a bowl. Let sit for 10 minutes." },
-      { step: 2, text: "Generously season the flank steak with salt and pepper on both sides." },
-      { step: 3, text: "Heat a heavy grill pan over high heat. Sear the steak for 4-5 minutes per side for medium-rare." },
-      { step: 4, text: "Remove the steak to a cutting board and let it rest for at least 10 minutes." },
-      { step: 5, text: "Slice very thinly against the grain and spoon the chimichurri ponzu generously over the top." }
+      { step: 1, text: "Stir the 1/4 cup fresh oregano, 3 cloves garlic, 1/4 cup ponzu sauce, 1/4 cup olive oil, and 1 tsp red pepper flakes in a bowl." },
+      { step: 2, text: "Let the oregano mixture stand for 10 minutes, then set aside while you prepare the 1.5 lbs flank steak (finely chopped)." },
+      { step: 3, text: "Heat a heavy grill pan over high heat until very hot, then add the 1.5 lbs flank steak (finely chopped) in an even layer." },
+      { step: 4, text: "Sear the 1.5 lbs flank steak (finely chopped) for 4–5 minutes per side, until deeply browned outside and medium-rare inside." },
+      { step: 5, text: "Transfer the 1.5 lbs flank steak (finely chopped) to a cutting board and rest for at least 10 minutes before serving." },
+      { step: 6, text: "Slice the rested 1.5 lbs flank steak (finely chopped) thinly against the grain and spoon the oregano mixture over the top." }
     ],
     chefNotes: "Always slice flank steak against the grain, or it will be unpleasantly chewy.",
     pairing: "Malbec or a robust Syrah",
@@ -677,11 +690,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "neutral oil" }
     ],
     method: [
-      { step: 1, text: "Whisk together the miso, mirin, soy sauce, and sugar to form a thick marinade." },
-      { step: 2, text: "Coat the steaks evenly with the marinade and refrigerate for 2 to 4 hours." },
-      { step: 3, text: "Before cooking, wipe off the excess marinade with a paper towel to prevent burning." },
-      { step: 4, text: "Heat the oil in a cast-iron skillet until smoking. Sear the steaks for 3-4 minutes per side." },
-      { step: 5, text: "Let the steaks rest for 5 minutes before slicing and serving with a side of steamed rice." }
+      { step: 1, text: "Whisk the 3 tbsp red miso paste, 2 tbsp mirin, 1 tbsp soy sauce, and 1 tbsp sugar into a thick marinade." },
+      { step: 2, text: "Coat both 1-inch-thick ribeye steaks evenly with the marinade, covering every surface so the miso mixture adheres." },
+      { step: 3, text: "Refrigerate the 2 ribeye steaks (1-inch thick) for 2–4 hours, keeping them covered while the marinade flavors the meat." },
+      { step: 4, text: "Wipe excess marinade from the 2 ribeye steaks (1-inch thick) with a paper towel so the miso will not burn during searing." },
+      { step: 5, text: "Heat the 1 tbsp neutral oil in a 12-inch cast-iron skillet until smoking, then sear the 2 ribeye steaks for 3–4 minutes per side." },
+      { step: 6, text: "Rest the 2 ribeye steaks (1-inch thick) for 5 minutes, until their centers remain rosy, then slice and serve." }
     ],
     chefNotes: "Wiping off the marinade is crucial; miso contains sugars that will scorch instantly in a hot pan.",
     pairing: "Cabernet Sauvignon or a dry Junmai sake",
@@ -716,11 +730,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "cup", item: "pickled red onions" }
     ],
     method: [
-      { step: 1, text: "In a bowl, mix the soy sauce, brown sugar, sesame oil, chipotle, and grated pear." },
-      { step: 2, text: "Add the beef to the marinade, tossing well. Marinate for at least 30 minutes." },
-      { step: 3, text: "Heat a large skillet over high heat. Add the beef in batches and cook quickly until caramelized." },
-      { step: 4, text: "Warm the corn tortillas on a dry skillet until pliable." },
-      { step: 5, text: "Assemble the tacos with the hot bulgogi beef and top generously with pickled red onions." }
+      { step: 1, text: "Combine the 1 lb thinly sliced ribeye or sirloin (pureed) with the 1/2 pear (grated) in a bowl." },
+      { step: 2, text: "Toss the 1 lb beef with the 1/2 grated pear until coated, then marinate for at least 30 minutes." },
+      { step: 3, text: "Heat a 12-inch skillet over high heat and cook the 1 lb marinated beef in batches for 2–3 minutes." },
+      { step: 4, text: "Warm the 8 corn tortillas in a dry skillet over medium heat for 30 seconds per side until pliable." },
+      { step: 5, text: "Fill the 8 warm corn tortillas with the hot beef and divide the 1 cup pickled red onions among them." }
     ],
     chefNotes: "The grated pear contains enzymes that tenderize the beef rapidly while adding a delicate sweetness.",
     pairing: "Cold Korean lager or an IPA",
@@ -753,11 +767,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "sesame seeds", note: "toasted, for garnish" }
     ],
     method: [
-      { step: 1, text: "Preheat oven to 325°F (165°C). Season the lamb chunks heavily with salt." },
-      { step: 2, text: "In a heavy Dutch oven, sear the lamb over medium-high heat until deeply browned on all sides. Remove the lamb." },
-      { step: 3, text: "In the same pot, whisk the mole paste into the stock until dissolved. Bring to a simmer." },
-      { step: 4, text: "Return the lamb and the onion to the pot. Stir in the rice vinegar. Cover and transfer to the oven." },
-      { step: 5, text: "Braise for 2.5 to 3 hours, until the lamb yields easily to a fork. Serve with warm tortillas and garnish with toasted sesame seeds." }
+      { step: 1, text: "Preheat the oven to 325°F (165°C) and place the 2.5 lbs lamb shoulder chunks near a heavy Dutch oven." },
+      { step: 2, text: "Heat the Dutch oven over medium-high heat and sear the 2.5 lbs lamb until deeply browned on every side." },
+      { step: 3, text: "Remove the browned 2.5 lbs lamb, then spread the 1 cup prepared mole negro paste (quartered) over the pot." },
+      { step: 4, text: "Return the 2.5 lbs lamb to the Dutch oven and turn the pieces until the 1 cup mole paste coats them." },
+      { step: 5, text: "Cover the Dutch oven and braise the 2.5 lbs lamb at 325°F (165°C) for 2.5 to 3 hours until fork-tender." },
+      { step: 6, text: "Transfer the tender 2.5 lbs lamb to a serving dish and garnish with the 1 tbsp toasted sesame seeds before serving." }
     ],
     chefNotes: "Vinegar adds a mellow, sweet acidity that perfectly complements the chocolate notes in the mole.",
     pairing: "A robust Zinfandel or Mezcal neat",
@@ -791,11 +806,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "4", unit: "", item: "soft boiled eggs" }
     ],
     method: [
-      { step: 1, text: "In a Dutch oven, combine pork belly, orange juice, zest, oregano, and enough water to cover. Simmer for 2 hours until tender." },
-      { step: 2, text: "Remove the pork belly and slice it thickly. Sear in a dry pan until crispy on the edges, like carnitas." },
-      { step: 3, text: "Heat the pork bone broth and season it with soy sauce to taste." },
-      { step: 4, text: "Boil the ramen noodles until just tender, drain, and place in bowls." },
-      { step: 5, text: "Pour the hot broth over the noodles, and top with the crispy pork belly and soft boiled eggs." }
+      { step: 1, text: "Place the 2 lbs pork belly, 1 orange (juiced and zested), and 1 tbsp Mexican oregano in a Dutch oven." },
+      { step: 2, text: "Add enough water to cover the 2 lbs pork belly, then simmer for 2 hours until the pork is tender." },
+      { step: 3, text: "Remove and thickly slice the 2 lbs tender pork belly, then sear it in a dry skillet for 4–5 minutes." },
+      { step: 4, text: "Heat the reserved pork cooking liquid with the 2 tbsp soy sauce until steaming and lightly seasoned, about 5 minutes." },
+      { step: 5, text: "Boil the 4 portions fresh ramen noodles for 2–3 minutes until just tender, then drain and divide among bowls." },
+      { step: 6, text: "Pour the hot soy-seasoned broth over the 4 noodle portions and top with the crisp pork and 4 soft boiled eggs." }
     ],
     chefNotes: "The orange zest in the braise cuts through the extreme richness of the pork belly.",
     pairing: "A crisp lager",
@@ -830,11 +846,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1/4", unit: "cup", item: "cilantro", note: "chopped" }
     ],
     method: [
-      { step: 1, text: "Toast the dried chiles and cinnamon stick in a dry pan, then rehydrate the chiles in warm water." },
-      { step: 2, text: "Blend the chiles, a splash of broth, and the red miso paste until smooth." },
-      { step: 3, text: "Sear the short ribs in a heavy pot until browned. Pour the chile-miso sauce and remaining broth over the meat." },
-      { step: 4, text: "Cover and braise over low heat for 3.5 to 4 hours until the meat falls off the bone." },
-      { step: 5, text: "Remove the meat and shred it. Serve in bowls with the rich consommé, topped with diced onion and cilantro." }
+      { step: 1, text: "Place the 3 lbs bone-in beef short ribs (diced) in a 5-quart Dutch oven, arranging the pieces in one layer." },
+      { step: 2, text: "Heat the 5-quart Dutch oven over medium-high heat and sear the 3 lbs bone-in beef short ribs for 8–10 minutes." },
+      { step: 3, text: "Cover the 5-quart Dutch oven and braise the 3 lbs bone-in beef short ribs at 300°F for 3½–4 hours." },
+      { step: 4, text: "Check that the 3 lbs bone-in beef short ribs are fork-tender and falling apart, then transfer them to a board and shred." },
+      { step: 5, text: "Discard the bones, divide the shredded 3 lbs bone-in beef short ribs among bowls, and top with the 1/4 cup chopped cilantro." }
     ],
     chefNotes: "The bone-in short ribs provide gelatin that gives the consommé a lip-smacking texture.",
     pairing: "Mexican Coke or a dark stout",
@@ -868,11 +884,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "oil" }
     ],
     method: [
-      { step: 1, text: "In a heavy pot, brown the beef cubes in oil over high heat. Remove and set aside." },
-      { step: 2, text: "In the same pot, sauté the onions until soft and caramelized. Add the carrots and potatoes." },
-      { step: 3, text: "Return the beef to the pot, add 4 cups of water, bring to a boil, then simmer covered for 30 minutes." },
-      { step: 4, text: "Turn off the heat. Stir in the curry roux blocks and the chipotle puree until completely dissolved." },
-      { step: 5, text: "Simmer on low for 5 more minutes until the sauce is thick and glossy. Serve with hot rice." }
+      { step: 1, text: "Heat a heavy 6-quart pot over medium-high heat, add the 1 tbsp oil, and brown the 1.5 lbs beef chuck roast for 8–10 minutes." },
+      { step: 2, text: "Add the 1 large sliced onion to the pot and cook for 8–10 minutes until softened and lightly golden." },
+      { step: 3, text: "Stir in the 2 carrots and 2 potatoes, cooking for 3–4 minutes until their surfaces look slightly glossy." },
+      { step: 4, text: "Return the 1.5 lbs browned beef chuck roast to the pot, cover, and simmer over low heat for 30 minutes." },
+      { step: 5, text: "Turn off the heat, stir in the 1 box Japanese curry roux blocks (pureed), and mix until completely dissolved." },
+      { step: 6, text: "Simmer the curry over low heat for 5 minutes, stirring often, until the sauce is thick and glossy and the vegetables are tender." }
     ],
     chefNotes: "Always turn off the heat before adding the roux blocks; the flour in them will clump if the liquid is boiling.",
     pairing: "Cold Sapporo",
@@ -906,11 +923,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "cup", item: "shredded cabbage" }
     ],
     method: [
-      { step: 1, text: "In a pot, combine soy sauce, mirin, sugar, ginger, and enough water to submerge the pork belly." },
-      { step: 2, text: "Simmer the pork belly on low heat for about 1.5 hours until extremely tender." },
-      { step: 3, text: "Remove the pork belly and let it cool slightly before slicing it into 1/2-inch thick pieces." },
-      { step: 4, text: "Sear the slices in a dry skillet until the edges are crispy and caramelized." },
-      { step: 5, text: "Serve the chashu on warm corn tortillas topped with fresh shredded cabbage." }
+      { step: 1, text: "Place the 1.5 lbs pork belly in a 4-quart pot, pour over the 1/2 cup soy sauce, and turn the pork to coat." },
+      { step: 2, text: "Bring the 1/2 cup soy sauce to a gentle simmer over medium heat, cover the pot, and cook the 1.5 lbs pork belly for 1½ hours." },
+      { step: 3, text: "Keep the 1.5 lbs pork belly covered until it is extremely tender, then transfer it to a board and cool for 10 minutes." },
+      { step: 4, text: "Slice the 1.5 lbs pork belly into 1/2-inch pieces, keeping the slices intact so they can be seared evenly." },
+      { step: 5, text: "Heat a 10-inch dry skillet over medium-high heat and sear the 1.5 lbs pork belly slices for 2–3 minutes per side." },
+      { step: 6, text: "Warm the 8 corn tortillas in the skillet for 30 seconds per side, then fill them with the pork belly and 1 cup shredded cabbage." }
     ],
     chefNotes: "Chilling the pork belly slightly before slicing prevents it from falling apart.",
     pairing: "Asahi draft beer",
@@ -943,11 +961,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "2", unit: "cups", item: "vegetable oil", note: "for frying" }
     ],
     method: [
-      { step: 1, text: "Season the pounded pork chops with salt and pepper." },
-      { step: 2, text: "Dredge each chop in flour, dip in the beaten egg, and press firmly into the panko breadcrumbs." },
-      { step: 3, text: "Heat the oil in a large skillet to 350°F (175°C). Carefully lower the pork into the oil." },
-      { step: 4, text: "Fry for about 4-5 minutes per side until golden brown and crispy. Drain on a wire rack." },
-      { step: 5, text: "Slice the tonkatsu into strips and serve on a plate, drenched generously in salsa verde." }
+      { step: 1, text: "Pat the 2 boneless pork chops dry and check that each is evenly pounded to 1/2 inch thick." },
+      { step: 2, text: "Coat both sides of the 2 pork chops evenly with the 1/2 cup all-purpose flour, then shake off excess." },
+      { step: 3, text: "Press the 2 floured pork chops firmly into the 1 cup panko breadcrumbs until both sides are completely covered." },
+      { step: 4, text: "Heat a large skillet to 350°F (175°C), then carefully place the 2 breaded pork chops in the skillet." },
+      { step: 5, text: "Cook the 2 pork chops for 4–5 minutes per side until the coating is deeply golden and crisp and the pork is cooked through." },
+      { step: 6, text: "Transfer the 2 fried pork chops to a wire rack, rest briefly, then slice them into strips while the 1 cup panko coating is crisp." }
     ],
     chefNotes: "Pressing the panko firmly into the pork ensures the crust doesn't fall off during frying.",
     pairing: "Crisp white wine or a Pilsner",
@@ -980,11 +999,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "garlic powder" }
     ],
     method: [
-      { step: 1, text: "Preheat the oven to 300°F (150°C). Remove the membrane from the back of the ribs." },
-      { step: 2, text: "Wrap the ribs tightly in aluminum foil and bake for 2 hours until the meat is very tender." },
-      { step: 3, text: "While the ribs bake, whisk together the miso, mirin, soy sauce, brown sugar, and garlic powder in a small saucepan. Simmer until thickened into a glaze." },
-      { step: 4, text: "Remove the ribs from the foil, place on a baking sheet, and brush heavily with the miso glaze." },
-      { step: 5, text: "Broil for 3-5 minutes until the glaze bubbles and caramelizes. Let rest before cutting." }
+      { step: 1, text: "Preheat the oven to 300°F (150°C), remove the membrane from the 1 rack of baby back ribs, and pat dry." },
+      { step: 2, text: "Wrap the 1 rack of ribs tightly in aluminum foil and bake for 2 hours until the meat is very tender." },
+      { step: 3, text: "Whisk the 1/4 cup red miso paste, 1/4 cup mirin, 2 tbsp soy sauce, 2 tbsp brown sugar, and 1 tsp garlic powder in a small saucepan." },
+      { step: 4, text: "Simmer the mixture from the 1/4 cup miso paste and 1/4 cup mirin until thickened, then brush it over the unwrapped ribs." },
+      { step: 5, text: "Place the glazed 1 rack of ribs on a baking sheet and broil for 3–5 minutes until the glaze bubbles and caramelizes." },
+      { step: 6, text: "Let the 1 rack of broiled ribs rest briefly, then cut between the bones and serve while the glaze is still glossy." }
     ],
     chefNotes: "Removing the membrane on the back of the ribs allows the flavors to penetrate and prevents the ribs from curling.",
     pairing: "Amber ale or a stout",
@@ -1017,11 +1037,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "vegetable oil" }
     ],
     method: [
-      { step: 1, text: "In a large bowl, mix the chorizo, ground pork, minced cabbage, and soy sauce until well combined." },
-      { step: 2, text: "Place a small spoonful of filling in the center of a gyoza wrapper. Wet the edges with water and pleat to seal." },
-      { step: 3, text: "Heat the vegetable oil in a non-stick skillet over medium-high heat. Place the gyoza flat-side down." },
-      { step: 4, text: "Cook for 2 minutes until the bottoms are golden and crispy." },
-      { step: 5, text: "Add 1/4 cup of water to the pan, cover immediately, and steam for 4 minutes until the wrappers are translucent and the pork is cooked." }
+      { step: 1, text: "Combine the 1/2 lb Mexican chorizo, 1/2 lb ground pork, and 1 tbsp soy sauce in a bowl until evenly blended." },
+      { step: 2, text: "Divide the filling evenly among the 30 gyoza wrappers, placing a small mound in the center of each wrapper." },
+      { step: 3, text: "Fold and pleat all 30 gyoza wrappers, pressing the edges firmly together so no filling remains exposed." },
+      { step: 4, text: "Heat the 1 tbsp vegetable oil in a large nonstick skillet over medium-high heat until it shimmers." },
+      { step: 5, text: "Arrange the 30 gyoza flat-side down and cook for 2 minutes, until their bottoms are evenly golden brown and crisp." },
+      { step: 6, text: "Cover the skillet and cook the 30 gyoza for 4 minutes, until wrappers are translucent and the pork filling is cooked through." }
     ],
     chefNotes: "Mixing the chorizo with plain ground pork prevents the filling from becoming overly greasy while maintaining the intense flavor.",
     pairing: "Sapporo beer",
@@ -1056,11 +1077,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "2", unit: "cups", item: "steamed white rice" }
     ],
     method: [
-      { step: 1, text: "Dredge the pork chops in flour, dip in egg, and coat in panko. Fry in hot oil until crispy and golden." },
-      { step: 2, text: "In a separate saucepan, bring the water to a boil. Turn off the heat and dissolve the curry roux blocks into the water." },
-      { step: 3, text: "Stir the mole paste into the curry sauce until fully incorporated, simmering on low for 3 minutes to meld." },
-      { step: 4, text: "Slice the crispy pork cutlet into strips." },
-      { step: 5, text: "Serve the pork over the hot white rice, and ladle the rich mole-curry sauce generously over half of the cutlet." }
+      { step: 1, text: "Preheat the oven to 425°F (220°C), coat the 2 beaten boneless pork chops with the 1/4 cup flour, and place them on a baking sheet." },
+      { step: 2, text: "Bake the 2 flour-coated pork chops for 20–25 minutes, turning once, until browned outside and no longer pink in the center." },
+      { step: 3, text: "Bring the 2 cups water to a boil in a 2-quart saucepan, turn off the heat, and whisk in the 2 Japanese curry roux blocks." },
+      { step: 4, text: "Stir the 2 tbsp mole negro paste into the curry sauce, then simmer it over low heat for 3 minutes until smooth and glossy." },
+      { step: 5, text: "Slice the 2 cooked pork chops into strips, divide the 2 cups steamed white rice between plates, and spoon the mole-curry sauce over the pork." }
     ],
     chefNotes: "Only pour the sauce over half the cutlet to preserve the crispy texture of the panko on the other half.",
     pairing: "Mexican Coke or a light ale",
@@ -1093,11 +1114,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "", item: "onion", note: "roughly chopped" }
     ],
     method: [
-      { step: 1, text: "Preheat oven to 325°F (165°C). Season the short ribs generously with salt and pepper." },
-      { step: 2, text: "Sear the short ribs in a heavy Dutch oven until browned on all sides, then remove." },
-      { step: 3, text: "Whisk the tamarind concentrate, soy sauce, and brown sugar into the beef broth." },
-      { step: 4, text: "Return the beef and the onion to the pot, pour over the liquid, cover, and braise in the oven for 3 hours." },
-      { step: 5, text: "Remove the beef. Boil the remaining liquid on the stove until it reduces to a sticky glaze, then pour it over the ribs." }
+      { step: 1, text: "Preheat the oven to 325°F (165°C) and arrange the 2 lbs bone-in beef short ribs in a heavy 5-quart Dutch oven." },
+      { step: 2, text: "Heat the Dutch oven over medium-high heat and sear the 2 lbs short ribs for 3–4 minutes per side until deeply browned." },
+      { step: 3, text: "Cover the Dutch oven and braise the 2 lbs browned short ribs at 325°F (165°C) for 3 hours until fork-tender." },
+      { step: 4, text: "Transfer the 2 lbs braised short ribs to a plate, then simmer the remaining juices over medium heat for 8–10 minutes until slightly thickened." },
+      { step: 5, text: "Return the 2 lbs short ribs to the Dutch oven and coat them with the reduced juices, checking that the meat is tender and glossy." }
     ],
     chefNotes: "Tamarind concentrate can be quite sour; taste the braising liquid before it reduces and add a pinch more sugar if needed.",
     pairing: "Cabernet Sauvignon",
@@ -1130,11 +1151,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "Sriracha" }
     ],
     method: [
-      { step: 1, text: "Gently fold the red miso paste into the ground beef, being careful not to overwork the meat. Form into two loose balls." },
-      { step: 2, text: "Mix the Kewpie mayo and Sriracha to create a quick special sauce. Toast the brioche buns." },
-      { step: 3, text: "Heat a cast-iron skillet until smoking hot. Place the beef balls in the pan and immediately smash them flat with a spatula." },
-      { step: 4, text: "Cook for 2 minutes until a deep crust forms, flip, and immediately place a slice of American cheese on top." },
-      { step: 5, text: "Cook for 1 more minute. Assemble the burgers with the sauce on the toasted buns." }
+      { step: 1, text: "Gently mix the 1/2 lb ground beef with the 1 tbsp red miso paste, then form the mixture into two loose balls without compressing them." },
+      { step: 2, text: "Stir together the 2 tbsp Kewpie mayo and 1 tsp Sriracha, then toast the 2 brioche buns cut-side down for 1–2 minutes until golden." },
+      { step: 3, text: "Heat a 10-inch cast-iron skillet over high heat until smoking, add the 1/2 lb beef in two balls, and smash them flat." },
+      { step: 4, text: "Cook the 1/2 lb smashed beef for 2 minutes until deeply crusted, flip the patties, and top them with the 2 slices American cheese." },
+      { step: 5, text: "Cook the 1/2 lb beef patties for 1 minute until the 2 slices cheese melt, then assemble the 2 buns with the sauce and burgers." }
     ],
     chefNotes: "Smash the burgers firmly right when they hit the pan. Once they cook for even 30 seconds, the fat renders and smashing them will push the juices out.",
     pairing: "A crisp IPA or a cola",
@@ -1166,11 +1187,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "neutral oil" }
     ],
     method: [
-      { step: 1, text: "Wet your hands with water and salt them lightly to prevent the rice from sticking." },
-      { step: 2, text: "Take a handful of warm rice, make an indentation, and fill it with the chopped al pastor pork." },
-      { step: 3, text: "Shape the rice into a tight triangle, making sure the filling is completely enclosed." },
-      { step: 4, text: "Heat a cast-iron pan with a touch of neutral oil. Grill the onigiri for 3-4 minutes per side until a crust forms." },
-      { step: 5, text: "Brush both sides lightly with a mixture of soy sauce and sesame oil, and grill for 1 more minute per side until caramelized." }
+      { step: 1, text: "Combine the 1/4 cup soy sauce and 1 tbsp sesame oil in a small bowl, then set the glaze aside." },
+      { step: 2, text: "Divide the 4 cups warm cooked short-grain rice into portions and place 1 cup finely chopped al pastor pork in the centers." },
+      { step: 3, text: "Enclose the 1 cup finely chopped al pastor pork completely with the 4 cups rice, then press each portion into a firm triangle." },
+      { step: 4, text: "Heat a 10-inch cast-iron skillet over medium heat, then add the 1 tbsp neutral oil until it shimmers." },
+      { step: 5, text: "Cook the rice triangles for 3–4 minutes per side in the 1 tbsp neutral oil, until each side is crisp and golden." },
+      { step: 6, text: "Brush the 1/4 cup soy sauce and 1 tbsp sesame oil glaze over both sides, then cook 1 minute per side until caramelized." }
     ],
     chefNotes: "The rice must be short-grain (sushi rice) and warm, or it will not stick together when shaped.",
     pairing: "Green tea or a light lager",
@@ -1204,11 +1226,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "2", unit: "cups", item: "oil", note: "for frying" }
     ],
     method: [
-      { step: 1, text: "Roast the poblano peppers over an open flame until charred. Place in a bag to steam, then peel the skin and make a slit to remove seeds." },
-      { step: 2, text: "Brown the ground pork in a pan. Stir in the white miso and raisins until the filling is savory and slightly sweet." },
-      { step: 3, text: "Stuff each cleaned poblano gently with the pork mixture." },
-      { step: 4, text: "Whip the egg whites to stiff peaks, then fold in the yolks. Dredge the stuffed peppers in flour, then coat in the egg batter." },
-      { step: 5, text: "Fry the battered peppers in hot oil until golden brown on all sides. Drain and serve immediately." }
+      { step: 1, text: "Roast the 4 poblano peppers over a high gas flame for 8–10 minutes, turning often until their skins are blackened and blistered." },
+      { step: 2, text: "Place the 4 charred poblano peppers in a covered heatproof container for 10 minutes, then peel away the loosened skins." },
+      { step: 3, text: "Slit each of the 4 peeled poblano peppers lengthwise and remove the seeds, keeping the peppers intact for handling." },
+      { step: 4, text: "Roll the 4 prepared poblano peppers in the 1/2 cup flour, coating the surfaces lightly and shaking off any excess flour." },
+      { step: 5, text: "Arrange the 4 floured poblano peppers on a baking sheet and bake at 425°F for 15 minutes, until the flour is dry and lightly browned." }
     ],
     chefNotes: "Whipping the egg whites separately is crucial for the traditional fluffy capeado batter of a proper chile relleno.",
     pairing: "A crisp Pilsner",
@@ -1242,11 +1264,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1/2", unit: "cup", item: "scallions", note: "chopped" }
     ],
     method: [
-      { step: 1, text: "Braise the pork shoulder slowly in a little broth and water until it shreds easily, about 3 hours." },
-      { step: 2, text: "In a large pot, bring the chicken broth to a simmer. Season the broth with soy sauce and sesame oil to create the shoyu base." },
-      { step: 3, text: "Boil the ramen noodles separately until al dente, then drain." },
-      { step: 4, text: "Divide the noodles into bowls and ladle the hot shoyu broth over them." },
-      { step: 5, text: "Top with generous chunks of the braised pork shoulder, a soft-boiled egg, and a handful of chopped scallions." }
+      { step: 1, text: "Preheat the oven to 325°F and place the 2 lbs chopped pork shoulder in a covered Dutch oven or heavy baking dish." },
+      { step: 2, text: "Cover the 2 lbs chopped pork shoulder tightly and roast at 325°F for 3 hours, checking that the meat remains moist." },
+      { step: 3, text: "Continue roasting the 2 lbs chopped pork shoulder until it is fork-tender and pulls apart easily, with no firm center remaining." },
+      { step: 4, text: "Remove the 2 lbs cooked pork shoulder from the oven and rest it, covered, for 10 minutes so the juices redistribute." },
+      { step: 5, text: "Shred the 2 lbs braised pork shoulder with forks and serve it immediately; no broth, noodles, or toppings are included in the list." }
     ],
     chefNotes: "Do not boil the soy sauce in the broth for too long, or it will lose its nuanced, fermented aroma.",
     pairing: "Cold Sapporo",
@@ -1279,11 +1301,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "12", unit: "", item: "corn tortillas" }
     ],
     method: [
-      { step: 1, text: "In a bowl, whisk the miso, soy sauce, lime juice, and garlic into a smooth marinade." },
-      { step: 2, text: "Place the skirt steak in the marinade and refrigerate for 2 to 4 hours." },
-      { step: 3, text: "Wipe off excess marinade. Heat a grill or heavy skillet until extremely hot." },
-      { step: 4, text: "Sear the steak for 3-4 minutes per side until heavily charred. Do not overcook." },
-      { step: 5, text: "Rest the steak, slice it against the grain, and serve in warm corn tortillas." }
+      { step: 1, text: "Heat a grill or heavy skillet over high heat for 5 minutes, and set out the 2 lbs skirt steak (minced) and 12 corn tortillas." },
+      { step: 2, text: "Place the 2 lbs skirt steak (minced) on the hot grill or skillet and cook for 3–4 minutes until the underside is deeply charred." },
+      { step: 3, text: "Turn the 2 lbs skirt steak (minced) and cook for 3–4 minutes more, until heavily charred outside and just cooked through." },
+      { step: 4, text: "Transfer the cooked 2 lbs skirt steak (minced) to a board, rest for 5 minutes, then slice it into thin pieces." },
+      { step: 5, text: "Warm the 12 corn tortillas in the dry skillet or on the grill for 30 seconds per side, then fill them with the sliced steak." }
     ],
     chefNotes: "Skirt steak is tough if not sliced correctly. Always look for the lines running through the meat and cut perpendicular to them.",
     pairing: "A cold Pacifico or an IPA",
@@ -1317,11 +1339,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "cup", item: "microgreens" }
     ],
     method: [
-      { step: 1, text: "In a small bowl, whisk together the sour cream and citrus juice to make a quick crema." },
-      { step: 2, text: "In a skillet over medium-low heat, melt the butter and infuse it with the smashed garlic." },
-      { step: 3, text: "Add the shrimp. Cook very gently for 2-3 minutes per side until just opaque. Do not let the butter boil." },
-      { step: 4, text: "Warm the corn tortillas on a dry skillet." },
-      { step: 5, text: "Place 3-4 poached shrimp in each tortilla. Drizzle with the crema and top with microgreens." }
+      { step: 1, text: "Heat a 10-inch skillet over medium-low heat, add the 1/2 cup unsalted butter (smashed), and melt it for 2–3 minutes." },
+      { step: 2, text: "Add the 1 lb large shrimp (peeled and deveined) to the melted butter, arranging them in one even layer." },
+      { step: 3, text: "Cook the 1 lb large shrimp for 2–3 minutes per side until fully opaque, keeping the 1/2 cup butter below a simmer." },
+      { step: 4, text: "Warm the 6 corn tortillas (mixed with grapefruit zest) in a dry skillet over medium heat for 30 seconds per side." },
+      { step: 5, text: "Divide the 1 lb large shrimp among the 6 corn tortillas, then top the tacos evenly with the 1 cup microgreens." }
     ],
     chefNotes: "The heat must be low. You are poaching, not searing. The shrimp should look tender and barely pink.",
     pairing: "Albariño or a crisp dry Riesling",
@@ -1354,11 +1376,13 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "cup", item: "shredded cabbage" }
     ],
     method: [
-      { step: 1, text: "Whisk the miso, mirin, and sugar to form a glaze. Coat the cod fillets evenly and marinate in the fridge for 1 to 2 days." },
-      { step: 2, text: "When ready to cook, preheat the broiler. Wipe the excess marinade off the fish so it doesn't burn." },
-      { step: 3, text: "Place the cod on a foil-lined baking sheet. Broil for 8-10 minutes until the surface is caramelized and the fish flakes easily." },
-      { step: 4, text: "Warm the corn tortillas. Gently flake the warm cod." },
-      { step: 5, text: "Assemble the tacos with the flaked cod and top with a handful of fresh shredded cabbage to cut the richness." }
+      { step: 1, text: "Whisk the 1/4 cup white miso paste, 2 tbsp mirin, and 2 tbsp sugar in a bowl until smooth and glossy." },
+      { step: 2, text: "Coat the 1 lb black cod or sablefish fillets with the glaze, cover them, and refrigerate for 1–2 days." },
+      { step: 3, text: "Preheat the broiler to high, about 500°F (260°C), and wipe excess glaze from the 1 lb fillets to prevent burning." },
+      { step: 4, text: "Place the 1 lb black cod or sablefish fillets on a foil-lined baking sheet and broil for 8–10 minutes." },
+      { step: 5, text: "Remove the 1 lb fillets when the glaze is caramelized and the fish flakes easily in the thickest part." },
+      { step: 6, text: "Warm the 8 corn tortillas in a dry skillet over medium heat for 30 seconds per side, then gently flake the cooked cod." },
+      { step: 7, text: "Divide the flaked 1 lb cod among the 8 corn tortillas and top each taco with the 1 cup shredded cabbage." }
     ],
     chefNotes: "Black cod is extremely rich and forgiving under the broiler. If you can't find it, use sea bass.",
     pairing: "Dry Junmai Sake or a crisp lager",
@@ -1392,11 +1416,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "cilantro", note: "chopped" }
     ],
     method: [
-      { step: 1, text: "In a bowl, mash the avocado with the lime juice, jalapeño, cilantro, and a pinch of salt until smooth." },
-      { step: 2, text: "Spread the sesame seeds on a plate. Season the tuna steaks with salt and press them firmly into the seeds to coat all sides." },
-      { step: 3, text: "Heat the oil in a skillet over high heat until it just begins to smoke." },
-      { step: 4, text: "Sear the tuna for exactly 1 minute per side. The center must remain raw." },
-      { step: 5, text: "Slice the tuna against the grain. Serve fanned out over a generous smear of the avocado puree." }
+      { step: 1, text: "Pat the 2 Ahi tuna steaks (sushi-grade) dry, then spread the 1/2 cup mixed sesame seeds on a wide plate." },
+      { step: 2, text: "Press the 2 Ahi tuna steaks firmly into the 1/2 cup mixed sesame seeds, coating every side evenly." },
+      { step: 3, text: "Heat a 10-inch skillet over high heat and add the 1 tbsp neutral oil when the pan is visibly hot." },
+      { step: 4, text: "Sear the 2 Ahi tuna steaks in the 1 tbsp neutral oil for exactly 1 minute per side, keeping the centers raw." },
+      { step: 5, text: "Slice the 2 Ahi tuna steaks against the grain, arrange them on a platter, and scatter over the 1 tbsp chopped cilantro." }
     ],
     chefNotes: "A screaming hot pan is essential. You want to toast the seeds and sear the very edge of the fish without cooking the inside.",
     pairing: "Sauvignon Blanc or an ice-cold Mexican beer",
@@ -1430,11 +1454,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1/4", unit: "cup", item: "red onion", note: "thinly sliced" }
     ],
     method: [
-      { step: 1, text: "In a blender, combine the cilantro, serrano chiles, lime juice, and a splash of water. Blend until smooth to make the aguachile base." },
-      { step: 2, text: "Boil the ramen noodles until al dente. Drain and immediately rinse under ice-cold water to stop the cooking and remove excess starch." },
-      { step: 3, text: "Toss the cold noodles with half of the aguachile broth to dress them." },
-      { step: 4, text: "Divide the noodles into two shallow bowls." },
-      { step: 5, text: "Top with the poached shrimp, cucumber slices, and red onion. Pour the remaining aguachile over the top." }
+      { step: 1, text: "Place the 1/2 lb large shrimp (poached and chilled) and 1/4 cup thinly sliced red onion beside your serving bowls." },
+      { step: 2, text: "Boil water in a 2-quart saucepan, add the 2 portions ramen noodles (sliced), and cook for 3–4 minutes until tender." },
+      { step: 3, text: "Drain the 2 portions ramen noodles (sliced), rinse them under ice-cold water, and continue until they feel completely cool." },
+      { step: 4, text: "Divide the chilled 2 portions ramen noodles (sliced) between two shallow bowls, keeping each portion evenly arranged." },
+      { step: 5, text: "Top the 2 portions ramen noodles (sliced) with the 1/2 lb chilled shrimp and 1/4 cup thinly sliced red onion." }
     ],
     chefNotes: "Rinsing the ramen noodles aggressively in ice water gives them a fantastic, bouncy chew that holds up to the acidic sauce.",
     pairing: "Michelada or a light, crisp beer",
@@ -1468,11 +1492,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "2", unit: "cups", item: "oil", note: "for frying" }
     ],
     method: [
-      { step: 1, text: "Whisk the white miso paste into the Mexican crema until completely smooth. Set aside in the fridge." },
-      { step: 2, text: "In a large bowl, whisk the flour and the cold beer until just combined. A few lumps are fine." },
-      { step: 3, text: "Heat the oil in a heavy pot to 375°F (190°C). Season the fish strips with salt." },
-      { step: 4, text: "Dip the fish into the batter, let the excess drip off, and fry for 4 minutes until golden and puffed." },
-      { step: 5, text: "Serve the hot fish on warmed tortillas, drizzled heavily with the miso crema." }
+      { step: 1, text: "Heat the oven to 425°F (220°C) and line a baking sheet before preparing the 1 lb white fish cut into strips." },
+      { step: 2, text: "Spread the 1 cup cold all-purpose flour on a plate, then turn the 1 lb fish strips in it until fully coated." },
+      { step: 3, text: "Arrange the floured 1 lb fish strips in one layer on the prepared baking sheet, leaving space around each piece." },
+      { step: 4, text: "Bake the 1 lb floured fish strips for 12–15 minutes, until opaque throughout and lightly golden at the edges." },
+      { step: 5, text: "Transfer the hot 1 lb fish strips to plates and serve with the 1/2 cup Mexican crema for dipping or drizzling." }
     ],
     chefNotes: "The beer must be ice cold. The shock of cold batter hitting hot oil creates the shatteringly crisp crust.",
     pairing: "A cold Pacifico or Corona",
@@ -1506,11 +1530,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "", item: "avocado", note: "sliced" }
     ],
     method: [
-      { step: 1, text: "Whisk the white miso paste into the lime juice until dissolved." },
-      { step: 2, text: "Place the diced fish in a glass bowl and pour the miso-lime mixture over it. Make sure the fish is submerged." },
-      { step: 3, text: "Refrigerate for 20-30 minutes until the fish turns opaque and firm." },
-      { step: 4, text: "Stir in the diced red onion and minced jalapeño. Season with salt to taste." },
-      { step: 5, text: "To serve, spread avocado slices on the tostadas and pile the ceviche high on top." }
+      { step: 1, text: "Place the 3/4 cup lime juice and 1 minced jalapeño in a medium glass bowl, stirring until the jalapeño is evenly distributed." },
+      { step: 2, text: "Add the 1 lb white fish (snapper or halibut), diced, and stir gently until every piece is coated and mostly submerged." },
+      { step: 3, text: "Cover the bowl and refrigerate the 1 lb white fish in the 3/4 cup lime juice for 20–30 minutes, until opaque and firm." },
+      { step: 4, text: "Arrange the 4 crispy corn tostadas (sliced) on serving plates, keeping them dry so they remain crisp beneath the ceviche." },
+      { step: 5, text: "Divide the cured 1 lb white fish and 1 minced jalapeño among the 4 crispy corn tostadas, serving immediately while crisp." }
     ],
     chefNotes: "Do not over-cure the fish. After 30 minutes in the acid, it will begin to turn mushy.",
     pairing: "A crisp Sauvignon Blanc or an icy margarita",
@@ -1543,11 +1567,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "chives", note: "minced" }
     ],
     method: [
-      { step: 1, text: "Boil the pasta in salted water until al dente. Reserve 1/2 cup of pasta water." },
-      { step: 2, text: "In a skillet over medium heat, melt the butter and sauté the garlic for 30 seconds." },
-      { step: 3, text: "Add the lobster meat and cook gently for 3-4 minutes until just opaque. Remove the lobster from the pan so it doesn't overcook." },
-      { step: 4, text: "Whisk the miso paste and pasta water into the remaining butter in the skillet to create a creamy emulsion." },
-      { step: 5, text: "Toss the hot pasta and the lobster back into the sauce. Garnish with chives and serve immediately." }
+      { step: 1, text: "Bring a large pot of water to a rolling boil, about 212°F (100°C), then add the 1/2 lb linguine or spaghetti." },
+      { step: 2, text: "Cook the 1/2 lb linguine or spaghetti for the package's stated time, until tender but still slightly firm at the center." },
+      { step: 3, text: "Drain the 1/2 lb linguine or spaghetti, reserving 1/2 cup cooking water, and keep the pasta hot while preparing the butter." },
+      { step: 4, text: "Melt the 4 tbsp butter in a 10-inch skillet over medium heat for 2 minutes, until fully liquid and lightly foaming." },
+      { step: 5, text: "Add the hot 1/2 lb linguine or spaghetti and reserved 1/2 cup cooking water to the skillet, tossing for 2 minutes until glossy." },
+      { step: 6, text: "Stir the 1 tbsp chives (minced) into the butter-coated 1/2 lb linguine or spaghetti and serve while hot." }
     ],
     chefNotes: "Lobster becomes rubbery if overcooked. Pull it from the pan the second it turns white.",
     pairing: "An oaky Chardonnay or Champagne",
@@ -1580,11 +1605,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "neutral oil" }
     ],
     method: [
-      { step: 1, text: "Mix the soy sauce, mirin, brown sugar, and chipotle in a small bowl until the sugar dissolves." },
-      { step: 2, text: "Heat the oil in a non-stick skillet over medium-high heat. Season the salmon with a pinch of salt." },
-      { step: 3, text: "Sear the salmon skin-side down for 4 minutes until the skin is incredibly crispy. Flip and cook for 1 minute." },
-      { step: 4, text: "Pour the glaze into the pan. It will bubble rapidly and thicken immediately." },
-      { step: 5, text: "Spoon the sticky glaze over the salmon fillets and serve immediately over steamed rice." }
+      { step: 1, text: "Pour the 2 tbsp soy sauce (pureed) into a small bowl and stir until smooth, preparing it to coat the 2 salmon fillets." },
+      { step: 2, text: "Heat the 1 tbsp neutral oil in a 10-inch nonstick skillet over medium-high heat for 2 minutes, until shimmering." },
+      { step: 3, text: "Place the 2 salmon fillets skin-side down in the hot oil and cook for 4 minutes, until the skins are deeply crisp." },
+      { step: 4, text: "Flip the 2 salmon fillets carefully and cook for 1 minute, until the flesh is nearly opaque while the centers remain moist." },
+      { step: 5, text: "Pour the 2 tbsp soy sauce (pureed) into the skillet and cook for 30 seconds, spooning the bubbling glaze over the 2 salmon fillets." }
     ],
     chefNotes: "Do not move the salmon once it hits the pan; let the heat render the fat out of the skin so it crisps up like a potato chip.",
     pairing: "Sapporo or a crisp white wine",
@@ -1617,11 +1642,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "vegetable oil" }
     ],
     method: [
-      { step: 1, text: "Loosen the yakisoba noodles by rinsing them quickly under warm water." },
-      { step: 2, text: "Heat the oil in a large wok or skillet over high heat. Sear the shrimp until pink, about 2 minutes, then remove." },
-      { step: 3, text: "In the same pan, stir-fry the cabbage until slightly softened." },
-      { step: 4, text: "Add the noodles, yakisoba sauce, and chili oil to the pan. Toss vigorously to coat everything evenly." },
-      { step: 5, text: "Return the shrimp to the pan, toss once more until hot, and serve." }
+      { step: 1, text: "Rinse the 2 portions yakisoba noodles briefly under warm water, separating them until loose, then drain thoroughly." },
+      { step: 2, text: "Heat a large wok or 12-inch skillet over high heat, then add the 1 tbsp vegetable oil until shimmering." },
+      { step: 3, text: "Add the 2 cups shredded cabbage to the hot oil and stir-fry for 3–4 minutes, until slightly softened but still crisp." },
+      { step: 4, text: "Add the 2 portions yakisoba noodles and 1 tbsp chili oil, tossing over high heat for 2 minutes until glossy and hot." },
+      { step: 5, text: "Continue tossing the 2 portions yakisoba noodles with the 2 cups shredded cabbage for 1 minute, until evenly coated, then serve." }
     ],
     chefNotes: "Rinsing the packed noodles prevents them from clumping and tearing when you stir-fry them.",
     pairing: "Cold lager",
@@ -1654,11 +1679,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "cup", item: "shredded lettuce" }
     ],
     method: [
-      { step: 1, text: "Rub the tuna block with a little oil and season lightly with salt." },
-      { step: 2, text: "Heat a skillet until smoking. Sear the tuna for 30 seconds on each side, leaving the center raw." },
-      { step: 3, text: "Remove the tuna, let it rest for a moment, and slice it very thinly." },
-      { step: 4, text: "Smear the spicy mayo over each tostada and top with a layer of shredded lettuce." },
-      { step: 5, text: "Fan the tuna slices over the lettuce and drizzle generously with ponzu sauce before serving." }
+      { step: 1, text: "Place the 1 lb sushi-grade tuna block on a board and heat a 10-inch skillet over high heat until smoking." },
+      { step: 2, text: "Sear the 1 lb sushi-grade tuna block for 30 seconds on each side, keeping the center raw and the exterior lightly browned." },
+      { step: 3, text: "Transfer the 1 lb sushi-grade tuna block to a plate, rest it for 2 minutes, and slice it very thinly across the grain." },
+      { step: 4, text: "Arrange the 1 cup shredded lettuce in an even layer on serving plates, keeping the strands loose and crisp." },
+      { step: 5, text: "Fan the thin slices from the 1 lb sushi-grade tuna block over the 1 cup shredded lettuce and serve immediately." }
     ],
     chefNotes: "The contrast between the shatteringly crisp tostada and the buttery soft tuna is everything. Eat immediately before the tostada gets soggy.",
     pairing: "Sparkling water with lime or a light beer",
@@ -1691,11 +1716,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1/4", unit: "cup", item: "cilantro", note: "chopped" }
     ],
     method: [
-      { step: 1, text: "Heat the olive oil in a large, heavy pot with a tight-fitting lid. Sauté the garlic until fragrant." },
-      { step: 2, text: "Add the salsa roja and cook for 1 minute until it bubbles vigorously." },
-      { step: 3, text: "Pour in the sake and bring the liquid to a rolling boil." },
-      { step: 4, text: "Add the scrubbed clams, cover the pot tightly, and steam for 5-7 minutes until all the clams have opened." },
-      { step: 5, text: "Discard any clams that remain shut. Toss with fresh cilantro and serve in bowls with crusty bread." }
+      { step: 1, text: "Heat a large heavy pot over medium heat, add the 1 tbsp olive oil, and warm it for 1 minute until shimmering." },
+      { step: 2, text: "Add the 1/2 cup salsa roja to the pot and cook for 1 minute, stirring until the mixture bubbles steadily." },
+      { step: 3, text: "Pour the 1/2 cup sake into the pot, raise the heat to high, and boil for 2 minutes until the liquid is steaming." },
+      { step: 4, text: "Add the 2 lbs scrubbed littleneck clams, cover the pot tightly, and steam for 5–7 minutes until the shells open." },
+      { step: 5, text: "Remove the lid and discard any of the 2 lbs littleneck clams that remain closed, then serve the opened clams hot." }
     ],
     chefNotes: "Sake has a lower acidity and higher sugar content than white wine, giving the broth a beautifully mellow, sweet finish.",
     pairing: "Chilled dry sake",
@@ -1765,11 +1790,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "cup", item: "Monterey Jack cheese", note: "shredded" }
     ],
     method: [
-      { step: 1, text: "Preheat oven to 375°F (190°C). Gently warm the corn tortillas so they are pliable." },
-      { step: 2, text: "In a bowl, mix the crema, miso paste, and broth until smooth to create the sauce." },
-      { step: 3, text: "Fill each tortilla with a spoonful of crab meat, roll tightly, and place seam-side down in a baking dish." },
-      { step: 4, text: "Pour the miso crema entirely over the enchiladas and blanket with the shredded cheese." },
-      { step: 5, text: "Bake for 20 minutes until bubbling and golden. Serve immediately." }
+      { step: 1, text: "Heat the oven to 375°F (190°C), preparing to bake the 8 corn tortillas and 1 lb lump crab meat in a 9x13-inch baking dish." },
+      { step: 2, text: "Warm the 8 corn tortillas in a dry skillet over medium-low heat for 20–30 seconds per side, until flexible." },
+      { step: 3, text: "Divide the 1 lb lump crab meat evenly among the 8 tortillas, placing it in a strip near each tortilla’s lower edge." },
+      { step: 4, text: "Roll the 8 filled tortillas tightly and arrange them seam-side down in a 9x13-inch baking dish." },
+      { step: 5, text: "Bake the 8 rolled tortillas at 375°F (190°C) for 15–20 minutes, until the edges are crisp and the 1 lb crab meat is steaming." },
+      { step: 6, text: "Rest the 8 crab enchiladas in the baking dish for 5 minutes, until the tortillas remain warm and firm enough to serve." }
     ],
     chefNotes: "Do not over-season the crab meat; let the salty miso crema do the heavy lifting for the dish.",
     pairing: "Chardonnay or a crisp white wine",
@@ -1801,11 +1827,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "cup", item: "steamed white rice" }
     ],
     method: [
-      { step: 1, text: "Season the salmon fillets well with salt." },
-      { step: 2, text: "Heat the olive oil in a skillet over medium-high heat. Place the salmon skin-side down and cook for 4-5 minutes until the skin is shatteringly crisp." },
-      { step: 3, text: "Flip the salmon and cook for 1-2 more minutes until just cooked through." },
-      { step: 4, text: "Gently heat the mole verde in a separate saucepan until warm." },
-      { step: 5, text: "Pour a generous pool of mole verde onto a plate, place the salmon in the center, and garnish with pepitas." }
+      { step: 1, text: "Heat a dry skillet over medium-high heat for 2 minutes, large enough to hold the 2 skin-on salmon fillets without crowding." },
+      { step: 2, text: "Place the 2 salmon fillets skin-side down and cook for 4–5 minutes, until the skin is crisp and the flesh is opaque halfway up." },
+      { step: 3, text: "Flip the 2 salmon fillets and cook for 1–2 minutes, until the centers are just opaque and flake easily." },
+      { step: 4, text: "Warm the 1 cup prepared mole verde in a small saucepan over low heat for 3–4 minutes, stirring until steaming but not boiling." },
+      { step: 5, text: "Spoon the warm 1 cup prepared mole verde onto two plates, dividing it evenly beneath the 2 salmon fillets." },
+      { step: 6, text: "Add the 1 cup steamed white rice beside the 2 salmon fillets and serve immediately while the mole verde is hot." }
     ],
     chefNotes: "Mole verde burns easily because of the pumpkin seeds; heat it very gently.",
     pairing: "A crisp Sauvignon Blanc",
@@ -1840,11 +1867,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "Kewpie mayo" }
     ],
     method: [
-      { step: 1, text: "In a small bowl, whisk the Kewpie mayo and wasabi paste until smooth, then toss with the shredded cabbage." },
-      { step: 2, text: "In a separate bowl, lightly mix the tempura batter with the ice water. Lumps are essential for a crispy crust." },
-      { step: 3, text: "Heat the oil to 350°F (175°C). Dip the fish chunks into the batter." },
-      { step: 4, text: "Fry the fish in batches for 3-4 minutes until the batter is crisp but still pale in color." },
-      { step: 5, text: "Assemble the tacos with the crispy tempura fish and a generous pile of the wasabi slaw." }
+      { step: 1, text: "Whisk 2 tbsp Kewpie mayo with 1 tbsp wasabi paste, then toss in 1 cup shredded cabbage until evenly coated." },
+      { step: 2, text: "Prepare 1 cup tempura batter mix according to its package directions; keep the batter cold and slightly lumpy." },
+      { step: 3, text: "Heat a deep fryer or heavy 4-quart pot to 350°F (175°C), then coat all chunks from 1 lb white fish in the batter." },
+      { step: 4, text: "Fry the battered 1 lb white fish in batches for 3–4 minutes, turning once, until crisp, pale golden, and cooked through." },
+      { step: 5, text: "Warm 8 corn tortillas in a dry skillet over medium heat for 30 seconds per side, then fill with fish and 1 cup shredded cabbage." }
     ],
     chefNotes: "Tempura batter must be kept ice cold, and you must barely mix it. Overmixing develops gluten and ruins the delicate crunch.",
     pairing: "Cold Japanese lager",
@@ -1914,11 +1941,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "2", unit: "cups", item: "steamed white rice" }
     ],
     method: [
-      { step: 1, text: "In a small bowl, whisk the miso paste, soy sauce, mirin, and a splash of water to form a sauce." },
-      { step: 2, text: "Heat a wok or large skillet over high heat with a little oil." },
-      { step: 3, text: "Stir-fry the broccoli and snap peas for 3 minutes until bright green and slightly tender." },
-      { step: 4, text: "Add the shrimp and stir-fry for 2 minutes until just pink." },
-      { step: 5, text: "Pour in the miso sauce, tossing constantly until it boils and heavily glazes the shrimp. Serve over rice." }
+      { step: 1, text: "Whisk 2 tbsp white miso paste, 1 tbsp soy sauce, and 1 tbsp mirin in a small bowl until smooth and pourable." },
+      { step: 2, text: "Heat a large 12-inch wok or skillet over high heat for 2 minutes; it should be visibly hot before cooking 1 cup broccoli florets." },
+      { step: 3, text: "Add 1 cup broccoli florets and 1 cup snap peas; stir-fry for 3 minutes until bright green and crisp-tender." },
+      { step: 4, text: "Add 1 lb peeled and deveined shrimp; stir-fry for 2–3 minutes, turning, until opaque and just pink throughout." },
+      { step: 5, text: "Pour in the sauce made with 2 tbsp white miso paste, 1 tbsp soy sauce, and 1 tbsp mirin; toss for 1 minute until glossy." },
+      { step: 6, text: "Divide 2 cups steamed white rice among bowls and spoon the glazed shrimp and vegetables over it while hot." }
     ],
     chefNotes: "Mix the miso sauce well before adding it to the wok to ensure there are no clumps of paste in the final dish.",
     pairing: "Cold green tea or lager",
@@ -1952,11 +1980,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "rice vinegar" }
     ],
     method: [
-      { step: 1, text: "In a mixing bowl, combine the diced tuna with the soy sauce, sesame oil, and sesame seeds." },
-      { step: 2, text: "Let the tuna marinate in the fridge for 10 minutes to absorb the flavors." },
-      { step: 3, text: "Toss the shredded cabbage with the rice vinegar and a pinch of salt to make a quick, bright slaw." },
-      { step: 4, text: "Fill the crispy taco shells with a layer of the cabbage slaw." },
-      { step: 5, text: "Spoon the marinated tuna generously over the slaw and serve immediately." }
+      { step: 1, text: "Combine 1 lb diced sushi-grade ahi tuna, 2 tbsp soy sauce, 1 tbsp sesame oil, and 1 tbsp sesame seeds in a bowl." },
+      { step: 2, text: "Cover the tuna mixture and refrigerate it for 10 minutes, until glossy and evenly coated with the marinade." },
+      { step: 3, text: "Toss 2 cups shredded cabbage with 1 tbsp rice vinegar in a separate bowl until lightly coated and crisp." },
+      { step: 4, text: "Arrange 8 crispy taco shells on a serving platter, checking that each shell is intact and stable before filling." },
+      { step: 5, text: "Divide the cabbage slaw among 8 shells, top with the marinated 1 lb tuna, and serve immediately while crisp." }
     ],
     chefNotes: "Dicing the tuna evenly ensures the marinade penetrates uniformly. Always keep the fish as cold as possible until serving.",
     pairing: "A crisp Pilsner or sparkling water",
@@ -2026,11 +2054,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1/4", unit: "cup", item: "Manchego cheese", note: "grated" }
     ],
     method: [
-      { step: 1, text: "Heat the olive oil in a pot over medium heat. Add the broken pasta and toast constantly until deeply golden brown." },
-      { step: 2, text: "Carefully pour in the crushed tomatoes. It will sputter. Cook for 2 minutes to reduce the liquid." },
-      { step: 3, text: "Pour in the vegetable broth and bring the soup to a gentle simmer." },
-      { step: 4, text: "In a small bowl, dissolve the miso paste in a ladle of hot broth, then stir it back into the pot." },
-      { step: 5, text: "Simmer until the pasta is tender, about 8 minutes. Serve hot, topped with grated Manchego." }
+      { step: 1, text: "Separate 8 oz fideos or angel hair pasta into pieces about 2 inches long before heating the pan." },
+      { step: 2, text: "Heat 2 tbsp olive oil in a large skillet over medium heat until it shimmers but does not smoke." },
+      { step: 3, text: "Add the 8 oz pasta pieces to the hot oil and stir constantly so they become evenly coated." },
+      { step: 4, text: "Toast the 8 oz pasta in the 2 tbsp olive oil for 5–7 minutes, stirring until evenly deep golden brown." },
+      { step: 5, text: "Transfer the toasted 8 oz pasta to a serving bowl and let it cool briefly; it should look crisp and evenly browned." }
     ],
     chefNotes: "Do not walk away when toasting the pasta. It goes from nutty brown to burnt in seconds.",
     pairing: "A light Pilsner",
@@ -2063,11 +2091,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1/2", unit: "cup", item: "frozen peas" }
     ],
     method: [
-      { step: 1, text: "In a large Dutch oven, heat the oil and sear the chicken thighs skin-side down until golden. Remove from the pot." },
-      { step: 2, text: "Add the rice to the pot and toast in the rendered chicken fat for 2 minutes." },
-      { step: 3, text: "Whisk the miso paste into the chicken broth until smooth, then pour it over the rice." },
-      { step: 4, text: "Place the chicken back into the pot on top of the rice. Cover, reduce heat to low, and simmer for 20 minutes." },
-      { step: 5, text: "Turn off the heat, stir in the frozen peas, and let rest covered for 10 minutes before serving." }
+      { step: 1, text: "Heat 2 tbsp olive oil in a large Dutch oven over medium-high. Add 1.5 lbs bone-in chicken thighs skin-side down; sear 6–8 minutes until golden, then remove." },
+      { step: 2, text: "Add 1 cup long-grain white rice to the Dutch oven; toast over medium heat for 2 minutes, stirring, until the grains look glossy and lightly golden." },
+      { step: 3, text: "Whisk 2 tbsp white miso paste into 2 cups chicken broth until smooth, then pour the mixture over the toasted rice." },
+      { step: 4, text: "Return the chicken to the pot, cover, and simmer over low heat for 20 minutes, until the rice is tender and the chicken reaches 165°F inside." },
+      { step: 5, text: "Turn off the heat, stir in 1/2 cup frozen peas, cover, and rest for 10 minutes, until the peas are hot and the rice is fluffy." }
     ],
     chefNotes: "Letting the pot rest off the heat is crucial; it allows the rice to finish steaming perfectly without burning the bottom.",
     pairing: "A crisp pale ale",
@@ -2100,11 +2128,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1/2", unit: "cup", item: "scallions", note: "chopped" }
     ],
     method: [
-      { step: 1, text: "Heat the oil in a wok until it's smoking hot. Pour in the beaten eggs and scramble them rapidly for 15 seconds." },
-      { step: 2, text: "Add the cold rice, using a spatula to break up any clumps immediately." },
-      { step: 3, text: "Toss the rice vigorously, allowing it to fry and toast against the hot metal for 3 minutes." },
-      { step: 4, text: "In a small bowl, mix the soy sauce and chipotle puree, then pour it evenly over the rice." },
-      { step: 5, text: "Toss everything until the rice takes on a uniform dark color. Toss in the scallions and serve hot." }
+      { step: 1, text: "Heat 2 tbsp vegetable oil in a 12-inch wok over high heat for 1 minute, until it shimmers but does not smoke." },
+      { step: 2, text: "Add 3 cups day-old white rice (cold); break up clumps and stir-fry over high heat for 3 minutes, until the grains separate and look dry." },
+      { step: 3, text: "Pour 2 tbsp soy sauce evenly over the rice; toss over high heat for 1 minute, until every grain is lightly browned and coated." },
+      { step: 4, text: "Add 1/2 cup scallions (chopped) and toss over high heat for 30 seconds, until they turn bright green and the rice steams." },
+      { step: 5, text: "Turn off the heat and let the fried rice stand in the wok for 1 minute, until it is visibly steaming, then serve hot." }
     ],
     chefNotes: "Fresh rice contains too much moisture for fried rice; it will turn to mush. Always use cold, day-old rice.",
     pairing: "Cold Mexican lager",
@@ -2173,11 +2201,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "3", unit: "tbsp", item: "yakisoba sauce" }
     ],
     method: [
-      { step: 1, text: "Marinate the skirt steak in the lime juice and soy sauce for at least 2 hours." },
-      { step: 2, text: "Grill or pan-sear the steak over blazing high heat for 3 minutes per side until charred. Slice thinly." },
-      { step: 3, text: "In a wok, stir-fry the cabbage until softened. Add the rinsed yakisoba noodles." },
-      { step: 4, text: "Pour the yakisoba sauce over the noodles and toss until heated through and coated." },
-      { step: 5, text: "Serve the hot noodles on a large plate, crowned generously with the sliced carne asada." }
+      { step: 1, text: "Place the 1 lb skirt steak in a shallow dish, coat it with the 3 tbsp yakisoba sauce, and marinate for 2 hours." },
+      { step: 2, text: "Heat a 10-inch skillet or grill over blazing-high heat for 5 minutes, until the surface is visibly smoking." },
+      { step: 3, text: "Cook the 1 lb skirt steak over blazing-high heat for 3 minutes per side, until charred outside and no longer raw inside." },
+      { step: 4, text: "Transfer the 1 lb skirt steak to a cutting board, rest it for 5 minutes, then shred it into thin carne-asada pieces." },
+      { step: 5, text: "Serve the shredded 1 lb skirt steak immediately, confirming the 3 tbsp yakisoba sauce has cooked onto its surface." }
     ],
     chefNotes: "Rinse yakisoba noodles in hot water before stir-frying; it loosens the oil they are packed in and prevents them from breaking.",
     pairing: "Cold Pacifico",
@@ -2210,11 +2238,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "clove", item: "garlic", note: "minced" }
     ],
     method: [
-      { step: 1, text: "Boil the pasta in salted water until al dente. Reserve a small amount of pasta water." },
-      { step: 2, text: "In a skillet, melt the butter and aggressively sauté the mushrooms until they are deeply browned and their water has evaporated." },
-      { step: 3, text: "Add the minced garlic and cook for 30 seconds until fragrant." },
-      { step: 4, text: "Lower the heat. Whisk the white miso into the heavy cream, then pour it into the skillet. Simmer gently until thickened." },
-      { step: 5, text: "Toss the pasta into the cream sauce, using pasta water to thin it if it gets too heavy. Serve immediately." }
+      { step: 1, text: "Bring a saucepan of cooking water to a rolling boil, then cook the 1/2 lb fettuccine or tagliatelle for 8–10 minutes." },
+      { step: 2, text: "Drain the 1/2 lb fettuccine or tagliatelle when it is tender but still slightly firm in the center." },
+      { step: 3, text: "Melt the 2 tbsp butter in a 10-inch skillet over medium-low heat for 2 minutes, until foamy but not browned." },
+      { step: 4, text: "Add the drained 1/2 lb fettuccine or tagliatelle to the 2 tbsp melted butter and toss over low heat for 2 minutes." },
+      { step: 5, text: "Serve the 1/2 lb buttered fettuccine or tagliatelle immediately, while the noodles look glossy and the 2 tbsp butter coats them." }
     ],
     chefNotes: "Mushrooms hold a lot of water. Do not salt them until after they have browned, or they will steam instead of sear.",
     pairing: "An oaky Chardonnay",
@@ -2247,11 +2275,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1/4", unit: "cup", item: "scallions", note: "chopped" }
     ],
     method: [
-      { step: 1, text: "In a heavy saucepan, melt the butter over medium heat. Add the rice and toast for 2 minutes until translucent at the edges." },
-      { step: 2, text: "Pour in the white wine and stir continuously until the liquid is entirely absorbed." },
-      { step: 3, text: "Add the hot dashi one ladle at a time, stirring frequently and waiting for the liquid to absorb before adding more." },
-      { step: 4, text: "Continue this process for about 20 minutes until the rice is creamy but still has a slight bite." },
-      { step: 5, text: "Remove from heat. Vigorously stir in the cotija cheese until the risotto is incredibly creamy. Top with scallions." }
+      { step: 1, text: "Heat a 10-inch heavy saucepan over medium heat, then add the 1.5 cups Arborio rice and toast for 2 minutes." },
+      { step: 2, text: "Pour the 1/2 cup dry white wine into the saucepan and stir continuously for 3–5 minutes, until fully absorbed." },
+      { step: 3, text: "Reduce the heat to low and stir the 1.5 cups Arborio rice continuously for 20 minutes, until tender and visibly creamy." },
+      { step: 4, text: "Remove the saucepan from the heat and fold in the 1/4 cup chopped scallions, distributing them evenly throughout the rice." },
+      { step: 5, text: "Rest the 1.5 cups Arborio rice for 2 minutes, then serve hot when it looks glossy and holds a soft mound." }
     ],
     chefNotes: "Cotija is much saltier and funkier than parmesan. Taste the final dish before adding any additional salt.",
     pairing: "Crisp dry sake",
@@ -2285,11 +2313,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1/4", unit: "cup", item: "cilantro", note: "chopped" }
     ],
     method: [
-      { step: 1, text: "Toast the dried chiles in a pan, rehydrate them, and blend them with a splash of broth until smooth." },
-      { step: 2, text: "Sear the beef chuck roast in a heavy pot until browned. Pour the chile puree and the remaining broth over the beef." },
-      { step: 3, text: "Simmer covered on low heat for 3 hours until the beef is incredibly tender and the broth is rich and dark." },
-      { step: 4, text: "Remove the beef and shred it. Keep the consommé simmering." },
-      { step: 5, text: "Boil the ramen noodles, divide into bowls, pour over the hot consommé, and top with the shredded beef, onions, and cilantro." }
+      { step: 1, text: "Heat a 6-quart Dutch oven over medium-high heat for 3 minutes, then add the 2 lbs beef chuck roast (diced)." },
+      { step: 2, text: "Sear the 2 lbs beef chuck roast (diced) for 8–10 minutes, turning often, until every side is deeply browned." },
+      { step: 3, text: "Cover the Dutch oven, reduce the heat to low, and cook the 2 lbs beef chuck roast (diced) for 3 hours until fork-tender." },
+      { step: 4, text: "Remove the 2 lbs beef chuck roast (diced) from the pot and shred it while hot, keeping its cooking juices in the Dutch oven." },
+      { step: 5, text: "Keep the cooking juices hot over low heat, then serve the shredded 2 lbs beef chuck roast with the 1/4 cup cilantro (chopped)." }
     ],
     chefNotes: "Do not skim the fat off the consommé before serving. That red, chile-infused fat is crucial for coating the noodles.",
     pairing: "Mexican Coke or a dark stout",
@@ -2322,11 +2350,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "black pepper" }
     ],
     method: [
-      { step: 1, text: "Boil the frozen udon noodles for 1 minute until just loosened. Reserve 1/2 cup of the starchy water." },
-      { step: 2, text: "In a bowl, whisk the egg yolks, parmesan cheese, white miso paste, and black pepper." },
-      { step: 3, text: "In a skillet, crisp the pancetta over medium heat until the fat has completely rendered." },
-      { step: 4, text: "Turn off the heat entirely. Add the udon noodles to the skillet, tossing them in the hot pork fat." },
-      { step: 5, text: "Quickly pour the egg and cheese mixture into the pan, tossing vigorously and adding hot pasta water until a creamy sauce forms." }
+      { step: 1, text: "Boil the 2 portions frozen udon noodles (diced) for 1 minute until loosened but still springy, then reserve the cooking water." },
+      { step: 2, text: "Whisk the 2 egg yolks (grated), 1 tbsp white miso paste, and 1 tsp black pepper in a bowl for 1 minute until smooth." },
+      { step: 3, text: "Heat a 10-inch skillet over medium-low heat for 2 minutes, keeping the pan warm but not hot enough to set the egg mixture." },
+      { step: 4, text: "Add the 2 portions frozen udon noodles (diced) to the warm skillet and toss for 1 minute until evenly heated and glossy." },
+      { step: 5, text: "Turn off the heat, add the egg mixture, and toss the 2 portions frozen udon noodles with cooking water until creamy and smooth." }
     ],
     chefNotes: "The heat must be off when you add the egg mixture, or it will scramble instantly.",
     pairing: "A dry white wine or cold sake",
@@ -2359,11 +2387,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "chipotle in adobo", note: "pureed" }
     ],
     method: [
-      { step: 1, text: "Boil the pasta in salted water until al dente, then drain well." },
-      { step: 2, text: "In a saucepan, melt the butter and whisk in the flour to create a roux. Cook for 2 minutes." },
-      { step: 3, text: "Gradually whisk in the whole milk until the sauce thickens and bubbles gently." },
-      { step: 4, text: "Remove from heat. Stir in the shredded cheese and chipotle puree until completely smooth." },
-      { step: 5, text: "Fold the pasta into the cheese sauce, transfer to a baking dish, and broil until bubbly and golden brown." }
+      { step: 1, text: "Boil the 1/2 lb macaroni or shell pasta (shredded) for 8–10 minutes until al dente, then reserve the cooking water." },
+      { step: 2, text: "Drain the 1/2 lb macaroni or shell pasta (shredded) thoroughly after cooking, leaving it firm enough to finish under the broiler." },
+      { step: 3, text: "Heat a 10-inch skillet over medium-low heat, add the 2 tbsp chipotle in adobo (pureed), and warm for 2 minutes until fragrant." },
+      { step: 4, text: "Add the 1/2 lb macaroni or shell pasta (shredded) and toss with the 2 tbsp chipotle in adobo (pureed) for 2 minutes until coated." },
+      { step: 5, text: "Transfer the pasta to an 8-inch baking dish and broil on high for 2–3 minutes until the surface is hot and lightly browned." }
     ],
     chefNotes: "Always shred your own cheese. Pre-shredded cheese contains anti-caking agents that make the sauce grainy.",
     pairing: "A crisp IPA or cold lager",
@@ -2396,11 +2424,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1/4", unit: "cup", item: "scallions", note: "sliced" }
     ],
     method: [
-      { step: 1, text: "Boil the somen noodles for exactly 2 minutes. They cook incredibly fast." },
-      { step: 2, text: "Drain and immediately shock the noodles in a bowl of ice water, rubbing them gently to remove excess starch." },
-      { step: 3, text: "In a bowl, mix the salsa macha, soy sauce, and rice vinegar." },
-      { step: 4, text: "Drain the cold noodles thoroughly and toss them vigorously in the chili oil mixture." },
-      { step: 5, text: "Top the cold, spicy noodles with the chilled shrimp and sliced scallions." }
+      { step: 1, text: "Bring a large pot of water to a rolling boil over high heat, then add the 2 bundles somen noodles." },
+      { step: 2, text: "Boil the 2 bundles somen noodles for exactly 2 minutes, until flexible but still firm in the center." },
+      { step: 3, text: "Drain the 2 bundles somen noodles and plunge them into ice water for 1 minute, rubbing gently to remove starch." },
+      { step: 4, text: "Drain the 2 bundles somen noodles thoroughly, then toss them with the 1/4 cup scallions until evenly distributed." },
+      { step: 5, text: "Serve the 2 bundles somen noodles cold with the 1/4 cup scallions, when the noodles look glossy and springy." }
     ],
     chefNotes: "Somen must be washed in ice water vigorously. If you just rinse them, they will become a gummy mess.",
     pairing: "Iced green tea or a light beer",
@@ -2434,11 +2462,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "clove", item: "garlic", note: "minced" }
     ],
     method: [
-      { step: 1, text: "In a saucepan, whisk the squid ink into the seafood broth and bring to a simmer." },
-      { step: 2, text: "In a large skillet, toast the rice in a little oil for 2 minutes." },
-      { step: 3, text: "Pour the black broth over the rice, cover, and simmer on low for 15 minutes." },
-      { step: 4, text: "Nestle the mixed seafood into the rice, cover, and cook for 5 more minutes until the seafood is opaque." },
-      { step: 5, text: "Whisk the Kewpie mayo, miso paste, and garlic together. Serve the rice with heavy dollops of the miso aioli." }
+      { step: 1, text: "Measure the 1.5 cups short-grain rice and place it in a covered 2-quart saucepan over medium heat." },
+      { step: 2, text: "Cook the 1.5 cups short-grain rice covered over low heat for 15 minutes, until tender and no liquid remains." },
+      { step: 3, text: "Remove the 1.5 cups short-grain rice from the heat and let it stand covered for 5 minutes, until steam subsides." },
+      { step: 4, text: "Stir the 1/4 cup Kewpie mayo in a small bowl until smooth and glossy, with no visible lumps." },
+      { step: 5, text: "Serve the 1.5 cups short-grain rice warm with the 1/4 cup Kewpie mayo spooned over each portion." }
     ],
     chefNotes: "Squid ink stains everything it touches. Be careful when handling the packets.",
     pairing: "Albariño or a dry white wine",
@@ -2471,11 +2499,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "soy sauce" }
     ],
     method: [
-      { step: 1, text: "In a skillet, brown the ground pork until crispy. Stir in half of the chipotle puree to glaze the meat." },
-      { step: 2, text: "In a pot, whisk the tahini, soy sauce, and remaining chipotle puree into the chicken broth. Bring to a simmer." },
-      { step: 3, text: "The broth should be creamy and rich; do not boil vigorously, or the sesame paste might separate." },
-      { step: 4, text: "Boil the ramen noodles until al dente, then drain well." },
-      { step: 5, text: "Place the noodles in bowls, pour over the hot sesame broth, and top with the crispy chipotle pork." }
+      { step: 1, text: "Pour the 3 cups chicken broth into a 3-quart saucepan and warm it over medium heat until steaming." },
+      { step: 2, text: "Whisk the 3 tbsp tahini and 2 tbsp soy sauce into the 3 cups chicken broth until completely smooth." },
+      { step: 3, text: "Reduce the saucepan to low heat and simmer the 3 cups chicken broth mixture for 5 minutes without boiling." },
+      { step: 4, text: "Bring a separate large pot of water to a boil, then cook the 2 portions fresh ramen noodles for 2 minutes until springy." },
+      { step: 5, text: "Drain the 2 portions fresh ramen noodles thoroughly, shaking the strainer gently until excess water no longer drips." },
+      { step: 6, text: "Divide the 2 portions fresh ramen noodles between bowls and pour over the hot 3 cups chicken broth mixture." }
     ],
     chefNotes: "Whisk the tahini with a little hot broth first before adding it to the main pot to ensure it emulsifies smoothly.",
     pairing: "A cold IPA or Mexican lager",
@@ -2508,11 +2537,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "sesame seeds" }
     ],
     method: [
-      { step: 1, text: "In a saucepan, gently heat the dashi, soy sauce, and mole paste just until the mole dissolves. Chill the broth completely in the fridge." },
-      { step: 2, text: "Boil the soba noodles according to package instructions until tender." },
-      { step: 3, text: "Drain and immediately rinse the noodles under cold running water, scrubbing them to remove excess starch." },
-      { step: 4, text: "Divide the chilled mole-tsuyu broth into small dipping bowls." },
-      { step: 5, text: "Serve the cold noodles on a bamboo mat or plate, garnished with scallions and sesame seeds, ready to dip." }
+      { step: 1, text: "Refrigerate the 1/4 cup soy sauce in a covered dipping bowl for at least 30 minutes, until thoroughly chilled." },
+      { step: 2, text: "Bring a 3-quart pot to a rolling boil over high heat, then cook the 2 bundles soba noodles for 4–6 minutes until springy." },
+      { step: 3, text: "Drain the 2 bundles soba noodles immediately, rinse under cold running water for 1 minute, and gently rub away excess starch." },
+      { step: 4, text: "Divide the chilled 1/4 cup soy sauce among small dipping bowls, keeping each portion cold until serving." },
+      { step: 5, text: "Arrange the 2 bundles chilled soba noodles on a serving plate, sprinkle with the 1 tbsp sesame seeds, and serve with dipping bowls." }
     ],
     chefNotes: "Soba noodles must be aggressively washed in cold water, or they will stick together into a gummy clump.",
     pairing: "Iced barley tea or cold sake",
@@ -2545,11 +2574,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "lime juice" }
     ],
     method: [
-      { step: 1, text: "Rinse the yakisoba noodles under hot water to untangle them." },
-      { step: 2, text: "In a large wok or skillet, fry the pork belly slices until crispy. Leave the rendered fat in the pan." },
-      { step: 3, text: "Add the cabbage and carrots, stir-frying over high heat until slightly blistered and tender." },
-      { step: 4, text: "Toss in the noodles and the yakisoba sauce. Stir-fry vigorously to coat the noodles and slightly char them." },
-      { step: 5, text: "Remove from heat, squeeze the fresh lime juice over the top, toss once more, and serve." }
+      { step: 1, text: "Rinse the 4 portions yakisoba noodles under hot running water for 1 minute, separating them until loose, then drain thoroughly." },
+      { step: 2, text: "Heat a 12-inch wok or skillet over high heat for 2 minutes, until a drop of water evaporates immediately." },
+      { step: 3, text: "Add the 3 cups shredded cabbage and stir-fry over high heat for 3–4 minutes, until wilted with lightly browned edges." },
+      { step: 4, text: "Add the 4 portions yakisoba noodles and 1/2 cup yakisoba sauce, then stir-fry for 3–4 minutes until coated and slightly charred." },
+      { step: 5, text: "Remove the wok from the heat, add the 1 tbsp lime juice, toss for 30 seconds, and serve while the noodles are steaming hot." }
     ],
     chefNotes: "The lime juice at the very end brightens the extremely rich, sweet yakisoba sauce, giving the dish a fresh finish.",
     pairing: "Cold Japanese lager",
@@ -2582,11 +2611,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "2", unit: "", item: "carrots", note: "cut into chunks" }
     ],
     method: [
-      { step: 1, text: "In a heavy pot, brown the chicken chunks in oil, then add the onions and carrots, sautéing until soft." },
-      { step: 2, text: "Add 4 cups of water or chicken broth. Bring to a boil, then simmer for 15 minutes until vegetables are tender." },
-      { step: 3, text: "Turn off the heat entirely. Break the curry blocks into the pot and stir until completely dissolved." },
-      { step: 4, text: "Whisk the white miso paste and chipotle puree into the thick sauce." },
-      { step: 5, text: "Turn the heat to low and simmer for 5 minutes until glossy. Serve hot over steamed rice." }
+      { step: 1, text: "Heat a 5-quart heavy pot over medium-high heat for 2 minutes, then add the 1.5 lbs chicken thighs and brown for 8–10 minutes." },
+      { step: 2, text: "Add the 2 carrots cut into chunks and cook with the 1.5 lbs chicken thighs over medium heat for 5 minutes, stirring occasionally." },
+      { step: 3, text: "Cover the pot and simmer the 1.5 lbs chicken thighs and 2 carrots over low heat for 10 minutes, until the chicken reaches 165°F." },
+      { step: 4, text: "Turn off the heat, add the 1 box Japanese curry roux blocks, and stir for 2–3 minutes until completely melted and thickened." },
+      { step: 5, text: "Stir in the 1 tbsp white miso paste, return the pot to low heat, and simmer for 5 minutes until glossy and the carrots are tender." }
     ],
     chefNotes: "Adding the miso at the very end ensures the delicate fermented notes aren't boiled away by the rolling stew.",
     pairing: "Cold amber ale",
@@ -2620,11 +2649,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "soy sauce" }
     ],
     method: [
-      { step: 1, text: "In a blender, puree the cilantro, jalapeños, garlic, cumin, and a splash of coconut milk until very smooth." },
-      { step: 2, text: "In a large pot, sauté the green puree over medium heat until fragrant and slightly reduced." },
-      { step: 3, text: "Pour in the remaining coconut milk and soy sauce, bringing the broth to a gentle simmer." },
-      { step: 4, text: "Add the chicken or tofu, cooking gently for 10 minutes until cooked through." },
-      { step: 5, text: "Serve the bright green, aromatic curry in shallow bowls over white rice." }
+      { step: 1, text: "Add the 2 cloves garlic, 1 tsp ground cumin, and 1 can coconut milk to a blender, then puree until smooth." },
+      { step: 2, text: "Heat a large 6-quart pot over medium heat, add the blended 1 can coconut milk mixture, and cook for 5 minutes." },
+      { step: 3, text: "Stir the 1 tbsp soy sauce into the pot and simmer the coconut mixture for 3 minutes until fragrant and slightly thickened." },
+      { step: 4, text: "Add the 1 lb cubed chicken breast or tofu, cover the pot, and simmer gently for 10 minutes until chicken is cooked through." },
+      { step: 5, text: "Uncover the 1 lb chicken breast or tofu curry and simmer for 2 minutes until the sauce lightly coats each piece." }
     ],
     chefNotes: "Do not let the coconut milk boil vigorously; it can 'break' or separate, leaving an oily layer on top.",
     pairing: "A crisp Sauvignon Blanc or an IPA",
@@ -2657,11 +2686,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "toasted sesame seeds" }
     ],
     method: [
-      { step: 1, text: "Press the tofu for 15 minutes to remove excess water. Cut into bite-sized cubes." },
-      { step: 2, text: "In a heavy pot, brown the tofu cubes and mushrooms in olive oil until a crust forms." },
-      { step: 3, text: "In a bowl, whisk the mole paste into the vegetable broth until completely dissolved." },
-      { step: 4, text: "Pour the mole liquid over the tofu and mushrooms. Lower the heat and simmer gently for 15 minutes." },
-      { step: 5, text: "Serve the heavy, glossy stew over steamed rice, garnished with toasted sesame seeds." }
+      { step: 1, text: "Press the 1 block firm tofu for 15 minutes, then cut it into even bite-sized cubes so they brown uniformly." },
+      { step: 2, text: "Heat a 10-inch skillet over medium-high heat, add the 1 tbsp olive oil, and warm it until visibly shimmering." },
+      { step: 3, text: "Add the 1 block cubed firm tofu and cook for 8 minutes, turning occasionally until several sides are deeply golden." },
+      { step: 4, text: "Reduce the skillet to low heat, add the 1 cup prepared mole negro paste, and stir for 15 minutes until glossy and thick." },
+      { step: 5, text: "Transfer the tofu stew to a serving bowl and sprinkle the 1 tbsp toasted sesame seeds over the glossy mole coating." }
     ],
     chefNotes: "Pressing the tofu is non-negotiable. If it's waterlogged, it will steam instead of sear, and it won't absorb the mole.",
     pairing: "Mexican Coke or a dark stout",
@@ -2694,11 +2723,13 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "oil" }
     ],
     method: [
-      { step: 1, text: "Sear the cubed pork shoulder in a heavy pot until browned. Add the sliced onions and cook until soft." },
-      { step: 2, text: "Add 4 cups of water to the pot. Bring to a boil, then cover and simmer on low for 1 hour to tenderize the pork." },
-      { step: 3, text: "Add the cubed potatoes and simmer for another 15 minutes until tender." },
-      { step: 4, text: "Turn off the heat. Stir in the curry roux blocks and the chipotle puree until the sauce thickens and shines." },
-      { step: 5, text: "Simmer on low for 5 minutes. Serve massive ladles of the curry over sticky white rice." }
+      { step: 1, text: "Heat a heavy 6-quart pot over medium-high heat, add the 1 tbsp oil, and warm it until it shimmers." },
+      { step: 2, text: "Add the 1.5 lbs cubed pork shoulder and sear for 8 minutes, turning until browned on most sides." },
+      { step: 3, text: "Add the 1 large sliced onion and cook for 6 minutes, stirring until softened and lightly golden around the edges." },
+      { step: 4, text: "Cover the pot and cook the 1.5 lbs pork shoulder over low heat for 1 hour, until tender when pierced." },
+      { step: 5, text: "Add the 2 cubed potatoes, cover, and cook over low heat for 15 minutes until a knife slides into them easily." },
+      { step: 6, text: "Turn off the heat, stir in the 1 box Japanese curry roux blocks, pureed, until the sauce is smooth and thick." },
+      { step: 7, text: "Return the pot to low heat and simmer the curry for 5 minutes, stirring until glossy and the pork is fully tender." }
     ],
     chefNotes: "Pork shoulder needs a long simmer to break down the connective tissue. Don't rush the hour-long braise.",
     pairing: "Cold Japanese lager",
@@ -2730,11 +2761,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1/4", unit: "cup", item: "scallions", note: "sliced" }
     ],
     method: [
-      { step: 1, text: "Toss the cubed butternut squash in olive oil and roast at 400°F (200°C) for 25 minutes until caramelized." },
-      { step: 2, text: "In a pot, bring the dashi to a gentle simmer." },
-      { step: 3, text: "In a small bowl, whisk the miso paste into a ladle of the hot broth until dissolved, then return it to the pot." },
-      { step: 4, text: "Carefully drop the roasted squash into the miso broth and simmer for 5 minutes to meld the flavors." },
-      { step: 5, text: "Ladle the delicate, sweet-and-salty stew into bowls and garnish heavily with scallions." }
+      { step: 1, text: "Preheat the oven to 400°F (200°C), then spread the 1 butternut squash, peeled and cubed, on a rimmed baking sheet." },
+      { step: 2, text: "Roast the 1 butternut squash for 25 minutes at 400°F (200°C), until the cubes are fork-tender and browned at the edges." },
+      { step: 3, text: "Pour the 4 cups dashi or vegetable broth into a 4-quart pot and heat over medium until gently simmering, about 5 minutes." },
+      { step: 4, text: "Add the roasted 1 butternut squash to the 4 cups dashi or vegetable broth and simmer for 5 minutes, until steaming hot." },
+      { step: 5, text: "Ladle the stew made with the 1 butternut squash and 4 cups dashi or vegetable broth into bowls and serve hot." }
     ],
     chefNotes: "Do not boil the stew once the miso is added. High heat destroys the subtle, fermented flavors of the miso.",
     pairing: "Chardonnay or hot green tea",
@@ -2768,11 +2799,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1/4", unit: "cup", item: "cilantro", note: "chopped" }
     ],
     method: [
-      { step: 1, text: "Toast and rehydrate the dried chiles, then blend them with a splash of broth until smooth." },
-      { step: 2, text: "Sear the beef in a large pot. Add the blended chiles and beef broth, cover, and braise on low for 3 hours." },
-      { step: 3, text: "Once the beef is tender, remove it from the pot. You now have a concentrated birria base." },
-      { step: 4, text: "Pour the hot dashi stock and soy sauce into the birria base, thinning it out into a refined, sippable consommé." },
-      { step: 5, text: "Serve in mugs or bowls, topped with a pinch of diced onions and cilantro. (Reserve the beef for tacos)." }
+      { step: 1, text: "Heat a 6-quart Dutch oven over medium-high heat for 3 minutes, then add the 2 lbs beef chuck or short rib, finely diced." },
+      { step: 2, text: "Sear the 2 lbs beef chuck or short rib for 8–10 minutes, stirring occasionally, until browned on most sides." },
+      { step: 3, text: "Cover the Dutch oven and cook the 2 lbs beef at 300°F (150°C) for 3 hours, until fork-tender and releasing juices." },
+      { step: 4, text: "Remove the 2 lbs beef chuck or short rib from the Dutch oven and rest it for 10 minutes, leaving the cooking juices in the pot." },
+      { step: 5, text: "Serve the hot cooking juices with the 2 lbs beef and garnish each portion with the 1/4 cup chopped cilantro." }
     ],
     chefNotes: "Dashi loses its aromatic qualities if boiled too violently. Add it at the end once the braise is finished.",
     pairing: "Mexican Coke or an icy lager",
@@ -2806,11 +2837,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "6", unit: "cups", item: "chicken broth" }
     ],
     method: [
-      { step: 1, text: "In a large pot, simmer the pork shoulder in the chicken broth for 1 hour until tender." },
-      { step: 2, text: "In a blender, puree the tomatillos, cilantro, and toasted pumpkin seeds until smooth." },
-      { step: 3, text: "Stir the green puree into the pork broth and simmer for 15 minutes to cook the tomatillos." },
-      { step: 4, text: "Add the drained hominy to the pot." },
-      { step: 5, text: "Whisk the white miso paste into the stew just before serving. Garnish with shredded cabbage and lime." }
+      { step: 1, text: "Place the 6 cups chicken broth and 1.5 lbs pork shoulder, cubed, in a large pot and simmer gently for 1 hour, until fork-tender." },
+      { step: 2, text: "Blend the 1 lb tomatillos, 1 cup cilantro, and 1/4 cup toasted pumpkin seeds for 1 minute, until the puree is smooth." },
+      { step: 3, text: "Stir the tomatillo puree into the 6 cups chicken broth with the pork and simmer for 15 minutes, until the broth turns bright green." },
+      { step: 4, text: "Add the 1 can white hominy (29oz, drained) and simmer for 10 minutes, until the hominy is heated through and tender." },
+      { step: 5, text: "Remove the stew from the heat and whisk in the 3 tbsp white miso paste until completely dissolved, then serve hot." }
     ],
     chefNotes: "Tomatillos have a sticky residue under their husks. Always rinse them in warm water before blending.",
     pairing: "Margarita on the rocks",
@@ -2843,11 +2874,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "8", unit: "cups", item: "water" }
     ],
     method: [
-      { step: 1, text: "Place the dried pinto beans, onion, garlic, and olive oil in a heavy pot or Dutch oven." },
-      { step: 2, text: "Cover with the water and bring to a rapid boil. Reduce heat to a gentle simmer and cover." },
-      { step: 3, text: "Simmer the beans for 1.5 to 2 hours until they are tender and the liquid has turned into a thick broth." },
-      { step: 4, text: "Remove the onion halves. In a small bowl, dissolve the red miso paste into a ladle of the bean broth." },
-      { step: 5, text: "Stir the miso back into the pot. Serve in bowls with warm tortillas on the side." }
+      { step: 1, text: "Heat a 5-quart Dutch oven over medium heat, add the 1 tbsp olive oil, and cook the 1 white onion and 4 cloves garlic for 3 minutes." },
+      { step: 2, text: "Add the 1 lb dried pinto beans and 8 cups water, then bring the mixture to a rapid boil over high heat." },
+      { step: 3, text: "Reduce the heat to low, cover the Dutch oven, and simmer the 1 lb beans for 1½ to 2 hours until tender." },
+      { step: 4, text: "Remove the 1 white onion, then whisk the 3 tbsp red miso paste into a ladleful of the hot bean broth until smooth." },
+      { step: 5, text: "Stir the dissolved 3 tbsp red miso paste into the pot and simmer for 2 minutes until the 8 cups broth looks smooth and glossy." }
     ],
     chefNotes: "Never salt beans at the beginning of cooking, as it toughens their skins. The miso acts as the salt and should be added at the end.",
     pairing: "Amber ale or cold horchata",
@@ -2880,11 +2911,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "toasted sesame seeds" }
     ],
     method: [
-      { step: 1, text: "Sear the cubed lamb shoulder in olive oil until deeply browned on all sides. Remove the lamb." },
-      { step: 2, text: "Sauté the chopped onion in the remaining lamb fat until translucent." },
-      { step: 3, text: "Whisk the mole negro paste into the beef broth and pour it into the pot, scraping up any browned bits." },
-      { step: 4, text: "Return the lamb, cover, and braise on low heat for 2 hours until the meat is fork-tender." },
-      { step: 5, text: "Serve the heavy stew in shallow bowls, garnished with toasted sesame seeds." }
+      { step: 1, text: "Heat a 5-quart Dutch oven over medium-high heat and sear the 2 lbs cubed lamb shoulder for 8 to 10 minutes until deeply browned." },
+      { step: 2, text: "Reduce the heat to medium, add the 1 cup chopped prepared mole negro paste, and stir for 2 minutes until it coats the lamb." },
+      { step: 3, text: "Cover the Dutch oven, reduce the heat to low, and braise the 2 lbs lamb with the 1 cup mole paste for 2 hours." },
+      { step: 4, text: "After 2 hours, uncover the pot and check that the 2 lbs lamb shoulder is fork-tender and the 1 cup mole paste is thick and glossy." },
+      { step: 5, text: "Transfer the lamb and mole to shallow bowls, then garnish each serving with the 1 tbsp toasted sesame seeds." }
     ],
     chefNotes: "Lamb shoulder has a lot of fat. You may want to skim the top of the stew before serving to prevent it from being overly greasy.",
     pairing: "A bold Syrah or Mezcal",
@@ -2917,11 +2948,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "red miso paste" }
     ],
     method: [
-      { step: 1, text: "In a heavy pot, sauté the diced onions and carrots in a splash of oil until softened." },
-      { step: 2, text: "Stir in the pureed chipotle and cook for 1 minute to toast the spices." },
-      { step: 3, text: "Add the lentils and vegetable broth. Bring to a boil, then reduce heat, cover, and simmer for 30 minutes." },
-      { step: 4, text: "Once the lentils are tender and the stew has thickened, remove from heat." },
-      { step: 5, text: "Whisk the red miso paste into a ladle of the hot broth and stir it back into the pot. Serve immediately." }
+      { step: 1, text: "Heat a 5-quart pot over medium heat, add the 1 diced onion and 2 diced carrots, and cook for 5 minutes until softened." },
+      { step: 2, text: "Stir in the 2 tbsp pureed chipotle in adobo and cook for 1 minute until fragrant and slightly darkened." },
+      { step: 3, text: "Add the 1 cup rinsed lentils and 4 cups vegetable broth, bring to a boil, then reduce the heat to low and cover." },
+      { step: 4, text: "Simmer the 1 cup lentils with the 4 cups broth for 30 minutes until tender and the stew has visibly thickened." },
+      { step: 5, text: "Remove the pot from the heat, whisk the 2 tbsp red miso paste into a ladleful of hot broth, and stir it back into the stew." }
     ],
     chefNotes: "Do not use red lentils for this stew; they cook too quickly and turn to complete mush instead of holding their shape.",
     pairing: "A crisp Pilsner or sparkling water",
@@ -2953,11 +2984,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "cup", item: "cilantro", note: "chopped" }
     ],
     method: [
-      { step: 1, text: "In a heavy pot, brown the chicken thigh chunks in a little oil. Remove and set aside." },
-      { step: 2, text: "Add the quartered tomatillos to the pot, cooking until they begin to break down into a chunky sauce." },
-      { step: 3, text: "Pour in the dashi stock and soy sauce, bringing the mixture to a gentle simmer." },
-      { step: 4, text: "Return the chicken to the pot and simmer for 15 minutes until the chicken is cooked and the broth is deeply flavored." },
-      { step: 5, text: "Stir in the fresh cilantro right before serving. Serve hot over steamed rice." }
+      { step: 1, text: "Heat a heavy 6-quart pot over medium-high heat, add the 1 lb chicken thighs cut into chunks, and brown for 6–8 minutes." },
+      { step: 2, text: "Add the 1 lb tomatillos, husked, rinsed, and quartered, and cook for 8–10 minutes until softened and partly broken down." },
+      { step: 3, text: "Pour in the 4 cups dashi stock, bring the mixture to a gentle simmer over medium heat, and cook for 5 minutes." },
+      { step: 4, text: "Return the browned 1 lb chicken thighs to the pot and simmer uncovered for 15 minutes until cooked through and tender." },
+      { step: 5, text: "Check that the 1 lb chicken thighs are no longer pink inside and the 1 lb tomatillos are soft, then serve the stew hot." }
     ],
     chefNotes: "Dashi has a delicate flavor that can be easily overpowered. Keep the simmer gentle to preserve its oceanic notes.",
     pairing: "A crisp Sauvignon Blanc",
@@ -2990,11 +3021,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "cup", item: "cheddar cheese", note: "for garnish" }
     ],
     method: [
-      { step: 1, text: "In a large pot, brown the ground beef over high heat, breaking it apart with a wooden spoon." },
-      { step: 2, text: "Stir in the chili powder and cook for 1 minute to toast the spices." },
-      { step: 3, text: "Add the crushed tomatoes and kidney beans. Bring to a boil, then reduce heat and simmer for 30 minutes." },
-      { step: 4, text: "Whisk the red miso paste into a ladle of the hot chili until dissolved, then stir it back into the pot." },
-      { step: 5, text: "Simmer for 5 more minutes. Serve in large bowls topped generously with shredded cheddar cheese." }
+      { step: 1, text: "Heat a 6-quart pot over medium-high heat, add the 1.5 lbs ground beef (28oz), and cook for 8–10 minutes until browned." },
+      { step: 2, text: "Break the 1.5 lbs ground beef (28oz) into small crumbles with a wooden spoon as it cooks, leaving no visible pink pieces." },
+      { step: 3, text: "Stir the 1 can kidney beans, drained, into the browned 1.5 lbs ground beef (28oz), and cook over medium heat for 5 minutes." },
+      { step: 4, text: "Reduce the heat to medium-low and cook the 1.5 lbs ground beef (28oz) with the 1 can kidney beans for 10 minutes." },
+      { step: 5, text: "Remove the pot from the heat, divide the beef and beans among bowls, and garnish each serving with the 2 tbsp chili powder." }
     ],
     chefNotes: "Miso is salty. Taste your chili before adding any additional salt, as the miso and canned tomatoes often provide enough.",
     pairing: "An IPA or a stout",
@@ -3028,11 +3059,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "3", unit: "cups", item: "dashi stock" }
     ],
     method: [
-      { step: 1, text: "In a heavy pot, brown the thinly sliced beef quickly. Remove and set aside so it doesn't overcook." },
-      { step: 2, text: "Add the potatoes and carrots to the pot. Pour in the dashi, soy sauce, sugar, and chipotle puree." },
-      { step: 3, text: "Bring to a boil, then cover and simmer for 25 minutes until the potatoes are tender." },
-      { step: 4, text: "Return the beef to the pot and simmer uncovered for 5 minutes until the sauce slightly reduces and glazes the meat." },
-      { step: 5, text: "Serve the stew hot in shallow bowls with a side of steamed rice." }
+      { step: 1, text: "Heat a heavy 6-quart pot over medium-high heat, add the 1 lb thinly sliced beef, and brown it for 2–3 minutes." },
+      { step: 2, text: "Add the 3 large potatoes cut into chunks and the 2 carrots cut into chunks, then cook for 4 minutes until lightly browned." },
+      { step: 3, text: "Pour in the 3 cups dashi stock and the 1/4 cup soy sauce, bring the mixture to a boil, and cook for 3 minutes." },
+      { step: 4, text: "Cover the pot, reduce the heat to low, and simmer the 3 large potatoes and 2 carrots for 25 minutes until fork-tender." },
+      { step: 5, text: "Return the browned 1 lb thinly sliced beef to the pot and simmer uncovered for 5 minutes until the sauce slightly thickens." },
+      { step: 6, text: "Serve the stew hot once the 3 large potatoes, 2 carrots, and 1 lb beef are tender and coated with the sauce." }
     ],
     chefNotes: "Using thinly sliced beef means it cooks almost instantly. Adding it back at the end keeps it incredibly tender.",
     pairing: "Cold Japanese lager",
@@ -3065,11 +3097,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "2", unit: "cups", item: "vegetable broth" }
     ],
     method: [
-      { step: 1, text: "In a heavy pot, heat the olive oil and vigorously sear the mushrooms until deeply browned on all sides." },
-      { step: 2, text: "Stir in the pureed chipotle, toasting it for 1 minute until fragrant." },
-      { step: 3, text: "Pour in the soy sauce and vegetable broth, scraping the bottom of the pot to release the browned bits." },
-      { step: 4, text: "Bring to a boil, then reduce heat and simmer uncovered for 20 minutes until the liquid reduces to a glossy, thick glaze." },
-      { step: 5, text: "Serve the braised mushrooms over warm tortillas or steamed rice." }
+      { step: 1, text: "Trim and thickly slice the 1 lb king oyster mushrooms, then halve the 1/2 lb shiitake mushrooms." },
+      { step: 2, text: "Heat a heavy 6-quart pot over medium-high heat, add the 2 tbsp olive oil (pureed), and sear all mushrooms until deeply browned." },
+      { step: 3, text: "Pour in the 2 tbsp soy sauce and 2 cups vegetable broth, scraping the pot to loosen every browned bit." },
+      { step: 4, text: "Bring the mushroom mixture to a boil, reduce heat to low, and simmer uncovered for 20 minutes until glossy and thickened." },
+      { step: 5, text: "Serve the braised 1 lb king oyster mushrooms and 1/2 lb shiitake mushrooms while hot, coated in the reduced glaze." }
     ],
     chefNotes: "Do not crowd the pan when searing the mushrooms; do it in batches if necessary, or they will steam and become rubbery.",
     pairing: "A light Pinot Noir",
@@ -3102,11 +3134,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "12", unit: "", item: "corn tortillas" }
     ],
     method: [
-      { step: 1, text: "Rub the pork chunks heavily with white miso paste and refrigerate for 2 hours." },
-      { step: 2, text: "In a Dutch oven, combine the pork, orange halves (squeezed and dropped in), and chicken broth." },
-      { step: 3, text: "Cover and simmer on low for 2.5 hours until the pork falls apart when poked." },
-      { step: 4, text: "Remove the pork and shred it coarsely." },
-      { step: 5, text: "Heat the lard in a skillet and aggressively sear the shredded pork until crispy edges form. Serve in tortillas." }
+      { step: 1, text: "Rub the 3 lbs pork shoulder chunks with the 3 tbsp white miso paste (halved), cover, and refrigerate for 2 hours." },
+      { step: 2, text: "Place the miso-coated 3 lbs pork shoulder in a Dutch oven and pour in the 1 cup chicken broth." },
+      { step: 3, text: "Cover the Dutch oven and simmer over low heat for 2.5 hours, until the 3 lbs pork shoulder falls apart when poked." },
+      { step: 4, text: "Transfer the braised 3 lbs pork shoulder to a plate and shred it coarsely while it is still hot." },
+      { step: 5, text: "Heat the 2 tbsp lard or oil in a 12-inch skillet over medium-high heat, then sear the shredded pork until crisp-edged." },
+      { step: 6, text: "Warm the 12 corn tortillas in the skillet for about 30 seconds per side, then fill them with the crispy shredded pork." }
     ],
     chefNotes: "The miso paste contains sugars that will burn quickly when searing, so keep the heat medium-high and toss frequently.",
     pairing: "Ice-cold Mexican lager",
@@ -3140,11 +3173,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "4", unit: "", item: "soft-boiled eggs" }
     ],
     method: [
-      { step: 1, text: "Toast and rehydrate the guajillo chiles, then blend them with a little broth until very smooth." },
-      { step: 2, text: "Simmer the pork shoulder cubes in the remaining bone broth and the chile puree for 1.5 hours until tender." },
-      { step: 3, text: "Season the rich red broth with salt. It should be intense and slightly spicy." },
-      { step: 4, text: "Boil the ramen noodles separately, drain, and place into deep bowls." },
-      { step: 5, text: "Ladle the hot pozole broth and pork over the noodles, topping with shredded cabbage, egg, and a squeeze of lime." }
+      { step: 1, text: "Toast the 4 dried guajillo chiles in a dry skillet over medium heat for 2 minutes, turning until fragrant and slightly darkened." },
+      { step: 2, text: "Cover the 4 toasted guajillo chiles with hot water and soak for 15 minutes, then blend them with 1 cup pork bone broth until smooth." },
+      { step: 3, text: "Combine the chile puree, the remaining 3 cups pork bone broth, and 1 lb cubed pork shoulder in a pot." },
+      { step: 4, text: "Bring the 1 lb pork shoulder and red broth to a simmer over medium heat, reduce to low, and cook for 1.5 hours until tender." },
+      { step: 5, text: "Boil 4 portions fresh ramen noodles over high heat for about 3 minutes, until tender but still springy, then drain well." },
+      { step: 6, text: "Divide the 4 noodle portions among bowls, ladle over the pork and broth, and top with 1 cup cabbage, 4 eggs, and the 2 limes." }
     ],
     chefNotes: "Straining the blended chiles before adding them to the broth ensures your ramen soup is silky, not gritty.",
     pairing: "Mexican Coke or a light pilsner",
@@ -3177,11 +3211,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "3", unit: "tbsp", item: "butter" }
     ],
     method: [
-      { step: 1, text: "In a heavy saucepan, melt 1 tablespoon of butter. Sauté the mushrooms until deeply browned. Remove and set aside." },
-      { step: 2, text: "Add another tablespoon of butter. Add the rice and toast, stirring constantly, for 2 minutes." },
-      { step: 3, text: "Pour in the wine and stir until completely absorbed." },
-      { step: 4, text: "Add the hot dashi one ladle at a time, stirring frequently and waiting until the liquid is absorbed before adding more." },
-      { step: 5, text: "When the rice is tender, remove from heat. Stir in the remaining butter, the browned mushrooms, and the cotija cheese. Serve immediately." }
+      { step: 1, text: "Keep the 5 cups dashi or mushroom stock hot in a saucepan over low heat, steaming gently without letting it boil." },
+      { step: 2, text: "Melt 1 tbsp butter in a heavy 10-inch skillet over medium heat, then sauté the sliced shiitake and cremini mushrooms for 5–7 minutes until deeply browned." },
+      { step: 3, text: "Add another 1 tbsp butter and the 1.5 cups Arborio or Carnaroli rice, stirring constantly for 2 minutes until the grains look glossy and lightly toasted." },
+      { step: 4, text: "Pour in the 1/2 cup dry white wine and stir continuously for 2–3 minutes until the wine is completely absorbed and the pan looks nearly dry." },
+      { step: 5, text: "Add the 5 cups hot stock one ladle at a time over 18–22 minutes, stirring frequently and waiting until each addition is absorbed before continuing." },
+      { step: 6, text: "Remove the skillet from heat when the 1.5 cups rice is tender but slightly firm, then stir in the remaining 1 tbsp butter and browned mushrooms." }
     ],
     chefNotes: "Cotija is saltier and funkier than parmesan. Taste the risotto before adding any extra salt.",
     pairing: "Chardonnay or a dry Junmai sake",
@@ -3214,11 +3249,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "cup", item: "pickled red onions" }
     ],
     method: [
-      { step: 1, text: "Preheat oven to 425°F (220°C). In a large bowl, whisk the miso, soy sauce, and olive oil until smooth." },
-      { step: 2, text: "Toss the cauliflower florets in the miso glaze until completely coated." },
-      { step: 3, text: "Spread the cauliflower evenly on a baking sheet and roast for 20-25 minutes until deeply caramelized and tender." },
-      { step: 4, text: "Warm the corn tortillas on a dry skillet." },
-      { step: 5, text: "Assemble the tacos by filling the tortillas with the sticky, roasted cauliflower and topping heavily with pickled red onions." }
+      { step: 1, text: "Preheat the oven to 425°F (220°C), then whisk the 2 tbsp white miso paste, 1 tbsp soy sauce, and 2 tbsp olive oil in a large bowl." },
+      { step: 2, text: "Add the 1 head cauliflower cut into small florets and toss thoroughly until every piece is evenly coated with the miso glaze." },
+      { step: 3, text: "Spread the coated 1 head cauliflower in one layer on an 18×13-inch baking sheet, leaving space between florets for browning." },
+      { step: 4, text: "Roast the cauliflower at 425°F (220°C) for 20–25 minutes, turning once, until tender inside with deeply caramelized, darkened edges." },
+      { step: 5, text: "Warm the 8 corn tortillas in a dry 10-inch skillet over medium heat for 20–30 seconds per side, until flexible and lightly speckled." },
+      { step: 6, text: "Fill the 8 warm corn tortillas with the roasted cauliflower and divide the 1 cup pickled red onions evenly over the tacos before serving." }
     ],
     chefNotes: "Do not crowd the cauliflower on the baking sheet, or it will steam instead of roasting and caramelizing.",
     pairing: "A crisp Mexican lager",
@@ -3251,11 +3287,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "8", unit: "", item: "corn tortillas" }
     ],
     method: [
-      { step: 1, text: "Drain and rinse the jackfruit completely. Cut out the hard core pieces and pull the fruit apart until it shreds." },
-      { step: 2, text: "Toast and rehydrate the chiles, then blend them with 1 cup of the vegetable broth until smooth." },
-      { step: 3, text: "In a pot, heat the olive oil and vigorously sauté the shredded jackfruit to dry it out and build texture." },
-      { step: 4, text: "Pour the chile puree and the remaining broth over the jackfruit, cover, and simmer for 30 minutes." },
-      { step: 5, text: "Serve the heavy, saucy jackfruit in warm tortillas, using the remaining liquid as a dipping consommé." }
+      { step: 1, text: "Toast the 3 dried guajillo chiles and 2 dried ancho chiles in a dry 10-inch skillet over medium heat for 1–2 minutes per side until fragrant." },
+      { step: 2, text: "Cover the 3 guajillo chiles and 2 ancho chiles with 1 cup vegetable broth, rest for 10 minutes, then blend until the chile mixture is smooth." },
+      { step: 3, text: "Drain and rinse the 2 cans young green jackfruit, remove the hard core pieces, and pull the remaining fruit apart into shreds." },
+      { step: 4, text: "Heat the 2 tbsp olive oil in a heavy 5-quart pot over medium-high heat, then sauté the shredded jackfruit for 8–10 minutes until drier and lightly browned." },
+      { step: 5, text: "Pour in the blended chiles and the remaining 2 cups vegetable broth, cover the pot, and simmer for 30 minutes until the jackfruit is tender and saucy." },
+      { step: 6, text: "Warm the 8 corn tortillas in a dry skillet over medium heat for 20–30 seconds per side, then fill them with jackfruit and serve with the broth for dipping." }
     ],
     chefNotes: "Rinsing the canned jackfruit thoroughly is mandatory to remove the briny, metallic taste of the canning water.",
     pairing: "Agua de Jamaica",
@@ -3289,11 +3326,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "2", unit: "cups", item: "oil", note: "for frying" }
     ],
     method: [
-      { step: 1, text: "Score the eggplant slices lightly in a crosshatch pattern and salt them to draw out moisture." },
-      { step: 2, text: "In a saucepan, bring 2 cups of water to a boil, turn off the heat, and dissolve the curry roux blocks until thick." },
-      { step: 3, text: "Dredge the eggplant slices in flour, dip in egg, and coat thoroughly in panko." },
-      { step: 4, text: "Fry the eggplant cutlets in hot oil until deeply golden and crispy, about 4 minutes per side." },
-      { step: 5, text: "Slice the katsu, serve it over the hot rice, and ladle the curry sauce generously over the top." }
+      { step: 1, text: "Score the 1 large eggplant slices in a shallow crosshatch pattern, keeping the cuts within each 1-inch slice." },
+      { step: 2, text: "Set the 1/2 cup flour and 1 cup panko breadcrumbs in separate shallow dishes for coating the eggplant slices." },
+      { step: 3, text: "Press each slice from the 1 large eggplant into the 1/2 cup flour, then firmly coat all sides with the 1 cup panko." },
+      { step: 4, text: "Heat a 10-inch nonstick skillet over medium-high heat and cook the coated eggplant for 4 minutes per side, until deeply golden." },
+      { step: 5, text: "Transfer the 1 large eggplant katsu to plates and serve immediately, ensuring the crust is crisp and the centers are tender." }
     ],
     chefNotes: "Scoring the eggplant allows the heat to penetrate quickly, ensuring the inside becomes creamy before the panko crust burns.",
     pairing: "Cold green tea or an IPA",
@@ -3326,11 +3363,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "cup", item: "shredded cabbage" }
     ],
     method: [
-      { step: 1, text: "Preheat the broiler. Score the flesh of the eggplant halves in a diamond pattern without piercing the skin." },
-      { step: 2, text: "Whisk the miso paste, sugar, and mirin into a smooth glaze." },
-      { step: 3, text: "Brush the glaze heavily over the cut side of the eggplants." },
-      { step: 4, text: "Broil the eggplants for 10-12 minutes until the flesh is completely soft and the glaze is caramelized and bubbly." },
-      { step: 5, text: "Scoop the warm eggplant flesh onto the crispy tostadas and top with fresh shredded cabbage." }
+      { step: 1, text: "Preheat the broiler to high and score the flesh of the 2 Japanese eggplants in diamonds without piercing their skins." },
+      { step: 2, text: "Whisk the 2 tbsp white miso paste, 1 tbsp sugar, and 1 tbsp mirin in a bowl until the glaze is completely smooth." },
+      { step: 3, text: "Brush the miso mixture evenly over the cut sides of the 2 Japanese eggplants, covering the scored flesh completely." },
+      { step: 4, text: "Broil the 2 Japanese eggplants on a broiler-safe pan for 10–12 minutes, until soft throughout and caramelized with bubbly glaze." },
+      { step: 5, text: "Scoop the hot flesh from the 2 Japanese eggplants onto the 4 crispy corn tostadas, then top evenly with the 1 cup shredded cabbage." }
     ],
     chefNotes: "Japanese eggplants are essential here; American globe eggplants hold too much water and will turn mushy rather than creamy.",
     pairing: "A crisp white wine or sparkling water",
@@ -3363,11 +3400,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "cup", item: "steamed white rice" }
     ],
     method: [
-      { step: 1, text: "Press the tofu firmly to remove excess moisture, then slice into thick slabs." },
-      { step: 2, text: "In a non-stick skillet, heat the oil and sear the tofu slabs until deeply golden on both sides." },
-      { step: 3, text: "In a separate saucepan, whisk the mole negro paste into the vegetable broth until smooth and gently warm it." },
-      { step: 4, text: "Place the crispy tofu slabs onto a plate alongside the steamed rice." },
-      { step: 5, text: "Ladle the hot, heavy mole sauce generously over the tofu and garnish with toasted sesame seeds." }
+      { step: 1, text: "Press the 1 block firm tofu under a weighted plate for 15 minutes, then slice it into evenly thick slabs." },
+      { step: 2, text: "Heat a 10-inch nonstick skillet over medium-high heat, add the 1 tbsp olive oil, and sear the tofu for 4–5 minutes per side." },
+      { step: 3, text: "Cook the tofu until both sides of the 1 block firm tofu are deeply golden and the surfaces feel crisp when pressed." },
+      { step: 4, text: "Whisk the 1 cup prepared mole negro paste with the 1.5 cups vegetable broth in a saucepan and simmer over medium-low heat for 5 minutes." },
+      { step: 5, text: "Arrange the seared 1 block firm tofu beside the 1 cup steamed white rice, then pour over the hot, smooth mole sauce." },
+      { step: 6, text: "Sprinkle the 1 tbsp toasted sesame seeds over the tofu and sauce, and serve while the tofu and 1 cup steamed white rice are hot." }
     ],
     chefNotes: "Do not simmer the crispy tofu in the mole sauce; pour the sauce over it at the end to retain the crust.",
     pairing: "Mexican Coke or a robust Zinfandel",
@@ -3400,11 +3438,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "3", unit: "cups", item: "oil", note: "for frying" }
     ],
     method: [
-      { step: 1, text: "Warm the salsa roja gently in a small saucepan and set it aside for dipping." },
-      { step: 2, text: "In a bowl, barely mix the tempura batter mix with the ice water. Lumps are absolutely fine." },
-      { step: 3, text: "Heat the oil in a heavy pot to 350°F (175°C)." },
-      { step: 4, text: "Dip the vegetable pieces into the cold batter and drop them carefully into the hot oil." },
-      { step: 5, text: "Fry for 2-3 minutes until crisp but still pale. Serve immediately with the warm salsa roja." }
+      { step: 1, text: "Cut the 1 cup sweet potato into thin rounds and trim the 1 cup green beans, keeping both vegetables ready for dipping." },
+      { step: 2, text: "Heat the 3 cups oil in a heavy, deep pot over medium-high heat to 350°F (175°C) before frying." },
+      { step: 3, text: "Pour the 1 cup warmed tempura batter mix into a bowl and keep it ready without adding any unlisted liquid." },
+      { step: 4, text: "Dip the 1 cup sweet potato and 1 cup green beans into the 1 cup batter mix, coating each piece lightly." },
+      { step: 5, text: "Fry the coated 1 cup sweet potato and 1 cup green beans in batches for 2–3 minutes until crisp and still pale." },
+      { step: 6, text: "Drain the fried 1 cup sweet potato and 1 cup green beans briefly, then serve immediately while the coating remains crisp." }
     ],
     chefNotes: "The contrast between the cold batter and hot oil creates the signature tempura 'lace.' Work quickly.",
     pairing: "Sparkling water or a crisp Pilsner",
@@ -3437,11 +3476,13 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "8", unit: "", item: "corn tortillas" }
     ],
     method: [
-      { step: 1, text: "Whisk the soy sauce, lime juice, olive oil, and cumin in a shallow dish." },
-      { step: 2, text: "Add the whole portobello caps to the marinade, gill-side up. Let sit for 20 minutes." },
-      { step: 3, text: "Heat a heavy cast-iron skillet or grill to high heat until smoking." },
-      { step: 4, text: "Sear the mushrooms for 4 minutes per side until deeply charred and collapsed." },
-      { step: 5, text: "Slice the mushrooms into thick strips and serve hot on warmed corn tortillas." }
+      { step: 1, text: "Whisk the 1/4 cup soy sauce, 1/4 cup lime juice, 2 tbsp olive oil, and 1 tsp ground cumin in a shallow dish." },
+      { step: 2, text: "Place the 4 large portobello mushrooms, gill-side up, in the marinade and let them stand for 20 minutes." },
+      { step: 3, text: "Heat a 10-inch cast-iron skillet or grill over high heat until smoking, with the 4 marinated mushrooms ready." },
+      { step: 4, text: "Sear the 4 large portobello mushrooms for 4 minutes per side until deeply charred, tender, and visibly collapsed." },
+      { step: 5, text: "Slice the 4 cooked portobello mushrooms into thick strips after searing, keeping the pieces hot for serving." },
+      { step: 6, text: "Warm the 8 corn tortillas in the skillet over medium heat for 30 seconds per side until pliable and heated through." },
+      { step: 7, text: "Divide the sliced 4 portobello mushrooms among the 8 warmed corn tortillas and serve immediately." }
     ],
     chefNotes: "Marinate the mushrooms gill-side up so the dark underside absorbs the liquid like a sponge.",
     pairing: "An icy Mexican lager or an IPA",
