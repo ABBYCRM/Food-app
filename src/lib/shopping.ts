@@ -25,27 +25,40 @@ export function retailerUrl(retailer: Retailer, query: string, zip?: string): st
   }
 }
 
-/* Instacart store-search deep-link. Opens a single tab on Instacart's
-   store search with every ingredient packed into one query — the user
-   sees the full list on a single results page, picks what they need,
-   and adds to cart from there.
+/* Single-tab multi-item search. The user lands on a results page with all
+   the items at once — no popup blocker, no API approval. Works for
+   Instacart and Walmart (both accept free-text multi-word queries).
 
-   Why not the shopping-list API? The `?add_items=` parameter is only
-   available on Connect-API-generated shopping list pages
+   Why not the Instacart shopping-list API? The `?add_items=` parameter
+   is only valid on Connect-API-generated pages
    (https://docs.instacart.com/developer_platform_api/...). The public
-   site's /store/shopping_list path 404s, so we use the working public
-   search endpoint. One tab, no popup blocker, no API approval. */
-export function instacartShoppingListUrl(queries: string[], zip?: string): string {
+   site's /store/shopping_list path 404s. */
+export function singleTabSearchUrl(
+  retailer: "instacart" | "walmart",
+  queries: string[],
+  zip?: string
+): string {
   const cleaned = queries
     .map((q) => q.trim())
     .filter(Boolean)
     .slice(0, 8)
-    .map((q) => q.replace(/[+&]/g, " "))  /* plus/ampersand break the k= search */
+    .map((q) => q.replace(/[+&]/g, " "))  /* + and & break query strings */
     .join(" ");
-  const params = new URLSearchParams({ k: cleaned });
-  if (zip) params.set("zip", zip);
-  return `https://www.instacart.com/store/s?${params.toString()}`;
+  if (retailer === "instacart") {
+    const params = new URLSearchParams({ k: cleaned });
+    if (zip) params.set("zip", zip);
+    return `https://www.instacart.com/store/s?${params.toString()}`;
+  }
+  /* Walmart */
+  const params = new URLSearchParams({ q: cleaned });
+  return `https://www.walmart.com/search?${params.toString()}`;
 }
+
+/* Backwards-compat alias for the older single-retailer name. */
+export const instacartShoppingListUrl = (
+  queries: string[],
+  zip?: string
+) => singleTabSearchUrl("instacart", queries, zip);
 
 export function multiRetailerUrls(retailer: Retailer, ingredients: Ingredient[], zip?: string): string[] {
   return ingredients.map((i) => retailerUrl(retailer, ingredientQuery(i), zip));
@@ -75,6 +88,37 @@ export function consolidateForWeek(recipes: Recipe[], locale: "en" | "es" | "pt"
     }
   }
   return Array.from(map.values()).sort((a, b) => a.display.localeCompare(b.display));
+}
+
+/* Build a clean plain-text shopping list. One ingredient per line, with the
+   amount + unit + display name. Pastes cleanly into Notes, email, or any
+   retailer's search bar. No commas, no ampersands, no special chars. */
+export function shoppingListAsText(items: ConsolidatedItem[]): string {
+  return items
+    .map((item) => {
+      /* Drop the "×N" — it's a planner-internal count, not shopping info. */
+      return `• ${item.display}`;
+    })
+    .join("\n");
+}
+
+/* Copy to clipboard. Returns true on success, false if the browser blocks
+   the Clipboard API (e.g. insecure context, denied permission). The caller
+   shows a toast on success. */
+export async function copyShoppingListToClipboard(text: string): Promise<boolean> {
+  if (typeof navigator === "undefined" || !navigator.clipboard) return false;
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+/* Build a mailto: link with the shopping list pre-filled. Works on every
+   device with an email app — iOS, Android, desktop. No backend, no API. */
+export function emailShoppingListUrl(subject: string, body: string): string {
+  return `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
 export type OpenResult = { opened: number; blocked: number; total: number };

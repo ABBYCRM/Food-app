@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { useLocation } from "wouter";
-import { Plus, X, ShoppingCart, ExternalLink, Coffee, Sun, Moon, Cookie } from "lucide-react";
+import { Plus, X, ShoppingCart, ExternalLink, Coffee, Sun, Moon, Cookie, Copy, Mail, Check } from "lucide-react";
 import { Layout } from "@/components/Layout";
 import { PaywallModal } from "@/components/PaywallModal";
 import { SafeImage } from "@/components/SafeImage";
@@ -8,7 +8,10 @@ import { useUser, type MealSlot, MEAL_SLOTS } from "@/context/UserContext";
 import { useTrial } from "@/context/TrialContext";
 import { dict } from "@/i18n";
 import { allRecipesForCalendar } from "@/data/calendar";
-import { consolidateForWeek, instacartShoppingListUrl, openMany, retailerUrl, type Retailer } from "@/lib/shopping";
+import {
+  consolidateForWeek, copyShoppingListToClipboard, emailShoppingListUrl,
+  singleTabSearchUrl, openMany, retailerUrl, shoppingListAsText, type Retailer,
+} from "@/lib/shopping";
 import { cn } from "@/lib/cn";
 import { localDateKey } from "@/lib/date";
 
@@ -82,11 +85,12 @@ export function PlannerPage() {
   }, [query, locale]);
 
   function openConsolidated(retailer: Retailer) {
-    /* Instacart gets the Shopping List deep-link so the user lands on a
-       single tab with every ingredient pre-added. Opening 11 separate
-       Instacart tabs triggers Chrome's popup blocker. */
-    if (retailer === "instacart") {
-      const url = instacartShoppingListUrl(
+    /* Instacart and Walmart both support a single multi-word search in one
+       tab — no popup blocker, no 11 tabs. Other retailers fall through to
+       the multi-tab flow which is still better than nothing. */
+    if (retailer === "instacart" || retailer === "walmart") {
+      const url = singleTabSearchUrl(
+        retailer,
         consolidated.map((c) => c.query),
         zip
       );
@@ -96,6 +100,28 @@ export function PlannerPage() {
     const urls = consolidated.map((c) => retailerUrl(retailer, c.query, zip));
     openMany(urls);
   }
+
+  /* Copy / email state for the small action row under the list. */
+  const [copyState, setCopyState] = useState<"idle" | "copied" | "failed">("idle");
+  const onCopyList = async () => {
+    const text = shoppingListAsText(consolidated);
+    const ok = await copyShoppingListToClipboard(text);
+    setCopyState(ok ? "copied" : "failed");
+    if (ok) {
+      /* Reset the indicator so the user can copy again. */
+      setTimeout(() => setCopyState("idle"), 2200);
+    } else {
+      setTimeout(() => setCopyState("idle"), 4000);
+    }
+  };
+  const onEmailList = () => {
+    const text = shoppingListAsText(consolidated);
+    const url = emailShoppingListUrl(
+      `Shopping list — Mestizo Umami (${consolidated.length} items)`,
+      `${text}\n\n— from Mestizo Umami`
+    );
+    window.location.href = url;
+  };
 
   const requireWrite = (action: () => void) => {
     if (!canWrite) {
@@ -284,16 +310,42 @@ export function PlannerPage() {
                 ))}
               </ul>
               <div className="grid grid-cols-2 gap-2">
-                <div className="flex flex-col gap-1">
-                  <button type="button" onClick={() => openConsolidated("instacart")} className="btn btn-primary btn-sm">
-                    {t.shopping.openOnInstacart} <ExternalLink size={13} />
-                  </button>
-                  <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-chili/80 text-center">
-                    ✨ {t.shopping.instacartComingSoon}
-                  </span>
-                </div>
+                <button type="button" onClick={() => openConsolidated("instacart")} className="btn btn-primary btn-sm">
+                  {t.shopping.openOnInstacart} <ExternalLink size={13} />
+                </button>
                 <button type="button" onClick={() => openConsolidated("amazonFresh")} className="btn btn-teal btn-sm">
                   {t.shopping.openOnAmazon} <ExternalLink size={13} />
+                </button>
+              </div>
+              <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-chili/80 text-center block">
+                ✨ {t.shopping.instacartComingSoon}
+              </span>
+              <div className="grid grid-cols-3 gap-2 pt-1">
+                <button
+                  type="button"
+                  onClick={() => openConsolidated("walmart")}
+                  className="btn btn-ghost btn-xs"
+                >
+                  {t.shopping.openOnWalmart} <ExternalLink size={11} />
+                </button>
+                <button
+                  type="button"
+                  onClick={onCopyList}
+                  className="btn btn-ghost btn-xs"
+                  aria-label={t.shopping.copyList}
+                >
+                  {copyState === "copied"
+                    ? <><Check size={11} /> {t.shopping.copied}</>
+                    : copyState === "failed"
+                    ? t.shopping.copyFailed
+                    : <><Copy size={11} /> {t.shopping.copyList}</>}
+                </button>
+                <button
+                  type="button"
+                  onClick={onEmailList}
+                  className="btn btn-ghost btn-xs"
+                >
+                  <Mail size={11} /> {t.shopping.emailList}
                 </button>
               </div>
             </>
