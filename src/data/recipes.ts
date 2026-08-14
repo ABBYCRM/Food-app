@@ -686,23 +686,37 @@ export const recipes: Recipe[] = [
   },
 ];
 
-export function recipeBySlug(slug: string): Recipe | undefined {
-  return recipes.find((r) => r.slug === slug);
+/** Slug lookup over an arbitrary recipe pool — shared by the curated helpers
+ *  below and by calendar.ts's combined curated+breakfast pool. */
+export function findRecipeBySlug(pool: Recipe[], slug: string): Recipe | undefined {
+  return pool.find((r) => r.slug === slug);
 }
 
-export function relatedRecipes(slug: string, limit = 3): Recipe[] {
-  const current = recipeBySlug(slug);
-  if (!current) return recipes.slice(0, limit);
-  return recipes
+/** Nearest-neighbor "related recipes" over an arbitrary recipe pool. */
+export function findRelatedRecipes(pool: Recipe[], slug: string, limit = 3): Recipe[] {
+  const current = findRecipeBySlug(pool, slug);
+  if (!current) return pool.slice(0, limit);
+  return pool
     .filter((r) => r.slug !== slug)
     .map((r) => ({
       r,
       score:
         (r.category === current.category ? 2 : 0) +
+        (r.meals.some((m) => current.meals.includes(m)) ? 1 : 0) +
         Math.abs(r.spice - current.spice) * -0.5 +
         Math.abs(r.umami - current.umami) * -0.5,
     }))
     .sort((a, b) => b.score - a.score)
     .slice(0, limit)
     .map(({ r }) => r);
+}
+
+/** Curated-collection-only lookup — kept for anywhere that intentionally
+ *  wants just the 9 signature dishes (e.g. the home hero rotation). */
+export function recipeBySlug(slug: string): Recipe | undefined {
+  return findRecipeBySlug(recipes, slug);
+}
+
+export function relatedRecipes(slug: string, limit = 3): Recipe[] {
+  return findRelatedRecipes(recipes, slug, limit);
 }

@@ -10,7 +10,9 @@
     "preview": "vite preview --host 0.0.0.0",
     "typecheck": "tsc --noEmit",
     "validate:images": "node scripts/validate-imagery.mjs",
-    "test:smoke": "node scripts/smoke-app.mjs"
+    "validate:breakfast": "node scripts/validate-breakfast.mjs",
+    "test:smoke": "node scripts/smoke-app.mjs",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "clsx": "^2.1.1",

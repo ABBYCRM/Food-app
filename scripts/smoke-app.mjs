@@ -9,6 +9,7 @@ const server = await createServer({
 });
 
 const failures = [];
+let routeCount = 0;
 
 function check(condition, message) {
   if (!condition) failures.push(message);
@@ -28,20 +29,27 @@ function hasNestedButtons(html) {
 }
 
 try {
-  const [{ default: App }, recipeData, calendarData] = await Promise.all([
+  const [{ default: App }, recipeData, breakfastData, calendarData] = await Promise.all([
     server.ssrLoadModule("/src/App.tsx"),
     server.ssrLoadModule("/src/data/recipes.ts"),
+    server.ssrLoadModule("/src/data/breakfast.ts"),
     server.ssrLoadModule("/src/data/calendar.ts"),
   ]);
 
   const { recipes } = recipeData;
-  const { allRecipesForCalendar, recipeForCalendarIndex } = calendarData;
+  const { BREAKFAST_RECIPES } = breakfastData;
+  const { allRecipesForCalendar, recipeForCalendarIndex, breakfastForCalendarIndex } = calendarData;
 
   check(recipes.length === 9, `expected 9 curated recipes, found ${recipes.length}`);
-  check(allRecipesForCalendar().length === recipes.length, "calendar exposes non-curated recipes");
+  check(BREAKFAST_RECIPES.length === 365, `expected 365 breakfast recipes, found ${BREAKFAST_RECIPES.length}`);
+  check(
+    allRecipesForCalendar().length === recipes.length + BREAKFAST_RECIPES.length,
+    "calendar does not expose curated + breakfast recipes",
+  );
   check(new Set(recipes.map((recipe) => recipe.slug)).size === recipes.length, "recipe slugs are not unique");
   check(new Set(recipes.map((recipe) => recipe.hero)).size === recipes.length, "recipe hero images are reused");
   check(new Set(recipes.map((recipe) => recipe.thumb)).size === recipes.length, "recipe thumbnail images are reused");
+  check(new Set(BREAKFAST_RECIPES.map((recipe) => recipe.slug)).size === BREAKFAST_RECIPES.length, "breakfast recipe slugs are not unique");
 
   for (const [index, recipe] of recipes.entries()) {
     check(recipe.hero.endsWith(`/img/recipes/${recipe.slug}-hero.jpg`), `${recipe.slug}: hero filename does not match recipe`);
@@ -56,11 +64,24 @@ try {
     }
   }
 
+  for (const day of [0, 1, 90, 180, 270, 364]) {
+    const recipe = breakfastForCalendarIndex(day);
+    check(recipe.meals.includes("breakfast"), `breakfast day ${day + 1}: not tagged breakfast`);
+    check(recipe.hero.startsWith("data:image/svg+xml"), `breakfast day ${day + 1}: hero is not an inline SVG`);
+  }
+
+  // Sample of breakfast recipes for the SSR route-rendering pass below —
+  // validate-breakfast.mjs already checks all 365 for data-shape correctness,
+  // this checks a spread of them actually render through React without error.
+  const breakfastSample = [0, 50, 100, 150, 200, 250, 300, 364].map((i) => BREAKFAST_RECIPES[i]);
+
   const routes = [
-    "/", "/philosophy", "/pantry", "/recipes", "/planner", "/notebook",
+    "/", "/philosophy", "/pantry", "/recipes", "/recipes?meal=breakfast", "/planner", "/notebook",
     "/allergy", "/vendor", "/chefs", "/search",
     ...recipes.map((recipe) => `/recipe/${recipe.slug}`),
+    ...breakfastSample.map((recipe) => `/recipe/${recipe.slug}`),
   ];
+  routeCount = routes.length;
 
   const reactErrors = [];
   const originalError = console.error;
@@ -76,9 +97,14 @@ try {
 
       if (route.startsWith("/recipe/")) {
         const slug = route.slice("/recipe/".length);
-        const recipe = recipes.find((entry) => entry.slug === slug);
+        const curated = recipes.find((entry) => entry.slug === slug);
+        const recipe = curated ?? BREAKFAST_RECIPES.find((entry) => entry.slug === slug);
         check(Boolean(recipe && html.includes(recipe.title.en)), `${route}: recipe detail did not render`);
-        check(html.includes(`/img/recipes/${slug}-hero.jpg`), `${route}: matching hero image did not render`);
+        if (curated) {
+          check(html.includes(`/img/recipes/${slug}-hero.jpg`), `${route}: matching hero image did not render`);
+        } else if (recipe) {
+          check(html.includes("data:image/svg+xml"), `${route}: matching inline hero image did not render`);
+        }
       }
     }
   } finally {
@@ -94,5 +120,5 @@ if (failures.length > 0) {
   for (const failure of failures) console.error(`- ${failure}`);
   process.exitCode = 1;
 } else {
-  console.log("App smoke test passed: data integrity, 19 routes, image mapping, and interactive markup.");
+  console.log(`App smoke test passed: data integrity, ${routeCount} routes, image mapping, and interactive markup.`);
 }

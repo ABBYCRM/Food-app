@@ -16,7 +16,7 @@ import { useUser, type MealSlot, MEAL_SLOTS } from "@/context/UserContext";
 import { useTrial } from "@/context/TrialContext";
 import { dict } from "@/i18n";
 import type { Ingredient } from "@/data/recipes";
-import { recipeBySlug, relatedRecipes } from "@/data/recipes";
+import { anyRecipeBySlug, anyRelatedRecipes } from "@/data/calendar";
 import { scaledIngredientParts } from "@/lib/scaling";
 import { cn } from "@/lib/cn";
 import { localDateKey } from "@/lib/date";
@@ -26,7 +26,7 @@ const SLOT_ICON: Record<MealSlot, typeof Coffee> = {
 };
 
 function findRecipe(slug: string) {
-  return recipeBySlug(slug);
+  return anyRecipeBySlug(slug);
 }
 
 export function RecipeDetailPage({ slug }: { slug: string }) {
@@ -67,7 +67,7 @@ export function RecipeDetailPage({ slug }: { slug: string }) {
   const fav = isFavorite(recipe.slug);
   const note = getNote(recipe.slug);
 
-  const related = relatedRecipes(recipe.slug, 3);
+  const related = anyRelatedRecipes(recipe.slug, 3);
 
   const totalMinutes = recipe.prepMinutes + recipe.cookMinutes;
   const requireWrite = (action: () => void) => {
