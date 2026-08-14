@@ -124,6 +124,342 @@ export function RecipeDetail() {
 
   const feedsLabel = servings === 1 ? t("recipe.feedsPerson") : t("recipe.feedsPeople", { n: servings });
 
+  // ── Print handler ────────────────────────────────────────────────────────
+  function printRecipe() {
+    if (!recipe) return;
+    const locale = unitSystem === "imperial" ? "en" : "es";
+    const lang = locale === "en" ? "en" : locale === "es" ? "es" : "pt";
+
+    const LABELS: Record<string, Record<string, string>> = {
+      en: { ingredients: "Ingredients", method: "Method", notes: "Chef's Notes",
+            pairing: "Suggested Pairing", serves: "Serves", prep: "Prep", cook: "Cook",
+            difficulty: "Difficulty", spice: "Spice", umami: "Umami" },
+      es: { ingredients: "Ingredientes", method: "Método", notes: "Notas del Chef",
+            pairing: "Maridaje Sugerido", serves: "Porciones", prep: "Prep", cook: "Cocción",
+            difficulty: "Dificultad", spice: "Picante", umami: "Umami" },
+      pt: { ingredients: "Ingredientes", method: "Modo de Preparo", notes: "Notas do Chef",
+            pairing: "Harmonização Sugerida", serves: "Porções", prep: "Prep", cook: "Cozimento",
+            difficulty: "Dificuldade", spice: "Picância", umami: "Umami" },
+    };
+    const L = LABELS[lang] ?? LABELS.en;
+
+    // Build ingredient rows (already unit-converted)
+    const ingRows = recipe.ingredients.map((ing) => {
+      const num = parseFraction(ing.qty);
+      const disp = num !== null
+        ? convertUnit(num * ratio, ing.unit, unitSystem)
+        : { qty: ing.qty, unit: ing.unit };
+      const note = ing.note ? `<span class="note">(${ing.note})</span>` : "";
+      return `<li><span class="qty">${disp.qty}${disp.unit ? "&thinsp;" + disp.unit : ""}</span>${ing.item}${note}</li>`;
+    }).join("\n");
+
+    // Build method steps (temperature-localized)
+    const stepRows = recipe.method.map((step) => {
+      const text = localizeTemp(step.text, unitSystem);
+      return `<div class="step"><span class="step-num">${String(step.step).padStart(2, "0")}</span><p>${text}</p></div>`;
+    }).join("\n");
+
+    // Spice/umami dots
+    const dots = (n: number, filled: string) =>
+      [1, 2, 3].map(i => `<span class="dot ${i <= n ? "filled " + filled : ""}"></span>`).join("");
+
+    const unitLabel = unitSystem === "imperial"
+      ? "oz · lb · cup · °F"
+      : "g · kg · ml · °C";
+
+    const html = `<!DOCTYPE html>
+<html lang="${lang}">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mestizo Umami — ${recipe.title}</title>
+  <style>
+    @page {
+      size: letter portrait;
+      margin: 0.70in 0.75in 0.80in 0.75in;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 11pt;
+      line-height: 1.55;
+      color: #111;
+      background: #fff;
+    }
+
+    /* ── Header ─────────────────────────────── */
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2.5pt solid #b45309;
+      padding-bottom: 10pt;
+      margin-bottom: 14pt;
+    }
+    .brand {
+      font-family: Georgia, serif;
+      font-size: 8.5pt;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #b45309;
+      margin-bottom: 5pt;
+    }
+    .recipe-title {
+      font-size: 22pt;
+      font-weight: bold;
+      line-height: 1.1;
+      color: #111;
+      letter-spacing: -0.01em;
+    }
+    .recipe-origin {
+      font-size: 9.5pt;
+      color: #777;
+      font-style: italic;
+      margin-top: 3pt;
+    }
+
+    /* ── Meta row ──────────────────────────── */
+    .meta-row {
+      display: flex;
+      gap: 0;
+      margin-bottom: 14pt;
+      border: 1pt solid #e5d6c0;
+      border-radius: 4pt;
+      overflow: hidden;
+    }
+    .meta-cell {
+      flex: 1;
+      padding: 5pt 10pt;
+      border-right: 1pt solid #e5d6c0;
+    }
+    .meta-cell:last-child { border-right: none; }
+    .meta-label {
+      font-family: Arial, sans-serif;
+      font-size: 6.5pt;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #b45309;
+      display: block;
+      margin-bottom: 1.5pt;
+    }
+    .meta-value {
+      font-size: 9.5pt;
+      font-weight: bold;
+      color: #222;
+    }
+    .dots { display: inline-flex; gap: 2pt; vertical-align: middle; }
+    .dot { width: 6pt; height: 6pt; border-radius: 50%; border: 1pt solid #ccc; display: inline-block; }
+    .dot.filled.red { background: #dc2626; border-color: #dc2626; }
+    .dot.filled.amber { background: #b45309; border-color: #b45309; }
+
+    /* ── Two-column body ────────────────────── */
+    .body-columns {
+      display: grid;
+      grid-template-columns: 2.4in 1fr;
+      column-gap: 22pt;
+      margin-bottom: 14pt;
+    }
+
+    /* ── Section headings ───────────────────── */
+    .section-heading {
+      font-family: Arial, sans-serif;
+      font-size: 7pt;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+      color: #b45309;
+      border-bottom: 1pt solid #e5d6c0;
+      padding-bottom: 4pt;
+      margin-bottom: 9pt;
+    }
+
+    /* ── Ingredients ────────────────────────── */
+    .ingredients-col {}
+    .unit-note {
+      font-size: 7pt;
+      color: #aaa;
+      font-family: Arial, sans-serif;
+      margin-bottom: 8pt;
+      letter-spacing: 0.06em;
+    }
+    .ingredients-col ul {
+      list-style: none;
+    }
+    .ingredients-col li {
+      display: flex;
+      align-items: baseline;
+      gap: 6pt;
+      padding: 3.5pt 0;
+      border-bottom: 0.5pt solid #f0ebe3;
+      font-size: 10pt;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    .qty {
+      font-weight: bold;
+      color: #b45309;
+      min-width: 52pt;
+      text-align: right;
+      flex-shrink: 0;
+      font-size: 9.5pt;
+    }
+    .note {
+      font-size: 8pt;
+      color: #999;
+      font-style: italic;
+      margin-left: 2pt;
+    }
+
+    /* ── Method ─────────────────────────────── */
+    .method-col {}
+    .step {
+      display: grid;
+      grid-template-columns: 18pt 1fr;
+      gap: 8pt;
+      margin-bottom: 10pt;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    .step-num {
+      font-size: 18pt;
+      color: #e5d6c0;
+      font-weight: bold;
+      line-height: 1.1;
+      font-family: Georgia, serif;
+      padding-top: 1pt;
+    }
+    .step p {
+      font-size: 10pt;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* ── Chef's Notes ───────────────────────── */
+    .notes-section {
+      border-top: 1pt solid #e5d6c0;
+      padding-top: 10pt;
+      margin-top: 2pt;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    .notes-section blockquote {
+      font-style: italic;
+      font-size: 10pt;
+      color: #555;
+      border-left: 2pt solid #b45309;
+      padding-left: 10pt;
+      margin: 6pt 0 8pt;
+      line-height: 1.6;
+    }
+    .pairing-line {
+      font-size: 9pt;
+      color: #888;
+    }
+    .pairing-line strong {
+      font-family: Arial, sans-serif;
+      font-size: 6.5pt;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #b45309;
+      display: block;
+      margin-bottom: 2pt;
+    }
+
+    /* ── Footer ─────────────────────────────── */
+    .page-footer {
+      position: fixed;
+      bottom: 0.35in;
+      left: 0.75in;
+      right: 0.75in;
+      display: flex;
+      justify-content: space-between;
+      font-family: Arial, sans-serif;
+      font-size: 7pt;
+      color: #bbb;
+      border-top: 0.5pt solid #e5d6c0;
+      padding-top: 4pt;
+    }
+
+    @media print {
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-header">
+    <div>
+      <div class="brand">Mestizo Umami</div>
+      <div class="recipe-title">${recipe.title}</div>
+      <div class="recipe-origin">${recipe.origin}</div>
+    </div>
+    <div style="text-align:right; padding-top:6pt;">
+      <div class="meta-value" style="font-size:11pt; color:#b45309;">${servings}</div>
+      <div class="meta-label" style="text-align:right;">${L.serves}</div>
+    </div>
+  </div>
+
+  <div class="meta-row">
+    <div class="meta-cell">
+      <span class="meta-label">${L.prep}</span>
+      <span class="meta-value">${recipe.prepTime}</span>
+    </div>
+    <div class="meta-cell">
+      <span class="meta-label">${L.cook}</span>
+      <span class="meta-value">${recipe.cookTime}</span>
+    </div>
+    <div class="meta-cell">
+      <span class="meta-label">${L.difficulty}</span>
+      <span class="meta-value">${recipe.difficulty}</span>
+    </div>
+    <div class="meta-cell">
+      <span class="meta-label">${L.spice}</span>
+      <span class="meta-value"><span class="dots">${dots(recipe.spiceLevel, "red")}</span></span>
+    </div>
+    <div class="meta-cell">
+      <span class="meta-label">${L.umami}</span>
+      <span class="meta-value"><span class="dots">${dots(recipe.umamiLevel, "amber")}</span></span>
+    </div>
+    <div class="meta-cell" style="flex:1.6;">
+      <span class="meta-label">Units</span>
+      <span class="meta-value" style="font-size:8.5pt; font-weight:normal; color:#888;">${unitLabel}</span>
+    </div>
+  </div>
+
+  <div class="body-columns">
+    <div class="ingredients-col">
+      <div class="section-heading">${L.ingredients}</div>
+      <ul>${ingRows}</ul>
+    </div>
+    <div class="method-col">
+      <div class="section-heading">${L.method}</div>
+      ${stepRows}
+    </div>
+  </div>
+
+  <div class="notes-section">
+    <div class="section-heading">${L.notes}</div>
+    <blockquote>${recipe.chefNotes}</blockquote>
+    <div class="pairing-line">
+      <strong>${L.pairing}</strong>
+      ${recipe.pairing}
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>mestizo-umami.com</span>
+    <span>${recipe.title}</span>
+  </div>
+
+  <script>window.onload = function() { window.print(); }<\/script>
+</body>
+</html>`;
+
+    const win = window.open("", "_blank", "width=900,height=700");
+    if (win) {
+      win.document.write(html);
+      win.document.close();
+    }
+  }
+
   return (
     <motion.article
       initial={{ opacity: 0 }}
@@ -132,38 +468,6 @@ export function RecipeDetail() {
       transition={{ duration: 0.5 }}
       className="pb-20 md:pb-24 w-full relative"
     >
-      {/* Print View (Hidden on Screen) */}
-      <div className="hidden print:block mb-8 pb-8 border-b">
-        <h1 className="font-display text-4xl mb-4 font-bold">{recipe.title}</h1>
-        <p className="text-xl mb-6">{t("common.serves")}: {servings}</p>
-
-        <h2 className="text-2xl font-bold mb-4">{t("recipe.ingredients")}</h2>
-        <ul className="mb-8 list-none p-0">
-          {recipe.ingredients.map((ing, i) => {
-            const disp = displayIngredient(ing.qty, ing.unit);
-            return (
-              <li key={i} className="mb-2 text-lg">
-                <strong>{disp.qty} {disp.unit}</strong> {ing.item}
-                {ing.note && <span> ({ing.note})</span>}
-              </li>
-            );
-          })}
-        </ul>
-
-        <h2 className="text-2xl font-bold mb-4">{t("recipe.method")}</h2>
-        <div className="mb-8">
-          {recipe.method.map((step) => (
-            <div key={step.step} className="mb-4 method-step text-lg flex gap-4">
-              <div className="font-bold">{step.step}.</div>
-              <div>{localizeTemp(step.text, unitSystem)}</div>
-            </div>
-          ))}
-        </div>
-
-        <h2 className="text-xl font-bold mb-2">{t("recipe.chefNotes")}</h2>
-        <p className="italic text-lg mb-4">{recipe.chefNotes}</p>
-      </div>
-
       {/* Hero */}
       <section className="relative w-full h-[60vh] md:h-[80vh] min-h-[380px] flex items-end">
         <Link
@@ -202,7 +506,7 @@ export function RecipeDetail() {
 
           <div className="flex gap-3 mt-6 md:mt-0">
             <Button
-              onClick={() => window.print()}
+              onClick={printRecipe}
               size="lg"
               variant="outline"
               className="shrink-0 border-white/20 bg-black/40 backdrop-blur-md h-12 md:h-14 px-6 md:px-8 text-xs tracking-widest uppercase transition-all text-white hover:text-primary hover:border-primary/50"
