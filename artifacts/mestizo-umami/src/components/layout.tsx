@@ -1,14 +1,16 @@
 import { type ReactNode, useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Search, Heart, ChefHat, Calendar, Home as HomeIcon, Menu, X, MapPin } from "lucide-react";
+import { Search, Heart, ChefHat, Calendar, Home as HomeIcon, Menu, X, MapPin, Download } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { LocaleSwitcher } from "@/components/locale-switcher";
 import { useLocale } from "@/lib/locale";
+import { usePWAInstall } from "@/lib/use-pwa-install";
 
 function Nav() {
   const [location] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { t } = useLocale();
+  const { canInstall, triggerInstall } = usePWAInstall();
 
   const links = [
     { href: "/", labelKey: "nav.home" as const, icon: HomeIcon },
@@ -51,6 +53,19 @@ function Nav() {
         </div>
 
         <div className="flex items-center gap-3">
+          {/* PWA Install button — desktop */}
+          {canInstall && (
+            <motion.button
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              onClick={triggerInstall}
+              className="flex items-center gap-2 px-4 py-2 rounded-full border border-primary/60 bg-primary/10 text-primary text-xs tracking-widest uppercase font-medium hover:bg-primary/20 hover:border-primary transition-all"
+              aria-label="Install app"
+            >
+              <Download className="w-3.5 h-3.5" />
+              Install App
+            </motion.button>
+          )}
           {/* Locale switcher */}
           <LocaleSwitcher compact />
           <Link href="/search" data-testid="link-nav-search" className="p-2 rounded-full hover:bg-white/5 transition-colors">
@@ -139,6 +154,17 @@ function Nav() {
               <div className="mt-8 pt-6 border-t border-white/5">
                 <LocaleSwitcher compact={false} />
               </div>
+              {canInstall && (
+                <div className="mt-6">
+                  <button
+                    onClick={() => { triggerInstall(); setMobileMenuOpen(false); }}
+                    className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl border border-primary/60 bg-primary/10 text-primary text-xs tracking-widest uppercase font-medium hover:bg-primary/20 transition-all"
+                  >
+                    <Download className="w-4 h-4" />
+                    Install on my device
+                  </button>
+                </div>
+              )}
               <div className="mt-auto pt-8 border-t border-white/5">
                 <p className="text-xs uppercase tracking-widest text-muted-foreground">
                   {t("nav.tagline")}
@@ -151,9 +177,19 @@ function Nav() {
 
       {/* Mobile Tab Bar — below md */}
       <nav className="md:hidden fixed bottom-0 w-full z-50 glass-effect border-t border-white/5">
-        {/* Locale strip */}
-        <div className="flex justify-center gap-0 border-b border-white/5 py-1.5">
+        {/* Locale + Install strip */}
+        <div className="flex items-center justify-between gap-0 border-b border-white/5 py-1.5 px-3">
           <LocaleSwitcher compact />
+          {canInstall && (
+            <button
+              onClick={triggerInstall}
+              className="flex items-center gap-1.5 px-3 py-1 rounded-full border border-primary/60 bg-primary/10 text-primary text-[9px] tracking-widest uppercase font-medium hover:bg-primary/20 transition-all"
+              aria-label="Install app"
+            >
+              <Download className="w-3 h-3" />
+              Install
+            </button>
+          )}
         </div>
         <div className="h-14 flex items-center justify-around px-2">
           {links.map((link) => (
