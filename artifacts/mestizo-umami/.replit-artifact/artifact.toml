@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Mestizo Umami — The Trilingual Kitchen"
+description = "A luxury home-cooking app that brings 5-star Mexican-Asian fusion cuisine to American kitchens. Features a curated recipe library with stunning photography, step-by-step instructions, servings scaler, meal planner, and favorites notebook. Designed for food lovers who want restaurant-quality results at home."
+version = "1.0.0"
+id = "artifacts/mestizo-umami"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25352
+
+[services.development]
+run = "pnpm --filter @workspace/mestizo-umami run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/mestizo-umami", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/mestizo-umami/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25352"
+BASE_PATH = "/"
