@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import { MapPin, Phone, ExternalLink } from "lucide-react";
 import { useUser } from "@/context/UserContext";
 import { dict } from "@/i18n";
-import { vendorsForZip } from "@/lib/vendor";
+import { vendorsForZip, knownZipPrefixes } from "@/lib/vendor";
 
 export function VendorPanel() {
   const { locale, zip, setZip } = useUser();
@@ -10,6 +10,9 @@ export function VendorPanel() {
   const [draft, setDraft] = useState(zip);
 
   const vendors = useMemo(() => vendorsForZip(zip), [zip]);
+  const knownPrefixes = useMemo(() => new Set(knownZipPrefixes()), []);
+  /* Was this an exact ZIP match, or a region fallback? */
+  const isExactMatch = zip ? knownPrefixes.has(zip.trim().slice(0, 3)) : true;
 
   return (
     <section className="card-surface px-4 py-4 space-y-3">
@@ -38,30 +41,37 @@ export function VendorPanel() {
       </form>
 
       {vendors.length > 0 ? (
-        <ul className="space-y-2">
-          {vendors.map((v) => (
-            <li key={v.name} className="flex items-start justify-between gap-3 px-3 py-2.5 rounded-input bg-ink/[0.04]">
-              <div>
-                <div className="text-sm font-semibold">{v.name}</div>
-                <div className="text-xs text-ink-muted">
-                  {v.city}, {v.state} · {t.vendor.distance(v.miles)} · {v.kind}
+        <>
+          {!isExactMatch ? (
+            <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-chili/80 text-center">
+              ~ {t.vendor.nearbyRegion}
+            </p>
+          ) : null}
+          <ul className="space-y-2">
+            {vendors.map((v) => (
+              <li key={v.name} className="flex items-start justify-between gap-3 px-3 py-2.5 rounded-input bg-ink/[0.04]">
+                <div>
+                  <div className="text-sm font-semibold">{v.name}</div>
+                  <div className="text-xs text-ink-muted">
+                    {v.city}, {v.state} · {t.vendor.distance(v.miles)} · {v.kind}
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-center gap-2">
-                {v.phone ? (
-                  <a href={`tel:${v.phone}`} className="text-chili p-1.5" aria-label={t.vendor.callToOrder}>
-                    <Phone size={14} />
-                  </a>
-                ) : null}
-                {v.url ? (
-                  <a href={v.url} target="_blank" rel="noreferrer" className="text-chili p-1.5">
-                    <ExternalLink size={14} />
-                  </a>
-                ) : null}
-              </div>
-            </li>
-          ))}
-        </ul>
+                <div className="flex items-center gap-2">
+                  {v.phone ? (
+                    <a href={`tel:${v.phone}`} className="text-chili p-1.5" aria-label={t.vendor.callToOrder}>
+                      <Phone size={14} />
+                    </a>
+                  ) : null}
+                  {v.url ? (
+                    <a href={v.url} target="_blank" rel="noreferrer" className="text-chili p-1.5">
+                      <ExternalLink size={14} />
+                    </a>
+                  ) : null}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </>
       ) : zip ? (
         <p className="text-xs text-ink-muted leading-relaxed">{t.vendor.none}</p>
       ) : null}
