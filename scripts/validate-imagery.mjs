@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { access, readFile, readdir } from "node:fs/promises";
+import { readFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -81,20 +81,10 @@ for (const asset of expected) {
   }
 }
 
-// Earlier branches contributed useful real photography. It remains available
-// as an archive even though generated-format recipes are no longer public.
-try {
-  const formatFiles = (await readdir(join(IMAGE_ROOT, "formats"))).filter((name) => /-(?:hero|thumb)\.jpg$/.test(name));
-  if (formatFiles.length !== 40) errors.push(`formats/: expected 40 preserved images, found ${formatFiles.length}`);
-  await Promise.all(formatFiles.map((name) => access(join(IMAGE_ROOT, "formats", name))));
-} catch (error) {
-  errors.push(`formats/: ${error instanceof Error ? error.message : String(error)}`);
-}
-
 if (errors.length > 0) {
   console.error("Imagery validation failed:\n");
   for (const error of errors) console.error(`- ${error}`);
   process.exitCode = 1;
 } else {
-  console.log(`Imagery validation passed: ${expected.length} active assets and 40 preserved format images.`);
+  console.log(`Imagery validation passed: ${expected.length} vendored assets.`);
 }

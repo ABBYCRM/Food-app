@@ -16,7 +16,7 @@
 
 export type ArtSize = "hero" | "thumb" | "phone";
 
-const PALETTE = {
+export const PALETTE = {
   chili: "#b8362c",
   chiliDeep: "#7a1f1a",
   chiliSoft: "#e89588",
@@ -46,7 +46,7 @@ type RecipeArt = {
   phone: () => string;
 };
 
-function svg(width: number, height: number, inner: string, gradientDefs = ""): string {
+export function svg(width: number, height: number, inner: string, gradientDefs = ""): string {
   return (
     `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" preserveAspectRatio="xMidYMid slice">` +
     `<defs>${gradientDefs}</defs>` +
@@ -55,7 +55,7 @@ function svg(width: number, height: number, inner: string, gradientDefs = ""): s
   );
 }
 
-function encode(s: string) {
+export function encodeSvg(s: string): string {
   return `data:image/svg+xml;utf8,${encodeURIComponent(s)}`;
 }
 
@@ -706,5 +706,5 @@ export function fallbackFor(slug: string, size: ArtSize): string {
     case "thumb": raw = art.thumb(); break;
     case "phone": raw = art.phone(); break;
   }
-  return `data:image/svg+xml;utf8,${encodeURIComponent(raw)}`;
+  return encodeSvg(raw);
 }
