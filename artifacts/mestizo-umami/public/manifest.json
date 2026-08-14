@@ -15,5 +15,28 @@
     { "src": "/icon-512.png",         "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
   ],
   "categories": ["food", "lifestyle"],
-  "screenshots": []
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Recipes",
+      "short_name": "Recipes",
+      "description": "Browse all fusion recipes",
+      "url": "/recipes",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Meal Planner",
+      "short_name": "Planner",
+      "description": "Plan your weekly meals",
+      "url": "/planner",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "My Notebook",
+      "short_name": "Notebook",
+      "description": "Your saved recipes",
+      "url": "/notebook",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    }
+  ]
 }

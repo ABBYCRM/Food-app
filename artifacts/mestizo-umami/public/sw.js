@@ -1,61 +1,92 @@
-const CACHE_NAME = 'mestizo-umami-v1';
-const STATIC_ASSETS = ['/', '/recipes', '/planner', '/notebook', '/search', '/stores'];
+// Service worker for Mestizo Umami PWA.
+// Cache name is versioned via the ?v= query param injected at registration time
+// (see main.tsx) so each deploy automatically busts stale caches.
 
+const version   = new URLSearchParams(self.location.search).get('v') || 'v1';
+const CACHE_NAME = `mestizo-umami-${version}`;
+
+const SHELL_ROUTES = ['/', '/recipes', '/planner', '/notebook', '/search', '/stores'];
+
+// ── Install: pre-cache app-shell routes ──────────────────────────────────────
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) =>
-      cache.addAll(STATIC_ASSETS).catch(() => {}) // ignore failures for shell caching
-    )
+      // Ignore individual failures — shell caching is best-effort
+      Promise.allSettled(SHELL_ROUTES.map((r) => cache.add(r))),
+    ),
   );
+  // Take over immediately; don't wait for old tabs to close
   self.skipWaiting();
 });
 
+// ── Activate: delete all caches from previous versions ───────────────────────
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((keys) =>
-      Promise.all(keys.filter((k) => k !== CACHE_NAME).map((k) => caches.delete(k)))
-    )
+      Promise.all(
+        keys
+          .filter((k) => k !== CACHE_NAME)
+          .map((k) => caches.delete(k)),
+      ),
+    ),
   );
   self.clients.claim();
 });
 
+// ── Fetch: stale-while-revalidate for same-origin assets ─────────────────────
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
-  // Network first for API calls, cache first for assets
+
   const url = new URL(event.request.url);
-  if (url.hostname.includes('nominatim') || url.hostname.includes('overpass')) {
-    event.respondWith(fetch(event.request).catch(() => new Response('offline', { status: 503 })));
+
+  // External map/geocoding APIs — network only, graceful 503 offline
+  if (
+    url.hostname.includes('nominatim') ||
+    url.hostname.includes('overpass') ||
+    url.hostname.includes('tile.openstreetmap')
+  ) {
+    event.respondWith(
+      fetch(event.request).catch(
+        () => new Response('offline', { status: 503, statusText: 'Offline' }),
+      ),
+    );
     return;
   }
+
+  // API calls — network first, no caching
+  if (url.pathname.startsWith('/api/')) {
+    event.respondWith(
+      fetch(event.request).catch(
+        () => new Response(JSON.stringify({ error: 'offline' }), {
+          status: 503,
+          headers: { 'Content-Type': 'application/json' },
+        }),
+      ),
+    );
+    return;
+  }
+
+  // Everything else — cache first, then network + cache update
   event.respondWith(
-    caches.match(event.request).then((cached) =>
-      cached || fetch(event.request).then((res) => {
+    caches.match(event.request).then((cached) => {
+      const networkFetch = fetch(event.request).then((res) => {
         if (res && res.status === 200 && res.type === 'basic') {
           const clone = res.clone();
           caches.open(CACHE_NAME).then((c) => c.put(event.request, clone));
         }
         return res;
-      })
-    )
+      });
+      return cached || networkFetch;
+    }),
   );
 });
 
 // ── Push notifications ────────────────────────────────────────────────────────
-
-const SLOT_EMOJI = { breakfast: '☀️', lunch: '🥗', dinner: '🌙', snack: '🍵' };
-
-/**
- * Incoming payload shape:
- *   { title: "Tomorrow's Dinner 🌙", body: "Miso-Mole Short Rib Tacos", url: "/recipe/miso-mole-short-rib-tacos" }
- */
 self.addEventListener('push', (event) => {
   if (!event.data) return;
-
   let payload = {};
   try { payload = event.data.json(); } catch { return; }
-
   const { title = 'Mestizo Umami', body = '', url = '/', tag = 'meal-reminder' } = payload;
-
   event.waitUntil(
     self.registration.showNotification(title, {
       body,
@@ -63,35 +94,33 @@ self.addEventListener('push', (event) => {
       badge:   '/favicon-32.png',
       image:   '/icon-512.png',
       vibrate: [200, 100, 200],
-      tag,                               // unique per day (e.g. "meal-reminder-monday")
+      tag,
       renotify: false,
-      data:    { url },
+      data: { url },
       actions: [
         { action: 'open',    title: 'View recipe' },
-        { action: 'dismiss', title: 'Dismiss' },
+        { action: 'dismiss', title: 'Dismiss'     },
       ],
-    })
+    }),
   );
 });
 
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
   if (event.action === 'dismiss') return;
-
-  const url = event.notification.data?.url ?? '/';
-
+  const target = event.notification.data?.url ?? '/';
   event.waitUntil(
-    clients.matchAll({ type: 'window', includeUncontrolled: true }).then((clientList) => {
-      // Focus an existing tab if one is already open
-      for (const client of clientList) {
-        if (client.url.includes(self.location.origin) && 'focus' in client) {
-          client.focus();
-          client.navigate(url);
-          return;
+    clients
+      .matchAll({ type: 'window', includeUncontrolled: true })
+      .then((clientList) => {
+        for (const client of clientList) {
+          if (client.url.includes(self.location.origin) && 'focus' in client) {
+            client.focus();
+            client.navigate(target);
+            return;
+          }
         }
-      }
-      // Otherwise open a new window
-      return clients.openWindow(url);
-    })
+        return clients.openWindow(target);
+      }),
   );
 });

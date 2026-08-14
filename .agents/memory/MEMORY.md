@@ -1,2 +1,3 @@
 - [Mestizo Umami recipe data architecture](mestizo-umami-recipes.md) — 4 split files re-exported from recipes.ts; mealSlots union includes "brunch" and "side".
 - [Mestizo Umami GitHub push](mestizo-umami-github.md) — remote is ABBYCRM/Food-app.git; PAT stored as GITHUB_PAT secret; always set-url before push.
+- [Mestizo Umami auth architecture](mestizo-umami-auth.md) — OIDC+PKCE Google auth, scoped repos, Stripe, migration path quirk, key derivation quirk.

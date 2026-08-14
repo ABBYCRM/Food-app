@@ -17,7 +17,11 @@ createRoot(document.getElementById('root')!, {
 );
 
 if ('serviceWorker' in navigator) {
+  // __BUILD_TS__ is injected by Vite at build time (see vite.config.ts → define).
+  // Each deploy gets a unique value, busting stale SW caches automatically.
+  // The global declaration lives in src/vite-env.d.ts.
+  const swVersion = (window as unknown as Record<string, unknown>).__BUILD_TS__ as string ?? 'dev';
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js').catch(() => {});
+    navigator.serviceWorker.register(`/sw.js?v=${swVersion}`).catch(() => {});
   });
 }

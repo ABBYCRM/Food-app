@@ -4,6 +4,7 @@ import { Search, Heart, ChefHat, Calendar, Home as HomeIcon, Menu, X, MapPin, Do
 import { motion, AnimatePresence } from "framer-motion";
 import { LocaleSwitcher } from "@/components/locale-switcher";
 import { AccountButton } from "@/components/account-button";
+import { OfflineBanner } from "@/components/offline-banner";
 import { useLocale } from "@/lib/locale";
 import { usePWAInstall } from "@/lib/use-pwa-install";
 
@@ -246,6 +247,7 @@ function Footer() {
 export function Layout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-[100dvh] flex flex-col relative w-full bg-background text-foreground overflow-x-hidden">
+      <OfflineBanner />
       <Nav />
       {/* pb-28: mobile bottom nav = locale strip (~36px) + tab bar (56px) ≈ 92px → safe 112px */}
       <main className="flex-1 w-full pt-0 md:pt-16 lg:pt-20 pb-28 md:pb-0 relative z-10 flex flex-col">

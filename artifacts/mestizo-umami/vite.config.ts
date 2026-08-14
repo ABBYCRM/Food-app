@@ -29,6 +29,11 @@ if (!basePath) {
 
 export default defineConfig({
   base: basePath,
+  define: {
+    // Injected at build time so the SW registration URL is unique per deploy,
+    // busting stale caches automatically.
+    __BUILD_TS__: JSON.stringify(Date.now().toString()),
+  },
   plugins: [
     react(),
     tailwindcss(),
