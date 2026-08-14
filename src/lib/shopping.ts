@@ -25,6 +25,23 @@ export function retailerUrl(retailer: Retailer, query: string, zip?: string): st
   }
 }
 
+/* Instacart Shopping List deep-link. Opens a single tab on Instacart's
+   shopping-list page with every ingredient pre-added; the user then taps
+   "Add all to cart" once in Instacart instead of opening 11 popup-blocked
+   tabs. The `add_items` parameter accepts a comma-separated list and works
+   on web + mobile (the Instacart app picks it up via universal link). */
+export function instacartShoppingListUrl(queries: string[], zip?: string): string {
+  const cleaned = queries
+    .map((q) => q.trim())
+    .filter(Boolean)
+    .slice(0, 30)
+    .map((q) => q.replace(/,/g, " "))  /* commas inside an item would break the list */
+    .join(",");
+  const params = new URLSearchParams({ add_items: cleaned });
+  if (zip) params.set("zip", zip);
+  return `https://www.instacart.com/store/shopping_list?${params.toString()}`;
+}
+
 export function multiRetailerUrls(retailer: Retailer, ingredients: Ingredient[], zip?: string): string[] {
   return ingredients.map((i) => retailerUrl(retailer, ingredientQuery(i), zip));
 }

@@ -2,7 +2,8 @@ import { useMemo, useState } from "react";
 import { ShoppingCart, ExternalLink, Check } from "lucide-react";
 import type { Ingredient, Recipe } from "@/data/recipes";
 import {
-  combinedSearchUrl, ingredientQuery, multiRetailerUrls, openInNewTab, openMany, retailerUrl, type Retailer,
+  combinedSearchUrl, ingredientQuery, instacartShoppingListUrl,
+  multiRetailerUrls, openInNewTab, openMany, retailerUrl, type Retailer,
 } from "@/lib/shopping";
 import { useUser } from "@/context/UserContext";
 import { dict } from "@/i18n";
@@ -49,6 +50,18 @@ export function ShoppingPanel({
 
   const openAll = () => {
     setPopupBlocked(false);
+    /* Instacart gets the Shopping List deep-link — one tab, every ingredient
+       pre-added. Other retailers fall through to the multi-tab approach with
+       the popup-block fallback that already exists below. */
+    if (selected === "instacart") {
+      const url = instacartShoppingListUrl(
+        activeIngredients.map(ingredientQuery),
+        zip
+      );
+      const opened = openInNewTab(url);
+      if (!opened) setPopupBlocked(true);
+      return;
+    }
     const urls = multiRetailerUrls(selected, activeIngredients, zip);
     const result = openMany(urls);
     if (result.opened === 0 || (urls.length > 1 && result.blocked >= urls.length - 1)) {

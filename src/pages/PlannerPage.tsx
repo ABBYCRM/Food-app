@@ -8,7 +8,7 @@ import { useUser, type MealSlot, MEAL_SLOTS } from "@/context/UserContext";
 import { useTrial } from "@/context/TrialContext";
 import { dict } from "@/i18n";
 import { allRecipesForCalendar } from "@/data/calendar";
-import { consolidateForWeek, openMany, retailerUrl, type Retailer } from "@/lib/shopping";
+import { consolidateForWeek, instacartShoppingListUrl, openMany, retailerUrl, type Retailer } from "@/lib/shopping";
 import { cn } from "@/lib/cn";
 import { localDateKey } from "@/lib/date";
 
@@ -82,6 +82,17 @@ export function PlannerPage() {
   }, [query, locale]);
 
   function openConsolidated(retailer: Retailer) {
+    /* Instacart gets the Shopping List deep-link so the user lands on a
+       single tab with every ingredient pre-added. Opening 11 separate
+       Instacart tabs triggers Chrome's popup blocker. */
+    if (retailer === "instacart") {
+      const url = instacartShoppingListUrl(
+        consolidated.map((c) => c.query),
+        zip
+      );
+      window.open(url, "_blank", "noopener,noreferrer");
+      return;
+    }
     const urls = consolidated.map((c) => retailerUrl(retailer, c.query, zip));
     openMany(urls);
   }

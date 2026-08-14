@@ -172,7 +172,7 @@ export const es: Dict = {
     deliverTo: "Entregar a CP",
     zipPlaceholder: "Código postal",
     openOnAmazon: "Abrir todo en Amazon",
-    openOnInstacart: "Abrir todo en Instacart",
+    openOnInstacart: "Añadir todo a Instacart",
     openOnWholeFoods: "Abrir todo en Whole Foods",
     note: "Nunca vemos tu cuenta del vendedor. Cada enlace se abre en tu sesión iniciada.",
     consolidated: "Lista consolidada de la semana",
