@@ -7,6 +7,7 @@ import { Bookmark, Clock, Flame, Utensils, Droplets, Minus, Plus, ChevronLeft, C
 import { Button } from "@/components/ui/button";
 import { useLocale } from "@/lib/locale";
 import { parseQtyNum, convertUnit, localizeTemp } from "@/lib/unit-convert";
+import { PlatingGuide } from "@/components/plating-guide";
 
 function SpiceLevel({ level }: { level: number }) {
   return (
@@ -342,6 +343,9 @@ export function RecipeDetail() {
               </div>
             ))}
           </div>
+
+          {/* Plating Guide */}
+          <PlatingGuide method={recipe.method} recipeName={recipe.title} />
 
           {/* Chef Notes & Pairing */}
           <div className="mt-16 md:mt-20 p-6 md:p-10 border border-primary/20 bg-primary/5 rounded-2xl">
