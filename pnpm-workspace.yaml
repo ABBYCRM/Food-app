@@ -74,6 +74,13 @@ onlyBuiltDependencies:
   - msw
   - unrs-resolver
 
+# pnpm 10+ renamed onlyBuiltDependencies → approvedBuilds; keep both for compat
+approvedBuilds:
+  - '@swc/core'
+  - esbuild
+  - msw
+  - unrs-resolver
+
 overrides:
   # replit uses linux-x64 only, we can exclude all other platforms
   "esbuild>@esbuild/darwin-arm64": "-"
