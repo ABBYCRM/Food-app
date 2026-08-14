@@ -3,17 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Mestizo Umami — a curated trilingual Mexican-Asian fusion recipe app with a daily rotation, serving scaler, allergy filters, week planner, and shopping links.",
+  "description": "Mestizo Umami \u2014 a curated trilingual Mexican-Asian fusion recipe app with a daily rotation, serving scaler, allergy filters, week planner, and shopping links.",
   "scripts": {
-    "dev": "vite --host 0.0.0.0",
     "build": "vite build",
+    "dev": "vite --host 0.0.0.0",
+    "dev:server": "NODE_ENV=development node --env-file-if-exists=.env.local --watch server/index.js",
+    "migrate": "node --env-file-if-exists=.env.local server/migrate.js",
     "preview": "vite preview --host 0.0.0.0",
+    "seo:generate": "node --import tsx scripts/generate-seo.ts",
+    "start": "NODE_ENV=production node --env-file-if-exists=.env.local server/index.js",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "test:smoke": "node scripts/smoke-app.mjs",
     "typecheck": "tsc --noEmit",
     "typecheck:e2e": "tsc --noEmit -p e2e/tsconfig.json",
-    "validate:images": "node scripts/validate-imagery.mjs",
     "validate:breakfast": "node scripts/validate-breakfast.mjs",
-    "test:smoke": "node scripts/smoke-app.mjs",
-    "test:e2e": "playwright test"
+    "validate:images": "node scripts/validate-imagery.mjs"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -22,7 +27,14 @@
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "tailwind-merge": "^3.3.1",
-    "wouter": "^3.3.5"
+    "wouter": "^3.3.5",
+    "compression": "^1.8.1",
+    "express": "^5.2.1",
+    "helmet": "^8.3.0",
+    "openid-client": "^6.8.5",
+    "postgres": "^3.4.9",
+    "stripe": "^22.5.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@playwright/test": "^1.56.1",
@@ -33,6 +45,12 @@
     "@vitejs/plugin-react": "^5.0.4",
     "tailwindcss": "^4.1.14",
     "typescript": "^5.7.0",
-    "vite": "^7.3.2"
+    "vite": "^7.3.2",
+    "@electric-sql/pglite": "^0.5.4",
+    "@types/compression": "^1.8.1",
+    "@types/express": "^5.0.6",
+    "tsx": "^4.23.12",
+    "vitest": "^4.1.10",
+    "yaml": "^2.9.0"
   }
 }
