@@ -8,6 +8,11 @@ import flanHero from "@assets/generated_images/miso-mezcal-flan.jpg";
 import wingsHero from "@assets/generated_images/tamarindo-shoyu-glazed-wings.jpg";
 import tresLechesHero from "@assets/generated_images/horchata-tres-leches-matcha.jpg";
 
+import { breakfastRecipes } from "./breakfast-recipes";
+import { lunchRecipes } from "./lunch-recipes";
+import { dinnerRecipes } from "./dinner-recipes";
+import { snackRecipes } from "./snack-recipes";
+
 export interface Recipe {
   slug: string;
   title: string;
@@ -33,7 +38,7 @@ export interface Recipe {
   healthy: boolean;
 }
 
-export const recipes: Recipe[] = [
+export const existingRecipes: Recipe[] = [
   {
     slug: "miso-mole-short-rib-tacos",
     title: "Miso-Mole Short Rib Tacos",
@@ -395,6 +400,14 @@ export const recipes: Recipe[] = [
     mealSlots: ["dessert"],
     healthy: false
   }
+];
+
+export const recipes: Recipe[] = [
+  ...existingRecipes,
+  ...dinnerRecipes,
+  ...breakfastRecipes,
+  ...lunchRecipes,
+  ...snackRecipes,
 ];
 
 export function getRecipeBySlug(slug: string): Recipe | undefined {

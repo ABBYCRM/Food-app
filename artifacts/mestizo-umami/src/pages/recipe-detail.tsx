@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useRoute, Link } from "wouter";
 import { getRecipeBySlug, recipes } from "../data/recipes";
 import { isRecipeSaved, saveRecipe, unsaveRecipe } from "../lib/storage";
-import { Bookmark, Clock, Flame, Utensils, Droplets, Minus, Plus, ChevronLeft, ChefHat } from "lucide-react";
+import { Bookmark, Clock, Flame, Utensils, Droplets, Minus, Plus, ChevronLeft, ChefHat, Printer } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 function SpiceLevel({ level }: { level: number }) {
@@ -36,17 +36,59 @@ function UmamiLevel({ level }: { level: number }) {
   );
 }
 
+// Parse fraction strings like "1/2", "1 1/4", "2", "0.5" to a number
+function parseFraction(qty: string): number | null {
+  const trimmed = qty.trim();
+  // Mixed number: "1 1/2"
+  const mixed = trimmed.match(/^(\d+)\s+(\d+)\/(\d+)$/);
+  if (mixed) return parseInt(mixed[1]) + parseInt(mixed[2]) / parseInt(mixed[3]);
+  // Simple fraction: "1/2"
+  const frac = trimmed.match(/^(\d+)\/(\d+)$/);
+  if (frac) return parseInt(frac[1]) / parseInt(frac[2]);
+  // Decimal/whole
+  const num = parseFloat(trimmed);
+  return isNaN(num) ? null : num;
+}
+
+// Convert decimal to clean fraction string (max denominator 8)
+function decimalToFraction(val: number): string {
+  if (val === 0) return "0";
+  const denominators = [1, 2, 3, 4, 8];
+  let bestNum = Math.round(val);
+  let bestDen = 1;
+  let bestErr = Math.abs(val - bestNum);
+  for (const den of denominators) {
+    const num = Math.round(val * den);
+    const err = Math.abs(val - num / den);
+    if (err < bestErr - 0.001) { bestErr = err; bestNum = num; bestDen = den; }
+  }
+  if (bestDen === 1) return bestNum.toString();
+  const whole = Math.floor(bestNum / bestDen);
+  const rem = bestNum % bestDen;
+  if (whole > 0 && rem > 0) return `${whole} ${rem}/${bestDen}`;
+  if (rem === 0) return whole.toString();
+  return `${rem}/${bestDen}`;
+}
+
+function scaleQty(qty: string, ratio: number): string {
+  const num = parseFraction(qty);
+  if (num === null) return qty; // "a pinch", "to taste", etc. — return unchanged
+  const scaled = num * ratio;
+  return decimalToFraction(scaled);
+}
+
 export function RecipeDetail() {
   const [match, params] = useRoute("/recipe/:slug");
   const slug = params?.slug;
   const recipe = slug ? getRecipeBySlug(slug) : undefined;
 
   const [saved, setSaved] = useState(false);
-  const [scaler, setScaler] = useState(1);
+  const [servings, setServings] = useState<number>(1);
 
   useEffect(() => {
     if (recipe) {
       setSaved(isRecipeSaved(recipe.slug));
+      setServings(recipe.servings);
       window.scrollTo(0, 0);
     }
   }, [recipe]);
@@ -72,14 +114,7 @@ export function RecipeDetail() {
     }
   };
 
-  const currentServings = Math.max(1, Math.round(recipe.servings * scaler));
-
-  const formatQty = (qtyStr: string) => {
-    const num = parseFloat(qtyStr);
-    if (isNaN(num)) return qtyStr;
-    const scaled = num * scaler;
-    return Number.isInteger(scaled) ? scaled.toString() : scaled.toFixed(1);
-  };
+  const ratio = recipe ? servings / recipe.servings : 1;
 
   // Related recipes: same category, excluding current
   const related = recipes
@@ -96,8 +131,37 @@ export function RecipeDetail() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="pb-20 md:pb-24 w-full"
+      className="pb-20 md:pb-24 w-full relative"
     >
+      {/* Print View (Hidden on Screen) */}
+      <div className="hidden print:block mb-8 pb-8 border-b">
+        <h1 className="font-display text-4xl mb-4 font-bold">{recipe.title}</h1>
+        <p className="text-xl mb-6">Serves: {servings}</p>
+        
+        <h2 className="text-2xl font-bold mb-4">Ingredients</h2>
+        <ul className="mb-8 list-none p-0">
+          {recipe.ingredients.map((ing, i) => (
+            <li key={i} className="mb-2 text-lg">
+              <strong>{scaleQty(ing.qty, ratio)} {ing.unit}</strong> {ing.item}
+              {ing.note && <span> ({ing.note})</span>}
+            </li>
+          ))}
+        </ul>
+
+        <h2 className="text-2xl font-bold mb-4">Method</h2>
+        <div className="mb-8">
+          {recipe.method.map((step) => (
+            <div key={step.step} className="mb-4 method-step text-lg flex gap-4">
+              <div className="font-bold">{step.step}.</div>
+              <div>{step.text}</div>
+            </div>
+          ))}
+        </div>
+
+        <h2 className="text-xl font-bold mb-2">Chef's Notes</h2>
+        <p className="italic text-lg mb-4">{recipe.chefNotes}</p>
+      </div>
+
       {/* Hero */}
       <section className="relative w-full h-[60vh] md:h-[80vh] min-h-[380px] flex items-end">
         {/* Back button */}
@@ -139,18 +203,29 @@ export function RecipeDetail() {
             </p>
           </div>
 
-          <Button
-            onClick={toggleSave}
-            data-testid="button-save-detail"
-            size="lg"
-            variant="outline"
-            className={`shrink-0 border-white/20 bg-black/40 backdrop-blur-md h-12 md:h-14 px-6 md:px-8 text-xs tracking-widest uppercase transition-all ${
-              saved ? 'text-primary border-primary bg-primary/10' : 'text-white hover:text-primary hover:border-primary/50'
-            }`}
-          >
-            <Bookmark className={`w-4 h-4 md:w-5 md:h-5 mr-2 md:mr-3 ${saved ? 'fill-primary' : ''}`} />
-            {saved ? 'Saved' : 'Save Recipe'}
-          </Button>
+          <div className="flex gap-3 mt-6 md:mt-0">
+            <Button
+              onClick={() => window.print()}
+              size="lg"
+              variant="outline"
+              className="shrink-0 border-white/20 bg-black/40 backdrop-blur-md h-12 md:h-14 px-6 md:px-8 text-xs tracking-widest uppercase transition-all text-white hover:text-primary hover:border-primary/50"
+            >
+              <Printer className="w-4 h-4 md:w-5 md:h-5 mr-2 md:mr-3" />
+              Print List
+            </Button>
+            <Button
+              onClick={toggleSave}
+              data-testid="button-save-detail"
+              size="lg"
+              variant="outline"
+              className={`shrink-0 border-white/20 bg-black/40 backdrop-blur-md h-12 md:h-14 px-6 md:px-8 text-xs tracking-widest uppercase transition-all ${
+                saved ? 'text-primary border-primary bg-primary/10' : 'text-white hover:text-primary hover:border-primary/50'
+              }`}
+            >
+              <Bookmark className={`w-4 h-4 md:w-5 md:h-5 mr-2 md:mr-3 ${saved ? 'fill-primary' : ''}`} />
+              {saved ? 'Saved' : 'Save Recipe'}
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -212,16 +287,16 @@ export function RecipeDetail() {
               {/* Servings Scaler */}
               <div className="flex items-center gap-2 bg-secondary rounded-full p-1 border border-white/5">
                 <button
-                  onClick={() => setScaler(s => Math.max(0.5, s - 0.5))}
+                  onClick={() => setServings(s => Math.max(1, s - 1))}
                   data-testid="button-scaler-minus"
                   aria-label="Decrease servings"
                   className="p-2 rounded-full hover:bg-white/10 text-muted-foreground hover:text-primary transition-colors"
                 >
                   <Minus className="w-3 h-3" />
                 </button>
-                <span className="text-xs w-14 text-center font-medium">{currentServings} srv</span>
+                <span className="text-xs w-20 text-center font-medium">{servings} servings</span>
                 <button
-                  onClick={() => setScaler(s => s + 0.5)}
+                  onClick={() => setServings(s => Math.min(20, s + 1))}
                   data-testid="button-scaler-plus"
                   aria-label="Increase servings"
                   className="p-2 rounded-full hover:bg-white/10 text-muted-foreground hover:text-primary transition-colors"
@@ -235,7 +310,7 @@ export function RecipeDetail() {
               {recipe.ingredients.map((ing, i) => (
                 <li key={i} className="flex gap-3 md:gap-4 items-start text-sm">
                   <span className="text-primary font-medium w-16 shrink-0 text-right leading-relaxed">
-                    {formatQty(ing.qty)} {ing.unit}
+                    {scaleQty(ing.qty, ratio)} {ing.unit}
                   </span>
                   <span className="text-foreground leading-relaxed">
                     {ing.item}

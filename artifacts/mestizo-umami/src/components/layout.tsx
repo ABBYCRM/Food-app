@@ -1,6 +1,6 @@
 import { type ReactNode, useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Search, Heart, ChefHat, Calendar, Home as HomeIcon, Menu, X } from "lucide-react";
+import { Search, Heart, ChefHat, Calendar, Home as HomeIcon, Menu, X, MapPin } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 function Nav() {
@@ -12,6 +12,7 @@ function Nav() {
     { href: "/recipes", label: "Recipes", icon: ChefHat },
     { href: "/planner", label: "Planner", icon: Calendar },
     { href: "/notebook", label: "Notebook", icon: Heart },
+    { href: "/stores", label: "Stores", icon: MapPin },
   ];
 
   return (
@@ -145,23 +146,23 @@ function Nav() {
             key={link.href}
             href={link.href}
             data-testid={`link-tabnav-${link.label.toLowerCase()}`}
-            className={`flex flex-col items-center gap-0.5 py-2 px-3 rounded-lg transition-colors ${
+            className={`flex flex-col items-center gap-0.5 py-1 px-1 sm:px-2 rounded-lg transition-colors ${
               location === link.href ? "text-primary" : "text-muted-foreground"
             }`}
           >
-            <link.icon className="w-5 h-5" />
-            <span className="text-[9px] uppercase tracking-wider">{link.label}</span>
+            <link.icon className="w-4 h-4" />
+            <span className="text-[8px] sm:text-[9px] uppercase tracking-wider">{link.label}</span>
           </Link>
         ))}
         <Link
           href="/search"
           data-testid="link-tabnav-search"
-          className={`flex flex-col items-center gap-0.5 py-2 px-3 rounded-lg transition-colors ${
+          className={`flex flex-col items-center gap-0.5 py-1 px-1 sm:px-2 rounded-lg transition-colors ${
             location === "/search" ? "text-primary" : "text-muted-foreground"
           }`}
         >
-          <Search className="w-5 h-5" />
-          <span className="text-[9px] uppercase tracking-wider">Search</span>
+          <Search className="w-4 h-4" />
+          <span className="text-[8px] sm:text-[9px] uppercase tracking-wider">Search</span>
         </Link>
       </nav>
     </>

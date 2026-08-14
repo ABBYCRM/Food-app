@@ -19,6 +19,7 @@ import { RecipeDetail } from './pages/recipe-detail';
 import { Planner } from './pages/planner';
 import { Notebook } from './pages/notebook';
 import { SearchPage } from './pages/search';
+import { StoresPage } from './pages/stores';
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,7 @@ function Router() {
             <Route path="/planner" component={Planner} />
             <Route path="/notebook" component={Notebook} />
             <Route path="/search" component={SearchPage} />
+            <Route path="/stores" component={StoresPage} />
             <Route component={NotFound} />
           </Switch>
         </AnimatePresence>

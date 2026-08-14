@@ -144,3 +144,21 @@
 .font-display {
   font-family: var(--font-serif);
 }
+
+@media print {
+  /* Hide everything navigation and chrome */
+  nav, footer, .bottom-tab-bar, [data-testid*="nav"], [data-testid*="button-save"], .print\:hidden { display: none !important; }
+  /* Reset background to white */
+  body, .bg-background, [class*="bg-"] { background: white !important; color: black !important; }
+  /* Show print-only content */
+  .print\:block { display: block !important; }
+  .hidden.print\:block { display: block !important; }
+  /* Typography */
+  .font-display { font-family: Georgia, "Times New Roman", serif !important; }
+  h1, h2, h3 { color: black !important; }
+  a { color: black !important; text-decoration: none !important; }
+  /* Page breaks */
+  .method-step { page-break-inside: avoid; }
+  /* Remove shadows and borders */
+  * { box-shadow: none !important; text-shadow: none !important; }
+}
