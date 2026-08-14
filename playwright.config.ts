@@ -21,8 +21,17 @@ export default defineConfig({
       use: { ...devices["Pixel 7"] },
     },
     {
+      // Not devices["iPad Mini"] — that defaults to WebKit, and this
+      // environment only has Chromium installed. Chromium-based tablet
+      // emulation (viewport + touch) instead.
       name: "tablet",
-      use: { ...devices["iPad Mini"] },
+      use: {
+        ...devices["Desktop Chrome"],
+        viewport: { width: 834, height: 1194 },
+        isMobile: true,
+        hasTouch: true,
+        defaultBrowserType: "chromium",
+      },
     },
     {
       name: "desktop",

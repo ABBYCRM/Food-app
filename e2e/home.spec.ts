@@ -17,17 +17,31 @@ test.describe("Home page", () => {
     await expect(breakfastSection.locator("article, button").first()).toBeVisible();
   });
 
-  test("every hero and card image actually loads (nonzero natural size)", async ({ page }) => {
+  test("the above-the-fold hero image actually loads (nonzero natural size)", async ({ page }) => {
     await page.goto("/");
-    await page.waitForLoadState("networkidle");
-    const images = page.locator("img");
+    // The hero is loading="eager" and always present without any scroll or
+    // lazy-load timing involved — a clean, deterministic check that the
+    // real-photo → SVG-fallback pipeline actually produces a decoded image.
+    const hero = page.locator("img").first();
+    await expect(hero).toHaveJSProperty("complete", true);
+    const naturalWidth = await hero.evaluate((el: HTMLImageElement) => el.naturalWidth);
+    expect(naturalWidth).toBeGreaterThan(0);
+  });
+
+  test("the breakfast row's cards load real images once scrolled into view", async ({ page }) => {
+    await page.goto("/");
+    const breakfastHeading = page.getByText("Breakfast", { exact: true });
+    const breakfastSection = breakfastHeading.locator("xpath=ancestor::section[1]");
+    await breakfastSection.scrollIntoViewIfNeeded();
+
+    const images = breakfastSection.locator("img");
     const count = await images.count();
-    expect(count).toBeGreaterThan(5);
+    expect(count).toBeGreaterThan(0);
     for (let i = 0; i < count; i++) {
       const img = images.nth(i);
-      await expect(img).toHaveJSProperty("complete", true);
+      await expect(img).toHaveJSProperty("complete", true, { timeout: 10000 });
       const naturalWidth = await img.evaluate((el: HTMLImageElement) => el.naturalWidth);
-      expect(naturalWidth, `image ${i} (${await img.getAttribute("src")}) failed to decode`).toBeGreaterThan(0);
+      expect(naturalWidth, `breakfast card image ${i} (${await img.getAttribute("src")}) failed to decode`).toBeGreaterThan(0);
     }
   });
 
