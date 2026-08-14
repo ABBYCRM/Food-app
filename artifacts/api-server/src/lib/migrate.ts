@@ -4,11 +4,13 @@
  * Ported from server/migrations.js.
  */
 import { readFile, readdir } from "node:fs/promises";
-import { fileURLToPath } from "node:url";
 import path from "node:path";
 import { pool } from "@workspace/db";
 
-const migrationDir = fileURLToPath(new URL("../../migrations/", import.meta.url));
+// esbuild bundles all TS into dist/index.mjs, so import.meta.url is not
+// useful for locating sibling source files at runtime.  The server always
+// runs with cwd = the api-server package root, so use that.
+const migrationDir = path.resolve(process.cwd(), "migrations");
 
 export async function runMigrations(dir = migrationDir): Promise<string[]> {
   // Tracking table

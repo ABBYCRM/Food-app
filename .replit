@@ -23,3 +23,10 @@ timeoutMs = 20000
 
 [userenv.shared]
 VAPID_PUBLIC_KEY = "BFm_nYTodR0X1MSjER5TWnGHsfxAcoOOOBR5Yjs9rkJ5IzrWSUGA6D4hFdOuuiqZjSalg5KcFojrCUMEYv_L5FA"
+COOKIE_SAME_SITE = "Lax"
+COOKIE_SECURE = "true"
+OIDC_ATTEMPT_TTL_SECONDS = "600"
+OIDC_SCOPES = "openid profile email offline_access"
+PUBLIC_BASE_URL = "https://mestizo-umami-app-abbycrm.ondigitalocean.app"
+SESSION_TTL_SECONDS = "2592000"
+TRIAL_DAYS = "7"
