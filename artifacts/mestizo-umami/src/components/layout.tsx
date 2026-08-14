@@ -1,10 +1,11 @@
-import { type ReactNode } from "react";
+import { type ReactNode, useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Search, Heart, ChefHat, Calendar, Home as HomeIcon } from "lucide-react";
-import { motion } from "framer-motion";
+import { Search, Heart, ChefHat, Calendar, Home as HomeIcon, Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 function Nav() {
   const [location] = useLocation();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const links = [
     { href: "/", label: "Home", icon: HomeIcon },
@@ -15,16 +16,16 @@ function Nav() {
 
   return (
     <>
-      {/* Desktop Nav */}
-      <nav className="hidden md:flex fixed top-0 w-full z-50 glass-effect h-20 items-center justify-between px-8 border-b border-white/5">
+      {/* Desktop Nav — lg and above: full horizontal nav */}
+      <nav className="hidden lg:flex fixed top-0 w-full z-50 glass-effect h-20 items-center justify-between px-8 border-b border-white/5">
         <Link href="/" data-testid="link-home-brand" className="font-display text-2xl tracking-widest text-primary hover:opacity-80 transition-opacity">
           MESTIZO UMAMI
         </Link>
 
         <div className="flex items-center gap-8">
           {links.map((link) => (
-            <Link 
-              key={link.href} 
+            <Link
+              key={link.href}
               href={link.href}
               data-testid={`link-nav-${link.label.toLowerCase()}`}
               className={`text-sm uppercase tracking-wider font-medium transition-colors hover:text-primary ${
@@ -33,8 +34,8 @@ function Nav() {
             >
               {link.label}
               {location === link.href && (
-                <motion.div 
-                  layoutId="underline" 
+                <motion.div
+                  layoutId="underline"
                   className="h-[2px] bg-primary mt-1 w-full"
                 />
               )}
@@ -52,28 +53,115 @@ function Nav() {
         </div>
       </nav>
 
-      {/* Mobile Tab Bar */}
-      <nav className="md:hidden fixed bottom-0 w-full z-50 glass-effect h-16 border-t border-white/5 flex items-center justify-around px-4">
+      {/* Tablet Nav — md to lg: wordmark + hamburger */}
+      <nav className="hidden md:flex lg:hidden fixed top-0 w-full z-50 glass-effect h-16 items-center justify-between px-6 border-b border-white/5">
+        <Link href="/" data-testid="link-home-brand-tablet" className="font-display text-xl tracking-widest text-primary hover:opacity-80 transition-opacity">
+          MESTIZO UMAMI
+        </Link>
+
+        <div className="flex items-center gap-3">
+          <Link href="/search" className="p-2 rounded-full hover:bg-white/5 transition-colors">
+            <Search className="w-5 h-5 text-muted-foreground" />
+          </Link>
+          <button
+            data-testid="button-hamburger"
+            onClick={() => setMobileMenuOpen(true)}
+            className="p-2 rounded-full hover:bg-white/5 transition-colors text-muted-foreground hover:text-primary"
+            aria-label="Open menu"
+          >
+            <Menu className="w-6 h-6" />
+          </button>
+        </div>
+      </nav>
+
+      {/* Tablet Drawer Menu */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm hidden md:flex lg:hidden"
+              onClick={() => setMobileMenuOpen(false)}
+            />
+            {/* Drawer */}
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              className="fixed top-0 right-0 h-full w-72 z-[70] glass-effect border-l border-white/10 flex flex-col p-8 hidden md:flex lg:hidden"
+            >
+              <div className="flex justify-between items-center mb-12">
+                <span className="font-display text-lg tracking-widest text-primary">MENU</span>
+                <button
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="p-2 rounded-full hover:bg-white/10 text-muted-foreground hover:text-primary transition-colors"
+                  aria-label="Close menu"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+              <nav className="flex flex-col gap-6">
+                {links.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`flex items-center gap-4 text-xl font-display transition-colors hover:text-primary ${
+                      location === link.href ? "text-primary" : "text-foreground"
+                    }`}
+                  >
+                    <link.icon className="w-5 h-5 shrink-0" />
+                    {link.label}
+                  </Link>
+                ))}
+                <Link
+                  href="/search"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="flex items-center gap-4 text-xl font-display text-foreground hover:text-primary transition-colors"
+                >
+                  <Search className="w-5 h-5 shrink-0" />
+                  Search
+                </Link>
+              </nav>
+              <div className="mt-auto pt-8 border-t border-white/5">
+                <p className="text-xs uppercase tracking-widest text-muted-foreground">
+                  A private dining room in your kitchen.
+                </p>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+
+      {/* Mobile Tab Bar — below md */}
+      <nav className="md:hidden fixed bottom-0 w-full z-50 glass-effect h-16 border-t border-white/5 flex items-center justify-around px-2">
         {links.map((link) => (
-          <Link 
-            key={link.href} 
+          <Link
+            key={link.href}
             href={link.href}
-            className={`flex flex-col items-center p-2 ${
+            data-testid={`link-tabnav-${link.label.toLowerCase()}`}
+            className={`flex flex-col items-center gap-0.5 py-2 px-3 rounded-lg transition-colors ${
               location === link.href ? "text-primary" : "text-muted-foreground"
             }`}
           >
-            <link.icon className="w-5 h-5 mb-1" />
-            <span className="text-[10px] uppercase tracking-wider">{link.label}</span>
+            <link.icon className="w-5 h-5" />
+            <span className="text-[9px] uppercase tracking-wider">{link.label}</span>
           </Link>
         ))}
-        <Link 
+        <Link
           href="/search"
-          className={`flex flex-col items-center p-2 ${
+          data-testid="link-tabnav-search"
+          className={`flex flex-col items-center gap-0.5 py-2 px-3 rounded-lg transition-colors ${
             location === "/search" ? "text-primary" : "text-muted-foreground"
           }`}
         >
-          <Search className="w-5 h-5 mb-1" />
-          <span className="text-[10px] uppercase tracking-wider">Search</span>
+          <Search className="w-5 h-5" />
+          <span className="text-[9px] uppercase tracking-wider">Search</span>
         </Link>
       </nav>
     </>
@@ -102,7 +190,8 @@ export function Layout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-[100dvh] flex flex-col relative w-full bg-background text-foreground overflow-x-hidden">
       <Nav />
-      <main className="flex-1 w-full md:pt-20 pt-0 pb-16 md:pb-0 relative z-10 flex flex-col">
+      {/* pt-16 for tablet top nav, lg:pt-20 for desktop top nav, no padding on mobile (bottom nav) */}
+      <main className="flex-1 w-full pt-0 md:pt-16 lg:pt-20 pb-16 md:pb-0 relative z-10 flex flex-col">
         {children}
       </main>
       <Footer />
