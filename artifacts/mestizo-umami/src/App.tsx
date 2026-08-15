@@ -1,4 +1,4 @@
-import { type ReactNode } from 'react';
+import { type ReactNode, useEffect } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
@@ -29,14 +29,15 @@ const queryClient = new QueryClient();
 function Router() {
   const [location, navigate] = useLocation();
 
-  // Wouter strips the base prefix from the URL. When the browser lands on the
-  // bare base path with no trailing slash (e.g. /mestizo-umami), the stripped
-  // path is "" (empty string) which no explicit route matches. Redirect it to
-  // "/" so the Home route picks it up without making "" a wildcard catch-all.
-  if (location === "") {
-    navigate("/", { replace: true });
-    return null;
-  }
+  // Wouter strips the base prefix. When the browser lands on the bare base
+  // path with no trailing slash (e.g. /mestizo-umami), the stripped path is
+  // "" — no route matches. useEffect redirects to "/" so Home renders.
+  useEffect(() => {
+    if (location === "") navigate("/", { replace: true });
+  }, [location, navigate]);
+
+  // While the redirect fires, render nothing to avoid a flash of the 404 page.
+  if (location === "") return null;
 
   return (
     <Layout>
