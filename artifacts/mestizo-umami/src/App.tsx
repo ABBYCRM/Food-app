@@ -34,6 +34,8 @@ function Router() {
       <RoutedErrorBoundary>
         <AnimatePresence mode="wait">
           <Switch location={location} key={location}>
+            {/* "" handles the case where Wouter strips the base from the exact base path (no trailing slash) */}
+            <Route path="" component={Home} />
             <Route path="/" component={Home} />
             <Route path="/recipes" component={RecipesGallery} />
             <Route path="/recipe/:slug" component={RecipeDetail} />

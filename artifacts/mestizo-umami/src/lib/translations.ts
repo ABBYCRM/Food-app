@@ -10,6 +10,8 @@ export type TranslationKey =
   | "recipe.servings" | "recipe.serving" | "recipe.feedsPeople" | "recipe.feedsPerson"
   | "recipe.relatedTitle" | "recipe.notFound" | "recipe.returnCollection"
   | "recipe.origin" | "recipe.allergens"
+  // Auth gate
+  | "recipe.gate.label" | "recipe.gate.copy" | "recipe.gate.cta" | "recipe.gate.back"
   // Difficulty
   | "difficulty.easy" | "difficulty.medium" | "difficulty.advanced"
   // Tags
@@ -63,6 +65,11 @@ export const translations: Record<"en" | "es" | "pt", LocaleTranslations> = {
     "recipe.returnCollection": "Return to collection",
     "recipe.origin": "Origin",
     "recipe.allergens": "Allergens",
+    // Auth gate
+    "recipe.gate.label": "Recipe",
+    "recipe.gate.copy": "Create a free account to unlock the full recipe — ingredients, method, chef notes, and more.",
+    "recipe.gate.cta": "Sign up — it's free",
+    "recipe.gate.back": "← Back to recipes",
     // Difficulty
     "difficulty.easy": "Easy",
     "difficulty.medium": "Medium",
@@ -139,6 +146,11 @@ export const translations: Record<"en" | "es" | "pt", LocaleTranslations> = {
     "recipe.returnCollection": "Volver a la colección",
     "recipe.origin": "Origen",
     "recipe.allergens": "Alérgenos",
+    // Auth gate
+    "recipe.gate.label": "Receta",
+    "recipe.gate.copy": "Crea una cuenta gratuita para desbloquear la receta completa — ingredientes, método, notas del chef y más.",
+    "recipe.gate.cta": "Regístrate — es gratis",
+    "recipe.gate.back": "← Volver a las recetas",
     // Difficulty
     "difficulty.easy": "Fácil",
     "difficulty.medium": "Intermedio",
@@ -215,6 +227,11 @@ export const translations: Record<"en" | "es" | "pt", LocaleTranslations> = {
     "recipe.returnCollection": "Voltar à coleção",
     "recipe.origin": "Origem",
     "recipe.allergens": "Alérgenos",
+    // Auth gate
+    "recipe.gate.label": "Receita",
+    "recipe.gate.copy": "Crie uma conta gratuita para desbloquear a receita completa — ingredientes, modo de preparo, notas do chef e muito mais.",
+    "recipe.gate.cta": "Cadastre-se — é grátis",
+    "recipe.gate.back": "← Voltar às receitas",
     // Difficulty
     "difficulty.easy": "Fácil",
     "difficulty.medium": "Intermediário",

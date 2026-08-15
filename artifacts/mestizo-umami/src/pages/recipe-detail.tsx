@@ -143,7 +143,7 @@ export function RecipeDetail() {
             </div>
 
             {/* Recipe name teaser */}
-            <p className="text-white/50 text-xs uppercase tracking-widest mb-1">Recipe</p>
+            <p className="text-white/50 text-xs uppercase tracking-widest mb-1">{t("recipe.gate.label")}</p>
             <h2 className="font-display text-2xl text-white mb-1 leading-tight">
               {localeContent?.title ?? recipe.title}
             </h2>
@@ -153,7 +153,7 @@ export function RecipeDetail() {
 
             <div className="border-t border-white/10 pt-6 mb-6">
               <p className="text-white/80 text-sm leading-relaxed">
-                Create a free account to unlock the full recipe — ingredients, method, chef notes, and more.
+                {t("recipe.gate.copy")}
               </p>
             </div>
 
@@ -162,12 +162,12 @@ export function RecipeDetail() {
               onClick={() => login(`/recipe/${recipe.slug}`)}
               className="w-full bg-amber-500 hover:bg-amber-400 text-black font-semibold rounded-xl py-3 text-base mb-3"
             >
-              Sign up — it's free
+              {t("recipe.gate.cta")}
             </Button>
 
             <Link href="/recipes">
               <button className="text-white/40 text-sm hover:text-white/70 transition-colors">
-                ← Back to recipes
+                {t("recipe.gate.back")}
               </button>
             </Link>
           </motion.div>
