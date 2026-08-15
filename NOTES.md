@@ -239,6 +239,23 @@ curl -s "https://api.digitalocean.com/v2/apps/7cc29839-6e3a-4520-ab4c-de16a64a36
 
 ---
 
+## QA — Bugs Found & Fixed (August 2026)
+
+Full E2E Playwright QA run surfaced two bugs, both fixed:
+
+| # | Bug | Root Cause | Fix |
+|---|---|---|---|
+| 1 | Homepage showed 404 at `/mestizo-umami` (no trailing slash) | Wouter strips base from pathname; when the result is `""` (empty string), no route matched | `useEffect` redirect from `""` → `"/"` in the Router component before the Switch renders |
+| 2 | Auth gate sign-up overlay stayed in English in ES/PT locales | Copy was hardcoded strings, not wired to the `t()` locale function | Added 4 new `TranslationKey` entries (`recipe.gate.label/copy/cta/back`) with EN/ES/PT translations; wired into recipe-detail.tsx |
+
+QA results after fixes:
+- Homepage (with and without trailing slash): ✅
+- Recipe list, planner, search, stores pages: ✅
+- Auth gate EN/ES/PT translations: ✅
+- API health (`/api/auth/session`): ✅
+
+---
+
 ## Session History (key decisions)
 
 | Date | Change | Reason |
