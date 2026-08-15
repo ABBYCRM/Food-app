@@ -613,12 +613,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "olive oil" }
     ],
     method: [
-      { step: 1, text: "Mix the 1/4 cup white miso paste, 2 tbsp kosher salt, 1 tbsp brown sugar, and 1 tbsp black pepper into a smooth paste." },
-      { step: 2, text: "Rub the paste over the 1 whole chicken (about 4 lbs), working it under the skin and across the entire exterior." },
-      { step: 3, text: "Place the 1 whole chicken (about 4 lbs) uncovered in the refrigerator for at least 12 hours so the seasoning can penetrate." },
-      { step: 4, text: "Preheat the oven to 425°F (220°C), then rub the 1 whole chicken (about 4 lbs) with the 2 tbsp olive oil." },
-      { step: 5, text: "Set the 1 whole chicken (about 4 lbs) in a cast-iron skillet and roast for about 1 hour 15 minutes, until golden and juices run clear." },
-      { step: 6, text: "Rest the roasted 1 whole chicken (about 4 lbs) for 15–20 minutes before carving, allowing the juices to settle and the meat to stay moist." }
+      { step: 1, text: "In a large mixing bowl, whisk together 4 cups of water and 2 tbsp of miso paste until the paste is fully dissolved. This combination creates a flavorful brine that will infuse the chicken with umami goodness. Look for a smooth, homogenous mixture without any lumps of miso. Once fully combined, the brine is ready to use." },
+      { step: 2, text: "Add 1/4 cup of soy sauce, 1/4 cup of brown sugar, and 3 cloves of minced garlic to the brine, continuing to whisk until the sugar is dissolved. This step enhances the depth of flavor and adds a hint of sweetness to balance the saltiness. You should notice the brine becoming slightly darker and fragrant from the garlic. Stop mixing when the ingredients are evenly incorporated." },
+      { step: 3, text: "Submerge the whole chicken (about 4-5 pounds) into the brine, ensuring it is completely covered. If necessary, press down on the chicken to release any air pockets that might prevent the brine from penetrating. A well-brined chicken will develop a juicy texture and rich flavor. Cover the bowl or transfer the chicken to a sealable plastic bag and refrigerate for at least 4 hours, ideally overnight." },
+      { step: 4, text: "After brining, remove the chicken from the brine and pat it dry thoroughly with paper towels. This step is crucial for achieving a crispy skin during roasting; excess moisture will result in steaming rather than roasting. Look for a surface that feels dry to the touch and has a slight sheen from the brine. Let the chicken rest at room temperature for about 30 minutes before cooking." },
+      { step: 5, text: "Preheat your oven to 425°F (220°C) while the chicken rests. This high temperature will help to render the fat from the skin quickly and create a beautifully browned exterior. You should notice the oven reaching temperature if it starts to emit a consistent heat. Once ready, you can confidently place the chicken in the oven." },
+      { step: 6, text: "Roast the chicken in the preheated oven for about 1 hour and 15 minutes, or until the internal temperature reaches 165°F (74°C) when checked at the thickest part of the thigh. Throughout roasting, the skin should turn a deep golden brown and become crispy. Use a meat thermometer to ensure accuracy, and once the chicken is done, remove it from the oven and let it rest for 10-15 minutes before carving." }
     ],
     chefNotes: "Leaving the chicken uncovered in the fridge allows the skin to dry out, which is essential for a crispy finish.",
     pairing: "A buttery Chardonnay",
@@ -652,12 +652,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "red pepper flakes" }
     ],
     method: [
-      { step: 1, text: "Stir the 1/4 cup fresh oregano, 3 cloves garlic, 1/4 cup ponzu sauce, 1/4 cup olive oil, and 1 tsp red pepper flakes in a bowl." },
-      { step: 2, text: "Let the oregano mixture stand for 10 minutes, then set aside while you prepare the 1.5 lbs flank steak (finely chopped)." },
-      { step: 3, text: "Heat a heavy grill pan over high heat until very hot, then add the 1.5 lbs flank steak (finely chopped) in an even layer." },
-      { step: 4, text: "Sear the 1.5 lbs flank steak (finely chopped) for 4–5 minutes per side, until deeply browned outside and medium-rare inside." },
-      { step: 5, text: "Transfer the 1.5 lbs flank steak (finely chopped) to a cutting board and rest for at least 10 minutes before serving." },
-      { step: 6, text: "Slice the rested 1.5 lbs flank steak (finely chopped) thinly against the grain and spoon the oregano mixture over the top." }
+      { step: 1, text: "Begin by preparing the chimichurri sauce. In a medium bowl, combine 1 cup finely chopped parsley, 1/2 cup chopped cilantro, 1/4 cup red wine vinegar, and 2 cloves minced garlic. Whisk these ingredients together until they are well blended, creating a vibrant green mixture. The aroma of the herbs should be fresh and invigorating, signaling that the sauce is ready. Set this aside to allow the flavors to meld." },
+      { step: 2, text: "Next, prepare the ponzu marinade for the flank steak. In a separate bowl, mix together 1/4 cup soy sauce, 2 tablespoons yuzu juice (or lemon juice if unavailable), and 1 tablespoon mirin. Whisk thoroughly until all ingredients are fully incorporated, creating a balanced, tangy marinade. This mixture should have a slightly syrupy consistency and a bright, citrusy scent, indicating it’s ready for the steak." },
+      { step: 3, text: "Trim any excess fat from the 1.5 pounds of flank steak, as this can create a greasy texture when cooked. Use a sharp knife to make clean cuts, ensuring a neat appearance. The steak should be about 1 inch thick for even cooking. Once trimmed, place the steak in a large resealable plastic bag or a shallow dish, ready to absorb the flavors of the marinade." },
+      { step: 4, text: "Pour the ponzu marinade over the flank steak, ensuring it's evenly coated. Seal the bag or cover the dish with plastic wrap, allowing the steak to marinate in the refrigerator for at least 1 hour, or up to overnight for maximum flavor. The marinade will not only enhance the steak's taste but also tenderize it, making each bite juicy and flavorful." },
+      { step: 5, text: "After marinating, remove the flank steak from the refrigerator and let it sit at room temperature for 30 minutes. This step allows for more even cooking, as the steak will cook more consistently when not directly from the cold. As it rests, preheat your grill or skillet over medium-high heat until it's hot enough that a drop of water sizzles and evaporates on contact." },
+      { step: 6, text: "Place the marinated flank steak on the hot grill or skillet, searing it for about 4-5 minutes on each side for medium-rare doneness. Press the steak gently with a spatula to ensure even contact with the cooking surface. Look for a deep brown crust to form on the exterior while the interior remains slightly springy to the touch. Remove the steak when it reaches an internal temperature of 130°F; let it rest for 10 minutes before slicing against the grain into thin strips." }
     ],
     chefNotes: "Always slice flank steak against the grain, or it will be unpleasantly chewy.",
     pairing: "Malbec or a robust Syrah",
@@ -690,12 +690,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "neutral oil" }
     ],
     method: [
-      { step: 1, text: "Whisk the 3 tbsp red miso paste, 2 tbsp mirin, 1 tbsp soy sauce, and 1 tbsp sugar into a thick marinade." },
-      { step: 2, text: "Coat both 1-inch-thick ribeye steaks evenly with the marinade, covering every surface so the miso mixture adheres." },
-      { step: 3, text: "Refrigerate the 2 ribeye steaks (1-inch thick) for 2–4 hours, keeping them covered while the marinade flavors the meat." },
-      { step: 4, text: "Wipe excess marinade from the 2 ribeye steaks (1-inch thick) with a paper towel so the miso will not burn during searing." },
-      { step: 5, text: "Heat the 1 tbsp neutral oil in a 12-inch cast-iron skillet until smoking, then sear the 2 ribeye steaks for 3–4 minutes per side." },
-      { step: 6, text: "Rest the 2 ribeye steaks (1-inch thick) for 5 minutes, until their centers remain rosy, then slice and serve." }
+      { step: 1, text: "Start by preparing the miso marinade. In a medium mixing bowl, combine the 2 tablespoons of miso paste, 2 tablespoons of soy sauce, 1 tablespoon of sesame oil, and 1 tablespoon of rice vinegar. Whisk these ingredients together until they form a smooth, cohesive mixture, ensuring there are no lumps from the miso. The marinade should have a rich, umami aroma, which is crucial for infusing flavor into the ribeye." },
+      { step: 2, text: "Next, take your ribeye steak, approximately 1-inch thick, and pat it dry with paper towels to remove any excess moisture. This step is essential because a dry surface will allow the marinade to adhere better and create a nice crust during cooking. Ensure the steak feels cool to the touch and is free of any moisture before moving on." },
+      { step: 3, text: "Place the ribeye in a shallow dish or a resealable plastic bag, then pour the miso marinade over it, ensuring that the steak is fully coated on all sides. Use a brush or your hands to massage the marinade into the meat, which will help it absorb the flavors deeply. Cover the dish or seal the bag and refrigerate for at least 1 hour, or up to overnight for maximum flavor. You'll know it's ready when the meat takes on a glossy sheen from the marinade." },
+      { step: 4, text: "When you're ready to cook, preheat your grill or skillet over high heat until it reaches a temperature of around 450°F. You can test this by carefully holding your hand above the surface; if you can only keep it there for 2 seconds before it’s too hot, you’re ready to go. A hot cooking surface is crucial for achieving a beautifully seared crust that enhances the flavor and texture of the ribeye." },
+      { step: 5, text: "Remove the ribeye from the marinade and let any excess drip off — do not rinse, as you want that flavor concentrated on the surface. Place the steak on the hot grill or skillet, laying it down away from you to prevent any splatter. Sear the steak without moving it for about 4-5 minutes, or until a deep, golden-brown crust forms. You’ll notice the steak pulling away from the surface slightly when it’s ready to flip." },
+      { step: 6, text: "After achieving a nice sear, flip the ribeye and cook for an additional 3-4 minutes for medium-rare, or adjust the time according to your preferred doneness. Use a meat thermometer to check for an internal temperature of 130°F for medium-rare; the steak should feel firm yet springy to the touch. Once it's reached your desired temperature, remove it from the heat and let it rest for at least 5 minutes before slicing. This resting period allows the juices to redistribute, ensuring a tender and juicy steak." }
     ],
     chefNotes: "Wiping off the marinade is crucial; miso contains sugars that will scorch instantly in a hot pan.",
     pairing: "Cabernet Sauvignon or a dry Junmai sake",
@@ -846,11 +846,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1/4", unit: "cup", item: "cilantro", note: "chopped" }
     ],
     method: [
-      { step: 1, text: "Place the 3 lbs bone-in beef short ribs (diced) in a 5-quart Dutch oven, arranging the pieces in one layer." },
-      { step: 2, text: "Heat the 5-quart Dutch oven over medium-high heat and sear the 3 lbs bone-in beef short ribs for 8–10 minutes." },
-      { step: 3, text: "Cover the 5-quart Dutch oven and braise the 3 lbs bone-in beef short ribs at 300°F for 3½–4 hours." },
-      { step: 4, text: "Check that the 3 lbs bone-in beef short ribs are fork-tender and falling apart, then transfer them to a board and shred." },
-      { step: 5, text: "Discard the bones, divide the shredded 3 lbs bone-in beef short ribs among bowls, and top with the 1/4 cup chopped cilantro." }
+      { step: 1, text: "Begin by seasoning 2 lbs of short ribs generously with salt and freshly cracked black pepper. This initial step is crucial as it enhances the meat's natural flavor and helps form a savory crust during cooking. Allow the seasoned ribs to rest for at least 30 minutes at room temperature; this not only brings them closer to an even cooking temperature but also helps the seasoning penetrate the meat." },
+      { step: 2, text: "In a heavy pot or Dutch oven, heat 2 tbsp of vegetable oil over medium-high heat until shimmering. Carefully add the short ribs, ensuring not to overcrowd the pot; you want to achieve a rich, brown sear on each side. Allow them to cook undisturbed for about 4-5 minutes per side, until a deep brown crust forms, which adds layers of flavor to your birria. Once seared, transfer the ribs to a plate and set aside." },
+      { step: 3, text: "In the same pot, add 1 chopped onion and 4 minced garlic cloves, stirring until they soften and become fragrant, about 3-4 minutes. Scrape up any browned bits from the bottom of the pot — this is where much of the flavor resides. When the onions turn translucent and the garlic is aromatic, it’s time to add 2 tbsp of tomato paste, stirring to incorporate and cook for an additional minute." },
+      { step: 4, text: "Pour in 4 cups of beef broth and 1 cup of water, followed by 2 tbsp of miso paste and 2 tsp of dried oregano. Stir well to dissolve the miso completely, as it adds a rich umami flavor to the broth. Bring the mixture to a gentle simmer, ensuring it's not boiling vigorously; this helps to meld the flavors without toughening the meat." },
+      { step: 5, text: "Return the seared short ribs to the pot, along with 2 bay leaves and 1-2 whole dried chilies for warmth and complexity. Cover the pot with a lid, reduce the heat to low, and let it simmer gently for at least 2-3 hours, or until the meat is fork-tender and falling off the bone. Check occasionally to ensure it doesn’t dry out; if needed, add a splash more broth or water. The final dish should have a rich, deep color and a fragrant aroma that fills your kitchen." }
     ],
     chefNotes: "The bone-in short ribs provide gelatin that gives the consommé a lip-smacking texture.",
     pairing: "Mexican Coke or a dark stout",
@@ -1114,11 +1114,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "", item: "onion", note: "roughly chopped" }
     ],
     method: [
-      { step: 1, text: "Preheat the oven to 325°F (165°C) and arrange the 2 lbs bone-in beef short ribs in a heavy 5-quart Dutch oven." },
-      { step: 2, text: "Heat the Dutch oven over medium-high heat and sear the 2 lbs short ribs for 3–4 minutes per side until deeply browned." },
-      { step: 3, text: "Cover the Dutch oven and braise the 2 lbs browned short ribs at 325°F (165°C) for 3 hours until fork-tender." },
-      { step: 4, text: "Transfer the 2 lbs braised short ribs to a plate, then simmer the remaining juices over medium heat for 8–10 minutes until slightly thickened." },
-      { step: 5, text: "Return the 2 lbs short ribs to the Dutch oven and coat them with the reduced juices, checking that the meat is tender and glossy." }
+      { step: 1, text: "Begin by prepping the short ribs. Pat the 3 pounds of short ribs dry with paper towels; this step is crucial as it helps achieve a good sear later. Season the meat generously with salt and freshly cracked black pepper on all sides, ensuring even flavor throughout. The salt will also help to draw moisture out, enhancing the browning process when you sear the meat." },
+      { step: 2, text: "Heat a large, heavy-bottomed pot or Dutch oven over medium-high heat. Add 2 tablespoons of vegetable oil and allow it to heat until it shimmers but does not smoke. Carefully place the short ribs in the pot, ensuring they are not crowded; this allows for a proper sear. Sear the ribs for about 4-5 minutes on each side until they develop a deep brown crust; look for a rich, caramelized exterior that will add depth to your dish." },
+      { step: 3, text: "Once all sides of the short ribs are browned, remove them from the pot and set them aside on a plate. In the same pot, reduce the heat to medium and add 1 diced onion, 2 minced garlic cloves, and 1 tablespoon of grated ginger. Stir the mixture, scraping up any browned bits from the bottom of the pot, which will infuse the base with flavor. Cook until the onions are soft and translucent, about 5 minutes; you want to see them glistening and fragrant." },
+      { step: 4, text: "Now, pour in 1 cup of beef broth and 1 cup of tamarind paste, stirring to combine. The tamarind will add a tangy sweetness that balances the richness of the meat. Bring the mixture to a gentle simmer, then return the short ribs to the pot, nestling them into the sauce. Cover the pot with a lid, reduce the heat to low, and let it braise for about 2-3 hours, or until the meat is fork-tender and easily pulls away from the bone; look for a soft texture and rich, aromatic steam escaping from the pot." },
+      { step: 5, text: "After braising, carefully remove the short ribs from the pot and set them aside on a serving platter. Strain the remaining sauce through a fine mesh sieve into a saucepan to remove any solids, pressing down to extract maximum flavor. Bring the sauce to a gentle boil, then reduce it to a simmer until it thickens slightly, about 10 minutes; you want a glossy finish that clings to the back of a spoon. Finally, pour the reduced sauce over the short ribs just before serving, creating a beautiful, flavorful presentation." }
     ],
     chefNotes: "Tamarind concentrate can be quite sour; taste the braising liquid before it reduces and add a pinch more sugar if needed.",
     pairing: "Cabernet Sauvignon",
@@ -1301,11 +1301,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "12", unit: "", item: "corn tortillas" }
     ],
     method: [
-      { step: 1, text: "Heat a grill or heavy skillet over high heat for 5 minutes, and set out the 2 lbs skirt steak (minced) and 12 corn tortillas." },
-      { step: 2, text: "Place the 2 lbs skirt steak (minced) on the hot grill or skillet and cook for 3–4 minutes until the underside is deeply charred." },
-      { step: 3, text: "Turn the 2 lbs skirt steak (minced) and cook for 3–4 minutes more, until heavily charred outside and just cooked through." },
-      { step: 4, text: "Transfer the cooked 2 lbs skirt steak (minced) to a board, rest for 5 minutes, then slice it into thin pieces." },
-      { step: 5, text: "Warm the 12 corn tortillas in the dry skillet or on the grill for 30 seconds per side, then fill them with the sliced steak." }
+      { step: 1, text: "Begin by preparing the marinade. In a medium bowl, whisk together the 2 tablespoons of miso paste, ¼ cup of soy sauce, and 2 tablespoons of lime juice until the miso is fully dissolved. This combination of ingredients creates a savory umami flavor that will penetrate the meat. Look for a smooth, creamy consistency without any lumps; this ensures the marinade will evenly coat the steak." },
+      { step: 2, text: "Trim any excess fat from the 1.5 pounds of flank steak to ensure even cooking and to avoid flare-ups on the grill. Pat the steak dry with paper towels; moisture on the surface can prevent a good sear. Once you have a clean, dry piece of meat, you are ready to apply the marinade." },
+      { step: 3, text: "Place the flank steak in a large resealable plastic bag or a shallow dish and pour the marinade over the top. Use your hands to gently massage the marinade into the steak, ensuring it is evenly coated on all sides. This step is crucial as it allows the flavors to penetrate the meat; allow the steak to marinate in the refrigerator for at least 1 hour, or ideally overnight for maximum flavor." },
+      { step: 4, text: "Preheat your grill or grill pan over high heat until it is very hot; you should see smoke starting to rise. Remove the steak from the marinade, allowing any excess to drip off — too much liquid will hinder browning. Place the steak on the grill and let it sear for about 4-5 minutes without moving it; you are looking for a deep, caramelized crust to form." },
+      { step: 5, text: "Flip the steak using tongs, and grill for another 4-5 minutes for medium-rare, or adjust according to your preferred doneness. Use an instant-read thermometer to check the internal temperature; it should read about 130°F for medium-rare. Once done, remove the steak from the grill and let it rest for at least 10 minutes before slicing; this allows the juices to redistribute, ensuring each bite is tender and flavorful." }
     ],
     chefNotes: "Skirt steak is tough if not sliced correctly. Always look for the lines running through the meat and cut perpendicular to them.",
     pairing: "A cold Pacifico or an IPA",
@@ -1339,11 +1339,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "cup", item: "microgreens" }
     ],
     method: [
-      { step: 1, text: "Heat a 10-inch skillet over medium-low heat, add the 1/2 cup unsalted butter (smashed), and melt it for 2–3 minutes." },
-      { step: 2, text: "Add the 1 lb large shrimp (peeled and deveined) to the melted butter, arranging them in one even layer." },
-      { step: 3, text: "Cook the 1 lb large shrimp for 2–3 minutes per side until fully opaque, keeping the 1/2 cup butter below a simmer." },
-      { step: 4, text: "Warm the 6 corn tortillas (mixed with grapefruit zest) in a dry skillet over medium heat for 30 seconds per side." },
-      { step: 5, text: "Divide the 1 lb large shrimp among the 6 corn tortillas, then top the tacos evenly with the 1 cup microgreens." }
+      { step: 1, text: "Begin by preparing the shrimp: take 1 pound of large shrimp, preferably peeled and deveined for ease. Rinse the shrimp under cold running water and pat them dry with paper towels; this helps to remove any excess moisture that can interfere with cooking. Set the shrimp aside on a plate, and make sure they are in a single layer to ensure even cooking later." },
+      { step: 2, text: "In a medium saucepan, combine 1 cup of unsalted butter and the zest of 1 lime over low heat. Allow the butter to melt slowly, stirring occasionally to ensure it doesn’t brown; you’re looking for a warm, creamy texture, not sizzling bubbles. This gentle melting allows the flavors of the lime zest to infuse into the butter, enhancing the overall taste of your dish. Stop heating once the butter is fully melted and smooth." },
+      { step: 3, text: "Once the butter is melted, add the shrimp to the saucepan, ensuring they are evenly submerged in the butter. Cook the shrimp gently over low heat for about 5 to 7 minutes, stirring occasionally with a spatula to coat them evenly. Watch closely as the shrimp will turn from grey to a vibrant pink and opaque; this visual cue indicates they are fully cooked. Remove them from the heat as soon as they are uniformly pink to prevent overcooking." },
+      { step: 4, text: "While the shrimp is cooking, prepare your taco toppings. Finely chop 1 cup of red cabbage and 1 avocado, and slice 1 jalapeño pepper, removing the seeds if you prefer less heat. Arrange these toppings on a large platter, keeping everything vibrant and colorful, which adds visual appeal to your tacos. Having all the toppings ready will streamline assembly, ensuring the warm shrimp are enveloped in fresh, crisp flavors." },
+      { step: 5, text: "Warm your corn tortillas over an open flame or in a dry skillet for about 30 seconds on each side until they are pliable and slightly toasted. This step not only enhances the tortilla’s flavor but also helps them hold up better against the buttery shrimp and toppings. The tortillas should feel warm and soft but not crispy; remove them from the heat promptly to maintain their flexibility." }
     ],
     chefNotes: "The heat must be low. You are poaching, not searing. The shrimp should look tender and barely pink.",
     pairing: "Albariño or a crisp dry Riesling",
@@ -1454,11 +1454,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1/4", unit: "cup", item: "red onion", note: "thinly sliced" }
     ],
     method: [
-      { step: 1, text: "Place the 1/2 lb large shrimp (poached and chilled) and 1/4 cup thinly sliced red onion beside your serving bowls." },
-      { step: 2, text: "Boil water in a 2-quart saucepan, add the 2 portions ramen noodles (sliced), and cook for 3–4 minutes until tender." },
-      { step: 3, text: "Drain the 2 portions ramen noodles (sliced), rinse them under ice-cold water, and continue until they feel completely cool." },
-      { step: 4, text: "Divide the chilled 2 portions ramen noodles (sliced) between two shallow bowls, keeping each portion evenly arranged." },
-      { step: 5, text: "Top the 2 portions ramen noodles (sliced) with the 1/2 lb chilled shrimp and 1/4 cup thinly sliced red onion." }
+      { step: 1, text: "Begin by preparing the shrimp for marination. Place 1 pound of fresh, raw shrimp on a cutting board and peel them, removing the shells and tails. Slice each shrimp in half lengthwise, exposing the tender flesh. This not only allows the marinade to penetrate better, but it also creates a beautiful presentation. Set the prepared shrimp aside in a mixing bowl." },
+      { step: 2, text: "In a separate bowl, combine 1/4 cup of fresh lime juice, 1/4 cup of fresh orange juice, and 2 tablespoons of soy sauce. Whisk these together until fully combined; the citrus will provide acidity to 'cook' the shrimp, while the soy sauce adds depth. You want the mixture to taste bright and balanced, with a zesty aroma. Pour this marinade over the shrimp and stir gently to coat evenly." },
+      { step: 3, text: "Finely chop 1 small red onion and 1 medium cucumber, and add them to the shrimp mixture. The onion will add a sharp bite, while the cucumber provides a refreshing crunch. Stir them in carefully, ensuring that the vegetables remain intact and vibrant. Let this mixture marinate for at least 15 minutes in the refrigerator; the shrimp should turn opaque as they 'cook' in the citrus juices." },
+      { step: 4, text: "While the shrimp marinates, prepare the ramen noodles. Bring a pot of salted water to a rolling boil, then add 8 ounces of ramen noodles. Cook according to package instructions, usually about 3 to 4 minutes, stirring occasionally to prevent sticking. You'll know the noodles are done when they are tender yet still slightly chewy; drain them and rinse under cold water to stop the cooking process." },
+      { step: 5, text: "To assemble your dish, divide the cooked ramen noodles among four bowls. Spoon the marinated shrimp and vegetable mixture over the noodles, ensuring to include some of the marinade for added flavor. Garnish with freshly chopped cilantro and thinly sliced jalapeños for a spicy kick. Serve immediately, while the noodles are still slightly warm, to contrast with the refreshing cold shrimp mixture." }
     ],
     chefNotes: "Rinsing the ramen noodles aggressively in ice water gives them a fantastic, bouncy chew that holds up to the acidic sauce.",
     pairing: "Michelada or a light, crisp beer",
@@ -1492,11 +1492,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "2", unit: "cups", item: "oil", note: "for frying" }
     ],
     method: [
-      { step: 1, text: "Heat the oven to 425°F (220°C) and line a baking sheet before preparing the 1 lb white fish cut into strips." },
-      { step: 2, text: "Spread the 1 cup cold all-purpose flour on a plate, then turn the 1 lb fish strips in it until fully coated." },
-      { step: 3, text: "Arrange the floured 1 lb fish strips in one layer on the prepared baking sheet, leaving space around each piece." },
-      { step: 4, text: "Bake the 1 lb floured fish strips for 12–15 minutes, until opaque throughout and lightly golden at the edges." },
-      { step: 5, text: "Transfer the hot 1 lb fish strips to plates and serve with the 1/2 cup Mexican crema for dipping or drizzling." }
+      { step: 1, text: "Begin by preparing the miso crema. In a medium bowl, whisk together 2 tablespoons of miso paste with 1 cup of sour cream until the mixture is smooth and well combined. Look for a creamy texture without any lumps; this will ensure the flavors meld beautifully. This step is crucial because the miso adds a savory depth to the crema, balancing the dish's brightness." },
+      { step: 2, text: "Next, squeeze in the juice of 1 lime and stir to incorporate. The acidity from the lime not only brightens the flavor but also enhances the overall richness of the crema. You should notice a fresh, zesty aroma as you mix; if the mixture becomes too runny, you may want to adjust with a little more sour cream. Set this aside in the refrigerator to chill and allow the flavors to develop." },
+      { step: 3, text: "Now, prepare the fish for the tacos. Cut 1 pound of white fish, like cod or tilapia, into strips about 1-inch wide. Season the fish generously with salt and pepper; this step is essential as it enhances the natural flavors of the fish. You should see a light coating of seasoning on each piece, which will help form a nice crust when cooked." },
+      { step: 4, text: "Heat 2 tablespoons of olive oil in a large skillet over medium-high heat until shimmering and just beginning to smoke. Carefully place the seasoned fish strips in the skillet, ensuring they are not overcrowded to allow for proper searing. Cook for about 3-4 minutes on one side, watching for a golden-brown crust to form; this indicates the fish is ready to flip. When the edges start to turn opaque and the bottom has a nice sear, gently turn the fish over." },
+      { step: 5, text: "After flipping, cook for an additional 2-3 minutes until the fish is cooked through and flakes easily with a fork. The internal temperature should reach at least 145°F, and the fish should appear opaque throughout. This step is important to ensure the fish is fully cooked while keeping it moist and tender. Remove the fish from the heat and let it rest for a minute before assembling your tacos." }
     ],
     chefNotes: "The beer must be ice cold. The shock of cold batter hitting hot oil creates the shatteringly crisp crust.",
     pairing: "A cold Pacifico or Corona",
@@ -1790,12 +1790,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "cup", item: "Monterey Jack cheese", note: "shredded" }
     ],
     method: [
-      { step: 1, text: "Heat the oven to 375°F (190°C), preparing to bake the 8 corn tortillas and 1 lb lump crab meat in a 9x13-inch baking dish." },
-      { step: 2, text: "Warm the 8 corn tortillas in a dry skillet over medium-low heat for 20–30 seconds per side, until flexible." },
-      { step: 3, text: "Divide the 1 lb lump crab meat evenly among the 8 tortillas, placing it in a strip near each tortilla’s lower edge." },
-      { step: 4, text: "Roll the 8 filled tortillas tightly and arrange them seam-side down in a 9x13-inch baking dish." },
-      { step: 5, text: "Bake the 8 rolled tortillas at 375°F (190°C) for 15–20 minutes, until the edges are crisp and the 1 lb crab meat is steaming." },
-      { step: 6, text: "Rest the 8 crab enchiladas in the baking dish for 5 minutes, until the tortillas remain warm and firm enough to serve." }
+      { step: 1, text: "Begin by preheating your oven to 375°F (190°C). This ensures that your enchiladas will bake evenly and thoroughly, creating a deliciously warm and melty filling. A properly preheated oven helps to achieve a golden top on your enchiladas, enhancing both appearance and flavor." },
+      { step: 2, text: "In a mixing bowl, combine the 1 cup of lump crab meat with 1/2 cup of shredded Monterey Jack cheese, 1/4 cup of sour cream, and 2 tablespoons of chopped fresh cilantro. Use a fork to gently fold the ingredients together, being careful not to break up the crab meat too much. The mixture should be cohesive but still have visible chunks of crab; this texture adds a delightful bite to each enchilada." },
+      { step: 3, text: "Take 6 corn tortillas and heat them in a dry skillet over medium heat for about 30 seconds on each side. This process, known as toasting, will soften the tortillas, making them pliable and less likely to tear when rolling. You’ll know they are ready when they become fragrant and slightly darker in color, signaling that they are warmed through." },
+      { step: 4, text: "Spread 1/2 cup of the 1 cup of prepared miso sauce evenly across the bottom of a 9x13 inch baking dish. Use a spatula to ensure a thin, even layer that covers the entire bottom surface. This layer not only prevents the enchiladas from sticking but also infuses them with flavor as they bake." },
+      { step: 5, text: "Spoon approximately 1/4 cup of the crab mixture onto the center of each tortilla. Roll the tortillas tightly around the filling, tucking in the sides as you go to seal them. Place the rolled enchiladas seam-side down in the baking dish, arranging them snugly together; this will create a cohesive dish that holds together beautifully during baking." },
+      { step: 6, text: "Pour the remaining miso sauce over the assembled enchiladas, ensuring each one is generously coated. Sprinkle an additional 1/2 cup of shredded Monterey Jack cheese on top for a rich, gooey finish. Bake in the preheated oven for 20-25 minutes, or until the cheese is bubbly and golden, indicating that the enchiladas are heated through and ready to serve." }
     ],
     chefNotes: "Do not over-season the crab meat; let the salty miso crema do the heavy lifting for the dish.",
     pairing: "Chardonnay or a crisp white wine",
@@ -1867,11 +1867,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "Kewpie mayo" }
     ],
     method: [
-      { step: 1, text: "Whisk 2 tbsp Kewpie mayo with 1 tbsp wasabi paste, then toss in 1 cup shredded cabbage until evenly coated." },
-      { step: 2, text: "Prepare 1 cup tempura batter mix according to its package directions; keep the batter cold and slightly lumpy." },
-      { step: 3, text: "Heat a deep fryer or heavy 4-quart pot to 350°F (175°C), then coat all chunks from 1 lb white fish in the batter." },
-      { step: 4, text: "Fry the battered 1 lb white fish in batches for 3–4 minutes, turning once, until crisp, pale golden, and cooked through." },
-      { step: 5, text: "Warm 8 corn tortillas in a dry skillet over medium heat for 30 seconds per side, then fill with fish and 1 cup shredded cabbage." }
+      { step: 1, text: "Begin by preparing the fish for the tacos. Choose a firm white fish, such as cod or tilapia, and cut it into strips about 1 inch wide. Rinse the fish under cold water and pat it dry with paper towels. This step is essential as removing excess moisture will help achieve a better sear and prevent the fish from steaming during cooking." },
+      { step: 2, text: "In a medium bowl, combine 1/2 cup of all-purpose flour, 1/4 cup of cornstarch, 1 tsp of salt, and 1/2 tsp of paprika. Whisk these ingredients together until they are well blended. The flour and cornstarch mixture will create a light, crispy coating on the fish when fried, so make sure there are no clumps." },
+      { step: 3, text: "In a separate bowl, crack 1 large egg and beat it lightly until the yolk and white are fully combined. Dip each fish strip into the egg, ensuring it is completely coated, and then transfer it to the flour mixture. Press the fish gently into the flour to ensure an even coating, which will create a deliciously crispy crust once fried." },
+      { step: 4, text: "Heat a large skillet over medium-high heat and add 1/4 cup of vegetable oil until it shimmers. Carefully place the coated fish strips in the hot oil, ensuring not to overcrowd the skillet; this allows for even cooking and crispiness. Fry for about 3-4 minutes per side, or until the coating is golden brown and the fish flakes easily with a fork. Look for a rich golden-brown color and a crunchy texture, which indicates the fish is perfectly cooked." },
+      { step: 5, text: "Once the fish is cooked, remove it from the skillet and place it on a plate lined with paper towels to absorb any excess oil. This step is crucial to maintain the crispiness of the fish while preventing it from getting soggy. Allow the fish to rest for a couple of minutes, during which you can prepare your toppings, such as shredded cabbage, avocado slices, and fresh cilantro, to enhance the flavors of your tacos." }
     ],
     chefNotes: "Tempura batter must be kept ice cold, and you must barely mix it. Overmixing develops gluten and ruins the delicate crunch.",
     pairing: "Cold Japanese lager",
@@ -2128,11 +2128,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1/2", unit: "cup", item: "scallions", note: "chopped" }
     ],
     method: [
-      { step: 1, text: "Heat 2 tbsp vegetable oil in a 12-inch wok over high heat for 1 minute, until it shimmers but does not smoke." },
-      { step: 2, text: "Add 3 cups day-old white rice (cold); break up clumps and stir-fry over high heat for 3 minutes, until the grains separate and look dry." },
-      { step: 3, text: "Pour 2 tbsp soy sauce evenly over the rice; toss over high heat for 1 minute, until every grain is lightly browned and coated." },
-      { step: 4, text: "Add 1/2 cup scallions (chopped) and toss over high heat for 30 seconds, until they turn bright green and the rice steams." },
-      { step: 5, text: "Turn off the heat and let the fried rice stand in the wok for 1 minute, until it is visibly steaming, then serve hot." }
+      { step: 1, text: "Begin by preparing your rice. Rinse 1 cup of long-grain white rice under cold water in a fine-mesh sieve until the water runs clear, removing excess starch that can make the rice gummy. Transfer the rinsed rice to a saucepan and add 2 cups of water and a pinch of salt. Bring the mixture to a boil over medium-high heat, then reduce the heat to low, cover tightly, and simmer for about 18 minutes. Stop cooking when all the water has been absorbed and the rice is tender; remove from heat and let it sit covered for an additional 5 minutes." },
+      { step: 2, text: "While the rice is resting, prepare your vegetables. Dice 1 small onion, chop 1 red bell pepper, and slice 2 green onions, separating the white parts from the green. Heat 2 tablespoons of vegetable oil in a large non-stick skillet or wok over medium-high heat until it shimmers. Add the diced onion first, sautéing for about 2 minutes until it becomes translucent and fragrant, which indicates it’s ready for the next ingredients." },
+      { step: 3, text: "Add the chopped red bell pepper to the skillet with the onions, stirring frequently for about 3 minutes until the peppers soften and their vibrant color deepens. This step adds both flavor and a sweet crunch to the dish. Next, incorporate the white parts of the sliced green onions along with 2 cloves of minced garlic, stirring for an additional 30 seconds. You should smell the aromatic garlic, which indicates it’s time to continue." },
+      { step: 4, text: "Once the vegetables are tender, stir in the cooked rice, breaking up any clumps with your spatula. Add 2 tablespoons of chipotle sauce (adjust to your heat preference) and 2 tablespoons of soy sauce, folding everything together gently. Allow the mixture to cook for about 5 minutes, stirring occasionally; look for a slight crispness forming on the bottom of the rice — this adds a delicious texture and flavor." },
+      { step: 5, text: "Finally, taste your fried rice and adjust the seasoning if necessary, adding more chipotle sauce or soy sauce as desired. Toss in the green parts of the sliced green onions for a fresh pop of color and flavor just before serving. Serve the chipotle fried rice hot, garnished with a sprinkle of chopped cilantro or a squeeze of lime for brightness and balance; this completes your dish with a zesty finish that elevates every bite." }
     ],
     chefNotes: "Fresh rice contains too much moisture for fried rice; it will turn to mush. Always use cold, day-old rice.",
     pairing: "Cold Mexican lager",
@@ -2201,11 +2201,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "3", unit: "tbsp", item: "yakisoba sauce" }
     ],
     method: [
-      { step: 1, text: "Place the 1 lb skirt steak in a shallow dish, coat it with the 3 tbsp yakisoba sauce, and marinate for 2 hours." },
-      { step: 2, text: "Heat a 10-inch skillet or grill over blazing-high heat for 5 minutes, until the surface is visibly smoking." },
-      { step: 3, text: "Cook the 1 lb skirt steak over blazing-high heat for 3 minutes per side, until charred outside and no longer raw inside." },
-      { step: 4, text: "Transfer the 1 lb skirt steak to a cutting board, rest it for 5 minutes, then shred it into thin carne-asada pieces." },
-      { step: 5, text: "Serve the shredded 1 lb skirt steak immediately, confirming the 3 tbsp yakisoba sauce has cooked onto its surface." }
+      { step: 1, text: "Begin by marinating 1 lb of thinly sliced carne asada in a mixture of 2 tbsp soy sauce, 1 tbsp sesame oil, and 1 tbsp minced garlic. Combine these ingredients in a bowl and ensure each piece of meat is well coated; this will infuse the beef with savory flavor and tenderize it. Let it sit for at least 15 minutes; if you have more time, marinating for up to 2 hours in the fridge will deepen the flavor even further." },
+      { step: 2, text: "While the carne asada marinates, prepare the vegetables: slice 1 bell pepper, 1 small onion, and 2 cups of cabbage into thin strips. Aim for uniform sizes to ensure even cooking, and remember that the vibrant colors of the vegetables will enhance the dish visually. Set them aside in a bowl, ready to be added to the stir-fry." },
+      { step: 3, text: "Heat a large skillet or wok over high heat until it is almost smoking, then pour in 2 tbsp vegetable oil. Swirl the oil to coat the surface evenly, which will create a non-stick environment for your stir-fry. Once the oil shimmers, it's time to add the marinated carne asada; you want a good sear, so avoid overcrowding the pan. Sear the beef for about 2-3 minutes on each side until it develops a rich brown crust and is cooked through, indicated by no visible pink." },
+      { step: 4, text: "After the carne asada is cooked, remove it from the skillet and set it aside on a plate, keeping it warm. In the same skillet, add the prepared vegetables, starting with the onion and bell pepper. Stir-fry them for about 3-4 minutes, just until they begin to soften and the onion turns translucent; this step releases their natural sweetness, which will balance the savory meat. Add the cabbage last, stirring for an additional 2 minutes until it wilts yet retains some crunch." },
+      { step: 5, text: "Return the carne asada to the skillet with the vegetables, and toss everything together to combine. Drizzle in 2 tbsp of yakisoba sauce, stirring continuously for about 1-2 minutes to ensure all ingredients are well coated and heated through. Look for the sauce to become glossy and slightly thickened; this means it has melded with the meat and vegetables. Once everything is heated and combined, serve immediately, garnished with sesame seeds or sliced green onions if desired." }
     ],
     chefNotes: "Rinse yakisoba noodles in hot water before stir-frying; it loosens the oil they are packed in and prevents them from breaking.",
     pairing: "Cold Pacifico",
@@ -2238,11 +2238,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "clove", item: "garlic", note: "minced" }
     ],
     method: [
-      { step: 1, text: "Bring a saucepan of cooking water to a rolling boil, then cook the 1/2 lb fettuccine or tagliatelle for 8–10 minutes." },
-      { step: 2, text: "Drain the 1/2 lb fettuccine or tagliatelle when it is tender but still slightly firm in the center." },
-      { step: 3, text: "Melt the 2 tbsp butter in a 10-inch skillet over medium-low heat for 2 minutes, until foamy but not browned." },
-      { step: 4, text: "Add the drained 1/2 lb fettuccine or tagliatelle to the 2 tbsp melted butter and toss over low heat for 2 minutes." },
-      { step: 5, text: "Serve the 1/2 lb buttered fettuccine or tagliatelle immediately, while the noodles look glossy and the 2 tbsp butter coats them." }
+      { step: 1, text: "Begin by bringing a large pot of salted water to a rolling boil over high heat. Use about 1 tablespoon of salt for every quart of water; this not only seasons the pasta but also enhances its flavor. Once boiling, add your pasta — preferably 12 ounces of fettuccine or spaghetti — and stir gently to prevent sticking. Cook according to package directions until al dente, which means it should still have a slight bite when you taste it; this usually takes about 8 to 10 minutes." },
+      { step: 2, text: "While the pasta cooks, prepare the mushroom mixture. Heat 2 tablespoons of olive oil in a large skillet over medium-high heat until it shimmers. Add 8 ounces of sliced mushrooms, such as cremini or shiitake, and sauté for about 5 minutes. Stir occasionally, watching for the mushrooms to reduce in size and release their moisture; they should become golden brown and fragrant — this caramelization brings out their natural umami flavor." },
+      { step: 3, text: "Next, introduce 2 tablespoons of miso paste to the skillet with the mushrooms. Use a wooden spoon to stir the paste in, breaking it up and ensuring it coats the mushrooms evenly. Within a minute, you should notice the miso becoming more aromatic and blending beautifully with the mushrooms; this creates a rich, savory base for your dish. Avoid overcooking, as you want the miso to enhance the flavor without burning, which can lead to bitterness." },
+      { step: 4, text: "Once the pasta is ready, reserve 1 cup of the pasta cooking water, then drain the rest and immediately add the pasta to the skillet with the mushroom-miso mixture. Toss the pasta vigorously, using tongs to combine everything thoroughly; add the reserved pasta water a little at a time, about 1/4 cup, to create a silky sauce that clings to the noodles. The pasta should be glossy, and the sauce should coat each strand without being soupy; this step is crucial for achieving the right texture." },
+      { step: 5, text: "Finally, finish the dish by stirring in 1 tablespoon of unsalted butter and a handful of freshly chopped parsley for brightness. Continue to toss everything together over low heat until the butter melts and the pasta is warmed through; you want a creamy consistency without additional heat that can dry it out. Taste for seasoning, adding salt or black pepper as needed; the dish should be well-balanced, highlighting the umami of the miso and the earthiness of the mushrooms." }
     ],
     chefNotes: "Mushrooms hold a lot of water. Do not salt them until after they have browned, or they will steam instead of sear.",
     pairing: "An oaky Chardonnay",
@@ -2424,11 +2424,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1/4", unit: "cup", item: "scallions", note: "sliced" }
     ],
     method: [
-      { step: 1, text: "Bring a large pot of water to a rolling boil over high heat, then add the 2 bundles somen noodles." },
-      { step: 2, text: "Boil the 2 bundles somen noodles for exactly 2 minutes, until flexible but still firm in the center." },
-      { step: 3, text: "Drain the 2 bundles somen noodles and plunge them into ice water for 1 minute, rubbing gently to remove starch." },
-      { step: 4, text: "Drain the 2 bundles somen noodles thoroughly, then toss them with the 1/4 cup scallions until evenly distributed." },
-      { step: 5, text: "Serve the 2 bundles somen noodles cold with the 1/4 cup scallions, when the noodles look glossy and springy." }
+      { step: 1, text: "Begin by bringing a large pot of water to a rolling boil over high heat. Ensure the pot is large enough to allow the somen noodles to move freely; this prevents them from sticking together. Add a generous pinch of salt to the boiling water, which enhances the flavor of the noodles. Once the water reaches a vigorous boil, it’s time to add the somen noodles." },
+      { step: 2, text: "Gently introduce the somen noodles into the boiling water, stirring them lightly with a wooden spoon to prevent clumping. Cook the noodles according to the package instructions, usually around 2-4 minutes, until they are just tender but still al dente. Keep an eye on the noodles, as they can overcook quickly; they should remain slightly firm to the bite. Once ready, immediately drain the noodles in a colander." },
+      { step: 3, text: "Rinse the drained somen noodles under cold running water for about 30 seconds. This step cools the noodles down and stops the cooking process, ensuring they maintain the perfect texture. As you rinse, gently toss the noodles with your hands to separate them. Rinsing is crucial because it also removes excess starch, which can cause the noodles to stick together later." },
+      { step: 4, text: "In a small bowl, combine the 2 tablespoons of chili oil, 1 tablespoon of soy sauce, and 1 teaspoon of sesame oil. Whisk the ingredients together until they are well blended, ensuring the oil and sauces are fully incorporated. The color should be a rich, glossy blend, and you should be able to smell the aromatic, spicy notes of the chili oil. This mixture is the flavor base for your somen, so it should be well-balanced and fragrant." },
+      { step: 5, text: "Transfer the cooled somen noodles to a large serving bowl and drizzle the prepared chili oil mixture over the top. Use a pair of chopsticks or tongs to gently toss the noodles, ensuring that every strand is evenly coated with the flavorful oil. Taste a small sample; the noodles should have a slight heat from the chili oil balanced with the savory notes from the soy and sesame. Serve immediately, garnished with chopped scallions or sesame seeds if desired." }
     ],
     chefNotes: "Somen must be washed in ice water vigorously. If you just rinse them, they will become a gummy mess.",
     pairing: "Iced green tea or a light beer",
@@ -2611,11 +2611,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "2", unit: "", item: "carrots", note: "cut into chunks" }
     ],
     method: [
-      { step: 1, text: "Heat a 5-quart heavy pot over medium-high heat for 2 minutes, then add the 1.5 lbs chicken thighs and brown for 8–10 minutes." },
-      { step: 2, text: "Add the 2 carrots cut into chunks and cook with the 1.5 lbs chicken thighs over medium heat for 5 minutes, stirring occasionally." },
-      { step: 3, text: "Cover the pot and simmer the 1.5 lbs chicken thighs and 2 carrots over low heat for 10 minutes, until the chicken reaches 165°F." },
-      { step: 4, text: "Turn off the heat, add the 1 box Japanese curry roux blocks, and stir for 2–3 minutes until completely melted and thickened." },
-      { step: 5, text: "Stir in the 1 tbsp white miso paste, return the pot to low heat, and simmer for 5 minutes until glossy and the carrots are tender." }
+      { step: 1, text: "Begin by gathering your ingredients: 1 lb of chicken thighs, 2 tbsp of chipotle paste, 2 tbsp of miso paste, and 1 can of coconut milk. Cut the chicken into bite-sized pieces, ensuring uniformity for even cooking. The chicken should be about 1 to 1.5 inches in size; this allows for a quick sear and ensures it absorbs the flavors effectively. Resting the chicken on a plate after cutting helps reduce surface moisture, which aids in achieving a good sear later." },
+      { step: 2, text: "In a large skillet, heat 2 tbsp of vegetable oil over medium-high heat until it shimmers. Add the chicken pieces in a single layer, ensuring they are not overcrowded to promote browning. Sear for about 5-7 minutes without moving them, until the bottom is golden brown and develops a crust. This Maillard reaction not only enhances flavor but also adds texture; you’ll know it’s ready to flip when it releases easily from the pan." },
+      { step: 3, text: "Once the chicken is beautifully browned, stir in the 2 tbsp of chipotle paste and 2 tbsp of miso paste. Use a wooden spoon to gently fold the pastes into the chicken, ensuring each piece is well coated. Allow this mixture to cook for 1-2 minutes, letting the spices bloom and infuse the chicken with deep, smoky flavors. You’ll know it’s time to proceed when you can smell the aromatic blend and see the pastes slightly darkening." },
+      { step: 4, text: "Pour in the 1 can of coconut milk, stirring well to combine all ingredients. Bring the mixture to a gentle simmer, and watch for small bubbles forming at the edge of the skillet. This simmering stage is crucial as it allows the chicken to cook through and the flavors to meld beautifully. Keep it simmering for about 15 minutes, stirring occasionally, until the chicken is tender and the sauce has thickened to a creamy consistency." },
+      { step: 5, text: "Taste the curry and adjust the seasoning if necessary, perhaps adding a pinch of salt or a squeeze of lime for brightness. Once satisfied with the flavors, remove the skillet from heat and let it rest for a couple of minutes. This resting period allows the sauce to settle and the flavors to deepen before serving. Serve the chicken curry hot, garnished with fresh cilantro for an extra pop of color and freshness." }
     ],
     chefNotes: "Adding the miso at the very end ensures the delicate fermented notes aren't boiled away by the rolling stew.",
     pairing: "Cold amber ale",
@@ -2686,11 +2686,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "toasted sesame seeds" }
     ],
     method: [
-      { step: 1, text: "Press the 1 block firm tofu for 15 minutes, then cut it into even bite-sized cubes so they brown uniformly." },
-      { step: 2, text: "Heat a 10-inch skillet over medium-high heat, add the 1 tbsp olive oil, and warm it until visibly shimmering." },
-      { step: 3, text: "Add the 1 block cubed firm tofu and cook for 8 minutes, turning occasionally until several sides are deeply golden." },
-      { step: 4, text: "Reduce the skillet to low heat, add the 1 cup prepared mole negro paste, and stir for 15 minutes until glossy and thick." },
-      { step: 5, text: "Transfer the tofu stew to a serving bowl and sprinkle the 1 tbsp toasted sesame seeds over the glossy mole coating." }
+      { step: 1, text: "Begin by preparing your ingredients. Dice 1 medium onion and mince 3 cloves of garlic, ensuring the onion pieces are small enough to soften quickly during cooking. This initial step is crucial for building a flavorful base; the sweetness of the onion will enhance the dish's depth. Set these aside in a bowl so they are ready for the next step." },
+      { step: 2, text: "In a large, heavy-bottomed pot, heat 2 tablespoons of olive oil over medium heat until it shimmers but does not smoke. Carefully add the diced onions and a pinch of salt, stirring occasionally to promote even cooking. You want the onions to become translucent and soft, which typically takes about 5 to 7 minutes. This process sweats out the moisture and sweetness, laying the foundation for the stew's flavor." },
+      { step: 3, text: "Add the minced garlic to the pot, stirring it in with the onions for about 1 minute until fragrant. Watch for the garlic to turn golden; this indicates it's releasing its essential oils, which will infuse the dish with a rich aroma. Be careful not to let it brown too much, as burnt garlic can impart a bitter taste." },
+      { step: 4, text: "Next, incorporate 1 tablespoon of ground cumin, 1 tablespoon of dried oregano, and 1 tablespoon of chili powder into the pot, stirring well to coat the onions and garlic evenly. You should start to smell the spices bloom, which usually happens within 30 seconds to a minute. This step is vital because it intensifies the flavors and creates a robust aromatic profile for your mole." },
+      { step: 5, text: "Now, add the cubed tofu, 1 can of diced tomatoes (with juices), and 2 cups of vegetable broth into the pot, stirring gently to combine. As the stew heats, the tofu will absorb the flavors, and the tomatoes will break down and thicken the mixture. Bring everything to a simmer, then reduce the heat to low and cover, allowing it to cook for about 20 minutes. You’ll know it’s ready when the tofu is heated through and the mixture has thickened slightly." }
     ],
     chefNotes: "Pressing the tofu is non-negotiable. If it's waterlogged, it will steam instead of sear, and it won't absorb the mole.",
     pairing: "Mexican Coke or a dark stout",
@@ -2948,11 +2948,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "red miso paste" }
     ],
     method: [
-      { step: 1, text: "Heat a 5-quart pot over medium heat, add the 1 diced onion and 2 diced carrots, and cook for 5 minutes until softened." },
-      { step: 2, text: "Stir in the 2 tbsp pureed chipotle in adobo and cook for 1 minute until fragrant and slightly darkened." },
-      { step: 3, text: "Add the 1 cup rinsed lentils and 4 cups vegetable broth, bring to a boil, then reduce the heat to low and cover." },
-      { step: 4, text: "Simmer the 1 cup lentils with the 4 cups broth for 30 minutes until tender and the stew has visibly thickened." },
-      { step: 5, text: "Remove the pot from the heat, whisk the 2 tbsp red miso paste into a ladleful of hot broth, and stir it back into the stew." }
+      { step: 1, text: "Begin by rinsing 1 cup of dried lentils under cold running water in a fine-mesh strainer. This helps remove any dust or debris, ensuring a cleaner flavor in your stew. Look for any small stones or discolored lentils to discard. Once rinsed, set them aside to drain while you prepare the other ingredients." },
+      { step: 2, text: "In a large pot, heat 2 tablespoons of olive oil over medium heat until it shimmers, indicating it's hot enough for sautéing. Add 1 diced onion and sauté for about 5-7 minutes until it becomes translucent and soft, stirring occasionally. This step builds the foundational flavor for your stew; you want the onion to lose its sharpness without browning." },
+      { step: 3, text: "Stir in 3 minced garlic cloves and 1 tablespoon of ground cumin, cooking for an additional 1-2 minutes until fragrant. The garlic should be lightly golden, which enhances the depth of flavor. If it starts to brown too quickly, lower the heat to prevent bitterness. This step is essential as it infuses the oil with aromatic flavors that will permeate the lentils." },
+      { step: 4, text: "Add in the rinsed lentils, 4 cups of vegetable broth, and 1 can (14.5 oz) of diced tomatoes along with their juices. Stir to combine, ensuring the lentils are submerged. This mixture should bubble gently as it comes to a simmer, which indicates that the lentils will start to cook and soften. Bring the stew to a boil, then reduce the heat to low and cover, allowing it to simmer for 25-30 minutes until the lentils are tender but not mushy." },
+      { step: 5, text: "Once the lentils are cooked, stir in 2 tablespoons of chipotle sauce and season with salt and pepper to taste. The stew should be thick and hearty, with a rich, smoky aroma filling the kitchen. Taste for seasoning and adjust if needed; this is crucial as it enhances the overall flavor. Allow the stew to simmer for an additional 5 minutes to meld the flavors before serving." }
     ],
     chefNotes: "Do not use red lentils for this stew; they cook too quickly and turn to complete mush instead of holding their shape.",
     pairing: "A crisp Pilsner or sparkling water",
@@ -2984,11 +2984,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "cup", item: "cilantro", note: "chopped" }
     ],
     method: [
-      { step: 1, text: "Heat a heavy 6-quart pot over medium-high heat, add the 1 lb chicken thighs cut into chunks, and brown for 6–8 minutes." },
-      { step: 2, text: "Add the 1 lb tomatillos, husked, rinsed, and quartered, and cook for 8–10 minutes until softened and partly broken down." },
-      { step: 3, text: "Pour in the 4 cups dashi stock, bring the mixture to a gentle simmer over medium heat, and cook for 5 minutes." },
-      { step: 4, text: "Return the browned 1 lb chicken thighs to the pot and simmer uncovered for 15 minutes until cooked through and tender." },
-      { step: 5, text: "Check that the 1 lb chicken thighs are no longer pink inside and the 1 lb tomatillos are soft, then serve the stew hot." }
+      { step: 1, text: "Begin by gathering your ingredients: 4 cups of water, 2 dried shiitake mushrooms, and 1 piece of kombu seaweed. Place the water into a medium saucepan and add the dried mushrooms and kombu. Heat the mixture over medium heat until you see small bubbles forming on the surface, indicating it's starting to simmer, but do not let it boil. This gentle heating allows the flavors to infuse without turning the dashi bitter, so remove it from the heat just as it begins to bubble, about 10 minutes." },
+      { step: 2, text: "Once you've removed the saucepan from the heat, let the kombu steep for 10 minutes to extract its umami flavor, while the mushrooms rehydrate. You’ll know it's ready when the kombu has softened and is pliable, and the mushrooms have expanded in size. Strain the liquid through a fine-mesh sieve into a bowl, discarding the kombu and mushrooms; this leaves you with a clear, flavorful dashi broth that is the base of your stew." },
+      { step: 3, text: "In a large pot over medium heat, warm 2 tablespoons of vegetable oil until it shimmers, indicating it’s hot enough to sauté. Add 1 chopped onion and 2 minced garlic cloves, stirring frequently for about 5 minutes until the onion becomes translucent and fragrant. This step builds a solid flavor foundation; you want the onions to soften but not color, so keep an eye on them and adjust the heat if necessary." },
+      { step: 4, text: "Next, incorporate 4 cups of chopped tomatillos into the pot along with the reserved dashi broth. Stir well to combine everything, and bring the mixture to a gentle simmer. Look for small bubbles breaking the surface, which indicates it is hot enough for the flavors to meld. Let it simmer for about 15 minutes, or until the tomatillos have softened and broken down slightly, creating a rich and tangy stew base." },
+      { step: 5, text: "Finally, season the stew with 2 tablespoons of soy sauce and 1 tablespoon of lime juice, adjusting to taste. Stir thoroughly to ensure the flavors are well distributed, and let the stew simmer for an additional 5 minutes for the flavors to blend harmoniously. You’ll know it’s done when the stew smells aromatic and bright, with a balanced tang; serve it hot, garnished with fresh cilantro for an added burst of flavor." }
     ],
     chefNotes: "Dashi has a delicate flavor that can be easily overpowered. Keep the simmer gentle to preserve its oceanic notes.",
     pairing: "A crisp Sauvignon Blanc",
@@ -3059,12 +3059,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "3", unit: "cups", item: "dashi stock" }
     ],
     method: [
-      { step: 1, text: "Heat a heavy 6-quart pot over medium-high heat, add the 1 lb thinly sliced beef, and brown it for 2–3 minutes." },
-      { step: 2, text: "Add the 3 large potatoes cut into chunks and the 2 carrots cut into chunks, then cook for 4 minutes until lightly browned." },
-      { step: 3, text: "Pour in the 3 cups dashi stock and the 1/4 cup soy sauce, bring the mixture to a boil, and cook for 3 minutes." },
-      { step: 4, text: "Cover the pot, reduce the heat to low, and simmer the 3 large potatoes and 2 carrots for 25 minutes until fork-tender." },
-      { step: 5, text: "Return the browned 1 lb thinly sliced beef to the pot and simmer uncovered for 5 minutes until the sauce slightly thickens." },
-      { step: 6, text: "Serve the stew hot once the 3 large potatoes, 2 carrots, and 1 lb beef are tender and coated with the sauce." }
+      { step: 1, text: "Begin by gathering your ingredients to create a flavorful base for your Nikujaga. Measure out 1 lb of thinly sliced beef, preferably shank or chuck, and set it aside. Next, chop 3 medium potatoes into bite-sized pieces, ensuring they are uniform for even cooking. Slice 1 large onion and 1 medium carrot, aiming for thin half-moons. These vegetables will not only add sweetness but also absorb the rich flavors of the stew." },
+      { step: 2, text: "Heat 2 tbsp of vegetable oil in a large pot over medium-high heat until it shimmers. Carefully add the sliced beef in a single layer, avoiding overcrowding the pan. Sear the beef for about 4-5 minutes, stirring occasionally, until it is browned on all sides. This browning process is essential as it develops a deep, savory flavor that forms the foundation of your stew." },
+      { step: 3, text: "Once the beef is nicely browned, incorporate the sliced onion and carrot into the pot. Stir frequently for about 3-4 minutes, until the onion becomes translucent and fragrant. This step allows the vegetables to soften and meld with the beef, enhancing the overall flavor profile of the stew. Pay attention to the aroma; it should be sweet and savory, a sign that you’re on the right track." },
+      { step: 4, text: "Add the chopped potatoes into the pot, along with 3 cups of dashi stock for an umami boost. If you don't have dashi, a combination of water and soy sauce can work as a substitute. Bring the mixture to a gentle simmer, and skim off any foam that rises to the surface for a cleaner broth. This simmering process allows all the ingredients to harmonize, creating a rich and comforting stew." },
+      { step: 5, text: "Stir in 3 tbsp of soy sauce, 2 tbsp of mirin, and 1 tbsp of sugar, balancing the savory and sweet elements of the dish. Allow the stew to simmer uncovered for 30-40 minutes, stirring occasionally. Look for the potatoes to become tender and the sauce to thicken slightly, which indicates that the flavors have intensified. The mixture should be bubbling gently, not boiling vigorously, to avoid breaking apart the ingredients." },
+      { step: 6, text: "Once the stew has reached the desired thickness and the potatoes are fork-tender, taste and adjust the seasoning if necessary. If you prefer a deeper flavor, add an extra splash of soy sauce or a pinch more sugar. Serve the Nikujaga hot, garnished with finely chopped green onions or shichimi togarashi for a touch of heat. Enjoy the warm, comforting embrace of this traditional Japanese dish, perfect for sharing with family." }
     ],
     chefNotes: "Using thinly sliced beef means it cooks almost instantly. Adding it back at the end keeps it incredibly tender.",
     pairing: "Cold Japanese lager",
@@ -3211,12 +3211,12 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "3", unit: "tbsp", item: "butter" }
     ],
     method: [
-      { step: 1, text: "Keep the 5 cups dashi or mushroom stock hot in a saucepan over low heat, steaming gently without letting it boil." },
-      { step: 2, text: "Melt 1 tbsp butter in a heavy 10-inch skillet over medium heat, then sauté the sliced shiitake and cremini mushrooms for 5–7 minutes until deeply browned." },
-      { step: 3, text: "Add another 1 tbsp butter and the 1.5 cups Arborio or Carnaroli rice, stirring constantly for 2 minutes until the grains look glossy and lightly toasted." },
-      { step: 4, text: "Pour in the 1/2 cup dry white wine and stir continuously for 2–3 minutes until the wine is completely absorbed and the pan looks nearly dry." },
-      { step: 5, text: "Add the 5 cups hot stock one ladle at a time over 18–22 minutes, stirring frequently and waiting until each addition is absorbed before continuing." },
-      { step: 6, text: "Remove the skillet from heat when the 1.5 cups rice is tender but slightly firm, then stir in the remaining 1 tbsp butter and browned mushrooms." }
+      { step: 1, text: "Begin by preparing your ingredients: finely chop 1 medium onion and 2 cloves of garlic. This will enhance the base flavor of your risotto. The onion should be translucent and fragrant, while the garlic should be aromatic but not browned. The goal is to create a flavorful foundation that will permeate the dish." },
+      { step: 2, text: "Heat 2 tablespoons of olive oil and 1 tablespoon of unsalted butter in a large, heavy-bottomed pan over medium heat. Allow the butter to melt completely and foam slightly before adding your chopped onion. Stir frequently for about 5 minutes, until the onion becomes soft and translucent; this ensures it’s sweetened, forming a perfect base for your risotto." },
+      { step: 3, text: "Add the minced garlic to the pan, stirring constantly for about 30 seconds. You want the garlic to become fragrant without browning, as burnt garlic can impart a bitter taste. The mixture should smell fragrant and slightly toasty; once you achieve this, you can move to the next step." },
+      { step: 4, text: "Incorporate 1 cup of Arborio rice into the pan, stirring to coat the grains with the oil and butter. Toast the rice for about 2 minutes, until the edges become slightly translucent. This crucial step enhances the nuttiness of the rice and helps it absorb the broth more effectively, resulting in a creamier texture." },
+      { step: 5, text: "Gradually pour in 1/2 cup of dry white wine, stirring continuously until the liquid is fully absorbed. You should see the rice swell and the edges become tender, which indicates it's absorbing the flavors. This step adds depth and complexity to the dish; once the wine has evaporated completely, you can move on." },
+      { step: 6, text: "Begin adding 4 cups of warm vegetable broth, one ladle at a time, stirring frequently. Allow each addition to be absorbed before adding the next — this process should take about 20 minutes. Look for the rice to be al dente, with a creamy texture; you’ll know it’s done when it’s tender but still has a slight bite — no more than a minute or two beyond that point." }
     ],
     chefNotes: "Cotija is saltier and funkier than parmesan. Taste the risotto before adding any extra salt.",
     pairing: "Chardonnay or a dry Junmai sake",
@@ -3326,11 +3326,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "2", unit: "cups", item: "oil", note: "for frying" }
     ],
     method: [
-      { step: 1, text: "Score the 1 large eggplant slices in a shallow crosshatch pattern, keeping the cuts within each 1-inch slice." },
-      { step: 2, text: "Set the 1/2 cup flour and 1 cup panko breadcrumbs in separate shallow dishes for coating the eggplant slices." },
-      { step: 3, text: "Press each slice from the 1 large eggplant into the 1/2 cup flour, then firmly coat all sides with the 1 cup panko." },
-      { step: 4, text: "Heat a 10-inch nonstick skillet over medium-high heat and cook the coated eggplant for 4 minutes per side, until deeply golden." },
-      { step: 5, text: "Transfer the 1 large eggplant katsu to plates and serve immediately, ensuring the crust is crisp and the centers are tender." }
+      { step: 1, text: "Begin by preparing your vegetables. Choose fresh options like eggplant, zucchini, and bell peppers, as they will provide a vibrant mix of flavors and textures. Cut them into even slices, about 1/4-inch thick, which ensures they cook uniformly. This uniformity is crucial for even frying and helps retain their structure in the curry." },
+      { step: 2, text: "Next, set up a breading station for the katsu. In one shallow dish, whisk together 1 cup of all-purpose flour and a pinch of salt; in a second dish, beat 2 large eggs until frothy; and in a third dish, spread out 1 cup of panko breadcrumbs. This three-step process allows for a crispy coating on your vegetables. Take a moment to ensure each dish is ready before you start; a smooth workflow is key." },
+      { step: 3, text: "Now, coat each vegetable slice in the flour first, shaking off any excess. This initial coating helps the egg adhere, creating a sturdy base for the breadcrumbs. Then, dip the floured slice into the beaten eggs, allowing the excess to drip off; this step is essential for a uniform coating. Finally, roll the slice in the panko breadcrumbs, pressing gently to ensure they stick well — this will yield a delightful crunch upon frying." },
+      { step: 4, text: "Heat about 1/4 cup of vegetable oil in a large skillet over medium-high heat. To check if the oil is ready, drop in a few breadcrumbs; they should sizzle and turn golden within seconds. Working in batches, carefully place the breaded vegetable slices into the hot oil without overcrowding the pan; this allows for even cooking and crisping. Fry them for about 3-4 minutes on each side or until they achieve a deep golden-brown color, indicating they are perfectly crispy." },
+      { step: 5, text: "While the katsu is frying, prepare the curry sauce. In a saucepan, gently sauté 1 chopped onion and 2 minced garlic cloves in 1 tablespoon of vegetable oil over medium heat until the onion becomes translucent and fragrant — about 5 minutes. Stir in 2 tablespoons of curry powder, allowing the spices to bloom for about 1 minute; this step enhances the flavor profile of your sauce. Finally, add 2 cups of vegetable broth and bring to a simmer, letting it thicken slightly for about 10 minutes; the sauce should be smooth and rich, ready to complement your crispy katsu." }
     ],
     chefNotes: "Scoring the eggplant allows the heat to penetrate quickly, ensuring the inside becomes creamy before the panko crust burns.",
     pairing: "Cold green tea or an IPA",
@@ -3363,11 +3363,11 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "1", unit: "cup", item: "shredded cabbage" }
     ],
     method: [
-      { step: 1, text: "Preheat the broiler to high and score the flesh of the 2 Japanese eggplants in diamonds without piercing their skins." },
-      { step: 2, text: "Whisk the 2 tbsp white miso paste, 1 tbsp sugar, and 1 tbsp mirin in a bowl until the glaze is completely smooth." },
-      { step: 3, text: "Brush the miso mixture evenly over the cut sides of the 2 Japanese eggplants, covering the scored flesh completely." },
-      { step: 4, text: "Broil the 2 Japanese eggplants on a broiler-safe pan for 10–12 minutes, until soft throughout and caramelized with bubbly glaze." },
-      { step: 5, text: "Scoop the hot flesh from the 2 Japanese eggplants onto the 4 crispy corn tostadas, then top evenly with the 1 cup shredded cabbage." }
+      { step: 1, text: "Begin by preheating your oven to 400°F (200°C). This allows for even cooking of the eggplant, helping to achieve a nicely caramelized exterior while keeping the inside tender. You can check if the oven is ready by placing your hand in front of the open door; you should feel a steady, warm breeze of hot air." },
+      { step: 2, text: "Prepare the eggplant by slicing it into ½-inch thick rounds. Use a sharp knife for clean cuts, ensuring uniform thickness for even cooking. As you slice, observe the flesh; it should be glossy and firm, signaling freshness. Once sliced, sprinkle the rounds lightly with salt and let them sit for about 15 minutes to draw out excess moisture, which helps prevent the eggplant from becoming soggy during roasting." },
+      { step: 3, text: "Rinse the salted eggplant slices under cold water to remove excess salt and moisture, then pat them dry with a clean kitchen towel. This step is crucial, as it helps achieve a better texture and flavor in the final dish. You want the eggplant to feel dry to the touch before cooking; any remaining moisture could lead to a mushy result." },
+      { step: 4, text: "In a small bowl, whisk together 2 tablespoons of miso paste, 1 tablespoon of olive oil, and a drizzle of honey or maple syrup until smooth. This mixture will serve as both a marinade and a glaze, imparting a rich umami flavor to the eggplant. Look for a homogenous, slightly thick consistency; it should easily coat the back of a spoon. If it feels too thick, add a teaspoon of water to loosen it." },
+      { step: 5, text: "Place the eggplant rounds on a baking sheet lined with parchment paper. Brush each slice generously with the miso glaze, ensuring they are evenly coated. This helps the flavors to penetrate while roasting. Roast in the preheated oven for 25-30 minutes, flipping halfway through, until the eggplant is golden brown and tender when pierced with a fork. You should see a caramelized surface on each slice, indicating they are perfectly cooked." }
     ],
     chefNotes: "Japanese eggplants are essential here; American globe eggplants hold too much water and will turn mushy rather than creamy.",
     pairing: "A crisp white wine or sparkling water",
@@ -3476,13 +3476,13 @@ export const dinnerRecipes: Recipe[] = [
       { qty: "8", unit: "", item: "corn tortillas" }
     ],
     method: [
-      { step: 1, text: "Whisk the 1/4 cup soy sauce, 1/4 cup lime juice, 2 tbsp olive oil, and 1 tsp ground cumin in a shallow dish." },
-      { step: 2, text: "Place the 4 large portobello mushrooms, gill-side up, in the marinade and let them stand for 20 minutes." },
-      { step: 3, text: "Heat a 10-inch cast-iron skillet or grill over high heat until smoking, with the 4 marinated mushrooms ready." },
-      { step: 4, text: "Sear the 4 large portobello mushrooms for 4 minutes per side until deeply charred, tender, and visibly collapsed." },
-      { step: 5, text: "Slice the 4 cooked portobello mushrooms into thick strips after searing, keeping the pieces hot for serving." },
-      { step: 6, text: "Warm the 8 corn tortillas in the skillet over medium heat for 30 seconds per side until pliable and heated through." },
-      { step: 7, text: "Divide the sliced 4 portobello mushrooms among the 8 warmed corn tortillas and serve immediately." }
+      { step: 1, text: "Begin by preparing the mushrooms — you will want about 1 pound of portobello mushrooms. Clean them thoroughly with a damp cloth to remove any dirt, then slice them into 1/4-inch thick strips. This size ensures that they cook evenly and allows the meaty texture to shine through. Set aside in a large bowl to marinate." },
+      { step: 2, text: "In a separate bowl, whisk together 1/4 cup of soy sauce, the juice of 2 limes, 2 tablespoons of olive oil, 2 teaspoons of ground cumin, and 2 teaspoons of smoked paprika. This marinade will infuse the mushrooms with rich flavors reminiscent of traditional carne asada. Look for a well-blended mixture that is slightly thick — this indicates the spices are well incorporated. Pour this marinade over the sliced mushrooms, ensuring they are fully coated." },
+      { step: 3, text: "Cover the bowl with plastic wrap and let the mushrooms marinate in the refrigerator for at least 30 minutes, or up to 2 hours for deeper flavor. As they marinate, the acidic lime juice will tenderize the mushrooms, making them juicy and flavorful. Check them occasionally; the longer they sit, the more flavorful they become, but don’t exceed 2 hours to avoid overly mushy texture." },
+      { step: 4, text: "Once marinated, heat a large skillet or grill pan over medium-high heat until it is hot but not smoking. Add a tablespoon of vegetable oil and swirl it around to coat the pan. You want the oil to shimmer slightly; this indicates it is hot enough to sear the mushrooms. Carefully add the marinated mushrooms in a single layer, ensuring they don’t overcrowd the pan." },
+      { step: 5, text: "Sear the mushrooms for about 4-5 minutes without stirring to allow a nice caramelized crust to form. You should see them turn a deep brown on one side, which adds a desirable umami flavor. After 5 minutes, flip the mushrooms to sear the other side for another 4-5 minutes. Look for a rich, dark color and a slightly crispy texture." },
+      { step: 6, text: "Once the mushrooms are beautifully caramelized on both sides, remove them from the skillet and let them rest on a cutting board for a few minutes. This resting time allows the juices to redistribute within the mushrooms, enhancing their flavor and texture. As they cool slightly, they will firm up a bit, making them easier to slice if desired." },
+      { step: 7, text: "To serve, slice the mushrooms into strips if not already done, and place them on warm tortillas. Top with your choice of fresh toppings such as diced onions, cilantro, and a squeeze of lime. The vibrant colors and fresh aromas should entice you — the balance of the savory mushrooms with the brightness of the toppings is what makes this dish truly special." }
     ],
     chefNotes: "Marinate the mushrooms gill-side up so the dark underside absorbs the liquid like a sponge.",
     pairing: "An icy Mexican lager or an IPA",

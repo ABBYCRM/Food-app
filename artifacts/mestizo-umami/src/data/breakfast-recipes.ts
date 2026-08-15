@@ -73,11 +73,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "chives", note: "finely chopped" }
     ],
     method: [
-      { step: 1, text: "Crack the 4 large eggs into a bowl and whisk for 30 seconds until the yolks and whites are fully blended." },
-      { step: 2, text: "Continue whisking the 4 large eggs until the mixture looks smooth and slightly frothy, with no visible streaks." },
-      { step: 3, text: "Heat a 10-inch nonstick skillet over medium-low heat for 2 minutes, then add the 1 tbsp olive oil." },
-      { step: 4, text: "Pour the whisked 4 large eggs into the skillet and stir slowly with a spatula for 2–3 minutes as soft curds form." },
-      { step: 5, text: "Remove the skillet when the 4 large eggs are just set but still glossy, with no liquid pooling, and serve immediately." }
+      { step: 1, text: "Begin by cracking 4 large eggs into a medium bowl. Use a whisk to beat the eggs vigorously until the yolks and whites are fully combined, which should take about 1 minute. You’re aiming for a uniform mixture with a pale yellow color and a slightly frothy texture. This step is crucial because aerating the eggs will give your scrambled eggs a light and fluffy consistency." },
+      { step: 2, text: "Add 2 tablespoons of miso paste to the beaten eggs. With your whisk, blend the miso into the eggs until there are no visible clumps and the mixture is smooth. The miso should dissolve fully into the eggs, imparting a rich umami flavor. This flavor enhancement is key to elevating the dish beyond ordinary scrambled eggs." },
+      { step: 3, text: "Heat a non-stick skillet over medium-low heat and add 2 teaspoons of unsalted butter. Allow the butter to melt slowly, swirling the pan to ensure the butter coats the surface evenly. Look for the butter to foam slightly and turn a pale golden color, which indicates that it has reached the right temperature for cooking without burning." },
+      { step: 4, text: "Pour the miso-egg mixture into the skillet and let it sit undisturbed for about 10 seconds. Using a spatula, gently stir the eggs, folding them from the edges towards the center. Continue this process, allowing the eggs to form soft curds, until they are creamy and just set, which should take about 2-3 minutes. Remove the pan from the heat when the eggs are still slightly undercooked, as they will continue to cook from residual heat." },
+      { step: 5, text: "While the eggs finish cooking, toast 2 slices of sourdough bread until they are golden brown and crisp. You can do this in a toaster or on a skillet, depending on your preference. The bread should have a crunchy exterior and a chewy interior, which will provide a delightful contrast to the creamy eggs. Assemble the dish by spooning the miso scrambled eggs generously over the toasted sourdough, and serve immediately for the best texture and flavor." }
     ],
     chefNotes: "Take the eggs off the heat just before they look done, as residual heat will continue to cook them. White miso adds natural salt, so don't add extra salt.",
     pairing: "Sencha green tea",
@@ -453,11 +453,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "chives", note: "minced" }
     ],
     method: [
-      { step: 1, text: "Slice the 6 hard-boiled eggs (peeled) lengthwise within 2 minutes, keeping the whites intact for filling." },
-      { step: 2, text: "Scoop the yolks from the 6 hard-boiled eggs into a medium bowl and mash for 1 minute, until no large lumps remain." },
-      { step: 3, text: "Add the 3 tbsp Japanese mayonnaise to the mashed yolks and stir for 1 minute, until the mixture looks smooth and creamy." },
-      { step: 4, text: "Spoon the yolk mixture into the 6 egg-white halves, dividing it evenly and mounding it slightly above each white." },
-      { step: 5, text: "Refrigerate the filled 6 hard-boiled eggs for 15 minutes at 40°F (4°C), until chilled and firm before serving." }
+      { step: 1, text: "Begin by placing 6 large eggs in a medium saucepan and covering them with cold water by at least an inch. Turn the heat to high and bring the water to a rolling boil. This initial boil is crucial as it sets the stage for perfectly cooked yolks. Once boiling, cover the saucepan with a lid and immediately remove it from the heat, allowing the residual heat to gently cook the eggs for 12 minutes. This method ensures that the yolks are creamy and not overcooked." },
+      { step: 2, text: "While the eggs are cooking, prepare a large bowl filled with ice water. This ice bath will stop the cooking process abruptly and help the eggs cool quickly, preventing a greenish ring from forming around the yolks. After the 12 minutes, carefully transfer the eggs using a slotted spoon into the ice water, letting them chill for at least 5 minutes. You’ll know they are ready when the shells are cool to the touch." },
+      { step: 3, text: "Once the eggs are cooled, gently tap each egg on the counter to crack the shell, then roll it lightly to loosen the shell. Begin peeling under running water to make the process easier and ensure that any stubborn bits of shell come off cleanly. This technique minimizes damage to the egg whites, which is essential for a beautiful presentation. Aim for smooth, intact whites, as they will hold the filling better." },
+      { step: 4, text: "Slice each peeled egg in half lengthwise, carefully removing the yolks and placing them in a mixing bowl. Use a fork to mash the yolks into a fine crumb; they should resemble a sandy texture. To this, add 2 tablespoons of white miso paste, 2 tablespoons of mayonnaise, and 1 teaspoon of Dijon mustard. Mixing these ingredients thoroughly will create a creamy and flavorful filling, and the miso adds a rich umami depth that elevates the dish." },
+      { step: 5, text: "Once combined, taste the yolk mixture and adjust the seasoning as necessary, perhaps adding a pinch of salt or a squeeze of lemon juice for brightness. Use a piping bag or a spoon to fill each egg white half with the yolk mixture, ensuring a generous, heaping amount in each. Finally, sprinkle the tops with Tajín seasoning for a burst of zesty flavor and a beautiful presentation. Serve immediately or refrigerate for up to an hour before serving, allowing the flavors to meld." }
     ],
     chefNotes: "If the yolk mixture seems too stiff, add a few drops of warm water rather than more mayo to achieve the perfect piping consistency.",
     pairing: "Bloody Mary or fresh tomato juice",
@@ -716,11 +716,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1/4", unit: "cup", item: "toasted pecans", note: "chopped" }
     ],
     method: [
-      { step: 1, text: "Heat a medium saucepan over low heat, about 250°F (120°C), and add the 1 cup rolled oats (chopped)." },
-      { step: 2, text: "Toast the 1 cup rolled oats (chopped) for 3–5 minutes, stirring every 30 seconds until fragrant and lightly golden." },
-      { step: 3, text: "Remove the saucepan from the heat and cool the 1 cup rolled oats (chopped) for 2 minutes until no longer steaming." },
-      { step: 4, text: "Transfer the 1 cup rolled oats (chopped) to a serving bowl, keeping the toasted pieces together rather than crushing them further." },
-      { step: 5, text: "Serve the 1 cup rolled oats (chopped) immediately while warm, noting that the listed ingredients produce toasted oats rather than porridge." }
+      { step: 1, text: "Begin by measuring 1 cup of rolled oats and 2 cups of water or milk into a medium saucepan. Stir the oats briefly to evenly distribute them in the liquid. This ensures that they cook uniformly, absorbing the moisture effectively. Place the saucepan over medium heat and bring it to a gentle simmer, watching for small bubbles to appear at the surface." },
+      { step: 2, text: "Once the mixture begins to simmer, reduce the heat to low and cover the saucepan with a lid. Allow the oats to cook for about 5 minutes, stirring occasionally to prevent them from sticking to the bottom. You want the oats to swell and soften, becoming creamy in texture. When they have absorbed most of the liquid and are tender yet still slightly chewy, it's time to move on." },
+      { step: 3, text: "Remove the saucepan from heat and stir in 2 tablespoons of miso paste. Use a whisk to incorporate the miso thoroughly, ensuring there are no lumps left. This technique helps the miso dissolve evenly, infusing the oatmeal with a rich umami flavor. The mixture will turn a creamy beige color, signaling it is well combined." },
+      { step: 4, text: "Next, add 2 tablespoons of maple syrup to sweeten the oatmeal. Whisk again until the syrup is fully integrated and the mixture is smooth. You should notice a glossy sheen on the surface, which indicates that the flavors are harmonizing beautifully. Taste the oatmeal at this stage; you can adjust the sweetness by adding more maple syrup if desired." },
+      { step: 5, text: "Finally, serve the miso-maple oatmeal in bowls, garnishing with toppings of your choice, such as sliced bananas, chopped nuts, or a sprinkle of sesame seeds. Drizzle a little extra maple syrup on top for added sweetness if you like. The oatmeal should be warm and inviting, with a creamy texture and a delightful balance of savory and sweet flavors. Enjoy immediately for the best experience!" }
     ],
     chefNotes: "Never boil the miso paste, as high heat destroys its delicate fermented aromatics. Always stir it in at the very end off the heat.",
     pairing: "Green tea or a light roast pour-over coffee",
@@ -791,11 +791,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "maple syrup", note: "optional" }
     ],
     method: [
-      { step: 1, text: "Place the 1/2 cup chia seeds (chilled) in a medium mixing bowl, breaking apart any compacted seeds with a whisk." },
-      { step: 2, text: "Add the 1 tsp vanilla extract (sliced) and optional 1 tbsp maple syrup to the 1/2 cup chia seeds (chilled)." },
-      { step: 3, text: "Whisk the 1/2 cup chia seeds (chilled), 1 tsp vanilla extract (sliced), and optional 1 tbsp maple syrup for 2 minutes." },
-      { step: 4, text: "Cover the bowl and refrigerate the 1/2 cup chia seeds (chilled) mixture at 40°F (4°C) for at least 4 hours." },
-      { step: 5, text: "Stir the chilled 1/2 cup chia seeds (chilled) mixture until evenly coated, noting that the listed ingredients contain no liquid for pudding." }
+      { step: 1, text: "Begin by rinsing 1 cup of uncooked long-grain white rice under cold water in a fine-mesh strainer. This process removes excess starch and prevents the rice from clumping together while soaking. You want the water to run clear, indicating that the rice is clean. After rinsing, transfer the rice to a bowl and cover it with 4 cups of water, allowing it to soak for at least 4 hours or overnight. This soaking softens the rice, making it easier to blend and extract flavor." },
+      { step: 2, text: "After soaking, drain the rice and transfer it to a blender along with 1 cup of milk (or a non-dairy alternative) and 1 tablespoon of vanilla extract. Blend on high speed until the rice is completely pulverized and the mixture appears creamy, about 1-2 minutes. The goal is to achieve a smooth consistency, so stop when you no longer see any large grains. This step is crucial to ensure your horchata has a silky texture." },
+      { step: 3, text: "Strain the blended mixture through a fine-mesh sieve or cheesecloth into a large bowl or pitcher, pressing gently with a spatula to extract as much liquid as possible. You’ll notice a creamy, milky liquid flowing through; this is your horchata base. Discard the leftover rice solids, as they won’t contribute to the pudding's texture. This straining step is essential to achieving a smooth horchata that will flavor your pudding." },
+      { step: 4, text: "In a medium saucepan, combine the strained horchata with 1/4 cup of chia seeds and 2 tablespoons of maple syrup or agave, whisking thoroughly to prevent clumping. Allow the mixture to sit for 5 minutes, then whisk again to ensure the chia seeds are evenly distributed. After this initial resting period, you should notice the mixture begin to thicken; this is a sign that the chia seeds are absorbing liquid and expanding, which is vital for creating the pudding texture." },
+      { step: 5, text: "Cover the bowl or transfer the mixture to individual serving cups, and refrigerate for at least 2 hours, or ideally overnight. This chilling time allows the chia seeds to fully expand and gel, transforming the liquid into a luscious pudding. When ready to serve, the pudding should be thick enough to hold its shape but still creamy; look for a custard-like consistency. Finish with a sprinkle of cinnamon or a drizzle of honey before serving for added flavor." }
     ],
     chefNotes: "Store-bought horchata varies wildly in sweetness. Taste yours before adding any maple syrup—you may not need it at all.",
     pairing: "Black coffee",
@@ -866,11 +866,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "sesame oil" }
     ],
     method: [
-      { step: 1, text: "Rinse the 1 cup cooked white rice briefly in a fine-mesh strainer under cold water, then drain it thoroughly before cooking." },
-      { step: 2, text: "Bring the 2 cups dashi broth or light chicken broth and 1 tbsp soy sauce to a gentle boil in a medium saucepan over medium-high heat." },
-      { step: 3, text: "Add the drained 1 cup cooked white rice, reduce the heat to low, and simmer for 3–5 minutes until the rice is very soft and hot." },
-      { step: 4, text: "Turn off the heat and stir the 1 tsp sesame oil into the hot rice soup, keeping the surface gently steaming but not boiling." },
-      { step: 5, text: "Divide the soup between bowls and garnish each serving with the 2 tbsp sliced scallions; serve immediately while the rice is hot." }
+      { step: 1, text: "Begin by rinsing 1 cup of short-grain rice under cold water in a fine-mesh sieve until the water runs clear. This step is crucial as it removes excess starch, preventing the rice from becoming gummy during cooking. Allow the rice to drain thoroughly for a few minutes, as any residual water can affect the cooking time and texture." },
+      { step: 2, text: "In a medium saucepan, combine the rinsed rice with 3 cups of dashi stock. Place the pan over medium heat and bring the mixture to a gentle boil. Keep an eye on it; you want to see small bubbles forming, not a rolling boil, as this ensures even cooking. Once boiling, reduce the heat to low, cover the pan with a tight-fitting lid, and simmer for about 15 minutes." },
+      { step: 3, text: "After 15 minutes, turn off the heat but do not lift the lid. Let the rice steam in the residual heat for an additional 10 minutes. This resting period allows the grains to absorb any remaining moisture and become fluffy. You’ll know it’s ready when you see steam escaping slightly from under the lid." },
+      { step: 4, text: "While the rice is resting, prepare the tamago (egg mixture). In a bowl, whisk together 2 large eggs, 1 tbsp soy sauce, and a pinch of salt until the mixture is fully combined and slightly frothy. The whisking incorporates air, which will help create a light, fluffy texture in the final dish. Set this aside to let the flavors meld." },
+      { step: 5, text: "Once the rice has finished steaming, gently fluff it with a rice paddle to separate the grains. Then, pour the egg mixture over the rice and fold it in gently to combine, ensuring that the rice is evenly coated. Cook this mixture over low heat for about 5 minutes, stirring occasionally until the eggs are just set but still soft, resembling a creamy risotto. Look for a glossy finish and a soft, custardy texture; remove it from the heat immediately to prevent overcooking." }
     ],
     chefNotes: "Do not boil the soup rapidly after adding the eggs, or they will break apart into hard, cloudy fragments instead of forming delicate, tender ribbons.",
     pairing: "Hot mug of roasted green tea (hojicha)",
@@ -940,11 +940,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "scallions", note: "chopped" }
     ],
     method: [
-      { step: 1, text: "Bring the 4 cups water or chicken broth to a rolling boil in a heavy 3-quart saucepan over high heat." },
-      { step: 2, text: "Slowly whisk in the 1 cup stone-ground grits, then reduce heat to low, cover, and simmer for 20–25 minutes." },
-      { step: 3, text: "Cook the 1/2 lb Mexican chorizo in a 10-inch skillet over medium heat for 8–10 minutes until browned and crisp." },
-      { step: 4, text: "Stir the grits every 5 minutes until thick and tender, then remove from heat and fold in the cooked 1/2 lb Mexican chorizo." },
-      { step: 5, text: "Spoon the grits into shallow bowls and top each serving with the 2 tbsp chopped scallions while the mixture is hot." }
+      { step: 1, text: "Begin by bringing 4 cups of water to a rolling boil in a medium saucepan over high heat. The rapid boiling ensures that the grits will cook evenly once added. As soon as you see large bubbles breaking the surface, it’s the perfect time to proceed. This initial boiling stage is crucial for achieving a creamy texture in the final dish." },
+      { step: 2, text: "Once the water is boiling, gradually whisk in 1 cup of coarse corn grits. This technique prevents clumping and helps to incorporate the grits smoothly into the water. Continue whisking for about 1 minute until the mixture is fully combined and begins to thicken slightly. This thickening signifies that the grits are absorbing water, which is essential for them to cook properly." },
+      { step: 3, text: "Reduce the heat to low and cover the saucepan, allowing the grits to simmer gently for 20 to 25 minutes. Stir the grits every 5 minutes to prevent them from sticking to the bottom of the pan; they should become creamy and tender. You’ll know it’s time to stop cooking when the texture is smooth and the grits have absorbed most of the water, with only a slight residual liquid remaining." },
+      { step: 4, text: "While the grits are cooking, heat a skillet over medium heat and add 1 tablespoon of olive oil, allowing it to shimmer. Once the oil is hot, add 8 ounces of chorizo, breaking it apart with a spatula as it cooks. Sauté the chorizo for about 5 to 7 minutes, or until it is crispy and browned; the rendered fat will provide flavor that melds beautifully with the creamy grits." },
+      { step: 5, text: "After the chorizo is cooked, carefully fold in 2 tablespoons of miso paste into the grits, ensuring it is fully incorporated. The miso will bring a savory depth and umami flavor to the dish, enriching the overall taste. Stir until you can no longer see any lumps of miso and the grits are a uniform color; this should take about 1 minute. The final dish should be creamy and inviting, ready for serving." }
     ],
     chefNotes: "Stone-ground grits take longer but offer a far superior, rustic texture. Never stir miso into boiling grits; always add it off the heat.",
     pairing: "Sweet iced tea",
@@ -977,11 +977,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "sesame oil" }
     ],
     method: [
-      { step: 1, text: "Place the 1.5 cups cooked short-grain brown rice (escabeche style) in a 2-quart saucepan over medium heat." },
-      { step: 2, text: "Warm the 1.5 cups cooked short-grain brown rice for 10–15 minutes, stirring occasionally, until steaming and cohesive." },
-      { step: 3, text: "Reduce the heat to low and continue warming the 1.5 cups cooked short-grain brown rice until visibly softened." },
-      { step: 4, text: "Divide the hot 1.5 cups cooked short-grain brown rice between bowls, then sprinkle with the 1 tbsp toasted sesame seeds." },
-      { step: 5, text: "Finish each bowl with the 1 tsp sesame oil, dividing it evenly, and serve immediately while the rice is steaming." }
+      { step: 1, text: "Begin by rinsing 1 cup of brown rice under cold running water in a fine-mesh strainer. This process helps to remove excess starch, which can cause the porridge to become gummy. You should see the water running clear after about a minute of rinsing. Once rinsed, drain the rice well and set it aside." },
+      { step: 2, text: "In a large pot, combine the rinsed brown rice with 5 cups of water or vegetable broth. This liquid will help impart flavor and create a luscious, creamy texture as the rice cooks. Stir the mixture gently to ensure even distribution, then set the pot over medium-high heat. Bring it to a gentle boil, paying attention to avoid any rapid bubbling that can cause splatter." },
+      { step: 3, text: "Once boiling, reduce the heat to low to maintain a gentle simmer, cover the pot with a lid, and let it cook for about 40 to 45 minutes. You’ll notice the rice slowly softening and absorbing the liquid, creating a porridge-like consistency. Stir occasionally to prevent the rice from sticking to the bottom, and check for doneness; the grains should be tender and slightly swollen when finished." },
+      { step: 4, text: "After the rice has reached the desired texture, remove the pot from the heat and stir in 2 tablespoons of miso paste until it is fully dissolved. Use a whisk or a fork to blend the miso smoothly into the porridge; this will enhance the umami flavor. The porridge should be creamy and well-seasoned; taste and adjust with more miso if necessary, but be mindful of the saltiness." },
+      { step: 5, text: "Serve the brown rice porridge hot, garnished with your choice of toppings such as sliced scallions, sesame seeds, or a drizzle of sesame oil. The contrasting textures and flavors will elevate your dish, making it hearty and satisfying. Enjoy it right away, as the porridge can thicken upon standing; if needed, add a splash of water to loosen it when reheating." }
     ],
     chefNotes: "Mexican escabeche (pickled jalapeños, carrots, onions) provides the perfect fiery, acidic counterpoint to the deep, earthy red miso.",
     pairing: "Hot roasted barley tea",
@@ -1476,11 +1476,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1/2", unit: "cup", item: "dulce de leche", note: "slightly warmed" }
     ],
     method: [
-      { step: 1, text: "Review the listed 1 cup all-purpose flour before cooking, because flour alone cannot form a pourable crepe batter." },
-      { step: 2, text: "Do not blend the 1 cup all-purpose flour for 15 seconds, since dry flour cannot become smooth or frothy without listed liquid." },
-      { step: 3, text: "Do not refrigerate the 1 cup all-purpose flour for 30 minutes, because chilling dry flour will not create usable crepe batter." },
-      { step: 4, text: "Do not heat a 10-inch nonstick skillet over medium-low heat for crepes until additional listed ingredients make the 1 cup flour pourable." },
-      { step: 5, text: "Do not cook the 1 cup all-purpose flour for 1 minute or 30 seconds, because dry flour will scorch rather than form a flexible crepe." }
+      { step: 1, text: "Begin by preparing the green tea crepe batter. In a mixing bowl, whisk together 1 cup of all-purpose flour, 2 tbsp of matcha green tea powder, 1/4 tsp of salt, and 2 large eggs until combined. Gradually pour in 1 1/2 cups of milk, whisking continuously to avoid lumps. The batter should be smooth and slightly runny, resembling heavy cream. Allow it to rest for at least 30 minutes; this helps the gluten relax, resulting in tender crepes." },
+      { step: 2, text: "While the batter is resting, heat a non-stick skillet or crepe pan over medium heat until it is hot but not smoking. Lightly brush the surface with a little melted butter; this adds flavor and helps prevent sticking. Pour in about 1/4 cup of the crepe batter, quickly tilting the pan in a circular motion to evenly coat the bottom. Look for a thin layer that covers the pan; it should be slightly translucent but not overly wet. Cook for about 1-2 minutes until the edges begin to lift and the surface appears set." },
+      { step: 3, text: "Using a spatula, gently lift the edge of the crepe to check the color; it should be a light golden brown. Carefully flip the crepe over, cooking for another 1 minute on the other side until it's also lightly golden and cooked through. Transfer the finished crepe to a plate and repeat the process with the remaining batter, stacking the crepes as you go. Keep them warm by covering with a clean kitchen towel; this prevents them from drying out." },
+      { step: 4, text: "Now, prepare the dulce de leche sauce. In a small saucepan, combine 1 can (14 oz) of sweetened condensed milk with 1/2 tsp of vanilla extract over low heat. Stir continuously as the mixture warms up; you want it to slowly thicken and develop a rich caramel color, which should take about 10-15 minutes. Pay attention to its texture; it should become smooth and pourable, not too thick. Remove from heat once it reaches a deep golden brown, as this indicates it is ready." },
+      { step: 5, text: "To assemble the crepes, take one green tea crepe and place it on a serving plate. Spoon a generous amount of the warm dulce de leche sauce down the center of the crepe, then fold it in half and then in half again to form a triangle. Drizzle more dulce de leche over the top for added sweetness and presentation. Garnish with a sprinkle of powdered sugar or a few fresh berries if desired; this not only enhances the flavor but also adds a vibrant touch to your dish." }
     ],
     chefNotes: "Resting crepe batter allows the bubbles to subside so your crepes won't tear, and hydrates the flour fully. Warmed dulce de leche spreads without tearing the delicate crepe.",
     pairing: "Hot Earl Grey tea",
@@ -1515,11 +1515,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "Tajín seasoning" }
     ],
     method: [
-      { step: 1, text: "Confirm that the listed ingredients are only 2 cups mochiko, 2 tsp baking powder, and 1 tsp Tajín seasoning." },
-      { step: 2, text: "Whisk the 2 cups mochiko, 2 tsp baking powder, and 1 tsp Tajín seasoning in a large bowl until evenly combined." },
-      { step: 3, text: "Set the mixture aside, noting that the listed ingredients contain no liquid or binder for forming a waffle batter." },
-      { step: 4, text: "Heat a waffle iron to medium-high, about 375°F, for 5 minutes until fully preheated and its indicator light signals readiness." },
-      { step: 5, text: "Do not cook the 2 cups mochiko mixture as written, because it cannot form a batter without the omitted liquid and binding ingredients." }
+      { step: 1, text: "Begin by preheating your waffle iron according to the manufacturer's instructions. This is crucial as a properly heated waffle iron ensures even cooking and a crispy exterior. You want to hear a sizzling sound when you ladle in the batter, indicating that it’s ready for action." },
+      { step: 2, text: "In a medium mixing bowl, combine 1 cup of sweet rice flour, also known as mochiko, with 2 tablespoons of granulated sugar and a pinch of salt. Whisk these dry ingredients thoroughly until they’re well blended to avoid clumps; this will create a smooth batter. The sugar will not only sweeten the waffles but also help them caramelize during cooking." },
+      { step: 3, text: "In a separate bowl, whisk together 1/2 cup of milk, 1/4 cup of melted butter, and 1 large egg until the mixture is homogenous and creamy. The melted butter should be warm but not hot, as a hot mixture could cook the egg prematurely. This wet mixture will bring moisture and richness to your batter." },
+      { step: 4, text: "Gradually pour the wet mixture into the dry ingredients, stirring gently with a spatula until just combined. Be careful not to overmix — a few lumps are perfectly fine. This gentle folding helps to maintain the mochi’s chewy texture, which is the hallmark of this waffle." },
+      { step: 5, text: "Lightly grease the preheated waffle iron with cooking spray or a brush of oil to prevent sticking. Pour enough batter into the iron to just cover the surface, typically about 1/2 to 3/4 cup, depending on the size of your waffle iron. Close the lid and cook until the steam subsides and the exterior is golden brown, usually around 5-7 minutes. This indicates that the batter has set and the sugars have caramelized for that perfect crisp." }
     ],
     chefNotes: "Mochiko waffles take slightly longer to cook and crisp up than wheat waffles. Leave them in the iron until steam stops escaping completely.",
     pairing: "Iced green tea",
@@ -1553,11 +1553,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "toasted coconut flakes" }
     ],
     method: [
-      { step: 1, text: "Place the 4 bread slices in a single layer on a plate, and whisk the 2 large eggs with the 2 tbsp condensed milk." },
-      { step: 2, text: "Whisk the 2 large eggs and 2 tbsp sweetened condensed milk for 1 minute until smooth and lightly thickened." },
-      { step: 3, text: "Soak each of the 4 bread slices in the egg mixture for 15 seconds per side, coating both surfaces without tearing the bread." },
-      { step: 4, text: "Heat a 12-inch nonstick skillet over medium-low heat, then cook the 4 soaked bread slices for 3–4 minutes per side until golden." },
-      { step: 5, text: "Transfer the 4 cooked bread slices to a plate and scatter the 1 tbsp toasted coconut flakes over them while they are warm." }
+      { step: 1, text: "Begin by preparing the pandan custard. In a mixing bowl, vigorously whisk together 4 large eggs and 1 cup of whole milk until the mixture is smooth and homogenous. Look for a uniform pale yellow color, indicating that the eggs are fully blended. This step is crucial as it ensures that the custard will coat the bread evenly, resulting in a creamy texture." },
+      { step: 2, text: "Add 3 tablespoons of sugar and 2 tablespoons of pandan extract to the egg and milk mixture. Continue to whisk until the sugar is fully dissolved, which you can confirm by tasting a small spoonful; it should be well-sweetened without any graininess. This infusion of flavor is essential as it will give your French toast its signature aromatic profile." },
+      { step: 3, text: "Preheat a non-stick skillet or griddle over medium heat and add 1 tablespoon of unsalted butter, allowing it to melt and foam. Swirl the pan to ensure an even coating of butter, which will help prevent sticking and create a beautifully golden crust. Once the bubbling subsides and the butter takes on a nutty aroma, it’s time to dip the bread." },
+      { step: 4, text: "Take 4 slices of thick-cut brioche or challah and immerse each slice in the pandan custard for about 30 seconds per side, letting them soak to absorb the flavors. You should see the bread become slightly saturated but not overly mushy, which indicates that it will cook nicely without falling apart. This step is crucial for achieving a rich, custardy interior." },
+      { step: 5, text: "Carefully place the soaked bread slices onto the preheated skillet, ensuring they do not touch each other, and cook for about 3-4 minutes per side. Watch for a golden-brown crust to form, which signals that the sugars are caramelizing, adding depth and flavor. Flip the slices when the underside is firm and crisp, and cook until both sides are evenly browned and the center is set." }
     ],
     chefNotes: "Pandan extract is potent and highly pigmented. A little goes a long way. Find it in the baking or Southeast Asian aisle of good grocers.",
     pairing: "Thai iced tea",
@@ -1665,11 +1665,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "sesame seeds" }
     ],
     method: [
-      { step: 1, text: "Preheat a toaster oven to 400°F (200°C), and arrange the 2 slices thick milk bread or brioche on a baking sheet." },
-      { step: 2, text: "Toast the 2 slices thick milk bread or brioche for 5–7 minutes, turning once, until the surfaces are golden and crisp." },
-      { step: 3, text: "Spread the 1 tbsp white miso paste evenly over the 2 hot toasted bread slices, reaching close to each edge." },
-      { step: 4, text: "Drizzle the 1 tbsp honey in thin lines over the 1 tbsp white miso paste while the toast remains hot." },
-      { step: 5, text: "Sprinkle the 1 tsp sesame seeds over the 2 topped toast slices, and serve immediately while the surfaces glisten." }
+      { step: 1, text: "Begin by preheating your oven to 400°F (200°C). This temperature ensures a balanced heat that will turn the bread crispy without burning it. A properly preheated oven helps achieve the ideal texture of toast, allowing for even browning and a delightful crunch. Wait until the oven reaches the desired temperature before proceeding." },
+      { step: 2, text: "While the oven heats up, take 4 slices of your preferred bread — sourdough or whole grain works beautifully — and lay them out on a baking sheet. Ensure they are spaced evenly to allow for proper air circulation, which promotes even toasting. The bread should feel slightly firm to the touch but not hard; this indicates it’s fresh and ready for toasting." },
+      { step: 3, text: "In a small mixing bowl, combine 2 tablespoons of softened unsalted butter with 2 tablespoons of miso paste. Use a whisk to blend the ingredients until smooth and creamy, ensuring there are no lumps. The miso will give the butter a rich umami flavor, enhancing the overall taste of the toast. Stop mixing once the mixture is fully incorporated and appears uniform." },
+      { step: 4, text: "Spread the miso butter mixture generously over one side of each slice of bread using a butter knife or an offset spatula. Aim for an even layer that covers the entire surface, as this will help the toast develop a golden-brown crust. The butter should glisten slightly, indicating a good coat; avoid leaving any dry spots. Once all slices are coated, they are ready for the oven." },
+      { step: 5, text: "Place the baking sheet in the preheated oven and toast the bread for about 8-10 minutes, or until it reaches a deep golden-brown color. Keep an eye on the toast during the final minutes to prevent burning; the edges should crisp up nicely, and the miso butter will begin to bubble slightly. When the toast is golden and aromatic, remove it from the oven, allowing it to cool for a minute before serving." }
     ],
     chefNotes: "The butter must be soft room temperature before mixing, or the miso will clump and you'll get aggressively salty bites.",
     pairing: "Black coffee",
@@ -1774,11 +1774,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "flaky sea salt" }
     ],
     method: [
-      { step: 1, text: "Let the 1/2 cup whole milk ricotta cheese stand at room temperature for 15 minutes until softened and easy to stir." },
-      { step: 2, text: "Transfer the 1/2 cup whole milk ricotta cheese to a small bowl and add the 1 tsp flaky sea salt." },
-      { step: 3, text: "Whip the 1/2 cup whole milk ricotta cheese and 1 tsp flaky sea salt with a fork for 1–2 minutes until fluffy." },
-      { step: 4, text: "Scrape the bowl and whip the 1/2 cup whole milk ricotta cheese for 30 seconds more until no dry salt remains visible." },
-      { step: 5, text: "Rest the 1/2 cup whole milk ricotta cheese mixture for 5 minutes, then serve when it looks smooth, thick, and spreadable." }
+      { step: 1, text: "Begin by preheating your oven to 400°F (200°C). This temperature will ensure that your bread toasts evenly and develops a beautiful golden crust. A properly preheated oven is essential for achieving that perfect crunch on the outside while keeping the inside soft and airy. Allow the oven to fully reach temperature before you proceed." },
+      { step: 2, text: "While the oven is heating, take 1 cup of ricotta cheese and place it in a mixing bowl. Use a fork to whisk the ricotta vigorously until it becomes smooth and creamy, free of lumps. This step not only enhances the texture but also allows for better flavor integration when you mix in the other ingredients. Aim for a silky consistency that spreads easily on toasted bread." },
+      { step: 3, text: "Next, whisk in 2 tablespoons of miso paste into the ricotta until fully incorporated. Pay attention to the color change as the miso blends in; it should take on a light beige hue and have a slightly salty aroma. This miso adds depth and umami to the ricotta, transforming it into a savory spread that complements the sweetness of your honey. Stop mixing when the paste is fully dissolved and no streaks remain." },
+      { step: 4, text: "Slice your favorite bread — sourdough or whole grain works beautifully — into 1-inch thick slices. Arrange the slices on a baking sheet lined with parchment paper. Brush each slice lightly with olive oil to promote even browning. Look for a glossy sheen on the surface of the bread, which indicates that the oil is well-distributed. Bake the bread in the preheated oven for about 8–10 minutes, or until it is golden brown and crispy." },
+      { step: 5, text: "Once the bread is toasted, remove it from the oven and let it cool slightly for a minute. Spread a generous layer of the miso-ricotta mixture over each slice, using a spatula for an even application. Drizzle with honey to add a touch of sweetness; you should see it glisten on top, creating a beautiful contrast with the creamy spread. Serve immediately while the toast is warm, allowing the flavors to meld together beautifully." }
     ],
     chefNotes: "If you don't have hot honey, gently warm regular honey with a pinch of red pepper flakes for 5 minutes.",
     pairing: "Cortado or flat white",
@@ -1811,11 +1811,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "lime juice" }
     ],
     method: [
-      { step: 1, text: "Preheat a toaster oven to 400°F (200°C) and place the 2 slices multigrain bread on a small baking sheet." },
-      { step: 2, text: "Toast the 2 slices multigrain bread for 5–7 minutes, turning once, until firm, crisp, and lightly browned at the edges." },
-      { step: 3, text: "Whisk the 1/2 tsp matcha powder, 1 tsp olive oil, and 1 tsp lime juice in a small bowl for 30 seconds." },
-      { step: 4, text: "Cool the 2 slices multigrain bread for 1 minute, ensuring the surfaces feel crisp but are not hot enough to thin the drizzle." },
-      { step: 5, text: "Drizzle the matcha mixture over the 2 slices multigrain bread and serve when the coating looks smooth and evenly distributed." }
+      { step: 1, text: "Begin by selecting ripe avocados, as their creaminess is crucial for texture. Cut the avocados in half, remove the pit, and scoop the flesh into a mixing bowl. Use a fork to mash the avocado until you achieve a smooth consistency, with just a few small chunks remaining for texture. This method ensures the toast will have a rich, buttery flavor that perfectly complements the other ingredients." },
+      { step: 2, text: "Add 1 tbsp of matcha powder to the mashed avocado and sprinkle in a pinch of salt. Use a whisk to combine the ingredients thoroughly, ensuring that the vibrant green matcha is evenly distributed throughout the avocado mixture. The whisking process not only integrates the flavors but also helps to aerate the mixture, creating a lighter texture. Stop once you see a uniform green color without clumps of matcha." },
+      { step: 3, text: "Toast your favorite bread — a hearty sourdough or multigrain works wonderfully — in a toaster or under a broiler until golden brown and crisp. Keep an eye on the bread to prevent burning; it should be toasted until it feels firm and has a nice crunch when pressed. This step adds a satisfying contrast to the creamy avocado spread and enhances the overall flavor profile." },
+      { step: 4, text: "Spread the matcha avocado mixture generously over each slice of toasted bread using a spatula or the back of a spoon. Aim for an even layer that covers the entire surface, allowing the vibrant green color to show through. This not only makes it visually appealing but also ensures each bite is packed with flavor and creaminess. Stop when you’ve used all of the mixture, leaving no toast bare." },
+      { step: 5, text: "Finally, crumble fresh cotija cheese over the top of each avocado toast, using about 2-3 tbsp in total depending on your preference. The cotija adds a salty, tangy element that balances the richness of the avocado and the earthiness of the matcha. Finish with a light drizzle of olive oil and a sprinkle of red pepper flakes for an extra kick. Serve immediately to enjoy the contrast of warm toast and cool toppings." }
     ],
     chefNotes: "The matcha must be dusted through a sieve, otherwise you will get bitter, concentrated clumps of green tea on your toast.",
     pairing: "Agua de Jamaica",
@@ -1884,11 +1884,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "agave syrup or honey" }
     ],
     method: [
-      { step: 1, text: "Cut 2 tbsp creamy peanut butter (sliced) into small pieces and place them in a heatproof bowl; keep the pieces separate." },
-      { step: 2, text: "Add 1 tsp agave syrup or honey to 2 tbsp creamy peanut butter and stir for 30 seconds until glossy and uniform." },
-      { step: 3, text: "Transfer the mixture of 2 tbsp creamy peanut butter and 1 tsp agave syrup or honey to a small skillet." },
-      { step: 4, text: "Warm the skillet over low heat, about 120°C, for 1 minute; stir until 2 tbsp creamy peanut butter looks soft and glossy." },
-      { step: 5, text: "Remove from heat and cool 2 tbsp creamy peanut butter with 1 tsp agave syrup or honey for 3 minutes until spreadable." }
+      { step: 1, text: "Start by gathering your ingredients: 2 tbsp miso paste, 2 tbsp creamy peanut butter, and a ripe banana. The banana should yield slightly to gentle pressure when squeezed, indicating it is perfectly ripe and sweet. This combination will create a delightful balance of umami and sweetness, enhancing the toast's flavor profile." },
+      { step: 2, text: "In a small bowl, whisk together the 2 tbsp miso paste and the 2 tbsp creamy peanut butter until smooth and well combined. Use a rubber spatula to scrape down the sides of the bowl, ensuring no lumps remain. The mixture should have a creamy consistency, with a slightly glossy surface — this indicates that the ingredients are fully integrated and ready for spreading." },
+      { step: 3, text: "Toast 2 slices of your preferred bread until they are golden brown and crisp. Use a toaster or a skillet over medium heat, flipping the bread halfway through to ensure even toasting. The bread should have a nice crunch when you tap it lightly; this texture will provide a sturdy base for the toppings and prevent sogginess." },
+      { step: 4, text: "Once the bread is toasted, immediately spread the miso-peanut butter mixture generously over each slice, using a butter knife or spatula. The heat from the toast will help the spread melt slightly, enhancing the flavors as they mingle. Aim for an even layer that reaches the edges of the toast to ensure every bite is delicious." },
+      { step: 5, text: "Slice the ripe banana into thin rounds, aiming for about 1/4-inch thickness for optimal texture and flavor release. Arrange the banana slices on top of the miso-peanut butter spread in an overlapping pattern for visual appeal. The banana should be bright yellow with a few brown speckles, indicating it's sweet and ready to complement the savory spread." }
     ],
     chefNotes: "Use a natural peanut butter without added sugar; the miso and the banana provide all the necessary flavor dynamics.",
     pairing: "Cold glass of oat milk",
@@ -1958,11 +1958,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "pinch", item: "flaky sea salt" }
     ],
     method: [
-      { step: 1, text: "Preheat a toaster oven to 400°F (200°C), and place the 1 slice thick multigrain bread on the rack." },
-      { step: 2, text: "Toast the 1 slice thick multigrain bread for 5–7 minutes, turning once, until both sides are deeply golden and crisp." },
-      { step: 3, text: "Remove the 1 slice thick multigrain bread when the surface feels firm and the edges are browned without burning." },
-      { step: 4, text: "Sprinkle the 1 pinch flaky sea salt evenly over the hot 1 slice thick multigrain bread." },
-      { step: 5, text: "Serve the 1 slice thick multigrain bread immediately, while the crust remains crisp and the center is still warm." }
+      { step: 1, text: "Begin by selecting ripe avocados; look for those that yield slightly to gentle pressure but are not overly soft. Cut the avocado in half lengthwise, carefully avoiding the pit, and use a spoon to scoop the flesh into a mixing bowl. This technique ensures you get the creamy interior without any skin. Discard the skin and pit, as they are not edible." },
+      { step: 2, text: "Using a fork, mash the avocado to your desired consistency; aim for a mix of smooth and chunky textures. The goal is to break down the avocado while still leaving some small pieces for added texture. You should finish with a vibrant green mixture that looks creamy and inviting, which is crucial for a satisfying toast." },
+      { step: 3, text: "Season the mashed avocado with 1 tbsp of sesame oil, a pinch of sea salt, and a squeeze of fresh lemon juice to brighten the flavors. The oil adds richness, while the salt enhances the natural taste of the avocado; the lemon juice prevents browning and adds a zesty kick. Stir until well combined, and taste to adjust the seasoning — it should be flavorful and refreshing." },
+      { step: 4, text: "While you prepare the avocado, toast 2 slices of your favorite bread until they are golden brown and crispy. A thicker slice of sourdough or whole grain works well, as it provides a sturdy base. The toast should feel firm to the touch and have a pleasant crunch when you bite into it, which is essential for supporting the creamy avocado." },
+      { step: 5, text: "Spread the mashed avocado generously over the toasted bread, ensuring an even layer that reaches all the edges. This presentation not only looks appealing but also ensures every bite is delicious. Top with a sprinkle of sesame seeds for added crunch and nutty flavor, and enjoy your smashed avocado sesame toast immediately while the contrast of warm bread and cool avocado is at its best." }
     ],
     chefNotes: "Make sure you are using 'toasted' sesame oil, which is dark brown and highly aromatic, not the pale, neutral sesame oil used for frying.",
     pairing: "Matcha iced tea",
@@ -2145,13 +2145,13 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "neutral oil" }
     ],
     method: [
-      { step: 1, text: "Stir 2 tbsp red miso paste, already melted, until smooth and loose enough to coat the cooked potatoes evenly." },
-      { step: 2, text: "Heat 2 tbsp neutral oil in a large skillet over medium-high heat, about 375°F, then add 2 cups diced russet potatoes." },
-      { step: 3, text: "Cook the 2 cups potatoes for 12–15 minutes, stirring every few minutes, until crisp, golden brown, and tender inside." },
-      { step: 4, text: "Remove the skillet from the heat and toss the hot potatoes with 2 tbsp melted red miso paste until evenly coated." },
-      { step: 5, text: "Cook 4 large eggs in the skillet over medium-low heat, stirring for 3–4 minutes, until softly set with slightly glossy curds." },
-      { step: 6, text: "Warm 2 large flour tortillas in the skillet for 20 seconds per side, then fill with 1/2 cup Oaxaca cheese, the potatoes, and eggs." },
-      { step: 7, text: "Fold and roll both tortillas tightly, then toast seam-side down in the skillet over medium heat for 2 minutes until sealed and golden." }
+      { step: 1, text: "Select 2 medium-sized potatoes and rinse them thoroughly under cold water to remove any dirt and debris. Using a vegetable peeler, carefully peel the skin away, ensuring you remove any blemishes or eyes from the potato. Cutting away imperfections is crucial for achieving a smooth texture in your burrito filling." },
+      { step: 2, text: "Chop the peeled potatoes into 1-inch cubes using a sharp chef's knife. Aim for uniformity in size to ensure even cooking; larger pieces will take longer to soften. Transfer the chopped potatoes to a large mixing bowl, and sprinkle with 1/2 teaspoon of salt, tossing them gently to distribute the salt evenly — this will help draw out moisture and enhance flavor." },
+      { step: 3, text: "Fill a medium-sized pot with enough water to cover the potato cubes by at least an inch, then bring it to a rolling boil over high heat. Carefully add the cubed potatoes to the boiling water, ensuring they are fully submerged. Boil for about 10-15 minutes, or until a fork easily pierces through a potato cube; this indicates they are tender enough to mash." },
+      { step: 4, text: "Once the potatoes are tender, drain them in a colander and allow them to steam dry for a minute or two. This step is vital as it prevents excess moisture from making the filling watery. Transfer the drained potatoes back to the pot and let them cool slightly." },
+      { step: 5, text: "In a small bowl, combine 2 tablespoons of miso paste with 1 tablespoon of olive oil and the juice of half a lime. Use a whisk to blend the ingredients into a smooth, creamy mixture. The miso will add a rich umami flavor, while the lime juice brightens it up; this balance is essential for an outstanding filling." },
+      { step: 6, text: "Add the miso mixture to the warm potatoes and gently fold them together using a spatula. Be careful not to mash the potatoes too much; you want to retain some texture for a satisfying bite. Taste the mixture and adjust seasoning with more salt or lime juice if necessary, as this will enhance the overall flavor profile." },
+      { step: 7, text: "Prepare your tortillas by heating them one at a time in a dry skillet over medium heat for about 30 seconds on each side. Look for the edges to puff slightly and the surface to become warm and pliable. This step is important to ensure that your tortillas will wrap easily around the filling without tearing." }
     ],
     chefNotes: "Toss the potatoes in the miso butter completely off the heat. If the miso hits the hot pan directly, it will burn rapidly and taste bitter.",
     pairing: "Black iced coffee",
@@ -2818,11 +2818,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "pinch", item: "cayenne pepper" }
     ],
     method: [
-      { step: 1, text: "Heat the 2 cups whole milk in a small saucepan over medium heat for 4–5 minutes until steaming but not boiling." },
-      { step: 2, text: "Whisk the 1 tbsp cocoa powder and 1 pinch cayenne pepper into the steaming 2 cups whole milk until smooth." },
-      { step: 3, text: "Continue whisking the 2 cups whole milk over medium-low heat for 2 minutes until fully blended and lightly frothy." },
-      { step: 4, text: "Remove the saucepan from heat and whisk the 1 tsp white miso paste with 2 tbsp of the hot milk in a small bowl." },
-      { step: 5, text: "Return the miso mixture to the 2 cups whole milk, whisk for 30 seconds, and serve immediately while hot." }
+      { step: 1, text: "Begin by measuring out 2 cups of milk of your choice — whole, almond, or oat all work well. Pour the milk into a medium saucepan and place it over medium heat. Stir gently as the milk warms, watching closely for small bubbles forming along the edges. This indicates that the milk is heating but not boiling; you want it hot enough to dissolve the chocolate but not so hot that it scalds." },
+      { step: 2, text: "Once the milk is steaming and just below a simmer, whisk in 2 tbsp of miso paste until fully dissolved. This will create a rich, umami flavor that enhances the sweetness of the chocolate. Use a whisk to ensure there are no lumps — the mixture should be smooth and slightly thickened. If you notice any bits of miso remaining, continue whisking until the texture is creamy." },
+      { step: 3, text: "Next, add 4 oz of finely chopped dark chocolate to the saucepan. Stir continuously with a spatula or whisk as the chocolate begins to melt, ensuring it doesn't stick to the bottom of the pan. You’ll know it’s ready when the mixture is uniformly glossy and no chocolate pieces remain visible. This step is crucial for achieving a smooth hot chocolate." },
+      { step: 4, text: "Once the chocolate is fully incorporated, sweeten your hot chocolate by adding 2 tbsp of maple syrup or sugar, adjusting to your taste. Stir well to combine, and allow the mixture to simmer for an additional 2–3 minutes while continuing to stir gently. This not only melds the flavors but also enhances the overall richness. Look for a velvety consistency that coats the back of a spoon." },
+      { step: 5, text: "Finally, remove the saucepan from the heat and ladle your miso hot chocolate into pre-warmed mugs. For an elegant touch, top with whipped cream or a sprinkle of cocoa powder. Take a moment to admire the glossy surface and rich color before serving. Enjoy this unique combination of flavors, as the miso adds an intriguing depth to the comforting chocolate." }
     ],
     chefNotes: "Mexican chocolate discs already contain sugar and cinnamon. If using standard dark chocolate, add 2 tablespoons of sugar and 1/2 teaspoon of cinnamon.",
     pairing: "Churro French Toast",
@@ -2893,11 +2893,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "scallions", note: "chopped" }
     ],
     method: [
-      { step: 1, text: "Pour the 2 cups water into a small saucepan and bring it to a full boil over high heat." },
-      { step: 2, text: "Add the 1 pack instant ramen noodles to the boiling 2 cups water, discarding the flavor packet." },
-      { step: 3, text: "Cook the 1 pack instant ramen noodles for 3 minutes, stirring once, until tender but still slightly springy." },
-      { step: 4, text: "Transfer the cooked 1 pack instant ramen noodles and all the 2 cups water to a deep serving bowl." },
-      { step: 5, text: "Garnish the ramen with the 2 tbsp scallions, chopped, and serve immediately while the broth is visibly steaming." }
+      { step: 1, text: "Begin by bringing 4 cups of water to a gentle boil in a large pot over medium-high heat. Watch for small bubbles forming on the bottom and sides of the pot, indicating that the water is hot enough. This is crucial, as adding the ramen to water that isn't boiling will result in a mushy texture. Once the water is at a rolling boil, you’re ready to proceed." },
+      { step: 2, text: "Carefully add the two packs of instant ramen noodles to the boiling water. Use a pair of chopsticks or a fork to gently stir the noodles, ensuring they are fully submerged and not clumping together. You want the noodles to cook evenly, which typically takes about 3-4 minutes. Pay attention to the noodles; they should soften and become slightly translucent but still retain a firm bite, known as \"al dente.\"" },
+      { step: 3, text: "While the noodles are cooking, prepare the miso broth by whisking together 2 tablespoons of miso paste and 2 cups of the reserved noodle cooking water in a separate bowl. This technique helps dissolve the miso paste evenly, creating a smooth and flavorful broth. The color should turn golden and creamy as you whisk; this indicates that the miso is well incorporated. If you see any lumps, keep whisking until the mixture is silky." },
+      { step: 4, text: "Once the noodles are cooked, carefully drain them in a colander, shaking off excess water. Then, return the drained noodles to the pot and pour in the miso broth you prepared. Stir gently to combine, ensuring each noodle is coated with the rich broth. This step is essential for flavor; you want the noodles to absorb the umami richness of the miso. Allow the noodles to heat through for about 1-2 minutes, watching for steam rising, indicating they are ready to serve." },
+      { step: 5, text: "For the finishing touch, soft-boil two eggs by gently lowering them into a separate pot of boiling water for 6-7 minutes. After this time, plunge the eggs into an ice bath for at least 5 minutes to halt the cooking process. When ready to serve, peel the eggs and slice them in half. The whites should be set while the yolks remain luscious and slightly runny, perfect for enriching the ramen. Place the egg halves atop the ramen just before serving for an inviting presentation." }
     ],
     chefNotes: "Never boil the broth after adding the miso paste. Boiling destroys the delicate, sweet, fermented notes of the miso.",
     pairing: "Hot green tea",
@@ -2966,11 +2966,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "scallions", note: "chopped" }
     ],
     method: [
-      { step: 1, text: "Wrap the 2 cups peeled, shredded russet potatoes in a clean towel and wring firmly until the shreds feel nearly dry." },
-      { step: 2, text: "Toss the dried 2 cups shredded russet potatoes with the 2 tbsp cornstarch until every shred is evenly coated." },
-      { step: 3, text: "Heat a 10-inch skillet over medium-high heat, add the 1 tsp sesame oil, and wait until it shimmers." },
-      { step: 4, text: "Press the coated 2 cups potatoes into thin portions and fry for 4–5 minutes per side until deeply golden and crisp." },
-      { step: 5, text: "Stir the 3 tbsp ponzu sauce with the 1 tsp sesame oil, then serve the hot hash browns with the dipping sauce." }
+      { step: 1, text: "Begin by grating 2 medium-sized russet potatoes using a box grater or a food processor fitted with a grating attachment. Aim for long, thin strands; this technique ensures that the hash browns become crispy. Transfer the grated potatoes to a clean kitchen towel, and twist it tightly to squeeze out as much excess moisture as possible. Removing this moisture is crucial for achieving that coveted crispy texture, so continue to wring until the potatoes feel relatively dry." },
+      { step: 2, text: "In a large mixing bowl, combine the drained grated potatoes with 1 tsp of salt and 1/4 tsp of black pepper. Use your hands to mix the ingredients thoroughly, ensuring that the salt is evenly distributed. This step helps season the potatoes and draws out any remaining moisture, which contributes to a better browning when cooked. Look for a homogenous mixture with no dry clumps of salt." },
+      { step: 3, text: "Heat 3 tbsp of vegetable oil in a large non-stick or cast-iron skillet over medium-high heat until the oil shimmers and flows easily across the pan. Carefully spread the potato mixture into the skillet in an even layer, pressing down gently with a spatula to form a cohesive cake. This pressing technique allows for even cooking and maximizes surface area contact with the pan, which is key for achieving a golden, crispy crust. Cook undisturbed for about 6-8 minutes; watch for the edges to turn a deep golden brown." },
+      { step: 4, text: "Once the bottom is beautifully browned, carefully flip the hash browns using a large plate or a second skillet. Slide the hash browns onto the plate, then invert the skillet over the plate, flipping them back into the pan. This technique prevents breaking and ensures even cooking on both sides. Cook the second side for an additional 5-7 minutes until it is equally golden brown and crispy; you want to see a consistent coloration." },
+      { step: 5, text: "When both sides are perfectly crisp, remove the hash browns from the skillet and drain them on a plate lined with paper towels to absorb any excess oil. While they are still hot, drizzle 2 tbsp of ponzu sauce over the top for a zesty finish. The ponzu will add a burst of umami flavor that complements the crispy potatoes beautifully, so serve them immediately while they are still warm and crispy for the best experience." }
     ],
     chefNotes: "Moisture is the enemy of a crispy hash brown. Wring the potatoes out until you think they are dry, and then wring them again.",
     pairing: "Hot green tea",
@@ -3114,12 +3114,12 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "soy sauce" }
     ],
     method: [
-      { step: 1, text: "Place the 1 cup cooked white rice in a wide, shallow bowl, keeping the grains warm and loosely piled in the center." },
-      { step: 2, text: "Mound the 1/4 cup cooked salmon, flaked into bite-size pieces, directly on top of the 1 cup cooked white rice." },
-      { step: 3, text: "Sprinkle the 1 tbsp bubu arare and 1 tbsp chopped scallions evenly over the 1/4 cup cooked salmon." },
-      { step: 4, text: "Brew the 1 cup hot green tea at 175–185°F for 3 minutes, until fragrant and clear, then keep it piping hot." },
-      { step: 5, text: "Pour the 1 cup hot green tea gently down the bowl's side until it surrounds the 1 cup cooked white rice." },
-      { step: 6, text: "Drizzle the 1 tsp soy sauce over the bowl and eat within 2 minutes, while the 1 tbsp bubu arare remains crisp." }
+      { step: 1, text: "Begin by preparing your rice. If using leftover rice, place it in a microwave-safe bowl and add a splash of water to prevent it from drying out. Cover with a damp paper towel and microwave on high for 1-2 minutes, or until heated through. The rice should be steaming hot and fluffy; this ensures the ochazuke will have a comforting texture." },
+      { step: 2, text: "While the rice heats, bring 2 cups of water to a gentle simmer in a saucepan over medium heat. Add in the 1-2 tsp of dashi powder, whisking until completely dissolved. This creates a savory broth that will infuse your ochazuke with umami flavor. Look for small bubbles gently breaking the surface; you don’t want a rolling boil as that can dissipate the delicate flavors." },
+      { step: 3, text: "Once the broth is ready, stir in the 2 tbsp of soy sauce and 1 tsp of mirin. This combination adds depth and sweetness to your broth, balancing the saltiness. Taste the broth for seasoning; it should have a rich, savory flavor with a hint of sweetness. If it tastes too salty, add a splash more water." },
+      { step: 4, text: "Now, prepare your toppings. Thinly slice the 1 green onion and chop the 1 sheet of nori into small strips. The green onion should be bright and fresh, while the nori should be crisp and dark. These toppings add texture and brightness to the dish, enhancing both the visual appeal and flavor." },
+      { step: 5, text: "To assemble your ochazuke, place a generous portion of the hot rice in a deep bowl. Carefully ladle the hot dashi broth over the rice, ensuring it is submerged but not swimming. The rice should soak up the broth slightly, creating a creamy consistency. Stop pouring once the broth reaches the top of the rice, but not overflowing." },
+      { step: 6, text: "Finally, top your ochazuke with the sliced green onions and nori strips, along with any additional toppings like grilled fish or sesame seeds. This is where you can get creative! The final dish should be visually inviting, with vibrant green onions contrasting against the dark nori. Serve immediately while hot, allowing the flavors to meld beautifully." }
     ],
     chefNotes: "Genmaicha, a green tea blended with roasted brown rice, is the traditional and best choice for this dish, enhancing the toasted flavors.",
     pairing: "None needed",
@@ -3487,13 +3487,13 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "", item: "large flour tortilla" },
     ],
     method: [
-      { step: 1, text: "Whisk the 3 large eggs with the 1 tsp mirin and 1 tsp soy sauce for 30 seconds until the mixture is uniform." },
-      { step: 2, text: "Heat an 8-inch nonstick pan over medium-low heat, pour in half the mixture made from the 3 large eggs, and cook for 1–2 minutes." },
-      { step: 3, text: "When the egg surface is almost set, spread the 1 tbsp chipotle salsa in a narrow line across the omelet." },
-      { step: 4, text: "Roll the egg toward you, push it to the far side of the pan, and add the remaining mixture from the 3 large eggs." },
-      { step: 5, text: "Cook the layered 3-egg omelet for 1–2 minutes until the new layer is nearly set, then roll it tightly around the first layer." },
-      { step: 6, text: "Warm the 1 large flour tortilla in the pan over low heat for 30 seconds per side until soft and pliable." },
-      { step: 7, text: "Slice the finished 3-egg tamagoyaki into pieces and wrap it securely in the warmed 1 large flour tortilla." }
+      { step: 1, text: "Begin by whisking together 4 large eggs in a mixing bowl until the yolks and whites are fully combined and the mixture appears slightly frothy. This aeration is crucial as it helps create a light and fluffy texture in the tamagoyaki. Look for a uniform pale yellow color without any streaks, which indicates that the eggs are well-blended." },
+      { step: 2, text: "Incorporate 1 tbsp of soy sauce, 1 tsp of sugar, and 1 tsp of chipotle sauce into the egg mixture, whisking thoroughly until the sugar dissolves completely. The addition of these ingredients not only enhances the flavor but also balances the richness of the eggs with a hint of sweetness and smokiness. You should see a smooth, cohesive mixture that is slightly glossy." },
+      { step: 3, text: "Heat a non-stick skillet over medium heat and add 1 tsp of vegetable oil, swirling it around to coat the surface evenly. Allow the oil to heat until it shimmers but does not smoke, as this indicates it is hot enough to prevent sticking. A proper temperature is essential for achieving the characteristic layers of the tamagoyaki." },
+      { step: 4, text: "Pour a small amount of the egg mixture — about 1/4 cup — into the skillet, tilting the pan to spread the eggs evenly across the surface. Cook for about 1-2 minutes, or until the edges begin to set while the center remains slightly runny. You want to see the edges puffing up but not browning; this is the perfect texture for rolling." },
+      { step: 5, text: "Using a spatula, gently lift one edge of the cooked egg and fold it over itself towards the center of the pan, creating the first layer of the tamagoyaki. Press down lightly to seal the fold, ensuring it holds its shape. This technique is key for creating the signature rolled layers, so ensure the fold is tight but not overly compressed." },
+      { step: 6, text: "Add another small amount of the egg mixture, approximately 1/4 cup, to the empty side of the skillet, allowing it to flow beneath the folded layer. As this new layer begins to set, use your spatula to gently lift the folded layer and let the uncooked egg flow underneath. Repeat this folding process until all the egg mixture is used and you have a beautiful layered roll." },
+      { step: 7, text: "Once the final layer is set, remove the tamagoyaki from the skillet and place it on a cutting board. Allow it to cool for a few minutes before slicing it into bite-sized pieces. The tamagoyaki should feel firm yet slightly springy to the touch, indicating it is cooked through but still moist, perfect for your breakfast wrap." }
     ],
     chefNotes: "Keep heat on medium-low throughout — tamagoyaki burns if rushed.",
     pairing: "Black coffee with a splash of condensed milk",
@@ -3526,11 +3526,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1/4", unit: "cup", item: "cotija cheese", note: "crumbled" },
     ],
     method: [
-      { step: 1, text: "Heat a 10-inch skillet over medium heat for 2 minutes, ensuring the surface is hot before adding the eggs." },
-      { step: 2, text: "Crack 4 large eggs into the skillet, spacing them evenly; cook for 1 minute until the edges turn opaque." },
-      { step: 3, text: "Cover the skillet and cook over medium-low heat for 3 minutes, until the whites are set and the yolks jiggle." },
-      { step: 4, text: "Remove the lid and check 4 large eggs; cook for 1 more minute if any whites remain translucent." },
-      { step: 5, text: "Spoon 1/4 cup Mexican crema over the 4 large eggs and serve immediately while the eggs are hot." }
+      { step: 1, text: "Begin by preparing the miso verde sauce. In a small mixing bowl, combine the 2 tbsp of miso paste with the juice of 1 lime and 2 tbsp of water. Whisk vigorously until the mixture is smooth and well-blended, ensuring there are no lumps. You want a creamy consistency that can easily drizzle over your eggs later. This step is essential for integrating the umami flavor of the miso into the sauce." },
+      { step: 2, text: "Next, heat a non-stick skillet over medium heat and add 1 tbsp of olive oil. Allow the oil to warm until it shimmers slightly, indicating that it's hot enough to cook with. Carefully crack 4 large eggs into the skillet, spacing them apart to avoid any overlap. The whites should sizzle upon contact with the pan, and you’re aiming for a sunny-side up finish with perfectly set whites and runny yolks." },
+      { step: 3, text: "Cook the eggs without flipping them for about 3 to 4 minutes, or until the whites are firm and the edges are beginning to crisp slightly. Look for the whites to turn from translucent to an opaque white; this indicates they are cooked through but not overdone. The yolks should remain bright and runny, which is key to creating that luscious texture you want for your huevos rancheros." },
+      { step: 4, text: "While the eggs are cooking, warm three corn tortillas in a separate pan over medium heat, flipping them occasionally until they are pliable and slightly toasted, about 1 to 2 minutes per side. You want to see little brown spots forming, which adds flavor and texture. This step is crucial, as warm tortillas will better hold the toppings and prevent them from becoming soggy." },
+      { step: 5, text: "To assemble, place each warm tortilla on a plate and carefully slide 1 sunny-side up egg onto each one. Drizzle the prepared miso verde sauce generously over the eggs, ensuring each bite has that savory kick. Add fresh toppings like sliced avocado and chopped cilantro for extra flavor and color. Serve immediately, as the combination of warm tortillas and runny yolks is best enjoyed fresh!" }
     ],
     chefNotes: "The miso will settle to the bottom if the salsa verde cools — always serve this dish piping hot.",
     pairing: "Strong black coffee or fresh orange juice",
@@ -3564,12 +3564,12 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "sesame seeds" },
     ],
     method: [
-      { step: 1, text: "Preheat the oven to 325°F, and position a rack in the center for even cooking." },
-      { step: 2, text: "Arrange 4 large eggs in their shells in an 8-inch baking dish, leaving space between each egg." },
-      { step: 3, text: "Bake 4 large eggs at 325°F for 28–30 minutes, until the shells are hot and the eggs feel firm." },
-      { step: 4, text: "Remove the dish and rest the 4 large eggs for 10 minutes, until they are cool enough to handle." },
-      { step: 5, text: "Peel and slice the 4 large eggs lengthwise; check that the yolks are set and no whites look translucent." },
-      { step: 6, text: "Sprinkle 1 tsp sesame seeds evenly over the sliced 4 large eggs, then serve immediately." }
+      { step: 1, text: "Begin by preparing the soy-cured eggs. In a small bowl, whisk together 1/2 cup of soy sauce, 1/4 cup of mirin, and 1 tablespoon of sugar until fully dissolved. This mixture will serve as the brine for the eggs, imparting a rich umami flavor. The sugar helps balance the saltiness of the soy sauce, creating a well-rounded curing solution." },
+      { step: 2, text: "Carefully lower 4 large eggs into a pot of boiling water and cook for exactly 6 minutes. This timing is crucial; it allows the whites to set while the yolks remain creamy and slightly runny. After 6 minutes, immediately transfer the eggs to an ice bath to halt the cooking process. You want the shells to be cool enough to handle, which should take about 5 minutes." },
+      { step: 3, text: "Once the eggs are cool, gently tap each one on a hard surface to crack the shell, then peel them carefully under running water to ensure you remove any bits of shell without damaging the delicate whites. This technique minimizes the risk of the whites tearing. Set the peeled eggs aside on a clean towel to absorb any excess moisture." },
+      { step: 4, text: "Submerge the peeled eggs in the prepared soy-brine mixture, ensuring they are fully covered. You can weigh them down with a small plate if necessary. Allow the eggs to cure in the refrigerator for at least 6 hours, or overnight for deeper flavor absorption. The longer they sit, the more intense the soy flavor will become, transforming the eggs into a savory delight." },
+      { step: 5, text: "While the eggs cure, prepare the rice. Rinse 1 cup of short-grain rice under cold water until the water runs clear, removing excess starch. This step is vital for achieving fluffy, non-sticky grains once cooked. Combine the rinsed rice with 1 1/4 cups of water in a medium saucepan and bring it to a boil over medium-high heat." },
+      { step: 6, text: "Once the water reaches a boil, reduce the heat to low, cover the saucepan with a tight-fitting lid, and simmer for 18 minutes without lifting the lid. This method traps steam, which is essential for evenly cooking the rice. After 18 minutes, remove the pan from heat and let it sit, covered, for an additional 10 minutes to allow the rice to finish cooking and absorb any remaining moisture." }
     ],
     chefNotes: "The curing marinade can be reused once for a second batch of eggs. Dilute with a little water before reusing.",
     pairing: "Hot green tea",
@@ -3601,12 +3601,12 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "scallions", note: "sliced" },
     ],
     method: [
-      { step: 1, text: "Place 4 oz Mexican chorizo in a cold 10-inch skillet and heat over medium, breaking it up as it warms." },
-      { step: 2, text: "Cook the 4 oz Mexican chorizo for about 5 minutes, stirring often, until browned and its red fat has rendered." },
-      { step: 3, text: "Beat 5 large eggs in a bowl until evenly blended, with no visible streaks of white remaining." },
-      { step: 4, text: "Reduce the skillet to medium-low, add the 5 large eggs to the 4 oz chorizo, and stir slowly with a spatula." },
-      { step: 5, text: "Keep stirring the 5 large eggs for 2–3 minutes, pulling curds inward until softly set but still glossy." },
-      { step: 6, text: "Remove the skillet from the heat when the 5 large eggs look slightly underdone; let them finish setting for 1 minute." }
+      { step: 1, text: "Begin by finely chopping 4 oz of chorizo sausage into small pieces, ensuring they are uniform for even cooking. The chorizo should have a vibrant reddish hue, indicating it is well-seasoned with spices. This step is essential as it will release flavorful oils that will infuse the eggs. Set the chopped chorizo aside once prepared." },
+      { step: 2, text: "In a medium bowl, crack 6 large eggs and add 2 tbsp of miso paste, whisking vigorously until the mixture is smooth and well combined. You should see the eggs take on a light yellow color, signaling that the miso has been fully incorporated. This addition of miso will introduce a rich umami flavor, enhancing the overall taste of the dish. Set this mixture aside while you prepare the chorizo." },
+      { step: 3, text: "Heat a non-stick skillet over medium heat and add the chopped chorizo. Cook for about 4 to 5 minutes, stirring occasionally, until the chorizo becomes crispy and the oils begin to render out, which will create a fragrant base for the eggs. Look for a slight browning on the edges of the chorizo pieces; this will enhance the flavor through caramelization. Once the chorizo is ready, reduce the heat to low." },
+      { step: 4, text: "Pour the egg and miso mixture into the skillet with the cooked chorizo. Gently stir with a spatula, making sure to scrape the bottom of the pan to incorporate the flavorful oils. Cook slowly on low heat for about 3 to 4 minutes, allowing the eggs to set gradually. Watch for the edges to begin firming up and the center to remain slightly runny; this will ensure a creamy texture." },
+      { step: 5, text: "As the eggs begin to thicken, use the spatula to gently fold the eggs over themselves, creating soft curds. Continue this motion for another 1 to 2 minutes, being careful not to overcook; the eggs should be just set but still creamy. Look for a shiny, slightly wet appearance in the eggs, which indicates they are perfectly cooked. Remove the skillet from the heat when the mixture is still slightly undercooked, as it will continue to cook from residual heat." },
+      { step: 6, text: "To serve, transfer the chorizo and miso scrambled eggs onto a warm plate. Garnish with chopped fresh herbs like cilantro or chives for a pop of color and freshness, which balances the richness of the dish. Enjoy immediately while the eggs are still warm and fluffy, as they are best when freshly made." }
     ],
     chefNotes: "Adding a cold butter knob and miso off-heat after cooking is what gives restaurant scrambled eggs their silky, creamy texture.",
     pairing: "Warm corn tortillas and salsa",
@@ -3679,12 +3679,12 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "neutral oil" },
     ],
     method: [
-      { step: 1, text: "Place the 1.5 cups all-purpose flour in a large bowl and whisk it briefly to break up any compacted areas before combining." },
-      { step: 2, text: "Whisk the 1 large egg and 2 tbsp neutral oil in a separate bowl until the mixture looks smooth and evenly combined." },
-      { step: 3, text: "Pour the egg mixture into the 1.5 cups flour and stir until no dry patches remain, taking care not to overmix the thick batter." },
-      { step: 4, text: "Heat a 10-inch nonstick skillet over medium-low heat, then portion the batter made from the 1.5 cups flour into evenly sized pancakes." },
-      { step: 5, text: "Cook the pancakes made with the 1 large egg for 2 to 3 minutes per side, until both sides are golden and the centers feel firm." },
-      { step: 6, text: "Serve the pancakes made with the 2 tbsp neutral oil immediately, checking that the surfaces are browned and the centers are fully set." }
+      { step: 1, text: "Start by preparing the horchata base. In a blender, combine 1 cup of uncooked white rice, 1/2 cup of blanched almonds, and 4 cups of water. Blend on high until the mixture is smooth and creamy, about 1-2 minutes. This step infuses the pancakes with a rich, nutty flavor and provides a unique texture, so ensure the mixture is well-puréed. Once blended, strain the mixture through a fine-mesh sieve or cheesecloth into a large bowl, discarding the solids." },
+      { step: 2, text: "Whisk in 1/2 cup of sugar, 1 tsp of vanilla extract, and 1 tsp of ground cinnamon into the strained horchata. Continue whisking until the sugar is fully dissolved and the mixture is smooth. The sugar will add sweetness, while the vanilla and cinnamon enhance the flavor profile, creating a deliciously fragrant batter. This step should take about 1-2 minutes; stop when you no longer see any granules of sugar." },
+      { step: 3, text: "In a separate bowl, combine 1 1/2 cups of all-purpose flour, 2 tsp of baking powder, and a pinch of salt. Use a whisk to ensure the dry ingredients are evenly mixed and there are no lumps. This ensures that your pancakes will rise evenly and have a light, fluffy texture. Once combined, you can move on to the next step." },
+      { step: 4, text: "Carefully fold the dry ingredients into the horchata mixture using a rubber spatula. Be gentle to maintain the airiness of the batter — overmixing will result in dense pancakes. You’re looking for a smooth batter with just a few small lumps; this ensures a tender pancake. Stop folding once no dry flour is visible." },
+      { step: 5, text: "Preheat a non-stick skillet or griddle over medium heat and lightly grease it with cooking spray or a small amount of butter. You want the surface hot enough that a drop of water sizzles upon contact, which ensures a golden-brown finish on your pancakes. Once ready, use a ladle to pour about 1/4 cup of batter onto the skillet for each pancake, leaving space between each one." },
+      { step: 6, text: "Cook the pancakes for about 3-4 minutes on the first side, or until you see bubbles forming on the surface and the edges appearing set. The pancakes should be golden-brown when flipped, indicating they have a nice crust. Carefully flip them over with a spatula and cook for an additional 2-3 minutes on the other side, until they are cooked through and evenly browned. Remove them from the skillet and keep warm, repeating with the remaining batter." }
     ],
     chefNotes: "Commercial horchata varies in sweetness — taste your batter before cooking and reduce the sugar if the horchata is already sweet.",
     pairing: "Cold glass of horchata",
@@ -3792,11 +3792,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "white miso paste" },
     ],
     method: [
-      { step: 1, text: "Whisk the 2 large egg yolks, 2 tbsp milk, and 1/4 cup all-purpose flour until the batter is smooth." },
-      { step: 2, text: "Beat the 2 large egg whites with 1 tbsp sugar in a clean bowl until stiff, glossy peaks form." },
-      { step: 3, text: "Fold one-third of the 2 large egg whites into the yolk batter, then gently fold in the remaining whites without deflating them." },
-      { step: 4, text: "Heat a 10-inch nonstick skillet over the lowest heat, about 250°F, and cook the batter for 6–7 minutes per side with the lid on." },
-      { step: 5, text: "Warm the 2 tbsp maple syrup over low heat for 1 minute, whisk in the 1 tsp white miso paste, and drizzle over the risen pancakes." }
+      { step: 1, text: "Begin by gathering all your ingredients: 1/2 cup of all-purpose flour, 1/4 cup of milk, 2 egg yolks, 2 egg whites, 1 tbsp of sugar, 2 tbsp of miso paste, and a pinch of salt. Ensuring everything is at room temperature will help the batter combine smoothly. This step is crucial as it allows for a better rise and texture in the pancakes." },
+      { step: 2, text: "In a medium mixing bowl, whisk together the 1/2 cup of all-purpose flour, the 1/4 cup of milk, the 2 egg yolks, and the 2 tbsp of miso paste until the mixture is smooth and free of lumps. You want a thick but pourable batter that is well-combined — look for a creamy consistency. This forms the base of your soufflé pancakes, contributing to their signature fluffy texture." },
+      { step: 3, text: "In a separate bowl, beat the 2 egg whites with the 1 tbsp of sugar and a pinch of salt using a hand mixer or whisk until stiff peaks form. This process usually takes about 3-5 minutes; the mixture should appear glossy and hold its shape when you lift the whisk. This step is essential for incorporating air into your pancakes, which is what gives them their soufflé-like fluffiness." },
+      { step: 4, text: "Gently fold the whipped egg whites into the batter using a spatula, being careful not to deflate the air you've just incorporated. Use a motion that lifts the batter from the bottom and over the top, repeating until just combined; it’s okay if there are a few streaks of egg whites remaining. This folding technique helps maintain the lightness of the batter, ensuring your pancakes rise beautifully." },
+      { step: 5, text: "Preheat a non-stick skillet over low heat and lightly grease it with butter. Pour 1/4 cup of the batter onto the skillet for each pancake, and cover with a lid to trap steam, which helps the pancakes puff up. Cook for about 4-5 minutes, or until the edges appear set and the top is slightly domed and still a bit wet; this indicates they are ready to flip. Turn them over gently for another 2-3 minutes until golden brown." }
     ],
     chefNotes: "These require patience. Any higher than the lowest heat setting will brown the exterior before the interior sets.",
     pairing: "Iced matcha latte",
@@ -4014,11 +4014,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "agave syrup", note: "optional" },
     ],
     method: [
-      { step: 1, text: "Measure the 1/3 cup chia seeds into a clean 1-quart jar or small bowl, checking that the seeds are dry and free-flowing." },
-      { step: 2, text: "Review the ingredient list before proceeding, because it gives no horchata quantity for hydrating the 1/3 cup chia seeds." },
-      { step: 3, text: "Do not refrigerate the dry 1/3 cup chia seeds as pudding, because they cannot swell or gel without the unlisted liquid." },
-      { step: 4, text: "If the missing liquid is supplied, stir the 1/3 cup chia seeds vigorously for 2 minutes until evenly dispersed without clumps." },
-      { step: 5, text: "After chilling the prepared 1/3 cup chia seeds for at least 4 hours, sprinkle the optional 1/2 tsp Tajin over the set pudding." }
+      { step: 1, text: "Begin by measuring 1/2 cup of chia seeds and placing them into a mixing bowl. These tiny seeds will absorb liquid and swell, creating the pudding's unique texture. To ensure even hydration, it’s crucial to start with a bowl that allows for ample stirring and mixing. Set aside the seeds while you prepare the liquid mixture." },
+      { step: 2, text: "In a separate container, combine 2 cups of almond milk with 1/4 cup of sweetened condensed milk and 1 tsp of vanilla extract. Whisk these ingredients together until they are well blended and frothy; the sweetness should be balanced, creating a creamy base for the pudding. This step is vital as the flavors meld and enhance the final dish, so taste the mixture and adjust the sweetness if desired." },
+      { step: 3, text: "Gradually pour the almond milk mixture over the chia seeds while stirring continuously with a whisk or a spoon. This technique prevents the seeds from clumping together and ensures they are evenly coated with the liquid. As you mix, watch for the seeds to begin absorbing the milk, which will take on a gel-like consistency. Continue stirring until there are no dry seeds visible, then stop." },
+      { step: 4, text: "Cover the bowl with plastic wrap or a lid and place it in the refrigerator for at least 4 hours, or ideally overnight. This allows the chia seeds to fully hydrate and expands to create a pudding-like texture. Check the pudding after the minimum chilling time; it should be thick and creamy, with a firm but soft consistency that holds its shape." },
+      { step: 5, text: "Once the pudding has set, remove it from the refrigerator and give it a gentle stir to smooth out any lumps. You can serve it immediately or garnish with toppings like fresh fruit, nuts, or a sprinkle of cinnamon for added flavor and texture. The pudding should be rich and creamy, with a slight bounce when you scoop it; if it appears too runny, it may need more time to set." }
     ],
     chefNotes: "The initial vigorous stirring is critical — chia seeds clump together immediately. Stir twice in the first 15 minutes for a perfectly even pudding.",
     pairing: "Black coffee or more horchata",
@@ -4088,11 +4088,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "butter" },
     ],
     method: [
-      { step: 1, text: "Whisk the 2 large eggs, 1/2 cup whole milk, 1 tbsp white miso paste, and 1 tbsp sugar in a shallow dish until smooth." },
-      { step: 2, text: "Soak each of the 4 slices brioche or thick white bread in the custard for 30 seconds per side until fully saturated." },
-      { step: 3, text: "Heat a 10-inch nonstick skillet over medium heat, then melt the 2 tbsp butter until it foams without browning." },
-      { step: 4, text: "Cook the 4 soaked bread slices in batches for 2–3 minutes per side until deeply golden, caramelized, and firm at the edges." },
-      { step: 5, text: "Serve the 4 cooked bread slices immediately, checking that the centers are hot and custardy rather than wet." }
+      { step: 1, text: "Begin by whisking together 2 large eggs in a mixing bowl until they are fully combined and the mixture appears slightly frothy. This indicates that air has been incorporated, which will help achieve a light and fluffy texture in your French toast. Make sure to break up any stubborn egg whites, as an even mixture will coat your bread more uniformly." },
+      { step: 2, text: "Add 1/2 cup of milk and 2 tablespoons of miso paste to the eggs, then whisk vigorously until the miso is completely dissolved and the mixture is smooth. The milk will add creaminess, while the miso will introduce a rich umami flavor, elevating the dish beyond traditional French toast. Look for a homogeneous blend with no visible lumps of miso." },
+      { step: 3, text: "Preheat a non-stick skillet or griddle over medium heat, adding a pat of butter or a drizzle of oil to coat the surface. Once the butter has melted and begins to bubble, you know the skillet is hot enough — this is crucial for achieving a golden-brown crust. If the butter starts to brown too quickly, lower the heat slightly to prevent burning." },
+      { step: 4, text: "Dip each slice of bread into the egg-miso mixture, allowing it to soak for about 15-20 seconds on each side. You want the bread to absorb enough of the mixture without becoming overly soggy; it should feel moist but still hold its shape. If the bread begins to fall apart, it has soaked long enough." },
+      { step: 5, text: "Carefully place the soaked bread slices onto the hot skillet, ensuring they are not crowded to allow for even cooking. Cook for approximately 3-4 minutes on each side, or until the exterior is a deep golden-brown and slightly crispy. Look for a nice caramelization on the surface, which will enhance the flavor, and remember to flip only once to avoid tearing." }
     ],
     chefNotes: "Thick, slightly stale brioche is the ideal bread — it absorbs the custard without falling apart.",
     pairing: "Fresh-squeezed orange juice",
@@ -4238,11 +4238,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "sesame seeds" },
     ],
     method: [
-      { step: 1, text: "Whisk the 1 tbsp white miso paste, 1 tbsp tahini, and 2 tbsp warm water until smooth and pourable." },
-      { step: 2, text: "Poach the 1 large egg in gently simmering water for 3 minutes, until the white is set and the yolk remains visibly soft." },
-      { step: 3, text: "Warm the 1 cup cooked white rice (sliced) over low heat for 2–3 minutes, stirring until heated through without drying." },
-      { step: 4, text: "Transfer the warmed 1 cup cooked white rice to a bowl and place the 1 large poached egg alongside." },
-      { step: 5, text: "Drizzle the miso-tahini dressing over the 1 cup cooked white rice and 1 large egg, then sprinkle with the 1 tsp sesame seeds." }
+      { step: 1, text: "Begin by preparing the base of your breakfast bowl. Scoop the flesh from 1 ripe avocado into a medium mixing bowl. Use a fork to mash the avocado until it reaches a creamy consistency, but leave some small chunks for texture. The avocado should be bright green and fragrant, indicating ripeness; if it’s brown or hard, it’s not ready. This step is vital as the avocado provides healthy fats and a rich, smooth base for your bowl." },
+      { step: 2, text: "Incorporate 2 tablespoons of miso paste into the mashed avocado. Use a sturdy whisk to blend the miso thoroughly until the mixture is smooth and evenly combined. The miso should dissolve completely, creating a creamy, umami-rich mixture that smells slightly salty and savory. This flavor depth is essential to elevate the dish, so ensure there are no lumps before proceeding." },
+      { step: 3, text: "Next, prepare your toppings. Thinly slice 1 medium cucumber, aiming for even rounds about 1/8 inch thick; this allows for a pleasing crunch and a fresh bite. As you slice, the cucumber should feel firm and crisp, which indicates freshness. Set the slices aside, as they add a refreshing contrast to the richness of the avocado-miso base." },
+      { step: 4, text: "Now, prepare a soft-boiled egg for your bowl. Bring a small pot of water to a boil, then gently lower in 1 egg using a spoon. Cook for exactly 6 minutes; this timing is crucial for achieving a perfectly runny yolk. After 6 minutes, transfer the egg to an ice bath for at least 5 minutes to halt the cooking process. The egg should feel firm yet slightly jiggly when done, and the yolk should be a vibrant orange when you peel and slice it." },
+      { step: 5, text: "Assemble your breakfast bowl by spreading the avocado-miso mixture as the base. Arrange the sliced cucumber decoratively on one side and place the soft-boiled egg, cut in half, atop the avocado. For an extra touch, sprinkle with sesame seeds and a drizzle of sesame oil. The bowl should look vibrant and inviting, with the bright green avocado contrasting against the white of the egg and the crisp cucumber. This presentation is key for an appetizing meal that balances flavors and textures." }
     ],
     chefNotes: "The miso-tahini dressing is the hero of this bowl — make extra and keep it in the fridge for up to a week.",
     pairing: "Green tea or cold sparkling water",
@@ -4275,11 +4275,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "2", unit: "cloves", item: "garlic", note: "minced" },
     ],
     method: [
-      { step: 1, text: "Heat a large cast-iron skillet over medium-high heat for 2 minutes, then add the 2 medium diced sweet potatoes." },
-      { step: 2, text: "Cook the 2 medium sweet potatoes without stirring for 4–5 minutes until browned underneath, then stir and repeat until nearly tender." },
-      { step: 3, text: "Add the 1 diced red bell pepper and 1 minced jalapeño, then cook for 5 minutes until softened and the potatoes are tender." },
-      { step: 4, text: "Reduce the skillet to medium-low heat, add the 2 tbsp white miso paste, and stir until it coats all the vegetables." },
-      { step: 5, text: "Cook the hash with the 2 tbsp white miso paste for 2 minutes until the glaze lightly caramelizes, then serve hot." }
+      { step: 1, text: "Begin by preheating your oven to 400°F (200°C). This ensures that when you place the sweet potatoes inside, they will roast evenly and develop a beautiful caramelization. Look for the oven indicator light or the sound of the preheating function to confirm it's reaching the desired temperature. You want the oven hot enough to create a crispy exterior on the sweet potatoes." },
+      { step: 2, text: "While the oven is heating, wash and peel 2 large sweet potatoes. Cut them into small, roughly 1/2-inch cubes for even cooking, ensuring each piece is uniform in size. This will allow them to roast consistently and prevent some pieces from burning while others remain undercooked. When you're finished, the cubes should look vibrant and fresh." },
+      { step: 3, text: "In a large mixing bowl, toss the cubed sweet potatoes with 2 tablespoons of olive oil, ensuring each piece is lightly coated. You'll want to see a glossy sheen on the sweet potato cubes, indicating they are well-dressed. This step is crucial as the oil helps with roasting and enhances the flavor, so make sure every cube is evenly coated before proceeding." },
+      { step: 4, text: "Spread the sweet potatoes in a single layer on a baking sheet lined with parchment paper. This prevents sticking and promotes even browning. Keep an eye on them as they roast; you want to hear a gentle sizzle as they hit the hot sheet. Roast for about 25-30 minutes, tossing halfway through, until they are tender and golden-brown around the edges." },
+      { step: 5, text: "Once the sweet potatoes are roasted, remove them from the oven and transfer them back to the mixing bowl. Stir in 2 tablespoons of miso paste while the sweet potatoes are still warm, allowing the heat to help dissolve the paste into a creamy sauce. Look for a smooth mixture that clings to the sweet potatoes, ensuring each bite is flavorful. This step enhances the umami flavor profile of your hash, so make sure it’s well combined before serving." }
     ],
     chefNotes: "Resist stirring the sweet potato too early — the crust that forms from undisturbed contact with a hot pan is what makes hash great.",
     pairing: "Fried eggs on the side",

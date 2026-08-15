@@ -36,11 +36,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "sesame seeds", note: "toasted" },
     ],
     method: [
-      { step: 1, text: "Place the 2 thinly sliced Persian cucumbers and 3 tbsp rice wine vinegar in a medium bowl, then toss to coat." },
-      { step: 2, text: "Let the 2 Persian cucumbers marinate in the 3 tbsp rice wine vinegar for 5 minutes until slightly softened." },
-      { step: 3, text: "Add the 1/2 cup crumbled cotija cheese and 1 tbsp toasted sesame seeds, then toss gently until evenly distributed." },
-      { step: 4, text: "Fold the 1 cup tortilla strips into the cucumber mixture just before serving, keeping them crisp and visibly intact." },
-      { step: 5, text: "Divide the salad made with 2 Persian cucumbers between plates and serve immediately, while the 1 cup tortilla strips remain crunchy." }
+      { step: 1, text: "Slice the 2 Persian cucumbers as thinly as possible — ideally on a mandoline at 1–2 mm — then place them in a medium bowl. Pour in the 3 tbsp rice wine vinegar, 1 tsp sesame oil, and 1 tsp sugar, and toss until every slice is coated; the sugar should dissolve completely within 30 seconds of tossing." },
+      { step: 2, text: "Let the cucumber mixture sit at room temperature for 5 full minutes — you will see the slices relax from stiff to slightly pliable and the liquid turn cloudy as it draws out natural moisture. Do not rush this; the brief maceration is what transforms raw cucumber into sunomono." },
+      { step: 3, text: "Add the 1 cup drained black beans and 1/2 cup crumbled cotija cheese to the bowl, then fold gently with a wide spoon for about 20 seconds — you want both distributed evenly without mashing the beans or breaking the cotija into dust. Taste for balance: the dressing should be tangy, lightly sweet, and savory." },
+      { step: 4, text: "Add the 1 tbsp toasted sesame seeds and fold them in. Hold back the 1 cup tortilla strips until the absolute last moment before serving — even 60 seconds of contact with the dressing will soften them from crisp to limp, and the textural contrast is the point of this salad." },
+      { step: 5, text: "Divide the salad between two plates or bowls, then scatter the 1 cup tortilla strips over the top as a final flourish. Serve immediately — the strips should shatter when pressed with a fork, providing maximum crunch against the tender, vinegar-bright cucumber beneath." }
     ],
     chefNotes: "Add the tortilla strips at the last possible moment — even 2 minutes of sitting in the dressing will make them soggy.",
     pairing: "Sparkling water with lime and a pinch of Tajín",
@@ -74,11 +74,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "cup", item: "croutons" },
     ],
     method: [
-      { step: 1, text: "Whisk the 2 tbsp white miso paste and 2 tbsp freshly squeezed lemon juice in a small bowl until completely smooth." },
-      { step: 2, text: "Add the 1 minced garlic clove to the miso mixture and whisk until the dressing looks creamy and evenly combined." },
-      { step: 3, text: "Place the leaves from 2 torn romaine heads in a large bowl, then pour the completed miso dressing over them." },
-      { step: 4, text: "Toss the 2 heads romaine with the dressing using tongs until every piece is glossy and evenly coated, with no dry leaves." },
-      { step: 5, text: "Add the 1 cup croutons and 1/2 cup finely grated Parmesan, toss once, and serve while the croutons remain crisp." }
+      { step: 1, text: "In a small bowl, combine the 2 tbsp white miso paste and 2 tbsp freshly squeezed lemon juice and whisk vigorously until the miso completely dissolves — no lumps should remain. The mixture will look pale tan and flow smoothly off the whisk; if it clumps, add a few drops of water and keep whisking." },
+      { step: 2, text: "Add the 3 tbsp Kewpie mayonnaise and the 1 minced garlic clove to the miso-lemon base and whisk another 30 seconds. The finished dressing should be creamy, pale ivory, and thick enough to coat the back of a spoon without dripping off immediately — taste it for salt and tang before it touches the lettuce." },
+      { step: 3, text: "Tear the 2 heads of romaine into large, hand-sized pieces and place them in a very large bowl — the leaves need room to tumble freely. Pour the dressing down the side of the bowl rather than directly over the lettuce so it distributes more evenly." },
+      { step: 4, text: "Toss using two large spoons or salad tongs for a full 60 seconds, lifting from the bottom and tumbling the leaves over the top, until every piece is evenly glossy and no dry patches remain. If any leaves look dull and undressed, toss for another 15 seconds." },
+      { step: 5, text: "Add the 1 cup croutons and 1/2 cup finely grated Parmesan and give the salad one final gentle toss — just enough to distribute both without crushing the croutons. Serve immediately on chilled plates while the croutons retain their crunch." }
     ],
     chefNotes: "Japanese mayo (Kewpie) is richer and more emulsified than American mayo — it makes the dressing silky where standard mayo would make it stiff.",
     pairing: "Crisp Pinot Grigio or sparkling water with cucumber",
@@ -111,11 +111,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "fresh lime juice" },
     ],
     method: [
-      { step: 1, text: "Arrange the 6 cups cubed seedless watermelon in a wide serving platter, keeping the pieces in an even single layer." },
-      { step: 2, text: "Drizzle the 2 tbsp ponzu sauce and 1 tbsp fresh lime juice evenly over the 6 cups watermelon." },
-      { step: 3, text: "Sprinkle the 2 tbsp Tajín chile-lime seasoning across the watermelon until most pieces show a visible, even coating." },
-      { step: 4, text: "Gently turn the 6 cups watermelon once with a wide spoon so the ponzu, lime juice, and Tajín stay evenly distributed." },
-      { step: 5, text: "Serve the 6 cups seasoned watermelon immediately, before its juices pool in the platter and soften the chile-lime coating." }
+      { step: 1, text: "Pat the 6 cups cubed seedless watermelon dry with paper towels before plating — even a thin film of surface water will wash the Tajín away before it can adhere. Arrange the cubes in a single, slightly overlapping layer on a wide, flat serving platter; a shallow platter shows off the vivid colors better than a deep bowl." },
+      { step: 2, text: "Drizzle the 2 tbsp ponzu sauce and 1 tbsp fresh lime juice evenly over the watermelon in a thin stream, moving your wrist back and forth across the entire platter so no single area is saturated. The ponzu adds a briny-citrus note that amplifies the melon's sweetness without masking it." },
+      { step: 3, text: "Hold the 2 tbsp Tajín chile-lime seasoning about 12 inches above the platter and dust it over the watermelon from height — this gives a more even, fine coating than shaking it up close. Every cube should show a light orange-red dusting; go back and hit any bare spots." },
+      { step: 4, text: "Scatter the 1/2 cup crumbled cotija cheese over the top and lay the 2 sheets of nori, cut into thin strips, over everything. Use a wide spoon to turn the cubes gently once — just enough to coat the cut sides in ponzu and Tajín without losing the cotija to the bottom of the platter." },
+      { step: 5, text: "Serve within 5 minutes of plating; the watermelon will begin releasing juice that pools in the platter and dissolves the chile-lime coating if it sits longer. This is a last-minute dish — prepare everything and plate only when guests are seated." }
     ],
     chefNotes: "Use a paper towel to gently pat the watermelon cubes dry before plating. Even small amounts of excess water will wash away the Tajín coating.",
     pairing: "Chilled sparkling rosé or hibiscus agua fresca",
@@ -148,11 +148,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "sesame seeds" },
     ],
     method: [
-      { step: 1, text: "Toss the 3 Persian cucumbers with the 1/2 tsp salt in a colander until evenly coated." },
-      { step: 2, text: "Let the salted 3 Persian cucumbers drain in the colander for 5 minutes until liquid collects below." },
-      { step: 3, text: "Gently squeeze the 3 Persian cucumbers by hand until they feel less watery but remain crisp." },
-      { step: 4, text: "Transfer the 3 Persian cucumbers to a bowl, add the 1 tsp sesame seeds, and toss until evenly distributed." },
-      { step: 5, text: "Refrigerate the 3 Persian cucumbers with the 1 tsp sesame seeds for at least 10 minutes until chilled and lightly glossy." }
+      { step: 1, text: "Slice the 3 Persian cucumbers paper-thin — 1 mm on a mandoline if you have one, or as thin as your knife allows — then toss them with the 1/2 tsp salt in a colander until every slice is coated. The salt will immediately start drawing out moisture; you will see small droplets forming on the surface within 30 seconds." },
+      { step: 2, text: "Let the salted cucumbers drain in the colander for exactly 5 minutes — no more, no less. Less time and they remain too watery; longer and they lose their fresh crunch and turn limp. You should see a small puddle of liquid accumulate beneath the colander." },
+      { step: 3, text: "Gather the cucumber slices in your palm and squeeze firmly but not crushingly — you want to expel excess water while keeping the slices intact. A good squeeze will release another tablespoon or two of liquid; the cucumbers should feel moist but not dripping when you open your hand." },
+      { step: 4, text: "Transfer the squeezed cucumbers to a bowl and add the 3 tbsp rice wine vinegar, 1 tsp sugar, and the minced serrano chile (seeded for moderate heat, seeds included for fire). Toss until the sugar dissolves and every slice is glistening with the pickling liquid." },
+      { step: 5, text: "Refrigerate the dressed cucumbers for at least 10 minutes so the flavors meld and the salad becomes properly cold — sunomono is always served chilled. Just before serving, scatter the 1 tsp sesame seeds over the top; they add a nutty crunch that anchors the bright, acidic flavors." }
     ],
     chefNotes: "The salt-and-squeeze step is non-negotiable. Skipping it will leave you with a watery salad that dilutes the dressing.",
     pairing: "Cold mugicha (barley tea) or iced green tea",
@@ -186,11 +186,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "Tajín or chile powder" },
     ],
     method: [
-      { step: 1, text: "Heat a dry 10-inch skillet over high heat, add the 3 cups corn kernels, and cook 2–3 minutes until dark spots appear." },
-      { step: 2, text: "Stir the 3 cups corn kernels and cook for 1 more minute until more kernels are visibly charred, then remove from the heat." },
-      { step: 3, text: "Place the 1 cup cooked shelled edamame in a large bowl and add the 3 tbsp Japanese mayonnaise." },
-      { step: 4, text: "Add the warm 3 cups charred corn kernels to the bowl and toss with the 1 cup edamame and 3 tbsp mayonnaise." },
-      { step: 5, text: "Sprinkle the coated 3 cups corn and 1 cup edamame with the 1 tbsp Tajín or chile powder before serving." }
+      { step: 1, text: "Heat a dry 10-inch cast-iron or heavy skillet over the highest heat your stove produces for 2 full minutes — it should be too hot to hold your hand near. Add the 3 cups corn kernels in a single layer and do not stir; you want contact with the hot surface. Cook undisturbed for 2–3 minutes until you hear popping and see dark spots on the kernels." },
+      { step: 2, text: "Stir the corn once and cook for 1 more minute until about half the kernels show a visible char — deep brown spots, not just golden coloring. The corn will smell nutty and slightly smoky. Remove from the heat immediately; residual heat in cast iron will continue cooking the corn for another minute, so err on the side of slightly under-charred." },
+      { step: 3, text: "In a large bowl, whisk together the 3 tbsp Japanese mayonnaise, 1 tbsp ponzu sauce, and 1 tbsp fresh lime juice until smooth and creamy. Add the warm 3 cups charred corn and the 1 cup cooked edamame, then toss until every kernel and bean is coated in the dressing." },
+      { step: 4, text: "Scatter the 1/2 cup crumbled cotija cheese over the dressed corn mixture and fold gently so it distributes without fully dissolving into the dressing — you want visible white crumbles throughout. Taste: the salad should be creamy, bright from the lime and ponzu, and savory from the cotija." },
+      { step: 5, text: "Dust the 1 tbsp Tajín or chile powder over the top just before serving — hold the container high and sweep across the bowl for even coverage. Serve warm or at room temperature within 20 minutes; after that the corn softens and loses the contrast between its charred exterior and sweet interior." }
     ],
     chefNotes: "Charring the corn in a cast iron is what makes this dish. A light steam-and-stir will give you mushy corn — you want dark spots and some crispiness.",
     pairing: "Cold Mexican lager with a salted rim",
@@ -224,11 +224,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "fresh cilantro", note: "roughly chopped" },
     ],
     method: [
-      { step: 1, text: "Heat a dry 10-inch skillet over high heat, add the 3 cups corn kernels, and cook for 3–4 minutes until browned." },
-      { step: 2, text: "Stir the 3 cups corn kernels only once halfway through cooking, keeping the heat high until scattered dark spots appear." },
-      { step: 3, text: "Transfer the hot 3 cups corn kernels to a bowl and immediately add the 2 tbsp sesame oil." },
-      { step: 4, text: "Toss the 3 cups charred corn kernels with the 2 tbsp sesame oil until every kernel looks lightly glossy." },
-      { step: 5, text: "Let the 3 cups corn kernels cool for 5 minutes, then serve warm or at room temperature while still lightly glossy." }
+      { step: 1, text: "Heat a dry, heavy 10-inch skillet — cast iron is ideal — over high heat for 2 full minutes until the surface radiates visible heat. Add the 3 cups corn kernels in a single layer without any oil; the dry heat is what creates char. Resist the urge to stir for the first 2–3 minutes — you should hear a steady crackling as the kernels make contact with the hot surface." },
+      { step: 2, text: "After 2–3 minutes, give the corn one firm stir and let it cook for 1–2 more minutes until roughly half the kernels show dark brown or black spots and the entire batch smells smoky and sweet simultaneously. Remove from the heat while a few kernels still look underdone — carryover heat will finish them." },
+      { step: 3, text: "Transfer the hot charred corn immediately to a large mixing bowl and drizzle the 2 tbsp sesame oil over it while the kernels are still steaming. The residual heat will bloom the sesame oil's aroma, making the salad smell more fragrant than it would if the oil were added cold." },
+      { step: 4, text: "Add the 1.5 cups thawed shelled edamame, 2 tbsp soy sauce, 1 tbsp lime juice, and 1 tsp Tajín, then toss everything together for 1 full minute. Every kernel and bean should be glossy and visibly coated; if the dressing pools at the bottom of the bowl, toss for 30 more seconds." },
+      { step: 5, text: "Scatter the 2 tbsp roughly chopped cilantro over the salad and fold it in gently. Let the salad rest for 5 minutes before serving so the edamame warms slightly from the corn and the flavors meld — it can be served warm or at room temperature, and it tastes equally good either way." }
     ],
     chefNotes: "If you can find fresh summer corn and shuck it yourself, the sweetness difference is remarkable.",
     pairing: "Horchata or sparkling cucumber water",
@@ -261,11 +261,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "scallions", note: "thinly sliced" },
     ],
     method: [
-      { step: 1, text: "Place the 4 cups napa cabbage and 1 cup red cabbage in a large mixing bowl, separating any clumped shreds." },
-      { step: 2, text: "Add the 3 tbsp ponzu sauce to the 4 cups napa cabbage and 1 cup red cabbage in the bowl." },
-      { step: 3, text: "Toss the 4 cups napa cabbage, 1 cup red cabbage, and 3 tbsp ponzu sauce for 30 seconds until glossy." },
-      { step: 4, text: "Let the mixture of 4 cups napa cabbage, 1 cup red cabbage, and 3 tbsp ponzu sauce rest for 5 minutes." },
-      { step: 5, text: "Toss the 4 cups napa cabbage, 1 cup red cabbage, and 3 tbsp ponzu sauce again, then serve when lightly softened." }
+      { step: 1, text: "Place the 4 cups shredded napa cabbage and 1 cup shredded red cabbage in a large mixing bowl and use your fingers to separate any clumped shreds — good slaw requires individual strands so every piece gets dressed. The visual contrast of white and purple is part of the appeal, so don't let them clump into a single mass." },
+      { step: 2, text: "In a small bowl, stir together the 3 tbsp ponzu sauce, 1 tbsp rice wine vinegar, and 1 tsp sesame oil. Ponzu is already acidic and citrusy; the additional vinegar sharpens it further. Taste the dressing before it touches the cabbage — it should be bright, tangy, and lightly salty with a sesame finish." },
+      { step: 3, text: "Pour the dressing over the cabbage and toss with tongs for a full 60 seconds, making sure the liquid coats every strand. The cabbage will not wilt immediately — napa is more delicate than green cabbage but still needs a moment with the acid to relax. After tossing, the shreds should look lightly glossy, not dry." },
+      { step: 4, text: "Let the slaw rest at room temperature for 5 minutes — this brief rest allows the acid in the ponzu to begin softening the cabbage without turning it limp. If you want a crunchier slaw, serve now; for a silkier texture, refrigerate for 30 minutes and the cabbage will meld beautifully with the dressing." },
+      { step: 5, text: "Just before serving, scatter the 2 tbsp thinly sliced scallions over the top and toss once more. Serve the slaw immediately as a side dish, or use it as a topping for fish tacos, pulled pork, or grain bowls — its clean, vinegar-bright flavor cuts through anything rich." }
     ],
     chefNotes: "This slaw gets better after 30 minutes in the refrigerator as the cabbage wilts into the ponzu dressing.",
     pairing: "Any grilled fish or cold beer",
@@ -299,11 +299,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "sesame seeds", note: "toasted" },
     ],
     method: [
-      { step: 1, text: "Place the 1 bunch curly kale, with stems removed and leaves torn, in a large mixing bowl." },
-      { step: 2, text: "Sprinkle the 1/4 tsp kosher salt evenly over the 1 bunch curly kale in the bowl." },
-      { step: 3, text: "Massage the 1 bunch curly kale with the 1/4 tsp kosher salt for 3 minutes until darker and about half its volume." },
-      { step: 4, text: "Add the 2 tbsp toasted sesame seeds to the massaged 1 bunch curly kale and toss until evenly distributed." },
-      { step: 5, text: "Let the 1 bunch curly kale with the 1/4 tsp kosher salt and 2 tbsp toasted sesame seeds sit for 5 minutes before serving." }
+      { step: 1, text: "Strip the stems from the 1 bunch curly kale by holding each stem with one hand and pulling the leaf upward with the other — it tears cleanly in one motion. Tear the leaves into rough 3-inch pieces and place them in a large bowl. Smaller pieces massage faster and eat more pleasantly than large, unwieldy chunks." },
+      { step: 2, text: "Sprinkle the 1/4 tsp kosher salt and 2 tbsp fresh lime juice evenly over the kale. Now work the leaves with both hands as if you are kneading dough — squeeze, press, release, and repeat. After about 90 seconds you will feel the kale begin to soften and see the color deepen from bright to dark forest green, a sign the cell walls are breaking down." },
+      { step: 3, text: "Continue massaging for the full 3 minutes — set a timer if needed. The finished kale should be reduced to roughly half its original volume, feel tender when pinched rather than stiff, and look darker and slightly wilted. Stop at the first sign of sliminess; over-massaged kale loses its texture entirely." },
+      { step: 4, text: "Drizzle in the 2 tbsp sesame oil and 1 tbsp soy sauce, then toss with tongs for 30 seconds until the leaves are evenly glossed. Add the 1/3 cup crumbled cotija and 2 tbsp toasted sesame seeds, folding them in gently. The cotija will begin to soften slightly in the dressing — this is fine, and even desirable." },
+      { step: 5, text: "Taste before serving: the salad should be nutty from the sesame, bright from the lime, and have a pleasant salty backbone from the cotija and soy. Serve within 20 minutes for the best texture, or refrigerate up to 4 hours — the kale will soften further but the flavor improves with a little rest." }
     ],
     chefNotes: "The 3-minute massage is not optional. Under-massaged kale is chewy and bitter. Over-massaged kale turns slimy. You are looking for tender but still structured leaves.",
     pairing: "Green tea or a clean, dry white wine",
@@ -336,11 +336,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1/4", unit: "cup", item: "fresh cilantro", note: "roughly chopped" },
     ],
     method: [
-      { step: 1, text: "Peel and julienne the 1 small jicama and 1 small daikon radish into thin, uniform matchsticks." },
-      { step: 2, text: "Place the 1 small jicama and 1 small daikon radish in a large bowl, keeping the matchsticks loosely separated." },
-      { step: 3, text: "Add the 3 tbsp fresh lime juice to the 1 small jicama and 1 small daikon radish, then toss thoroughly." },
-      { step: 4, text: "Let the 1 small jicama and 1 small daikon radish with the 3 tbsp fresh lime juice rest for 10 minutes until crisp-tender." },
-      { step: 5, text: "Toss the 1 small jicama, 1 small daikon radish, and 3 tbsp fresh lime juice, then serve while the matchsticks remain crisp." }
+      { step: 1, text: "Peel the 1 small jicama with a sturdy vegetable peeler or paring knife — the skin is thick and fibrous. Cut it into planks, then stack the planks and slice into matchsticks about 3 inches long and 1/4 inch wide. Repeat with the 1 small daikon radish; both vegetables should be roughly the same size so they dress evenly." },
+      { step: 2, text: "Place the jicama and daikon matchsticks in a large bowl and keep them loosely separated — do not pack them down. Piled tightly, they will mat together and resist the dressing. The goal is individual strands that can move freely when tossed." },
+      { step: 3, text: "Pour the 3 tbsp fresh lime juice, 1 tbsp rice wine vinegar, and 1 tsp Tajín over the vegetables, then toss firmly for 60 seconds. The Tajín should dissolve partially into the liquid, turning the dressing a faint orange-red; any visible Tajín clumps should be broken up with your spoon." },
+      { step: 4, text: "Let the dressed vegetables rest for 10 full minutes at room temperature — this is the key step. The acid softens the outer edges of the matchsticks from crunchy-raw to crisp-tender, while the centers remain firm. After 10 minutes, taste a piece: it should snap cleanly but feel less aggressively raw than when you started." },
+      { step: 5, text: "Fold in the 1/4 cup roughly chopped cilantro just before serving. The salad can be served immediately or held refrigerated for up to 2 hours — the texture actually improves with a bit more time in the dressing. Use it as a standalone salad, a taco topping, or a palate-cleansing side alongside anything rich." }
     ],
     chefNotes: "This salad is an excellent palate cleanser between courses, or a topping for fish tacos where you need crunch without adding moisture.",
     pairing: "Sparkling water with lime",
@@ -373,11 +373,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "red onion", note: "very thinly sliced" },
     ],
     method: [
-      { step: 1, text: "Place the 4 cups arugula, peeled and sliced, in a large serving bowl and check that the leaves are dry and evenly prepared." },
-      { step: 2, text: "Measure the 3 tbsp ponzu sauce into a small bowl and stir for 15 seconds until it looks evenly blended." },
-      { step: 3, text: "Pour the 3 tbsp ponzu sauce over the 4 cups arugula, distributing it in a thin, even stream." },
-      { step: 4, text: "Toss the 4 cups arugula with the 3 tbsp ponzu sauce for 30 seconds, stopping when the leaves look lightly glossy." },
-      { step: 5, text: "Let the 4 cups arugula stand with the 3 tbsp ponzu sauce for 2 minutes, then serve while the leaves remain crisp." }
+      { step: 1, text: "Check that the 4 cups arugula leaves are completely dry — wet arugula repels dressing and looks sad on the plate. If the leaves are damp from washing, spin them in a salad spinner or lay them on a clean kitchen towel and blot gently. Transfer to a large, wide bowl where the leaves have room to be tossed without bruising." },
+      { step: 2, text: "Whisk together the 3 tbsp ponzu sauce and 1 tbsp olive oil in a small bowl until the oil is fully incorporated — ponzu and oil do not form a permanent emulsion, so whisk until it looks creamy, then dress the salad immediately before it separates. Taste: it should be bright, citrusy, and lightly savory." },
+      { step: 3, text: "Pour the dressing over the arugula in a thin, circular stream around the edge of the bowl, then toss with tongs for 30 seconds. Stop the moment every leaf looks glossy — over-dressed arugula turns limp almost instantly. Add the 2 tbsp very thinly sliced red onion and toss once more to distribute." },
+      { step: 4, text: "Arrange the 1 large mango, peeled and sliced, over the dressed arugula in overlapping fans. Do not mix the mango into the salad — laying it on top preserves its clean slices and creates a more beautiful presentation. The mango juice will drip into the salad as guests serve themselves, acting as additional dressing." },
+      { step: 5, text: "Dust the 1 tsp Tajín over the mango slices from a height of about 12 inches for even coverage. Serve immediately — arugula wilts within minutes of dressing, and the contrast between the peppery greens and the sweet, cold mango is best when both are at their freshest." }
     ],
     chefNotes: "Use the ripest mango you can find. Under-ripe mango will fight the arugula instead of softening it.",
     pairing: "Dry rosé or sparkling sake",
@@ -411,13 +411,13 @@ export const lunchRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "sesame seeds" },
     ],
     method: [
-      { step: 1, text: "Drain and rinse the 1 can black beans, 15 ounces, until the water runs clear, then let them drain for 2 minutes." },
-      { step: 2, text: "Combine the drained 1 can black beans and 1.5 cups shelled edamame in a large mixing bowl." },
-      { step: 3, text: "Whisk the 2 tbsp sesame oil, 2 tbsp soy sauce, and 2 tbsp lime juice for 30 seconds until blended." },
-      { step: 4, text: "Pour the dressing made with 2 tbsp sesame oil, 2 tbsp soy sauce, and 2 tbsp lime juice over the beans." },
-      { step: 5, text: "Toss the 1 can black beans and 1.5 cups shelled edamame for 1 minute until evenly coated and lightly glossy." },
-      { step: 6, text: "Sprinkle the 1 tsp Tajín and 2 tbsp sesame seeds over the salad, then toss for 30 seconds to distribute them evenly." },
-      { step: 7, text: "Serve the salad immediately at room temperature, or refrigerate the 1 can black beans and 1.5 cups edamame for up to 2 days." }
+      { step: 1, text: "Drain and rinse the 1 can (15 oz) black beans in a fine-mesh strainer, running cold water over them until the water runs completely clear — cloudy liquid from the can contains excess starch that makes the salad gummy. Let the beans drain for a full 2 minutes, shaking the strainer occasionally to release trapped moisture." },
+      { step: 2, text: "In a small bowl, whisk together the 2 tbsp sesame oil, 2 tbsp soy sauce, and 2 tbsp lime juice for 30 seconds until the oil is incorporated into the liquid. Taste: the dressing should be nutty, salty, and bright. If it tastes flat, add a few more drops of lime juice; if it tastes sharp, a few more drops of sesame oil." },
+      { step: 3, text: "Combine the drained black beans and 1.5 cups thawed shelled edamame in a large mixing bowl. Pour the dressing over them and toss firmly for 1 full minute — the beans are dense and will not coat evenly with a light toss. Every bean and every edamame should show a glossy, evenly dressed surface when you are done." },
+      { step: 4, text: "Sprinkle the 1 tsp Tajín and 2 tbsp sesame seeds over the dressed beans, then toss for another 30 seconds to distribute them throughout the salad. Taste and adjust: the Tajín adds chile heat and citrus, so if you want more fire, add a pinch more; if you want it milder, hold back." },
+      { step: 5, text: "Serve immediately at room temperature, or cover and refrigerate for up to 2 days — this salad actually improves overnight as the beans absorb the dressing and the flavors meld. When serving from the refrigerator, toss again before plating and check whether a splash of fresh lime juice is needed to brighten it back up." },
+      { step: 6, text: "This salad is excellent served over warm rice, stuffed into a tortilla, or eaten straight from the bowl. Its high protein content from two legume sources makes it genuinely filling without any meat — a complete lunch on its own." },
+      { step: 7, text: "For best presentation, serve in a wide, shallow bowl and finish with an extra scatter of sesame seeds and a wedge of lime on the side, so guests can adjust acidity to their preference at the table." }
     ],
     chefNotes: "This salad is even better the next day after the beans have absorbed the dressing overnight.",
     pairing: "Cold horchata or sparkling water",
@@ -451,11 +451,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "sesame seeds" },
     ],
     method: [
-      { step: 1, text: "Whisk the 2 tbsp rice wine vinegar and 1 tbsp sesame oil in a small bowl for 30 seconds until smooth." },
-      { step: 2, text: "Add the 2 cups cooked brown rice, cooled, to the dressing and toss gently for 1 minute until the grains look glossy." },
-      { step: 3, text: "Fold the 1 cup shredded purple cabbage into the 2 cups dressed brown rice for 30 seconds until evenly distributed." },
-      { step: 4, text: "Let the 2 cups brown rice and 1 cup purple cabbage stand at room temperature for 5 minutes so the flavors blend." },
-      { step: 5, text: "Sprinkle the 1 tbsp sesame seeds over the 2 cups brown rice and 1 cup cabbage, then serve when the salad looks evenly coated." }
+      { step: 1, text: "In a small bowl, whisk together the 1 tbsp white miso paste, 1 tbsp freshly grated ginger, 2 tbsp rice wine vinegar, and 1 tbsp sesame oil until the miso is completely dissolved — no lumps. Grating the ginger over the bowl catches all its juice, which is where the heat and flavor live; a dry microplane gives the best results." },
+      { step: 2, text: "Place the 2 cups cooked, cooled brown rice in a large bowl and break up any clumps with a fork before adding the dressing. Cold rice absorbs dressing more evenly and completely than warm rice, which repels liquid. If you are using freshly cooked rice, spread it on a sheet pan and cool it for 15 minutes first." },
+      { step: 3, text: "Pour the dressing over the rice and toss with a fork or spoon for 1 full minute, scraping the bottom of the bowl to catch any dressing that pools. Every grain should look slightly glossy; if you see dry patches, keep tossing. The miso will coat the grains rather than running off, creating a clinging, flavorful film." },
+      { step: 4, text: "Add the 1 cup shredded purple cabbage and fold it in gently — purple cabbage bleeds its pigment into acidic dressings over time, so if you want vibrant color contrast, serve quickly. If you are making this ahead, add the cabbage just before serving to keep the purple vivid and the texture crisp." },
+      { step: 5, text: "Sprinkle the 1 tbsp sesame seeds over the finished salad and serve at room temperature. This salad holds well refrigerated for up to 3 days — the rice continues to absorb the miso-ginger dressing and becomes more flavorful with each passing hour. Bring to room temperature before serving for the best texture." }
     ],
     chefNotes: "Cook the rice a day ahead and refrigerate it — cold rice absorbs dressings more evenly than freshly cooked rice.",
     pairing: "Iced green tea",
@@ -488,11 +488,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "Tajín" },
     ],
     method: [
-      { step: 1, text: "Soak the 1/4 cup dried wakame seaweed in warm water for 5 minutes until expanded, pliable, and fully hydrated." },
-      { step: 2, text: "Drain the 1/4 cup hydrated wakame seaweed thoroughly, then squeeze out excess water until it is moist but not dripping." },
-      { step: 3, text: "Whisk the 2 tbsp soy sauce, 1 tbsp sesame oil, and 1 tbsp rice wine vinegar in a small bowl until blended." },
-      { step: 4, text: "Add the drained 1/4 cup wakame seaweed to the dressing and toss until every piece is evenly coated." },
-      { step: 5, text: "Transfer the dressed 1/4 cup wakame seaweed to a serving plate, sprinkle with the 1 tsp Tajín, and serve immediately." }
+      { step: 1, text: "Place the 1/4 cup dried wakame in a bowl and cover with warm (not boiling) water — about 120°F is ideal. Watch it transform over the next 5 minutes: the dark, papery flakes will unfurl into bright green, silky ribbons and expand to roughly three times their dried volume. This rehydration step cannot be rushed; cold water takes too long and boiling water makes the seaweed mushy." },
+      { step: 2, text: "Drain the rehydrated wakame through a fine-mesh strainer, then gather it in your hands and squeeze firmly to expel as much water as possible. Excess water dilutes the dressing. The squeezed wakame should feel moist but not dripping; it should hold together in a rough bundle rather than streaming water." },
+      { step: 3, text: "In a small bowl, whisk together the 2 tbsp soy sauce, 1 tbsp sesame oil, and 1 tbsp rice wine vinegar until the oil is incorporated. This is a classic Japanese sunomono dressing — the ratio of soy to sesame to vinegar is intentional and balanced. Taste it before adding anything; it should be savory, nutty, and tangy in equal measure." },
+      { step: 4, text: "Add the drained wakame to the dressing and toss until every ribbon is evenly coated — the seaweed absorbs the dressing quickly and its green color will intensify against the dark soy. Let it sit for 2 minutes in the dressing so the flavors are absorbed, not just coating the surface." },
+      { step: 5, text: "Transfer the dressed wakame to a serving plate and fan the 2 sliced ripe avocados alongside it — keep the avocado slices intact and overlapping rather than scattered. Dust the entire plate with the 1 tsp Tajín from a height for even coverage, and serve immediately before the avocado browns." }
     ],
     chefNotes: "Dried wakame is sold in small bags at any Asian grocery store and increasingly at Whole Foods. A little goes a long way — it expands 3x when rehydrated.",
     pairing: "Cold sake or iced green tea",
@@ -527,11 +527,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "lime juice" },
     ],
     method: [
-      { step: 1, text: "Whisk the 1 tbsp minced chipotle chile, 2 tbsp white miso paste, 3 tbsp Japanese mayonnaise, and 2 tbsp lime juice until smooth." },
-      { step: 2, text: "Arrange the 4 tostada shells in a single layer on a serving platter, keeping them flat and crisp." },
-      { step: 3, text: "Divide the 2 cups shredded romaine lettuce evenly among the 4 tostada shells, piling it loosely so shells remain stable." },
-      { step: 4, text: "Drizzle the dressing made with 1 tbsp chipotle chile, 2 tbsp miso, 3 tbsp mayonnaise, and 2 tbsp lime juice over the tostadas." },
-      { step: 5, text: "Serve the 4 dressed tostada shells immediately while the shells are crisp and the 2 cups romaine remains fresh and crunchy." }
+      { step: 1, text: "In a small bowl, whisk together the 1 tbsp minced chipotle chile in adobo, 2 tbsp white miso paste, 3 tbsp Japanese mayonnaise, and 2 tbsp lime juice until completely smooth. The chipotle may resist blending at first — keep whisking for a full 60 seconds. The finished dressing should be thick, rust-orange, and flow slowly off the whisk." },
+      { step: 2, text: "Arrange the 4 tostada shells on a flat surface or serving platter. Handle them gently — tostadas are fragile and a cracked shell makes assembly nearly impossible. Lay them in a single layer with no overlap; stacked shells will crack each other under the weight of the toppings." },
+      { step: 3, text: "Divide the 2 cups shredded romaine lettuce evenly among the 4 tostada shells, piling it loosely in the center and leaving a 1/2-inch border around the edge. Covering the shell completely weakens the structural rim you need to hold when eating; keep the edges exposed for grip." },
+      { step: 4, text: "Add the 2 cups shredded rotisserie chicken and 1 cup drained black beans in separate clusters on top of the lettuce — this layered approach keeps the tostada from collapsing under a single dense mass. The contrast between the cold crisp lettuce and the room-temperature chicken is part of the eating experience." },
+      { step: 5, text: "Drizzle the chipotle-miso dressing over each tostada in a thin, even zigzag pattern immediately before serving. Build and serve tostadas one at a time if possible — after 2–3 minutes with dressing, the shell begins to soften from the bottom up and loses its structural crunch." }
     ],
     chefNotes: "Build tostadas at the table where guests can self-assemble. Pre-built tostadas get soggy fast.",
     pairing: "Mexican beer or sparkling lime water",
@@ -566,12 +566,12 @@ export const lunchRecipes: Recipe[] = [
       { qty: "4", unit: "cups", item: "mixed greens" },
     ],
     method: [
-      { step: 1, text: "Bring a small saucepan of water to a boil, add the 2 large eggs, and cook for exactly 7 minutes until the yolks are jammy." },
-      { step: 2, text: "Transfer the 2 large eggs to cold water immediately, cool them completely, then peel and halve them lengthwise." },
-      { step: 3, text: "Heat a dry 10-inch skillet over high heat until very hot, then sear the 8 oz ahi tuna for 30 seconds per side." },
-      { step: 4, text: "Whisk the 3 tbsp ponzu sauce, 1 tbsp olive oil, and 1 tsp sesame oil until glossy and fully combined." },
-      { step: 5, text: "Divide the 4 cups mixed greens and 1 cup shelled edamame between two plates, then add the sliced rare tuna and halved eggs." },
-      { step: 6, text: "Drizzle the vinaigrette made with 3 tbsp ponzu, 1 tbsp olive oil, and 1 tsp sesame oil over both plates and serve immediately." }
+      { step: 1, text: "Bring a small saucepan of water to a full rolling boil. Lower the 2 large eggs in gently using a spoon — if they crack from impact the whites will leak. Cook at a steady boil for exactly 7 minutes: the white will be fully set and the yolk will be golden and jammy in the center, not powdery. Time this precisely; 6 minutes is runny, 8 minutes is chalky." },
+      { step: 2, text: "Transfer the 2 eggs immediately to a bowl of ice water and let them cool for 5 full minutes — the cold stops cooking and makes the shells contract slightly, making peeling easier. Peel them carefully under a trickle of cold water, starting from the wider end where the air pocket is. Halve lengthwise with one confident cut to preserve the yolk." },
+      { step: 3, text: "Pat the 8 oz sushi-grade ahi tuna completely dry with paper towels — any moisture on the surface will steam the fish rather than sear it. Heat a dry 10-inch cast-iron skillet over high heat until it is smoking. Sear the tuna block for exactly 30 seconds per side; the exterior should be opaque white with a seared crust while the center stays deep red and raw." },
+      { step: 4, text: "Transfer the seared tuna to a cutting board and let it rest for 2 minutes, then slice it into 1/4-inch planks against the grain. Meanwhile, whisk the 3 tbsp ponzu sauce, 1 tbsp olive oil, and 1 tsp sesame oil together in a small bowl until slightly emulsified — the oil will not fully combine with ponzu, so whisk right before dressing." },
+      { step: 5, text: "Divide the 4 cups mixed greens between two plates, then arrange the 1 cup edamame, 1 cup blanched green beans, sliced tuna, and halved eggs in distinct sections over the greens — a composed Niçoise looks intentional and beautiful, not thrown together. Drizzle the ponzu vinaigrette over everything in a thin stream and serve immediately." },
+      { step: 6, text: "Serve without tossing — a Niçoise is meant to be eaten as a deconstructed plate where each element can be tasted separately or combined according to the diner's preference. The jammy egg yolk will break into the ponzu dressing on the plate and create a rich, creamy secondary sauce." }
     ],
     chefNotes: "Let the pan get truly hot — screaming hot — before the tuna touches it. A lukewarm pan will gray the fish before searing it.",
     pairing: "Dry Junmai sake or crisp Sauvignon Blanc",
@@ -605,11 +605,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1/4", unit: "cup", item: "scallions", note: "sliced" },
     ],
     method: [
-      { step: 1, text: "Bring a large pot of water to a rolling boil, then add the 6 oz dry soba noodles." },
-      { step: 2, text: "Cook the 6 oz dry soba noodles for 4–5 minutes, or until tender but still slightly firm at the center." },
-      { step: 3, text: "Drain the 6 oz cooked soba noodles immediately, rinse under cold water, and shake the colander until no water drips." },
-      { step: 4, text: "Return the 6 oz soba noodles to the pot over low heat and toss for 1 minute, until warm and separated." },
-      { step: 5, text: "Serve the 6 oz warm soba noodles immediately, when they look loose, evenly heated, and slightly glossy." }
+      { step: 1, text: "Bring a large pot of water — at least 4 quarts — to a rolling boil. Add the 6 oz dry soba noodles and stir immediately to prevent clumping. Cook for 4–5 minutes, tasting a noodle at 4 minutes: it should be tender throughout with just a hint of firmness at the very center." },
+      { step: 2, text: "While the noodles cook, whisk together the 2 tbsp mole paste, 1 tbsp white miso paste, 2 tbsp soy sauce, 1 tbsp sesame oil, and 3 tbsp warm water in a bowl large enough to hold all the noodles. Keep whisking until the mole paste dissolves completely — it is dense and may need a full minute of whisking to become smooth." },
+      { step: 3, text: "Drain the cooked soba noodles immediately and rinse them briefly under cold water for just 10 seconds — unlike cold soba salads, this salad is served warm, so you want to stop cooking but preserve heat. Shake the colander vigorously to expel as much water as possible." },
+      { step: 4, text: "Transfer the still-warm soba noodles directly into the bowl with the mole-miso dressing and toss continuously for 2 full minutes. The warm noodles will absorb the dressing differently than cold ones — the sauce will thicken slightly as it clings. Every strand should be deep brown and evenly coated; no dry white noodles should be visible." },
+      { step: 5, text: "Transfer to serving bowls and top with the 1/4 cup sliced scallions. Serve immediately while the noodles are warm and the dressing is still coating them actively — as the dish cools, the sauce sets and the noodles begin to stick. This is a dish best eaten within 5 minutes of dressing." }
     ],
     chefNotes: "Mole paste is sold in jars at most supermarkets in the Hispanic foods aisle. Look for Doña Maria or similar.",
     pairing: "Mexican cola or sparkling water",
@@ -646,11 +646,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "ground cumin" },
     ],
     method: [
-      { step: 1, text: "Warm a 10-inch dry skillet over medium heat, then heat the 6 corn tortilla strips for 2–3 minutes until crisp." },
-      { step: 2, text: "Place a large pot over medium heat, add the 2 minced chipotle peppers in adobo and 1 tsp ground cumin, and stir for 1 minute." },
-      { step: 3, text: "Pour in the 4 cups chicken or vegetable broth, bring it to a gentle boil, then reduce heat and simmer for 5 minutes." },
-      { step: 4, text: "Add the 2 cups shredded rotisserie chicken if using, and simmer the 4 cups broth for 3 minutes until the chicken is steaming hot." },
-      { step: 5, text: "Ladle the soup containing the 4 cups broth and 2 cups chicken into bowls, then top each serving with the 6 tortilla strips." }
+      { step: 1, text: "Slice the 6 corn tortillas into 1/2-inch strips and spread them in a single layer on a dry baking sheet. Toast in a 400°F oven for 8–10 minutes, flipping once, until they are golden, rigid, and snap cleanly when bent — not soft or pliable. Let them cool on the pan; they will continue crisping as they cool. Do this first so they are ready for topping." },
+      { step: 2, text: "In a large pot over medium heat, add the 2 minced chipotle peppers in adobo and the 1 tsp ground cumin. Toast the spices dry in the hot pot for 60 seconds, stirring constantly — you will smell the cumin blooming and the chipotle will sizzle lightly in its own adobo sauce. This dry-toast step deepens the flavor significantly." },
+      { step: 3, text: "Pour in the 1 can (14 oz) diced tomatoes with green chiles and cook, stirring, for 3 minutes until the tomatoes have reduced slightly and the liquid in the pot looks glossy and aromatic. The mixture should be bubbling actively; turn the heat down if it spatters." },
+      { step: 4, text: "Add the 4 cups chicken or vegetable broth and bring to a gentle boil. In a small bowl, dissolve the 2 tbsp red miso paste in a ladleful of the hot broth before stirring it back into the pot — never add miso directly to boiling liquid, as high heat destroys its fermented compounds. Reduce heat and simmer for 5 minutes." },
+      { step: 5, text: "Add the 2 cups shredded rotisserie chicken if using, and simmer for 3 more minutes until the chicken is completely heated through and the broth smells deeply smoky and complex. Ladle into bowls and pile the toasted tortilla strips on top just before serving — they belong on top of the hot soup, never underneath, so they stay crisp." }
     ],
     chefNotes: "Red miso is stronger and saltier than white miso. Start with 1.5 tablespoons and taste before adding the full 2 tablespoons.",
     pairing: "Mexican beer or a chile-forward Tempranillo",
@@ -684,11 +684,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "fresh epazote or cilantro", note: "chopped" },
     ],
     method: [
-      { step: 1, text: "Place a 6-quart pot over medium heat, add the 6 cups chicken broth, and bring it to a gentle simmer." },
-      { step: 2, text: "Simmer the 6 cups chicken broth for 5 minutes, adjusting the heat so the surface bubbles gently without boiling vigorously." },
-      { step: 3, text: "Add the 2 cups shredded cooked chicken to the 6 cups simmering broth and cook for 10 minutes until steaming hot." },
-      { step: 4, text: "Reduce the heat to low and keep the 6 cups broth and 2 cups chicken hot for 2 minutes, without allowing a rolling boil." },
-      { step: 5, text: "Ladle the 6 cups broth and 2 cups chicken into serving bowls while hot, checking that the chicken is fully warmed throughout." }
+      { step: 1, text: "Blend the 2 chipotle peppers in adobo with 1/2 cup of the chicken broth in a blender or small food processor until completely smooth — no visible chile flakes should remain. This puree becomes the flavor base of the soup, distributing the smoky heat evenly throughout rather than leaving it in concentrated pockets." },
+      { step: 2, text: "Pour the remaining 5.5 cups chicken broth into a large pot and add the chipotle puree. Bring to a gentle simmer over medium-high heat, stirring once to combine. Lower the heat to maintain a slow, steady simmer — about 180°F, where the surface moves but does not bubble vigorously — for 5 minutes to marry the flavors." },
+      { step: 3, text: "Add the 1 can drained chickpeas and 2 cups shredded cooked chicken, and simmer for 10 more minutes. The chickpeas should stay intact but absorb some of the smoky broth; the chicken will reconstitute from the steam and become tender again. Taste the broth — it should be smoky, rich, and lightly spicy." },
+      { step: 4, text: "In a small bowl, dissolve the 2 tbsp white miso paste in a ladleful of the hot broth until completely smooth, then stir it back into the pot — never add miso directly to boiling liquid. Add the 6 oz ramen noodles to the simmering broth and cook according to the package directions, usually 2–4 minutes for fresh, 4–5 minutes for dry." },
+      { step: 5, text: "Taste the broth one final time and adjust salt — the miso adds saltiness, so add with restraint. Ladle into deep bowls, making sure each serving gets a generous portion of noodles, chickpeas, and chicken. Top with the 1 tbsp chopped epazote or cilantro and serve immediately while the noodles are at their most tender." }
     ],
     chefNotes: "Using blended chipotle creates a smooth, reddish broth. For more texture, mince the chiles instead of blending.",
     pairing: "Cold Modelo Especial or hibiscus water",
@@ -722,11 +722,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "cup", item: "shredded cabbage", note: "for topping" },
     ],
     method: [
-      { step: 1, text: "Place a large pot over medium heat and pour in the 6 cups vegetable broth; heat for 5 minutes until steaming." },
-      { step: 2, text: "Add the 1 can white hominy, 29 oz and drained, then bring the broth to a gentle boil over medium-high heat." },
-      { step: 3, text: "Reduce the heat and simmer the 6 cups broth with the 1 can white hominy for 15 minutes until the hominy is tender." },
-      { step: 4, text: "Add the 14 oz firm tofu, pressed and cubed, and simmer for 5 minutes until heated through without breaking apart." },
-      { step: 5, text: "Ladle the hot pozole into bowls and sprinkle the 1 tsp dried oregano over the servings before serving." }
+      { step: 1, text: "Press the 14 oz firm tofu between two flat plates with a heavy book or pan on top for at least 20 minutes before cooking — water-logged tofu will dilute your broth and result in bland, spongy cubes. After pressing, cut it into 1-inch cubes and set aside. Meanwhile, drain and rinse the 1 can (29 oz) white hominy until the water runs clear." },
+      { step: 2, text: "In a large pot over medium heat, sauté the 4 minced garlic cloves with a splash of broth for 2 minutes until fragrant and softened but not browned. Add the 1 tsp dried oregano and stir for 30 more seconds — rubbing dried oregano between your fingers before adding releases more of its aromatic oils." },
+      { step: 3, text: "Pour in the 6 cups vegetable broth and add the drained hominy. Bring to a gentle boil over medium-high heat, then reduce to a steady simmer at about 180°F for 15 minutes. The hominy should become visibly plumper as it hydrates further in the broth; taste a kernel — it should be tender throughout with a characteristic chewy bounce." },
+      { step: 4, text: "In a small bowl, dissolve the 2 tbsp white miso paste in a ladle of hot broth, stirring until completely smooth. Pour this back into the pot — miso should never boil, as boiling destroys its probiotic cultures and dulls its flavor. Add the 14 oz pressed tofu cubes and simmer very gently for 5 minutes until heated through without breaking apart." },
+      { step: 5, text: "Ladle into wide, deep bowls and offer the traditional pozole toppings tableside: the 1 cup shredded cabbage, plus lime wedges, dried oregano, and chile flakes. Each guest should add toppings to their own bowl — the contrast between the hot broth and the cold, crunchy cabbage is a defining part of the pozole experience." }
     ],
     chefNotes: "Press the tofu for at least 20 minutes before adding it to the soup. Water-logged tofu will dilute your carefully built broth.",
     pairing: "Fresh agua fresca or light lager",
@@ -760,12 +760,12 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "olive oil" },
     ],
     method: [
-      { step: 1, text: "Preheat the oven to 425°F and arrange the 2 lbs Roma tomatoes, halved, with the 1 medium yellow onion, quartered." },
-      { step: 2, text: "Add the 4 cloves garlic and 1 tbsp olive oil to the vegetables, then toss and spread them on a sheet pan." },
-      { step: 3, text: "Roast the 2 lbs tomatoes and vegetables for 25 minutes at 425°F until caramelized and lightly charred at the edges." },
-      { step: 4, text: "Transfer the roasted vegetables and 2 cups vegetable broth to a blender, then blend until completely smooth and creamy." },
-      { step: 5, text: "Pour the blended soup through a fine-mesh strainer into a pot, pressing the 2 lbs tomatoes and vegetables to extract liquid." },
-      { step: 6, text: "Whisk the 2 tbsp white miso paste with the 1 cup heavy cream, stir into the soup, and simmer 5 minutes until steaming." }
+      { step: 1, text: "Preheat the oven to 425°F. Place the 2 lbs Roma tomatoes cut-side up on a large rimmed baking sheet, then add the 1 quartered yellow onion and 4 garlic cloves around them. Drizzle the 1 tbsp olive oil over everything and toss to coat. Arrange in a single layer — crowding the pan creates steam and prevents caramelization." },
+      { step: 2, text: "Roast for 25 minutes at 425°F until the tomato skins are blistered and pulling away from the flesh, the onion edges are browned and slightly charred, and the garlic cloves are golden and soft enough to press flat with a finger. The caramelization happening in this step builds the flavor foundation — pale, under-roasted vegetables produce a flat bisque." },
+      { step: 3, text: "Transfer the roasted vegetables and all their accumulated juices to a blender along with the 2 cups vegetable broth. Blend on high for 2 full minutes until the mixture is velvety and completely smooth — no skin or seed pieces should be visible. Work in batches if needed; never fill a blender more than halfway with hot liquid." },
+      { step: 4, text: "Pour the blended soup through a fine-mesh strainer set over the pot, using the back of a ladle to press the mixture through. This step produces the silky, refined texture of a true bisque; skipping it will leave the soup slightly grainy from tomato seeds and skin fragments. Discard the solids." },
+      { step: 5, text: "In a small bowl, whisk the 2 tbsp white miso paste with 2 tbsp of the warm cream until smooth, then whisk this into the remaining 1 cup heavy cream. Stir the miso cream into the bisque over low heat and warm for 5 minutes, never letting it boil. Taste and adjust salt — the miso adds significant saltiness, so season carefully." },
+      { step: 6, text: "Ladle into warmed bowls. The bisque should be deep orange-red, glossy, and thick enough to coat the back of a spoon without running immediately. Serve with grilled bread or croutons for dipping — the texture is designed to be scooped up, not just sipped." }
     ],
     chefNotes: "Roasting the tomatoes and onion first is what separates a great bisque from a mediocre one. The caramelization adds depth no amount of added spice can replicate.",
     pairing: "Grilled cheese sandwich (the classic) or crispy croutons",
@@ -799,12 +799,12 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1/4", unit: "cup", item: "scallions", note: "sliced" },
     ],
     method: [
-      { step: 1, text: "Melt the 2 tbsp butter in a large pot over medium heat for 2 minutes, until fully liquid and lightly foaming." },
-      { step: 2, text: "Add the 2 cups diced Yukon gold potato, 4 cups corn kernels, and 3 cups whole milk or oat milk to the pot." },
-      { step: 3, text: "Bring the 2 cups potato, 4 cups corn, and 3 cups milk to a gentle simmer over medium heat, avoiding a full boil." },
-      { step: 4, text: "Simmer the chowder for 15 minutes, stirring occasionally, until the 2 cups diced potato are fork-tender and the corn is bright." },
-      { step: 5, text: "Blend half of the chowder made with the 4 cups corn until smooth, then return it to the pot and stir until thickened." },
-      { step: 6, text: "Ladle the hot chowder containing the 2 cups potato and 4 cups corn into bowls while it is creamy and visibly thickened." }
+      { step: 1, text: "Melt the 2 tbsp butter in a large, heavy-bottomed pot over medium heat until it foams and the foam begins to subside — about 2 minutes. Add the 1 medium diced onion and cook, stirring occasionally, for 5–7 minutes until completely translucent and soft with golden edges. Rushing this step gives you raw-tasting onion in your chowder." },
+      { step: 2, text: "Add the 2 cups diced Yukon gold potato to the pot and stir to coat with the butter and onion. Yukon golds are ideal for chowder because they hold their shape while giving up enough starch to naturally thicken the broth — do not substitute waxy reds (too firm) or russets (too crumbly)." },
+      { step: 3, text: "Pour in the 3 cups whole milk or oat milk and add the 4 cups corn kernels. Bring the mixture to a gentle simmer over medium heat — never a full boil, which will cause the milk to scorch on the bottom of the pot. Stir regularly and watch the heat carefully; reduce immediately if you see any bubbling at the edges." },
+      { step: 4, text: "Simmer for 15 minutes, stirring occasionally, until the 2 cups diced potato yield easily to a fork — they should offer no resistance when pierced. Scoop out roughly half the chowder into a blender and blend until completely smooth, then return it to the pot. This half-blend technique creates a silky body while keeping some potato and corn whole for texture." },
+      { step: 5, text: "In a small bowl, dissolve the 2 tbsp white miso paste in a ladle of the warm chowder, whisking until smooth, then stir it back into the pot. Keep the heat low — boiling destroys the miso's delicate flavor compounds. Top with the 1/4 cup sliced scallions and serve immediately in deep, warmed bowls." },
+      { step: 6, text: "Ladle the chowder while it is still actively steaming — the best corn chowder is piping hot, thick enough to coat the bowl's surface, and sweet-smelling from the fresh corn. If the chowder has thickened too much on standing, thin with a splash of warm milk and stir to recombine before serving." }
     ],
     chefNotes: "Blending only half the chowder gives you the best of both textures — silky body with whole corn and potato pieces.",
     pairing: "Crusty sourdough bread",
@@ -838,11 +838,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "fresh lime juice" },
     ],
     method: [
-      { step: 1, text: "Place 2 cans black beans, drained, 4 cups vegetable broth, and 1 minced serrano chile in a 4-quart pot." },
-      { step: 2, text: "Heat the 4-quart pot over medium-high heat until the 4 cups vegetable broth reaches a gentle simmer, about 5 minutes." },
-      { step: 3, text: "Reduce heat to medium-low and simmer the 2 cans black beans with the 1 minced serrano chile for 15 minutes." },
-      { step: 4, text: "Mash about one-third of the 2 cans black beans against the pot until the 4 cups broth looks slightly thickened." },
-      { step: 5, text: "Remove the pot from heat, stir in the 2 tbsp fresh lime juice, and serve when the soup is steaming hot." }
+      { step: 1, text: "In a 4-quart pot over medium heat, warm a splash of vegetable broth and add the 2 minced garlic cloves and the 1 minced serrano chile. Cook for 2 minutes, stirring constantly, until the garlic turns golden and the serrano softens — the kitchen should smell sharp and aromatic. Add the 1 tsp ground cumin and stir for 30 more seconds to toast the spice." },
+      { step: 2, text: "Add the 2 drained cans of black beans and the remaining 4 cups vegetable broth. Increase the heat to medium-high and bring to a gentle boil, then reduce to a steady simmer. After 5 minutes, the beans should be visibly softened and plumping further in the hot broth." },
+      { step: 3, text: "Simmer for 15 minutes total, then mash approximately one-third of the beans directly in the pot using a potato masher or the back of a large spoon — press firmly against the bottom and sides to crush as many beans as possible. The soup should thicken noticeably as the mashed beans release their starch; the broth transforms from thin to silky." },
+      { step: 4, text: "Remove the pot from the heat — this is critical. In a small bowl, dissolve the 2 tbsp white miso paste in a ladle of the hot soup (not boiling liquid) until completely smooth, then stir it back into the pot. Boiling destroys the miso's enzymes and mellows its fermented depth; adding it off the heat preserves all of that complexity." },
+      { step: 5, text: "Stir in the 2 tbsp fresh lime juice and serve immediately. The soup should be thick enough to hold a spoon upright briefly, dark purplish-black, and smell of cumin and fermented miso with a bright lime finish. Offer warm tortillas or crusty bread alongside for dipping." }
     ],
     chefNotes: "Mashing some of the beans creates a naturally thick broth without any flour or starch — a cleaner thickening method.",
     pairing: "Crusty bread or warm tortillas",
@@ -875,11 +875,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1/4", unit: "tsp", item: "Tajín", note: "for garnish" },
     ],
     method: [
-      { step: 1, text: "Place the 4 roughly chopped Persian cucumbers in a blender, reserving the 2 tbsp white miso paste for garnish." },
-      { step: 2, text: "Blend the 4 Persian cucumbers on high for 2 minutes, stopping once to scrape down the sides if needed." },
-      { step: 3, text: "Continue blending the 4 Persian cucumbers until the mixture is uniformly smooth and no visible chunks remain." },
-      { step: 4, text: "Pour the blended 4 Persian cucumbers into a covered bowl and refrigerate for at least 30 minutes until thoroughly chilled." },
-      { step: 5, text: "Ladle the chilled cucumber soup into bowls and garnish evenly with the reserved 2 tbsp white miso paste before serving." }
+      { step: 1, text: "Roughly chop the 4 Persian cucumbers — no need to peel or seed them, as the skin adds color and nutrients and the seeds blend smooth. Add them to a blender along with the 2 tbsp white miso paste, 1 cup cold water or dashi, 2 tbsp lime juice, and 1 garlic clove. The cold water or dashi keeps the blended soup chilled and prevents the cucumber from oxidizing to a dull color." },
+      { step: 2, text: "Blend on high speed for 2 full minutes — start on low and gradually increase to prevent splashing hot spots in a cold liquid. Pause once to scrape down the sides of the blender. The finished mixture should be completely smooth, vivid green, and uniform in texture with no visible cucumber chunks or miso lumps." },
+      { step: 3, text: "Pour the blended soup through a fine-mesh strainer into a covered bowl, pressing the solids gently to extract all the liquid. This straining step gives the soup a refined, almost silky texture that makes it feel like a restaurant preparation rather than a blended vegetable drink." },
+      { step: 4, text: "Cover the bowl tightly with plastic wrap pressed directly against the surface of the soup — this prevents oxidation and maintains the vivid green color. Refrigerate for at least 30 minutes, or up to 4 hours. For best results, chill the serving bowls in the freezer for 10 minutes before plating." },
+      { step: 5, text: "Ladle the cold soup into the chilled bowls and immediately dust the surface with the 1/4 tsp Tajín from a height for even coverage. The deep green surface with the orange-red Tajín dusting is visually striking; serve at once while the soup is thoroughly cold and the Tajín has not yet dissolved into the liquid." }
     ],
     chefNotes: "This soup is best made an hour ahead and served in bowls that have been placed in the freezer for 10 minutes.",
     pairing: "Cold sake or sparkling water",
@@ -913,11 +913,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "fresh lime juice" },
     ],
     method: [
-      { step: 1, text: "Heat a 4-quart pot over medium heat, add the 1 tsp ground cumin, and toast for 30 seconds until fragrant." },
-      { step: 2, text: "Add the 1.5 cups rinsed red lentils and 6 cups vegetable broth to the pot, then stir to combine." },
-      { step: 3, text: "Increase heat to high and bring the 1.5 cups red lentils and 6 cups broth to a full boil." },
-      { step: 4, text: "Reduce heat to low and simmer the 1.5 cups red lentils uncovered for 20 minutes, until they dissolve into the broth." },
-      { step: 5, text: "Remove the pot from heat, stir in the 2 tbsp fresh lime juice, and serve when the soup is thick and steaming." }
+      { step: 1, text: "In a 4-quart pot over medium heat, warm a splash of the vegetable broth and add the 1 medium diced onion. Cook for 5 minutes, stirring occasionally, until softened and translucent. Add the 1 tsp ground cumin and toast for 30 seconds, stirring — you will smell it bloom and darken slightly, which releases its earthy, warm aroma into the base of the soup." },
+      { step: 2, text: "Add the 2 minced chipotle peppers in adobo and stir for 1 minute until fragrant. The chipotle will release its deep brick-red color into the pot. Rinse the 1.5 cups red lentils under cold water until the water runs clear, then add them to the pot along with the 6 cups vegetable broth." },
+      { step: 3, text: "Increase the heat to high and bring to a full boil, then reduce to a moderate simmer. Cook uncovered for 20 minutes, stirring every 5 minutes to prevent the lentils from sticking to the bottom — red lentils produce significant starch as they cook. Watch as they dissolve from small, round discs into a smooth, thick, ochre-colored porridge." },
+      { step: 4, text: "After 20 minutes, the lentils should have completely collapsed and the soup should be thick enough to hold the impression of a spoon dragged across the surface. Remove the pot from the heat. In a small bowl, dissolve the 2 tbsp white miso paste in a ladle of the hot soup until smooth, then stir it back into the pot off the heat." },
+      { step: 5, text: "Stir in the 2 tbsp fresh lime juice, which brightens the smoky, earthy depth with acid. Taste for salt — the miso and chipotle both contribute saltiness, so add carefully. Serve in deep bowls; the soup will continue thickening as it cools, so serve it while it is still loose and pourable, not after it has sat for 10 minutes and become paste-like." }
     ],
     chefNotes: "Red lentils are the only lentil that naturally collapses into a smooth texture without blending — essential for this recipe.",
     pairing: "Crusty bread or warm naan",
@@ -951,12 +951,12 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "clove", item: "garlic" },
     ],
     method: [
-      { step: 1, text: "Add the 2 lbs ripe tomatoes, 1 cup cold dashi broth, 1/2 English cucumber, and 1/2 red bell pepper to a blender." },
-      { step: 2, text: "Add the 2 tbsp sherry vinegar or rice vinegar, 2 tbsp olive oil, and 1 clove garlic, then secure the blender lid." },
-      { step: 3, text: "Blend the mixture containing the 2 lbs ripe tomatoes on high for 2 minutes until completely smooth and evenly colored." },
-      { step: 4, text: "Pour the blended mixture containing the 2 lbs ripe tomatoes through a fine-mesh strainer, pressing the solids firmly." },
-      { step: 5, text: "Refrigerate the strained gazpacho made with the 1 cup dashi broth at 40°F (4°C) for at least 1 hour until thoroughly cold." },
-      { step: 6, text: "Ladle the chilled gazpacho made with the 2 tbsp vinegar and 2 tbsp olive oil into cold bowls when the surface looks glossy and smooth." }
+      { step: 1, text: "The quality of the tomatoes is non-negotiable: use the ripest, most fragrant tomatoes you can find — at peak ripeness, they should feel heavy and soft, smell intensely tomato-like at the stem, and give slightly when gently pressed. Roughly chop the 2 lbs tomatoes into large pieces and place them in the blender first, as they produce the most liquid and help the other vegetables blend smoothly." },
+      { step: 2, text: "Add the 1/2 roughly chopped English cucumber, 1/2 roughly chopped red bell pepper, 1 garlic clove, 2 tbsp sherry or rice vinegar, and 2 tbsp olive oil to the blender. Pour in the 1 cup cold dashi broth last — the cold dashi keeps the blend temperature low, preventing the tomatoes from cooking slightly in a hot blender." },
+      { step: 3, text: "Blend on high speed for 2 full minutes until completely smooth and uniform in color — a deep, vivid orange-red. Stop the blender and check by looking at the inside of the jar; if any visible vegetable fragments remain, blend for another 30 seconds. The mixture should look like a dense, glossy liquid, not a chunky purée." },
+      { step: 4, text: "Pour the blended gazpacho through a fine-mesh strainer set over a large bowl, using the back of a ladle to press the mixture through. This removes the tomato skins and seeds, producing a refined, silky texture. Discard the solids. Stir the strained gazpacho, taste for seasoning, and add salt and vinegar as needed." },
+      { step: 5, text: "Cover the bowl tightly and refrigerate for at least 1 hour until thoroughly cold — ideally 2 hours for a fully developed flavor. The dashi's oceanic minerality will settle into the tomato base during this rest, creating a depth that is not present immediately after blending. Serve in cold bowls with a drizzle of good olive oil." },
+      { step: 6, text: "Ladle into chilled bowls and garnish with a thin drizzle of olive oil in a spiral pattern on the surface. The oil will bead on the glossy surface for a beautiful presentation. Eat immediately while the soup is at its coldest — gazpacho loses its appeal as it approaches room temperature." }
     ],
     chefNotes: "The quality of the tomatoes makes or breaks this soup. Wait for peak summer tomatoes — bland winter tomatoes will produce a bland gazpacho.",
     pairing: "Cold fino Sherry or sparkling water",
@@ -989,11 +989,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "scallions", note: "sliced" },
     ],
     method: [
-      { step: 1, text: "Heat the 4 cups vegetable broth or dashi in a 3-quart saucepan to 190°F (88°C), just below a boil, for about 5 minutes." },
-      { step: 2, text: "Add the 1 cup sliced crimini mushrooms and maintain a gentle 190°F (88°C) simmer for 5 minutes until tender." },
-      { step: 3, text: "Gently add the 14 oz silken tofu cut into 1-inch cubes and warm it at 185°F (85°C) for 2 minutes without stirring." },
-      { step: 4, text: "Remove the saucepan from the heat, add the 2 tbsp sliced scallions, and let them soften in the hot broth for 1 minute." },
-      { step: 5, text: "Ladle the soup containing the 4 cups broth, 1 cup mushrooms, 14 oz tofu, and 2 tbsp scallions into bowls and serve immediately." }
+      { step: 1, text: "Pour the 4 cups vegetable broth or dashi into a 3-quart saucepan and heat over medium heat to about 190°F — just below a simmer, where small bubbles form at the edges and the surface shimmers but does not boil. Dashi should never boil after it has been made; boiling drives off its delicate bonito and kombu flavors." },
+      { step: 2, text: "Add the 1 cup sliced shiitake mushrooms and 1 cup sliced crimini mushrooms to the hot broth. Maintain the temperature at 185–190°F for 5 minutes, stirring gently — the mushrooms will release their moisture and absorb the broth in equal measure, becoming tender and intensely flavored. Taste the broth now; it should be noticeably deeper and more savory from the mushrooms." },
+      { step: 3, text: "In a small bowl, dissolve the 3 tbsp white miso paste in a ladle of the hot (not boiling) broth, whisking until completely smooth. Pour this back into the pot and stir gently. The miso should never boil — keep the heat at medium-low from this point. Taste: the soup should be savory, round, and slightly sweet from the dashi." },
+      { step: 4, text: "Carefully lower the 14 oz silken tofu, cut into 1-inch cubes, into the broth using a large spoon. Silken tofu is extraordinarily fragile — do not stir, do not pour, and do not agitate the pot. Simply slide the cubes in from the spoon and let them settle undisturbed. Warm at 185°F for 2 minutes until heated through." },
+      { step: 5, text: "Remove the pot from the heat and scatter the 2 tbsp sliced scallions over the surface. Let them soften in the residual heat for 1 minute before serving. Ladle into bowls with great care, making sure each bowl receives equal portions of mushrooms, tofu, and scallions, and serve immediately while the soup is at its most fragrant." }
     ],
     chefNotes: "Silken tofu falls apart when aggressively stirred. Slide it in from a spoon and let it settle undisturbed.",
     pairing: "Steamed white rice or soba noodles",
@@ -1027,12 +1027,12 @@ export const lunchRecipes: Recipe[] = [
       { qty: "2", unit: "", item: "zucchini", note: "cut into half-moons" },
     ],
     method: [
-      { step: 1, text: "Shape the 1 lb ground chicken into evenly sized rounds and arrange them on a clean plate beside the 2 zucchini." },
-      { step: 2, text: "Heat a 10-inch nonstick skillet to 350°F (175°C) over medium heat for 2 minutes until the surface is hot." },
-      { step: 3, text: "Add the 1 lb ground chicken rounds and cook at 350°F (175°C) for 8 minutes until the undersides are browned." },
-      { step: 4, text: "Turn the 1 lb ground chicken rounds and cook for 7 more minutes at 350°F (175°C) until opaque throughout and firm." },
-      { step: 5, text: "Add the 2 zucchini cut into half-moons and cook at 350°F (175°C) for 10 minutes until tender with lightly browned edges." },
-      { step: 6, text: "Serve the cooked 1 lb ground chicken rounds with the 2 zucchini immediately, when the chicken is opaque and the zucchini is tender." }
+      { step: 1, text: "In a medium bowl, combine the 1 lb ground chicken, 1/4 cup panko breadcrumbs, 1 tbsp white miso paste, and 1 large egg. Mix gently with your hands until just combined — overmixing compacts the proteins and produces tough, dense meatballs. The mixture should look slightly sticky and hold together when pressed between your palms but not be so wet that it streams between your fingers." },
+      { step: 2, text: "Fill a small bowl with cold water and keep it beside your workspace. Wet your hands thoroughly before rolling each meatball — the water creates a film that prevents the chicken from sticking to your palms and allows you to roll a smooth, round sphere. Shape into balls about the size of a golf ball, roughly 1.5 inches in diameter, and place them on a plate." },
+      { step: 3, text: "Bring the 6 cups chicken broth to a gentle simmer in a large pot over medium heat. Drop the meatballs one by one into the simmering broth — not boiling; boiling will break the meatballs apart before they set. Cook undisturbed for the first 5 minutes while the exterior firms up, then gently turn them with a spoon." },
+      { step: 4, text: "Add the 2 carrots, sliced into rounds, and continue simmering for 10 minutes. Add the 2 zucchini, cut into half-moons, and cook for another 7–8 minutes until all vegetables are tender and the meatballs are cooked through — cut one open to verify there is no pink at the center. The broth should have taken on a golden color from the chicken and vegetables." },
+      { step: 5, text: "In a small bowl, dissolve a spoonful of miso paste in a ladle of the broth, then stir it back into the soup off the heat if any miso paste remains to add. Taste and adjust salt — the miso is salty, so season with care. Ladle into deep bowls with 3–4 meatballs per serving and a generous portion of vegetables, and serve immediately." },
+      { step: 6, text: "Serve with warm corn tortillas on the side for dipping into the broth — a traditional albóndigas accompaniment that transforms this soup into a complete, satisfying meal. The broth is rich enough to be sipped on its own between bites of meatball and vegetable." }
     ],
     chefNotes: "Wet hands prevent the meat from sticking while forming meatballs. Keep a bowl of water nearby and dip your hands between each one.",
     pairing: "Warm corn tortillas and sliced serrano chiles",
@@ -1065,11 +1065,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "vegetable oil" },
     ],
     method: [
-      { step: 1, text: "Heat 1 tbsp vegetable oil in a wide 12-inch sauté pan with a lid over medium heat until shimmering." },
-      { step: 2, text: "Add the 8 oz fideo noodles or thin spaghetti broken into pieces (14 oz) and toast for about 4 minutes until evenly golden." },
-      { step: 3, text: "Pour in the 2 cups chicken or vegetable broth, stirring thoroughly so the liquid coats the toasted 8 oz noodles." },
-      { step: 4, text: "Bring the 2 cups chicken or vegetable broth to a simmer, cover the pan, and cook over low heat for about 12 minutes." },
-      { step: 5, text: "Uncover and check that the 8 oz noodles are tender and the 2 cups broth are absorbed, with the bottom slightly crisp." }
+      { step: 1, text: "Heat the 1 tbsp vegetable oil in a wide 12-inch sauté pan with a lid over medium heat until it shimmers and moves fluidly across the surface. Add the 8 oz fideo noodles or thin broken spaghetti in a single layer and toast for 4 minutes, stirring frequently, until they turn an even golden amber — the color of toasted breadcrumbs. You will smell a distinctly nutty aroma; this is the defining flavor of sopa seca, and it cannot be replicated any other way." },
+      { step: 2, text: "Add the 2 minced garlic cloves and stir for 30 seconds until fragrant. Pour in the 1 can (14 oz) crushed tomatoes and stir vigorously — the tomatoes will sizzle and spatter when they hit the hot pan. Cook for 2 minutes, stirring, until the tomato mixture has reduced slightly and darkened from bright red to a deeper, more complex rust color." },
+      { step: 3, text: "In a small bowl, dissolve the 2 tbsp white miso paste in a few tablespoons of the chicken or vegetable broth until completely smooth, then stir this into the remaining broth. Pour the miso broth into the pan and stir to combine with the tomato-noodle mixture. The liquid should just cover the noodles." },
+      { step: 4, text: "Bring to a simmer, then reduce the heat to low, cover the pan tightly, and cook for 12 minutes without lifting the lid — opening the lid releases steam that the noodles need for even cooking. The noodles will absorb essentially all the liquid during this time." },
+      { step: 5, text: "After 12 minutes, remove the lid and check: the noodles should be tender, the liquid nearly completely absorbed, and the bottom of the pan should have a thin, golden, slightly crispy layer — this is prized in sopa seca, not a mistake. If the noodles are still firm, replace the lid and cook 3 more minutes. Serve directly from the pan with a large spoon." }
     ],
     chefNotes: "The toasting step is what gives sopa seca its characteristic nutty flavor. Under-toasted noodles result in a bland, starchy dish.",
     pairing: "Crema and sliced avocado on the side",
@@ -1103,11 +1103,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "6", unit: "", item: "corn tortillas", note: "sliced and baked until crispy" },
     ],
     method: [
-      { step: 1, text: "Place the 3 cups shredded cooked chicken in a medium saucepan and warm over medium-low heat for 5 minutes until steaming." },
-      { step: 2, text: "Add the 1 tbsp red miso paste to the 3 cups shredded cooked chicken and stir over medium-low heat until evenly coated." },
-      { step: 3, text: "Cook the 3 cups shredded cooked chicken and 1 tbsp red miso paste for 3 minutes, stirring until fragrant and glossy." },
-      { step: 4, text: "Reduce the heat to low, cover the saucepan, and warm the 3 cups shredded cooked chicken for 5 minutes until piping hot." },
-      { step: 5, text: "Divide the hot 3 cups shredded cooked chicken between bowls and scrape in all 1 tbsp red miso paste from the saucepan." }
+      { step: 1, text: "Slice the 6 corn tortillas into 1/2-inch strips and arrange on a baking sheet in a single layer. Bake at 400°F for 8–10 minutes, flipping once at the halfway point, until the strips are rigid, golden, and snap cleanly when bent. Cool them completely on the pan — they will crisp further as they cool and hold their crunch much longer than pan-fried strips." },
+      { step: 2, text: "Blend the 1 chipotle pepper in adobo with 1/2 cup of the dashi or chicken broth until smooth. In a large pot over medium heat, add the 1 tsp ground cumin and toast it dry for 30 seconds, then pour in the chipotle purée and stir for 1 minute until darkened and fragrant — the room will smell unmistakably smoky." },
+      { step: 3, text: "Add the 1 can (14 oz) fire-roasted diced tomatoes and cook for 3 minutes, stirring, until the tomato liquid has reduced and the mixture looks concentrated and glossy. Pour in the remaining dashi or chicken broth and bring to a gentle simmer. The combination of fire-roasted tomatoes and smoky chipotle creates the soup's complex base." },
+      { step: 4, text: "Add the 3 cups shredded cooked chicken and simmer for 5 minutes until the chicken is steaming hot and has absorbed some of the broth's smoky flavor. Remove from the heat. Dissolve the 1 tbsp red miso paste in a ladle of the hot broth until smooth, then stir it back into the pot — miso should never boil." },
+      { step: 5, text: "Taste the broth: it should be smoky, savory, and complex, with the chipotle's heat arriving at the back of the throat rather than immediately on the tongue. Ladle into deep bowls, pile the baked tortilla strips on top — never beneath the broth — and serve immediately while the strips are crisp. They will soften within 3–4 minutes, so encourage guests to eat quickly." }
     ],
     chefNotes: "Bake tortilla strips at 400°F for 10 minutes instead of frying — same crunch, less mess.",
     pairing: "Cold lager or lime sparkling water",
@@ -1143,12 +1143,12 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "sesame seeds" },
     ],
     method: [
-      { step: 1, text: "Heat the 2 cups hot green tea broth, or dashi with green tea, in a saucepan until steaming but not boiling." },
-      { step: 2, text: "Stir the 1 tbsp soy sauce into the 2 cups hot green tea broth and keep the seasoned broth over low heat." },
-      { step: 3, text: "Heat the 1 cup carnitas in a skillet over medium heat for 4 to 5 minutes until hot and slightly crisp at the edges." },
-      { step: 4, text: "Divide the 2 cups hot cooked white rice between two bowls and place the 1 cup heated carnitas evenly on top." },
-      { step: 5, text: "Pour the 2 cups hot green tea broth over the 2 cups rice and 1 cup carnitas until the rice is partly submerged." },
-      { step: 6, text: "Sprinkle the 1 tsp sesame seeds over the bowls and eat immediately while the 2 cups broth remain hot." }
+      { step: 1, text: "Brew a strong cup of green tea — gyokuro or sencha works best — then combine it with dashi in equal parts to create 2 cups of green tea broth. Season with the 1 tbsp soy sauce, stir to combine, and keep over the lowest possible heat. The broth should be hot enough to steam but never boiling, which would make the tea bitter." },
+      { step: 2, text: "Heat the 1 cup carnitas in a small skillet over medium-high heat for 4–5 minutes, turning occasionally, until the edges are slightly crispy and the pork is hot throughout. The brief crisping is important — soft, steamed-through carnitas will become mushy when the hot broth is poured over them; crispy bits will hold up for the first few bites." },
+      { step: 3, text: "Divide the 2 cups hot cooked white rice evenly between two deep bowls — Japanese rice bowls with higher sides work best for ochazuke. Mound the rice slightly in the center; it should not be packed flat, as you want it to absorb the broth gradually rather than all at once." },
+      { step: 4, text: "Place the 1 cup crisped carnitas directly on top of the mounded rice, dividing equally between bowls. The contrast between the crispy-edged pork and the soft rice is the textural heart of the dish — keep the pork piled and visible rather than pressed flat." },
+      { step: 5, text: "At the table, pour the 2 cups hot green tea broth slowly around the edges of the bowl, not directly over the carnitas — you want the broth to rise up through the rice and submerge it partially rather than washing away the pork's crust. Sprinkle the 2 tbsp scallions and 1 tsp sesame seeds over the top. Eat immediately, while the contrast between crispy pork and warm, softening rice is at its most dramatic." },
+      { step: 6, text: "Encourage diners to eat this dish as soon as the broth is poured — ochazuke is a dish of the immediate moment. Within 3 minutes the rice will be fully saturated and the carnitas will soften into the broth, creating a different but equally satisfying porridge-like texture." }
     ],
     chefNotes: "Use crispy carnitas — the contrast between the crunchy pork bits and the softened rice in warm broth is what makes this dish memorable.",
     pairing: "More green tea",
@@ -1182,11 +1182,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "4", unit: "cloves", item: "garlic", note: "minced" },
     ],
     method: [
-      { step: 1, text: "Combine the 1/4 cup soy sauce and 2 tbsp sesame oil, add the 2 lbs pork shoulder, and marinate for 1 hour or overnight." },
-      { step: 2, text: "Heat a Dutch oven over high heat, then add the marinated 2 lbs pork shoulder in a single layer without extra oil." },
-      { step: 3, text: "Sear the 2 lbs pork shoulder in batches for 3–4 minutes per batch, turning until every side is deeply browned." },
-      { step: 4, text: "Return the 2 lbs pork shoulder to the pot with the reserved 1/4 cup soy sauce mixture, cover, and braise on low for 90 minutes." },
-      { step: 5, text: "Shred the 2 lbs pork shoulder when fork-tender, then spoon the cooking juices over the pork before serving." }
+      { step: 1, text: "Whisk together the 1/4 cup soy sauce, 1/4 cup grated Asian pear or apple, 2 tbsp sesame oil, 2 tbsp brown sugar, and 4 minced garlic cloves in a large bowl until the sugar dissolves. The grated pear is not optional — it contains natural enzymes (bromelain and papain) that break down meat proteins during marination, making the pork shoulder noticeably more tender than it would be with soy sauce alone." },
+      { step: 2, text: "Add the 2 lbs pork shoulder cut into 2-inch chunks to the marinade and toss to coat every surface. Cover and marinate in the refrigerator for at least 1 hour, or overnight for maximum flavor and tenderness. When you remove the pork, the surface should look deep brown from the soy and the meat should feel slightly tacky from the sugar." },
+      { step: 3, text: "Heat a Dutch oven or heavy pot over high heat until smoking. Working in batches — never crowding the pot — sear the marinated pork chunks for 3–4 minutes per side without moving them, until every exposed surface is deeply browned. Crowding causes steaming; you need direct contact with the hot metal to develop the caramelized crust." },
+      { step: 4, text: "Once all the pork is seared, return all pieces to the pot and pour any remaining marinade over them. Add 1/2 cup water, reduce the heat to low, cover tightly, and braise for 90 minutes. Check every 30 minutes and add a splash of water if the pot looks dry. After 90 minutes, the pork should be fork-tender — a fork should slide in with no resistance." },
+      { step: 5, text: "Shred the pork directly in the pot using two forks, pulling it apart into large, uneven chunks — some smaller shreds are fine and will provide textural variety. Increase the heat to medium and cook the shredded pork uncovered for 5 minutes in the reduced braising liquid, stirring occasionally, until the liquid reduces and the pork is glazed and slightly caramelized. Serve over the 4 cups cooked white rice." }
     ],
     chefNotes: "The grated pear in the marinade contains enzymes that naturally tenderize the pork — do not skip it or substitute with juice, which lacks those enzymes.",
     pairing: "Cold Korean barley tea or sparkling water",
@@ -1220,12 +1220,12 @@ export const lunchRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "soy sauce" },
     ],
     method: [
-      { step: 1, text: "Combine the 8 oz sashimi-grade tuna with the 2 tbsp Japanese mayonnaise until every piece is evenly coated." },
-      { step: 2, text: "Refrigerate the coated 8 oz tuna for 15 minutes while keeping the 2 cups seasoned sushi rice ready to serve." },
-      { step: 3, text: "Fluff the 2 cups seasoned sushi rice gently with a fork, keeping the grains separate and intact." },
-      { step: 4, text: "Divide the 2 cups seasoned sushi rice evenly between two serving bowls, creating a level base." },
-      { step: 5, text: "Arrange the chilled 8 oz tuna and 1 sliced avocado over the rice in distinct sections without mixing." },
-      { step: 6, text: "Sprinkle the bowls with 2 tbsp sesame seeds and drizzle the 2 tbsp soy sauce evenly over the tuna and rice." }
+      { step: 1, text: "Dice the 8 oz sashimi-grade tuna into small, uniform cubes — about 1/3 inch per side. Keep the tuna very cold throughout: work quickly and return the cutting board to a cold surface or set it over a bowl of ice if your kitchen is warm. Warm tuna will cook slightly from the acid in the mayo and turn gray and mealy." },
+      { step: 2, text: "In a cold bowl, fold together the 2 tbsp Japanese mayonnaise and 1 tbsp very finely minced chipotle in adobo until the mayo is uniformly rust-orange. Add the diced tuna and fold gently with a spoon — do not stir vigorously, which breaks the cubes into mush. Every cube should be lightly coated; stop folding the moment you cannot see any white mayo." },
+      { step: 3, text: "Cover the spicy tuna mixture and refrigerate for 15 minutes while you prepare the rice. Chilling firms the tuna slightly and allows the chipotle heat to distribute evenly through the mayo, creating a more uniform flavor rather than hot and mild pockets." },
+      { step: 4, text: "Fluff the 2 cups seasoned sushi rice gently with a rice paddle or wide spatula — never a fork, which tears the grains. The rice should be slightly warm and sticky but not clumped; individual grains should be visible. Divide evenly between two wide, shallow bowls and smooth into an even layer." },
+      { step: 5, text: "Arrange the chilled spicy tuna mixture in one section of each bowl and fan the 1 sliced avocado alongside it. Drizzle the 2 tbsp soy sauce over the rice — not directly over the tuna, which is already salty from the mayo. Sprinkle the 2 tbsp sesame seeds over everything and serve immediately." },
+      { step: 6, text: "This bowl is meant to be eaten by scooping rice, tuna, and avocado together in each spoonful — the different temperatures (cold tuna, warm rice) and textures (silky fish, creamy avocado, sticky rice) are all experienced simultaneously. Do not mix everything together before eating; the visual presentation of separate sections is part of the chirashi tradition." }
     ],
     chefNotes: "Diced tuna must be very cold when you mix it with the mayo — warm tuna will cook slightly from the acid in the mayo and lose its clean flavor.",
     pairing: "Cold Asahi or sparkling green tea",
@@ -1259,13 +1259,13 @@ export const lunchRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "Mexican crema or sour cream" },
     ],
     method: [
-      { step: 1, text: "Whisk the 2 tbsp chipotle in adobo sauce, 1 tbsp honey, and 1 tbsp soy sauce until the glaze is smooth." },
-      { step: 2, text: "Whisk the 2 tbsp white miso paste and 2 tbsp Mexican crema or sour cream until smooth and pourable." },
-      { step: 3, text: "Pat the 2 salmon fillets, 6 oz each, dry, then brush their flesh sides evenly with the prepared chipotle glaze." },
-      { step: 4, text: "Heat an oven-safe 10-inch skillet over high heat, then place the 2 salmon fillets flesh-side down." },
-      { step: 5, text: "Sear the 2 salmon fillets for 3 minutes, undisturbed, until the flesh is deeply browned and releases easily." },
-      { step: 6, text: "Flip the 2 salmon fillets skin-side down and cook for 3–4 minutes until opaque throughout and just cooked through." },
-      { step: 7, text: "Serve the 2 salmon fillets over the 2 cups cooked white rice, drizzle with the 2 tbsp miso crema, and spoon over pan juices." }
+      { step: 1, text: "In a small bowl, whisk together the 2 tbsp minced chipotle in adobo sauce, 1 tbsp honey, and 1 tbsp soy sauce until the glaze is smooth and glossy — it should flow like thick syrup off the whisk. In a separate bowl, whisk the 2 tbsp white miso paste and 2 tbsp Mexican crema until completely smooth and pourable. Set both aside." },
+      { step: 2, text: "Pat the 2 salmon fillets (6 oz each) completely dry with paper towels — this is the most important step for achieving a sear rather than a steam. Any moisture on the flesh creates steam in the pan and prevents the glaze from caramelizing. Brush the flesh side of each fillet generously with the chipotle-honey glaze and let it rest 5 minutes so it adheres." },
+      { step: 3, text: "Heat an oven-safe 10-inch cast-iron skillet over high heat until it is very hot and just beginning to smoke. Place the fillets flesh-side down in the pan without any added oil — the glaze contains enough sugar to act as its own lubricant. The moment the salmon touches the pan you should hear a loud, aggressive sizzle." },
+      { step: 4, text: "Sear the salmon flesh-side down for 3 full minutes without touching or moving it — the glaze needs uninterrupted contact with the hot pan to caramelize from amber to deep bronze. If you move the fish too early, you will tear off the crust before it sets. After 3 minutes, the edges should look opaque about halfway up the fillet." },
+      { step: 5, text: "Flip the fillets skin-side down and cook for 3–4 more minutes. The skin will crisp while the flesh finishes cooking from the residual heat. The fish is done when it flakes apart easily when pressed with a finger at the thickest point and the center looks barely opaque rather than raw pink." },
+      { step: 6, text: "Serve each fillet over 1 cup of the cooked white rice, drizzle the miso-lime crema over the top in a zigzag pattern, and spoon any sticky pan juices over the salmon. The sauce should be applied immediately before serving — it softens the caramelized crust over time." },
+      { step: 7, text: "Encourage diners to break into the fish at the table so the interior's pink-to-opaque gradient is visible — it shows the salmon is cooked correctly, not overcooked. Overcooked salmon turns gray and dry throughout; perfectly cooked salmon retains a slightly translucent center that finishes cooking on the plate." }
     ],
     chefNotes: "The honey in the glaze will brown very quickly over high heat. Watch the pan carefully — the line between beautifully caramelized and burned is narrow.",
     pairing: "Dry Riesling or sparkling water with lime",
@@ -1298,11 +1298,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "2", unit: "cups", item: "cooked white rice" },
     ],
     method: [
-      { step: 1, text: "Combine 3 tbsp soy sauce, 3 tbsp mirin, 1 tbsp sake or dry white wine, and 1 tbsp sugar in a saucepan; simmer over medium heat for about 5 minutes until syrupy." },
-      { step: 2, text: "Pat the 4 boneless skinless chicken thighs completely dry, then set them aside while the teriyaki mixture finishes reducing." },
-      { step: 3, text: "Heat a 12-inch skillet over medium-high heat and cook the 4 chicken thighs for 5 minutes per side until deeply browned and cooked through." },
-      { step: 4, text: "Pour the reduced glaze over the 4 chicken thighs; turn and baste them often until the coating is glossy, sticky, and lacquered." },
-      { step: 5, text: "Slice the 4 chicken thighs and serve them over the 2 cups cooked white rice, spooning any remaining sticky glaze over each portion." }
+      { step: 1, text: "In a small saucepan, combine the 3 tbsp soy sauce, 3 tbsp mirin, 1 tbsp sake or dry white wine, and 1 tbsp sugar. Bring to a simmer over medium heat and cook for about 5 minutes, stirring occasionally, until the mixture has reduced by about one-third and coats the back of a spoon — it should flow slowly, like thin syrup. Remove from the heat; it will thicken more as it cools." },
+      { step: 2, text: "Pat the 4 boneless skinless chicken thighs completely dry with paper towels — absolutely no surface moisture. Wet chicken steams instead of searing and will never develop the caramelized, lacquered exterior that defines a great teriyaki. Heat a 12-inch skillet over medium-high heat for 2 minutes until hot." },
+      { step: 3, text: "Place the 4 chicken thighs in the hot dry skillet — no oil needed, as thighs contain enough fat. Cook for 5 minutes on the first side without moving them; you should hear a steady sizzle. Flip and cook for another 5 minutes. The chicken is done when it reaches 165°F at the thickest point and the juices run clear when pierced." },
+      { step: 4, text: "Reduce the heat to medium-low and pour the teriyaki glaze over the 4 chicken thighs. Turn each piece to coat both sides, then continue cooking for 2–3 minutes, turning and basting every 30 seconds, until the glaze has reduced to a thick, shiny lacquer that clings to the chicken without running. The surface should be mahogany-colored and glossy enough to reflect light." },
+      { step: 5, text: "Transfer the glazed chicken to a cutting board and let it rest for 3 minutes so the juices redistribute — slicing immediately will cause all the moisture to run out onto the board. Slice each thigh into 4–5 pieces on a diagonal and arrange over the 2 cups cooked white rice, spooning any remaining sticky glaze from the pan over each portion." }
     ],
     chefNotes: "Drying the chicken before cooking is the most important step. Wet chicken steams instead of searing, and you will never achieve the caramelized crust that makes this dish what it is.",
     pairing: "Iced mugicha (barley tea) or cold Sapporo",
@@ -1336,11 +1336,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "sesame seeds" },
     ],
     method: [
-      { step: 1, text: "Preheat the oven to 425°F and whisk the 2 tbsp white miso paste, 1 tbsp sesame oil, and 1 tbsp maple syrup until smooth." },
-      { step: 2, text: "Add the 2 medium sweet potatoes, peeled and cubed, and toss until every piece is evenly coated with the miso glaze." },
-      { step: 3, text: "Spread the 2 medium sweet potatoes in one layer on a large rimmed baking sheet, leaving space between pieces to prevent steaming." },
-      { step: 4, text: "Roast the 2 medium sweet potatoes at 425°F for 25–30 minutes, flipping halfway, until fork-tender with deeply caramelized edges." },
-      { step: 5, text: "Serve the roasted 2 medium sweet potatoes over the 2 cups cooked farro or brown rice, then add 2 tbsp pickled jalapeños and 1 tbsp sesame seeds." }
+      { step: 1, text: "Preheat the oven to 425°F and line a large rimmed baking sheet with parchment — this prevents the miso glaze from sticking and scorching. In a large bowl, whisk the 2 tbsp white miso paste, 1 tbsp sesame oil, and 1 tbsp maple syrup until completely smooth. The miso may resist at first; keep whisking for a full 60 seconds until the glaze is glossy and flows off the whisk." },
+      { step: 2, text: "Peel and cube the 2 medium sweet potatoes into roughly 1-inch pieces — uniform size ensures even cooking. Add them to the bowl with the miso glaze and toss with your hands until every cut surface is coated. Take an extra 30 seconds to check the undersides and corners; uncoated pieces will roast dry and pale while coated pieces caramelize beautifully." },
+      { step: 3, text: "Spread the glazed sweet potato cubes in a single layer on the prepared baking sheet, leaving at least 1/2 inch of space between pieces. Crowding creates steam and prevents caramelization — you will get soft, pale cubes instead of the deeply browned, slightly crispy-edged cubes this dish requires. Use two baking sheets if needed." },
+      { step: 4, text: "Roast at 425°F for 12–15 minutes, then flip each cube using a thin spatula. The miso glaze will have set and the undersides should show a deep amber-bronze caramelization — this is the goal, not an accident. Roast for another 12–15 minutes until fork-tender throughout with deeply caramelized edges on all sides." },
+      { step: 5, text: "Divide the 2 cups cooked farro or brown rice between two bowls and pile the roasted sweet potato cubes on top while they are still hot. The contrast between the warm, sweet, caramelized potato and the hearty grain is the foundation of the bowl. Scatter the 2 tbsp pickled jalapeños over the top — their acidity and mild heat cut through the sweetness — then sprinkle with 1 tbsp sesame seeds." }
     ],
     chefNotes: "The miso glaze will burn before the potato cooks through if the oven is too hot. 425°F is the sweet spot — hot enough to caramelize, cool enough to cook through.",
     pairing: "Cold green tea or sparkling water",
@@ -1373,12 +1373,12 @@ export const lunchRecipes: Recipe[] = [
       { qty: "2", unit: "cups", item: "cooked white rice", note: "warm" },
     ],
     method: [
-      { step: 1, text: "Bring a saucepan of water to a full boil for the 1 lb medium shrimp, preparing it for a 2–3 minute poach." },
-      { step: 2, text: "Poach the 1 lb medium shrimp for 2–3 minutes until pink and opaque, then transfer them to an ice bath until chilled." },
-      { step: 3, text: "Combine the chilled 1 lb medium shrimp with the 1/2 cup fresh lime juice and 1/4 cup white onion, minced; toss gently." },
-      { step: 4, text: "Cover and refrigerate the 1 lb shrimp mixture for at least 15 minutes, until cold and lightly brightened by the lime juice." },
-      { step: 5, text: "Stir the 1/4 cup fresh cilantro, chopped, into the chilled shrimp mixture just before serving, keeping the pieces distinct." },
-      { step: 6, text: "Spoon the 2 cups cooked white rice, warm, into two bowls and top with the chilled shrimp mixture; serve immediately." }
+      { step: 1, text: "Bring a saucepan of salted water to a full rolling boil. Add the 1 lb peeled medium shrimp and watch them carefully — they will cook quickly. As soon as every shrimp has curled into a C-shape and turned completely pink and opaque throughout, which takes 2–3 minutes, remove them immediately with a slotted spoon. Leaving them in boiling water even 30 seconds too long makes them rubbery." },
+      { step: 2, text: "Transfer the poached shrimp directly to a bowl of ice water — not cold tap water, but actual ice water made with ice cubes. Leave them for 5 full minutes until thoroughly chilled. The ice bath stops cooking instantly and preserves the shrimp's tender, snappy texture. Drain and pat dry." },
+      { step: 3, text: "In a bowl, combine the chilled shrimp with the 1/2 cup fresh lime juice, 1 minced serrano chile, and 1/4 cup minced white onion. Toss gently and cover. Refrigerate for at least 15 minutes — the lime juice will 'cook' the exterior of the shrimp slightly through its acidity, brightening the flavor and giving the ceviche its characteristic zing." },
+      { step: 4, text: "Just before serving, stir in the 1/4 cup chopped cilantro. Taste the ceviche: it should be bright, acidic, and spicy from the serrano, with the lime dominating but not overwhelming the shrimp's natural sweetness. Adjust with a pinch of salt or a few more drops of lime juice as needed." },
+      { step: 5, text: "Spoon the 2 cups warm cooked white rice into two bowls and immediately top with the cold ceviche. Do not let the ceviche sit on the warm rice before serving — serve the moment it is plated. The temperature contrast between cold, acidic ceviche and warm, starchy rice is the defining experience of this bowl; eat each spoonful with both elements together." },
+      { step: 6, text: "Eat immediately — the warm rice will begin warming the ceviche within minutes, and the contrast will diminish. This is a dish of immediacy; prepare the rice last so everything arrives at the table simultaneously." }
     ],
     chefNotes: "Pre-poaching the shrimp before adding the lime is the safe and delicious approach. Raw shrimp cured in lime alone requires very fresh, sashimi-grade product.",
     pairing: "Chilled dry white wine or sparkling water with lime",
@@ -1412,11 +1412,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "3", unit: "tbsp", item: "Mexican crema" },
     ],
     method: [
-      { step: 1, text: "Heat a 10-inch skillet over high heat, then add the 4 boneless chicken thighs (heated)." },
-      { step: 2, text: "Sear the 4 boneless chicken thighs (heated) for 5–6 minutes per side until browned and hot throughout." },
-      { step: 3, text: "Transfer the 4 boneless chicken thighs (heated) to a plate and let them rest for 5 minutes before slicing." },
-      { step: 4, text: "Whisk the 2 tbsp white miso paste and 3 tbsp Mexican crema in a small bowl until completely smooth." },
-      { step: 5, text: "Slice the 4 boneless chicken thighs (heated), arrange them in serving bowls, and drizzle with the 2 tbsp miso and 3 tbsp crema sauce." }
+      { step: 1, text: "Combine the 3 tbsp soy sauce and 2 tbsp sesame oil in a shallow dish and add the 4 boneless chicken thighs, turning to coat both sides. Marinate for at least 20 minutes at room temperature — or up to 2 hours refrigerated. The soy sauce will begin curing the exterior of the chicken, while the sesame oil penetrates to carry flavor into the meat." },
+      { step: 2, text: "In a small bowl, whisk together the 2 tbsp white miso paste and 3 tbsp Mexican crema until completely smooth and pourable — this is the miso crema that will tie the bowl together. It should be the consistency of a thick dressing; if it is too stiff, add a teaspoon of lime juice to loosen it." },
+      { step: 3, text: "Heat a 10-inch skillet over high heat until very hot — a drop of water should evaporate immediately on contact. Remove the chicken from the marinade (letting excess drip off) and place in the pan. Sear for 5–6 minutes on the first side without moving, until the surface is deeply browned and caramelized from the soy and sesame." },
+      { step: 4, text: "Flip the chicken and cook for another 5–6 minutes until cooked through to 165°F at the thickest point. Transfer to a cutting board and rest for 5 minutes — skipping this rest causes all the internal juices to run out immediately when cut, leaving the meat dry. While the chicken rests, heat the 1 cup black beans in a small pot until steaming." },
+      { step: 5, text: "Slice the rested chicken thighs against the grain into strips and arrange over the 2 cups cooked white rice in four bowls. Add the heated black beans, then drizzle the miso crema over everything in a generous zigzag pattern. The crema should visually connect all the components — its pale, creamy color against the dark chicken and black beans makes the bowl look intentionally composed." }
     ],
     chefNotes: "Letting the chicken rest is the single most important step. A rested chicken thigh has noticeably juicier meat than one sliced immediately off the heat.",
     pairing: "Horchata or cold Mexican soda",
@@ -1450,12 +1450,12 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "lime juice" },
     ],
     method: [
-      { step: 1, text: "Preheat the oven to 425°F and toss the 4 cups mixed bite-sized vegetables with the 2 tbsp olive oil." },
-      { step: 2, text: "Spread the 4 cups mixed vegetables on a large sheet pan and roast for 20–25 minutes until browned at the edges." },
-      { step: 3, text: "Whisk the 2 tbsp white miso paste, 2 tbsp tahini, 3 tbsp warm water, and 1 tbsp lime juice until smooth and pourable." },
-      { step: 4, text: "Divide the 2 cups cooked quinoa or farro evenly between two serving bowls while the grains are still warm." },
-      { step: 5, text: "Pile the roasted 4 cups mixed vegetables over the 2 cups cooked quinoa or farro, keeping the vegetables visibly browned." },
-      { step: 6, text: "Drizzle the prepared sauce made with 2 tbsp miso, 2 tbsp tahini, 3 tbsp water, and 1 tbsp lime juice over both bowls." }
+      { step: 1, text: "Preheat the oven to 425°F. Cut the 4 cups of broccoli, bell pepper, and zucchini into roughly 1-inch pieces — uniform sizing ensures everything finishes cooking at the same time. Toss with the 2 tbsp olive oil and a pinch of salt until every surface is lightly coated; the oil will help carry heat to the vegetables and promote browning." },
+      { step: 2, text: "Spread the vegetables in a single layer across a large rimmed baking sheet, leaving at least 1/2 inch between pieces. Overcrowding is the most common roasting mistake — crowded vegetables steam each other and come out pale and soft. If necessary, use two baking sheets. Roast at 425°F for 20–25 minutes, flipping once at the halfway point." },
+      { step: 3, text: "While the vegetables roast, make the miso-tahini dressing: whisk together the 2 tbsp white miso paste, 2 tbsp tahini, 3 tbsp warm water, and 1 tbsp lime juice in a small bowl. Start with the miso and water, whisking until smooth before adding the tahini — tahini added to cold liquid will seize and clump. The finished dressing should be smooth, creamy, and flow off the whisk in a thick ribbon." },
+      { step: 4, text: "The vegetables are done when the broccoli has dark brown or even slightly blackened floret edges, the bell pepper has caramelized patches, and the zucchini is tender with golden-brown faces. They should smell deeply sweet and roasted. Remove from the oven and let cool for 2 minutes." },
+      { step: 5, text: "Divide the 2 cups cooked quinoa or farro evenly between two bowls while the grains are still warm. Pile the roasted vegetables generously on top — don't hide the grain under too many vegetables, as both elements deserve equal visual presence. Drizzle the miso-tahini dressing generously over each bowl in a back-and-forth pattern." },
+      { step: 6, text: "Serve immediately while the vegetables are still warm — a warm grain bowl with a room-temperature dressing is the ideal eating temperature. The dressing will warm slightly on contact with the hot vegetables and loosen, creating an even more fluid, saucy consistency that ties all the components together." }
     ],
     chefNotes: "The dressing keeps refrigerated for a week. Make a double batch and use it as a dip, salad dressing, or sandwich spread.",
     pairing: "Cold green tea or sparkling water",
@@ -1489,11 +1489,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "", item: "avocado", note: "sliced" },
     ],
     method: [
-      { step: 1, text: "Heat a 10-inch skillet over very high heat for 2 minutes, then place the 8 oz seasoned flank or skirt steak in it." },
-      { step: 2, text: "Sear the 8 oz seasoned flank or skirt steak for 2–3 minutes per side until deeply browned and medium-rare inside." },
-      { step: 3, text: "Transfer the 8 oz seasoned flank or skirt steak to a cutting board and let it rest undisturbed for 5 minutes." },
-      { step: 4, text: "Slice the rested 8 oz seasoned flank or skirt steak as thinly as possible, cutting across the grain for tenderness." },
-      { step: 5, text: "Arrange the sliced 8 oz steak with the 1 cup sliced pico de gallo in serving bowls, distributing both evenly." }
+      { step: 1, text: "Season the 8 oz flank or skirt steak with the 2 tbsp soy sauce and 1 tbsp lime juice — rub the liquid into the surface and let it marinate for 10 minutes at room temperature. The soy sauce acts as a brine, seasoning the meat through its surface, while the lime juice begins to denature the outermost proteins, slightly tenderizing the exterior." },
+      { step: 2, text: "Heat a 10-inch cast-iron skillet or grill pan over very high heat for 3 full minutes — it should be past the point of shimmer and approaching the point of smoke. Place the steak in the pan and sear for 2–3 minutes per side without moving it. The steak should sound intensely aggressive when it hits the pan; a weak sizzle means the pan is not hot enough." },
+      { step: 3, text: "The steak is done when it is deeply browned on the exterior and registers 130°F internally for medium-rare — the ideal doneness for thin cuts like skirt or flank, which become chewy if cooked past medium. Transfer to a cutting board and let it rest, untouched, for 5 minutes. The rest is mandatory: it allows the internal temperature to rise 5°F and the juices to redistribute." },
+      { step: 4, text: "Slice the rested steak as thinly as possible — 1/8 inch or thinner — cutting at a 45-degree angle across the grain. 'Against the grain' means perpendicular to the direction of the muscle fibers you can see running along the steak. Cutting with the grain produces long, chewy strands; cutting against it produces short, tender morsels." },
+      { step: 5, text: "Divide the 2 cups seasoned sushi rice between two bowls using a rice paddle, mounding it slightly in the center. Arrange the sliced steak over one section of the rice, fan the 1 sliced avocado alongside, and spoon the 1 cup pico de gallo in a separate section. Drizzle the 2 tbsp ponzu sauce over the steak and rice, and serve immediately." }
     ],
     chefNotes: "Slicing skirt steak against the grain is essential. With the grain, it will be almost impossible to chew. Against the grain, it melts.",
     pairing: "Sparkling water with lime or cold horchata",
@@ -1514,7 +1514,7 @@ export const lunchRecipes: Recipe[] = [
     servings: 2,
     spiceLevel: 0,
     umamiLevel: 3,
-    origin: "Japan x America",
+    origin: "Japan x California",
     heroImage: lunchBowlsHero,
     thumbImage: lunchBowlsHero,
     ingredients: [
@@ -1526,11 +1526,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "lime juice" },
     ],
     method: [
-      { step: 1, text: "Preheat the oven to 425°F and whisk the 2 tbsp white miso paste, 1 tbsp sesame oil, and 1 tbsp olive oil." },
-      { step: 2, text: "Add the 1 lb mixed mushrooms to the miso mixture and toss until every piece is evenly coated." },
-      { step: 3, text: "Spread the 1 lb coated mixed mushrooms in a single layer on a large sheet pan without overlapping them." },
-      { step: 4, text: "Roast the 1 lb mixed mushrooms at 425°F for 20–25 minutes, until deeply browned with slightly crisp edges." },
-      { step: 5, text: "Divide the 2 cups cooked farro among bowls, top with the roasted mushrooms, and drizzle each serving with 1 tbsp lime juice." }
+      { step: 1, text: "Preheat the oven to 425°F. In a large bowl, whisk together the 2 tbsp white miso paste, 1 tbsp sesame oil, and 1 tbsp olive oil until smooth and fully combined. Do not season with salt — the miso is already quite salty. The miso-oil mixture should look like a smooth, slightly thick paste that will cling to the mushrooms." },
+      { step: 2, text: "Tear or cut the 1 lb mixed mushrooms into large, irregular pieces — shiitakes in half, oyster mushrooms pulled into natural clusters, cremini quartered. Add to the bowl and toss until every surface is coated with the miso mixture. Do not salt the mushrooms before roasting — salt draws out moisture and prevents the browning you are trying to achieve." },
+      { step: 3, text: "Spread the coated mushrooms in a single layer on a large rimmed baking sheet. They will shrink significantly during roasting, so even if the pan looks overfull, the mushrooms will reduce to roughly half their raw volume. Roast at 425°F for 20–25 minutes, checking at 15 minutes and turning any pieces that look too dark." },
+      { step: 4, text: "The mushrooms are done when their edges are deeply browned and slightly crispy, their surfaces look matte and concentrated (not glossy with moisture), and they smell intensely savory and earthy — almost meaty. This is the transformation from raw to roasted: the moisture has left the mushroom and the sugars in the miso have caramelized against the hot pan." },
+      { step: 5, text: "Divide the 2 cups cooked farro between two bowls and top generously with the roasted mushrooms while they are hot. Squeeze the 1 tbsp lime juice over the mushrooms just before serving — the acidity brightens the earthy miso flavor and makes the bowl feel lighter and more balanced. Season with salt now if needed; taste first, as the miso provides significant saltiness." }
     ],
     chefNotes: "Mushrooms contain a lot of water. The trick is to not salt them before roasting — salt draws out moisture and prevents browning. Season after they come out of the oven.",
     pairing: "Dry sake or sparkling water",
@@ -1564,11 +1564,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "4", unit: "cups", item: "cooked short-grain white rice" },
     ],
     method: [
-      { step: 1, text: "Place the 8 bone-in chicken thighs (smashed) and 2 bay leaves in a wide saucepan over medium-high heat." },
-      { step: 2, text: "Cook the 8 chicken thighs with the 2 bay leaves over medium-high heat for about 5 minutes, until the juices bubble." },
-      { step: 3, text: "Reduce the pan to medium-low heat, cover, and braise the 8 chicken thighs with the 2 bay leaves for 30 minutes." },
-      { step: 4, text: "Uncover and cook the 8 chicken thighs over medium-high heat for 10 minutes, turning, until browned and cooked through at 165°F." },
-      { step: 5, text: "Remove the 2 bay leaves, then serve the 8 chicken thighs over the 4 cups cooked short-grain white rice with the glossy pan juices." }
+      { step: 1, text: "In a large bowl, whisk together the 1/4 cup soy sauce, 1/4 cup white or rice vinegar, and 1 tbsp white miso paste until the miso dissolves completely. Add the 8 bone-in chicken thighs and 6 smashed garlic cloves, turning the chicken to coat every surface. Let marinate for 10 minutes at room temperature — the vinegar begins working on the chicken's exterior immediately." },
+      { step: 2, text: "Transfer everything — chicken, marinade, garlic, and 2 bay leaves — to a wide, heavy saucepan or Dutch oven. Arrange the chicken skin-side up in a single layer if possible. Bring to a gentle boil over medium-high heat, then immediately reduce to a steady, slow simmer. You should see small bubbles breaking the surface steadily." },
+      { step: 3, text: "Cover and braise over low heat for 30 minutes — the chicken needs this time in the vinegar-soy braising liquid to become tender and absorb the flavors. Check every 10 minutes to make sure the liquid is simmering, not boiling; a rolling boil will make the chicken tough. After 30 minutes, the meat should be very tender and pulling slightly away from the bone." },
+      { step: 4, text: "Uncover the pan, increase the heat to medium-high, and cook for 10 more minutes, turning the chicken every 2–3 minutes as the braising liquid reduces. The sauce will thicken and become more concentrated, and the chicken skin will begin to brown and caramelize in the reduced liquid. The finished chicken should be deeply browned, slightly glossy, and cooked through to 165°F." },
+      { step: 5, text: "Remove and discard the 2 bay leaves. Serve the chicken over the 4 cups cooked short-grain rice, spooning the reduced, glossy braising sauce generously over each portion. The sauce is the soul of adobo — its combination of soy, vinegar, garlic, and miso is what makes this one of the most balanced and satisfying braises in world cooking." }
     ],
     chefNotes: "The combination of vinegar and soy sauce in this braising liquid preserves the chicken naturally — adobo was actually developed as a preservation technique before refrigeration.",
     pairing: "Cold San Miguel beer or sparkling water",
@@ -1602,11 +1602,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "sesame seeds" },
     ],
     method: [
-      { step: 1, text: "Heat a large nonstick skillet over medium-high heat, then place the 2 salmon fillets, 6 oz each, skin-side down." },
-      { step: 2, text: "Sear the 2 salmon fillets for 4 minutes, flip them, and cook for 3 minutes until opaque and easily flaked." },
-      { step: 3, text: "Whisk the 2 tbsp soy sauce, 1 tbsp sesame oil, and 1 tbsp lime juice in a small bowl until blended." },
-      { step: 4, text: "Divide the 2 cups cooked white rice between two bowls and drizzle the soy sauce dressing evenly over the rice." },
-      { step: 5, text: "Flake the 2 cooked salmon fillets over the rice, arrange the 1 large sliced avocado alongside, and sprinkle with 1 tsp sesame seeds." }
+      { step: 1, text: "Pat the 2 salmon fillets (6 oz each) aggressively dry with paper towels — press firmly on the skin side especially. Dry skin is the difference between crispy and rubbery; any residual moisture on the skin will create steam in the pan and prevent the crisp you are working toward. Heat a large nonstick skillet over medium-high heat for 2 minutes." },
+      { step: 2, text: "Place the fillets skin-side down in the hot pan — no oil needed if the pan is properly preheated and nonstick. Press each fillet down firmly with a spatula for the first 30 seconds to prevent the skin from curling upward; the edges will naturally want to lift as the proteins tighten. Cook undisturbed for 4 full minutes." },
+      { step: 3, text: "After 4 minutes, the skin should be golden-brown and crispy, and the flesh will look opaque about halfway up the sides of the fillet. Flip carefully using a thin spatula and cook for 3 more minutes on the flesh side. The salmon is done when it flakes apart when pressed lightly at the thickest point and the center looks just barely translucent." },
+      { step: 4, text: "While the salmon cooks, whisk the 2 tbsp soy sauce, 1 tbsp sesame oil, and 1 tbsp lime juice in a small bowl until blended. Divide the 2 cups cooked white rice between two bowls and drizzle half the dressing over the rice in each bowl, tossing to coat the grains so every bite of rice has flavor." },
+      { step: 5, text: "Flake the cooked salmon into large chunks directly over the rice — or place the fillets whole if you prefer the presentation — and arrange the 1 large ripe avocado, sliced, alongside. Drizzle any remaining dressing over the salmon and avocado, then sprinkle the 1 tsp sesame seeds over everything. Serve while the salmon is still hot." }
     ],
     chefNotes: "For crispy salmon skin, the pan must be very hot and the skin must be very dry. Pat it aggressively with paper towels before it touches the pan.",
     pairing: "Cold sake or sparkling water with yuzu or lime",
@@ -1640,11 +1640,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "sesame seeds" },
     ],
     method: [
-      { step: 1, text: "Whisk the 3 tbsp ponzu sauce and 1 tsp sesame oil in a small bowl for 30 seconds until glossy and evenly combined." },
-      { step: 2, text: "Divide the 2 cups cooked white rice evenly between two serving bowls, keeping the grains in an even layer." },
-      { step: 3, text: "Arrange the 1.5 cups shelled edamame and 1 large diced avocado in separate sections over the rice." },
-      { step: 4, text: "Drizzle the mixture of 3 tbsp ponzu sauce and 1 tsp sesame oil evenly over the rice, edamame, and avocado." },
-      { step: 5, text: "Sprinkle the 1 tsp togarashi or red pepper flakes and 1 tbsp sesame seeds over both bowls, then serve immediately." }
+      { step: 1, text: "In a small bowl, whisk together the 3 tbsp ponzu sauce and 1 tsp sesame oil for 30 seconds. Ponzu and oil separate quickly, so whisk immediately before using rather than making this in advance. The combined dressing should look momentarily creamy and coat the inside of the bowl in a thin, even film." },
+      { step: 2, text: "Divide the 2 cups cooked white rice evenly between two serving bowls, using a rice paddle or wide spoon to mound it gently in the center. The rice should be warm but not steaming aggressively — hot rice directly under cold avocado will cause the avocado to oxidize and brown more quickly." },
+      { step: 3, text: "Arrange the 1.5 cups cooked shelled edamame over one half of the rice and the 1 large diced avocado over the other half, keeping them in distinct sections. Dice the avocado at the last possible moment to minimize browning — once cut, avocado starts oxidizing within minutes. A squeeze of lime juice over the cut surface slows this process." },
+      { step: 4, text: "Drizzle the ponzu-sesame dressing in an even circular pattern over the rice, edamame, and avocado. Pour it from a height of about 6 inches to distribute it thinly and evenly rather than puddling it in one spot. The dressing will pool slightly around the edges of the bowl, which is fine — diners can mix as they eat." },
+      { step: 5, text: "Finish with a scatter of the 1 tsp togarashi or red pepper flakes and the 1 tbsp sesame seeds over both bowls, distributing them as evenly as possible. Serve immediately — this bowl is at its best within 5 minutes of assembly, before the avocado begins to discolor and while the rice is still slightly warm beneath the cool toppings." }
     ],
     chefNotes: "Dice the avocado at the last second and squeeze a little lime juice on it to prevent browning.",
     pairing: "Green tea or cold sparkling water",
@@ -1677,11 +1677,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "chipotle powder or Tajín" },
     ],
     method: [
-      { step: 1, text: "Whisk the 1 tbsp white miso paste, 2 tbsp lime juice, and 1 tbsp warm water for 30 seconds until smooth and pourable." },
-      { step: 2, text: "Heat the 1 can black beans and 1 tsp chipotle powder in a small pot over medium-low heat for 3–5 minutes until steaming." },
-      { step: 3, text: "Divide the 2 cups cooked white rice evenly between two bowls, keeping the rice warm and level across each bowl." },
-      { step: 4, text: "Spoon the heated 1 can black beans over the 2 cups cooked white rice, dividing the beans evenly between the bowls." },
-      { step: 5, text: "Drizzle the sauce made with 1 tbsp white miso paste, 2 tbsp lime juice, and 1 tbsp warm water over both bowls." }
+      { step: 1, text: "In a small bowl, combine the 1 tbsp white miso paste and 1 tbsp warm water and whisk vigorously for 30 seconds until the miso is completely dissolved — no lumps should remain. The water must be warm rather than cold: cold water makes miso clump and resist dissolving. Add the 2 tbsp lime juice and whisk for another 15 seconds. Taste: the drizzle should be tangy, savory, and just salty enough." },
+      { step: 2, text: "Drain the 1 can (15 oz) black beans and transfer to a small saucepan with the 1 tsp chipotle powder or Tajín. Warm over medium-low heat for 3–5 minutes, stirring occasionally, until the beans are steaming hot and the spice has distributed throughout. Taste a bean — it should be fully warm to the center, not cold in the middle and hot on the outside." },
+      { step: 3, text: "Divide the 2 cups cooked white rice evenly between two bowls, pressing it into a level base with the back of a spoon. The rice should be warm — cold rice absorbs the drizzle slowly and the bowl will feel heavy and starchy rather than bright and flavorful. Reheat refrigerated rice by adding a splash of water and microwaving covered for 60 seconds." },
+      { step: 4, text: "Spoon the heated spiced black beans over the rice in each bowl, covering roughly two-thirds of the rice surface and leaving a small area exposed at the edge where the miso drizzle can pool and flow." },
+      { step: 5, text: "Drizzle the miso-lime sauce over both bowls in a thin, even stream, moving your wrist in a back-and-forth motion to distribute it across both the beans and the rice. The sauce should be thin enough to drizzle easily; if it has thickened from sitting, add a few drops of warm water and stir. Serve immediately while the beans and rice are steaming." }
     ],
     chefNotes: "This bowl is excellent with a fried egg on top for additional protein.",
     pairing: "Sparkling water or cold horchata",
@@ -1718,11 +1718,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "Japanese mayonnaise" },
     ],
     method: [
-      { step: 1, text: "Separate the 6 oz yakisoba noodles or ramen noodles into loose strands, keeping them ready for even toasting." },
-      { step: 2, text: "Heat a 10-inch skillet over medium-high heat for 2 minutes, then add the 6 oz noodles in an even layer." },
-      { step: 3, text: "Toast the 6 oz noodles for 3–4 minutes, turning occasionally, until lightly browned and crisp at the edges." },
-      { step: 4, text: "Transfer the toasted 6 oz noodles to a serving plate and let them cool for 1 minute so the strands stay distinct." },
-      { step: 5, text: "Spread the 2 tbsp Japanese mayonnaise evenly over the toasted 6 oz noodles and serve while they remain warm." }
+      { step: 1, text: "Cook the 6 oz yakisoba noodles according to package directions, then drain and separate the strands thoroughly. In a small bowl, stir together the 2 tbsp Worcestershire sauce, 1 tbsp soy sauce, and 1 tbsp oyster sauce until combined — this is the yakisoba sauce that will coat everything. Set aside." },
+      { step: 2, text: "Heat a large skillet or wok over the highest heat your stove produces until it is visibly smoking. This is non-negotiable for great yakisoba — a lukewarm pan results in steamed, pale noodles; a screaming-hot pan creates the char and caramelization that make the dish what it is. Add the 1 cup shredded cabbage and stir-fry for 1 minute until slightly wilted but still crisp." },
+      { step: 3, text: "Add the drained 6 oz noodles to the hot pan and press them into contact with the surface using a spatula. Let them cook undisturbed for 60 seconds — this is how you develop the slightly charred, caramelized bits that define excellent yakisoba. Then toss vigorously for 2 minutes until the noodles are heated through." },
+      { step: 4, text: "Pour the yakisoba sauce over the noodles and toss continuously for 1–2 minutes until every strand is evenly coated and the sauce has reduced slightly and caramelized against the hot pan. The noodles should look dark and glossy, and the kitchen should smell of soy, Worcestershire, and caramelized sugar." },
+      { step: 5, text: "Split the 2 bolillo rolls and toast the cut sides in a dry pan for 1–2 minutes until golden and slightly crispy. Spread the 2 tbsp Japanese mayonnaise evenly on both cut surfaces of each roll. Fill each roll generously with the hot yakisoba, pressing the filling down gently so it stays in the roll when bitten. Eat immediately — yakisoba softens and loses its texture as it sits." }
     ],
     chefNotes: "Cooking the yakisoba in a very hot, dry pan creates the slightly charred, caramelized bits that define great yakisoba. Do not use a non-stick pan — you need the heat.",
     pairing: "Cold Kirin beer or canned Japanese iced coffee",
@@ -1756,11 +1756,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1/4", unit: "head", item: "green cabbage", note: "shredded very fine" },
     ],
     method: [
-      { step: 1, text: "Set out the 1/2 cup all-purpose flour and 1 cup panko breadcrumbs in separate shallow dishes beside the 2 pork chops." },
-      { step: 2, text: "Coat each of the 2 pork chops with the 1/2 cup all-purpose flour, then press both sides firmly into the 1 cup panko breadcrumbs." },
-      { step: 3, text: "Heat a heavy skillet to 350°F, add the 2 breaded pork chops, and cook for 3–4 minutes per side until deeply golden." },
-      { step: 4, text: "Transfer the 2 cooked pork chops to a wire rack and let them drain briefly, keeping the coating crisp and the centers firm." },
-      { step: 5, text: "Rest the 2 pork chops for 2 minutes, then serve them while hot with their 1 cup panko coating visibly crisp and golden." }
+      { step: 1, text: "Set up a breading station with three shallow dishes: the 1/2 cup all-purpose flour in the first, the 1 beaten egg in the second, and the 1 cup panko breadcrumbs in the third. Season the flour lightly with salt. Work from left to right — flour, egg, panko — and keep one hand for wet and one for dry to prevent the coating from clumping on your fingers." },
+      { step: 2, text: "Coat each 1/2-inch-thick pork chop first in flour, shaking off any excess — a thin, even flour coat is the adhesive layer that holds the egg. Dip in the beaten egg and let the excess drip off for 3 seconds. Press firmly into the panko, turning and pressing again, until the entire surface is covered in an even, thick crumb layer. The crumbs should feel firmly adhered, not loose." },
+      { step: 3, text: "Heat 1/2 inch of neutral oil (vegetable or canola) in a heavy 10-inch skillet to 350°F — test it by dropping in a panko crumb; it should sizzle immediately and bob to the surface. Carefully lower the 2 breaded pork chops into the oil using tongs. Cook for 3–4 minutes on the first side without moving them — the coating needs uninterrupted contact to set and brown evenly." },
+      { step: 4, text: "Flip the chops and cook for 3–4 more minutes on the second side until deeply golden-brown all over and the internal temperature reaches 145°F. Transfer immediately to a wire rack — never to paper towels, which trap steam underneath and soften the bottom crust within 2 minutes. Let the katsu drain and rest on the rack for 2 full minutes." },
+      { step: 5, text: "Split the 2 bolillo rolls and toast cut-side down in a dry skillet for 1–2 minutes until golden. Slice each pork chop against the grain and place in the bolillo with 2 tbsp tonkatsu sauce and a generous layer of the very finely shredded green cabbage. The cabbage provides cool crunch against the hot, crispy pork — do not skip it." }
     ],
     chefNotes: "Draining fried food on a rack instead of paper towels keeps the bottom crust crispy. Paper towel traps steam and softens the crust within minutes.",
     pairing: "Cold Modelo or canned iced green tea",
@@ -1792,11 +1792,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "4", unit: "oz", item: "Gruyère or sharp cheddar", note: "sliced or shredded" },
     ],
     method: [
-      { step: 1, text: "Place the 1 tbsp white miso paste in a small bowl and stir it until smooth enough to spread evenly." },
-      { step: 2, text: "Spread the 1 tbsp white miso paste over one side of each of the 4 slices of sourdough or white bread." },
-      { step: 3, text: "Divide the 4 oz Gruyère or sharp cheddar between 2 bread slices, then close the sandwiches with the miso sides facing outward." },
-      { step: 4, text: "Heat a 10-inch nonstick skillet over medium-low heat and cook the 2 sandwiches for 3–4 minutes until the bottoms are golden." },
-      { step: 5, text: "Flip the 2 sandwiches and cook for 3–4 minutes until both sides are golden and the 4 oz cheese is fully melted." }
+      { step: 1, text: "In a small bowl, combine the 3 tbsp softened unsalted butter and 1 tbsp white miso paste. Work them together with a fork until completely homogeneous — the miso should disappear into the butter with no visible lumps or streaks. The resulting miso butter will be slightly tan and smell faintly of caramel and salt." },
+      { step: 2, text: "Spread the miso butter generously and evenly over one side of each of the 4 slices of sourdough or white bread, covering the surface all the way to the edges. The miso butter on the outside of the sandwich is what creates the exceptional golden crust — it caramelizes at a lower temperature than plain butter, giving you a deeper, more complex color and flavor." },
+      { step: 3, text: "Divide the 4 oz sliced or shredded Gruyère or sharp cheddar and the 1 finely minced chipotle pepper between 2 of the bread slices on their unbuttered sides. Close the sandwiches, pressing gently so the cheese makes contact with both bread surfaces and the filling is contained." },
+      { step: 4, text: "Place the sandwiches miso-butter-side down in a 10-inch nonstick skillet over medium-low heat — not medium, not low, but medium-low. This slower heat allows the cheese inside to melt completely before the exterior burns. Cook for 3–4 minutes without pressing down or moving; the bottom should turn a deep, even golden-brown when lifted with a spatula." },
+      { step: 5, text: "Flip carefully and cook for another 3–4 minutes on the second side. The sandwich is done when both sides are deeply golden, the edges of the bread look slightly caramelized, and you can see the cheese has melted and is beginning to ooze at the sides. Press the sandwich firmly once with the spatula in the last 30 seconds to ensure the cheese bonds to both slices. Cut diagonally and serve immediately." }
     ],
     chefNotes: "Medium-low heat is not optional. High heat gives you a burned exterior and cold, un-melted cheese. Patience produces a perfect, evenly golden, fully melted sandwich.",
     pairing: "Tomato miso bisque or a cold pickle",
@@ -1828,11 +1828,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "4", unit: "slices", item: "toasted white sandwich bread" },
     ],
     method: [
-      { step: 1, text: "Arrange the 6 sliced bacon pieces in a 10-inch skillet over medium heat and cook for 8–10 minutes until crisp." },
-      { step: 2, text: "Transfer the 6 cooked bacon pieces to a wire rack and let them drain until the surface looks dry and crisp." },
-      { step: 3, text: "Toast the 4 slices of white sandwich bread for 2–3 minutes until golden brown and firm around the edges." },
-      { step: 4, text: "Spread the 3 tbsp Japanese mayonnaise evenly over the toasted sides of all 4 slices of white sandwich bread." },
-      { step: 5, text: "Layer the 4 butter lettuce leaves and 6 crisp bacon pieces between the 4 mayonnaise-coated bread slices, then cut and serve immediately." }
+      { step: 1, text: "Lay the 6 slices of thick-cut bacon in a cold 10-inch skillet — starting in a cold pan renders the fat more slowly and produces flatter, more evenly cooked bacon than placing it in a hot pan. Heat over medium heat and cook for 4–5 minutes per side, turning once, until deeply browned and crispy throughout with no floppy or pale sections." },
+      { step: 2, text: "Transfer the 6 cooked bacon slices immediately to a wire rack — not paper towels — so the rendered fat drips away cleanly without softening the bacon's crust by trapping steam. Let them drain for 2 minutes; they will continue crisping as they cool. You want bacon that snaps cleanly when broken, not one that bends." },
+      { step: 3, text: "Toast the 4 slices of white sandwich bread until golden and firm — pale toast soaks through with mayo immediately, while properly toasted bread maintains structure throughout the sandwich. The toast should feel dry and rigid when pressed, not soft in the center." },
+      { step: 4, text: "Spread the 3 tbsp Japanese mayonnaise liberally and evenly across all 4 toasted slices, reaching the edges. Kewpie mayo is richer and tangier than American mayo; use it generously, as it is the primary flavor vehicle. Layer the 4 butter lettuce leaves directly onto the mayo — the lettuce creates a moisture barrier between the bread and the tomato slices." },
+      { step: 5, text: "Layer the 2 ripe tomatoes (sliced to about 1/4 inch thick) over the lettuce, then add the 6 crisp bacon slices on top of the tomato. Close the sandwiches and press gently. Cut diagonally with a sharp knife in one clean stroke — sawing tears the tomato and dislodges the filling. Serve immediately while the bacon is still hot and the bread remains crisp." }
     ],
     chefNotes: "The order of layers matters: lettuce acts as a moisture barrier between the toast and tomato, keeping the bread crispier longer.",
     pairing: "Black coffee or iced green tea",
@@ -1866,12 +1866,12 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "Japanese mayonnaise" },
     ],
     method: [
-      { step: 1, text: "Press 1 cup panko breadcrumbs firmly over both sides of 2 boneless pork chops (pounded thin), covering the meat evenly." },
-      { step: 2, text: "Heat a deep 10-inch skillet to 350°F over medium-high heat; place the 2 breaded boneless pork chops in the hot pan." },
-      { step: 3, text: "Cook the 2 boneless pork chops coated with 1 cup panko for 3–4 minutes per side at 350°F, until deeply golden and opaque." },
-      { step: 4, text: "Transfer the 2 cooked boneless pork chops to a wire rack and rest them for 2 minutes while the 1 cup panko coating stays crisp." },
-      { step: 5, text: "Spread 1 tbsp Japanese mayonnaise evenly over the 2 chops, then distribute the 2 sliced chipotle peppers in adobo over them." },
-      { step: 6, text: "Top the 2 chops with 1/2 cup Oaxacan cheese pulled into strings; return them to the 350°F skillet for 1–2 minutes until melted." }
+      { step: 1, text: "Pound the 2 boneless pork chops to an even 1/4-inch thickness using a meat mallet or heavy pan — uniform thickness ensures the cutlet cooks through at the same time it browns. Coat each chop in flour, then beaten egg, then press firmly into the 1 cup panko breadcrumbs, coating all surfaces completely and patting the crumbs to ensure they adhere." },
+      { step: 2, text: "Heat 1/2 inch of neutral oil in a heavy 10-inch skillet to 350°F. Lower the 2 breaded pork chops in carefully and cook for 3–4 minutes on the first side until deeply golden — the color of toasted bread. The panko should be visibly puffed and golden, not flat and pale. Flip and cook for 3–4 more minutes until the second side matches." },
+      { step: 3, text: "Transfer the 2 cooked pork chops to a wire rack and let them rest for 2 full minutes — the carryover heat will finish cooking the center while the outside cools slightly and the crust sets firmly. This rest is what keeps the coating attached rather than sliding off when the sandwich is pressed." },
+      { step: 4, text: "Spread the 1 tbsp Japanese mayonnaise over the cut surfaces of the 2 cemita or sesame brioche buns. Layer the avocado slices and the 2 sliced chipotle peppers in adobo on the bottom bun. Place the crispy tonkatsu cutlet on top, then drape the 1/2 cup Oaxacan cheese pulled into long strings over the hot cutlet — the heat from the pork will warm and slightly melt the cheese." },
+      { step: 5, text: "Close the assembled cemita and press down firmly with your palm — this is traditional and important. The compression helps the layers bond and ensures every bite contains all the elements simultaneously: crispy pork, creamy avocado, smoky chipotle, and stringy cheese. Press a toothpick through the center to hold the halves together, then cut diagonally and serve immediately." },
+      { step: 6, text: "Serve with extra chipotle peppers in adobo on the side for those who want more heat. The sandwich should be eaten immediately — the pork crust will begin to soften from the steam of the avocado and cheese within 5 minutes, so do not assemble in advance." }
     ],
     chefNotes: "Pressing the assembled sandwich down firmly before the first bite is traditional to cemitas — it compresses the layers so every bite has every element.",
     pairing: "Cold Mexican soda or sparkling water",
@@ -1904,11 +1904,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "pickled jalapeños" },
     ],
     method: [
-      { step: 1, text: "Drain the 2 cans solid tuna in water, 5 oz each, in a fine-mesh strainer until no water drips out." },
-      { step: 2, text: "Flake the drained 2 cans solid tuna, 5 oz each, with a fork in a medium mixing bowl." },
-      { step: 3, text: "Add the 3 tbsp Japanese mayonnaise to the 2 drained cans solid tuna and stir until evenly coated." },
-      { step: 4, text: "Fold the 2 tbsp pickled jalapeños into the tuna mixture until the pieces are distributed throughout." },
-      { step: 5, text: "Chill the mixture of 2 cans tuna, 3 tbsp Japanese mayonnaise, and 2 tbsp pickled jalapeños for 15 minutes before serving." }
+      { step: 1, text: "Drain the 2 cans (5 oz each) solid tuna in water through a fine-mesh strainer, pressing the tuna firmly against the mesh with the back of a spoon to expel as much water as possible. This step is essential — watery tuna dilutes the mayo and makes the filling loose and wet. When properly drained, the tuna should look nearly dry and hold together when pressed." },
+      { step: 2, text: "Transfer the drained tuna to a bowl and flake it with a fork into irregular shreds — not a smooth paste, which would lose the pleasing texture variation of spicy tuna. Add the 3 tbsp Japanese mayonnaise and 1 tbsp sriracha, then fold gently until the tuna is evenly coated. The mixture should be creamy, slightly pink-orange, and hold together loosely." },
+      { step: 3, text: "Add the 2 tbsp pickled jalapeños and fold them in, distributing the pieces throughout the tuna mixture. Taste for heat and salt — the sriracha provides heat, the mayo provides richness, and the pickled jalapeños add acidity. Adjust with more sriracha if you want more fire, or more mayo if you want more creaminess." },
+      { step: 4, text: "Cover the tuna mixture and refrigerate for 15 minutes while you prepare the rolls — cold spicy tuna has a firmer, cleaner texture than room-temperature tuna, and the flavors will meld during this brief rest. Split the 2 bolillo rolls and toast the cut sides in a dry skillet over medium heat for 2 minutes until golden and lightly crispy." },
+      { step: 5, text: "Pile the chilled spicy tuna generously onto the bottom half of each toasted bolillo roll, then fan the 1 sliced avocado over the tuna. The avocado's cool creaminess and mild fat will temper the heat from the sriracha. Close the rolls, press gently, and serve immediately — bolillo rolls will begin to soften from the tuna's moisture within 5 minutes." }
     ],
     chefNotes: "Pressing the canned tuna against a fine-mesh strainer removes almost all excess water — this is the difference between creamy spicy tuna and watery tuna salad.",
     pairing: "Cold Jarritos or iced green tea",
@@ -1940,11 +1940,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "4", unit: "slices", item: "Japanese milk bread or soft white bread" },
     ],
     method: [
-      { step: 1, text: "Place the 4 large eggs in a 2-quart saucepan, cover with cold water, and bring the water to a full boil." },
-      { step: 2, text: "Turn off the heat, cover the 2-quart saucepan, and let the 4 large eggs stand for 10 minutes until firm." },
-      { step: 3, text: "Transfer the 4 large eggs to an ice bath for 5 minutes, then peel and mash them coarsely with a fork." },
-      { step: 4, text: "Stir the 1 tsp furikake seasoning into the mashed 4 large eggs until the seasoning is evenly distributed." },
-      { step: 5, text: "Divide the egg mixture between the 4 slices Japanese milk bread or soft white bread, close the sandwiches, and serve." }
+      { step: 1, text: "Place the 4 large eggs in a 2-quart saucepan, cover with 1 inch of cold water, and bring to a full rolling boil over high heat. Once boiling, turn off the heat, cover the pan, and let the eggs stand for exactly 10 minutes — this produces a fully set yolk without any green ring, which appears when eggs are overcooked in boiling water." },
+      { step: 2, text: "Transfer the 4 eggs immediately to a bowl of ice water and let them cool for 5 full minutes. The ice bath contracts the egg inside its shell, making peeling much easier. Peel under a thin trickle of cold water, starting at the rounded end where the air pocket creates a natural separation point." },
+      { step: 3, text: "Mash the 4 peeled eggs in a bowl using a fork — for Japanese tamago sando, you want a texture between smooth and chunky, with small visible pieces rather than a homogeneous paste. This requires roughly 20–30 firm strokes with the fork, stopping when you can no longer see large chunks but the texture is still clearly egg." },
+      { step: 4, text: "Add the 3 tbsp Japanese mayonnaise and the 1 ripe avocado, mashed, to the eggs. Fold gently with a wide spoon — overmixing breaks the eggs down further and creates a dense, paste-like filling. The finished mixture should be creamy, slightly green from the avocado, and fluffy-looking. Taste for salt; the Kewpie mayo is already seasoned, so add salt with care." },
+      { step: 5, text: "Sprinkle the 1 tsp furikake seasoning over the cut surfaces of all 4 slices of Japanese milk bread. Divide the egg-avocado filling between 2 sandwiches and spread it evenly to the edges. Close each sandwich, press gently, then trim the crusts with a sharp knife if desired — this is traditional to the tamago sando format. Cut in half and serve immediately." }
     ],
     chefNotes: "Japanese milk bread (shokupan) is the ideal bread for this sandwich — its pillowy softness creates the characteristic tamago sando experience. Found at Asian supermarkets.",
     pairing: "Iced green tea or cold mugicha",
@@ -1978,11 +1978,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "2", unit: "leaves", item: "romaine lettuce" },
     ],
     method: [
-      { step: 1, text: "Heat a 10-inch skillet over medium heat and toast the 2 sliced bolillo rolls, cut sides down, for 2 minutes until lightly crisp." },
-      { step: 2, text: "Place the 2 romaine lettuce leaves evenly over the toasted cut sides of the 2 bolillo rolls until fully covered." },
-      { step: 3, text: "Divide the 8 oz softened sliced deli turkey between the 2 bolillo rolls, arranging it evenly over the lettuce." },
-      { step: 4, text: "Divide the 2 tbsp pickled jalapeños between the 2 bolillo rolls, scattering them evenly over the deli turkey." },
-      { step: 5, text: "Close the 2 assembled bolillo rolls and press each sandwich gently for 30 seconds until the fillings stay neatly in place." }
+      { step: 1, text: "In a small bowl, combine the 1 tbsp white miso paste and 1 tbsp softened unsalted butter, working them together with a fork until completely smooth and homogeneous. Divide this miso butter between the 8 oz deli turkey slices and spread a thin film on each slice — not just on the bread. This ensures every layer of turkey carries the fermented, savory depth rather than only the outermost bite." },
+      { step: 2, text: "Split the 2 bolillo rolls and toast them cut-side down in a dry skillet over medium heat for 1–2 minutes until the cut surface is golden and lightly crispy. The toasted surface provides structural integrity against the moisture from the turkey and avocado — an untoasted bolillo will become soggy within minutes." },
+      { step: 3, text: "Lay the 2 romaine lettuce leaves over the toasted cut surfaces of the bottom halves. The lettuce creates a barrier between the bread and the wetter ingredients — it stays crisper and prevents the bread from absorbing moisture from the turkey or avocado." },
+      { step: 4, text: "Arrange the miso-coated 8 oz turkey slices over the lettuce in overlapping layers, folding each slice slightly so it has volume rather than lying flat. Flat turkey makes a sandwich that feels thin and unsatisfying; folded turkey adds loft and ensures more meat per bite." },
+      { step: 5, text: "Fan the 1 sliced avocado over the turkey, then scatter the 2 tbsp pickled jalapeños evenly over the avocado. Close each bolillo, press firmly for 5 seconds to compress the fillings so they stay in place, and serve immediately. For best texture, eat within 10 minutes — the toasted bread will begin to soften from the avocado and turkey moisture after that." }
     ],
     chefNotes: "Coating the turkey in miso butter rather than spreading it only on the bread ensures the flavor is in every layer, not just at the edges.",
     pairing: "Sparkling water or cold green tea",
@@ -2014,12 +2014,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "sesame seeds" },
     ],
     method: [
-      { step: 1, text: "Spread the 2 tbsp unsalted butter evenly over one side of each of the 4 sourdough bread slices." },
-      { step: 2, text: "Divide the 2 nori sheets between the 2 sandwiches, trimming or folding them to fit the bread without overhanging." },
-      { step: 3, text: "Assemble 2 sandwiches with the 2 nori sheets between the 4 bread slices, keeping the buttered sides facing outward." },
-      { step: 4, text: "Heat a 10-inch skillet over medium-low heat and cook the 2 sandwiches for 3–4 minutes until the bottoms are golden brown." },
-      { step: 5, text: "Turn the 2 sandwiches and cook for another 3–4 minutes until the second sides are golden, crisp, and the nori is warmed." },
-      { step: 6, text: "Sprinkle the 1 tsp sesame seeds over the outsides of the 2 finished sandwiches and serve immediately while crisp." }
+      { step: 1, text: "Soften the 2 tbsp unsalted butter to room temperature — it must be spreadable without tearing the bread. Spread it evenly and generously over one side of each of the 4 sourdough slices, reaching all the way to the crust edges. Uneven butter creates uneven browning; the edges should be just as golden as the centers when finished." },
+      { step: 2, text: "Trim or fold the 2 nori sheets to fit exactly within the bread dimensions — nori that overhangs will curl out of the sandwich and char in the pan rather than melting into the cheese. Place one sheet of nori on the unbuttered side of 2 of the bread slices, pressing it flat so there are no air pockets." },
+      { step: 3, text: "Divide the 4 oz sliced Gruyère over the nori, covering the entire surface evenly. Sprinkle the 1 tsp sesame seeds over the cheese on one sandwich. Close each sandwich with the remaining bread slices, buttered-side out, pressing gently to ensure the cheese and nori are in contact with both bread surfaces." },
+      { step: 4, text: "Place the sandwiches butter-side down in a cold 10-inch skillet and turn the heat to medium-low. Starting cold and slowly raising the temperature allows the cheese to begin melting before the exterior browns, preventing the classic grilled-cheese failure of a burned crust with cold cheese inside. Cook for 3–4 minutes until the bottoms are deep golden." },
+      { step: 5, text: "Flip carefully with a wide spatula and cook for another 3–4 minutes on the second side, pressing gently once with the spatula to ensure the cheese makes contact with both inner surfaces. The sandwich is done when both sides are evenly golden, the crust sounds hollow when tapped, and you can see the cheese oozing slightly at the edges. Serve immediately — nori grilled cheese is at its best in the first 3 minutes after leaving the pan." }
     ],
     chefNotes: "The nori will be invisible when the sandwich is finished, completely absorbed into the cheese. Guests will taste something oceanic and be unable to identify it.",
     pairing: "Tomato soup or miso soup",
@@ -2052,13 +2051,13 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "butter" },
     ],
     method: [
-      { step: 1, text: "Drain the 2 cans of solid tuna, 5 oz each, in a fine-mesh strainer, pressing gently until no excess water remains." },
-      { step: 2, text: "Stir the drained 2 cans of tuna with the 3 tbsp Japanese mayonnaise in a bowl until evenly combined and creamy." },
-      { step: 3, text: "Spread the 1 tbsp butter evenly over one side of each of the 4 rye or sourdough bread slices." },
-      { step: 4, text: "Divide the tuna mixture between 2 bread slices on their unbuttered sides, then cover each with 2 of the 4 cheese slices." },
-      { step: 5, text: "Preheat the broiler to high, about 500°F (260°C), and place the 2 open-faced sandwiches on a baking sheet." },
-      { step: 6, text: "Broil the 2 open-faced sandwiches for 3–4 minutes until the 4 cheese slices are melted and bubbling and the bread edges are toasted." },
-      { step: 7, text: "Top each sandwich with 1 remaining bread slice, buttered side up, and press gently until the 2 melts hold together." }
+      { step: 1, text: "Drain the 2 cans (5 oz each) solid tuna through a fine-mesh strainer, pressing firmly with the back of a spoon to remove as much liquid as possible. Well-drained tuna produces a creamy, cohesive filling; inadequately drained tuna creates a watery mess that soaks through the bread and causes the cheese to slide off during broiling." },
+      { step: 2, text: "Flake the drained tuna into a bowl, add the 3 tbsp Japanese mayonnaise and 1 minced chipotle pepper in adobo, and stir until evenly combined. The chipotle brings a deep, smoky heat that gradually builds; taste after mixing and add more chipotle sauce if you want more intensity. The filling should be creamy and hold its shape when spooned without spreading." },
+      { step: 3, text: "Spread the 1 tbsp butter on one side of each of the 4 slices of rye or sourdough bread. Toast them butter-side down in a 10-inch skillet over medium heat for 2–3 minutes until golden. Transfer to a baking sheet, buttered side down. Divide the chipotle tuna mixture between 2 of the slices on their unbuttered tops, spreading it generously and evenly." },
+      { step: 4, text: "Place 2 slices of sharp cheddar or Swiss cheese over the tuna on each piece of bread, covering the tuna completely. Set the oven broiler to high (about 500°F). Slide the baking sheet under the broiler and broil the open-faced sandwiches for 3–4 minutes, watching constantly — the cheese will go from melted to bubbling to browned very quickly under a broiler." },
+      { step: 5, text: "Remove from the broiler when the cheese is fully melted, bubbling, and golden brown at the edges — not charred. Immediately top each open-faced melt with one of the remaining toasted bread slices, buttered-side up, and press gently to seal. Cut diagonally with a sharp knife and serve at once; the cheese sets and the bread softens if this sandwich sits more than a few minutes." },
+      { step: 6, text: "Serve with a dill pickle spear on the side — the cool acidity of the pickle cuts through the richness of the cheese and mayo and refreshes the palate between bites. This is a diner tradition for good reason." },
+      { step: 7, text: "If the broiler seems too aggressive, you can instead close the sandwich after adding the cheese and cook it in the buttered skillet like a grilled cheese, pressing firmly with a spatula and flipping once — this produces a slightly less molten interior but a beautifully golden, crispy exterior." }
     ],
     chefNotes: "Broiling open-faced before closing ensures the cheese melts completely without burning the bread.",
     pairing: "Tomato soup or dill pickles",
@@ -2091,11 +2090,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "", item: "avocado", note: "sliced" },
     ],
     method: [
-      { step: 1, text: "Bring a saucepan of water to a rolling boil, add the 4 large eggs, and cook over medium heat for exactly 10 minutes." },
-      { step: 2, text: "Transfer the 4 large eggs to an ice bath for 5 minutes, then remove them when fully cooled to the touch." },
-      { step: 3, text: "Peel the 4 large eggs and pass them through a wire rack or grate them into a bowl until finely shredded and fluffy." },
-      { step: 4, text: "Arrange the shredded 4 large eggs and the 1 sliced avocado together, keeping the avocado slices intact and evenly distributed." },
-      { step: 5, text: "Serve the 4 large eggs with the 1 sliced avocado once the egg mixture looks fluffy and the avocado remains bright green." }
+      { step: 1, text: "Place the 4 large eggs in a saucepan, cover with cold water by 1 inch, and bring to a full rolling boil over high heat. Once boiling, cook for exactly 10 minutes — this is the hard-boil time that produces a fully set yolk without a gray ring. Use a timer; even 2 extra minutes produces a noticeably different, sulfurous flavor." },
+      { step: 2, text: "Transfer the 4 eggs to an ice bath and cool for 5 minutes. Peel them carefully — Japanese tamago sando requires smooth, unmarred egg whites. Peel under a thin stream of cold water, starting at the rounded end. Any torn white is fine for flavor but affects the final visual texture of the salad." },
+      { step: 3, text: "Grate the 4 peeled eggs through the large holes of a box grater or press them through a wire rack set over a bowl — this is the technique that creates the signature fluffy, cloud-like texture of Japanese egg salad, which is completely different from chopped or mashed American egg salad. The result should look like a pile of soft, bright yellow-white fluff." },
+      { step: 4, text: "Add the 4 tbsp Japanese mayonnaise, 1 tsp chipotle powder, and 1/4 tsp salt to the grated eggs. Fold gently with a wide spoon rather than stirring — the goal is to coat the grated egg in mayo without compressing it back into a dense mass. The finished filling should still look light and airy, not dense and paste-like." },
+      { step: 5, text: "Toast the 2 bolillo rolls cut-side down in a dry skillet for 2 minutes until golden. Pile the egg salad generously on the bottom halves — be lavish, as the filling should overflow slightly when the sandwich is closed. Fan the 1 sliced avocado over the egg salad, close the rolls, press firmly, and serve immediately while the contrast between the crispy bread and the light, creamy filling is at its most dramatic." }
     ],
     chefNotes: "Pressing eggs through a wire rack or grating them creates a unique fluffy texture — the defining characteristic of Japanese tamago sando that sets it apart from standard egg salad.",
     pairing: "Iced mugicha or iced green tea",
@@ -2129,11 +2128,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "pickled red onions" },
     ],
     method: [
-      { step: 1, text: "Heat a 10-inch cast-iron skillet over high heat for 2 minutes, then place the 4 portobello mushroom caps inside." },
-      { step: 2, text: "Sear the 4 portobello mushroom caps for 4–5 minutes on the first side until deeply browned and caramelized." },
-      { step: 3, text: "Turn the 4 portobello mushroom caps and sear for another 4–5 minutes, until tender and darkly browned on both sides." },
-      { step: 4, text: "Remove the 4 portobello mushroom caps from the skillet, top them evenly with the 2 tbsp pickled red onions, and serve warm." },
-      { step: 5, text: "Check the 4 portobello mushroom caps before serving; their centers should be tender, glossy, and fully heated through." }
+      { step: 1, text: "In a small bowl, whisk together the 2 tbsp soy sauce, 1 tbsp white miso paste, and 1 tbsp sesame oil until the miso is fully dissolved. Remove the stems from the 4 portobello caps and wipe them clean with a damp paper towel — do not rinse under water, which saturates mushrooms and causes them to steam rather than sear. Place the caps gill-side up in a shallow dish and pour the marinade over them. Let sit for 10 minutes." },
+      { step: 2, text: "Heat a 10-inch cast-iron skillet over high heat for 2 full minutes until the surface radiates intense heat. Remove the portobello caps from the marinade, letting the excess drip off. Place them gill-side down in the dry, hot pan — no oil. The moment they hit the pan you should hear an aggressive sizzle; if you do not, the pan is not hot enough." },
+      { step: 3, text: "Sear the 4 portobello caps completely undisturbed for 4–5 minutes. Resist every urge to move or check them — the mushrooms are releasing moisture that will pool in the pan before evaporating, and if you move them before this process is complete, you will tear off the developing crust. After 4–5 minutes, the gill side should be deeply browned and slightly caramelized." },
+      { step: 4, text: "Flip the mushrooms and sear for another 4–5 minutes on the smooth top side until darkly browned and tender throughout — press the center of a mushroom with your finger; it should feel firm but give slightly, like a cooked steak rather than a raw, springy mushroom. Remove from heat and let cool for 2 minutes so the juices settle before cutting." },
+      { step: 5, text: "Spread the 2 tbsp chipotle mayo evenly over all 4 sourdough bread slices. Slice each portobello cap thickly and layer over the mayo on 2 slices. Scatter the 2 tbsp pickled red onions over the mushrooms — their acid and color provide the balance that makes this sandwich feel complete. Close, press firmly, cut diagonally, and serve while the mushrooms are still warm." }
     ],
     chefNotes: "Do not move the mushrooms while searing — they need time to release their moisture and then caramelize. Moving them early results in steaming, not searing.",
     pairing: "Sparkling water or cold soda",
@@ -2167,13 +2166,13 @@ export const lunchRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "Japanese mayonnaise" },
     ],
     method: [
-      { step: 1, text: "Combine the 3 tbsp soy sauce, 3 tbsp mirin, and 1 tbsp sugar in a small saucepan and simmer over medium heat for 5 minutes." },
-      { step: 2, text: "Cook the 4 boneless chicken thighs in a 12-inch skillet over medium-high heat for 5 minutes per side, until browned and cooked through." },
-      { step: 3, text: "Brush the 4 boneless chicken thighs with the teriyaki glaze and cook for 2 more minutes, until the surface looks glossy and lacquered." },
-      { step: 4, text: "Cook the 4 strips bacon in a 10-inch skillet over medium heat for 8–10 minutes, turning once, until crisp and deeply browned." },
-      { step: 5, text: "Spread the 2 tbsp Japanese mayonnaise evenly across all 6 slices toasted white bread, covering each slice to the edges." },
-      { step: 6, text: "Divide the 4 boneless chicken thighs and 4 strips bacon between two sandwiches, using 3 slices toasted white bread for each club." },
-      { step: 7, text: "Secure each sandwich with toothpicks, then cut both clubs diagonally and check that the 4 boneless chicken thighs are fully cooked inside." }
+      { step: 1, text: "Combine the 3 tbsp soy sauce, 3 tbsp mirin, and 1 tbsp sugar in a small saucepan. Bring to a simmer over medium heat and cook for 5 minutes, stirring occasionally, until the mixture has reduced by one-third and thickened to a slow-flowing glaze. Remove from the heat; it will thicken significantly as it cools." },
+      { step: 2, text: "Pat the 4 boneless chicken thighs completely dry. Heat a 12-inch skillet over medium-high heat and cook the thighs for 5 minutes on the first side without moving them. Flip and cook for 5 more minutes until cooked through to 165°F. Reduce heat to medium-low and pour the teriyaki glaze over the chicken, turning and basting every 30 seconds for 2 minutes until the chicken is lacquered and glossy." },
+      { step: 3, text: "Transfer the glazed chicken to a cutting board and rest for 3 minutes. Meanwhile, cook the 4 strips bacon in the same pan over medium heat for 8–10 minutes, turning once, until deeply browned and crispy. Drain on a wire rack for 2 minutes." },
+      { step: 4, text: "Toast the 6 slices of white bread until golden and firm — the middle slice of a club sandwich bears the most weight and must be toasted extra-crispy to avoid collapsing under the fillings. Spread the 2 tbsp Japanese mayonnaise evenly across all 6 slices, covering to the edges." },
+      { step: 5, text: "Slice the 4 teriyaki chicken thighs and divide between the sandwiches. Build each club in two layers: bottom bread, then half the chicken; middle bread, then the remaining chicken and 2 bacon strips; top bread. The three-layer structure requires a firm hand — press down firmly with your palm to compact the layers so they hold together when cut." },
+      { step: 6, text: "Secure each club sandwich with 4 toothpicks positioned at the diagonal cut points, then cut diagonally into 4 triangular quarters. The toothpicks prevent the layers from sliding during cutting. Check that the chicken is fully cooked (no pink) at the center of the largest piece. Serve immediately while the bacon is still hot and crispy." },
+      { step: 7, text: "A club sandwich is most impressively served standing the triangle quarters on their hypotenuse so the cross-section of layers is visible — alternating chicken, bread, bacon, and mayo is visually striking and lets guests see exactly what they are about to eat. Serve with pickle spears and kettle chips for the full diner experience." }
     ],
     chefNotes: "The three-layer club structure requires the middle bread to be toasted extra-crispy — it must hold both layers without going soggy.",
     pairing: "Cold iced tea or sparkling water",
@@ -2210,12 +2209,12 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "cup", item: "pico de gallo" },
     ],
     method: [
-      { step: 1, text: "Heat a grill pan over high heat to 450°F, then place the seasoned 1 lb flank steak in the hot pan." },
-      { step: 2, text: "Sear the 1 lb flank steak for 3–4 minutes per side at 450°F, until browned outside and pink in the center." },
-      { step: 3, text: "Transfer the 1 lb flank steak to a board and rest it for 5 minutes so the juices settle before slicing." },
-      { step: 4, text: "Slice the rested 1 lb flank steak very thinly against the grain, keeping the pieces large enough to wrap around fillings." },
-      { step: 5, text: "Place portions of 1 cup guacamole and 1 cup pico de gallo on the steak slices, leaving the edges clear." },
-      { step: 6, text: "Roll the 1 lb flank steak slices tightly around the 1 cup guacamole and 1 cup pico de gallo, then serve immediately." }
+      { step: 1, text: "Marinate the 1 lb flank steak in the 2 tbsp soy sauce and 1 tbsp lime juice for 10 minutes. Heat a cast-iron grill pan over very high heat until smoking — 450°F or hotter. Sear the steak for 3–4 minutes per side, pressing it flat with a spatula for the first 30 seconds to ensure even contact with the surface. The steak should look deeply charred on the exterior." },
+      { step: 2, text: "Transfer the steak to a cutting board and rest for 5 minutes — this step is mandatory. The internal temperature will rise 5°F during rest and the juices will redistribute, making the steak noticeably juicier when cut. Skipping the rest results in a cascade of pink juice onto the board rather than into the meat." },
+      { step: 3, text: "Slice the rested steak as thinly as possible, against the grain — perpendicular to the direction the muscle fibers run along the length of the steak. You should see the fibers in cross-section rather than running parallel to the slice. This cutting direction breaks the long fibers into short segments, making each piece tender instead of chewy." },
+      { step: 4, text: "Warm the 4 large flour tortillas in a dry skillet for 30 seconds per side until pliable and slightly blistered. Spread a thin layer of the 2 cups seasoned sushi rice over the lower two-thirds of each tortilla — the rice acts as the foundation and also ties the taco to the temaki tradition with its slight vinegar sweetness." },
+      { step: 5, text: "Add portions of sliced steak over the rice, then spoon the 1 cup guacamole and 1 cup pico de gallo alongside. Roll the tortilla into a cone by folding one edge over the filling at a slight diagonal, then rolling forward — tighter at the bottom, wider at the top, mimicking the temaki hand roll shape. Eat immediately with both hands." },
+      { step: 6, text: "These hand rolls must be eaten immediately after rolling — the tortilla absorbs moisture from the guacamole and pico de gallo within 2–3 minutes and begins to soften. Roll and hand to guests one at a time rather than making them all in advance." }
     ],
     chefNotes: "The seasoned rice is the secret ingredient that ties the taco to the temaki tradition — it adds a slight vinegar sweetness that balances the savory steak.",
     pairing: "Cold sake or sparkling lime water",
@@ -2248,11 +2247,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "", item: "avocado", note: "sliced" },
     ],
     method: [
-      { step: 1, text: "Heat a 10-inch skillet over medium-low heat; warm 3 cooked teriyaki chicken thighs for 3–4 minutes, turning until steaming throughout." },
-      { step: 2, text: "Transfer 3 warmed teriyaki chicken thighs to a board; rest for 2 minutes, then slice into even strips with no pink center." },
-      { step: 3, text: "Place 2 cups napa cabbage slaw in a large bowl; toss for 30 seconds until evenly combined and lightly crisp." },
-      { step: 4, text: "Arrange the sliced 3 teriyaki chicken thighs beside 2 cups napa cabbage slaw on a serving plate while the chicken is still warm." },
-      { step: 5, text: "Serve 3 sliced teriyaki chicken thighs with 2 cups napa cabbage slaw immediately, checking that the chicken is hot and cabbage remains crisp." }
+      { step: 1, text: "Warm the 3 cooked teriyaki chicken thighs in a 10-inch skillet over medium-low heat, turning every minute for 3–4 minutes until steaming hot throughout and the teriyaki glaze on the surface is bubbling lightly. The chicken should be heated to at least 165°F at the thickest point — press the center with a finger; it should feel firm and hot, not cool and springy." },
+      { step: 2, text: "Transfer the warmed chicken to a cutting board and rest for 2 minutes, then slice into 1/2-inch strips on a diagonal. In a bowl, whisk the 1 tbsp white miso paste and 2 tbsp rice wine vinegar together for 30 seconds until the miso dissolves completely. Toss the 2 cups napa cabbage slaw with this miso vinaigrette until every shred is coated and glossy." },
+      { step: 3, text: "Warm the 2 large flour tortillas in the same dry skillet for 30 seconds per side until pliable and lightly blistered — a cold tortilla will crack when you try to roll it. The tortilla should feel soft and slightly damp from the steam, not stiff. Lay each warmed tortilla flat on a work surface." },
+      { step: 4, text: "Arrange the sliced teriyaki chicken across the lower third of each tortilla, leaving a 2-inch border on the sides. Fan the 1 sliced avocado alongside the chicken, then pile the miso slaw on top. The filling should feel generous but not overstuffed — you need room to fold." },
+      { step: 5, text: "Fold the two side edges of the tortilla inward over the filling, then roll the bottom edge up and over the filling, pulling it back against itself to create tension, and continue rolling forward into a tight cylinder. The wrap should feel compact and firm; if it feels loose, unroll and start again with less filling. Cut diagonally and serve immediately." }
     ],
     chefNotes: "Warming the tortilla before rolling is essential. A cold, stiff tortilla will crack when you roll it, destroying the wrap.",
     pairing: "Sparkling water or cold barley tea",
@@ -2284,12 +2283,12 @@ export const lunchRecipes: Recipe[] = [
       { qty: "2", unit: "sheets", item: "nori", note: "cut into 1.5-inch wide strips" },
     ],
     method: [
-      { step: 1, text: "Drain 1 cup leftover birria beef thoroughly, then finely shred it; the meat should look loose and moist, not glossy or soupy." },
-      { step: 2, text: "Stir 1 cup shredded birria beef with 2 tbsp finely minced cilantro for 30 seconds, until the cilantro is evenly dispersed." },
-      { step: 3, text: "Season 2 cups cooked, slightly warm sushi rice with 1/2 tsp salt; fold gently for 20 seconds without crushing the grains." },
-      { step: 4, text: "Divide 2 cups seasoned sushi rice into equal portions; flatten each portion into a disk while it is still slightly warm." },
-      { step: 5, text: "Add some of the mixture made from 1 cup birria beef and 2 tbsp cilantro to each rice center, then seal and press firmly." },
-      { step: 6, text: "Rest the finished onigiri for 5 minutes; check that the 2 cups rice hold their shape, with firm surfaces and no exposed filling." }
+      { step: 1, text: "Drain the 1 cup leftover birria beef thoroughly — place it in a fine-mesh strainer and press firmly until no liquid drips through. Excess liquid in the filling will saturate the rice from the inside and cause the onigiri to fall apart within minutes of shaping. Finely shred the drained meat using two forks until every strand is roughly the same length and no large chunks remain." },
+      { step: 2, text: "Combine the 1 cup shredded birria with the 2 tbsp finely minced cilantro and stir for 30 seconds — the cilantro should be distributed throughout, not clumped. Taste: the filling should be intensely savory and slightly spicy from the dried chiles in the birria; if it tastes flat after refrigeration, add a pinch of salt." },
+      { step: 3, text: "Season the 2 cups slightly warm sushi rice with the 1/2 tsp salt and fold gently 5–6 times with a wide, flat spoon. The rice must be slightly warm — not hot, which burns your hands; not cold, which prevents the grains from adhering. If using refrigerated rice, microwave it covered with a damp paper towel for 60 seconds to rewarm." },
+      { step: 4, text: "Wet your hands thoroughly with cold water to prevent sticking. Take a portion of rice (about 1/3 cup) and press it into a flat disk in your palm. Place 1 tablespoon of the birria filling in the center, then close the rice around it, pressing and shaping firmly into a triangle or ball with both palms. The rice needs firm, even pressure to compact — loose shaping results in onigiri that crumble when picked up." },
+      { step: 5, text: "Wrap a 1.5-inch strip of nori around the base of each onigiri — this creates the grip for eating and the seaweed flavor that anchors the Japanese side of this fusion. The nori will soften and cling to the rice immediately on contact. Rest the finished onigiri for 5 minutes before serving so the shapes stabilize." },
+      { step: 6, text: "Serve within 1 hour of making for the best texture — the rice will continue softening and the nori will eventually saturate if the onigiri sit too long. These are at their absolute best within 20 minutes of shaping, when the rice is still warm and the nori is just slightly softened but still has some structure." }
     ],
     chefNotes: "Warm rice is essential — cold rice does not stick together properly and the onigiri will fall apart. Eat within an hour of making them.",
     pairing: "Cold mugicha or sparkling water",
@@ -2323,13 +2322,13 @@ export const lunchRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "sesame seeds" },
     ],
     method: [
-      { step: 1, text: "Combine 1 lb medium shrimp with 2 tbsp lime juice in a bowl; marinate for 10 minutes while you prepare the lettuce." },
-      { step: 2, text: "Separate the leaves from 1 head butter lettuce into cups, then rinse and pat them dry." },
-      { step: 3, text: "Heat a large dry skillet over medium-high heat for 2 minutes; do not add oil." },
-      { step: 4, text: "Add the marinated 1 lb shrimp in one layer and cook for 2–3 minutes, until the bottoms turn pink." },
-      { step: 5, text: "Turn the shrimp and cook 2–3 minutes more, until fully pink, opaque, and firm in the centers." },
-      { step: 6, text: "Toss the cooked 1 lb shrimp with 1 cup finely diced cucumber, then fill the lettuce cups." },
-      { step: 7, text: "Sprinkle the filled cups with 2 tbsp sesame seeds and serve immediately on a platter." }
+      { step: 1, text: "In a bowl, combine the 1 lb peeled deveined shrimp with 2 tbsp lime juice, 1 tbsp soy sauce, and 1 minced serrano chile. Toss to coat and marinate for exactly 10 minutes — no longer. Shrimp marinated in citrus juice for more than 15 minutes begin to cure (essentially cooking from the acid), which changes the texture and can make them rubbery when subsequently seared." },
+      { step: 2, text: "While the shrimp marinate, separate the leaves from the 1 head of butter lettuce into natural cups. Look for the most cup-shaped leaves — ones that form a concave bowl to hold the filling. Rinse them gently under cold water and pat dry with a clean towel. Wet lettuce cups will slide in your hand and make eating the wrap messy." },
+      { step: 3, text: "Heat a large skillet (not nonstick) over medium-high heat for 2 minutes until very hot. Remove the shrimp from the marinade, letting the excess drip off, and arrange them in a single layer — do not crowd the pan. Crowded shrimp steam each other and turn gray and rubbery instead of searing with the caramelized edges this dish requires." },
+      { step: 4, text: "Cook the shrimp for 2–3 minutes on the first side without moving them — they should curl slightly and turn pink from the bottom up. Flip each shrimp individually and cook for 2–3 more minutes until completely pink and opaque at the center. Overcooked shrimp are C-shaped and rubbery; perfectly cooked shrimp curl into a loose C and feel tender when pressed." },
+      { step: 5, text: "Remove the shrimp from the pan and combine with the 1 cup finely diced cucumber. Arrange the butter lettuce cups on a platter and fill each with a few shrimp and cucumber pieces. Sprinkle the 2 tbsp sesame seeds over the filled cups and serve immediately on the platter so guests can assemble their own and eat them as they are filled." },
+      { step: 6, text: "These are eaten by picking up the lettuce cup with both hands and biting through the crisp lettuce and the seared, spicy shrimp together. The cool cucumber cuts the heat from the serrano and the sesame adds nuttiness. Serve with extra lime wedges for guests who want more acidity." },
+      { step: 7, text: "Prepare and serve all the wraps within 10 minutes of cooking the shrimp — they cool quickly and warm shrimp inside cool lettuce is the ideal temperature contrast that makes this dish so appealing in summer." }
     ],
     chefNotes: "Do not overcrowd the pan when cooking shrimp. Crowded shrimp steam instead of sear, resulting in rubbery texture without the caramelized edges.",
     pairing: "Sparkling water with lime or cold green tea",
@@ -2361,13 +2360,13 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "Worcestershire sauce" },
     ],
     method: [
-      { step: 1, text: "Toss 1 cup cooked yakisoba with 1 tbsp soy sauce and 1 tbsp Worcestershire sauce until evenly coated." },
-      { step: 2, text: "Heat a 10-inch dry skillet over medium heat for 1 minute, keeping the pan ungreased." },
-      { step: 3, text: "Divide 4 large flour tortillas, 1 cup noodles, and 1.5 cups shredded cheese evenly between 2 quesadillas." },
-      { step: 4, text: "Layer each portion on a tortilla with noodles between the shredded cheese, then cover with a second tortilla." },
-      { step: 5, text: "Cook each quesadilla for 3 minutes, flip, and cook 2 minutes more until golden, crisp, and the cheese melts." },
-      { step: 6, text: "Transfer the cooked quesadillas to a cutting board and let them rest for 2 minutes so the cheese sets." },
-      { step: 7, text: "Cut each quesadilla into wedges and serve while the tortillas remain crisp and the cheese is warm." }
+      { step: 1, text: "In a bowl, toss the 1 cup cooked yakisoba noodles with the 1 tbsp soy sauce and 1 tbsp Worcestershire sauce until every strand is evenly coated and the sauce is completely absorbed — the noodles should look dark and glossy, not pooling with excess liquid. Drain any excess sauce; wet noodles in a quesadilla will prevent the tortilla from crisping." },
+      { step: 2, text: "Heat a 10-inch dry skillet over medium heat for 1 minute — ungreased, since the cheese and tortilla contain enough fat for the cooking process. Lay one large flour tortilla flat in the pan." },
+      { step: 3, text: "Sprinkle 1/2 of the 1.5 cups shredded Oaxacan or mozzarella cheese evenly over the entire tortilla surface. Distribute half the seasoned yakisoba noodles over the cheese on one half of the tortilla only, keeping the other half clear. The cheese on the noodle side will melt into the noodles, while the cheese on the clear side will bond to the other tortilla when folded." },
+      { step: 4, text: "Fold the clear half of the tortilla over the noodle-filled half, pressing down firmly with a spatula. Cook for 3 minutes without moving; the bottom should be golden and rigid when you lift an edge with the spatula. Flip carefully — use a wide spatula and support the entire quesadilla — and cook for 2 more minutes until the second side is equally golden and crispy." },
+      { step: 5, text: "Transfer to a cutting board and let the quesadilla rest for 2 minutes before cutting — the molten cheese needs this time to set slightly so it does not pour out when sliced. Cut into 3 wedges with a sharp knife in confident, single strokes. The cross-section should show visible noodles embedded in golden, melted cheese between two crispy tortilla layers. Repeat for the second quesadilla." },
+      { step: 6, text: "Serve immediately with ponzu for dipping on the side — the bright, citrusy ponzu cuts through the richness of the cheese and the savory depth of the yakisoba, refreshing the palate between bites. These quesadillas soften within 5 minutes, so serve and eat promptly." },
+      { step: 7, text: "If making multiple quesadillas, keep finished ones warm in a 200°F oven on a wire rack — this preserves the crunch of the tortilla without steaming it. Never stack quesadillas; the weight and steam will soften all but the top one immediately." }
     ],
     chefNotes: "Use Oaxacan cheese for better meltability and a cleaner flavor than standard mozzarella. It pulls into strings that hold the noodles together.",
     pairing: "Hot sauce on the side or ponzu for dipping",
@@ -2401,12 +2400,12 @@ export const lunchRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "sesame seeds" },
     ],
     method: [
-      { step: 1, text: "Separate 1 head butter lettuce into leaves, rinse gently, and pat dry while you prepare the chicken." },
-      { step: 2, text: "Heat a large skillet over medium-high heat for 2 minutes, until the surface is hot." },
-      { step: 3, text: "Add 1 lb ground chicken to the skillet and cook for about 5 minutes, breaking it up until no pink remains." },
-      { step: 4, text: "Add 2 cloves garlic, minced, and stir-fry for 1 minute, until fragrant and the chicken is fully cooked." },
-      { step: 5, text: "Stir in 2 tbsp sesame seeds and cook for 30 seconds, until lightly toasted and evenly mixed." },
-      { step: 6, text: "Spoon the warm chicken mixture into the prepared butter lettuce leaves and serve immediately." }
+      { step: 1, text: "In a small bowl, dilute the 2 tbsp white miso paste in 2 tbsp warm water, whisking until completely smooth. Add the 1 tbsp soy sauce and 1 tbsp freshly grated ginger to this miso mixture and stir to combine. Set aside. This pre-dilution prevents the miso from seizing and burning when it hits the hot pan — a common error that results in bitter, stuck paste rather than glossy, evenly distributed sauce." },
+      { step: 2, text: "Separate the 1 head of butter lettuce into individual leaves, selecting the most cup-shaped ones for serving. Rinse gently under cold water and pat completely dry with a clean towel — even slightly damp leaves will slip and release the filling when picked up. Arrange them on a serving platter and refrigerate while you cook." },
+      { step: 3, text: "Heat a large skillet over medium-high heat until hot. Add the 1 lb ground chicken and cook, breaking it apart with a spoon or spatula, for about 5 minutes until no pink remains and the chicken is cooked through in small, separated pieces. Do not stir too frequently — let the chicken sit against the hot pan for 30–60 seconds at a time to develop some browned, flavorful bits." },
+      { step: 4, text: "Add the 2 minced garlic cloves and stir-fry for 1 minute until fragrant and the garlic is incorporated into the chicken. Pour the miso-ginger sauce over the chicken and toss vigorously over medium-high heat for 1–2 minutes until the sauce coats every piece of chicken and reduces until glossy. The pan will look almost dry when done correctly." },
+      { step: 5, text: "Scatter the 2 tbsp sesame seeds over the chicken and stir for 30 seconds so they distribute throughout. Remove from the heat and taste: the filling should be savory, gingery, and slightly salty, with a clean sesame finish. Serve immediately from the pan alongside the chilled lettuce cups so guests can fill their own." },
+      { step: 6, text: "To eat: spoon a generous amount of the warm chicken mixture into a cold lettuce cup and fold the leaf around it. The contrast between the hot, savory chicken and the cold, crisp lettuce is the defining pleasure of this dish. Offer chili-garlic sauce on the side for those who want additional heat." }
     ],
     chefNotes: "Diluting the miso in warm water before adding it prevents it from sticking to the hot pan and burning.",
     pairing: "Cold green tea or sparkling water",
@@ -2439,11 +2438,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "chipotle in adobo", note: "minced" },
     ],
     method: [
-      { step: 1, text: "Slice the 2 ripe but firm avocados into thick, even wedges, keeping each piece intact for dipping." },
-      { step: 2, text: "Prepare the 1 cup tempura batter mix according to its package directions, stopping when the batter is just combined." },
-      { step: 3, text: "Heat 2 inches of neutral oil in a heavy pot to 375°F, checking that the temperature is steady before frying." },
-      { step: 4, text: "Dip the wedges from the 2 ripe but firm avocados in the 1 cup batter and fry in batches for 2 minutes until light golden." },
-      { step: 5, text: "Drain the fried wedges on a rack, then serve the 2 avocados immediately while the coating is crisp and visibly light golden." }
+      { step: 1, text: "Slice the 2 avocados into thick wedges — about 1/2 inch at the widest point. Use avocados that are ripe but firm: fully ripe avocados are too soft and will fall apart during battering and frying, while underripe avocados will not have the silky, buttery interior that makes this taco special. Pat the avocado wedges dry with paper towels." },
+      { step: 2, text: "Make the tempura batter by combining the 1 cup tempura batter mix with 3/4 cup ice-cold water in a bowl. Stir with chopsticks or a fork using exactly 10–12 strokes — deliberately leaving lumps and dry streaks. This is not a mistake; under-mixed tempura batter creates the characteristic lacy, delicate shell. Smooth, fully mixed batter produces a heavy, doughy crust. Keep the batter cold over a bowl of ice." },
+      { step: 3, text: "Heat 3 inches of neutral oil (canola or vegetable) in a heavy pot to exactly 375°F — use a thermometer. Temperature is everything in tempura: below 350°F, the batter absorbs oil and turns heavy; above 400°F, the batter browns before the interior is warmed. Maintain 375°F by frying in small batches and allowing the oil to return to temperature between each batch." },
+      { step: 4, text: "Dip each avocado wedge into the batter, lift it out, let the excess drip for 2 seconds, then lower it gently into the oil away from you. Fry for 2 minutes without touching until the batter is set and pale gold — tempura is never deeply browned. Remove with a slotted spoon or spider strainer and drain on a wire rack immediately." },
+      { step: 5, text: "Mix the 2 tbsp Mexican crema and 1 tbsp minced chipotle in adobo until combined. Warm the 4 small corn tortillas in a dry skillet for 30 seconds per side. Place 2–3 tempura avocado wedges in each tortilla, drizzle generously with the chipotle crema, and serve within 2 minutes — tempura loses its lightness quickly as steam softens the batter from the inside." }
     ],
     chefNotes: "Tempura batter must be ice cold and minimally mixed. Warm, smooth batter produces a thick, doughy crust instead of the characteristic lacy, delicate tempura shell.",
     pairing: "Cold Mexican soda or sparkling water with lime",
@@ -2477,11 +2476,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "ponzu sauce" },
     ],
     method: [
-      { step: 1, text: "Place the 2 salmon fillets (4 oz each) in a shallow dish and coat with the 2 tbsp soy sauce; marinate for 10 minutes." },
-      { step: 2, text: "Heat a 10-inch skillet over medium-high heat, then sear the 2 salmon fillets for 3 minutes per side until opaque and lightly browned." },
-      { step: 3, text: "Transfer the cooked 2 salmon fillets to a plate and flake them into large chunks while they are still warm." },
-      { step: 4, text: "Divide the 1 cup seasoned sushi rice between two plates, then arrange the flaked salmon and 1 sliced avocado over it." },
-      { step: 5, text: "Drizzle the arranged portions with the 2 tbsp ponzu sauce and serve immediately, while the salmon is moist and the rice remains distinct." }
+      { step: 1, text: "Place the 2 salmon fillets (4 oz each) in a shallow dish and drizzle with the 2 tbsp soy sauce and 1 tbsp sesame oil, turning to coat both sides. Marinate for 10 minutes at room temperature — the soy sauce will darken the surface slightly as it penetrates. Pat the marinated fillets dry before searing so they brown rather than steam." },
+      { step: 2, text: "Heat a 10-inch skillet over medium-high heat until hot — a drop of water should evaporate on contact. Place the 2 salmon fillets in the dry pan and sear for 3 minutes on the first side without moving them. You will see the translucent flesh turn opaque from the bottom up; when it is about halfway cooked through, flip the fillets." },
+      { step: 3, text: "Cook for 2–3 more minutes on the second side until the salmon is just barely opaque at the very center — a slight translucency at the thickest point is ideal, as carryover heat will finish it. Transfer to a plate and flake into large, irregular chunks using two forks. Larger chunks have more textural presence in the taco than fine shreds." },
+      { step: 4, text: "Prepare your assembly station: lay the 4 halved nori sheets flat on a dry surface. Divide the 1 cup seasoned sushi rice among them, spreading it in a thin layer over the left half of each nori piece only. Place flaked salmon and 1 sliced avocado on top of the rice." },
+      { step: 5, text: "Drizzle the 2 tbsp ponzu sauce over the salmon and avocado on each nori sheet, then fold the nori in half — nori sheet over filling — to form a taco shape. Eat immediately; nori begins losing its crunch within 3 minutes of contact with the moist rice and filling. These are not make-ahead; assemble and hand to guests one at a time." }
     ],
     chefNotes: "Nori loses its crunch within 5 minutes of contact with moisture. Build these individually and eat each one immediately after assembling.",
     pairing: "Cold sake or sparkling water",
@@ -2514,19 +2513,19 @@ export const lunchRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "sesame seeds" },
     ],
     method: [
-      { step: 1, text: "Dice the 12 oz sashimi-grade tuna into small, even cubes, keeping the pieces chilled and uniform for a cohesive mixture." },
-      { step: 2, text: "Place the 12 oz diced tuna in a bowl and fold in the 3 tbsp Japanese mayonnaise until evenly coated and glossy." },
-      { step: 3, text: "Rest the tuna mixture for 5 minutes in the refrigerator so the mayonnaise coats every piece without dulling the color." },
-      { step: 4, text: "Divide the chilled 12 oz tuna mixture among serving portions, keeping the cubes piled neatly rather than mashed." },
-      { step: 5, text: "Sprinkle the 2 tbsp sesame seeds over the portions and serve immediately while the tuna looks glossy and vibrant." }
+      { step: 1, text: "Dice the 12 oz sashimi-grade tuna into even cubes approximately 1/3 inch per side — small enough to pile neatly on the tostada, large enough to have distinct texture when bitten. Keep the tuna refrigerated until the moment you use it; room-temperature sashimi-grade fish degrades quickly and loses its clean, fresh flavor." },
+      { step: 2, text: "In a cold bowl, fold the 12 oz diced tuna with the 3 tbsp Japanese mayonnaise and 1 tbsp sriracha using a wide spoon. Fold — not stir — using 8–10 gentle strokes that coat the cubes without crushing them. Stop the moment every cube looks orange-tinted from the sriracha mayo. Over-mixing produces paste; under-mixing leaves the flavor uneven." },
+      { step: 3, text: "Cover the spicy tuna mixture and refrigerate for 5–10 minutes — this brief rest lets the sriracha heat distribute evenly through the mayo and firms the tuna slightly, making it easier to pile onto the tostadas without sliding. Meanwhile, arrange the 4 tostada shells on a flat serving surface." },
+      { step: 4, text: "Divide the chilled spicy tuna evenly among the 4 tostada shells, spooning it on top in a generous, slightly mounded layer. Work quickly — the tostada shell will begin to soften from the moisture in the tuna within 5 minutes. Fan 2–3 slices of the 1 avocado over the tuna on each tostada, pressing gently so the slices conform to the mound." },
+      { step: 5, text: "Scatter the 2 tbsp sesame seeds over all 4 tostadas from a height for even distribution and serve immediately. Each tostada should be eaten in 3–4 bites before the shell softens to the point of losing its structural crunch — the textural progression from crispy tostada to creamy tuna to rich avocado is the experience this dish is built around." }
     ],
-    chefNotes: "Keep everything ice cold until the moment of assembly. Warm tuna loses its clean, fresh flavor rapidly.",
-    pairing: "Dry sake or sparkling lime water",
+    chefNotes: "Use sashimi-grade tuna and keep it cold throughout — spicy tuna tostadas are at their best when the tuna is ice cold against the room-temperature avocado and the crisp shell.",
+    pairing: "Cold sake or lime sparkling water",
     mealSlots: ["lunch"],
     healthy: true,
   },
   {
-    slug: "edamame-chicken-taco",
+    slug: "edamame-chicken-tacos",
     title: "Edamame Chicken Tacos",
     subtitle: "Japan's favorite bean, in Mexico's favorite format.",
     story: "Edamame is so universally loved in America that it has earned a spot as a taco topping — its creamy, sweet pop provides a textural contrast to grilled chicken that crumbled cotija alone cannot. With a sesame-lime slaw on top, these tacos need nothing else.",
@@ -2552,11 +2551,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "lime juice" },
     ],
     method: [
-      { step: 1, text: "Combine the 2 tbsp soy sauce and 1 tbsp sesame oil, coat the 4 cooked chicken thighs, and marinate for 20 minutes." },
-      { step: 2, text: "Heat a 10-inch skillet over high heat, add the 4 marinated chicken thighs, and sear 5 minutes per side until browned and hot." },
-      { step: 3, text: "Slice the 4 seared chicken thighs, then toss the 1 cup shredded cabbage with the 1 tbsp lime juice and reserved marinade." },
-      { step: 4, text: "Warm the 8 small corn tortillas in a dry skillet over medium heat for 30 seconds per side until pliable and lightly toasted." },
-      { step: 5, text: "Fill each of the 8 small corn tortillas with sliced chicken and the 1 cup cabbage slaw, then serve while warm." }
+      { step: 1, text: "In a shallow dish, combine the 2 tbsp soy sauce and 1 tbsp sesame oil. Add the 4 boneless chicken thighs, turning to coat both sides thoroughly. Marinate for 20 minutes at room temperature — the soy sauce will begin penetrating the surface of the chicken, seasoning it from the outside in while the sesame oil carries aromatic flavor into the meat." },
+      { step: 2, text: "Heat a 10-inch cast-iron skillet over high heat for 2 minutes until very hot. Remove the chicken from the marinade, letting the excess drip off. Place skin-side down in the dry skillet — the sugars in the soy sauce will caramelize against the hot surface. Sear for 5 minutes on the first side without moving, until deeply browned." },
+      { step: 3, text: "Flip the chicken and cook for 5–6 more minutes on the second side until cooked through to 165°F at the thickest point. The chicken is done when the juices run clear when pierced and the meat feels firm when pressed — not springy (undercooked) or rigid (overcooked). Transfer to a board and rest for 3 minutes before slicing." },
+      { step: 4, text: "While the chicken rests, toss the 1 cup shredded cabbage with the 1 tbsp lime juice and any remaining marinade from the dish. The acid softens the cabbage slightly while the marinade adds soy-sesame flavor — this becomes the quick slaw topping. Taste and add a pinch of salt if needed." },
+      { step: 5, text: "Warm the 8 small corn tortillas in a dry skillet over medium heat for 30 seconds per side — they should be pliable and slightly blistered, not stiff. Slice the rested chicken into thin strips and divide among the 8 tortillas. Top each taco with the 1 cup cooked shelled edamame and the sesame-lime slaw, and serve immediately while the chicken is still warm." }
     ],
     chefNotes: "Scattering edamame over the chicken rather than mixing it in ensures every taco has some of each element rather than everything clumped together.",
     pairing: "Cold horchata or sparkling water",
@@ -2588,11 +2587,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "soy sauce" },
     ],
     method: [
-      { step: 1, text: "Place the 4 boneless chicken thighs in a bowl and coat them with the 2 tbsp soy sauce; they are already seasoned with cumin and garlic." },
-      { step: 2, text: "Heat a 10-inch skillet over medium-high heat, add the 4 chicken thighs, and cook until charred and cooked through, about 6–8 minutes per side." },
-      { step: 3, text: "Transfer the 4 cooked chicken thighs to a board, rest for 5 minutes, and slice them thinly once the juices have settled." },
-      { step: 4, text: "Warm the 8 small corn tortillas in a dry skillet over medium heat for 30 seconds per side until soft, flexible, and lightly browned." },
-      { step: 5, text: "Place 1 of the 4 nori pieces inside each tortilla, divide the sliced chicken among the 8 tortillas, and top with 1 cup salsa verde." }
+      { step: 1, text: "Season the 4 boneless chicken thighs with cumin and minced garlic — press the seasonings firmly into both sides so they adhere. In a bowl, add the 2 tbsp soy sauce and coat the seasoned chicken on both sides. Let sit for 10 minutes; the soy sauce deepens the savory character of the Mexican spices while adding its own umami dimension." },
+      { step: 2, text: "Heat a 10-inch skillet over medium-high heat until hot. Place the chicken thighs in the dry pan and cook for 6–8 minutes on the first side — do not move them. You need a sustained char: the chicken should look dark brown on the bottom with some crispy edges when lifted with a spatula at the 6-minute mark." },
+      { step: 3, text: "Flip the chicken and cook for 6–8 more minutes on the second side until cooked through to 165°F. The combination of cumin and soy sauce creates a dark, aromatic crust that smells of both cuisines simultaneously. Transfer to a cutting board and rest for 5 minutes, then slice very thinly against the grain." },
+      { step: 4, text: "Warm the 8 small corn tortillas in a dry skillet over medium heat for 30 seconds per side until soft and pliable. Cut the 4 nori pieces to fit the diameter of the tortillas — use scissors to trim them into circles or squares that will sit flat inside the tortilla without folding or protruding." },
+      { step: 5, text: "Place 1 nori piece inside each tortilla, then divide the sliced chicken among the 8 tacos. The nori sits between the tortilla and the chicken, softening into the warm tortilla immediately — within 60 seconds it will be nearly invisible but its briny, mineral flavor will permeate the taco. Spoon the 1 cup tomatillo salsa over the chicken and serve immediately — the nori's texture is best in the first 2–3 minutes before it becomes fully softened." }
     ],
     chefNotes: "The nori inside the taco will soften within 2–3 minutes. This taco should be eaten immediately after assembly.",
     pairing: "Cold agua fresca or lime soda",
@@ -2628,11 +2627,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "sesame seeds" },
     ],
     method: [
-      { step: 1, text: "Bring a large pot of water to a rolling boil, add the 6 oz dry soba noodles, and cook for 4–5 minutes until tender." },
-      { step: 2, text: "Drain the 6 oz soba noodles immediately, rinse them under very cold running water, and rub gently until the water runs clear." },
-      { step: 3, text: "Drain the chilled 6 oz soba noodles thoroughly, then divide them evenly between two bowls or plates without letting them pool in water." },
-      { step: 4, text: "Whisk the 2 tbsp soy sauce with the 1 tbsp sesame oil in a small bowl until fully blended into a dipping sauce." },
-      { step: 5, text: "Serve the 6 oz soba noodles with the dipping sauce, then scatter the 2 tbsp sliced scallions and 1 tbsp sesame seeds over the noodles." }
+      { step: 1, text: "Bring at least 4 quarts of water to a full rolling boil — soba noodles need a large volume of water to cook evenly and prevent sticking. Add the 6 oz dry soba noodles and stir immediately so they do not clump. Cook for exactly 4–5 minutes, testing at 4 minutes by biting a noodle in half — it should be tender throughout with no white line at the center." },
+      { step: 2, text: "Drain the cooked soba noodles immediately in a colander, then rinse under very cold running water while rubbing the noodles with your hands. This rinsing step is mandatory for cold soba: it stops cooking instantly, firms the noodle texture, and removes the excess starch that makes noodles gummy and sticky. Rinse until the water runs clear and the noodles feel cool." },
+      { step: 3, text: "Shake the colander vigorously over the sink to expel as much water as possible, then transfer the noodles to a bowl. A wet noodle dilutes the dipping sauce; dry noodles take on the sauce's flavor cleanly. Divide the noodles between two chilled plates or shallow bowls, arranging them in small bundles or nests for an attractive presentation." },
+      { step: 4, text: "In a small bowl, whisk the 2 tbsp soy sauce with the 1 tbsp sesame oil to create a secondary dipping sauce. Serve the noodles alongside two dipping elements: the 1 cup tomatillo salsa verde in one small bowl and the soy-sesame sauce in another, allowing diners to alternate between the bright, herby salsa verde and the darker, nuttier soy sauce." },
+      { step: 5, text: "Scatter the 2 tbsp sliced scallions and 1 tbsp sesame seeds over the noodles just before serving. The correct technique for eating cold soba is to take a small bundle of noodles with chopsticks, dip one end briefly into the sauce, and slurp them — the slurping aerates the noodle and intensifies the flavor. Encourage this even at the table." }
     ],
     chefNotes: "The cold water rinse after cooking is mandatory — it stops cooking, firms the texture, and washes away the excess starch that makes noodles gummy.",
     pairing: "Cold mugicha or iced green tea",
@@ -2666,11 +2665,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "2", unit: "cloves", item: "garlic", note: "minced" },
     ],
     method: [
-      { step: 1, text: "Bring a large pot of water to a rolling boil, add the 2 packs ramen noodles, and cook about 3 minutes until just tender." },
-      { step: 2, text: "Drain the 2 packs cooked ramen noodles in a colander, rinse under cold water until cool, and set them aside to drain." },
-      { step: 3, text: "Heat a large wok or skillet over very high heat, about 450°F, and stir-fry the bell pepper, broccoli, and snap peas for 3 minutes." },
-      { step: 4, text: "Push the vegetables aside, add the 2 large eggs to the open center, and scramble for 1–2 minutes until softly set." },
-      { step: 5, text: "Add the 2 packs ramen noodles and the 2 tbsp soy sauce, then toss over very high heat for 2 minutes until glossy and hot." }
+      { step: 1, text: "Cook the 2 packs ramen noodles (discarding the seasoning packets) in boiling water for exactly 3 minutes — they cook quickly and will become mushy if left even 60 seconds too long. Drain immediately and rinse under cold water for 10 seconds to stop cooking. Separate the noodles with your fingers so no strands are clumped together; clumped noodles will not pick up sauce evenly in the stir-fry." },
+      { step: 2, text: "In a small bowl, stir together the 2 tbsp soy sauce, 1 tbsp adobo sauce from the chipotle can, and 1 tbsp sesame oil until combined. The adobo sauce is the key ingredient — it has an intense smoked-chile character that transforms the stir-fry from generic Asian to something unmistakably Mestizo Umami. Set this sauce aside within arm's reach of the stove." },
+      { step: 3, text: "Heat a large wok or wide skillet over the highest heat your stove produces for 2 full minutes until it is smoking visibly. Add a splash of vegetable oil, then the 2 cups mixed bell pepper, broccoli, and snap peas. Stir-fry constantly for 3 minutes — the vegetables should stay crisp-tender with some charred edges, not soft and pale." },
+      { step: 4, text: "Push the vegetables to the edges of the wok and add the 2 minced garlic cloves to the center for 30 seconds until golden. Crack the 2 large eggs into the center and scramble them quickly with a spatula for 1–2 minutes until just softly set — they should look creamy, not fully dried out. Combine with the vegetables." },
+      { step: 5, text: "Add the drained ramen noodles and pour the adobo-soy sauce over everything. Toss vigorously over high heat for 2 minutes until every noodle strand is evenly coated in the rust-orange sauce and the pan is almost dry — this caramelization of the sauce against the hot wok is what creates the deep, smoky flavor that distinguishes excellent stir-fried noodles from mediocre ones." }
     ],
     chefNotes: "High heat is non-negotiable for stir-fry. If the pan is not hot enough to make the oil shimmer, you will not get the char and caramelization that defines great stir-fried noodles.",
     pairing: "Cold beer or sparkling water",
@@ -2704,11 +2703,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1/4", unit: "cup", item: "scallions", note: "sliced" },
     ],
     method: [
-      { step: 1, text: "Bring a large pot of water to a full boil, add the 6 oz dry soba noodles, and cook until tender but still slightly firm." },
-      { step: 2, text: "Drain the 6 oz cooked soba noodles in a colander, then rinse them under cold running water until the strands feel cool." },
-      { step: 3, text: "Spread the 6 oz rinsed soba noodles in a shallow dish and cool them for about 15 minutes until no steam remains." },
-      { step: 4, text: "Toss the 6 oz room-temperature soba noodles gently in a serving bowl for 1 minute until the strands separate without clumping." },
-      { step: 5, text: "Serve the 6 oz soba noodles at room temperature immediately, checking that the strands remain loose and evenly distributed." }
+      { step: 1, text: "Mince the 1 chipotle pepper in adobo as finely as possible — you want it to dissolve into the sauce rather than appear as identifiable chunks. In a medium bowl, combine the minced chipotle with the 2 tbsp white miso paste, 2 tbsp soy sauce, 1 tbsp sesame oil, and 3 tbsp warm water. Whisk vigorously for 1 full minute until smooth and uniformly rust-colored. Taste: the sauce should be smoky, savory, and deeply complex — adjust with more chipotle for heat or more miso for fermented depth." },
+      { step: 2, text: "Bring a large pot of water to a full rolling boil. Add the 6 oz dry soba noodles and stir immediately. Cook for 4–5 minutes, testing at 4 minutes — the noodle should be tender throughout with no raw, chalky center when bitten in half. Buckwheat soba goes from perfectly cooked to overcooked quickly; taste every 30 seconds after the 4-minute mark." },
+      { step: 3, text: "Drain the soba immediately and rinse under cold running water while rubbing the strands together with your hands. The rinsing removes excess starch and cools the noodles enough that they can absorb the sauce without cooking the miso further — miso loses its nuanced flavor when exposed to high heat. Continue rinsing until the water runs clear." },
+      { step: 4, text: "Spread the 6 oz rinsed soba in a shallow bowl and cool for about 5 minutes until the noodles are at room temperature. The sauce in this dish is best on room-temperature noodles — not cold noodles (the sauce clings poorly) and not hot noodles (the miso cooks and flattens)." },
+      { step: 5, text: "Pour the miso-chipotle sauce over the room-temperature soba and toss with tongs for 1–2 minutes until every strand is coated in the dark, glossy sauce. Transfer to two serving bowls and top with the 1/4 cup sliced scallions. Serve immediately for the best texture; if making ahead, hold the sauce and noodles separately and combine just before eating." }
     ],
     chefNotes: "This sauce keeps for a week in the refrigerator. Make extra and use it as a salad dressing or vegetable dip.",
     pairing: "Iced green tea or cold sake",
@@ -2742,11 +2741,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "fresh lime juice" },
     ],
     method: [
-      { step: 1, text: "Pour the 8 cups chicken broth into a large pot and bring it to a gentle boil, about 212°F, until visibly steaming." },
-      { step: 2, text: "Add the 2 carrots, sliced, and simmer the 8 cups chicken broth for 5 minutes until the carrots begin to soften." },
-      { step: 3, text: "Add the 2 zucchini, sliced, and simmer the broth and vegetables for 5 more minutes until both vegetables are just tender." },
-      { step: 4, text: "Stir in the 2 tbsp soy sauce and 1 tbsp fresh lime juice, then simmer for 1 minute until the broth is hot and aromatic." },
-      { step: 5, text: "Ladle the 8 cups seasoned chicken broth and vegetables into deep bowls and serve immediately while steaming hot." }
+      { step: 1, text: "Pour the 8 cups chicken broth into a large pot over medium-high heat and bring to a gentle boil. While it heats, slice the 2 carrots into thin rounds about 1/4 inch thick — thin enough to cook through in 5 minutes, thick enough to maintain their shape rather than disintegrating into the broth. Add the carrots the moment the broth reaches a simmer." },
+      { step: 2, text: "Cook the carrots at a steady simmer for 5 minutes, then add the 2 zucchini, sliced into half-moons. Zucchini cooks faster than carrot — add them 5 minutes later so both vegetables reach the ideal texture simultaneously: the carrots should be tender but not mushy, and the zucchini should be just cooked through with a slight give when pressed." },
+      { step: 3, text: "Add the 14 oz udon noodles to the simmering broth. Fresh or frozen udon noodles take only 2–3 minutes to heat through; dry udon noodles take 8–10 minutes. Stir gently when they first go in to prevent clumping — the noodles will separate as they warm. Test by lifting one noodle with chopsticks; it should be thick, silky, and chewy with no stiff center." },
+      { step: 4, text: "Add the 2 cups shredded cooked chicken to the pot and stir in the 2 tbsp soy sauce and 1 tbsp fresh lime juice. The soy sauce deepens the broth's savory character, while the lime juice adds a brightness that lifts the soup and makes it taste more vibrant and fresh. Simmer for 2 more minutes until the chicken is heated through." },
+      { step: 5, text: "Taste the broth — it should be savory, slightly tangy from the lime, and have a comforting depth from the chicken and vegetables. Adjust salt if needed, bearing in mind that the soy sauce is already quite salty. Ladle into deep bowls, making sure each serving includes a generous portion of udon noodles, chicken, carrots, and zucchini in every bowl." }
     ],
     chefNotes: "Fresh udon noodles are now available frozen at most Asian supermarkets. They are dramatically better than dried udon — the texture is silkier and the noodle stays chewy.",
     pairing: "Lime wedges and warm tortillas on the side",
@@ -2779,11 +2778,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "2", unit: "", item: "scallions", note: "sliced" },
     ],
     method: [
-      { step: 1, text: "Bring a 4-quart pot of water to a rolling boil, add the 6 oz dry yakisoba noodles, and cook until just tender." },
-      { step: 2, text: "Drain the 6 oz cooked noodles, rinse them under cold water for 30 seconds, and separate them until no strands stick." },
-      { step: 3, text: "Heat a 10-inch skillet over medium heat, add the 2 cups shredded cabbage, and cook for 2 minutes until wilted." },
-      { step: 4, text: "Add the 6 oz rinsed noodles to the 2 cups cabbage, raise the heat to high, and toss for 2 minutes until hot." },
-      { step: 5, text: "Cook the 6 oz noodles and 2 cups cabbage for 1 additional minute, stirring until the noodles look glossy and the cabbage is tender." }
+      { step: 1, text: "Cook the 6 oz dry yakisoba noodles in a pot of boiling water according to the package directions — typically 3–4 minutes. Drain immediately and rinse under cold water until the noodles feel cool, then separate them with your fingers to prevent clumping. Well-separated, cool noodles will pick up the chorizo fat evenly; clumped noodles will stay pale and unseasoned in the center." },
+      { step: 2, text: "In a large 12-inch skillet over medium heat, add the 6 oz Mexican chorizo with the casing removed. Break it apart with a spatula into small crumbles as it cooks, for 5–7 minutes, until fully cooked through and the deep red rendered fat is pooling visibly in the pan. The fat will turn an appetizing crimson-orange from the paprika and ancho in the chorizo." },
+      { step: 3, text: "Drain about half the rendered chorizo fat from the pan if there is a significant pool — excess fat will make the noodles heavy and greasy. Leave enough fat to coat the pan generously; this is the flavor medium that will transform the noodles. Add the 2 cups shredded cabbage to the pan with the chorizo and cook over medium-high heat for 2 minutes until wilted but still slightly crisp." },
+      { step: 4, text: "Add the drained yakisoba noodles to the pan and increase the heat to high. Pour in the 2 tbsp soy sauce and 1 tbsp oyster sauce. Toss everything continuously with tongs for 2–3 minutes — the noodles will absorb the chorizo fat and sauce and turn a vibrant reddish-brown, visibly stained by the paprika. The pan should be almost dry when done; excess liquid means you need more heat or more tossing." },
+      { step: 5, text: "Taste a forkful: the noodles should be intensely savory, smoky from the chorizo, and glossy from the combined sauces. Top with the 2 sliced scallions and serve immediately in warmed bowls. This dish cools quickly and is best eaten within 5 minutes of leaving the pan, while the chorizo fat is still coating every noodle." }
     ],
     chefNotes: "Mexican chorizo must be cooked before eating and renders significant fat — drain half the fat from the pan before adding the noodles if you prefer a lighter dish.",
     pairing: "Cold Mexican beer",
@@ -2816,11 +2815,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "white miso paste" },
     ],
     method: [
-      { step: 1, text: "Bring a 4-quart pot of water to a boil, add the 1 lb elbow macaroni, and cook until 1 minute before al dente." },
-      { step: 2, text: "Reserve some pasta water, drain the 1 lb elbow macaroni, and return it to the warm pot while the pasta is steaming." },
-      { step: 3, text: "Whisk the 2 tbsp white miso paste with a little reserved warm pasta water in a bowl until completely smooth." },
-      { step: 4, text: "Stir the 2 tbsp white miso mixture into the 1 lb macaroni over low heat for 2 minutes until evenly coated and glossy." },
-      { step: 5, text: "Continue warming the 1 lb macaroni and 2 tbsp white miso paste for 1 minute, stirring until the pasta is tender and creamy-looking." }
+      { step: 1, text: "Bring a large pot of salted water to a full boil and cook the 1 lb elbow macaroni or cavatappi for 1 minute less than the package's al dente time — the pasta will continue cooking in the sauce. Before draining, reserve 1 cup of the starchy pasta water; this liquid is essential for adjusting the sauce consistency and helping the sauce cling to the pasta." },
+      { step: 2, text: "In a 3-quart saucepan, melt the 2 tbsp unsalted butter over medium heat until it foams and the foam subsides. Add the 2 tbsp all-purpose flour and whisk constantly for 2 minutes until the mixture turns pale golden and smells faintly nutty — this is the roux that will thicken the sauce. It must be cooked for the full 2 minutes to eliminate the raw flour taste." },
+      { step: 3, text: "Gradually pour the 2 cups whole milk into the roux in a thin, steady stream while whisking constantly — adding all the milk at once causes lumps. Keep whisking over medium heat for 5–7 minutes until the mixture thickens enough to coat the back of a spoon and leaves a clean line when you drag a finger through it. Reduce heat to low." },
+      { step: 4, text: "In a small bowl, whisk the 2 tbsp white miso paste with 2 tbsp of the warm (not boiling) pasta water until completely smooth. Add this to the sauce off the heat, stirring gently — miso should never boil after it is added, as boiling drives off its delicate fermented volatile compounds and leaves a flat, salty residue instead of the complex, rounded flavor you are after." },
+      { step: 5, text: "Add the 2 cups shredded sharp cheddar to the warm miso sauce and stir until completely melted and smooth. Add the drained pasta and toss to coat, adding splashes of the reserved pasta water as needed to loosen the sauce to a creamy, flowing consistency that coats every tube or elbow completely. Serve immediately in warmed bowls; mac and cheese stiffens quickly as it cools." }
     ],
     chefNotes: "Never add miso directly to boiling liquid — high heat destroys its delicate fermented compounds. Always dilute in warm (not boiling) liquid first.",
     pairing: "Crispy panko breadcrumb topping if baking",
@@ -2854,11 +2853,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "warm water" },
     ],
     method: [
-      { step: 1, text: "Bring a 4-quart pot of water to a boil, add the 1 lb spaghetti, and cook according to the package until al dente." },
-      { step: 2, text: "Drain the 1 lb spaghetti, rinse it under cold water for 30 seconds, and continue rinsing until the noodles feel cool." },
-      { step: 3, text: "Place the 1 lb cooled spaghetti in a large bowl, add the 2 tbsp warm water, and toss for 1 minute until evenly moistened." },
-      { step: 4, text: "Refrigerate the 1 lb spaghetti mixture for at least 30 minutes, uncovered, until thoroughly chilled and the strands separate easily." },
-      { step: 5, text: "Toss the chilled 1 lb spaghetti with the 2 tbsp warm water for 30 seconds, then serve when the noodles look loose and hydrated." }
+      { step: 1, text: "Cook the 1 lb spaghetti or Chinese noodles in boiling water until al dente — firm but not hard, with a slight resistance at the center when bitten. Drain immediately and rinse under cold running water, rubbing the noodles with your hands for 30 seconds to remove surface starch. Continue rinsing until the water runs clear and the noodles feel completely cool." },
+      { step: 2, text: "In a large bowl, whisk together the 1/4 cup tahini, 2 tbsp soy sauce, 2 tbsp rice wine vinegar, 1 tbsp sesame oil, 1 minced chipotle pepper in adobo, and 2 tbsp warm water. Whisk for 2 full minutes — tahini paste is dense and resists emulsification; it will first look separated and grainy before suddenly coming together into a smooth, creamy sauce. The finished sauce should flow off the whisk in a thick, steady ribbon." },
+      { step: 3, text: "Taste the sauce: it should be nutty from the tahini, tangy from the vinegar, savory from the soy, and have a slow-building smokiness from the chipotle. Adjust by adding more chipotle for more heat, more vinegar for brightness, or more tahini for richness. The sauce should be assertive; it will mellow slightly once it coats the noodles." },
+      { step: 4, text: "Add the chilled, drained noodles to the bowl with the sesame-chipotle sauce and toss with tongs for 2 minutes, making sure every strand is coated. The sauce will initially look too thick but will loosen as the noodles absorb it — if it still looks too dense after 2 minutes, add a tablespoon of cold water and toss again." },
+      { step: 5, text: "Cover and refrigerate for at least 30 minutes — these noodles genuinely improve with time, as the noodles absorb the sauce and the chipotle's heat develops more fully. When serving, toss again (the sauce will have settled) and add a splash of water if the noodles have dried out. Serve cold or at room temperature, topped with extra sesame seeds and sliced scallions." }
     ],
     chefNotes: "These noodles taste even better the next day after overnight refrigeration. Make a double batch on Sunday for the week.",
     pairing: "Cold green tea or sparkling water",
@@ -2891,11 +2890,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "togarashi or black pepper" },
     ],
     method: [
-      { step: 1, text: "Cook the 14 oz udon noodles in boiling water for the package time until tender, then drain thoroughly." },
-      { step: 2, text: "Heat a 10-inch skillet over medium heat, add the 3 tbsp unsalted butter, and melt for 2 minutes until glossy." },
-      { step: 3, text: "Add the drained 14 oz udon noodles to the skillet and toss with the 3 tbsp melted butter for 1 minute until coated." },
-      { step: 4, text: "Cook the butter-coated 14 oz udon noodles over medium heat for 2 minutes until hot and lightly glossy." },
-      { step: 5, text: "Divide the 14 oz udon noodles among bowls, then top with the 2 tbsp sliced scallions and 1 tsp togarashi or black pepper." }
+      { step: 1, text: "Cook the 14 oz udon noodles in a large pot of boiling water according to the package: fresh or frozen udon takes 2–3 minutes; dried udon takes 8–10 minutes. Drain and reserve 1/4 cup of the starchy cooking water before discarding the rest — this cloudy, starchy liquid will help the miso butter emulsify and cling to every noodle rather than pooling at the bottom of the bowl." },
+      { step: 2, text: "In a 10-inch skillet over medium heat, melt the 3 tbsp unsalted butter until it foams and the foam begins to subside — about 2 minutes. Add the 1 cup corn kernels and cook for 3–4 minutes, stirring occasionally, until the corn develops golden-brown spots on some kernels and smells sweet and slightly nutty. The browning concentrates the corn's natural sugars." },
+      { step: 3, text: "In a small bowl, whisk the 2 tbsp white miso paste with 2 tbsp of the reserved pasta water until completely smooth and no lumps remain. Remove the skillet from the heat and add this miso mixture to the corn and butter, stirring immediately and vigorously — the residual heat will combine everything without reaching the boiling temperature that destroys miso's complex flavors." },
+      { step: 4, text: "Add the drained udon noodles to the skillet and toss with tongs for 1–2 minutes, returning the pan to low heat if needed to keep everything warm. The miso butter should coat every thick noodle in a shiny, caramel-colored glaze; if it seems too thick, add the remaining reserved pasta water a tablespoon at a time. Every noodle should look glossy and well-dressed." },
+      { step: 5, text: "Transfer to two warmed bowls and top with the 2 tbsp sliced scallions and the 1 tsp togarashi or black pepper. The togarashi adds citrusy-spicy notes that cut through the richness of the miso butter; black pepper works if you don't have togarashi, but its effect is less complex. Serve immediately while the butter is still warm and the noodles are at their most silky." }
     ],
     chefNotes: "Saved pasta water is liquid gold in noodle dishes — its starch helps the sauce emulsify and cling to the noodles rather than pooling at the bottom of the bowl.",
     pairing: "Cold sake or sparkling water with lime",
@@ -2928,11 +2927,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "vegetable oil" },
     ],
     method: [
-      { step: 1, text: "Heat 1 tbsp vegetable oil in a wide 12-inch skillet over medium heat, then toast the 8 oz fideo for 4 minutes until golden." },
-      { step: 2, text: "Add the 1 can crushed tomatoes (14 oz) to the toasted 8 oz fideo and cook for 2 minutes until the mixture darkens." },
-      { step: 3, text: "Pour the 2 cups vegetable broth into the skillet and stir until the broth surrounds the 8 oz fideo evenly." },
-      { step: 4, text: "Bring the 2 cups vegetable broth to a simmer over medium heat, then reduce to low and cover the skillet." },
-      { step: 5, text: "Cook the covered 8 oz fideo for about 15 minutes until the 2 cups broth are absorbed and the noodles are tender." }
+      { step: 1, text: "Heat the 1 tbsp vegetable oil in a wide 12-inch skillet with a lid over medium heat until it shimmers and moves fluidly. Add the 8 oz fideo or broken thin spaghetti and stir to coat every piece in oil. Toast for 4 minutes, stirring frequently, until the noodles turn a deep amber color — the color of roasted almonds, darker than golden. The toasting is what gives fideo its characteristic nutty flavor; pale, under-toasted noodles are the most common mistake." },
+      { step: 2, text: "Add the 2 minced garlic cloves and stir for 30 seconds until fragrant. Pour in the 1 can (14 oz) crushed tomatoes — stand back as the tomatoes will sizzle and spatter dramatically against the hot pan. Stir the tomatoes into the toasted noodles and cook for 2 minutes, pressing and stirring, until the tomato mixture turns from bright red to a deeper, darker rust color." },
+      { step: 3, text: "In a small bowl, dissolve the 2 tbsp white miso paste in 1/4 cup of the vegetable broth until completely smooth. Add this miso broth along with the remaining broth to the pan and stir thoroughly. The liquid should just cover the noodles; if they are not fully submerged, add a splash more broth or water." },
+      { step: 4, text: "Bring to a simmer over medium-high heat, then reduce to low, cover the skillet tightly, and cook for 15 minutes without lifting the lid. The steam inside is doing the work of cooking the noodles evenly; breaking the seal releases steam and disrupts the cooking. Set a timer and resist the urge to check." },
+      { step: 5, text: "After 15 minutes, remove the lid and check: the noodles should be tender and the liquid almost completely absorbed, with just a slight sizzle from the bottom of the pan. The bottom layer may have a thin, golden, slightly crispy crust — this is the socorrat, the prized caramelized layer at the bottom of paella and sopa seca alike. Serve directly from the skillet with a large spoon." }
     ],
     chefNotes: "The toasting step is what gives fideo its distinctive flavor. Raw, un-toasted fideo cooked in broth just tastes like soup pasta.",
     pairing: "Mexican crema drizzled on top with fresh cilantro",
@@ -2965,11 +2964,11 @@ export const lunchRecipes: Recipe[] = [
       { qty: "3", unit: "cloves", item: "garlic", note: "minced" },
     ],
     method: [
-      { step: 1, text: "Cook the 12 oz lo mein noodles or thick spaghetti according to the package time until al dente, then drain thoroughly." },
-      { step: 2, text: "Stir together the 2 tbsp soy sauce and 1 tbsp adobo sauce in a small bowl until the sauce is smooth." },
-      { step: 3, text: "Heat a wok over very high heat, add the 3 minced garlic cloves, and stir-fry for 3 minutes until fragrant and lightly golden." },
-      { step: 4, text: "Add the drained 12 oz noodles to the hot wok and pour the mixture of 2 tbsp soy sauce and 1 tbsp adobo sauce over them." },
-      { step: 5, text: "Toss the 12 oz noodles vigorously over very high heat for 2 minutes until evenly coated, hot, and slightly caramelized." }
+      { step: 1, text: "Cook the 12 oz lo mein noodles or thick spaghetti in boiling salted water until al dente — firm with a slight bite at the center. Drain and toss immediately with the 1 tbsp sesame oil to prevent sticking; the oil coats each noodle and will also become part of the final sauce. Set aside." },
+      { step: 2, text: "Finely mince the 2 chipotle peppers in adobo, reserving the 1 tbsp adobo sauce separately. In a small bowl, stir together the minced chipotle, the 1 tbsp adobo sauce, and the 2 tbsp soy sauce until combined. Taste this sauce on a spoon — it should be intensely smoky, deep, and salty. This is the concentrated flavor base that will season every strand of noodle." },
+      { step: 3, text: "Heat a wok or large skillet over the highest heat available for 2 full minutes until smoking. Add a splash of neutral oil and immediately add the 3 minced garlic cloves. Stir-fry for 30 seconds until golden and fragrant — garlic burns in seconds at wok temperature, so move it constantly and don't step away." },
+      { step: 4, text: "Add the 3 cups mixed bok choy, mushrooms, and snap peas to the hot wok and stir-fry for 2–3 minutes, tossing constantly. The vegetables should have some char on the edges — dark spots from the contact with the smoking hot wok surface — but remain crisp-tender in the center. This 'wok hei' char is the flavor that separates great stir-fry from home versions." },
+      { step: 5, text: "Add the sesame-coated noodles to the wok and pour the chipotle-soy sauce over everything. Toss vigorously with tongs or two spatulas over high heat for 2 minutes until every noodle strand is coated in the dark, rust-orange sauce and the pan looks almost dry. The sauce should caramelize slightly against the hot wok surface, adding another layer of depth. Serve immediately in warmed bowls." }
     ],
     chefNotes: "A carbon steel wok develops the 'wok hei' — smoky, charred flavor — that is impossible to achieve in a stainless or non-stick pan. It is worth owning one for stir-fry.",
     pairing: "Cold beer or iced green tea",
