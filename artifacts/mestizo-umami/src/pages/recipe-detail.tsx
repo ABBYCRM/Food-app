@@ -3,11 +3,12 @@ import { motion } from "framer-motion";
 import { useRoute, Link } from "wouter";
 import { getRecipeBySlug, recipes } from "../data/recipes";
 import { isRecipeSaved, saveRecipe, unsaveRecipe } from "../lib/storage";
-import { Bookmark, Clock, Flame, Utensils, Droplets, Minus, Plus, ChevronLeft, ChefHat, Printer } from "lucide-react";
+import { Bookmark, Clock, Flame, Utensils, Droplets, Minus, Plus, ChevronLeft, ChefHat, Printer, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLocale } from "@/lib/locale";
 import { parseQtyNum, convertUnit, localizeTemp } from "@/lib/unit-convert";
 import { PlatingGuide } from "@/components/plating-guide";
+import { useAuthContext } from "@/lib/auth-context";
 
 function SpiceLevel({ level }: { level: number }) {
   return (
@@ -76,6 +77,7 @@ export function RecipeDetail() {
   const slug = params?.slug;
   const recipe = slug ? getRecipeBySlug(slug) : undefined;
   const { t, unitSystem, locale } = useLocale();
+  const { authenticated, loading: authLoading, login } = useAuthContext();
 
   // Resolve locale-specific content, falling back to English fields
   const localeContent = recipe?.locales?.[locale as "es" | "pt"];
@@ -103,6 +105,73 @@ export function RecipeDetail() {
       <div className="min-h-[50vh] flex flex-col items-center justify-center text-center px-6">
         <h1 className="font-display text-4xl mb-4">{t("recipe.notFound")}</h1>
         <Link href="/recipes" className="text-primary hover:underline">{t("recipe.returnCollection")}</Link>
+      </div>
+    );
+  }
+
+  // ── Auth gate — prompt sign-in before showing recipe detail ───────────────
+  if (!authLoading && !authenticated) {
+    const heroSrc = typeof recipe.heroImage === "string"
+      ? recipe.heroImage
+      : (recipe.heroImage as { src: string })?.src ?? "";
+
+    return (
+      <div className="relative min-h-screen overflow-hidden">
+        {/* Blurred recipe preview in background */}
+        <div className="absolute inset-0 select-none pointer-events-none" aria-hidden>
+          {heroSrc && (
+            <img
+              src={heroSrc}
+              alt=""
+              className="w-full h-72 object-cover blur-sm scale-105 opacity-60"
+            />
+          )}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-[#0f0f0f]/80 to-[#0f0f0f]" />
+        </div>
+
+        {/* Gate card */}
+        <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 py-16">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="w-full max-w-sm bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-8 text-center shadow-2xl"
+          >
+            {/* Lock icon */}
+            <div className="w-14 h-14 rounded-full bg-amber-500/15 flex items-center justify-center mx-auto mb-5">
+              <Lock className="w-7 h-7 text-amber-400" />
+            </div>
+
+            {/* Recipe name teaser */}
+            <p className="text-white/50 text-xs uppercase tracking-widest mb-1">Recipe</p>
+            <h2 className="font-display text-2xl text-white mb-1 leading-tight">
+              {localeContent?.title ?? recipe.title}
+            </h2>
+            <p className="text-white/50 text-sm mb-6">
+              {localeContent?.subtitle ?? recipe.subtitle}
+            </p>
+
+            <div className="border-t border-white/10 pt-6 mb-6">
+              <p className="text-white/80 text-sm leading-relaxed">
+                Create a free account to unlock the full recipe — ingredients, method, chef notes, and more.
+              </p>
+            </div>
+
+            {/* CTA */}
+            <Button
+              onClick={() => login(`/recipe/${recipe.slug}`)}
+              className="w-full bg-amber-500 hover:bg-amber-400 text-black font-semibold rounded-xl py-3 text-base mb-3"
+            >
+              Sign up — it's free
+            </Button>
+
+            <Link href="/recipes">
+              <button className="text-white/40 text-sm hover:text-white/70 transition-colors">
+                ← Back to recipes
+              </button>
+            </Link>
+          </motion.div>
+        </div>
       </div>
     );
   }
