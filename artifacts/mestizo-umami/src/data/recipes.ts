@@ -159,13 +159,13 @@ export const existingRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "olive oil" }
     ],
     method: [
-      { step: 1, text: "Whisk miso, honey, and soy sauce into a smooth glaze. Brush generously over the salmon." },
-      { step: 2, text: "Heat olive oil in a skillet. Sear salmon skin-down for 5 minutes, flip, and cook 2 more minutes." },
-      { step: 3, text: "Blend serrano chiles, lime juice, cilantro, and a splash of water until completely smooth." },
-      { step: 4, text: "Arrange cucumber and onion slices elegantly in a shallow bowl. Pour the aguachile sauce over them." },
-      { step: 5, text: "Place the warm glazed salmon in the center of the pool. Serve immediately." }
+      { step: 1, text: "In a small bowl, whisk together the white miso paste, honey, and soy sauce until completely smooth — the glaze should be thick, glossy, and flow slowly off the spoon with no lumps. Brush it generously over the flesh side of the salmon, covering every millimeter. Let it rest 5 minutes so it adheres before the pan gets hot." },
+      { step: 2, text: "Heat the olive oil in a heavy skillet — cast iron is ideal — over high heat until it just begins to shimmer and smoke. Lay the salmon skin-side down, pressing gently with a spatula for the first 30 seconds so the skin stays flat and can't curl. Cook completely undisturbed for 5 minutes; you'll see the flesh turn from translucent to opaque from the bottom up, roughly two-thirds of the way through. Flip and cook 2 more minutes. The miso glaze should caramelize to a deep amber-bronze — not black." },
+      { step: 3, text: "Add the seeded serrano chiles, lime juice, the full bunch of cilantro (stems and all — the stems carry the most flavor), and 3 tbsp of cold water to a blender. Blend on high for 45–60 seconds until the sauce is completely smooth and a vivid electric green. Taste it: fiery, bracingly acidic, herbaceous. Season with a pinch of salt. The sauce should be thin enough to pour but not watery." },
+      { step: 4, text: "Fan the thinly sliced cucumber across the base of two shallow bowls, overlapping the rounds like fish scales. Tuck the paper-thin red onion in between the cucumber layers so it's visible but not dominant. Pour the aguachile sauce over the arrangement, letting it pool at the base — use enough so the cucumber is half-submerged. The acid will gently cure the onion while you finish the fish." },
+      { step: 5, text: "Set the warm glazed salmon directly in the center of the aguachile pool, skin-side up so it stays crisp against the cold sauce. The dramatic contrast between the hot, caramelized fish and the icy, acidic broth is the entire point — serve the moment it's plated, before the heat can dissipate." }
     ],
-    chefNotes: "Look for center-cut Atlantic salmon fillets — widely available at every major supermarket. The miso glaze can be made 2 days ahead. Use a mandoline for ultra-thin cucumber slices.",
+    chefNotes: "Look for center-cut Atlantic salmon fillets — widely available at every major supermarket. The miso glaze can be made 2 days ahead and kept refrigerated. Use a mandoline for ultra-thin cucumber and onion slices; hand-cutting produces uneven thickness that bruises rather than cures in the aguachile.",
     pairing: "Dry sake or a crisp Sauvignon Blanc",
     mealSlots: ["dinner", "lunch"],
     healthy: true

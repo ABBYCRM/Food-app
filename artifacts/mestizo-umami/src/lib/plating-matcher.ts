@@ -11,23 +11,30 @@ export interface PlatingStep {
 
 const RULES: Array<{ patterns: RegExp; illus: IllustrationKey }> = [
   // Eggs — must come before generic "place / top" rules
-  { patterns: /sunny.side|sunny side/i,               illus: "egg-sunny"       },
-  { patterns: /over.easy|flip.*(egg|the)/i,           illus: "egg-overeasy"    },
-  { patterns: /fry.*(egg|them)|fried egg/i,           illus: "egg-overeasy"    },
-  { patterns: /poach/i,                               illus: "egg-poach"       },
+  { patterns: /sunny.side|sunny side/i,                                     illus: "egg-sunny"       },
+  { patterns: /over.easy|flip.*(egg|the)/i,                                 illus: "egg-overeasy"    },
+  { patterns: /fry.*(egg|them)|fried egg/i,                                 illus: "egg-overeasy"    },
+  { patterns: /poach/i,                                                     illus: "egg-poach"       },
+  // Cooking actions — new step-specific illustrations
+  { patterns: /whisk|mix.*glaze|glaze.*smooth|stir.*miso|miso.*whisk/i,    illus: "whisk-glaze"     },
+  { patterns: /blend|blender|process.*smooth|smooth.*blender/i,            illus: "blend-sauce"     },
+  { patterns: /sear|skin.?down|skin.?side down|skillet|cast iron|flip.*salmon|sauté/i, illus: "sear-fish" },
+  { patterns: /let rest|rest.*minutes|rest.*board|allow.*rest/i,           illus: "rest-protein"    },
+  { patterns: /chop|dice|mince|cut.*into|knife/i,                          illus: "chop-prep"       },
+  { patterns: /season.*salt|salt.*season|sprinkle.*salt/i,                 illus: "season-salt"     },
   // Avocado
-  { patterns: /avocado|guacamole/i,                   illus: "avocado-fan"     },
+  { patterns: /avocado|guacamole/i,                                         illus: "avocado-fan"     },
   // Taco / wrap
-  { patterns: /fold.*taco|taco.*fold|wrap|burrito/i,  illus: "taco-fold"       },
+  { patterns: /fold.*taco|taco.*fold|wrap|burrito/i,                        illus: "taco-fold"       },
   // Bowl / broth
-  { patterns: /ladle.*(broth|soup|into bowl)|pour.*(broth|dashi|soup)/i, illus: "broth-pour" },
-  { patterns: /bowl|ramen|pozole|soup/i,              illus: "bowl-build"      },
+  { patterns: /ladle.*(broth|soup|into bowl)|pour.*(broth|dashi|soup)/i,   illus: "broth-pour"      },
+  { patterns: /bowl|ramen|pozole|soup/i,                                    illus: "bowl-build"      },
   // Ladle / pour sauce
-  { patterns: /ladle|spoon.*(over|sauce|mole|salsa)|pour.*(salsa|mole|sauce|over)/i, illus: "ladle-pour" },
+  { patterns: /ladle|spoon.*(over|sauce|mole|salsa)|pour.*(salsa|mole|sauce|over|aguachile)/i, illus: "ladle-pour" },
   // Drizzle
-  { patterns: /drizzle/i,                             illus: "drizzle"         },
+  { patterns: /drizzle/i,                                                   illus: "drizzle"         },
   // Crema / sour cream
-  { patterns: /crema|sour cream|crème/i,              illus: "crema-swirl"     },
+  { patterns: /crema|sour cream|crème/i,                                    illus: "crema-swirl"     },
   // Lime / citrus
   { patterns: /squeeze.*(lime|lemon)|lime.*(wedge|squeeze)|finish.*(lime|lemon)/i, illus: "lime-squeeze" },
   // Garnish / crumble cheese
@@ -35,17 +42,21 @@ const RULES: Array<{ patterns: RegExp; illus: IllustrationKey }> = [
   // Herb scatter
   { patterns: /cilantro|parsley|shiso|scallion|green onion|herb|nori|furikake/i, illus: "herb-scatter" },
   // Sesame / seeds
-  { patterns: /sesame|pepita|pine nut|seed/i,         illus: "sesame-top"      },
+  { patterns: /sesame|pepita|pine nut|seed/i,                               illus: "sesame-top"      },
   // Beans spread
-  { patterns: /bean|refried|black bean|pinto/i,       illus: "beans-spread"    },
+  { patterns: /bean|refried|black bean|pinto/i,                             illus: "beans-spread"    },
   // Spread / smear
-  { patterns: /spread|smear/i,                        illus: "spread-base"     },
+  { patterns: /spread|smear/i,                                              illus: "spread-base"     },
   // Tortilla base
-  { patterns: /tortilla|tostada|totopos/i,             illus: "tortilla-base"   },
+  { patterns: /tortilla|tostada|totopos/i,                                  illus: "tortilla-base"   },
   // Protein slice / fan
-  { patterns: /slice|sliced|rest.*and cut|cut.*and (serve|arrange|fan)/i, illus: "slice-protein" },
+  { patterns: /slice|sliced|rest.*and cut|cut.*and (serve|arrange|fan)/i,   illus: "slice-protein"   },
+  // Arrange in shallow bowl
+  { patterns: /fan.*cucumber|cucumber.*fan|arrange.*shallow|shallow.*bowl|overlap/i, illus: "arrange-bowl" },
+  // Place protein in centre
+  { patterns: /place.*center|center.*pool|set.*salmon|salmon.*center|place.*salmon/i, illus: "place-protein" },
   // Layer stack
-  { patterns: /layer|stack|assemble/i,                illus: "layer-stack"     },
+  { patterns: /layer|stack|assemble/i,                                      illus: "layer-stack"     },
   // Generic plate / serve / top / divide
   { patterns: /plate|arrange|divide.*between|top with|place.*(on|over|atop)|serve/i, illus: "plate-present" },
 ];
@@ -93,38 +104,14 @@ export interface RecipeMethodStep {
 }
 
 /**
- * Extracts plating/assembly steps from a recipe's method and maps each
- * to an illustration + caption. Returns 3–5 steps max.
+ * Maps every recipe method step to an illustration + caption so the visual
+ * guide shows the full process — prep, cooking, and plating — not just the
+ * final assembly moves.
  */
 export function extractPlatingSteps(method: RecipeMethodStep[]): PlatingStep[] {
   if (!method || method.length === 0) return [];
 
-  // Phase 1: find all assembly steps
-  let assembly = method.filter((s) => isAssemblyStep(s.text));
-
-  // Phase 2: if fewer than 2 assembly steps detected, take the last 3 steps
-  if (assembly.length < 2) {
-    assembly = method.slice(-Math.min(4, method.length));
-  }
-
-  // Phase 3: cap at 5 steps, prefer the last ones
-  if (assembly.length > 5) assembly = assembly.slice(-5);
-
-  // Phase 4: de-duplicate illustrations (prefer earlier occurrence)
-  const seen = new Set<IllustrationKey>();
-  const deduped: typeof assembly = [];
-  for (const step of assembly) {
-    const illus = matchIllustration(step.text);
-    if (!seen.has(illus)) {
-      seen.add(illus);
-      deduped.push(step);
-    } else {
-      // Keep it but try next best
-      deduped.push(step);
-    }
-  }
-
-  return deduped.map((step) => ({
+  return method.map((step) => ({
     illustration: matchIllustration(step.text),
     caption: makeCaption(step.text),
     fullText: step.text,

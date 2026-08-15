@@ -12,7 +12,10 @@ export type IllustrationKey =
   | "garnish-crumble" | "lime-squeeze" | "herb-scatter"
   | "spread-base" | "slice-protein" | "avocado-fan"
   | "sesame-top" | "broth-pour" | "layer-stack"
-  | "plate-present" | "beans-spread";
+  | "plate-present" | "beans-spread"
+  | "whisk-glaze" | "sear-fish" | "blend-sauce"
+  | "arrange-bowl" | "place-protein"
+  | "chop-prep" | "season-salt" | "rest-protein";
 
 /** Inner SVG children only — wrapped by renderIllustration() */
 export const ILLUSTRATIONS: Record<IllustrationKey, ReactNode> = {
@@ -221,6 +224,154 @@ export const ILLUSTRATIONS: Record<IllustrationKey, ReactNode> = {
     ))}
     <path d="M80 30 Q78 42 70 50" strokeWidth={2.5} />
     <ellipse cx="68" cy="52" rx="7" ry="5" transform="rotate(-40 68 52)" />
+  </>,
+
+  /* ── New step-specific illustrations ───────────────────────────────────── */
+
+  /** Whisk in a small bowl — mixing a glaze */
+  "whisk-glaze": <>
+    {/* Bowl */}
+    <path d="M18 46 Q18 78 50 82 Q82 78 82 46 Z" />
+    <ellipse cx="50" cy="46" rx="32" ry="9" />
+    {/* Whisk handle */}
+    <path d="M66 14 L58 40" strokeWidth={3} />
+    {/* Whisk head wires */}
+    <path d="M58 40 Q52 52 48 58 Q44 64 46 70" strokeWidth={1.5} />
+    <path d="M58 40 Q62 52 62 60 Q62 68 58 72" strokeWidth={1.5} />
+    <path d="M58 40 Q66 50 68 58 Q70 66 66 70" strokeWidth={1.5} />
+    <path d="M58 40 Q56 50 54 58" strokeWidth={1.5} strokeOpacity={0.6} />
+    {/* Glaze drips */}
+    <path d="M44 56 Q42 62 44 66" strokeWidth={1.5} strokeOpacity={0.5} strokeDasharray="2 2" />
+    <circle cx="42" cy="68" r="2" fill="currentColor" stroke="none" fillOpacity={0.5} />
+    <circle cx="64" cy="66" r="2" fill="currentColor" stroke="none" fillOpacity={0.4} />
+  </>,
+
+  /** Fish fillet searing skin-side down in a pan */
+  "sear-fish": <>
+    {/* Pan body */}
+    <path d="M8 62 Q8 82 50 84 Q92 82 92 62 Z" />
+    <ellipse cx="50" cy="62" rx="42" ry="10" />
+    {/* Pan handle */}
+    <path d="M92 66 L100 60" strokeWidth={3} strokeOpacity={0.7} />
+    {/* Fish fillet shape (skin-down) */}
+    <path d="M22 58 Q24 44 50 42 Q76 44 78 58 Q66 64 50 64 Q34 64 22 58 Z" />
+    {/* Skin line */}
+    <path d="M22 58 Q50 62 78 58" strokeWidth={1.5} strokeOpacity={0.5} />
+    {/* Heat/steam lines */}
+    <path d="M34 36 Q32 28 34 22" strokeWidth={1.5} strokeOpacity={0.5} />
+    <path d="M50 34 Q48 24 50 18" strokeWidth={1.5} strokeOpacity={0.5} />
+    <path d="M66 36 Q64 28 66 22" strokeWidth={1.5} strokeOpacity={0.5} />
+    {/* Sizzle dots */}
+    <circle cx="30" cy="60" r="2" fill="currentColor" stroke="none" fillOpacity={0.3} />
+    <circle cx="70" cy="60" r="2" fill="currentColor" stroke="none" fillOpacity={0.3} />
+  </>,
+
+  /** Blender with liquid and motion */
+  "blend-sauce": <>
+    {/* Blender jar */}
+    <path d="M28 20 L24 76 Q24 82 50 82 Q76 82 76 76 L72 20 Z" />
+    <path d="M28 20 Q50 16 72 20" />
+    {/* Liquid level */}
+    <path d="M30 52 Q50 48 70 52" strokeOpacity={0.5} strokeWidth={1.5} />
+    <path d="M30 52 L24 76 Q24 82 50 82 Q76 82 76 76 L70 52 Z" fill="currentColor" fillOpacity={0.1} />
+    {/* Blade */}
+    <path d="M38 72 Q50 68 62 72" strokeWidth={2} />
+    <path d="M40 76 Q50 72 60 76" strokeWidth={2} />
+    {/* Motion swirl inside */}
+    <path d="M42 60 Q50 54 56 62 Q50 68 44 62 Q48 56 54 58" strokeWidth={1.5} strokeOpacity={0.6} />
+    {/* Lid & handle */}
+    <rect x="36" y="14" width="28" height="8" rx="4" />
+    <path d="M50 6 L50 14" strokeWidth={2} />
+  </>,
+
+  /** Shallow bowl with fanned cucumber/onion arranged inside */
+  "arrange-bowl": <>
+    {/* Shallow bowl */}
+    <path d="M10 52 Q10 78 50 80 Q90 78 90 52 Z" />
+    <ellipse cx="50" cy="52" rx="40" ry="10" />
+    {/* Cucumber rounds fanned out — overlapping circles */}
+    <ellipse cx="34" cy="52" rx="9" ry="7" transform="rotate(-10 34 52)" />
+    <ellipse cx="42" cy="50" rx="9" ry="7" transform="rotate(-5 42 50)" />
+    <ellipse cx="50" cy="49" rx="9" ry="7" />
+    <ellipse cx="58" cy="50" rx="9" ry="7" transform="rotate(5 58 50)" />
+    <ellipse cx="66" cy="52" rx="9" ry="7" transform="rotate(10 66 52)" />
+    {/* Centre seeds hint */}
+    <circle cx="34" cy="52" r="2" fill="currentColor" fillOpacity={0.3} stroke="none" />
+    <circle cx="50" cy="49" r="2" fill="currentColor" fillOpacity={0.3} stroke="none" />
+    <circle cx="66" cy="52" r="2" fill="currentColor" fillOpacity={0.3} stroke="none" />
+    {/* Sauce pool */}
+    <ellipse cx="50" cy="68" rx="32" ry="6" strokeOpacity={0.3} strokeDasharray="3 2" />
+  </>,
+
+  /** Fish fillet being set in the centre of a bowl */
+  "place-protein": <>
+    {/* Bowl base */}
+    <path d="M10 58 Q10 82 50 84 Q90 82 90 58 Z" />
+    <ellipse cx="50" cy="58" rx="40" ry="10" strokeOpacity={0.6} />
+    {/* Sauce pool ripple */}
+    <ellipse cx="50" cy="72" rx="28" ry="5" strokeOpacity={0.25} strokeDasharray="3 2" />
+    {/* Fish piece — centred */}
+    <path d="M28 52 Q30 40 50 38 Q70 40 72 52 Q60 58 50 58 Q40 58 28 52 Z" />
+    {/* Skin crust line */}
+    <path d="M28 52 Q50 56 72 52" strokeWidth={1.5} strokeOpacity={0.5} />
+    {/* Glaze shine */}
+    <path d="M34 44 Q42 40 52 42" strokeWidth={1.5} strokeOpacity={0.4} strokeDasharray="2 2" />
+    {/* Motion arrows — placing down */}
+    <path d="M50 18 L50 34" strokeOpacity={0.4} />
+    <path d="M44 28 L50 36 L56 28" strokeOpacity={0.4} />
+  </>,
+
+  /** Knife chopping on board — prep step */
+  "chop-prep": <>
+    <rect x="12" y="50" width="76" height="34" rx="4" />
+    <path d="M30 50 L30 84" strokeWidth={1} strokeOpacity={0.3} />
+    <path d="M70 50 L70 84" strokeWidth={1} strokeOpacity={0.3} />
+    {/* Knife blade */}
+    <path d="M20 14 L80 38 L76 46 L16 22 Z" />
+    <path d="M76 46 L84 42 L80 38 Z" fill="currentColor" fillOpacity={0.4} />
+    {/* Handle */}
+    <rect x="14" y="18" width="6" height="20" rx="3" transform="rotate(-20 14 18)" />
+    {/* Chopped pieces on board */}
+    <circle cx="44" cy="62" r="4" fill="currentColor" fillOpacity={0.2} />
+    <circle cx="56" cy="66" r="3" fill="currentColor" fillOpacity={0.2} />
+    <circle cx="38" cy="70" r="3.5" fill="currentColor" fillOpacity={0.2} />
+    <circle cx="62" cy="72" r="4" fill="currentColor" fillOpacity={0.2} />
+  </>,
+
+  /** Salt being sprinkled — seasoning */
+  "season-salt": <>
+    <ellipse cx="50" cy="70" rx="36" ry="20" />
+    {/* Hand shaking */}
+    <rect x="58" y="10" width="18" height="30" rx="9" />
+    <path d="M62 10 Q67 6 72 10" strokeWidth={1.5} />
+    {/* Holes */}
+    <circle cx="64" cy="18" r="1.5" fill="currentColor" stroke="none" />
+    <circle cx="70" cy="18" r="1.5" fill="currentColor" stroke="none" />
+    <circle cx="67" cy="24" r="1.5" fill="currentColor" stroke="none" />
+    {/* Falling grains */}
+    <circle cx="60" cy="44" r="1.5" fill="currentColor" stroke="none" fillOpacity={0.6} />
+    <circle cx="66" cy="50" r="1.5" fill="currentColor" stroke="none" fillOpacity={0.5} />
+    <circle cx="58" cy="54" r="1.5" fill="currentColor" stroke="none" fillOpacity={0.4} />
+    <circle cx="72" cy="46" r="1.5" fill="currentColor" stroke="none" fillOpacity={0.6} />
+    <circle cx="70" cy="56" r="1.5" fill="currentColor" stroke="none" fillOpacity={0.4} />
+    <circle cx="64" cy="60" r="1.5" fill="currentColor" stroke="none" fillOpacity={0.3} />
+  </>,
+
+  /** Protein resting on a board */
+  "rest-protein": <>
+    <rect x="8" y="58" width="84" height="28" rx="6" />
+    {/* Protein piece */}
+    <path d="M22 52 Q24 36 50 34 Q76 36 78 52 Q64 58 50 58 Q36 58 22 52 Z" />
+    {/* Texture lines */}
+    <path d="M30 48 Q40 42 54 44" strokeWidth={1} strokeOpacity={0.4} />
+    <path d="M34 54 Q44 48 58 50" strokeWidth={1} strokeOpacity={0.4} />
+    {/* Steam — gentle rest */}
+    <path d="M38 30 Q36 22 38 16" strokeWidth={1.5} strokeOpacity={0.35} />
+    <path d="M50 28 Q48 20 50 14" strokeWidth={1.5} strokeOpacity={0.35} />
+    <path d="M62 30 Q60 22 62 16" strokeWidth={1.5} strokeOpacity={0.35} />
+    {/* Clock hint */}
+    <circle cx="80" cy="38" r="14" />
+    <path d="M80 28 L80 38 L88 38" strokeWidth={1.5} />
   </>,
 };
 
