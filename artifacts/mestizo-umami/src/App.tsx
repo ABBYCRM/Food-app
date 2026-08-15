@@ -27,15 +27,22 @@ import { StoresPage } from './pages/stores';
 const queryClient = new QueryClient();
 
 function Router() {
-  const [location] = useLocation();
-  
+  const [location, navigate] = useLocation();
+
+  // Wouter strips the base prefix from the URL. When the browser lands on the
+  // bare base path with no trailing slash (e.g. /mestizo-umami), the stripped
+  // path is "" (empty string) which no explicit route matches. Redirect it to
+  // "/" so the Home route picks it up without making "" a wildcard catch-all.
+  if (location === "") {
+    navigate("/", { replace: true });
+    return null;
+  }
+
   return (
     <Layout>
       <RoutedErrorBoundary>
         <AnimatePresence mode="wait">
           <Switch location={location} key={location}>
-            {/* "" handles the case where Wouter strips the base from the exact base path (no trailing slash) */}
-            <Route path="" component={Home} />
             <Route path="/" component={Home} />
             <Route path="/recipes" component={RecipesGallery} />
             <Route path="/recipe/:slug" component={RecipeDetail} />
