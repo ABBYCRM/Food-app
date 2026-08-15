@@ -15,6 +15,16 @@ import coreRouter from "./routes/index.js";
 
 const app: Express = express();
 
+// ── DO App Platform path-prefix restore ──────────────────────────────────────
+// DO's ingress strips the matched prefix (/api) before forwarding to this
+// service. Restore it so all route handlers work identically in dev and prod.
+if (process.env["NODE_ENV"] === "production") {
+  app.use((req: Request, _res: Response, next: NextFunction) => {
+    if (!req.url.startsWith("/api")) req.url = "/api" + req.url;
+    next();
+  });
+}
+
 // ── Security headers ──────────────────────────────────────────────────────────
 app.use(
   helmet({
