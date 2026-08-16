@@ -10,8 +10,10 @@ if (!process.env.DATABASE_URL) {
   );
 }
 
-// DO App Platform managed databases use self-signed SSL certs — accept them in production
-const sslConfig = process.env.NODE_ENV === "production"
+// DO managed databases present a self-signed cert in the chain.
+// Accept it whenever we are connecting to a remote DATABASE_URL
+// (NODE_ENV is not reliably set to "production" on DO App Platform).
+const sslConfig = process.env.DATABASE_URL?.startsWith("postgres")
   ? { rejectUnauthorized: false }
   : undefined;
 
