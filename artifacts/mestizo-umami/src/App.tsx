@@ -23,6 +23,7 @@ import { Planner } from './pages/planner';
 import { Notebook } from './pages/notebook';
 import { SearchPage } from './pages/search';
 import { StoresPage } from './pages/stores';
+import { MyRecipeDetail } from './pages/my-recipe-detail';
 
 const queryClient = new QueryClient();
 
@@ -51,6 +52,7 @@ function Router() {
             <Route path="/notebook" component={Notebook} />
             <Route path="/search" component={SearchPage} />
             <Route path="/stores" component={StoresPage} />
+            <Route path="/my-recipe/:id" component={MyRecipeDetail} />
             <Route component={NotFound} />
           </Switch>
         </AnimatePresence>
