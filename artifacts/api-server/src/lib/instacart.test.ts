@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import type { AuthConfig } from "./config-auth.js";
+import { containsClientIdentity } from "./security.js";
 import {
   buildInstacartRequest,
   createInstacartService,
@@ -40,6 +41,17 @@ test("normalizes catalog units before sending them to Composio", () => {
     ingredients: [{ name: "chicken", quantity: 2, unit: "lbs" }],
   });
   assert.deepEqual(request.arguments.line_items, [{ name: "chicken", quantity: 2, unit: "lb" }]);
+});
+
+test("rejects browser-supplied app and provider identity fields", () => {
+  assert.equal(containsClientIdentity({ user_id: "other-user" }), true);
+  assert.equal(containsClientIdentity({ connectedAccountId: "other-account" }), true);
+  assert.equal(containsClientIdentity({ provider_user_id: "other-provider-user" }), true);
+  assert.equal(containsClientIdentity({ composioUserId: "other-composio-user" }), true);
+  assert.equal(containsClientIdentity({
+    mode: "recipe",
+    ingredients: [{ name: "rice", displayText: "1 cup rice" }],
+  }), false);
 });
 
 test("accepts only official HTTPS Instacart destinations", () => {

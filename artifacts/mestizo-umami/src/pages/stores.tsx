@@ -261,9 +261,9 @@ export function StoresPage() {
           <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
             {t("stores.instacartDescription")}
           </p>
-            <p className="text-sm text-muted-foreground mb-8 leading-relaxed">
-              {t("stores.instacartAccountInfo")}
-            </p>
+          <p className="text-sm text-muted-foreground/80 max-w-lg mx-auto -mt-4 mb-8 leading-relaxed">
+            {t("stores.instacartAccountInfo")}
+          </p>
 
           {instacartRetailers.length > 0 && (
             <div className="mb-8 text-left">
@@ -317,7 +317,7 @@ export function StoresPage() {
                 className="w-full sm:w-auto h-14 px-8 bg-primary text-primary-foreground hover:bg-primary/90 uppercase tracking-widest text-sm font-medium"
               >
                 <ShoppingCart className="w-4 h-4 mr-2" />
-                {t("stores.signInInstacart")}
+                {t("stores.signInMestizo")}
               </Button>
             )}
           </div>

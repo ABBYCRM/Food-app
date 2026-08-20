@@ -129,6 +129,7 @@ export function normalizeReturnTo(value: unknown): string {
 
 const FORBIDDEN_IDENTITY_KEYS = new Set([
   "userid", "tenantid", "organizationid", "ownerid", "subject", "sub", "email",
+  "accountid", "connectedaccountid", "provideruserid", "composiouserid",
 ]);
 
 export function containsClientIdentity(value: unknown, seen = new WeakSet<object>()): boolean {

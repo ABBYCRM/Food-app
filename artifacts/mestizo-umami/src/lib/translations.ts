@@ -30,7 +30,7 @@ export type TranslationKey =
   | "stores.noStores" | "stores.tryOther" | "stores.openMaps"
   | "stores.comingSoon" | "stores.comingSoonDesc" | "stores.addIngredients" | "stores.joinWaitlist"
   | "stores.instacartTitle" | "stores.instacartDescription" | "stores.instacartAvailable"
-  | "stores.signInInstacart" | "stores.chooseRecipe" | "stores.providerUnavailable" | "stores.instacartAccountInfo"
+  | "stores.signInMestizo" | "stores.chooseRecipe" | "stores.providerUnavailable" | "stores.instacartAccountInfo"
   // Common
   | "common.serves" | "common.downloadPdf";
 
@@ -121,7 +121,7 @@ export const translations: Record<"en" | "es" | "pt", LocaleTranslations> = {
     "stores.instacartTitle": "Shop Recipes with Instacart",
     "stores.instacartDescription": "Choose a recipe and send its scaled ingredient list to an Instacart shopping page.",
     "stores.instacartAvailable": "Available on Instacart near you",
-    "stores.signInInstacart": "Sign in to use Instacart",
+    "stores.signInMestizo": "Sign in to Mestizo Umami",
     "stores.chooseRecipe": "Choose a Recipe",
     "stores.providerUnavailable": "Instacart retailers are temporarily unavailable.",
     "stores.instacartAccountInfo": "No in-app connection is needed. We'll take you to Instacart, where you can securely sign in to your own account.",
@@ -214,7 +214,7 @@ export const translations: Record<"en" | "es" | "pt", LocaleTranslations> = {
     "stores.instacartTitle": "Compra Recetas con Instacart",
     "stores.instacartDescription": "Elige una receta y envía sus ingredientes ajustados a una página de compras de Instacart.",
     "stores.instacartAvailable": "Disponible en Instacart cerca de ti",
-    "stores.signInInstacart": "Inicia sesión para usar Instacart",
+    "stores.signInMestizo": "Inicia sesión en Mestizo Umami",
     "stores.chooseRecipe": "Elegir una Receta",
     "stores.providerUnavailable": "Las tiendas de Instacart no están disponibles temporalmente.",
     "stores.instacartAccountInfo": "No se necesita conexión dentro de la aplicación. Te llevaremos a Instacart, donde puedes iniciar sesión de forma segura con tu propia cuenta.",
@@ -307,7 +307,7 @@ export const translations: Record<"en" | "es" | "pt", LocaleTranslations> = {
     "stores.instacartTitle": "Compre Receitas com Instacart",
     "stores.instacartDescription": "Escolha uma receita e envie os ingredientes ajustados para uma página de compras do Instacart.",
     "stores.instacartAvailable": "Disponível no Instacart perto de você",
-    "stores.signInInstacart": "Entre para usar o Instacart",
+    "stores.signInMestizo": "Entre no Mestizo Umami",
     "stores.chooseRecipe": "Escolher uma Receita",
     "stores.providerUnavailable": "As lojas do Instacart estão temporariamente indisponíveis.",
     "stores.instacartAccountInfo": "Não é preciso conectar uma conta dentro do app. Vamos levar você ao Instacart, onde poderá entrar com segurança na sua própria conta.",
