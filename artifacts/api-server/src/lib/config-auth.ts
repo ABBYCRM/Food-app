@@ -45,7 +45,7 @@ export interface AuthConfig {
     priceId: string;
     priceDisplay: string;
   } | null;
-  instacart: {
+  composio: {
     apiKey: string;
     apiBaseUrl: string;
   } | null;
@@ -96,10 +96,9 @@ export function loadAuthConfig(): AuthConfig {
       priceId: stripePriceId,
       priceDisplay: process.env["SUBSCRIPTION_PRICE_DISPLAY"] ?? "$4.99/month",
     } : null,
-    instacart: (() => {
-      const apiKey    = optionalEnv("INSTACART_API_KEY");
-      const apiBaseUrl = process.env["INSTACART_API_BASE_URL"]?.trim()
-        || "https://connect.dev.instacart.tools";
+    composio: (() => {
+      const apiKey = optionalEnv("COMPOSIO_API_KEY");
+      const apiBaseUrl = "https://backend.composio.dev/api/v3.1";
       return apiKey ? { apiKey, apiBaseUrl } : null;
     })(),
   };

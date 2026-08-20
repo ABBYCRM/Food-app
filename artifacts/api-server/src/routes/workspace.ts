@@ -46,11 +46,7 @@ const instacartIngredient = z.object({
   name: z.string().trim().min(1).max(200),
   displayText: z.string().trim().min(1).max(300).optional(),
   quantity: z.number().finite().positive().max(100_000).optional(),
-  unit: z.enum([
-    "cup", "milliliter", "liter", "tablespoon", "teaspoon",
-    "gram", "kilogram", "ounce", "pound",
-    "each", "bunch", "can", "ears", "head", "package", "packet",
-  ]).optional(),
+  unit: z.string().trim().min(1).max(40).optional(),
 }).strict();
 
 const instacartBaseSchema = z.object({
@@ -69,6 +65,11 @@ const instacartShoppingSchema = z.discriminatedUnion("mode", [
     instructions: z.array(z.string().trim().min(1).max(1_000)).max(100).optional(),
   }).strict(),
 ]);
+
+const instacartRetailerQuerySchema = z.object({
+  postalCode: z.string().trim().regex(/^\d{5}$|^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$/),
+  countryCode: z.enum(["US", "CA"]).default("US"),
+}).strict();
 
 function parseInput<T>(schema: z.ZodType<T>, body: unknown, res: import("express").Response): T | null {
   if (containsClientIdentity(body)) {
@@ -196,6 +197,21 @@ export function createWorkspaceRouter(auth: AuthMiddleware, instacartService: In
   // ── Instacart shopping ────────────────────────────────────────────────────
 
   if (instacartService) {
+    router.get("/instacart/retailers", protect, async (req, res, next) => {
+      try {
+        const parsed = instacartRetailerQuerySchema.safeParse(req.query);
+        if (!parsed.success) {
+          return res.status(400).json({ error: "A valid US or Canadian postal code is required", code: "INVALID_INPUT" });
+        }
+        const retailers = await instacartService.getNearbyRetailers(
+          req.user!.id,
+          parsed.data.postalCode,
+          parsed.data.countryCode,
+        );
+        return res.json({ retailers });
+      } catch (err) { return next(err); }
+    });
+
     router.post("/instacart/shopping", auth.requireCsrf, protect, async (req, res, next) => {
       try {
         const data = parseInput(instacartShoppingSchema, req.body, res);
@@ -205,7 +221,10 @@ export function createWorkspaceRouter(auth: AuthMiddleware, instacartService: In
         const cached = await repos.getInstacartLinkForUser(req.user!.id, hash);
         if (cached) return res.json({ url: cached });
 
-        const url      = await instacartService.createShoppingPage(data as Parameters<typeof instacartService.createShoppingPage>[0]);
+        const url = await instacartService.createShoppingPage(
+          req.user!.id,
+          data as Parameters<typeof instacartService.createShoppingPage>[1],
+        );
         const expiresAt = new Date(Date.now() + 365 * 86_400_000);
         await repos.putInstacartLinkForUser(req.user!.id, hash, url, expiresAt);
         return res.json({ url });

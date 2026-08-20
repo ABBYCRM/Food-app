@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useRoute, Link } from "wouter";
 import { getRecipeBySlug, recipes } from "../data/recipes";
 import { isRecipeSaved, saveRecipe, unsaveRecipe } from "../lib/storage";
-import { Bookmark, Clock, Flame, Utensils, Droplets, Minus, Plus, ChevronLeft, ChefHat, Printer, Lock } from "lucide-react";
+import { Bookmark, Clock, Flame, Utensils, Droplets, Minus, Plus, ChevronLeft, ChefHat, Printer, Lock, ShoppingCart, LoaderCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLocale } from "@/lib/locale";
 import { parseQtyNum, convertUnit, localizeTemp } from "@/lib/unit-convert";
@@ -77,7 +77,7 @@ export function RecipeDetail() {
   const slug = params?.slug;
   const recipe = slug ? getRecipeBySlug(slug) : undefined;
   const { t, unitSystem, locale } = useLocale();
-  const { authenticated, loading: authLoading, login } = useAuthContext();
+  const { authenticated, loading: authLoading, login, authFetch } = useAuthContext();
 
   // Resolve locale-specific content, falling back to English fields
   const localeContent = recipe?.locales?.[locale as "es" | "pt"];
@@ -89,6 +89,8 @@ export function RecipeDetail() {
 
   const [saved, setSaved] = useState(false);
   const [servings, setServings] = useState<number>(1);
+  const [shopping, setShopping] = useState(false);
+  const [shoppingError, setShoppingError] = useState<string | null>(null);
 
   useEffect(() => {
     if (recipe) {
@@ -189,6 +191,45 @@ export function RecipeDetail() {
     if (num === null) return { qty, unit }; // "to taste", "a pinch", etc.
     const scaled = num * ratio;
     return convertUnit(scaled, unit, unitSystem);
+  }
+
+  async function shopWithInstacart() {
+    if (!recipe) return;
+    setShopping(true);
+    setShoppingError(null);
+    try {
+      const ingredients = recipe.ingredients.map((ingredient) => {
+        const scaledQuantity = parseFraction(ingredient.qty);
+        const quantity = scaledQuantity === null ? undefined : scaledQuantity * ratio;
+        const amount = quantity === undefined ? ingredient.qty : decimalToFraction(quantity);
+        return {
+          name: ingredient.item,
+          displayText: [amount, ingredient.unit, ingredient.item, ingredient.note ? `(${ingredient.note})` : ""]
+            .filter(Boolean)
+            .join(" "),
+          ...(quantity && quantity > 0 ? { quantity } : {}),
+          ...(quantity && ingredient.unit ? { unit: ingredient.unit } : {}),
+        };
+      });
+      const response = await authFetch("/api/instacart/shopping", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          mode: "recipe",
+          title: displayTitle,
+          ingredients,
+          servings,
+          externalReferenceId: recipe.slug,
+          instructions: displayMethod.map((step) => localizeTemp(step.text, unitSystem)),
+        }),
+      });
+      const body = await response.json().catch(() => ({})) as { url?: string; error?: string };
+      if (!response.ok || !body.url) throw new Error(body.error || t("recipe.instacartError"));
+      window.location.assign(body.url);
+    } catch (error) {
+      setShoppingError(error instanceof Error ? error.message : t("recipe.instacartError"));
+      setShopping(false);
+    }
   }
 
   const related = recipes
@@ -580,28 +621,47 @@ export function RecipeDetail() {
             </p>
           </div>
 
-          <div className="flex gap-3 mt-6 md:mt-0">
-            <Button
-              onClick={printRecipe}
-              size="lg"
-              variant="outline"
-              className="shrink-0 border-white/20 bg-black/40 backdrop-blur-md h-12 md:h-14 px-6 md:px-8 text-xs tracking-widest uppercase transition-all text-white hover:text-primary hover:border-primary/50"
-            >
-              <Printer className="w-4 h-4 md:w-5 md:h-5 mr-2 md:mr-3" />
-              {t("recipe.printList")}
-            </Button>
-            <Button
-              onClick={toggleSave}
-              data-testid="button-save-detail"
-              size="lg"
-              variant="outline"
-              className={`shrink-0 border-white/20 bg-black/40 backdrop-blur-md h-12 md:h-14 px-6 md:px-8 text-xs tracking-widest uppercase transition-all ${
-                saved ? "text-primary border-primary bg-primary/10" : "text-white hover:text-primary hover:border-primary/50"
-              }`}
-            >
-              <Bookmark className={`w-4 h-4 md:w-5 md:h-5 mr-2 md:mr-3 ${saved ? "fill-primary" : ""}`} />
-              {saved ? t("recipe.saved") : t("recipe.saveRecipe")}
-            </Button>
+          <div className="flex flex-col gap-2 mt-6 md:mt-0 md:items-end">
+            <div className="flex gap-3 flex-wrap md:justify-end">
+              <Button
+                onClick={() => void shopWithInstacart()}
+                disabled={shopping}
+                data-testid="button-shop-instacart"
+                size="lg"
+                className="shrink-0 bg-[#FF5A1F] hover:bg-[#e94d16] text-white h-12 md:h-14 px-6 md:px-8 text-xs tracking-widest uppercase transition-all"
+              >
+                {shopping
+                  ? <LoaderCircle className="w-4 h-4 md:w-5 md:h-5 mr-2 md:mr-3 animate-spin" />
+                  : <ShoppingCart className="w-4 h-4 md:w-5 md:h-5 mr-2 md:mr-3" />}
+                {shopping ? t("recipe.openingInstacart") : t("recipe.shopInstacart")}
+              </Button>
+              <Button
+                onClick={printRecipe}
+                size="lg"
+                variant="outline"
+                className="shrink-0 border-white/20 bg-black/40 backdrop-blur-md h-12 md:h-14 px-6 md:px-8 text-xs tracking-widest uppercase transition-all text-white hover:text-primary hover:border-primary/50"
+              >
+                <Printer className="w-4 h-4 md:w-5 md:h-5 mr-2 md:mr-3" />
+                {t("recipe.printList")}
+              </Button>
+              <Button
+                onClick={toggleSave}
+                data-testid="button-save-detail"
+                size="lg"
+                variant="outline"
+                className={`shrink-0 border-white/20 bg-black/40 backdrop-blur-md h-12 md:h-14 px-6 md:px-8 text-xs tracking-widest uppercase transition-all ${
+                  saved ? "text-primary border-primary bg-primary/10" : "text-white hover:text-primary hover:border-primary/50"
+                }`}
+              >
+                <Bookmark className={`w-4 h-4 md:w-5 md:h-5 mr-2 md:mr-3 ${saved ? "fill-primary" : ""}`} />
+                {saved ? t("recipe.saved") : t("recipe.saveRecipe")}
+              </Button>
+            </div>
+            {shoppingError && (
+              <p role="alert" className="max-w-md text-sm text-red-300 bg-black/60 px-3 py-2 rounded-lg">
+                {shoppingError}
+              </p>
+            )}
           </div>
         </div>
       </section>

@@ -85,7 +85,7 @@ const billingService   = createBillingService(config);
 const instacartService = createInstacartService(config);
 
 if (!billingService)   logger.warn("Stripe not configured — billing routes disabled.");
-if (!instacartService) logger.info("Instacart not configured — shopping route disabled.");
+if (!instacartService) logger.info("Composio not configured — Instacart shopping routes disabled.");
 
 // ── Feature routes ─────────────────────────────────────────────────────────────
 if (oidcService && authMiddleware) {

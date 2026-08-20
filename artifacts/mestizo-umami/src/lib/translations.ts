@@ -6,6 +6,7 @@ export type TranslationKey =
   | "recipe.story" | "recipe.ingredients" | "recipe.method"
   | "recipe.chefNotes" | "recipe.pairing" | "recipe.back"
   | "recipe.saveRecipe" | "recipe.saved" | "recipe.printList"
+  | "recipe.shopInstacart" | "recipe.openingInstacart" | "recipe.instacartError"
   | "recipe.prepCook" | "recipe.difficulty" | "recipe.spice" | "recipe.umami"
   | "recipe.servings" | "recipe.serving" | "recipe.feedsPeople" | "recipe.feedsPerson"
   | "recipe.relatedTitle" | "recipe.notFound" | "recipe.returnCollection"
@@ -27,6 +28,8 @@ export type TranslationKey =
   | "stores.title" | "stores.subtitle" | "stores.search" | "stores.searching"
   | "stores.noStores" | "stores.tryOther" | "stores.openMaps"
   | "stores.comingSoon" | "stores.comingSoonDesc" | "stores.addIngredients" | "stores.joinWaitlist"
+  | "stores.instacartTitle" | "stores.instacartDescription" | "stores.instacartAvailable"
+  | "stores.signInInstacart" | "stores.chooseRecipe" | "stores.providerUnavailable"
   // Common
   | "common.serves" | "common.downloadPdf";
 
@@ -52,6 +55,9 @@ export const translations: Record<"en" | "es" | "pt", LocaleTranslations> = {
     "recipe.saveRecipe": "Save Recipe",
     "recipe.saved": "Saved",
     "recipe.printList": "Print List",
+    "recipe.shopInstacart": "Shop on Instacart",
+    "recipe.openingInstacart": "Opening Instacart",
+    "recipe.instacartError": "Instacart couldn't create this shopping list. Please try again.",
     "recipe.prepCook": "Prep / Cook",
     "recipe.difficulty": "Difficulty",
     "recipe.spice": "Spice",
@@ -109,6 +115,12 @@ export const translations: Record<"en" | "es" | "pt", LocaleTranslations> = {
     "stores.comingSoonDesc": "Add all ingredients from any recipe directly to your cart at your nearest store — with one tap.",
     "stores.addIngredients": "Add All Ingredients",
     "stores.joinWaitlist": "Join the Waitlist",
+    "stores.instacartTitle": "Shop Recipes with Instacart",
+    "stores.instacartDescription": "Choose a recipe and send its scaled ingredient list to a private Instacart shopping page.",
+    "stores.instacartAvailable": "Available on Instacart near you",
+    "stores.signInInstacart": "Sign in to use Instacart",
+    "stores.chooseRecipe": "Choose a Recipe",
+    "stores.providerUnavailable": "Instacart retailers are temporarily unavailable.",
     // Common
     "common.serves": "Serves",
     "common.downloadPdf": "Download PDF",
@@ -133,6 +145,9 @@ export const translations: Record<"en" | "es" | "pt", LocaleTranslations> = {
     "recipe.saveRecipe": "Guardar Receta",
     "recipe.saved": "Guardada",
     "recipe.printList": "Imprimir Lista",
+    "recipe.shopInstacart": "Comprar en Instacart",
+    "recipe.openingInstacart": "Abriendo Instacart",
+    "recipe.instacartError": "Instacart no pudo crear esta lista. Inténtalo de nuevo.",
     "recipe.prepCook": "Prep / Cocción",
     "recipe.difficulty": "Dificultad",
     "recipe.spice": "Picante",
@@ -190,6 +205,12 @@ export const translations: Record<"en" | "es" | "pt", LocaleTranslations> = {
     "stores.comingSoonDesc": "Agrega todos los ingredientes de cualquier receta directamente a tu carrito — con un solo toque.",
     "stores.addIngredients": "Agregar Ingredientes",
     "stores.joinWaitlist": "Unirse a la Lista",
+    "stores.instacartTitle": "Compra Recetas con Instacart",
+    "stores.instacartDescription": "Elige una receta y envía sus ingredientes ajustados a una página privada de compras de Instacart.",
+    "stores.instacartAvailable": "Disponible en Instacart cerca de ti",
+    "stores.signInInstacart": "Inicia sesión para usar Instacart",
+    "stores.chooseRecipe": "Elegir una Receta",
+    "stores.providerUnavailable": "Las tiendas de Instacart no están disponibles temporalmente.",
     // Common
     "common.serves": "Porciones",
     "common.downloadPdf": "Descargar PDF",
@@ -214,6 +235,9 @@ export const translations: Record<"en" | "es" | "pt", LocaleTranslations> = {
     "recipe.saveRecipe": "Salvar Receita",
     "recipe.saved": "Salva",
     "recipe.printList": "Imprimir Lista",
+    "recipe.shopInstacart": "Comprar no Instacart",
+    "recipe.openingInstacart": "Abrindo o Instacart",
+    "recipe.instacartError": "O Instacart não conseguiu criar esta lista. Tente novamente.",
     "recipe.prepCook": "Prep / Cozimento",
     "recipe.difficulty": "Dificuldade",
     "recipe.spice": "Picância",
@@ -271,6 +295,12 @@ export const translations: Record<"en" | "es" | "pt", LocaleTranslations> = {
     "stores.comingSoonDesc": "Adicione todos os ingredientes de qualquer receita diretamente ao seu carrinho — com um toque.",
     "stores.addIngredients": "Adicionar Ingredientes",
     "stores.joinWaitlist": "Entrar na Lista",
+    "stores.instacartTitle": "Compre Receitas com Instacart",
+    "stores.instacartDescription": "Escolha uma receita e envie os ingredientes ajustados para uma página privada de compras do Instacart.",
+    "stores.instacartAvailable": "Disponível no Instacart perto de você",
+    "stores.signInInstacart": "Entre para usar o Instacart",
+    "stores.chooseRecipe": "Escolher uma Receita",
+    "stores.providerUnavailable": "As lojas do Instacart estão temporariamente indisponíveis.",
     // Common
     "common.serves": "Porções",
     "common.downloadPdf": "Baixar PDF",

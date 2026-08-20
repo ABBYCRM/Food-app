@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Search, MapPin, ExternalLink, ShoppingCart, ShoppingBag } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useToast } from "@/hooks/use-toast";
+import { useLocale } from "@/lib/locale";
+import { useAuthContext } from "@/lib/auth-context";
 
 interface Store {
   id: number;
@@ -12,6 +14,12 @@ interface Store {
   lat: number;
   lon: number;
   distance: number;
+}
+
+interface InstacartRetailer {
+  key: string;
+  name: string;
+  logoUrl: string | null;
 }
 
 function distanceMiles(lat1: number, lon1: number, lat2: number, lon2: number): number {
@@ -23,12 +31,15 @@ function distanceMiles(lat1: number, lon1: number, lat2: number, lon2: number): 
 }
 
 export function StoresPage() {
-  const { toast } = useToast();
+  const { t } = useLocale();
+  const { authenticated, authFetch, login } = useAuthContext();
   const [zip, setZip] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [stores, setStores] = useState<Store[]>([]);
   const [hasSearched, setHasSearched] = useState(false);
+  const [instacartRetailers, setInstacartRetailers] = useState<InstacartRetailer[]>([]);
+  const [providerError, setProviderError] = useState<string | null>(null);
 
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -40,6 +51,8 @@ export function StoresPage() {
     setLoading(true);
     setError(null);
     setStores([]);
+    setInstacartRetailers([]);
+    setProviderError(null);
     setHasSearched(true);
 
     try {
@@ -92,6 +105,19 @@ export function StoresPage() {
       if (top.length === 0) {
         setError("No stores found within 5 miles. Try a different ZIP code.");
       }
+
+      if (authenticated) {
+        try {
+          const retailerRes = await authFetch(`/api/instacart/retailers?postalCode=${encodeURIComponent(zip)}&countryCode=US`);
+          const retailerData = await retailerRes.json().catch(() => ({})) as {
+            retailers?: InstacartRetailer[];
+          };
+          if (!retailerRes.ok) throw new Error("Provider unavailable");
+          setInstacartRetailers(retailerData.retailers ?? []);
+        } catch {
+          setProviderError(t("stores.providerUnavailable"));
+        }
+      }
     } catch (err: any) {
       setError(err.message || "An unexpected error occurred. Please try again.");
     } finally {
@@ -99,18 +125,11 @@ export function StoresPage() {
     }
   };
 
-  const handleWaitlist = () => {
-    toast({
-      title: "You're on the list!",
-      description: "We'll notify you when Instant Cart Integration is live.",
-    });
-  };
-
   return (
     <div className="max-w-4xl mx-auto px-5 md:px-12 py-12 md:py-16">
       <div className="text-center mb-12">
-        <h1 className="font-display text-4xl md:text-5xl text-primary mb-4">Find Ingredients Near You</h1>
-        <p className="text-muted-foreground text-lg">Locate supermarkets and specialty food stores by ZIP code.</p>
+        <h1 className="font-display text-4xl md:text-5xl text-primary mb-4">{t("stores.title")}</h1>
+        <p className="text-muted-foreground text-lg">{t("stores.subtitle")}</p>
       </div>
 
       <form onSubmit={handleSearch} className="max-w-md mx-auto mb-16 flex gap-3 relative z-10">
@@ -132,12 +151,12 @@ export function StoresPage() {
           {loading ? (
             <span className="flex items-center gap-2">
               <span className="w-4 h-4 rounded-full border-2 border-primary-foreground/30 border-t-primary-foreground animate-spin" />
-              Searching
+              {t("stores.searching")}
             </span>
           ) : (
             <span className="flex items-center gap-2">
               <Search className="w-4 h-4" />
-              Search
+              {t("stores.search")}
             </span>
           )}
         </Button>
@@ -152,8 +171,8 @@ export function StoresPage() {
       {hasSearched && !loading && !error && stores.length === 0 && (
         <div className="text-center p-12 bg-white/5 rounded-2xl mb-12 border border-white/5">
           <MapPin className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-          <h3 className="font-display text-2xl text-foreground mb-2">No stores found</h3>
-          <p className="text-muted-foreground">Try a different ZIP code or expanding your search area.</p>
+          <h3 className="font-display text-2xl text-foreground mb-2">{t("stores.noStores")}</h3>
+          <p className="text-muted-foreground">{t("stores.tryOther")}</p>
         </div>
       )}
 
@@ -189,7 +208,7 @@ export function StoresPage() {
                   href={`https://maps.google.com/?q=${encodeURIComponent(store.name)},${store.lat},${store.lon}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Open in Google Maps"
+                  aria-label={t("stores.openMaps")}
                 >
                   <ExternalLink className="w-4 h-4" />
                 </a>
@@ -199,39 +218,57 @@ export function StoresPage() {
         </div>
       )}
 
-      {/* Coming Soon Section */}
       <section className="mt-20 pt-16 border-t border-white/10 text-center">
         <div className="max-w-2xl mx-auto bg-gradient-to-b from-primary/10 to-transparent border border-primary/20 p-8 md:p-12 rounded-3xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 blur-[100px] rounded-full -z-10 translate-x-1/2 -translate-y-1/2 pointer-events-none" />
           <ShoppingBag className="w-12 h-12 text-primary mx-auto mb-6" />
           <h2 className="font-display text-3xl md:text-4xl text-primary mb-4">
-            Instant Cart Integration Coming Soon
+            {t("stores.instacartTitle")}
           </h2>
           <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-            Add all ingredients from any recipe directly to your cart at your nearest store — with one tap.
+            {t("stores.instacartDescription")}
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <div className="relative group">
-              <Button
-                variant="outline"
-                size="lg"
-                disabled
-                className="w-full sm:w-auto h-14 px-8 border-white/10 bg-white/5 opacity-50 text-white cursor-not-allowed"
-              >
-                <ShoppingCart className="w-4 h-4 mr-2" />
-                Add All Ingredients
-              </Button>
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/80 rounded-md backdrop-blur-sm">
-                <span className="text-xs uppercase tracking-widest text-primary font-medium">Coming Soon</span>
+
+          {instacartRetailers.length > 0 && (
+            <div className="mb-8 text-left">
+              <p className="text-xs uppercase tracking-widest text-primary text-center mb-4">
+                {t("stores.instacartAvailable")}
+              </p>
+              <div className="flex flex-wrap justify-center gap-3">
+                {instacartRetailers.slice(0, 8).map((retailer) => (
+                  <div key={retailer.key} className="flex items-center gap-2 rounded-full border border-white/10 bg-black/20 px-4 py-2">
+                    {retailer.logoUrl && <img src={retailer.logoUrl} alt="" className="h-6 w-6 rounded object-contain bg-white" />}
+                    <span className="text-sm text-foreground">{retailer.name}</span>
+                  </div>
+                ))}
               </div>
             </div>
-            <Button
-              onClick={handleWaitlist}
-              size="lg"
-              className="w-full sm:w-auto h-14 px-8 bg-primary text-primary-foreground hover:bg-primary/90 uppercase tracking-widest text-sm font-medium transition-colors"
-            >
-              Join the Waitlist
-            </Button>
+          )}
+
+          {providerError && <p role="alert" className="text-sm text-amber-300 mb-5">{providerError}</p>}
+
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            {authenticated ? (
+              <Button
+                asChild
+                size="lg"
+                className="w-full sm:w-auto h-14 px-8 bg-[#FF5A1F] hover:bg-[#e94d16] text-white uppercase tracking-widest text-sm font-medium"
+              >
+                <Link href="/recipes">
+                  <ShoppingCart className="w-4 h-4 mr-2" />
+                  {t("stores.chooseRecipe")}
+                </Link>
+              </Button>
+            ) : (
+              <Button
+                onClick={() => login("/stores")}
+                size="lg"
+                className="w-full sm:w-auto h-14 px-8 bg-primary text-primary-foreground hover:bg-primary/90 uppercase tracking-widest text-sm font-medium"
+              >
+                <ShoppingCart className="w-4 h-4 mr-2" />
+                {t("stores.signInInstacart")}
+              </Button>
+            )}
           </div>
         </div>
       </section>
