@@ -33,13 +33,13 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "cotija cheese", note: "crumbled" }
     ],
     method: [
-      { step: 1, text: "Crack the 4 large eggs into a bowl, add the 1 tsp soy sauce, and whisk for 20 seconds until just combined." },
-      { step: 2, text: "Heat an 8-inch nonstick tamagoyaki pan over medium-low heat for 2 minutes until evenly warm." },
-      { step: 3, text: "Pour one-quarter of the mixture made from the 4 large eggs into the pan and cook for 30–45 seconds until barely set." },
-      { step: 4, text: "Roll the set layer made from the 4 large eggs toward you, using a spatula, until you have a compact cylinder." },
-      { step: 5, text: "Pour another thin layer of the remaining 4 large eggs around the roll and cook for 30–45 seconds until the surface is nearly set." },
-      { step: 6, text: "Roll the existing omelet over the new 4-large-egg layer, then repeat until all the egg mixture is cooked and layered." },
-      { step: 7, text: "Transfer the finished omelet made from the 4 large eggs to a board, top with the 2 tbsp cotija cheese, and slice." }
+      { step: 1, text: "Crack the 4 large eggs into a bowl, add the 1 tsp soy sauce, 1 tbsp mirin, and 1 tsp sugar, then whisk gently for 20 seconds until just combined but not frothy. Over-whisking beats in air that makes the omelet spongy instead of silky; you want the yolks and whites streaky-blended, not uniform, so the finished tamagoyaki has that signature tender, custardy bite." },
+      { step: 2, text: "Set an 8-inch nonstick tamagoyaki pan over medium-low heat for 2 minutes until a drop of egg sizzles softly rather than seizing instantly. Low, steady heat is everything here: too hot and the thin layers brown and tear before they can be rolled, so lightly oil the surface with a paper towel and keep the temperature gentle throughout." },
+      { step: 3, text: "Pour in one-quarter of the egg mixture, tilting the pan so it spreads into an even sheet, and cook for 30 to 45 seconds until the surface looks glossy and barely set with no runny pools. If bubbles rise, pop them with a chopstick. You are aiming for a just-set skin that is still tacky on top so the next layer welds to it as you roll." },
+      { step: 4, text: "Using a spatula or chopsticks, roll the set egg sheet away from you toward the far edge into a tight, compact log, keeping it snug against the pan wall. Rolling while the top is still slightly moist is what glues the layers into one seamless block; a fully dry sheet cracks and unrolls. Slide the finished roll back to the far side of the pan." },
+      { step: 5, text: "Lightly re-oil the exposed pan, pour a fresh thin layer of the remaining egg, and lift the existing roll so the raw egg flows underneath it. Cook 30 to 45 seconds until the new layer is nearly set but still glossy on top. This under-lift step laminates each layer to the last, building the striped cross-section that defines a proper tamagoyaki." },
+      { step: 6, text: "Roll the log back over the new layer, then repeat pouring, lifting, and rolling until all the egg is used and you have a plump, multi-layered cylinder. Keep the heat gentle so the outside stays pale gold, not brown; the goal is a warm yellow block that is fully cooked through yet still jiggles slightly, signaling it stayed moist rather than drying out." },
+      { step: 7, text: "Turn the finished omelet onto a board, roll it in the 2 large flour tortillas smeared with the 4 tbsp charred salsa roja, and scatter the 2 tbsp crumbled cotija cheese inside before rolling tight. Slice on the bias to reveal the spiral layers. Serving straightaway keeps the egg warm and the tortilla pliable so the burrito holds its shape without cracking." }
     ],
     chefNotes: "A true tamagoyaki pan makes this easier, but a standard 8-inch nonstick works just fine. The secret to the egg's texture is keeping the heat low and rolling before the top layer is completely dry.",
     pairing: "Hot black coffee and fresh orange juice",
@@ -111,11 +111,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1/4", unit: "cup", item: "cotija cheese", note: "crumbled" }
     ],
     method: [
-      { step: 1, text: "Pour the 1.5 cups salsa roja and the 1/4 cup vegetable broth into a wide 12-inch skillet over medium heat." },
-      { step: 2, text: "Simmer the 1.5 cups salsa roja with the 1/4 cup vegetable broth for 5 minutes until slightly thickened and bubbling." },
-      { step: 3, text: "Add the 6 cups stale corn tortilla chips to the simmering salsa and toss gently until every chip is evenly coated." },
-      { step: 4, text: "Cook the 6 cups coated tortilla chips for 1–2 minutes, tossing continuously, until softened outside but still crisp at the center." },
-      { step: 5, text: "Remove the skillet from the heat and immediately divide the 6 cups saucy tortilla chips among serving plates while still crisp." }
+      { step: 1, text: "Pour the 1.5 cups smooth salsa roja and 1/4 cup vegetable broth into a wide 12-inch skillet over medium heat, spreading it into an even shallow pool. A wide pan matters: it gives the chips room to lie flat in a single layer later so every piece meets the sauce, and the broth loosens the salsa just enough to coat without drowning." },
+      { step: 2, text: "Bring the salsa to a lively simmer and cook for about 5 minutes, stirring now and then, until it darkens slightly, thickens enough to coat a spoon, and smells sweet and roasted rather than raw. Simmering concentrates the tomato-chile flavor and drives off the tinny edge of jarred salsa, so the sauce clings to the chips instead of sliding off." },
+      { step: 3, text: "While the salsa simmers, fry the 2 eggs to your liking in a separate pan, then add the 6 cups stale thick-cut tortilla chips to the bubbling salsa and toss gently but quickly with a wide spatula until every chip wears a glossy red coat. Work fast and fold from the bottom up; stale, sturdy chips are used precisely because they soak sauce without instantly collapsing." },
+      { step: 4, text: "Cook the coated chips for just 1 to 2 minutes, tossing continuously, until the edges soften and turn pliable while the centers still hold an audible crunch. This 90-second window is the whole art of chilaquiles: pull them the instant they go from stiff to tender-with-bite, because a few seconds too long turns the whole pan to mush." },
+      { step: 5, text: "Kill the heat and immediately divide the saucy chips among plates while they still crackle. Crown each portion with a fried egg, drizzle the 2 tbsp crema mexicana in ribbons, crumble the 1/4 cup cotija over the top, and dust with the 1 tbsp shichimi togarashi. Serve at once; the crema and citrusy togarashi wake up the deep salsa right before the chips lose their crunch." }
     ],
     chefNotes: "Speed is everything here. Don't let the chips sit in the sauce in the pan off the heat, or they will completely disintegrate.",
     pairing: "Cold brew coffee",
@@ -149,11 +149,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "neutral oil" }
     ],
     method: [
-      { step: 1, text: "Heat the 1 cup salsa verde (tomatillo-based) in a 2-quart saucepan over low heat for 3 minutes, until steaming but not bubbling." },
-      { step: 2, text: "Stir the 1 tbsp white miso paste (warmed) into the 1 cup salsa verde for 1 minute, until completely dissolved." },
-      { step: 3, text: "Heat the 2 tbsp neutral oil in a 10-inch skillet over medium heat for 2 minutes, until shimmering but not smoking." },
-      { step: 4, text: "Pour the warm 1 cup salsa verde into the skillet and cook for 2 minutes, stirring, until glossy and gently bubbling." },
-      { step: 5, text: "Divide the hot salsa among serving bowls and scatter the 2 tbsp queso fresco (crumbled) over the surface before serving." }
+      { step: 1, text: "Warm the 1 cup tomatillo salsa verde in a 2-quart saucepan over low heat for about 3 minutes until it steams and barely shivers at the edges but never boils. Gentle heat protects the fresh, tart brightness of the tomatillos; a hard boil turns the salsa dull and flat, and you want it lively to balance the savory miso you add next." },
+      { step: 2, text: "Whisk the 1 tbsp white miso paste into the warm salsa verde for a full minute until it dissolves completely with no pale lumps left. Keep the heat low, because scorching miso destroys its delicate aromatics; done right, the miso rounds off the tomatillo acidity and lays a deep, mellow umami base under the whole dish. Hold the sauce warm." },
+      { step: 3, text: "Heat the 2 tbsp neutral oil in a 10-inch skillet over medium heat for about 2 minutes until it shimmers but does not smoke. A properly hot pan is what crisps and puffs the corn tortillas and gives the eggs lacy, golden edges; oil that is too cool leaves everything greasy and limp instead of crackling." },
+      { step: 4, text: "Fry the 4 corn tortillas one at a time for about 20 seconds per side until they blister and turn pliable-crisp, then set aside and crack the 4 large eggs into the same pan. Cook undisturbed for 3 to 4 minutes so the whites set fully while the yolks stay runny; not moving them keeps the delicate whites intact and the edges frilly." },
+      { step: 5, text: "Layer each fried tortilla with the 1/2 cup warmed black beans, top with an egg, and ladle the warm miso-verde salsa generously around the yolk so it pools but does not bury it. Scatter the 2 tbsp crumbled queso fresco over the top and serve immediately, while the yolk is molten and ready to break into the tangy, umami-rich sauce." }
     ],
     chefNotes: "Never boil the miso in the salsa—high heat destroys the delicate aromatics of the fermented paste. Just keep it warm.",
     pairing: "Cafe de olla",
@@ -186,11 +186,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "pinch", item: "salt" }
     ],
     method: [
-      { step: 1, text: "Place the 1 cup steamed white rice (must be piping hot) in a deep bowl within 1 minute of cooking." },
-      { step: 2, text: "Stir the 1 pinch salt into the 1 cup steamed white rice for 15 seconds, then form a small well in the center." },
-      { step: 3, text: "Crack the 1 pasteurized egg (very fresh) into the well and let it sit in the piping-hot rice for 30 seconds." },
-      { step: 4, text: "Pour the 1 tbsp soy sauce (chile oil with nuts) over the 1 pasteurized egg and rice, then stir for 15 seconds." },
-      { step: 5, text: "Whisk the 1 pasteurized egg into the 1 cup steamed white rice for 1 minute, until pale and creamy, then add the 1 tbsp scallions." }
+      { step: 1, text: "Scoop the 1 cup piping-hot steamed white rice into a deep bowl within a minute of cooking, mounding it slightly. The heat retained in fresh rice is the engine of this dish; it is what will gently cook the raw egg into a glossy, carbonara-like coating, so working fast before the rice cools below serving temperature is essential." },
+      { step: 2, text: "Stir the 1 pinch salt through the hot rice for about 15 seconds, then press a small well into the center with the back of a spoon. Seasoning the rice first ensures even saltiness throughout, and the well cradles the egg so it sits against the maximum surface of hot rice, warming through evenly rather than sliding to one side." },
+      { step: 3, text: "Crack the 1 very fresh pasteurized egg into the well and let it rest against the hot rice for 30 seconds. A fresh egg holds a tight, domed yolk and thick white that whip into a creamier emulsion; the brief rest lets the heat begin setting the white at the edges so the final texture is silky rather than watery-raw." },
+      { step: 4, text: "Pour the 1 tbsp soy sauce over the egg and rice, then whisk vigorously with chopsticks for a full minute, beating air into the mixture until the rice turns pale, glossy, and creamy with a light foam. The fast whisking against the hot rice is what emulsifies the egg into a sauce that coats every grain instead of pooling at the bottom." },
+      { step: 5, text: "Finish with the 1 tsp salsa macha drizzled over the top and a shower of the 1 tbsp finely sliced scallions, then eat immediately. The nutty chile oil brings smoky Mexican heat that cuts the richness of the egg, and serving at once keeps the rice hot and the egg satiny before it can stiffen or cool into clumps." }
     ],
     chefNotes: "The heat of the rice lightly cooks the egg, creating a carbonara-like emulsion. You must whip it immediately while the rice is hot for the right texture.",
     pairing: "Hot miso soup",
@@ -225,11 +225,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1/4", unit: "cup", item: "fresh cilantro", note: "chopped" }
     ],
     method: [
-      { step: 1, text: "Heat a wide 10-inch skillet over medium heat, add the 1/2 onion (diced), and cook for 8 minutes until softened and lightly golden." },
-      { step: 2, text: "Stir the 1 tbsp harissa paste into the softened 1/2 onion and cook for 1 minute, until fragrant and evenly coated." },
-      { step: 3, text: "Pour in the 1 can crushed tomatoes (14oz), stir with the 1/2 onion and 1 tbsp harissa paste, and bring to a gentle simmer." },
-      { step: 4, text: "Simmer the 1 can crushed tomatoes (14oz) for 10 minutes, stirring occasionally, until thickened enough to hold four wells." },
-      { step: 5, text: "Crack the 4 large eggs into the wells, cover the skillet, and simmer for 5–7 minutes until whites set while yolks remain runny." }
+      { step: 1, text: "Heat the 2 tbsp olive oil in a wide 10-inch skillet over medium heat, add the diced 1/2 onion and diced 1 red bell pepper, and cook for about 8 minutes, stirring occasionally, until softened, slumped, and lightly golden at the edges. This slow sweat draws out their natural sugars and builds the sweet backbone that balances the coming chile and fermented heat." },
+      { step: 2, text: "Push the vegetables aside and stir the 1 tbsp harissa paste and 1 tbsp red miso paste into the hot oil for about a minute until they turn fragrant and darken slightly. Blooming both pastes in fat unlocks their aromatics; the miso in particular lends the deep, meaty savoriness that makes this vegetarian stew taste as though it simmered for hours." },
+      { step: 3, text: "Pour in the 1 can (14oz) crushed tomatoes, scraping up any browned bits, and bring to a gentle simmer. Cook for about 10 minutes, stirring occasionally, until the sauce thickens, deepens in color, and holds a spoon-drawn trench for a moment. A sauce this thick is crucial so the wells you make will cradle the eggs instead of letting them drift and scatter." },
+      { step: 4, text: "Season the sauce, then use the back of a spoon to hollow out four evenly spaced wells down to the pan. Crack one of the 4 large eggs into each well so the whites nestle into the sauce while the yolks sit proud on top. Keeping the yolks above the sauce line helps them stay runny while the surrounding whites gently poach." },
+      { step: 5, text: "Cover the skillet and simmer for 5 to 7 minutes until the whites are just set and opaque but the yolks still jiggle when nudged; the trapped steam sets the tops without overcooking. Pull it the moment the whites firm up, then scatter the 1/4 cup chopped fresh cilantro over the top and bring the whole pan to the table to serve bubbling." }
     ],
     chefNotes: "Red miso is much stronger and saltier than white miso. It mimics the deep savoriness of long-simmered meat in this quick vegetarian dish.",
     pairing: "Warm pita or crusty sourdough for dipping",
@@ -263,11 +263,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "pinch", item: "white pepper" }
     ],
     method: [
-      { step: 1, text: "Place the 4 peeled hard-boiled eggs in a medium bowl and mash with a fork for 30 seconds, leaving small white pieces visible." },
-      { step: 2, text: "Add the 3 tbsp Japanese mayonnaise, 1 tsp soy sauce (crushed into flakes), and 1 pinch white pepper, then stir until creamy." },
-      { step: 3, text: "Fold in the 1/2 seeded and minced jalapeño and stir for 30 seconds, distributing the pieces evenly through the egg mixture." },
-      { step: 4, text: "Lay out the 4 slices Japanese milk bread and spread the egg mixture evenly over 2 slices, reaching nearly to each edge." },
-      { step: 5, text: "Top with the remaining 2 slices Japanese milk bread, press gently, trim the crusts, and cut each sandwich diagonally." }
+      { step: 1, text: "Place the 4 peeled hard-boiled eggs in a medium bowl and mash with a fork for about 30 seconds, leaving some pieces of white roughly pea-sized rather than pureeing to a paste. That contrast of creamy and chunky is the whole appeal of a Japanese egg salad; a smooth mash reads more like a spread and loses the satisfying texture the sandwich is famous for." },
+      { step: 2, text: "Add the 3 tbsp Kewpie Japanese mayonnaise, 1 tsp soy sauce, and 1 pinch white pepper, then stir until the mixture is cohesive and creamy but still holds visible egg pieces. Kewpie is used for its rich, yolk-forward tang; the soy and white pepper season the salad deep down so it tastes bright and savory rather than one-note and flat." },
+      { step: 3, text: "Fold in the 1/2 seeded, minced jalapeno and the 1 sheet of roasted nori crushed into flakes, stirring gently for about 30 seconds so both are evenly scattered. Adding them by folding keeps the jalapeno's crunch and the nori's crisp, briny snap intact; mixing too hard would soften the seaweed into mush and dull its toasted, oceanic aroma." },
+      { step: 4, text: "Lay out the 4 slices of Japanese milk bread and mound the egg salad thickly over 2 of them, spreading it right to the edges so every corner is filled. Reaching the edges matters because these sandwiches are cut and displayed cross-section up; a bare border looks skimpy and means dry, unfilled bites at the crustline." },
+      { step: 5, text: "Cap with the remaining 2 slices of shokupan, press down gently and evenly with your palm to compact the filling, then trim off all four crusts and cut each sandwich in half. Pressing binds the layers so the salad does not squeeze out when sliced, and the pillowy crustless bread against the creamy egg is exactly the konbini-style bite you are after." }
     ],
     chefNotes: "Japanese mayonnaise is crucial here—it uses only egg yolks and a specific blend of vinegars that gives it a richer, tangier profile than American mayo.",
     pairing: "Iced oolong tea",
@@ -301,11 +301,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "sesame oil" }
     ],
     method: [
-      { step: 1, text: "Heat a 12-inch wok or skillet over medium-high heat for 1 minute, then add the 1 tbsp neutral oil until it shimmers." },
-      { step: 2, text: "Add the 2 large eggs (chopped) to the hot oil and stir for 1–2 minutes, until fully set but still soft and lightly glossy." },
-      { step: 3, text: "Add the 1/2 cup Mexican chorizo (casing removed) and cook for 5–7 minutes, crumbling it until browned and its fat renders." },
-      { step: 4, text: "Add the 2 cups day-old chilled cooked white rice and stir-fry for 4–5 minutes, breaking clumps until hot with lightly crisp edges." },
-      { step: 5, text: "Drizzle in the 1 tsp sesame oil and toss for 30 seconds, coating the rice evenly before serving while it is steaming hot." }
+      { step: 1, text: "Set a 12-inch wok or heavy skillet over medium-high heat for about a minute, then add the 1 tbsp neutral oil and swirl until it shimmers and thins out. A properly preheated pan is essential for fried rice; if the surface is not hot enough the eggs and rice steam and turn gummy instead of searing into distinct, lightly crisped grains." },
+      { step: 2, text: "Pour in the 2 beaten large eggs and stir constantly for 1 to 2 minutes until they set into soft, glossy curds, then scrape them onto a plate. Cooking the eggs first and removing them keeps them tender; if they stayed in the pan through the whole stir-fry they would overcook into dry, rubbery bits by the time the rice is done." },
+      { step: 3, text: "Add the 1/2 cup casing-removed Mexican chorizo to the empty pan and cook for 5 to 7 minutes, crumbling it with a spatula, until it is deeply browned and its brick-red fat renders out into a slick pool. That rendered fat is liquid gold here: it coats and flavors every grain of rice, so let the chorizo darken fully rather than pulling it pale." },
+      { step: 4, text: "Add the 2 cups day-old chilled white rice and stir-fry hard for 4 to 5 minutes, pressing and breaking up any clumps so the grains fry in the chorizo fat until hot with lightly crisped edges. Cold day-old rice is dry enough to fry rather than clump; scattering it now lets each grain toast and pick up the smoky pork flavor." },
+      { step: 5, text: "Fold the cooked eggs back in, drizzle the 1 tbsp soy sauce and 1 tsp sesame oil around the hot edges of the pan, and toss with the 2 tbsp chopped scallions for about 30 seconds until everything is glossy and evenly coated. Adding the sesame oil off the direct flame preserves its nutty aroma, and serving immediately keeps the rice steaming and separate." }
     ],
     chefNotes: "Day-old chilled rice is mandatory. Fresh rice holds too much moisture and will turn into mush when fried in the rich chorizo fat.",
     pairing: "Jasmine green tea",
@@ -339,11 +339,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "sesame seeds" }
     ],
     method: [
-      { step: 1, text: "Bring a medium pot of water to a rolling boil, lower in the 2 fridge-cold large eggs, and boil for exactly 6 minutes." },
-      { step: 2, text: "Transfer the 2 boiled eggs to an ice bath for 5 minutes, then peel carefully; the whites should be firm and the centers soft." },
-      { step: 3, text: "Place the peeled 2 eggs in a small container, pour over the 1/4 cup warm soy sauce, and marinate for at least 2 hours." },
-      { step: 4, text: "Slice the 1 avocado and divide it between 2 shallow bowls, arranging the slices neatly along one side of each bowl." },
-      { step: 5, text: "Halve the 2 marinated eggs, place them beside the avocado, drizzle with the 1 tbsp chili crisp, and garnish with the 1 tsp sesame seeds." }
+      { step: 1, text: "Bring a medium pot of water to a rolling boil, then use a spoon to gently lower in the 2 fridge-cold large eggs and boil for exactly 6 minutes, adjusting the heat to keep the water at a steady rolling bubble. Cold eggs and precise timing are non-negotiable for ajitsuke tamago: 6 minutes yields firm whites around a molten, jammy yolk." },
+      { step: 2, text: "Immediately transfer the eggs to a bowl of ice water and chill for 5 minutes, then peel carefully under a thin stream of water. The ice bath halts the cooking instantly so the yolks stay custardy and stops that grey-green ring from forming; peeling under water floats the shell away cleanly without gouging the delicate set whites." },
+      { step: 3, text: "Combine the 1/4 cup soy sauce and 1/4 cup mirin in a small container, nestle the peeled eggs in so they are submerged, and refrigerate for at least 2 hours or overnight. The mirin balances the salty soy with a gentle sweetness, and the marinade tints the whites amber while seasoning them to the center, giving that signature savory-sweet ramen-egg flavor." },
+      { step: 4, text: "Divide the 1 cup warm cooked quinoa between two shallow bowls, then fan the sliced 1 avocado neatly along one side of each. The warm quinoa is the cozy, nutty base that soaks up the marinade and chili crisp, while the cool, buttery avocado balances the richness and gives the bowl its creamy, California-morning character." },
+      { step: 5, text: "Halve the 2 marinated eggs lengthwise and set them yolk-side up beside the avocado so the jammy centers show, then drizzle the 1 tbsp chili crisp over everything and finish with the 1 tsp sesame seeds. Slicing right before serving keeps the yolks glossy and intact, and the crunchy, spicy chili crisp ties the whole bowl together." }
     ],
     chefNotes: "Use a pushpin to poke a tiny hole in the wide end of the egg before boiling; it prevents cracking and yields a perfectly shaped egg.",
     pairing: "Sparkling water with a twist of lime",
@@ -378,11 +378,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "Tajín seasoning" }
     ],
     method: [
-      { step: 1, text: "Whisk the 3 large eggs with the 1 tbsp mirin, 1 tsp sugar, and 1 tsp soy sauce; cook in an 8-inch square pan over medium-low heat for 3 minutes, rolling as set." },
-      { step: 2, text: "Rest the cooked 3 large eggs for 2 minutes, then slice the rectangular omelet into thick pieces with clean cross-sections." },
-      { step: 3, text: "Mash the 1 ripe avocado with the 1 tsp lime juice in a small bowl for 1 minute, leaving a few visible chunks." },
-      { step: 4, text: "Toast the 2 slices thick sourdough over medium-high heat for 2–3 minutes, until deeply browned, crisp, and sturdy." },
-      { step: 5, text: "Spread the 1 ripe avocado mixture over the 2 toast slices, top with the omelet pieces, and finish with the 1 tsp Tajín seasoning." }
+      { step: 1, text: "Whisk the 3 large eggs with the 1 tbsp mirin, 1 tsp sugar, and 1 tsp soy sauce until just blended, then cook in a lightly oiled 8-inch square pan over medium-low heat, pouring thin layers and rolling each toward you as it sets, for about 3 minutes total. The gentle heat and rolling build the layered, slightly sweet tamagoyaki block without browning it." },
+      { step: 2, text: "Slide the finished omelet onto a board and rest it for 2 minutes before slicing it into thick, tidy pieces with clean cross-sections. Resting lets the layers settle and firm so the cuts stay sharp and geometric rather than squashing; a bamboo mat pressed around it briefly helps hold that crisp rectangular shape that contrasts the rustic toast." },
+      { step: 3, text: "Mash the 1 ripe avocado with the 1 tsp lime juice in a small bowl for about a minute, leaving a few deliberate chunks for texture. The lime does double duty: its acid keeps the avocado from browning grey and brightens the fatty flesh so it does not taste flat under the rich, sweet egg that sits on top." },
+      { step: 4, text: "Toast the 2 slices of thick sourdough over medium-high heat for 2 to 3 minutes until deeply browned, crisp, and sturdy enough to hold the toppings without bending. A firm, well-toasted base is structural here; soft bread would collapse under the weighty avocado and dense tamagoyaki, turning the whole thing into a soggy fork-and-knife affair." },
+      { step: 5, text: "Spread the mashed avocado thickly over the 2 toast slices, lay the tamagoyaki pieces on top with their striped cross-sections facing up, and finish with a bright dusting of the 1 tsp Tajin seasoning. The chili-lime salt sharpens the sweet egg and creamy avocado, and serving right away keeps the toast crisp beneath the soft layers." }
     ],
     chefNotes: "Resting the tamagoyaki block on a bamboo sushi mat for 2 minutes before slicing helps it retain a sharp, geometric shape.",
     pairing: "Matcha latte",
@@ -416,11 +416,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "sesame oil" }
     ],
     method: [
-      { step: 1, text: "Heat a 12-inch wok or large skillet over high heat until visibly smoking, then add the 1 tbsp neutral oil." },
-      { step: 2, text: "Add the 2 large eggs (beaten) and scramble for 15 seconds, until soft curds form, then push the eggs to one side." },
-      { step: 3, text: "Add the 2 cups cooked short-grain rice (chilled), break up clumps, and toss with the eggs for 2 minutes until steaming." },
-      { step: 4, text: "Stir in the 1/4 cup roasted green chiles and 1/2 cup frozen edamame, cooking for 2 minutes until sizzling and hot." },
-      { step: 5, text: "Drizzle the 2 tbsp soy sauce and 1 tsp sesame oil around the hot pan edges, then toss for 1 minute until glossy and evenly coated." }
+      { step: 1, text: "Heat a 12-inch wok or large skillet over high heat until it is visibly smoking, then add the 1 tbsp neutral oil and swirl to coat. That screaming-hot wok is what gives fried rice its faint smoky char, or wok hei; a cooler pan just steams the ingredients into a soft, clumpy pile instead of leaving the grains separate and lightly toasted." },
+      { step: 2, text: "Pour in the 2 beaten large eggs and scramble for about 15 seconds until soft curds just form, then push them to one side of the pan. Cooking the eggs briefly and shoving them aside keeps them barely set and silky, so they do not turn tough while you fry the rice and can be folded back through as tender ribbons at the end." },
+      { step: 3, text: "Add the 2 cups chilled cooked short-grain rice, break up every clump with the edge of your spatula, and toss with the eggs for about 2 minutes until the grains are steaming, glossy, and starting to dance in the pan. Chilled rice is drier and firmer than fresh, so it fries into distinct grains rather than mashing into a sticky mass." },
+      { step: 4, text: "Stir in the 1/4 cup diced roasted green chiles and 1/2 cup thawed shelled edamame and cook for about 2 minutes until everything sizzles and heats through. The chiles bring earthy, sweet Hatch heat while the edamame add little pops of firm, fresh texture that keep the bowl from feeling heavy and one-dimensional." },
+      { step: 5, text: "Drizzle the 2 tbsp soy sauce and 1 tsp sesame oil down the hot sides of the wok rather than onto the rice, then toss everything for about a minute until glossy and evenly coated. Hitting the hot metal caramelizes the soy and burns off its raw edge, adding a smoky depth, while the sesame oil laces the finished rice with nutty aroma right before serving." }
     ],
     chefNotes: "Pouring the soy sauce down the hot sides of the wok rather than directly on the rice burns off the raw bite of the sauce and adds a smoky flavor.",
     pairing: "Cold horchata",
@@ -491,12 +491,12 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "salsa verde" }
     ],
     method: [
-      { step: 1, text: "Whisk the 3 large eggs with the 1 tsp soy sauce and 1 tsp mirin until the mixture is smooth and evenly combined." },
-      { step: 2, text: "Heat an 8-inch square nonstick pan over medium-low heat, add the 3 large eggs, and cook for 3 minutes until mostly set." },
-      { step: 3, text: "Fold the cooked 3 large eggs into a thick omelet, cook 1 minute more until firm, then cut the omelet in half." },
-      { step: 4, text: "Slice the 2 bolillo rolls horizontally and toast them cut-side down on a dry griddle over medium heat for 2 minutes until warm." },
-      { step: 5, text: "Spread the 2 tbsp refried beans evenly over the bottom halves of the 2 toasted bolillo rolls, covering each cut surface." },
-      { step: 6, text: "Place half of the omelet on each roll, spoon the 2 tbsp salsa verde over both portions, and close the 2 sandwiches." }
+      { step: 1, text: "Whisk the 3 large eggs with the 1 tsp soy sauce and 1 tsp mirin for about 30 seconds until smooth and evenly colored. The soy adds salt and umami while the mirin lends a faint sweetness and sheen that echoes classic tamagoyaki, giving these eggs a rounder, more savory-sweet flavor than a plain omelet would carry into the sandwich." },
+      { step: 2, text: "Set an 8-inch square nonstick pan over medium-low heat, pour in the egg mixture, and let it sit undisturbed for about 3 minutes until the bottom sets and the top is just barely wet. Gentle heat keeps the omelet tender and pale rather than browned and rubbery, which matters because it is the soft, custardy heart of the torta." },
+      { step: 3, text: "Fold the omelet in thirds and cook 1 minute more until firm enough to hold its shape, then slide it out and cut it in half. Folding builds a thick, layered slab that stacks neatly inside the roll instead of a thin flat sheet that would slide out, and the extra minute sets the interior so it will not weep into the bread." },
+      { step: 4, text: "Split the 2 bolillo rolls horizontally and toast them cut-side down on a dry griddle over medium heat for about 2 minutes until warm and lightly crisped. Toasting the crumb creates a moisture barrier so the beans and salsa do not turn the soft roll soggy, and the faint crunch contrasts nicely with the pillowy egg inside." },
+      { step: 5, text: "Spread the 2 tbsp refried beans evenly across the bottom halves, reaching to the edges so every bite is anchored. The beans act as both a savory layer and glue that holds the fillings in place, and pressing them right to the crust keeps the omelet from sliding when you pick up the assembled sandwich." },
+      { step: 6, text: "Lay half the folded omelet on each roll, warm the 2 corn tamales and tuck one onto each sandwich for a soft, masa-rich layer, then spoon the 2 tbsp salsa verde over the top and close the lids. Press gently so everything compresses into one cohesive torta, and serve right away while the tamal and eggs are still hot." }
     ],
     chefNotes: "A true torta de tamal is intensely starchy. The sweet, juicy tamagoyaki provides essential moisture so you don't need a gallon of water to eat it.",
     pairing: "Hot chocolate or Champurrado",
@@ -530,11 +530,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "furikake" }
     ],
     method: [
-      { step: 1, text: "Peel and roughly chop the 4 hard-boiled eggs, keeping several pieces about ½ inch wide for a chunky texture." },
-      { step: 2, text: "Mash the chopped 4 hard-boiled eggs in a bowl for 1 minute until creamy in places while retaining visible chunks." },
-      { step: 3, text: "Fold the 1 tbsp chopped pickled jalapeños into the 4 mashed hard-boiled eggs until the pieces are evenly distributed." },
-      { step: 4, text: "Sprinkle the 1 tsp furikake over the egg mixture and fold gently for 15 seconds without crushing the remaining egg pieces." },
-      { step: 5, text: "Divide the finished mixture among serving dishes and serve the 4-egg salad immediately, while the texture remains moist and distinct." }
+      { step: 1, text: "Peel the 4 hard-boiled eggs and separate the yolks from the whites into a bowl. Mash the yolks smooth first, then roughly chop the whites into rough half-inch pieces and add them back. Treating yolks and whites separately gives you a creamy base studded with distinct tender chunks, the hallmark texture of a Japanese konbini egg salad rather than a uniform paste." },
+      { step: 2, text: "Fold the 3 tbsp Japanese mayonnaise and 1 tsp soy sauce into the eggs, stirring for about a minute until the mixture is rich and creamy but still holds visible pieces of white. Kewpie-style mayo is used for its yolk-heavy tang and umami; the soy deepens the savoriness so the salad tastes seasoned all the way through rather than flat." },
+      { step: 3, text: "Fold in the 1 tbsp chopped pickled jalapeños, distributing them evenly so no single bite is overwhelmed. Adding them last keeps their bright, vinegary crunch intact against the soft egg, and the pickled heat cuts the richness of the mayo, giving the salad a lively lift that plain jalapeño would not provide." },
+      { step: 4, text: "Sprinkle the 1 tsp furikake over the mixture and fold gently for about 15 seconds, just enough to disperse the toasted sesame and seaweed without crushing the egg pieces. Folding rather than stirring protects the chunky texture, and mixing the furikake in now lets its nori-sesame savoriness season the whole salad, not just the surface." },
+      { step: 5, text: "Pile the egg salad generously onto the 2 crispy corn tostadas, then top each with the 1/4 cup shredded iceberg lettuce for fresh crunch. Serve immediately: the tostada stays shatteringly crisp only briefly against the moist salad, so assembling at the last second is what keeps that essential snap under the creamy egg." }
     ],
     chefNotes: "Iceberg lettuce is crucial here—it acts as a moisture barrier preventing the egg salad from making the tostada soggy, while adding a fresh crunch.",
     pairing: "Agua de Jamaica",
@@ -568,12 +568,12 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "soy sauce" }
     ],
     method: [
-      { step: 1, text: "Cook the 1 cup white rice in a 2-quart saucepan for 20 minutes, following its package directions, until tender and fluffy." },
-      { step: 2, text: "Heat the 1 tbsp olive oil in a 10-inch skillet over medium heat, add the 1 minced garlic clove, and sauté 1 minute until fragrant." },
-      { step: 3, text: "Stir the cooked 1 cup white rice into the skillet and toast for 2 minutes, tossing until hot with lightly crisped grains." },
-      { step: 4, text: "Heat a small pot of water to exactly 160°F (71°C), submerge the 2 large eggs, and hold that temperature for 45 minutes." },
-      { step: 5, text: "Remove the 2 eggs and rest them for 5 minutes, then divide the hot 1 cup rice between deep bowls until steaming." },
-      { step: 6, text: "Crack 1 of the 2 onsen eggs over each bowl of rice and drizzle the 1 tbsp soy sauce over both portions." }
+      { step: 1, text: "Cook the 1 cup white rice with the 2 cups vegetable broth in a 2-quart saucepan, following the package timing, for about 20 minutes until tender and fluffy. Using broth instead of water seasons the rice from within so the finished bowl tastes savory to its core, giving this arroz-con-leche-inspired dish its comforting, deeply flavored foundation." },
+      { step: 2, text: "While the rice cooks, heat the 1 tbsp olive oil in a 10-inch skillet over medium heat, add the finely diced 1/4 onion and minced 1 garlic clove, and saute for about a minute until fragrant and just softened. Cooking them briefly bloom their aromas into the oil without browning, laying a mellow, sweet-savory base before the rice goes in." },
+      { step: 3, text: "Stir the cooked rice into the skillet and toast for about 2 minutes, tossing constantly until the grains are hot and lightly crisped at the edges. This quick fry drives off excess moisture and gives the rice a subtle toasted flavor and a bit of chew, so the bowl has texture rather than being soft and one-note under the soft egg." },
+      { step: 4, text: "Meanwhile, heat a small pot of water to exactly 160F (71C), submerge the 2 very fresh eggs, and hold that temperature steadily for 45 minutes. This precise low-temperature bath is the entire secret of onsen tamago: it sets the whites to a barely-there custard while leaving the yolks thick and glossy, so use a thermometer and keep it steady." },
+      { step: 5, text: "Lift the eggs out and rest them for 5 minutes to settle, then divide the hot toasted rice between two deep bowls while it is still steaming. The short rest lets the delicate whites firm just slightly for easier cracking, and keeping the rice piping hot ensures the egg spills warm over it rather than cooling the bowl." },
+      { step: 6, text: "Carefully crack one onsen egg over each bowl so the silky white and molten yolk pool over the rice, then drizzle the 1 tbsp soy sauce across both portions. The soy seasons and unites the egg and rice, and eating it right away lets the just-warm yolk fold into the grains like a delicate sauce before it sets or cools." }
     ],
     chefNotes: "Temperature control is everything for onsen eggs. If you have an immersion circulator (sous vide), set it to 145°F (63°C) for 1 hour for foolproof results.",
     pairing: "Hot green tea",
@@ -605,11 +605,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "neutral oil" }
     ],
     method: [
-      { step: 1, text: "Heat a 5×7-inch tamagoyaki pan over medium-low heat for 2 minutes, then coat it with the 1 tbsp neutral oil." },
-      { step: 2, text: "Whisk the 4 large eggs in a bowl for 1 minute until completely uniform, smooth, and slightly frothy." },
-      { step: 3, text: "Pour a thin layer of the 4 large eggs into the pan and cook for 30–45 seconds, until the surface is mostly set." },
-      { step: 4, text: "Roll the set egg toward the back, add another thin layer of the 4 large eggs, and roll again when barely set." },
-      { step: 5, text: "Repeat until all the 4 large eggs are used, then rest the roll for 2 minutes before slicing into neat spirals." }
+      { step: 1, text: "Set a 5x7-inch tamagoyaki pan over medium-low heat for about 2 minutes, then wipe it with the 1 tbsp neutral oil using a folded paper towel. Gentle, even heat is essential for tamagoyaki so the thin layers cook through without browning, and a light oil film lets each layer release cleanly as you roll rather than sticking and tearing." },
+      { step: 2, text: "Whisk the 4 large eggs with the 1 tbsp sugar and 1 tsp soy sauce for about a minute until completely uniform, smooth, and lightly frothy. The sugar brings the gentle sweetness that defines tamagoyaki while the soy adds savory depth; whisking thoroughly ensures an even color and a tender, custardy set rather than streaky, uneven layers." },
+      { step: 3, text: "Pour a thin layer of the egg into the pan, tilting to coat evenly, and cook for 30 to 45 seconds until the surface is mostly set but still glossy and tacky on top. Leaving it slightly moist is deliberate: that tackiness is the glue that fuses the next layer to this one, so a fully dry sheet would crack and refuse to bond." },
+      { step: 4, text: "Roll the set sheet toward the back of the pan into a tight log, oil the exposed surface, and pour in another thin layer, lifting the roll so the raw egg flows underneath. Cook until barely set and roll again. Rolling each layer around the last is what builds the striped spiral cross-section that makes a proper tamagoyaki." },
+      { step: 5, text: "Repeat pouring, lifting, and rolling until all the egg is used, brushing a little of the 3 tbsp thick salsa verde between the last couple of layers for a tangy green ribbon. Rest the finished roll for 2 minutes so it firms, then slice into neat spirals; resting keeps the cuts clean and the salsa streak vivid inside each pinwheel." }
     ],
     chefNotes: "The salsa verde must be thick. If it's too watery, it will break the omelet apart as you try to roll it. Simmer your salsa to reduce it if necessary.",
     pairing: "Sparkling apple cider",
@@ -641,11 +641,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "2", unit: "", item: "corn tortillas", note: "warmed" }
     ],
     method: [
-      { step: 1, text: "Heat a 10-inch nonstick skillet over medium heat for 2 minutes before adding the 1/2 cup Mexican chorizo." },
-      { step: 2, text: "Cook the 1/2 cup Mexican chorizo for 5–7 minutes, breaking it apart, until deeply browned and its red fat renders." },
-      { step: 3, text: "Whisk the 4 large eggs in a bowl for 1 minute until the mixture is fully blended and lightly frothy." },
-      { step: 4, text: "Reduce the skillet to low heat, add the 4 large eggs to the 1/2 cup chorizo, and stir for 2–3 minutes." },
-      { step: 5, text: "Cook the 4 large eggs until softly set with glossy curds, then transfer the scramble with the 1/2 cup chorizo to a plate." }
+      { step: 1, text: "Heat a 10-inch nonstick skillet over medium heat for about 2 minutes until warm, then add the 1/2 cup casing-removed Mexican chorizo. Preheating the pan means the chorizo starts rendering immediately on contact rather than sweating slowly, which is what develops its deep, spiced browning instead of a pale, greasy simmer." },
+      { step: 2, text: "Cook the chorizo for 5 to 7 minutes, breaking it into fine crumbles with a spatula, until it is deeply browned and its brick-red fat has fully rendered into the pan. That rendered fat is the flavor base for the entire scramble, so let it darken and crisp at the edges rather than pulling it while it is still soft and pink." },
+      { step: 3, text: "Meanwhile, whisk the 4 large eggs with the 1 tbsp water for about a minute until fully blended and lightly frothy. The splash of water turns to steam as the eggs cook, puffing the curds and keeping them tender; whisking well ensures a uniform pale-yellow scramble with no ropey streaks of unmixed white." },
+      { step: 4, text: "Lower the heat under the chorizo to its gentlest setting, pour in the eggs, and stir slowly and constantly for 2 to 3 minutes, folding the mixture from the edges toward the center. Low heat and gentle folding are what coax the eggs into soft, glossy curds; high heat or aggressive stirring would give you dry, rubbery bits instead." },
+      { step: 5, text: "Pull the pan the moment the eggs are softly set and still glossy, since residual heat keeps cooking them. Spoon the chorizo scramble onto the 2 warmed corn tortillas and shower with the 2 tbsp furikake. The toasted sesame and nori in the furikake add a savory, oceanic crunch that plays beautifully against the smoky, fatty chorizo eggs." }
     ],
     chefNotes: "Do not add salt to the eggs. The chorizo and the furikake both contain ample sodium, making the dish perfectly seasoned on its own.",
     pairing: "Cold Mexican lager",
@@ -678,12 +678,12 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1/2", unit: "cup", item: "spinach", note: "wilted" }
     ],
     method: [
-      { step: 1, text: "Separate 1 yolk from the 3 large eggs, reserving the 2 whole eggs for poaching in the next step." },
-      { step: 2, text: "Blend the 1 egg yolk, 1 tbsp white miso paste, and a pinch of grapefruit zest for 30 seconds until smooth." },
-      { step: 3, text: "Blend on low while slowly streaming in the 1/2 cup hot melted butter, then blend 1 minute until thick and glossy." },
-      { step: 4, text: "Bring water to a gentle simmer in a deep 3-quart pot, slide in the 2 whole eggs, and poach for 3–4 minutes." },
-      { step: 5, text: "Remove the 2 poached eggs when their whites are set and yolks remain runny, then drain them briefly on a slotted spoon." },
-      { step: 6, text: "Toast the 2 slices English muffin or sourdough in a dry skillet over medium-low heat for 2 minutes per side, then top with the 2 eggs and warm sauce." }
+      { step: 1, text: "Separate 1 yolk from the 3 large eggs into a blender jar and set the 2 whole eggs aside for poaching. Using only the yolk for the sauce is what makes hollandaise rich and emulsified; the whites would thin it and prevent the glossy, spoon-coating body you want, so keep them out of the sauce entirely." },
+      { step: 2, text: "Add the 1 tbsp white miso paste and the 1 tbsp lime juice mixed with grapefruit zest to the yolk and blend for about 30 seconds until smooth and pale. Blending first lets the acid and salty-savory miso fully dissolve into the yolk so there are no gritty specks, and the miso replaces the usual salt with a deep, fermented umami backbone." },
+      { step: 3, text: "With the blender running on low, stream in the 1/2 cup hot melted butter in a slow, thin thread, then blend for a full minute until the sauce turns thick, pale, and glossy. Adding the butter gradually while it is hot is what cooks and emulsifies the yolk into a stable hollandaise; pouring too fast breaks the sauce into a greasy split mess." },
+      { step: 4, text: "Bring water to a bare, shivering simmer in a deep 3-quart pot, swirl to create a gentle vortex, and slip in the 2 whole eggs one at a time to poach for 3 to 4 minutes. The lazy simmer and swirl wrap the whites neatly around the yolks; a hard boil would blast them into ragged threads, so keep the bubbles soft." },
+      { step: 5, text: "Lift each poached egg out with a slotted spoon and rest it briefly to drain, checking that the whites are set while the yolks still wobble. Draining off the poaching water is important because that trapped liquid would otherwise pool on the muffin and dilute the sauce, leaving the whole plate watery instead of luxurious." },
+      { step: 6, text: "Toast the 2 slices of English muffin or sourdough in a dry skillet over medium-low heat for about 2 minutes per side until golden, then pile on the 1/2 cup wilted spinach, set a poached egg on each, and spoon the miso hollandaise over the top. Serve at once so the yolk and warm sauce cascade together the moment you cut in." }
     ],
     chefNotes: "If the blender hollandaise gets too thick while sitting, whisk in a teaspoon of warm water before serving to loosen it.",
     pairing: "Dry sparkling wine or Champagne",
@@ -753,12 +753,12 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1/2", unit: "cup", item: "fresh berries", note: "raspberries or strawberries" }
     ],
     method: [
-      { step: 1, text: "Heat a dry 10-inch skillet over low heat, about 250°F (120°C), without adding anything besides the 1 cup rolled oats." },
-      { step: 2, text: "Toast the 1 cup rolled oats for 3–5 minutes, stirring often until fragrant, dry, and lightly golden around the edges." },
-      { step: 3, text: "Remove the skillet from the heat and cool the 1 cup rolled oats for 5 minutes until completely dry and no longer warm." },
-      { step: 4, text: "Combine the cooled 1 cup rolled oats and 1 tsp culinary grade matcha powder in an airtight container until the powder is evenly distributed." },
-      { step: 5, text: "Seal the container and refrigerate the 1 cup rolled oats with the 1 tsp culinary grade matcha powder for at least 6 hours." },
-      { step: 6, text: "Stir the chilled 1 cup rolled oats and 1 tsp culinary grade matcha powder before serving, noting that the listed ingredients remain dry." }
+      { step: 1, text: "Whisk the 1 tsp culinary-grade matcha powder with a splash of the 1.5 cups horchata in a small bowl until it forms a smooth, lump-free paste. Matcha clumps stubbornly if dumped straight into liquid, so making a slurry first guarantees the green tea flavor and color disperse evenly instead of leaving bitter powdery pockets throughout the oats." },
+      { step: 2, text: "Combine the 1 cup rolled oats and 2 tbsp chia seeds in an airtight jar or container, stirring so the chia is dispersed rather than settled in one corner. Distributing the chia now is what lets it gel uniformly overnight, thickening the whole mixture into a spoonable pudding-like texture instead of a slimy clump at the bottom." },
+      { step: 3, text: "Pour in the matcha slurry, the rest of the 1.5 cups horchata, and the 1 tbsp agave syrup, then stir vigorously for about 30 seconds until everything is fully combined and the liquid is an even jade color. Stirring well now prevents the chia from clumping and ensures the cinnamon-rice sweetness of the horchata soaks into every oat." },
+      { step: 4, text: "Seal the container and refrigerate for at least 6 hours or overnight so the oats and chia can slowly hydrate and swell. This cold soak is what softens the oats to a creamy, no-cook tenderness and lets the chia fully gel; rushing it leaves the oats chalky and the mixture soupy rather than thick and luscious." },
+      { step: 5, text: "In the morning, stir the oats well to loosen them, adding a splash more horchata if they have set too firmly for your taste. Overnight the chia thickens the mix considerably, so a final stir redistributes the moisture and restores a smooth, scoopable consistency before serving." },
+      { step: 6, text: "Spoon the chilled oats into bowls and crown each with the 1/2 cup fresh berries. The raspberries or strawberries bring a tart, juicy pop that cuts through the sweet, creamy horchata base and the earthy matcha, and adding them at the last moment keeps them bright and fresh rather than bleeding color into the oats." }
     ],
     chefNotes: "Whisking the matcha separately first is non-negotiable; otherwise, you will end up with bitter, chalky green lumps hidden in your oats.",
     pairing: "Sparkling water",
@@ -828,11 +828,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "cilantro", note: "chopped" }
     ],
     method: [
-      { step: 1, text: "Combine the 1 cup rinsed jasmine rice and 8 cups vegetable or chicken broth in a large heavy-bottomed pot, then bring to a boil over high heat." },
-      { step: 2, text: "Reduce the heat to the lowest setting, cover the pot, and leave the lid slightly cracked while the 1 cup rice cooks in the 8 cups broth." },
-      { step: 3, text: "Simmer the 1 cup jasmine rice in the 8 cups broth for about 1 hour, stirring occasionally, until the grains burst and the porridge is thick and silky." },
-      { step: 4, text: "Ladle the hot congee from the pot into wide, shallow bowls, keeping the 1/2 cup salsa roja and toppings ready for serving." },
-      { step: 5, text: "Top the bowls with the 1/2 cup smooth salsa roja, 1/4 cup crumbled cotija cheese, and 2 tbsp chopped cilantro before serving." }
+      { step: 1, text: "Combine the 1 cup rinsed jasmine rice and 8 cups vegetable or chicken broth in a large heavy-bottomed pot, tuck in the smashed 1-inch piece of ginger, and bring to a boil over high heat. Rinsing the rice first strips surface starch so the congee turns velvety rather than gluey, and the smashed ginger perfumes the broth as it cooks." },
+      { step: 2, text: "Drop the heat to its lowest setting, cover, and leave the lid slightly cracked so steam can escape. The cracked lid is a small but crucial detail: it keeps the pot from boiling over and lets just enough evaporation happen to concentrate the broth while the rice slowly breaks down into porridge over the long, gentle simmer." },
+      { step: 3, text: "Simmer for about an hour, stirring every 10 minutes or so and scraping the bottom to prevent sticking, until the grains burst open and dissolve into a thick, creamy, spoon-coating porridge. Regular stirring releases the rice starch that thickens the congee; if you neglect it, the rice scorches on the bottom and the texture stays thin and watery." },
+      { step: 4, text: "Fish out and discard the ginger, then ladle the hot congee into wide, shallow bowls, keeping it loose enough to slowly settle level. Wide bowls give you maximum surface for the toppings and let the porridge cool to a comfortable eating temperature quickly, while a shallow pool shows off the vivid red salsa you are about to add." },
+      { step: 5, text: "Swirl the 1/2 cup smooth salsa roja over each bowl, then scatter the 1/4 cup crumbled cotija cheese and 2 tbsp chopped cilantro across the top. The tangy, chile-warm salsa cuts the mild, starchy porridge, the salty cotija melts slightly into the heat, and the fresh cilantro lifts it all; stir it together at the table just before eating." }
     ],
     chefNotes: "The ratio for perfect congee is typically 1 part rice to 8 parts liquid. Stirring vigorously during the last 15 minutes of cooking helps release the starches for a creamier texture.",
     pairing: "Hot jasmine tea",
@@ -903,11 +903,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1/4", unit: "cup", item: "toasted pumpkin seeds" }
     ],
     method: [
-      { step: 1, text: "Combine the 1/2 cup rinsed quinoa and 2 cups almond milk or oat milk in a medium saucepan over medium-high heat." },
-      { step: 2, text: "Bring the 1/2 cup quinoa and 2 cups milk to a boil, then reduce the heat to low, cover, and cook for 15 minutes." },
-      { step: 3, text: "Uncover the saucepan and check that the 1/2 cup quinoa has burst and absorbed most of the 2 cups milk, leaving a thick, creamy porridge." },
-      { step: 4, text: "Stir the 1 tsp vanilla extract into the hot 1/2 cup quinoa porridge until evenly distributed and fragrant." },
-      { step: 5, text: "Spoon the porridge into bowls and top each serving with the 1/4 cup toasted pumpkin seeds for a crisp finish." }
+      { step: 1, text: "Combine the 1/2 cup rinsed quinoa, 2 cups almond or oat milk, the 1 cinnamon stick, and the 2 tbsp chopped piloncillo in a medium saucepan over medium-high heat. Adding the cinnamon and piloncillo from the start lets the milk steep in their warm, molasses-rich sweetness as it heats, so the flavor infuses deep into the grain rather than sitting on the surface." },
+      { step: 2, text: "Bring it to a boil, then immediately drop the heat to low, cover, and simmer for about 15 minutes. The full boil kick-starts the cooking, but dropping straight to a low simmer prevents the milk from scorching or foaming over the sides; the covered, gentle heat lets the quinoa swell and absorb the spiced milk without burning on the bottom." },
+      { step: 3, text: "Uncover and check that the quinoa has burst, its little spiral germs unfurled, and it has drunk up most of the milk into a thick, loose porridge. That burst appearance is your visual cue the quinoa is fully tender; if it still looks tight and the mixture is soupy, cover and cook a few minutes more until it thickens to a creamy atole consistency." },
+      { step: 4, text: "Fish out the cinnamon stick and stir the 1 tsp vanilla extract through the hot porridge until fragrant and evenly distributed. Adding the vanilla off the boil preserves its aromatic top notes, which would cook off under high heat, rounding the piloncillo sweetness into the cozy, dessert-like warmth that defines a Mexican atole." },
+      { step: 5, text: "Spoon the porridge into bowls and shower each serving with the 1/4 cup toasted pumpkin seeds. The pepitas add a crucial crisp, nutty crunch against the soft, creamy grain, and toasting them beforehand deepens their flavor; scatter them on right before serving so they stay crackling rather than softening into the warm porridge." }
     ],
     chefNotes: "Rinsing quinoa is mandatory to remove its natural coating of saponins, which can taste soapy and bitter if left intact.",
     pairing: "Hot black coffee",
@@ -1014,11 +1014,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "pinch", item: "wasabi paste", note: "optional" }
     ],
     method: [
-      { step: 1, text: "Place the 1 cup cooked white rice (hot) in the center of a wide, shallow serving bowl." },
-      { step: 2, text: "Warm the 1 cup hot sencha or genmaicha green tea (smooth) in a small saucepan over medium heat for 2 minutes." },
-      { step: 3, text: "Pour the 1 cup hot sencha or genmaicha green tea gently around the rice, creating a shallow broth without flooding the bowl." },
-      { step: 4, text: "Sprinkle the 1 tbsp furikake, if using, evenly over the 1 cup cooked white rice and hot green tea." },
-      { step: 5, text: "Serve the 1 cup cooked white rice with the 1 cup hot green tea immediately, while the rice remains hot and the tea steams." }
+      { step: 1, text: "Mound the 1 cup hot cooked white rice in the center of a wide, shallow bowl. Starting with piping-hot rice matters because the tea you pour over it will inevitably cool a little on contact, and a wide shallow bowl spreads the rice so the broth surrounds it evenly rather than leaving a cold, dense clump in the middle." },
+      { step: 2, text: "Brew or warm the 1 cup sencha or genmaicha in a small saucepan over medium heat for about 2 minutes until steaming but not boiling. Keeping the green tea just below a boil protects its delicate grassy, toasted-rice aroma; a hard boil turns sencha bitter and astringent, which would overpower the subtle savoriness of this brothy bowl." },
+      { step: 3, text: "Stir the 1 tsp soy sauce and optional pinch of wasabi paste into the hot tea, then pour it gently around the base of the rice mound, creating a shallow broth without fully submerging the top. The soy seasons the broth while the wasabi adds a clean sinus-tingling lift; pouring around rather than over keeps the rice from going instantly mushy." },
+      { step: 4, text: "Sprinkle the 1 tbsp furikake generously over the exposed top of the rice. The toasted sesame, salt, and nori flakes are the flavor crown of ochazuke, seasoning each spoonful as it soaks; scattering it on top rather than stirring it in keeps some crunch and lets the aroma bloom in the rising steam of the hot tea." },
+      { step: 5, text: "Serve immediately while the rice is hot and the broth steaming, spooning up rice and tea together in each bite. Ochazuke is meant to be eaten right away: the longer it sits, the softer the rice becomes and the more the fresh green-tea aroma fades, so the first hot, savory, gently spicy spoonfuls are the point." }
     ],
     chefNotes: "The tea should be very hot so it lightly warms the salsa verde as it mixes. Genmaicha (green tea with roasted brown rice) adds a wonderful toasted flavor.",
     pairing: "None required, it is a soup and drink in one",
@@ -1052,11 +1052,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "soy sauce" }
     ],
     method: [
-      { step: 1, text: "Blend the 1 bunch cilantro with stems, 2 cloves garlic, and 2 cups vegetable broth for 60 seconds until smooth and bright green." },
-      { step: 2, text: "Place the 1 cup long-grain white rice (seeded and chopped) in a 2-quart saucepan and pour in the green broth mixture." },
-      { step: 3, text: "Bring the rice mixture to a boil over medium-high heat, then cover and simmer on low for 20 minutes until the broth is absorbed." },
-      { step: 4, text: "Cook the 4 large eggs in a 10-inch nonstick skillet over medium heat until the whites set and the edges become browned and crisp." },
-      { step: 5, text: "Fluff the cooked 1 cup rice with a fork, divide it among bowls, top with the 4 large eggs, and drizzle with 1 tbsp soy sauce." }
+      { step: 1, text: "Blend the 1 bunch cilantro including stems, the 2 garlic cloves, the seeded and chopped 1 poblano pepper, and the 2 cups vegetable broth for about 60 seconds until completely smooth and vivid green. Using the cilantro stems is deliberate, they carry the most concentrated flavor, and blending everything into the broth infuses the rice with color and freshness from the inside." },
+      { step: 2, text: "Add the 1 cup long-grain white rice to a 2-quart saucepan and pour the green broth over it, stirring once to settle the grains evenly. Cooking the rice directly in the herb-poblano broth rather than plain water is what makes arroz verde taste of the garden throughout, staining each grain a pale jade rather than just coloring the surface." },
+      { step: 3, text: "Bring the mixture to a boil over medium-high heat, then cover, drop to the lowest simmer, and cook for 20 minutes until the liquid is fully absorbed and the rice is tender. Resist lifting the lid: the trapped steam is what cooks the grains evenly, and peeking releases it, leaving you with undercooked rice and a scorched bottom." },
+      { step: 4, text: "While the rice steams, fry the 4 large eggs in a 10-inch nonstick skillet over medium heat, cooking undisturbed until the whites set and the edges turn lacy and golden while the yolks stay runny. Leaving them alone keeps the delicate whites intact and the frilly edges crisp, and the molten yolk becomes the sauce that ties the bowl together." },
+      { step: 5, text: "Fluff the rice with a fork to separate the grains and release steam, divide it among bowls, and top each with a fried egg. Drizzle the 1 tbsp soy sauce over the top. Fluffing keeps the arroz verde light rather than gluey, and breaking the runny yolk over the herbaceous rice, laced with savory soy, makes every bite lush and cohesive." }
     ],
     chefNotes: "Including the cilantro stems in the puree is crucial—they contain more flavor and moisture than the leaves themselves.",
     pairing: "Grapefruit juice",
@@ -1088,11 +1088,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1/4", unit: "cup", item: "walnuts", note: "toasted and chopped" }
     ],
     method: [
-      { step: 1, text: "Toast the 1/2 cup roasted buckwheat groats in a dry 2-quart saucepan over medium heat for 2 minutes until deeply fragrant." },
-      { step: 2, text: "Add the 2 cups whole milk or almond milk to the toasted groats and bring the mixture to a gentle simmer without boiling over." },
-      { step: 3, text: "Cover the saucepan, reduce the heat to low, and cook for 15–20 minutes until the 1/2 cup groats are tender but slightly chewy." },
-      { step: 4, text: "Spoon the cooked 1/2 cup roasted buckwheat groats and 2 cups milk into serving bowls while the porridge is hot and thick." },
-      { step: 5, text: "Top each bowl with the 1/4 cup toasted and chopped walnuts, distributing them evenly over the thick, steaming porridge." }
+      { step: 1, text: "Toast the 1/2 cup roasted buckwheat groats in a dry 2-quart saucepan over medium heat for about 2 minutes, shaking the pan, until they smell distinctly nutty and toasty. Even though kasha is pre-roasted, this quick re-toasting in a dry pan wakes up its earthy aroma and adds a deeper flavor that carries all the way through the finished porridge." },
+      { step: 2, text: "Pour in the 2 cups whole or almond milk and add the 1 pinch salt, then bring to a gentle simmer while stirring. Adding the milk to the hot toasted groats lets them begin absorbing liquid immediately, and the pinch of salt is not optional; it sharpens the buckwheat's nuttiness and keeps the porridge from tasting flat and one-dimensional." },
+      { step: 3, text: "Cover, drop the heat to low, and cook for 15 to 20 minutes, stirring occasionally, until the groats are tender and the milk has thickened into a creamy porridge. The low, covered simmer is what softens the tough groats evenly without scorching the milk; stir now and then to keep the bottom from catching and to coax out a smooth texture." },
+      { step: 4, text: "Spoon the hot porridge into bowls while it is still loose and steaming, since buckwheat continues to drink up liquid and firms considerably as it sits. Serving it slightly looser than you think you want means it settles to a perfect creamy consistency by the time it reaches the table rather than turning stiff and pasty." },
+      { step: 5, text: "Drizzle the 3 tbsp cajeta over each bowl in generous ribbons and scatter the 1/4 cup toasted chopped walnuts across the top. The goat-milk caramel melts into the hot porridge with a tangy, deep sweetness while the walnuts add crucial crunch; add them at the last moment so they stay crisp against the soft, warm buckwheat." }
     ],
     chefNotes: "Cajeta has a deeper, tangier flavor than dulce de leche because it is made from goat's milk. It pairs beautifully with the earthy buckwheat.",
     pairing: "Café de olla",
@@ -1125,11 +1125,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "maple syrup" }
     ],
     method: [
-      { step: 1, text: "Preheat a toaster oven or standard oven to 400°F (200°C), and line a small baking sheet with foil." },
-      { step: 2, text: "Spread the 1 cup rolled oats (hard, dry rice cakes) evenly across the foil-lined baking sheet without overlapping pieces." },
-      { step: 3, text: "Bake the 1 cup rolled oats at 400°F (200°C) for 5–8 minutes until crisp, lightly golden, and fragrant." },
-      { step: 4, text: "Remove the toasted 1 cup rolled oats from the oven and let them cool on the baking sheet for 2 minutes until firm." },
-      { step: 5, text: "Transfer the crisp 1 cup rolled oats to a serving bowl and drizzle the 1 tbsp maple syrup evenly over the top." }
+      { step: 1, text: "Combine the 1 cup rolled oats and 2 cups milk in a saucepan with the 1 tsp cinnamon and 1 tbsp brown sugar, then bring to a gentle simmer over medium heat. Cooking the oats in milk rather than water makes them creamy and rich, and adding the cinnamon and sugar early lets their warmth infuse the whole pot as the oats swell and soften." },
+      { step: 2, text: "Simmer the oatmeal for about 5 minutes, stirring often, until the oats are tender and the mixture is thick and creamy. Regular stirring releases the oats' starch to thicken the porridge and stops it catching on the bottom; you want it loose enough to still flow, since it will keep setting as it cools while you crisp the mochi." },
+      { step: 3, text: "Meanwhile, toast the 2 blocks of kirimochi in a toaster oven or dry skillet over medium heat, turning occasionally, for about 5 minutes until they puff up, blister, and turn crisp and golden outside while going molten and stretchy within. That transformation from hard, dry rice cake to chewy, gooey pillow is the whole point of this bowl." },
+      { step: 4, text: "Spoon the hot oatmeal into a serving bowl and nestle the toasted mochi on top while it is still soft and stretchy. Placing the mochi on the warm oatmeal keeps it pliable and gooey rather than seizing up hard as it cools, so it stays satisfyingly chewy when you pull it apart into the creamy oats." },
+      { step: 5, text: "Drizzle the 1 tbsp maple syrup over the mochi and oatmeal and serve immediately. The syrup pools into the crisp-chewy mochi and sweetens the cinnamon oats, and eating it right away is essential because the mochi is only irresistibly stretchy for a few minutes before it stiffens back into a firm, chewy block." }
     ],
     chefNotes: "Kirimochi is available at all Asian grocery stores. It is rock hard when raw but transforms into a stretchy, marshmallow-like texture when baked.",
     pairing: "Hot green tea",
@@ -1162,11 +1162,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1/4", unit: "cup", item: "scallions", note: "finely chopped" }
     ],
     method: [
-      { step: 1, text: "Rinse the 1/2 cup mixed grains under cold running water until the water runs mostly clear, then drain thoroughly." },
-      { step: 2, text: "Combine the rinsed 1/2 cup mixed grains and 5 cups vegetable broth in a heavy 4-quart pot over high heat." },
-      { step: 3, text: "Bring the 1/2 cup mixed grains and 5 cups vegetable broth to a boil, then cover and reduce to the lowest simmer." },
-      { step: 4, text: "Cook the 1/2 cup mixed grains in the 5 cups vegetable broth for 45 minutes, stirring occasionally, until split and creamy." },
-      { step: 5, text: "Stir the 2 tbsp soy sauce into the hot grain porridge, then serve immediately when the broth is thick and the grains are tender." }
+      { step: 1, text: "Rinse the 1/2 cup mixed grains under cold water until it runs clear to wash off surface starch and any dust, then drain well. Rinsing keeps the porridge from turning gluey and gummy, letting each grain break down into a creamy suspension instead of a pasty clump, which is the difference between a silky congee and a stodgy one." },
+      { step: 2, text: "Combine the rinsed grains and 5 cups vegetable broth in a heavy 4-quart pot over high heat. A wide, heavy pot distributes the heat evenly so the grains at the bottom do not scorch during the long cook, and using broth rather than water builds savory depth right into the base of the porridge from the very first minute." },
+      { step: 3, text: "Bring it to a rolling boil, then cover and drop to the lowest possible simmer. The initial hard boil jump-starts the grains breaking open, but immediately backing off to a bare simmer is crucial; a continued boil would slam the pot and cause it to foam over and scorch, while the gentle heat coaxes out a creamy texture." },
+      { step: 4, text: "Cook for about 45 minutes, stirring occasionally and scraping the bottom, until the grains split open and dissolve into a thick, spoon-coating porridge. The regular stirring releases the starch that thickens the congee and prevents sticking; you will know it is ready when a spoon dragged across leaves a slowly-closing trench." },
+      { step: 5, text: "Whisk the 2 large eggs and stir them into the hot porridge in a slow stream while stirring constantly, then season with the 2 tbsp soy sauce and serve immediately. Streaming the eggs into the barely-simmering congee sets them into silky ribbons that enrich the whole pot, and the soy adds the savory backbone; serve at once while thick and steaming." }
     ],
     chefNotes: "Different grains cook at different rates; a pre-mixed blend from the store works perfectly, or ensure your custom mix features grains of roughly similar size.",
     pairing: "Roasted dandelion tea",
@@ -1198,11 +1198,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "vanilla extract" }
     ],
     method: [
-      { step: 1, text: "Whisk the 3 tbsp masa harina into the 2.5 cups almond milk or oat milk in a cold 2-quart saucepan until smooth." },
-      { step: 2, text: "Set the saucepan containing the 3 tbsp masa harina and 2.5 cups milk over medium heat and whisk constantly as it warms." },
-      { step: 3, text: "Cook the 3 tbsp masa harina mixture with the 2.5 cups milk for 5–8 minutes, until thickened and able to coat a spoon." },
-      { step: 4, text: "Remove the saucepan from heat and whisk in the 1 tbsp culinary grade matcha powder until completely smooth and bright green." },
-      { step: 5, text: "Whisk in the 2 tbsp agave nectar or sugar and 1 tsp vanilla extract, then pour the hot atole into mugs immediately." }
+      { step: 1, text: "Whisk the 3 tbsp masa harina into the 2.5 cups almond or oat milk in a cold 2-quart saucepan until completely smooth with no lumps. Starting in cold liquid before any heat is applied is essential: masa harina clumps instantly in hot milk, so dispersing it while everything is cool guarantees a silky atole rather than one riddled with gritty knots." },
+      { step: 2, text: "Set the saucepan over medium heat and whisk constantly as the mixture warms and gradually thickens. Nonstop whisking is not optional here; masa settles and scorches on the bottom the moment you stop moving it, and steady agitation is what keeps the starch suspended so it thickens into a smooth, even body instead of a lumpy, burnt one." },
+      { step: 3, text: "Continue cooking and whisking for 5 to 8 minutes until the atole thickens enough to coat the back of a spoon and loses its raw, floury taste. Cooking out the masa fully is what develops its toasty corn flavor and creamy texture; pull it too soon and it tastes chalky and raw, too long and it turns pasty and heavy." },
+      { step: 4, text: "Take the pan off the heat and whisk in the 1 tbsp culinary-grade matcha powder until completely smooth and evenly green. Adding the matcha off direct heat keeps it from turning bitter and clumpy, and whisking it into the already-hot base blooms its grassy aroma and disperses the fine powder without leaving dusty pockets." },
+      { step: 5, text: "Whisk in the 2 tbsp agave nectar and 1 tsp vanilla extract, then pour the hot atole straight into mugs and serve. Adding the sweetener and vanilla at the end preserves their bright top notes, balancing the earthy matcha and toasty masa; serve immediately while thick and steaming, as atole thickens further and skins over as it cools." }
     ],
     chefNotes: "You must use masa harina, not regular cornmeal or cornstarch. Masa has been nixtamalized, which gives it that distinct, toasted tortilla flavor essential to atole.",
     pairing: "Conchas or pan dulce",
@@ -1237,13 +1237,13 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "pecans", note: "crushed" }
     ],
     method: [
-      { step: 1, text: "Separate the 2 large eggs, placing the cold whites in a spotless bowl and the yolks in a second bowl for mixing." },
-      { step: 2, text: "Whisk the yolks from the 2 large eggs with the 1.5 tbsp warmed whole milk until the mixture is smooth and pale." },
-      { step: 3, text: "Beat the cold whites from the 2 large eggs until frothy, then continue until they form firm, glossy peaks." },
-      { step: 4, text: "Fold the whipped whites from the 2 large eggs into the yolk mixture in two additions, keeping the batter light and airy." },
-      { step: 5, text: "Heat a dry 10-inch nonstick skillet over the lowest heat, spoon in the batter from the 2 large eggs, and cook 6–7 minutes." },
-      { step: 6, text: "Flip the pancakes from the 2 large eggs carefully and cook 5 minutes more, until set, tall, and lightly golden underneath." },
-      { step: 7, text: "Serve the cooked pancakes with the 2 tbsp crushed pecans, arranging them on top while the pancakes remain hot and tender." }
+      { step: 1, text: "Separate the 2 large eggs, placing the cold whites in a spotlessly clean, grease-free bowl and the yolks in a second bowl. A single trace of fat or yolk in the whites will keep them from whipping to full volume, and that airy meringue is the entire structural secret behind these towering, jiggly souffle pancakes, so keep the two strictly apart." },
+      { step: 2, text: "Whisk the yolks with the 1.5 tbsp whole milk and 1/4 tsp vanilla until smooth and pale, then sift in the 1/4 cup cake flour and 1/2 tsp baking powder and stir just until combined. Cake flour keeps the crumb tender and low in gluten, while mixing only until smooth avoids toughening the batter, which needs to stay delicate to rise sky-high." },
+      { step: 3, text: "Beat the cold whites until frothy, then rain in the 2 tbsp granulated sugar a little at a time and keep whipping until they hold firm, glossy peaks that curl over slightly at the tip. Adding the sugar gradually builds a stable, shiny meringue; this is the balloon of air that puffs the pancakes tall, so do not rush to stiff-and-dry." },
+      { step: 4, text: "Fold the meringue into the yolk batter in two additions, cutting down and lifting up gently rather than stirring, until just combined with no white streaks. Folding in stages and with a light hand preserves the trapped air; aggressive mixing deflates the meringue and gives you flat, dense pancakes instead of the signature wobbly cloud." },
+      { step: 5, text: "Heat a dry nonstick skillet over the lowest possible heat, mound tall scoops of batter into rounds, add a teaspoon of water to the pan, and cover. Cook about 5 minutes until the bottoms are pale gold and set. Low heat and trapped steam gently cook the thick batter through without scorching the outside before the inside sets." },
+      { step: 6, text: "Slide a wide spatula fully under each pancake and flip carefully, then cover and cook 5 minutes more until they are set, tall, and lightly golden on both sides. These pancakes are fragile and top-heavy, so a confident, fully-supported flip is critical; hesitating or using a small spatula will collapse their delicate structure." },
+      { step: 7, text: "Stack the pancakes on plates, drizzle generously with the 3 tbsp warmed cajeta, and scatter the 2 tbsp crushed pecans over the top while they are still hot. The caramel-like cajeta seeps into the airy crumb and the pecans add toasty crunch; serve at once, because souffle pancakes begin to deflate within a couple of minutes of leaving the pan." }
     ],
     chefNotes: "The key to the height is stiff egg whites and the steaming method. The pan must have a lid to trap steam, allowing the center to cook before the bottom burns.",
     pairing: "Black espresso",
@@ -1277,11 +1277,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "butter", note: "for frying" }
     ],
     method: [
-      { step: 1, text: "Crack the 2 eggs into a shallow 9-inch dish and whisk for 30 seconds until completely blended." },
-      { step: 2, text: "Arrange the 4 slices thick milk bread beside the dish, then heat a 10-inch nonstick skillet over medium-low heat." },
-      { step: 3, text: "Dip each of the 4 slices thick milk bread into the 2 eggs for 10 seconds per side, coating them evenly." },
-      { step: 4, text: "Cook the 4 egg-coated bread slices in the skillet in batches for 3–4 minutes per side until deeply golden and firm." },
-      { step: 5, text: "Transfer the 4 cooked slices to plates and serve immediately while the centers remain tender and the surfaces are crisp." }
+      { step: 1, text: "Whisk the 2 eggs with the 1/2 cup heavy cream and 1 tsp vanilla extract in a shallow 9-inch dish for about 30 seconds until completely blended and smooth. The heavy cream enriches the custard so it soaks in luxuriously and fries up with a soft, custardy center; a lean egg-and-water mix would leave the interior dry and eggy instead." },
+      { step: 2, text: "Stir together the 1/4 cup granulated sugar and 1 tbsp ground cinnamon in a separate wide plate and set it beside the stove, then heat a 10-inch nonstick skillet over medium-low heat and melt the 2 tbsp butter until it foams. Having the cinnamon-sugar ready means you can coat the toast the instant it comes off the heat while it is still tacky." },
+      { step: 3, text: "Dip each of the 4 slices of thick milk bread into the custard for about 10 seconds per side, letting it drink in the liquid without falling apart. Sturdy brioche or shokupan is used because it soaks up the rich custard while holding its shape; a thin or stale slice would either stay dry or disintegrate into mush in the pan." },
+      { step: 4, text: "Fry the soaked slices in the foaming butter in batches without crowding for 3 to 4 minutes per side until deeply golden and crisp on the surface but still soft within. Medium-low heat is key: it gives the custard time to set through the center before the outside burns, producing that even, caramelized churro-like crust." },
+      { step: 5, text: "Transfer each hot slice straight into the cinnamon-sugar and press to coat both sides generously, then serve immediately. Dredging while the butter-crisped surface is still hot and slightly damp is what makes the cinnamon-sugar cling in a churro-like shell; wait too long and it slides right off the cooling toast, leaving it bare." }
     ],
     chefNotes: "The bread must go directly from the hot buttered pan to the cinnamon sugar. If it cools even slightly, the sugar will not adhere.",
     pairing: "Hot chocolate or café de olla",
@@ -1317,11 +1317,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "lime juice" }
     ],
     method: [
-      { step: 1, text: "Heat a 10-inch dry skillet over medium-low heat, about 300°F (150°C), for 2 minutes before adding the flour." },
-      { step: 2, text: "Add the 1.5 cups all-purpose flour and toast for 5 minutes, stirring constantly until pale golden and nutty-smelling." },
-      { step: 3, text: "Stir the 1 tbsp fresh mint into the toasted 1.5 cups flour and cook for 1 minute until the mint smells fragrant." },
-      { step: 4, text: "Remove the skillet from the heat, sprinkle the 1 tsp lime juice over the flour mixture, and stir for 30 seconds." },
-      { step: 5, text: "Return the mixture to medium-low heat and cook for 2 minutes, stirring until the 1.5 cups flour mixture is dry." }
+      { step: 1, text: "Whisk together the 1.5 cups all-purpose flour, 1.5 tbsp culinary matcha powder, and 2 tsp baking powder in a large bowl until the green powder is evenly streaked through with no clumps. Sifting the matcha with the dry ingredients disperses it uniformly, so the pancakes bake up an even jade color and no one bites into a bitter concentrated pocket of tea." },
+      { step: 2, text: "In a separate bowl whisk the 1.25 cups whole milk, 1 large egg, and 2 tbsp melted butter, then pour the wet into the dry and stir just until barely combined with a few lumps remaining. Overmixing develops gluten and turns pancakes tough and flat; leaving the batter lumpy keeps them tender and lets the baking powder lift them tall and fluffy." },
+      { step: 3, text: "Make the salsa by tossing the 1 cup finely diced strawberries with the 1 tbsp minced fresh mint and 1 tsp lime juice, then let it sit while you cook. Resting macerates the berries so they release a little bright syrup, and the lime and mint turn plain fruit into a fresh, tangy salsa that cuts the richness of the pancakes." },
+      { step: 4, text: "Heat a nonstick griddle or skillet over medium heat and ladle on the batter, cooking until bubbles form and pop across the surface and the edges look dry and set, about 2 minutes. Those popping bubbles are your cue the underside is golden and it is ready to flip; flipping too early tears the delicate, barely-set pancake." },
+      { step: 5, text: "Flip and cook about 1 to 2 minutes more until the second side is golden and the center springs back when pressed. Stack the warm matcha pancakes on plates and spoon the strawberry salsa generously over the top; the juicy, minty berries against the earthy green pancakes make each bite bright, fresh, and balanced, so serve right away while hot." }
     ],
     chefNotes: "Culinary grade matcha is perfect here; save the expensive ceremonial grade for drinking. Do not overmix the batter, or the pancakes will be rubbery.",
     pairing: "Sparkling water",
@@ -1356,13 +1356,13 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "maple syrup" }
     ],
     method: [
-      { step: 1, text: "Mash the 4 tbsp softened butter, 1 tbsp white miso paste, and 2 tbsp maple syrup until smooth, then set aside." },
-      { step: 2, text: "Place the 2 cups all-purpose flour in a large bowl and whisk for 30 seconds to break up any compacted areas." },
-      { step: 3, text: "Pour the 1.75 cups horchata and 1/2 cup neutral oil into the 2 cups flour, whisking until a thick batter forms." },
-      { step: 4, text: "Rest the batter made with 2 cups flour, 1.75 cups horchata, and 1/2 cup oil for 5 minutes until evenly hydrated." },
-      { step: 5, text: "Preheat a waffle iron to medium-high, about 375°F (190°C), until fully hot before adding the rested batter." },
-      { step: 6, text: "Cook the batter from the 2 cups flour for 4–6 minutes until steam subsides and the waffle is crisp and golden." },
-      { step: 7, text: "Serve the hot waffle with the 4 tbsp miso butter mixture, letting it melt before spreading it over the surface." }
+      { step: 1, text: "Mash the 4 tbsp softened butter with the 1 tbsp white miso paste and 2 tbsp maple syrup until completely smooth, then set aside. This compound butter is the signature of the dish: the miso lends a salty, fermented depth that plays against the maple's sweetness, and mashing it while soft ensures it spreads and melts evenly over the hot waffles later." },
+      { step: 2, text: "Whisk the 2 cups all-purpose flour and 1 tbsp baking powder in a large bowl for about 30 seconds to break up any lumps and aerate it. Distributing the leavening thoroughly through the flour now is what gives the waffles an even, all-over rise; pockets of clumped baking powder would leave some spots dense and others bitter and soapy." },
+      { step: 3, text: "Separate the 2 large eggs, whisk the yolks into the 1.75 cups horchata and 1/2 cup neutral oil, and stir that into the flour until just combined. Using horchata as the liquid infuses the batter with cinnamon-rice sweetness, and mixing only until barely blended keeps the gluten relaxed so the waffles stay tender rather than tough." },
+      { step: 4, text: "Beat the 2 egg whites to soft peaks and gently fold them into the batter, then rest it for 5 minutes. Folding in whipped whites is the trick to an ethereally light, crisp-outside waffle; the trapped air expands in the iron, and the short rest lets the flour fully hydrate so the batter thickens to the right pourable body." },
+      { step: 5, text: "Preheat the waffle iron to medium-high, about 375F (190C), until fully hot before adding any batter. A properly preheated iron is essential: pouring batter into a lukewarm iron makes the waffle stick and steam soft, whereas a hot iron sears the surface instantly for that crisp, golden shell with a fluffy interior." },
+      { step: 6, text: "Ladle the batter onto the hot iron and cook for 4 to 6 minutes, until the steam trailing from the seam slows to a wisp and the waffle is deep golden and crisp. The dying steam is your doneness cue; opening the iron too early tears a still-wet waffle in half, so wait until the venting nearly stops." },
+      { step: 7, text: "Serve each waffle piping hot with a knob of the maple-miso butter set on top so it melts into the ridges before you spread it across the surface. Applying it while the waffle is straight-off-the-iron hot lets the butter seep into every pocket, glazing the whole thing in salty-sweet richness rather than sitting in a cold lump on top." }
     ],
     chefNotes: "Whipping the egg whites separately is the absolute secret to waffles that are shatteringly crisp on the outside and airy on the inside.",
     pairing: "Hot black coffee",
@@ -1397,12 +1397,12 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "honey" }
     ],
     method: [
-      { step: 1, text: "Combine the 1 cup blue cornmeal and 1 cup all-purpose flour in a bowl, stirring until the two dry ingredients are evenly mixed." },
-      { step: 2, text: "Warm the 2 tbsp honey in a small saucepan over low heat for 1 minute, until fluid but not bubbling or darkened." },
-      { step: 3, text: "Pour the 2 tbsp honey over the 1 cup blue cornmeal and 1 cup all-purpose flour, stirring until evenly coated and crumbly." },
-      { step: 4, text: "Heat a 10-inch nonstick skillet over medium-low heat for 3 minutes, then press the mixture into evenly sized, compact rounds." },
-      { step: 5, text: "Cook the rounds for 3 minutes per side, turning when the bottoms are golden and firm and the edges look dry." },
-      { step: 6, text: "Serve the warm rounds immediately, drizzling the 2 tbsp honey over them so the surface looks glossy and lightly coated." }
+      { step: 1, text: "Whisk the 1 cup blue cornmeal, 1 cup all-purpose flour, and 1 tbsp baking powder in a large bowl until evenly blended. Combining the coarse cornmeal with softer flour balances the texture so the pancakes have a pleasant corn grit without being crumbly, and dispersing the baking powder now guarantees an even rise across every pancake." },
+      { step: 2, text: "In a separate bowl whisk the 1.5 cups buttermilk, 2 large eggs, and 3 tbsp melted butter until smooth. Buttermilk is key here: its acidity reacts with the baking powder for extra lift and tang, and it tenderizes the cornmeal so the finished pancakes are fluffy and moist rather than dense and dry the way plain milk would leave them." },
+      { step: 3, text: "Pour the wet ingredients into the dry and stir just until combined, leaving a few lumps and letting the batter rest 5 minutes. Overmixing toughens the crumb, and the rest lets the cornmeal hydrate and swell so it softens; you will see the batter thicken slightly, which is exactly what you want for tall, tender pancakes." },
+      { step: 4, text: "Heat a nonstick skillet over medium-low heat for about 3 minutes, then ladle the batter into rounds. A properly preheated, moderate pan is critical for corn pancakes because their sugars scorch easily; too-high heat blackens the outside before the dense cornmeal interior can cook through, leaving a raw, gummy center." },
+      { step: 5, text: "Cook each pancake about 3 minutes per side, flipping only once the bottom is set and golden and the edges look dry with a few popped bubbles. Blue corn pancakes are more fragile than wheat ones, so waiting for a firm, browned underside before flipping keeps them from tearing into a crumbly mess in the pan." },
+      { step: 6, text: "Warm the 2 tbsp honey until just fluid, stack the pancakes on plates with a smear of the 4 tbsp softened butter between the layers, and drizzle the honey over the top so it glazes the surface. The butter melts into the warm crumb while the honey adds floral sweetness that plays off the earthy blue corn; serve while hot." }
     ],
     chefNotes: "Buttermilk is essential here; its acidity reacts with the baking powder for lift, and it tenderizes the somewhat coarse cornmeal.",
     pairing: "Hot tea or coffee",
@@ -1437,12 +1437,12 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1/4", unit: "cup", item: "agave syrup" }
     ],
     method: [
-      { step: 1, text: "Whisk the 1.5 cups masa harina, 1/2 cup cornstarch, and 1 tbsp baking powder in a large bowl until evenly combined." },
-      { step: 2, text: "Whisk the 2 cups whole milk, 2 large eggs, and 1/4 cup neutral oil in a separate bowl until smooth and uniform." },
-      { step: 3, text: "Pour the wet mixture into the dry mixture and whisk until mostly smooth, then rest the batter for 5 minutes to hydrate." },
-      { step: 4, text: "Heat a lightly oiled griddle over medium heat for 3 minutes, keeping the surface hot enough that a drop of batter sizzles gently." },
-      { step: 5, text: "Cook 1/4-cup portions of the batter for 2 to 3 minutes per side, turning when bubbles form and the undersides are golden brown." },
-      { step: 6, text: "Stack the cooked pancakes and top them with the 1/4 cup Mexican crema and 1/4 cup agave syrup before serving." }
+      { step: 1, text: "Whisk the 1.5 cups masa harina, 1/2 cup cornstarch, and 1 tbsp baking powder in a large bowl until evenly combined. The cornstarch lightens the dense masa so the pancakes turn out fluffy rather than heavy and tortilla-like, while thoroughly mixing in the baking powder ensures they rise uniformly instead of staying flat in spots." },
+      { step: 2, text: "In a separate bowl whisk the 2 cups whole milk, 2 large eggs, and 1/4 cup neutral oil until smooth and uniform. Whisking the fat and eggs fully into the milk creates an emulsion that keeps the pancakes moist and rich; the oil in particular helps them stay tender and gives the surface a golden, lightly crisp finish when griddled." },
+      { step: 3, text: "Pour the wet into the dry and stir just until combined, then let the batter rest 5 minutes. Masa harina drinks up liquid slowly, so this rest lets it fully hydrate and swell into a thicker, spreadable batter; skipping it leaves the pancakes gritty and thin, while over-stirring makes them tough, so a gentle mix is best." },
+      { step: 4, text: "Heat a nonstick griddle over medium heat and ladle the batter into rounds, cooking until bubbles form and pop across the surface and the edges look dry, about 2 to 3 minutes. Those popping bubbles signal the underside is golden and the structure has set enough to flip without the delicate masa pancake tearing apart." },
+      { step: 5, text: "Flip and cook 2 minutes more until the second side is golden and the center springs back when pressed. The gentle press test tells you the interior has cooked through; masa pancakes look done on the outside before the middle sets, so give them the full time to avoid a raw, pasty center." },
+      { step: 6, text: "Stack the warm pancakes, drizzle the 1/4 cup Mexican crema and 1/4 cup agave syrup over the top, and serve immediately. The tangy, cool crema cuts the sweetness of the agave and balances the earthy corn flavor; drizzling both on while the pancakes are hot lets them soak in slightly for a lush, cohesive finish." }
     ],
     chefNotes: "Masa harina absorbs more liquid than wheat flour. If the batter seems too thick after resting, whisk in a tablespoon or two of extra milk.",
     pairing: "Fresh orange juice",
@@ -1591,11 +1591,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "powdered sugar", note: "for dusting" }
     ],
     method: [
-      { step: 1, text: "Arrange the 4 stale conchas, torn into large chunks, in an ungreased 9×13-inch baking dish with the crusts facing upward." },
-      { step: 2, text: "Whisk the 6 large eggs in a bowl for 1 minute until completely blended and slightly frothy throughout." },
-      { step: 3, text: "Pour the 6 whisked eggs over the 4 conchas, press the chunks down gently, and rest the dish for 30 minutes." },
-      { step: 4, text: "Preheat the oven to 350°F (175°C), then bake the 9×13-inch dish uncovered for 40–45 minutes until puffed and set." },
-      { step: 5, text: "Cool the baked 4-concha casserole for 10 minutes, checking that the center no longer jiggles before cutting and serving." }
+      { step: 1, text: "Tear the 4 stale conchas into large chunks and scatter them evenly in an ungreased 9x13-inch baking dish with the crusts facing up. Stale conchas are essential; day-old bread is dry enough to drink up the custard without collapsing into paste, and leaving the crusts exposed lets the sugary shell caramelize into crackly, sweet peaks as it bakes." },
+      { step: 2, text: "Whisk the 6 large eggs with the 2 cups half and half, 1/4 cup brown sugar, 1 tbsp vanilla extract, and 1 tsp ground cinnamon for about a minute until completely blended and slightly frothy. Beating the custard thoroughly ensures the sugar dissolves and the spices distribute evenly so every soaked chunk carries the same warm, sweet flavor." },
+      { step: 3, text: "Pour the custard evenly over the conchas, press the chunks down gently so they submerge, and rest the dish for 30 minutes. This soak is the whole point of a strata-style French toast: the pressing and waiting let the dry bread absorb the custard all the way to the center so it bakes up soft and creamy rather than dry inside." },
+      { step: 4, text: "Bake uncovered in a 350F (175C) oven for 40 to 45 minutes until the top is puffed, deeply golden, and the custard is set. Baking uncovered lets the exposed surfaces crisp and caramelize while the interior sets to a soft, bread-pudding tenderness; a knife inserted in the center should come out clean rather than wet." },
+      { step: 5, text: "Cool the casserole for 10 minutes so the custard finishes setting and firms enough to slice cleanly, then dust the 2 tbsp powdered sugar over the top. Resting is important because cutting while it is molten-hot leaves a wet, sloppy center; the brief cool lets it hold its shape, and the powdered sugar adds a snowy, sweet finish." }
     ],
     chefNotes: "The conchas must be stale. Fresh, soft bread will turn into mush when soaked. If yours are fresh, tear them and leave them on the counter overnight first.",
     pairing: "Hot black coffee",
@@ -1628,12 +1628,12 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "toasted sesame oil" }
     ],
     method: [
-      { step: 1, text: "Preheat a toaster oven to 400°F (200°C), and place the 2 slices thick sourdough bread on a baking sheet." },
-      { step: 2, text: "Toast the 2 slices thick sourdough bread for 5–7 minutes, turning once, until deeply golden and crisp." },
-      { step: 3, text: "Halve and pit the 1 large ripe avocado, scoop it into a bowl, add the 1 tsp lime juice, and mash roughly." },
-      { step: 4, text: "Spread the mashed 1 large ripe avocado evenly over the 2 warm toasted sourdough slices, covering them to the edges." },
-      { step: 5, text: "Drizzle the 1 tsp toasted sesame oil evenly over the mashed avocado while the 2 toast slices are still warm." },
-      { step: 6, text: "Scatter the 1 tbsp furikake seasoning over the avocado, then arrange the 1 tbsp pickled sushi ginger on top." }
+      { step: 1, text: "Toast the 2 slices of thick sourdough at 400F (200C) for 5 to 7 minutes, turning once, until deeply golden and crisp. A sturdy, well-crisped toast is the structural foundation here; soft bread would buckle under the weight of the mashed avocado and turn soggy, robbing the toast of the crackling contrast that makes it satisfying." },
+      { step: 2, text: "Halve and pit the 1 large ripe avocado, scoop it into a bowl, add the 1 tsp lime juice, and mash roughly, leaving some chunks. The lime does double duty: its acid brightens the rich flesh and keeps it from oxidizing to a dull grey, while leaving texture means the topping has body rather than melting into a flat, uniform paste." },
+      { step: 3, text: "Spread the mashed avocado thickly and evenly over the 2 warm toast slices, covering them right to the edges. Spreading onto warm toast lets the avocado settle into the craggy surface and reach every corner, so each bite has that creamy layer instead of a bare, dry crust at the perimeter." },
+      { step: 4, text: "Drizzle the 1 tsp toasted sesame oil over the avocado while the toast is still warm. Sesame oil is potent, so a small amount perfumes the whole toast with a deep, nutty aroma, and adding it while warm helps it spread and soak in rather than sitting in a slick puddle on the cool avocado." },
+      { step: 5, text: "Scatter the 1 tbsp furikake generously across the surface, letting its sesame, nori, and salt season every bite. Sprinkling it on last keeps the seaweed crisp and the sesame crunchy against the soft avocado, and it seasons the toast all over so you do not need any extra salt to make the flavors pop." },
+      { step: 6, text: "Arrange the 1 tbsp pickled sushi ginger on top and serve immediately. The bright, sweet-tart ginger cuts through the richness of the avocado and sesame oil with a clean, palate-refreshing snap, and eating the toast right away keeps the base crisp before the moisture from the toppings softens it." }
     ],
     chefNotes: "The sesame oil is potent—use it sparingly. It bridges the gap between the sourdough and the seaweed perfectly.",
     pairing: "Sencha green tea",
@@ -1701,11 +1701,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "everything bagel seasoning" }
     ],
     method: [
-      { step: 1, text: "Preheat a toaster oven to 400°F (200°C), and place the 2 slices rye or sourdough bread on a baking sheet." },
-      { step: 2, text: "Toast the 2 slices rye or sourdough bread for 5–7 minutes, turning once, until crisp at the edges and lightly golden." },
-      { step: 3, text: "Drizzle the 1 tsp toasted sesame oil over the 2 hot toast slices, spreading it evenly across their surfaces." },
-      { step: 4, text: "Cut the 1 sheet roasted nori seaweed into thin strips with scissors, or tear it into small pieces by hand." },
-      { step: 5, text: "Arrange the pieces from the 1 sheet roasted nori seaweed over the 2 toast slices, then sprinkle on the 1 tsp everything bagel seasoning." }
+      { step: 1, text: "Toast the 2 slices of rye or sourdough in a toaster oven at 400F (200C) for 5 to 7 minutes, turning once, until crisp at the edges and lightly golden. A firm, crisp toast is the structural base here; soft bread would go limp under the cream cheese and lose the satisfying crunch that contrasts the tender, briny nori laid on top." },
+      { step: 2, text: "While the toast is still hot, spread the 4 tbsp softened cream cheese evenly across both slices, right to the edges. Spreading onto warm toast softens the cream cheese further so it glides into an even, creamy layer, and reaching the edges means every bite has that rich, cool base rather than a dry, bare crust." },
+      { step: 3, text: "Drizzle the 1 tsp toasted sesame oil over the cream cheese, letting it soak in slightly. Just a small amount of this potent oil perfumes the whole toast with a deep, nutty aroma that ties the seaweed and cheese together; add it now over the soft cream cheese so it spreads evenly rather than pooling on bare bread." },
+      { step: 4, text: "Cut the 1 sheet of roasted nori into thin strips with scissors, or tear it into rough pieces by hand. Cutting it just before serving keeps the nori crisp and prevents it from absorbing moisture and turning chewy and rubbery, preserving that clean snap and concentrated oceanic flavor against the creamy cheese." },
+      { step: 5, text: "Arrange the nori strips over the cream cheese and finish with a sprinkle of the 1 tsp everything bagel seasoning, then serve immediately. The seasoning's garlic, onion, and sesame add savory crunch and depth, and eating it right away keeps the nori crisp and the toast from softening under the cool topping." }
     ],
     chefNotes: "If you have a gas stove, carefully wave the nori sheet high over the open flame for 2 seconds to re-crisp it before tearing.",
     pairing: "Sparkling water with lemon",
@@ -1738,11 +1738,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "shiso or basil leaves", note: "torn" }
     ],
     method: [
-      { step: 1, text: "Preheat a toaster oven to 400°F (200°C) and prepare a small baking sheet for the 1 slice thick artisan bread." },
-      { step: 2, text: "Tear the 1 slice thick artisan bread into bite-size pieces and arrange them in one even layer on the baking sheet." },
-      { step: 3, text: "Toast the 1 slice thick artisan bread for 6–8 minutes, turning once, until every piece is deeply golden and crisp." },
-      { step: 4, text: "Remove the 1 slice thick artisan bread from the oven when the edges are browned and the centers feel dry and firm." },
-      { step: 5, text: "Cool the 1 slice thick artisan bread for 2 minutes before serving, checking that the toasted pieces remain crisp rather than soft." }
+      { step: 1, text: "Toast the 1 slice of thick artisan bread until deeply golden and crisp on both sides. A sturdy, well-toasted slice is essential because the juicy tomato will sit right on it; a crisp surface resists going soggy and gives a firm, crackling base that contrasts the soft, ripe tomato and creamy mayo." },
+      { step: 2, text: "Spread the 2 tbsp Japanese mayonnaise thickly and evenly over the hot toast, right to the crusts. Kewpie mayo is richer and tangier than standard mayonnaise thanks to its all-yolk formula, and spreading it generously on warm toast lets it soften slightly and act as a savory, moisture-sealing cushion beneath the tomato." },
+      { step: 3, text: "Lay the 1 thick slice of heirloom tomato onto the mayo and season it with the 1/2 tsp soy sauce and 1 pinch black pepper. Salting a tomato with soy rather than plain salt adds umami depth as well as seasoning, drawing out the tomato's juices and sweetness while the pepper adds a gentle aromatic bite." },
+      { step: 4, text: "Scatter the torn 1 tbsp shiso or basil leaves over the tomato. Tearing rather than chopping the herbs releases their fragrance without bruising them to mush, and adding them at the end keeps them bright and aromatic; shiso in particular brings a minty, citrusy note that lifts the rich mayo and sweet tomato." },
+      { step: 5, text: "Serve the toast immediately while the base is still crisp and the tomato is at room temperature for the fullest flavor. This toast is best eaten within a minute or two of assembly, because the tomato's juices and the mayo will gradually soften the bread, so the first crisp, juicy, herbaceous bite is the one to chase." }
     ],
     chefNotes: "A truly ripe, room-temperature tomato is non-negotiable here. Cold fridge tomatoes will ruin the texture and flavor.",
     pairing: "Iced tea",
@@ -1848,11 +1848,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "chives", note: "finely chopped" }
     ],
     method: [
-      { step: 1, text: "Peel and finely chop 4 hard-boiled eggs; aim for pea-size pieces with a few larger bits for a chunky texture." },
-      { step: 2, text: "Transfer 4 hard-boiled eggs to a bowl and press lightly with a fork for 30 seconds; keep the mixture textured." },
-      { step: 3, text: "Check 4 hard-boiled eggs for matte, fully set yolks with no liquid center before continuing; discard any visibly undercooked pieces." },
-      { step: 4, text: "Refrigerate the chopped 4 hard-boiled eggs at 4°C for 15 minutes; serve when chilled and visibly firm." },
-      { step: 5, text: "Spoon the chilled 4 hard-boiled eggs into portions and serve immediately, checking that the yolk remains moist rather than dry." }
+      { step: 1, text: "Peel and finely chop the 4 hard-boiled eggs, aiming for mostly pea-size pieces with a few larger chunks left for texture. This mix of fine and coarse gives the salad its signature creamy-yet-chunky body; chopping everything uniformly small would turn it into a smooth paste and lose the pleasant bite that makes tamago sando so satisfying." },
+      { step: 2, text: "Add the 3 tbsp Japanese mayonnaise, 1 tsp sugar, and 1/2 tsp soy sauce, then fold together with a fork for about 30 seconds until creamy but still textured. The touch of sugar is a hallmark of konbini egg salad, rounding the tang of the Kewpie mayo, while the soy adds a savory undertone; folding gently keeps the egg pieces intact." },
+      { step: 3, text: "Fold in the 1 tbsp finely chopped chives, distributing them evenly through the mixture. The chives add a fresh, mild oniony lift and flecks of green that cut the richness of the mayo-heavy salad; adding them at the end and folding lightly keeps them from bruising and streaking the pale filling." },
+      { step: 4, text: "Pile the egg salad generously onto 1 slice of the thick Japanese milk bread, spreading it thick and even all the way to the edges. Milk bread is used for its pillowy, faintly sweet crumb that frames the savory filling, and mounding the salad right to the edges means every bite, including the corners, is fully loaded." },
+      { step: 5, text: "Top with the second slice of milk bread, press gently to compact, and cut the sandwich in half to reveal the creamy cross-section. Pressing binds the layers so the filling does not squeeze out when sliced, and serving right after cutting keeps the bread soft and the egg salad cool and fresh rather than warming and drying out." }
     ],
     chefNotes: "A tiny pinch of sugar is the secret to authentic Japanese egg salad, balancing the acidity of the Kewpie mayo.",
     pairing: "Hot black tea",
@@ -1921,11 +1921,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "sesame seeds" }
     ],
     method: [
-      { step: 1, text: "Bring a small saucepan of water to a gentle simmer over medium heat, keeping the surface barely moving before adding 1 large egg." },
-      { step: 2, text: "Melt 1 tbsp butter in a 10-inch skillet over medium-low heat; add 1 slice sourdough bread in strips and toast 3–4 minutes." },
-      { step: 3, text: "Crack 1 large egg into the simmering water and poach for 3 minutes, until the white is set and the yolk still jiggles." },
-      { step: 4, text: "Lift the 1 large egg with a slotted spoon, drain briefly, and arrange it over the crisp, buttered sourdough strips." },
-      { step: 5, text: "Drizzle the toast and 1 large egg with 1 tsp soy sauce, then sprinkle over 1 tsp sesame seeds before serving." }
+      { step: 1, text: "Bring a small saucepan of water to a bare, shivering simmer over medium heat, keeping the surface barely moving. A gentle simmer with no rolling bubbles is critical for poaching: violent water blasts the egg white into ragged threads, whereas the still surface lets the white gather softly and cleanly around the yolk." },
+      { step: 2, text: "Melt the 1 tbsp butter in a 10-inch skillet over medium-low heat, add the 1 slice of sourdough, and toast it in the foaming butter for a couple of minutes per side until crisp and golden. Frying the bread in butter rather than dry-toasting gives it a rich, crackling surface and savory flavor that stands up to the runny egg." },
+      { step: 3, text: "Crack the 1 large egg into the barely-simmering water and poach for about 3 minutes until the white is fully set but the yolk still wobbles when nudged. Giving the yolk a soft, molten center is the whole reward here; three minutes at a gentle simmer sets the white through while keeping the yolk liquid enough to flood the toast." },
+      { step: 4, text: "Lift the egg out with a slotted spoon, rest it briefly on the spoon to drain, and set it on the buttered sourdough. Draining off the clinging poaching water is important so it does not pool and soften the crisp toast, and resting a moment lets the loose outer wisps of white slide away for a neater egg." },
+      { step: 5, text: "Drape the 1 sheet of nori strips over and around the egg, drizzle the 1 tsp soy sauce over everything, and finish with the 1 tsp sesame seeds. The soy seasons the yolk and toast with savory depth while the nori and sesame add briny, nutty crunch; serve immediately so the yolk breaks warm over the crisp bread." }
     ],
     chefNotes: "The butter on the toast is essential to protect the bread from becoming soggy when the yolk and soy sauce mix.",
     pairing: "Green tea",
@@ -1993,12 +1993,12 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "scallions", note: "finely sliced" }
     ],
     method: [
-      { step: 1, text: "Preheat a toaster oven to 375°F (190°C), then place the 1 everything bagel on a cutting board." },
-      { step: 2, text: "Slice the 1 everything bagel horizontally with a serrated knife, keeping both halves intact and evenly sized." },
-      { step: 3, text: "Toast both halves of the 1 everything bagel for 3–5 minutes, cut sides up, until golden and lightly crisp." },
-      { step: 4, text: "Stir the 1 tsp white miso paste in a small bowl until smooth and spreadable, with no visible lumps." },
-      { step: 5, text: "Spread the 1 tsp white miso paste evenly over the warm cut sides of the 1 everything bagel." },
-      { step: 6, text: "Serve the 1 everything bagel immediately when the toasted edges are crisp and the miso remains soft." }
+      { step: 1, text: "Preheat a toaster oven to 375F (190C) and set the 1 everything bagel on a cutting board. Getting the oven fully up to temperature before the bagel goes in ensures the cut faces crisp quickly and evenly rather than drying out slowly, which is what gives a good toasted surface to hold the spread." },
+      { step: 2, text: "Slice the bagel in half horizontally with a serrated knife, keeping both halves even and intact. A serrated blade saws cleanly through the crusty, seeded exterior without crushing the chewy interior, giving you two flat, level halves that toast uniformly and hold the schmear without a lopsided, gummy surface." },
+      { step: 3, text: "Toast both halves cut-side up for 3 to 5 minutes until the cut faces are golden and lightly crisp while the crust stays chewy. Toasting cut-side up crisps the exact surface that meets the spread, creating a sturdy, crackly base that contrasts the soft, tangy cream cheese laid over it." },
+      { step: 4, text: "While the bagel toasts, stir the 1 tsp white miso paste into the 3 tbsp softened cream cheese until completely smooth and streak-free. Beating the miso fully into the soft cheese distributes its salty, fermented umami evenly so no bite gets an overpowering hit, turning plain cream cheese into a deeply savory schmear." },
+      { step: 5, text: "Spread the miso cream cheese thickly and evenly over both warm bagel halves, right to the edges. Spreading onto the still-warm toast lets the cheese soften and glide into an even layer, and the residual heat gently melts it so it seeps into the crisp surface for a richer, more cohesive bite." },
+      { step: 6, text: "Scatter the 1 tbsp finely sliced scallions over the top and serve immediately. The raw scallions add a fresh, sharp bite and a pop of color that cuts through the rich, salty spread, and serving right away keeps the toasted surface crisp and the cream cheese cool before the bagel can soften." }
     ],
     chefNotes: "The cream cheese must be room temperature to whip properly with the miso; otherwise, the paste will remain in salty clumps.",
     pairing: "Hot black coffee",
@@ -2031,12 +2031,12 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "Japanese mayonnaise" }
     ],
     method: [
-      { step: 1, text: "Whisk the 2 large eggs in a bowl, then fold in the 1 cup cooked white rice and 1 tbsp furikake until coated." },
-      { step: 2, text: "Melt the 1 tbsp butter in a 10-inch square pan over medium heat until foaming but not browned." },
-      { step: 3, text: "Pour in the rice mixture, shape it into a patty about the size of the 2 slices white sandwich bread, and cook 3 minutes." },
-      { step: 4, text: "Flip the rice patty carefully and cook for 2 more minutes, until both sides are golden and the egg is fully set." },
-      { step: 5, text: "Toast the 2 slices white sandwich bread until lightly golden, then spread the 1 tbsp Japanese mayonnaise over one side of each." },
-      { step: 6, text: "Place the hot rice patty between the 2 slices white sandwich bread, press gently, and serve while crisp." }
+      { step: 1, text: "Whisk the 2 large eggs in a bowl, then fold in the 1 cup cooked white rice and 1 tbsp furikake until every grain is coated. The egg binds the rice into a patty that holds together in the pan, and mixing the furikake through the whole mass seasons it from within with toasted sesame and nori so the flavor is not just on the surface." },
+      { step: 2, text: "Melt the 1 tbsp butter in a 10-inch skillet over medium heat until foaming but not browned. Foaming butter signals the pan is hot enough to sear the rice patty into a crisp, golden crust; if the butter browns it will taste burnt, and if the pan is too cool the patty steams and stays pale and soft instead of crackling." },
+      { step: 3, text: "Pour in the rice mixture and press it into a flat patty roughly the size of the 2 slices of white sandwich bread, then cook undisturbed for about 3 minutes. Leaving it completely still is what lets a solid golden crust form on the bottom; nudging it too soon breaks the fragile patty apart before the egg has set enough to hold it." },
+      { step: 4, text: "Slide a wide spatula fully under the patty and flip it carefully, then cook 2 minutes more until both sides are golden and the egg is fully set. A confident, fully-supported flip keeps the patty intact; once both sides are crisp and the egg is firm, the patty is sturdy enough to sandwich without falling apart." },
+      { step: 5, text: "Toast the 2 slices of white sandwich bread until lightly golden and spread the 1 tbsp Japanese mayonnaise over the inner faces. The Kewpie mayo adds a tangy, umami-rich glue that helps the patty stay put and keeps the soft bread from tasting bland against the savory rice." },
+      { step: 6, text: "Place the hot rice patty between the bread slices, press gently, and serve while crisp. Assembling and eating right away is key because the patty's golden crust softens as it sits and steams inside the sandwich, so the first bite delivers that ideal contrast of crisp rice, silky egg, and pillowy bread." }
     ],
     chefNotes: "The egg acts purely as a binder here. Make sure the rice is fully coated so the patty doesn't fall apart when flipped.",
     pairing: "Cold milk",
@@ -2070,11 +2070,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "furikake" }
     ],
     method: [
-      { step: 1, text: "Heat a dry 10-inch nonstick skillet over medium-low, then cook 1 slice thick milk bread for 2–3 minutes per side until golden." },
-      { step: 2, text: "Warm 1/4 cup cooked white rice for 30–45 seconds, stirring once, until hot and lightly steaming but still separate." },
-      { step: 3, text: "Place the toasted 1 slice thick milk bread on a plate and spread the warm 1/4 cup cooked white rice evenly over it." },
-      { step: 4, text: "Sprinkle 1 tsp furikake evenly over the rice, covering the surface without pressing the grains off the bread." },
-      { step: 5, text: "Serve the assembled 1 slice thick milk bread immediately, while the 1/4 cup cooked white rice is warm and the toast remains crisp." }
+      { step: 1, text: "Simmer the 2 slices of Spam with the 1 tbsp soy sauce and 1 tbsp sugar in a skillet over medium heat, turning, until the liquid reduces to a sticky glaze and the Spam is caramelized and lacquered, about 3 to 4 minutes. This teriyaki-style glaze is the heart of musubi flavor, transforming plain Spam into a salty-sweet, glossy centerpiece." },
+      { step: 2, text: "Toast the 1 slice of thick milk bread in a dry nonstick skillet over medium-low heat for 2 to 3 minutes per side until golden and crisp. A firm, toasted base gives the loaded toast structure so it can hold the warm rice and Spam without going limp, and the faintly sweet milk bread echoes the sweetness in the glaze." },
+      { step: 3, text: "Warm the 1/4 cup cooked white rice, then spread it evenly over the toast, pressing gently so it adheres. Keeping the rice warm and packing it lightly onto the bread mimics the rice layer of a classic musubi; pressing helps it grip the toast so the whole thing holds together when you pick it up rather than sliding apart." },
+      { step: 4, text: "Lay the glazed Spam over the rice and top with the 1 large sunny-side-up fried egg so the runny yolk sits proud. The egg's molten yolk becomes a rich sauce that ties the salty Spam and plain rice together, and setting it on last keeps the yolk intact and glossy until you break it open at the table." },
+      { step: 5, text: "Sprinkle the 1 tsp furikake over the top and serve immediately, while the rice is warm and the yolk still runny. The furikake adds a final layer of toasted sesame and nori for savory crunch, and eating it right away means the yolk floods the rice and Spam before the toast has a chance to cool or soften." }
     ],
     chefNotes: "Pressing the warm rice into the toast sounds strange, but it mimics the tight pack of a traditional musubi and keeps the toppings in place.",
     pairing: "POG (Passion Orange Guava) juice",
@@ -2107,11 +2107,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "sesame seeds" }
     ],
     method: [
-      { step: 1, text: "Whisk 1 tbsp white miso paste, 1 tsp mirin, and 1 tsp sugar until the glaze is smooth and glossy." },
-      { step: 2, text: "Heat a dry skillet over medium heat, about 350°F, and toast 1 slice thick sourdough for 2–3 minutes per side." },
-      { step: 3, text: "Spread the glaze made with 1 tbsp white miso paste, 1 tsp mirin, and 1 tsp sugar evenly over the toasted bread." },
-      { step: 4, text: "Torch the glazed bread 1–2 inches from the surface for 30–60 seconds, until the miso bubbles and develops browned spots." },
-      { step: 5, text: "Sprinkle 1 tsp sesame seeds over the hot toast, then serve when the glaze is set and lightly charred." }
+      { step: 1, text: "Whisk the 1 tbsp white miso paste, 1 tsp mirin, and 1 tsp sugar together until the glaze is smooth and glossy with no lumps. This trio is a classic aburi glaze: the mirin and sugar balance the salty, savory miso and give it enough sugar to caramelize under the torch, so whisk it fully so it brushes on in an even, blister-ready coat." },
+      { step: 2, text: "Toast the 1 slice of thick sourdough in a dry skillet over medium heat, about 350F, for 2 to 3 minutes per side until crisp and golden. A sturdy toasted base is essential because it must survive both the weight of the avocado and the direct heat of the torch without wilting, giving a firm platform for the seared topping." },
+      { step: 3, text: "Lay the thick-sliced 1/2 ripe avocado over the toast and brush the miso glaze evenly across the avocado surface. Fanning the slices gives an even bed for the glaze, and coating them fully means every part of the surface will blister and caramelize uniformly when the flame hits rather than scorching in bare patches." },
+      { step: 4, text: "Torch the glazed avocado from 1 to 2 inches away for 30 to 60 seconds, moving the flame steadily until the miso bubbles, browns, and develops charred, caramelized spots. Aburi means flame-seared: this quick blast melts the glaze into a savory-sweet lacquer and warms the avocado just enough to bring out its buttery richness." },
+      { step: 5, text: "Sprinkle the 1 tsp sesame seeds over the seared surface and serve immediately. The toasted sesame adds a nutty crunch that plays against the soft, torched avocado and glossy miso glaze, and eating it right away captures that fleeting contrast of warm caramelized top and cool creamy avocado before it fades." }
     ],
     chefNotes: "You absolutely need a kitchen blowtorch for this. The brief, intense heat caramelizes the sugars in the miso without turning the avocado to mush.",
     pairing: "Iced matcha",
@@ -2185,13 +2185,13 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "guacamole" }
     ],
     method: [
-      { step: 1, text: "Whisk the 4 large eggs with the 1 tbsp mirin and 1 tsp soy sauce in a bowl until evenly blended." },
-      { step: 2, text: "Cook the 4 large eggs in a 10-inch nonstick skillet over medium-low heat for 3–4 minutes, rolling until just set." },
-      { step: 3, text: "Transfer the cooked 4 large eggs to a board, rest for 1 minute, and slice the omelet in half lengthwise." },
-      { step: 4, text: "Heat the 1/2 lb cooked and chopped carne asada in the skillet over medium heat for 3–4 minutes until sizzling and lightly charred." },
-      { step: 5, text: "Warm the 2 large flour tortillas in a dry skillet over medium heat for 20–30 seconds per side until pliable but not crisp." },
-      { step: 6, text: "Spread the 2 tbsp guacamole over the 2 large flour tortillas, divide in the carne asada and omelet, then add the 1/4 cup pico de gallo." },
-      { step: 7, text: "Fold the sides of the 2 large flour tortillas inward, roll each burrito tightly, and serve immediately while the carne asada is hot." }
+      { step: 1, text: "Whisk the 4 large eggs with the 1 tbsp mirin and 1 tsp soy sauce until evenly blended. The mirin lends a subtle sweetness and the soy a savory backbone, echoing tamagoyaki, so the eggs taste seasoned in their own right; whisking thoroughly ensures a uniform pale color and a tender, custardy set rather than streaky, uneven omelet." },
+      { step: 2, text: "Cook the eggs in a lightly oiled 10-inch nonstick skillet over medium-low heat for 3 to 4 minutes, pouring thin layers and rolling toward you as each sets. The gentle heat and rolling technique build a soft, layered tamagoyaki-style omelet; keeping the heat low keeps it pale and silky instead of browning it into a rubbery sheet." },
+      { step: 3, text: "Slide the omelet onto a board, rest it 1 minute, and slice it in half lengthwise into two neat logs. Resting lets the layers settle so the cuts stay clean, and halving it lengthwise gives you a tidy strip that lays evenly down each burrito rather than a bunched-up wad that makes the roll lumpy and hard to seal." },
+      { step: 4, text: "Reheat the 1/2 lb cooked chopped carne asada in the same skillet over medium heat for 3 to 4 minutes until sizzling and lightly crisped at the edges. Getting some fresh char back into the pre-cooked beef revives its smoky flavor and drives off any released juices so the meat does not make the tortilla soggy inside the burrito." },
+      { step: 5, text: "Warm the 2 large flour tortillas in a dry skillet for 20 to 30 seconds per side until flexible and lightly toasted. Warming makes them pliable so they fold without cracking, and a light toasting firms them just enough to hold the hearty filling without tearing when rolled tight." },
+      { step: 6, text: "Spread the 2 tbsp guacamole down the center of each tortilla, then layer in the carne asada, a tamago log, and the 1/4 cup pico de gallo, keeping everything in a tight strip. The guacamole acts as a creamy anchor, and portioning the filling in a compact line leaves room to fold a sealed, tidy burrito." },
+      { step: 7, text: "Fold the sides of each tortilla inward, roll tightly from the bottom into a sealed burrito, and serve immediately. Tucking the sides first traps the filling so nothing spills from the ends, and serving right away keeps the tortilla warm and the eggs and beef hot before everything cools and stiffens inside the wrap." }
     ],
     chefNotes: "Keep the guacamole and pico de gallo relatively dry. Too much liquid will turn the delicate tamagoyaki into a soggy mess inside the wrap.",
     pairing: "Horchata",
@@ -2223,12 +2223,12 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "cilantro", note: "chopped" }
     ],
     method: [
-      { step: 1, text: "Preheat an oven to 400°F (200°C), spread the 1 cup vegetable tempura on a baking sheet, and reheat for 8–10 minutes until crisp." },
-      { step: 2, text: "Cook the 4 large eggs in a 10-inch nonstick skillet over medium-low heat for 2–3 minutes, stirring until softly set and still glossy." },
-      { step: 3, text: "Warm the 2 large flour tortillas (chopped) on a dry griddle over medium heat for 20–30 seconds until pliable and lightly heated." },
-      { step: 4, text: "Divide the crisp 1 cup vegetable tempura among the 2 large flour tortillas (chopped), keeping the pieces near the center." },
-      { step: 5, text: "Divide the 4 large eggs over the 1 cup vegetable tempura, checking that the eggs remain soft and the tempura stays visibly crisp." },
-      { step: 6, text: "Fold the 2 large flour tortillas (chopped) around their fillings as securely as possible and serve immediately while hot." }
+      { step: 1, text: "Reheat the 1 cup vegetable tempura on a baking sheet in a 400F (200C) oven for about 5 minutes until crisp and hot. The dry oven heat re-crisps the batter that goes soggy when tempura sits; a microwave would only steam it limp, and crispness is the whole textural payoff of tucking tempura into a soft wrap." },
+      { step: 2, text: "Soft-scramble the 4 large eggs in a 10-inch nonstick skillet over medium-low heat for 2 to 3 minutes, stirring gently, until just set and creamy. Pulling them while still glossy and barely set is key: they keep cooking from residual heat, and overcooked eggs turn dry and rubbery against the crisp tempura." },
+      { step: 3, text: "Warm the 2 large flour tortillas on a dry griddle over medium heat for 20 to 30 seconds per side until flexible and lightly toasted. Warming makes them pliable so they fold without cracking, and the faint toasting firms them just enough to cradle the filling without tearing under the weight of the tempura and eggs." },
+      { step: 4, text: "Lay the crisp tempura in a tight line down the center of each tortilla, keeping the pieces close together. Confining them to a compact strip leaves a border for folding and keeps the sharp, crunchy pieces from poking through and splitting the wrap, so the tempura stays intact and enclosed when rolled." },
+      { step: 5, text: "Spoon the soft scrambled eggs over the tempura, drizzle the 2 tbsp spicy mayonnaise, and scatter the 1 tbsp chopped cilantro. The creamy eggs and piquant mayo bind the filling while the fresh cilantro cuts the richness; layering the eggs over the tempura also insulates the crisp batter from the tortilla's moisture briefly." },
+      { step: 6, text: "Fold the tortillas snugly around the fillings, tucking the sides in first, and serve immediately. Rolling tight seals everything inside, and eating right away is essential because the tempura's crunch fades fast once wrapped; the first bite should deliver crisp tempura, soft egg, and warm tortilla all at once." }
     ],
     chefNotes: "An air fryer is the absolute best way to revive day-old tempura, bringing back its original glassy crunch without adding extra oil.",
     pairing: "Green tea",
@@ -2261,12 +2261,12 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1/4", unit: "cup", item: "cabbage", note: "shredded" }
     ],
     method: [
-      { step: 1, text: "Heat a 10-inch skillet over medium heat, add the 1/2 cup Mexican chorizo (fried), and warm for 3–4 minutes until sizzling." },
-      { step: 2, text: "Add the 1 package yakisoba noodles (fresh or frozen) to the skillet and stir-fry for 4–6 minutes until loosened and heated through." },
-      { step: 3, text: "Toss the 1/2 cup Mexican chorizo (fried) with the 1 package yakisoba noodles for 2–3 minutes until evenly combined and lightly browned." },
-      { step: 4, text: "Warm the 2 large flour tortillas (shredded) in a dry skillet over medium heat for 20–30 seconds until flexible and hot." },
-      { step: 5, text: "Divide the hot 1 package yakisoba noodles and 1/2 cup Mexican chorizo (fried) between the 2 large flour tortillas (shredded)." },
-      { step: 6, text: "Fold the sides of the 2 large flour tortillas (shredded) inward, roll each burrito tightly, and serve while the noodles remain hot." }
+      { step: 1, text: "Cook the 1/2 cup casing-removed Mexican chorizo in a skillet over medium-high heat for 5 to 7 minutes, crumbling it, until deeply browned and its red fat has rendered. That rendered fat becomes the flavor base for the noodles, so let the chorizo darken and crisp at the edges rather than pulling it while it is still pale and soft." },
+      { step: 2, text: "Add the 1 package of yakisoba noodles and their seasoning to the skillet with the rendered chorizo fat, breaking up the noodles as they warm. Cooking the noodles directly in the chorizo fat coats every strand with smoky, spiced flavor, marrying the Japanese stir-fried noodle to the Mexican sausage from the very first toss." },
+      { step: 3, text: "Toss the noodles with the chorizo for 2 to 3 minutes over high heat until everything is evenly coated, glossy, and sizzling with a few lightly charred strands. Keeping the heat high and the noodles moving develops that signature yakisoba wok flavor and prevents them from clumping or steaming into a soft, sticky mass." },
+      { step: 4, text: "Warm the 2 large flour tortillas in a dry skillet over medium heat for 20 to 30 seconds per side until flexible and lightly toasted. Warming the tortillas makes them pliable so they fold without cracking, and a light toasting adds a faint char and stops them tearing under the weight of the hot noodle filling." },
+      { step: 5, text: "Divide the hot yakisoba and chorizo down the center of each warm tortilla, keeping the filling in a tight line and leaving a border. Portioning it in a compact strip rather than spreading it out is what lets you roll a tight, sealed burrito; an overstuffed, sprawling filling makes the wrap split open when folded." },
+      { step: 6, text: "Fold the sides of each tortilla inward, then roll tightly from the bottom into a sealed burrito and serve while hot. Tucking the sides in first traps the noodles so nothing spills out the ends, and serving immediately keeps the tortilla warm and the noodles hot and glossy before they cool and stiffen inside the wrap." }
     ],
     chefNotes: "If the yakisoba noodles are stuck together in the package, briefly rinse them under hot water before adding them to the pan to prevent them from snapping.",
     pairing: "Cold lager",
@@ -2298,12 +2298,12 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "sesame oil" }
     ],
     method: [
-      { step: 1, text: "Heat a 10-inch dry skillet over medium-low heat for 2 minutes, then set aside the 1 large flour tortilla (shredded)." },
-      { step: 2, text: "Lay the 1 large flour tortilla (shredded) flat and place the 1 sheet roasted nori over one half." },
-      { step: 3, text: "Drizzle the 1 tbsp soy sauce and 1 tsp sesame oil evenly over the 1 sheet roasted nori." },
-      { step: 4, text: "Fold the 1 large flour tortilla (shredded) over the 1 sheet roasted nori to enclose the filling." },
-      { step: 5, text: "Toast the folded 1 large flour tortilla (shredded) in the skillet for about 3 minutes per side until golden and crisp." },
-      { step: 6, text: "Transfer the toasted 1 large flour tortilla (shredded) to a board, cut it into wedges, and serve while hot." }
+      { step: 1, text: "Heat a 10-inch dry skillet over medium-low heat for about 2 minutes while you prep the 1 large flour tortilla. A gently preheated dry pan is what melts the cheese through and crisps the tortilla evenly; too-high heat scorches the exterior before the cheese inside has a chance to turn molten and gooey." },
+      { step: 2, text: "Lay the tortilla flat and scatter the 1/2 cup shredded Oaxaca or mozzarella cheese over one half, then place the 1 sheet of roasted nori on top of the cheese. Layering the nori directly on the cheese means it softens and adheres as the cheese melts, marrying the briny seaweed to the stretchy cheese rather than falling out." },
+      { step: 3, text: "Drizzle the 1 tbsp soy sauce and 1 tsp sesame oil evenly over the nori. The soy seasons the mild cheese with savory depth while the sesame oil adds a nutty aroma, and dampening the nori slightly helps it meld into the melting cheese instead of staying stiff and papery inside the quesadilla." },
+      { step: 4, text: "Fold the empty half of the tortilla over the filling to make a half-moon, pressing gently. Folding rather than stacking two tortillas keeps the quesadilla thin so it crisps quickly and the cheese heats through evenly, and a light press helps the two halves seal together around the melting filling." },
+      { step: 5, text: "Toast the folded quesadilla in the skillet for about 3 minutes per side until golden, crisp, and the cheese is fully melted and oozing. Cooking it slowly on each side gives the cheese time to melt completely before the tortilla burns, and pressing occasionally with a spatula ensures even browning and a sealed edge." },
+      { step: 6, text: "Transfer to a board, let it settle for a minute so the molten cheese sets slightly, then cut into wedges and serve hot. The brief rest keeps the cheese from gushing out the moment you cut, and slicing into wedges makes for easy handling while the quesadilla is still crisp and the filling stretchy." }
     ],
     chefNotes: "Low heat is critical. If the pan is too hot, the tortilla will burn before the cheese in the center has time to fully melt.",
     pairing: "Sparkling water",
@@ -2336,12 +2336,12 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "sesame seeds" }
     ],
     method: [
-      { step: 1, text: "Cut the 4 sheets roasted nori in half to make 8 pieces, keeping the shiny sides facing downward." },
-      { step: 2, text: "Divide the 1 cup seasoned warm sushi rice among the 8 nori pieces, spreading rice over each left third." },
-      { step: 3, text: "Place the 2 large eggs, cooked as tamagoyaki and cut into strips, and the 1/2 avocado among the rice." },
-      { step: 4, text: "Drizzle the 2 tbsp spicy mayonnaise over the fillings, then sprinkle the 1 tbsp sesame seeds evenly across them." },
-      { step: 5, text: "Roll each of the 8 nori pieces into a tight cone, checking that fillings stay enclosed and the nori remains crisp." },
-      { step: 6, text: "Serve the 8 hand rolls immediately, within 5 minutes, before the 4 sheets roasted nori soften around the warm rice." }
+      { step: 1, text: "Cut the 4 sheets of roasted nori in half to make 8 pieces, keeping the shiny side facing down and the rough side up. The rough side grips the rice while the shiny side stays crisp on the outside; halving the sheets makes them the right size for individual cones that are easy to hold and eat by hand." },
+      { step: 2, text: "Divide the 1 cup of warm seasoned sushi rice among the 8 nori pieces, spreading a thin layer over just the left third of each. Confining the rice to one third leaves room to roll a cone and keeps the ratio right; too much rice makes a dense, unwieldy roll that overwhelms the fillings and cracks the nori as you shape it." },
+      { step: 3, text: "Lay a few strips of the tamagoyaki made from the 2 large eggs and a slice or two of the thin 1/2 avocado diagonally across the rice on each piece. Arranging the fillings on the diagonal is what lets them fan out neatly when the nori is rolled into a cone, so every bite gets both the sweet egg and creamy avocado." },
+      { step: 4, text: "Drizzle the 2 tbsp spicy mayonnaise over the fillings and sprinkle the 1 tbsp sesame seeds across each. The spicy mayo adds a creamy, piquant kick that ties the mild rice and egg together, and the sesame seeds bring nutty crunch; adding them now means the flavor is tucked inside every roll rather than just on top." },
+      { step: 5, text: "Fold the bottom-left corner of each nori piece over the fillings and roll into a tight cone, using a dab of rice as glue at the tip to seal. Rolling snugly keeps the fillings from tumbling out, and sealing the point stops the cone from unraveling; a loose roll spills its contents the moment you lift it to eat." },
+      { step: 6, text: "Serve the hand rolls immediately, within about 5 minutes, before the nori softens. Temaki is meant to be eaten the instant it is made: the whole appeal is the contrast between crisp, crackling nori and warm rice, and once the seaweed absorbs moisture from the rice it turns chewy and loses that signature snap." }
     ],
     chefNotes: "Hand rolls must be eaten the exact second they are made. If they sit for even 5 minutes, the warm rice will steam the nori into a chewy, unbiteable leather.",
     pairing: "Hot green tea",
@@ -2374,12 +2374,12 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "cup", item: "spinach" }
     ],
     method: [
-      { step: 1, text: "Heat a 10-inch skillet over medium-high heat, add the 1/2 lb ground turkey, and cook for 8–10 minutes." },
-      { step: 2, text: "Stir and crumble the 1/2 lb ground turkey continuously until no pink remains and the pieces are lightly browned." },
-      { step: 3, text: "Add the 1 cup spinach to the skillet and cook with the 1/2 lb ground turkey for 2 minutes until wilted." },
-      { step: 4, text: "Warm the 2 large flour tortillas in a dry skillet over medium heat for 30 seconds per side until flexible." },
-      { step: 5, text: "Divide the cooked 1/2 lb ground turkey and 1 cup spinach between the 2 large flour tortillas." },
-      { step: 6, text: "Fold the sides of the 2 large flour tortillas inward, roll each tightly, and serve while the fillings are hot." }
+      { step: 1, text: "Heat a 10-inch skillet over medium-high heat, add the 1/2 lb ground turkey, and cook for 8 to 10 minutes, crumbling it, until no pink remains and the pieces are lightly browned. Ground turkey is lean and bland on its own, so browning it well develops savory color and flavor rather than leaving it grey, steamed, and watery." },
+      { step: 2, text: "Stir the 1 tbsp red miso paste and 1 tsp soy sauce into the cooked turkey and toss for a minute until every crumble is coated and glossy. The red miso brings a deep, meaty umami and salt that transforms the mild turkey into something rich and craveable, mimicking the savoriness of a much fattier sausage." },
+      { step: 3, text: "Add the 1 cup spinach to the skillet and cook for about 2 minutes, tossing, until it wilts down and any released liquid cooks off. Wilting the spinach right in the seasoned turkey lets it soak up the miso flavor, and cooking off the moisture keeps the finished wrap from turning soggy when it is rolled." },
+      { step: 4, text: "Warm the 2 large flour tortillas in a dry skillet over medium heat for about 30 seconds per side until flexible and lightly toasted. Warming makes the tortillas pliable so they fold without cracking, and a light toasting adds a faint char and firms them just enough to hold the filling without tearing." },
+      { step: 5, text: "Divide the 4 scrambled large eggs and the miso turkey and spinach down the center of each tortilla in a tight line, leaving a border. Portioning the filling in a compact strip is what allows a tight, sealed roll; spreading it out to the edges makes the wrap split open and spill when you fold it." },
+      { step: 6, text: "Fold the sides of each tortilla inward, then roll tightly from the bottom into a sealed wrap and serve while the fillings are hot. Tucking the sides in first traps the eggs and turkey so nothing falls out the ends, and serving immediately keeps everything warm before the tortilla stiffens and the eggs cool." }
     ],
     chefNotes: "The miso-soy mixture will caramelize and burn quickly once the water evaporates, so toss the turkey constantly in the final minute of cooking.",
     pairing: "Black iced tea",
@@ -2412,12 +2412,12 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "salsa roja" }
     ],
     method: [
-      { step: 1, text: "Lay the 2 large flour tortillas flat on a clean work surface, keeping them ready for separate assembly." },
-      { step: 2, text: "Place 1 of the 2 warm crispy corn tostadas in the center of each flour tortilla, leaving an even border." },
-      { step: 3, text: "Divide the 2 large scrambled eggs, 1/4 cup shredded cheddar cheese, and 2 tbsp salsa roja evenly over the 2 tostadas." },
-      { step: 4, text: "Fold the edges of each of the 2 large flour tortillas up and over the fillings until both wraps are fully enclosed." },
-      { step: 5, text: "Heat a dry 10-inch skillet over medium heat, then place the 2 wraps seam-side down and cook for 2–3 minutes." },
-      { step: 6, text: "Flip the 2 wraps and cook for 2–3 minutes more, until both sides are crisp, golden brown, and firmly sealed." }
+      { step: 1, text: "Lay the 2 large burrito-size flour tortillas flat on a clean surface. Working with the tortillas laid out and warm keeps them pliable for the crunchwrap-style fold to come; starting with cold, stiff tortillas means they crack along the folds and split open once they hit the hot skillet." },
+      { step: 2, text: "Set 1 crispy corn tostada in the center of each flour tortilla, leaving an even border all around. The tostada is the genius of this wrap: sealed inside, it stays shatteringly crisp and gives a satisfying crunch in the middle of the soft tortilla, so center it precisely so it is fully enclosed when you fold." },
+      { step: 3, text: "Divide the 1/2 cup warm refried black beans, 2 scrambled large eggs, 1/4 cup shredded cheddar, and 2 tbsp salsa roja over the tostadas, keeping everything inside the tostada's footprint. Spreading the warm beans first acts as glue, and stacking the fillings compactly on the tostada keeps the wrap tidy and foldable." },
+      { step: 4, text: "Fold the edges of each tortilla up and over the fillings, pleating as you go around, until the filling is fully enclosed in a sealed hexagonal packet. The overlapping pleats lock everything inside; leaving a gap lets the filling ooze out and prevents the wrap from crisping into a solid, self-sealed parcel in the pan." },
+      { step: 5, text: "Heat a dry 10-inch skillet over medium heat and set each wrap seam-side down, cooking 2 to 3 minutes until golden and sealed. Placing it seam-side down first is crucial: the weight and heat fuse the pleated folds together so the wrap holds its shape and does not spring open when you flip it." },
+      { step: 6, text: "Flip and cook 2 to 3 minutes more until both sides are crisp and deep golden brown. Toasting the second side sets the whole wrap into a sturdy, crunchy shell around the warm, melty filling; serve immediately while the exterior is crisp and the cheese inside is still molten and the tostada retains its snap." }
     ],
     chefNotes: "Do not overfill the center. If you stack the ingredients too high, the flour tortilla will not fold over completely to seal the wrap.",
     pairing: "Cold brew coffee",
@@ -2450,12 +2450,12 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "chia seeds" }
     ],
     method: [
-      { step: 1, text: "Run the 1 packet frozen unsweetened acai puree (100g) under warm water for 5 seconds, then break it into blender chunks." },
-      { step: 2, text: "Add the 1 frozen banana and 1 tsp matcha powder to the blender with the broken-up 1 packet acai puree." },
-      { step: 3, text: "Pour in the 1/4 cup almond milk, using it all while keeping the mixture thick enough to mound." },
-      { step: 4, text: "Blend the 1 packet acai puree, 1 frozen banana, 1 tsp matcha, and 1/4 cup almond milk until smooth and soft-serve thick." },
-      { step: 5, text: "Spoon the blended 1 packet acai puree mixture into a chilled bowl, scraping the blender clean so the base holds its shape." },
-      { step: 6, text: "Arrange the 1/4 cup granola and 1 tbsp chia seeds over the bowl, then serve immediately while the base remains thick and cold." }
+      { step: 1, text: "Run the 1 packet of frozen unsweetened acai puree under warm water for about 5 seconds, then break it into chunks and drop them into the blender. The brief thaw loosens the rock-hard puree just enough for the blades to catch it, while keeping it frozen enough that the finished bowl stays thick and spoonable rather than melting into a drinkable smoothie." },
+      { step: 2, text: "Add the 1 frozen banana and 1 tsp matcha powder to the blender with the acai. The frozen banana lends natural sweetness and a creamy, ice-cream-like body that balances the tart, earthy acai, while the matcha adds a grassy depth and a caffeine lift; adding them together lets everything blend into one uniform, vivid purple base." },
+      { step: 3, text: "Pour in the 1/4 cup almond milk, using just enough to get the blades moving while keeping the mixture thick enough to mound on a spoon. The liquid is a careful balance: too little and the blender stalls, too much and the bowl turns soupy and cannot hold its toppings, so add it gradually and stop while it is still stiff." },
+      { step: 4, text: "Blend on high, stopping to scrape down the sides once or twice, until the mixture is completely smooth and thick with no icy chunks. Scraping ensures every frozen bit gets pulled into the vortex; you are aiming for a dense, soft-serve consistency that holds its shape and a peak when you lift the spoon out." },
+      { step: 5, text: "Spoon the blended base into a chilled bowl, scraping the blender clean and smoothing the surface flat. A pre-chilled bowl keeps the mixture cold and firm so it does not melt before you finish topping it, and a flat, even surface gives you a tidy canvas to arrange the toppings attractively." },
+      { step: 6, text: "Arrange the 1/4 cup granola and 1 tbsp chia seeds over the top and serve immediately. The granola adds crucial crunch against the smooth base and the chia brings a subtle pop and fiber; serving right away is essential because the frozen base softens quickly and the granola loses its crispness once it sinks in." }
     ],
     chefNotes: "The secret to a spoonable smoothie bowl is using as little liquid as physically possible. Be patient and use the blender tamper to force the frozen fruit into the blades.",
     pairing: "Sparkling water",
@@ -2488,11 +2488,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1/4", unit: "cup", item: "fresh berries", note: "for topping" }
     ],
     method: [
-      { step: 1, text: "Place a serving bowl in the freezer for 10 minutes while keeping the 1.5 cups frozen mango chunks completely frozen." },
-      { step: 2, text: "Check the 1.5 cups frozen mango chunks, ensuring they are firm and icy rather than thawed or wet." },
-      { step: 3, text: "Transfer the 1.5 cups frozen mango chunks to the chilled bowl, arranging them in an even layer." },
-      { step: 4, text: "Let the 1.5 cups frozen mango chunks stand at room temperature for 5 minutes, until the edges soften slightly." },
-      { step: 5, text: "Serve the 1.5 cups frozen mango chunks immediately while the centers remain cold, firm, and visibly frosty." }
+      { step: 1, text: "Chill a serving bowl in the freezer for 10 minutes while you keep the 1.5 cups frozen mango chunks in the freezer until the last moment. A cold bowl keeps the smoothie base from melting as you assemble it, and starting with fully frozen mango is what lets the blended bowl stay thick and spoonable rather than watery." },
+      { step: 2, text: "Add the frozen mango, 1/2 frozen banana, 1/4 cup coconut water, and 1 tbsp lime juice to a blender. The banana adds creamy body and sweetness, the coconut water just enough liquid to blend, and the lime brings brightness; keeping the coconut water minimal preserves the thick, mound-able texture a smoothie bowl needs." },
+      { step: 3, text: "Blend on high, stopping to scrape down the sides as needed, until the mixture is completely smooth and thick enough to hold a peak on the spoon. Scraping pulls every frozen chunk into the blades, and stopping while it is still stiff, like soft-serve, keeps it firm enough to support the toppings without sinking." },
+      { step: 4, text: "Spoon the mango base into the chilled bowl and smooth the surface flat. The cold bowl slows melting so the base stays firm while you top it, and a level surface gives you a clean canvas so the berries and seasoning sit neatly on top rather than sliding into a soupy pool." },
+      { step: 5, text: "Scatter the 1/4 cup fresh berries over the top and dust with the 1 tsp Tajin seasoning, then serve immediately. The chili-lime Tajin adds a surprising tangy, mildly spicy kick that makes the sweet mango pop, and eating it right away keeps the base cold and thick before it can melt into a drinkable puddle." }
     ],
     chefNotes: "The lime juice is essential. Without it, the frozen mango is too cloyingly sweet and flat.",
     pairing: "Hot green tea",
@@ -2524,11 +2524,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "hemp seeds" }
     ],
     method: [
-      { step: 1, text: "Freeze the 1 cup horchata in an ice cube tray overnight, until the cubes are completely solid and easy to release." },
-      { step: 2, text: "Place the 1 cup frozen horchata cubes and the 1 frozen banana, sliced, in a blender, arranging them around the blade." },
-      { step: 3, text: "Blend the 1 cup frozen horchata cubes and 1 frozen banana on high until the mixture looks thick, smooth, and frosty." },
-      { step: 4, text: "Spoon the thick mixture made from the 1 cup horchata cubes and 1 frozen banana into a serving bowl, scraping out the blender." },
-      { step: 5, text: "Sprinkle the 1 tbsp hemp seeds over the bowl and serve immediately, when the base is still thick, cold, and spoonable." }
+      { step: 1, text: "Freeze the 1 cup horchata in an ice cube tray overnight until the cubes are completely solid. Freezing the horchata itself, rather than diluting the bowl with plain ice, means every bit of the blend keeps its full cinnamon-rice sweetness and creamy flavor while still giving the frozen body needed for a thick, spoonable smoothie bowl." },
+      { step: 2, text: "Add the frozen horchata cubes and the 1 sliced frozen banana to a blender, arranging them so the blades can catch them. The frozen banana adds creamy richness and natural sweetness while the horchata cubes bring the icy structure; slicing the banana and layering the cubes helps the blender grip everything and blend evenly." },
+      { step: 3, text: "Add the 1 tsp ground cinnamon and blend on high, scraping down the sides as needed, until thick, smooth, and mound-able. The extra cinnamon deepens the warm horchata flavor, and stopping while the mixture is still stiff, like soft-serve, keeps it firm enough to hold its shape and support the toppings rather than turning to soup." },
+      { step: 4, text: "Spoon the blended base into a chilled bowl and smooth the top flat. A pre-chilled bowl keeps the mixture from melting while you assemble, and a level surface gives you a neat canvas so the almonds and hemp seeds perch attractively on top instead of sliding down into a watery pool." },
+      { step: 5, text: "Scatter the 1/4 cup toasted sliced almonds and 1 tbsp hemp seeds over the top and serve immediately. The toasted almonds add essential crunch against the creamy base and the hemp seeds a nutty pop and protein; serve right away, since the frozen base softens fast and the almonds lose their crispness once they sink in." }
     ],
     chefNotes: "Freezing the horchata prevents the smoothie bowl from becoming watered down and loose, ensuring a thick, ice-cream-like consistency.",
     pairing: "Cold brew coffee",
@@ -2561,11 +2561,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "lemon juice" }
     ],
     method: [
-      { step: 1, text: "Whisk the 1 tbsp white miso paste (sesame paste) with the 1 tsp lemon juice in a small bowl for 30 seconds, until smooth." },
-      { step: 2, text: "Spoon the 1 cup cooked quinoa (warm) into a wide serving bowl and spread it into an even layer while it remains steaming." },
-      { step: 3, text: "Peel and halve the 1 large egg (soft boiled), checking that the white is set and the yolk remains soft." },
-      { step: 4, text: "Arrange the 1 large egg (soft boiled) and 1/2 avocado, sliced, over the 1 cup cooked quinoa (warm), keeping the pieces distinct." },
-      { step: 5, text: "Drizzle the 1 tbsp white miso paste (sesame paste) and 1 tsp lemon juice mixture over the bowl, then serve immediately." }
+      { step: 1, text: "Whisk the 1 tbsp white miso paste, 1 tbsp tahini, and 1 tsp lemon juice with a splash of warm water in a small bowl for about 30 seconds until it loosens into a pourable, satiny dressing. The tahini and miso are both thick, so a little water is essential to thin them to a drizzle; the lemon brightens the earthy, savory paste so it does not sit heavy on the bowl." },
+      { step: 2, text: "Spoon the 1 cup warm cooked quinoa into a wide bowl and spread it into an even layer. Keeping the quinoa warm makes the base cozy and helps it drink up the dressing, and fluffing it into a level bed gives the toppings a stable place to sit rather than tumbling into an uneven heap in the middle." },
+      { step: 3, text: "Peel and halve the 1 soft-boiled egg, checking that the white is set while the yolk stays molten and jammy. That runny yolk is a key part of the bowl, becoming a rich sauce when broken; slicing it in half just before serving keeps the yolk glossy and intact until it hits the warm quinoa." },
+      { step: 4, text: "Arrange the egg halves and the sliced 1/2 avocado over the quinoa, fanning them so each bite gets some. Placing them on opposite sides gives the bowl balance and lets the creamy avocado and the soft egg contrast the nutty grain, while keeping them slightly apart makes for a tidy, appealing presentation." },
+      { step: 5, text: "Drizzle the miso-tahini dressing generously over the whole bowl and serve immediately. Adding the dressing last coats the egg, avocado, and quinoa in one savory, tangy layer that ties everything together, and eating right away means the yolk is still warm and runny to fold into the dressing and grains." }
     ],
     chefNotes: "Tahini thickens when liquid is first added. Keep whisking and adding tiny splashes of warm water until it smooths out into a creamy dressing.",
     pairing: "Green tea",
@@ -2598,13 +2598,13 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "cup", item: "Greek yogurt", note: "plain, for serving" }
     ],
     method: [
-      { step: 1, text: "Preheat the oven to 300°F (150°C), then line a large rimmed baking sheet with parchment and set out the 2 cups rolled oats (almonds and pecans)." },
-      { step: 2, text: "Combine the 2 cups rolled oats (almonds and pecans) with the 1/4 cup honey or maple syrup (melted) in a large bowl." },
-      { step: 3, text: "Stir the 2 cups rolled oats (almonds and pecans) until evenly coated with the 1/4 cup honey or maple syrup (melted)." },
-      { step: 4, text: "Spread the coated 2 cups rolled oats (almonds and pecans) in one even layer on the lined baking sheet." },
-      { step: 5, text: "Bake at 300°F (150°C) for 20–25 minutes, stirring at 10–12 minutes, until the 2 cups rolled oats look dry and lightly golden." },
-      { step: 6, text: "Cool the baked 2 cups rolled oats (almonds and pecans) on the sheet for 20 minutes, until crisp and firm enough to cluster." },
-      { step: 7, text: "Sprinkle the 1.5 tbsp matcha powder (plain, for serving) over the cooled granola immediately before serving." }
+      { step: 1, text: "Preheat the oven to 300F (150C) and line a large rimmed baking sheet with parchment. The low temperature is deliberate: granola crisps slowly and evenly at 300F, whereas a hotter oven scorches the honey and burns the nuts before the oats dry out, so patience here is what yields an even, golden crunch." },
+      { step: 2, text: "Combine the 2 cups rolled oats and 1 cup mixed almonds and pecans in a large bowl, then pour over the 1/4 cup honey and 1/4 cup melted coconut oil. Tossing the oats and nuts together first ensures the sweetener and fat, added next, can coat every piece; the coconut oil is what crisps the granola while the honey binds and sweetens." },
+      { step: 3, text: "Stir until every oat and nut is evenly coated and glistening. Thorough coating is the difference between uniformly crunchy granola and a mix of scorched and soft patches; take the time to fold from the bottom so no dry oats hide at the base of the bowl unglazed." },
+      { step: 4, text: "Spread the mixture in a single even layer on the lined sheet, pressing it down lightly. A thin, compact layer promotes even browning and encourages clusters to form; heaped-up granola steams in the middle and stays soft, so flatten it out to the edges of the pan for maximum crisp surface." },
+      { step: 5, text: "Bake for 20 to 25 minutes, stirring once at the 10 to 12 minute mark, until the granola is golden and smells toasty. Stirring midway ensures the edges do not burn while the center lags, and pulling it while just golden matters because granola crisps further as it cools, so it should look slightly underdone coming out." },
+      { step: 6, text: "Cool the granola completely on the sheet for about 20 minutes, undisturbed, so it hardens into crisp clusters. This cooling is when the magic happens: the honey and coconut oil set as they cool, locking the oats and nuts into crunchy clumps, so resist stirring or it will crumble into loose bits instead of clusters." },
+      { step: 7, text: "Just before serving, toss the cooled granola with the 1.5 tbsp matcha powder and spoon it over the 1 cup plain Greek yogurt. Adding the matcha off the heat preserves its vivid color and grassy flavor, which baking would turn dull and bitter, and the tart, thick yogurt is the cool, creamy counterpoint to the crunchy green-tea granola." }
     ],
     chefNotes: "Matcha burns easily. Baking at a low 300°F ensures the oats dry out and get crispy without destroying the delicate green tea flavor.",
     pairing: "Fresh berries",
@@ -2635,11 +2635,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "dash", item: "ground cinnamon" }
     ],
     method: [
-      { step: 1, text: "Place the 1 cup ice cubes in a tall serving glass, leaving room for the 1 cup cold brew coffee concentrate." },
-      { step: 2, text: "Pour the 1 cup cold brew coffee concentrate slowly over the 1 cup ice cubes until the glass is about two-thirds full." },
-      { step: 3, text: "Let the 1 cup cold brew coffee concentrate rest over the 1 cup ice cubes for 1 minute, until the glass feels cold." },
-      { step: 4, text: "Sprinkle the 1 dash ground cinnamon evenly over the surface of the 1 cup cold brew coffee concentrate." },
-      { step: 5, text: "Stir the 1 cup cold brew coffee concentrate and 1 cup ice cubes gently until the cinnamon is dispersed and the drink looks uniform." }
+      { step: 1, text: "Fill a tall serving glass with the 1 cup ice cubes, leaving room at the top. Starting with a full glass of ice chills the drink instantly and keeps it cold as you layer, and the ice also creates the barrier that lets the horchata and coffee form distinct layers rather than immediately blending into a muddy brown." },
+      { step: 2, text: "Slowly pour the 1 cup cold brew coffee concentrate over the ice until the glass is about two-thirds full. Cold brew is used because it is smooth and low in acidity, so it will not curdle the horchata, and pouring slowly over the ice keeps the coffee from splashing and lets it settle into a clean, dark layer." },
+      { step: 3, text: "Gently pour the 1/2 cup chilled horchata over the back of a spoon so it floats on top of the coffee. Pouring over a spoon disperses the flow so the sweeter, creamier horchata layers over the denser coffee, creating the striking two-tone look before the drink is stirred; a direct pour would just churn them together." },
+      { step: 4, text: "Dust the 1 dash ground cinnamon evenly over the surface. The cinnamon echoes the spice already in the horchata and blooms its aroma right at the rim where you smell it first, adding a warm, fragrant top note that makes the drink taste richer than coffee and rice milk alone." },
+      { step: 5, text: "Stir gently just before drinking to swirl the horchata and cold brew together into a creamy, cinnamon-flecked iced coffee. Serving it layered for the visual and letting the drinker stir means they get both the show and the balanced final flavor; do it right away while everything is cold and the ice has not diluted it." }
     ],
     chefNotes: "Use actual cold brew concentrate, not just chilled drip coffee. The intensity of the concentrate is necessary to stand up to the rich, sweet horchata.",
     pairing: "Any savory breakfast item",
@@ -2672,11 +2672,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "cup", item: "ice" }
     ],
     method: [
-      { step: 1, text: "Stir the 1.5 tbsp chia seeds into the 1/4 cup warm water in a glass for 30 seconds, then rest 10 minutes." },
-      { step: 2, text: "Whisk the 1 tsp matcha powder into the 1 cup oat milk for 30 seconds, until the drink is smooth and bright green." },
-      { step: 3, text: "Stir the 1 tbsp agave syrup into the 1 tsp matcha and 1 cup oat milk until fully dissolved and evenly sweetened." },
-      { step: 4, text: "Add the 1 cup ice to the glass with the chia mixture, and check that the chia seeds have formed a thick, spoonable gel." },
-      { step: 5, text: "Pour the 1 cup oat milk mixture over the 1 cup ice and chia gel, then stir until the matcha latte looks evenly blended." }
+      { step: 1, text: "Stir the 1.5 tbsp chia seeds into the 1/4 cup warm water in a glass, stir for 30 seconds, then let it rest 10 minutes. Stirring and resting prevents the seeds from clumping and lets them absorb the water and swell into a soft gel; skipping the stir leaves a dry clump at the bottom instead of an evenly suspended, tapioca-like layer." },
+      { step: 2, text: "Whisk the 1 tsp matcha powder into the 1 cup oat milk for about 30 seconds until completely smooth with no floating specks. Matcha resists dissolving, so vigorous whisking, ideally with a bamboo chasen or a small frother, breaks up the fine powder and disperses it evenly so the latte tastes uniformly grassy rather than gritty." },
+      { step: 3, text: "Stir the 1 tbsp agave syrup into the matcha oat milk until fully dissolved. Adding the sweetener now, while the mixture is being stirred, ensures it distributes evenly through the drink; the agave rounds off matcha's natural bitterness so the finished latte is smooth and balanced rather than sharply astringent." },
+      { step: 4, text: "Add the 1 cup ice to the glass with the set chia gel, checking that the seeds have formed a thick, translucent layer. That gel layer is the point of the drink, giving it a fun, textured body; the ice chills everything so the layered latte stays cold and refreshing as you pour the matcha over the top." },
+      { step: 5, text: "Pour the sweetened matcha oat milk over the ice and chia gel, then give it a gentle stir before serving. Pouring over the ice keeps the drink bracingly cold and briefly shows off the layered look, and a light stir loosens the chia gel through the latte so every sip carries both creamy matcha and a soft chia pop." }
     ],
     chefNotes: "Warm water hydrates chia seeds twice as fast as cold water, ensuring you get that boba-like texture without having to soak them overnight.",
     pairing: "Avocado toast",
@@ -2709,11 +2709,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "4", unit: "oz", item: "vodka", note: "optional" }
     ],
     method: [
-      { step: 1, text: "Pour the 2 cups seeded and muddled tomato juice into a pitcher, then stir for 30 seconds until evenly combined." },
-      { step: 2, text: "Rub the 2 tbsp lime juice around the rims of two tall glasses, coating each rim evenly without spilling the juice." },
-      { step: 3, text: "Pour the 4 oz vodka into the 2 cups tomato juice, or omit it for a nonalcoholic drink." },
-      { step: 4, text: "Stir the 2 cups tomato juice, 4 oz vodka, and 2 tbsp lime juice for 30 seconds until the mixture looks uniform." },
-      { step: 5, text: "Divide the 2 cups tomato juice mixture between the two prepared glasses and serve immediately when the surface looks smooth." }
+      { step: 1, text: "Whisk the 1 tbsp white miso paste into the 2 cups tomato juice in a pitcher until fully dissolved with no lumps. The miso is the twist here, lending a deep, savory umami and salt that replaces the usual Worcestershire and celery salt; whisking it in thoroughly ensures that savoriness spreads evenly rather than sinking as a paste at the bottom." },
+      { step: 2, text: "Muddle the seeded 1/2 jalapeno and stir it with the 2 tbsp lime juice into the tomato juice, then rub a little lime around the rims of two tall glasses and dip them in the 1 tbsp Tajin. Muddling releases the jalapeno's heat and oils into the drink, while the lime-moistened rim grabs the chili-lime Tajin for a spicy, tangy first taste." },
+      { step: 3, text: "Add the 4 oz vodka to the pitcher if using, or leave it out for a virgin version. Stirring the vodka into the seasoned base rather than floating it on top means it integrates smoothly so no single sip is harsh with alcohol; the miso and lime carry enough flavor that the nonalcoholic version tastes just as complete." },
+      { step: 4, text: "Stir the whole mixture for about 30 seconds until it looks uniform and slightly frothy. Thorough stirring marries the miso, jalapeno, lime, and vodka into one cohesive, well-seasoned drink; a quick swirl would leave the heat and salt unevenly distributed, so keep stirring until the color and texture look consistent throughout." },
+      { step: 5, text: "Fill the Tajin-rimmed glasses with ice, divide the Bloody Mary between them, and serve immediately. Pouring over fresh ice keeps the drink cold and crisp, and serving right away means the rim stays crunchy and the muddled jalapeno heat is at its brightest before it mellows and settles out in the pitcher." }
     ],
     chefNotes: "Rolling the drink (pouring it back and forth between two tins) rather than shaking it preserves the rich, heavy texture of the tomato juice.",
     pairing: "Chilaquiles",
@@ -2746,11 +2746,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "cup", item: "ice" }
     ],
     method: [
-      { step: 1, text: "Add 1 large English cucumber, 1/4 cup fresh mint leaves, 2 tbsp lime juice, and 2 tbsp agave syrup to a blender." },
-      { step: 2, text: "Add 1 cup of the 4 cups cold brewed green tea and blend on high for 45 seconds until completely smooth." },
-      { step: 3, text: "Strain the blended mixture containing 1 large English cucumber through a fine-mesh strainer into a 2-quart pitcher." },
-      { step: 4, text: "Stir the remaining 3 cups from the 4 cups cold brewed green tea into the strained cucumber mixture until evenly combined." },
-      { step: 5, text: "Divide the cucumber tea among tall glasses and serve immediately over the 1 cup ice until chilled." }
+      { step: 1, text: "Add the peeled, roughly chopped 1 large English cucumber, 1/4 cup fresh mint leaves, 2 tbsp lime juice, and 2 tbsp agave syrup to a blender. Peeling the cucumber keeps the agua fresca a clean pale green rather than murky, and combining the mint, lime, and agave with it means their flavors blend fully into the cucumber's fresh, watery base." },
+      { step: 2, text: "Pour in 1 cup of the 4 cups cold-brewed green tea and blend on high for about 45 seconds until completely smooth. Adding just one cup of tea gives the blades enough liquid to fully puree the cucumber and mint without overwhelming them; blending long enough breaks everything down so the flavors release completely." },
+      { step: 3, text: "Strain the blended mixture through a fine-mesh sieve into a 2-quart pitcher, pressing the solids to extract all the liquid. Straining removes the cucumber pulp and mint bits that would make the drink cloudy and fibrous, leaving a smooth, refreshing agua fresca; pressing the solids captures every drop of their flavor." },
+      { step: 4, text: "Stir the remaining 3 cups of cold-brewed green tea into the strained cucumber mixture until evenly combined. Sencha's gentle, grassy bitterness balances the sweet cucumber-mint base so the drink is refreshing rather than cloying; stirring well ensures the tea and the puree marry into one uniform, pale-green agua fresca." },
+      { step: 5, text: "Divide the agua fresca among tall glasses filled with the 1 cup ice and serve immediately. Pouring over ice keeps it bracingly cold and crisp, and serving right away preserves the bright, fresh cucumber and mint aroma, which fades and turns dull if the drink sits for too long before drinking." }
     ],
     chefNotes: "English or Persian cucumbers are best here as their seeds are tender and their flavor is less bitter than standard field cucumbers.",
     pairing: "Spicy breakfast dishes",
@@ -2782,11 +2782,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "cup", item: "ice" }
     ],
     method: [
-      { step: 1, text: "Warm 2 tbsp of the 1 cup water, then stir it with 2 tbsp tamarind concentrate and 2 tbsp sugar or simple syrup." },
-      { step: 2, text: "Stir the remaining 14 tbsp water from the 1 cup water into the tamarind mixture until fully blended." },
-      { step: 3, text: "Fill a tall glass with the 1 cup ice, then pour the tamarind mixture over it until thoroughly chilled." },
-      { step: 4, text: "Whisk 1 tsp matcha powder with the reserved 2 tbsp water at about 175°F for 30 seconds until bright green and frothy." },
-      { step: 5, text: "Pour the 1 tsp matcha mixture gently over the 1 cup ice, then stir the drink before serving." }
+      { step: 1, text: "Warm 2 tbsp of the 1 cup water, then stir it with the 2 tbsp tamarind concentrate and 2 tbsp sugar until both fully dissolve into a smooth syrup. Using warm water is key: tamarind concentrate is thick and sticky and sugar dissolves slowly in cold liquid, so warming them makes a clump-free, evenly sweet-tart base for the drink." },
+      { step: 2, text: "Stir the remaining water into the tamarind syrup until fully blended into a tart tamarind-ade. Diluting the concentrated syrup with the rest of the water balances its intense sourness to a drinkable level; stirring thoroughly ensures the tamarind is evenly dispersed rather than settling into a strong slurry at the bottom." },
+      { step: 3, text: "Fill a tall glass with the 1 cup ice and pour the tamarind mixture over it. Pouring over ice chills the drink instantly and dilutes it slightly as the cubes begin to melt, and it also sets up the layered look before the matcha is floated over the top for a striking two-tone presentation." },
+      { step: 4, text: "Whisk the 1 tsp matcha powder with 2 tbsp of hot water at about 175F for 30 seconds until bright green, smooth, and frothy. Water hotter than that scorches the delicate matcha and turns it bitter, so keep it just below a boil; brisk whisking dissolves the fine powder and works up a light foam for a vibrant, lump-free shot." },
+      { step: 5, text: "Pour the matcha gently over the iced tamarind so it layers on top, then stir before drinking. The gentle pour creates a beautiful green-over-amber layer, and a final stir combines the grassy, slightly bitter matcha with the sweet-sour tamarind into a balanced, refreshing lemonade; serve immediately while cold and frothy." }
     ],
     chefNotes: "Tamarind concentrate can be quite thick; ensure it is fully dissolved with the sugar before adding the ice, or it will seize up into a sticky lump.",
     pairing: "Tamagoyaki toast",
@@ -2855,11 +2855,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "lime juice" }
     ],
     method: [
-      { step: 1, text: "Chill the 1 cup fresh mango, 1 cup fresh watermelon, and 1 cup jicama or cucumber until refrigerator-cold." },
-      { step: 2, text: "Cut the 1 cup fresh mango, 1 cup fresh watermelon, and 1 cup jicama or cucumber into bite-sized cubes." },
-      { step: 3, text: "Toss the 1 cup fresh mango, 1 cup fresh watermelon, and 1 cup jicama or cucumber with the 1 tbsp lime juice." },
-      { step: 4, text: "Divide the fruit mixture among serving cups, keeping the 1 cup fresh mango, 1 cup fresh watermelon, and 1 cup jicama or cucumber evenly distributed." },
-      { step: 5, text: "Drizzle the cups with the 2 tbsp chamoy sauce, then sprinkle the 1 tbsp Tajín seasoning evenly over the fruit." }
+      { step: 1, text: "Chill the 1 cup mango, 1 cup watermelon, and 1 cup jicama or cucumber in the refrigerator until cold. Starting with thoroughly chilled fruit is what makes a fruit cup refreshing; room-temperature fruit turns the cup lukewarm and lets the melon go mushy, whereas cold fruit stays firm, crisp, and juicy under the toppings." },
+      { step: 2, text: "Cut the mango, watermelon, and jicama or cucumber into even bite-size cubes. Uniform cubes ensure every spoonful has a balanced mix of sweet, juicy, and crunchy, and bite-size pieces are easy to eat and give the chamoy and Tajin plenty of surface area to cling to rather than sliding off large chunks." },
+      { step: 3, text: "Toss the cubed fruit gently with the 1 tbsp lime juice in a bowl. The lime brightens the fruit and, importantly, keeps the cut mango and jicama from browning while adding the acidic tang that is the hallmark of Mexican-style fruit cups; tossing gently coats everything without crushing the softer watermelon." },
+      { step: 4, text: "Divide the fruit mixture among serving cups, keeping the mango, watermelon, and jicama or cucumber layered so each cup has a colorful mix. Portioning into individual cups makes them easy to hand out and eat, and layering the different fruits looks vibrant and ensures a balanced spoonful from top to bottom." },
+      { step: 5, text: "Drizzle the 2 tbsp chamoy over each cup and dust with the 1 tbsp Tajin, then serve immediately. The sweet-sour-spicy chamoy and the chili-lime Tajin are what transform plain fruit into the craveable street-snack version, and serving right away keeps the fruit crisp before the salty toppings start drawing out its juices." }
     ],
     chefNotes: "Jicama adds an essential, watery crunch that breaks up the soft textures of the mango and watermelon. Do not skip it.",
     pairing: "Cold brew coffee",
@@ -2929,11 +2929,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "pico de gallo" }
     ],
     method: [
-      { step: 1, text: "Place the 1 large flour tortilla flat on a work surface and spread the 2 tbsp pico de gallo over one half." },
-      { step: 2, text: "Fold the empty half of the 1 large flour tortilla over the 2 tbsp pico de gallo to form a half-moon." },
-      { step: 3, text: "Heat a 10-inch skillet over medium-low heat and melt the 1 tbsp butter until it foams without browning." },
-      { step: 4, text: "Place the folded 1 large flour tortilla in the skillet and cook for 2–3 minutes per side until golden brown and crisp." },
-      { step: 5, text: "Transfer the toasted 1 large flour tortilla to a plate, cut it into wedges, and serve immediately with the 2 tbsp pico de gallo." }
+      { step: 1, text: "Lay the 1 large flour tortilla flat and spread the 1 tsp white miso paste thinly over one half, then scatter the 1/2 cup shredded Oaxaca or mozzarella over the miso and top with the 2 tbsp pico de gallo. Spreading the miso directly under the cheese seasons it with a salty, fermented umami as it melts, so the savoriness runs through every bite." },
+      { step: 2, text: "Fold the empty half of the tortilla over the filling to make a half-moon and press gently. Folding a single tortilla keeps the quesadilla thin so it crisps fast and the cheese heats through evenly, and a light press helps the two halves seal together around the melting cheese so nothing spills as it cooks." },
+      { step: 3, text: "Heat a 10-inch skillet over medium-low heat and melt the 1 tbsp butter until it foams without browning. Foaming butter signals the pan is at the right temperature to crisp the tortilla into a golden shell; if it browns it will taste burnt, and a too-cool pan leaves the tortilla pale and the cheese unmelted." },
+      { step: 4, text: "Cook the folded quesadilla for 2 to 3 minutes per side until golden, crisp, and the cheese is fully melted and molten. Cooking slowly on each side gives the cheese time to melt completely before the tortilla burns, and pressing gently with a spatula ensures even browning and a well-sealed edge." },
+      { step: 5, text: "Slide it onto a plate, let it settle for a minute, then cut into wedges and serve immediately. The brief rest lets the molten cheese set just enough that it does not gush out the moment you slice, and cutting into wedges makes it easy to eat while the tortilla is still crisp and the miso-spiked cheese stretchy." }
     ],
     chefNotes: "Use a very light hand with the miso. It is highly concentrated and acts as the salt for the entire dish.",
     pairing: "Fresh orange juice",
@@ -3003,11 +3003,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "2", unit: "", item: "corn tortillas", note: "warmed" }
     ],
     method: [
-      { step: 1, text: "Wrap the 1 block firm tofu in paper towels, press until the towels are damp, and crumble the tofu into bite-size pieces." },
-      { step: 2, text: "Heat a 10-inch skillet over medium heat, add the 1 tbsp olive oil, and warm it until it lightly shimmers." },
-      { step: 3, text: "Add the 1/2 cup soy chorizo and cook for about 3 minutes, stirring, until crumbly and its red oil releases." },
-      { step: 4, text: "Add the crumbled 1 block firm tofu and cook for 5 minutes, stirring, until bright orange and slightly dry." },
-      { step: 5, text: "Stir in the 2 tbsp chopped fresh cilantro and serve the scramble immediately with the 2 warmed corn tortillas." }
+      { step: 1, text: "Wrap the 1 block of firm tofu in paper towels or a clean cloth and press it under a weight for a few minutes until the towels are damp, then crumble it into bite-size pieces. Pressing out the water is essential: waterlogged tofu steams and stays soggy in the pan, whereas well-pressed tofu browns and drinks up the chorizo's flavor." },
+      { step: 2, text: "Heat the 1 tbsp olive oil in a 10-inch skillet over medium heat until it lightly shimmers, then add the 1/4 cup diced white onion and cook for 2 to 3 minutes until softened. Sweating the onion first builds a sweet, savory base and softens its raw bite before the other ingredients pile in on top." },
+      { step: 3, text: "Add the 1/2 cup soy chorizo and cook for about 3 minutes, stirring and breaking it up, until crumbly and its brick-red oil releases into the pan. That colored oil is the flavor engine of the scramble, coating everything in smoky, spiced richness, so let the chorizo cook until it looks dry-edged and its fat has fully rendered out." },
+      { step: 4, text: "Fold in the crumbled tofu and cook for about 5 minutes, stirring occasionally, until it turns bright orange from the chorizo oil and the surface dries and firms slightly. The tofu acts like scrambled eggs here, soaking up the seasoning; cooking off its moisture concentrates the flavor and gives it a pleasant, lightly crisp texture." },
+      { step: 5, text: "Stir in the 2 tbsp chopped fresh cilantro and serve immediately with the 2 warmed corn tortillas. Adding the cilantro off the heat keeps it fresh and vibrant against the rich, spiced tofu, and the warm tortillas let you scoop the scramble into soft tacos while everything is still hot and the tofu retains its just-crisped edges." }
     ],
     chefNotes: "Soy chorizo is widely available (Trader Joe's makes a famous version). It is already highly seasoned and salted, so do not add extra salt to the tofu.",
     pairing: "Cold brew coffee",
@@ -3040,11 +3040,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "scallions", note: "finely chopped" }
     ],
     method: [
-      { step: 1, text: "Open the 1 pack natto, remove its packets, and place the fermented soybeans in a small bowl." },
-      { step: 2, text: "Stir the 1 pack natto vigorously with chopsticks for 50 rotations, until thick white foam visibly coats the beans." },
-      { step: 3, text: "Add the 1 tsp soy sauce, 1/2 tsp karashi mustard, and 2 tbsp chopped scallions, then stir until combined." },
-      { step: 4, text: "Spoon the 1 cup hot cooked white rice into a serving bowl and top it evenly with the frothy 1 pack natto." },
-      { step: 5, text: "Make a well in the natto, add the 1 pasteurized raw egg yolk, and mix it through while the bowl is still hot." }
+      { step: 1, text: "Open the 1 pack of natto, set aside its enclosed soy sauce and mustard packets, and tip the fermented soybeans into a small bowl. Thawing and transferring the natto to a roomy bowl gives you space to whip it, which is the crucial step that develops its signature texture rather than eating it dense and clumped from the container." },
+      { step: 2, text: "Stir the natto vigorously with chopsticks for about 50 rotations until a thick, sticky white foam coats the beans in glossy strands. This aggressive whipping is not optional: it aerates the natto and draws out the springy, web-like threads that mellow its pungency and give it the light, frothy mouthfeel that natto lovers prize." },
+      { step: 3, text: "Add the 1 tsp soy sauce and 1/2 tsp karashi mustard from the packets plus most of the 2 tbsp chopped scallions, then stir until combined. The soy seasons the beans while the sharp karashi mustard cuts their funk and adds a nose-tingling heat; stirring them in after whipping keeps the foam intact and evenly seasoned." },
+      { step: 4, text: "Spoon the 1 cup hot cooked white rice into a serving bowl and mound the frothy natto over it. Serving the natto over piping-hot rice is traditional and practical: the warmth loosens the sticky strands and mellows the beans' aroma, while the plain rice balances their intensity into a comforting, savory breakfast." },
+      { step: 5, text: "Make a small well in the natto, drop in the 1 pasteurized raw egg yolk, and stir it through while the bowl is still hot, finishing with the remaining scallions. The rich yolk coats the beans and rice in a silky, custard-like glaze as the residual heat gently warms it, tying the bowl together; eat immediately while hot." }
     ],
     chefNotes: "Natto is an acquired taste. Stirring it vigorously before adding the flavorings is culturally mandated to develop the 'neba-neba' (sticky) texture.",
     pairing: "Hot miso soup",
@@ -3077,11 +3077,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "sheet", item: "roasted nori", note: "cut into squares" }
     ],
     method: [
-      { step: 1, text: "Set the 1/2 ripe avocado and 1/2 cup cooked white rice on a plate; no oven or pan is needed, and the rice should look moist." },
-      { step: 2, text: "Score the flesh of the 1/2 ripe avocado in a crosshatch pattern without piercing its skin, then rest it for 2 minutes." },
-      { step: 3, text: "Spread the 1 tbsp white miso paste evenly over the scored 1/2 ripe avocado, pressing it gently into the cuts." },
-      { step: 4, text: "Check that the 1/2 cup cooked white rice squares are warm and arrange them beside the visibly glazed 1/2 ripe avocado." },
-      { step: 5, text: "Serve the 1/2 ripe avocado with the 1/2 cup cooked white rice immediately, while the miso coating still looks glossy and moist." }
+      { step: 1, text: "Set the 1/2 ripe avocado, still in its skin, and the 1/2 cup warm cooked white rice on a plate. Leaving the avocado in its skin keeps it from oxidizing and gives you a natural vessel to score and glaze, while the warm rice serves as the cozy, neutral base that balances the rich, salty miso-glazed fruit." },
+      { step: 2, text: "Score the avocado flesh in a crosshatch pattern with a knife tip without piercing the skin, then let it rest 2 minutes. The cuts open channels so the glaze can seep deep into the flesh rather than just sitting on top, and the brief rest lets the surface settle so the glaze clings evenly across every scored square." },
+      { step: 3, text: "Whisk the 1 tbsp white miso paste with the 1 tsp mirin until smooth, then spread it over the scored avocado, pressing gently into the cuts. The mirin loosens and sweetens the salty miso into a glossy, spreadable glaze, and working it into the crosshatch seasons the avocado all the way through rather than only on the surface." },
+      { step: 4, text: "Halve and add the 1 soft-boiled large egg beside the glazed avocado, and arrange the warm rice topped with the 1 sheet of nori cut into squares. The jammy egg and the crisp, briny nori round out the plate with contrasting textures, and keeping the rice warm makes it inviting against the cool, creamy avocado." },
+      { step: 5, text: "Serve immediately while the miso glaze is glossy and the rice warm, scooping the avocado straight from the skin. Eating it right away keeps the glaze vibrant and the soft-boiled yolk runny to mix into the rice with the nori, giving each bite a balance of savory miso, creamy avocado, and toasty seaweed." }
     ],
     chefNotes: "Scoring the avocado allows the salty miso glaze to penetrate deeply, seasoning every bite instead of just sitting on top.",
     pairing: "Hot sencha green tea",
@@ -3152,12 +3152,12 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "pinch", item: "salt" }
     ],
     method: [
-      { step: 1, text: "Mix the 2 tbsp cold cream cheese cubes with the 2 tbsp finely chopped pickled jalapeños for 30 seconds until evenly speckled." },
-      { step: 2, text: "Keep the 2 cups cooked sushi rice warm at about 100°F; no oven or pan is needed, and the grains should remain sticky." },
-      { step: 3, text: "Wet your hands, rub the 1 pinch salt over your palms, and work promptly so the 2 cups cooked sushi rice stays warm." },
-      { step: 4, text: "Take a portion of the 2 cups cooked sushi rice, flatten it, and place some of the 2 tbsp cream cheese filling in the center." },
-      { step: 5, text: "Enclose the 2 tbsp cream cheese and 2 tbsp pickled jalapeños completely, then shape the rice into a firm triangle within 1 minute." },
-      { step: 6, text: "Press the 1 tbsp furikake onto the triangle's sides, then rest the onigiri for 2 minutes until its surface looks compact and dry." }
+      { step: 1, text: "Mix the 2 tbsp cold cream cheese cubes with the 2 tbsp finely chopped pickled jalapenos in a small bowl. Keeping the cream cheese cold and cubed rather than whipped means it stays in discrete pockets inside the rice, so each onigiri delivers a creamy, tangy, spicy surprise at its center rather than a dissolved, uniform smear." },
+      { step: 2, text: "Keep the 2 cups cooked sushi rice warm and sticky at around body temperature, covered with a damp cloth. Warm, sticky rice is essential because it presses together and holds a shape; cold rice turns hard and crumbly and will not compact into a cohesive triangle, so work with it while it is still pliable and tacky." },
+      { step: 3, text: "Wet your hands and rub the 1 pinch salt over your palms before shaping. Wet hands keep the sticky rice from gluing to your fingers, and salting your palms seasons the outside of each onigiri as you form it, giving the plain rice a subtle savory edge that also acts as a natural preservative." },
+      { step: 4, text: "Take a handful of rice, flatten it in your palm, and place a spoonful of the cream cheese and jalapeno filling in the center. Making a well and centering the filling ensures it ends up buried in the middle rather than leaking out the side, so the onigiri holds together and hides its creamy core until you bite in." },
+      { step: 5, text: "Fold the rice up and over to enclose the filling completely, then press and rotate to shape it into a firm triangle. Sealing the filling fully prevents it from oozing out, and pressing gently but firmly on all three sides compacts the rice enough to hold its shape when handled without squashing it into a dense puck." },
+      { step: 6, text: "Press the 1 tbsp furikake onto the sides, wrap a strip of the 2 sheets of nori around the base, and rest 2 minutes before eating. The furikake adds savory sesame-seaweed flavor to the surface, and wrapping the nori just before serving keeps it crisp, while the short rest lets the shape firm so it holds when picked up." }
     ],
     chefNotes: "The rice must be hot or very warm. Cold rice will not stick together. Wet, salted hands are the absolute secret to perfect onigiri.",
     pairing: "Cold iced tea",
@@ -3189,11 +3189,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "scallions", note: "finely chopped" }
     ],
     method: [
-      { step: 1, text: "Place the 1 tbsp dried wakame seaweed in cold water for 5 minutes, until expanded and pliable, then drain thoroughly." },
-      { step: 2, text: "Heat the 3 cups dashi broth in a medium saucepan over medium heat until steaming and gently simmering, not boiling." },
-      { step: 3, text: "Add the drained 1 tbsp dried wakame seaweed to the simmering 3 cups dashi broth and cook for 1 minute until tender." },
-      { step: 4, text: "Remove the saucepan from the heat, then whisk the 2 tbsp white or mixed miso paste with a ladleful of hot broth until smooth." },
-      { step: 5, text: "Stir the dissolved 2 tbsp white or mixed miso paste into the 3 cups broth, keeping it below a boil, then serve immediately." }
+      { step: 1, text: "Soak the 1 tbsp dried wakame in cold water for about 5 minutes until it expands and softens, then drain. Dried wakame is brittle and concentrated, so rehydrating it first lets it unfurl into tender, silky ribbons; adding it dry to the soup would leave it tough and let it keep swelling in the bowl into an unpleasant tangle." },
+      { step: 2, text: "Heat the 3 cups dashi broth in a saucepan over medium heat until steaming and gently simmering, not boiling. Dashi is the savory soul of miso soup, and keeping it just below a boil preserves its delicate smoky-oceanic aroma; a hard boil would drive off those subtle notes and leave the base tasting flat." },
+      { step: 3, text: "Add the 1/2 block of cubed silken tofu and the drained wakame and warm through for about a minute. Silken tofu is fragile, so slipping it in gently and only heating it briefly keeps the cubes intact and custardy rather than breaking them apart, while the wakame just needs a moment to warm and release its flavor." },
+      { step: 4, text: "Take the pan off the heat, then whisk the 2 tbsp miso paste into a ladleful of the hot broth in a separate cup until fully dissolved before stirring it back in. Dissolving the miso off the heat and separately is crucial: boiling miso destroys its live probiotics and delicate flavor, and pre-dissolving prevents gritty undissolved lumps." },
+      { step: 5, text: "Stir the dissolved miso back into the soup, keeping it below a simmer, and finish with the 2 tbsp chopped scallions. Never let it boil after the miso goes in, or the soup turns harsh and grainy; the fresh scallions add a bright, sharp lift right at the end, so serve immediately while hot and fragrant." }
     ],
     chefNotes: "Never boil miso soup once the paste is added. High heat destroys the aromatic nuances and beneficial enzymes of the fermented soybean paste.",
     pairing: "Tamagoyaki and white rice",
@@ -3226,11 +3226,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "sesame seeds" }
     ],
     method: [
-      { step: 1, text: "Put the 1 cup steamed white rice in a warmed deep bowl within 1 minute of steaming, then make a well in its center." },
-      { step: 2, text: "Whisk the 1 tbsp soy sauce (citrus chili paste) in a small dish for 30 seconds, until the mixture looks smooth and uniform." },
-      { step: 3, text: "Crack the 1 pasteurized egg directly into the well in the 1 cup steamed white rice while the rice remains visibly steaming hot." },
-      { step: 4, text: "Pour the whisked 1 tbsp soy sauce (citrus chili paste) evenly over the 1 pasteurized egg and hot rice." },
-      { step: 5, text: "Whip the 1 pasteurized egg into the 1 cup rice with chopsticks for 1 minute, until pale and frothy, then add the 1 tbsp scallions and 1 tsp sesame seeds." }
+      { step: 1, text: "Scoop the 1 cup steaming-hot white rice into a warmed deep bowl within a minute of cooking and press a well into the center. The retained heat of fresh rice is the engine of this dish, gently cooking the raw egg into a glossy emulsion, and the well cradles the egg so it warms evenly against the maximum surface of hot rice." },
+      { step: 2, text: "Whisk the 1 tbsp soy sauce with the 1/4 tsp yuzu kosho in a small dish for about 30 seconds until the citrus-chile paste fully dissolves. Blending the yuzu kosho into the soy first ensures its fragrant, spicy heat spreads evenly through the finished bowl rather than landing as one sharp, concentrated bite." },
+      { step: 3, text: "Crack the 1 very fresh pasteurized egg into the well while the rice is still piping hot and let it sit for 30 seconds. A fresh egg holds a tight, domed yolk that whips into a creamier emulsion, and the brief rest lets the heat begin setting the white so the final texture is silky rather than thin and watery." },
+      { step: 4, text: "Pour the yuzu-kosho soy mixture evenly over the egg and rice. Distributing the seasoning across the surface before whisking means it disperses uniformly as you beat everything together, so every spoonful carries the same balance of savory soy and the bright, peppery citrus kick of the yuzu kosho." },
+      { step: 5, text: "Whip the egg into the rice vigorously with chopsticks for about a minute until pale, glossy, and frothy, then top with the 1 tbsp sliced scallions and 1 tsp sesame seeds. Fast whisking against the hot rice emulsifies the egg into a creamy coating; the scallions and sesame add fresh crunch, so eat immediately while hot." }
     ],
     chefNotes: "Yuzu kosho is extremely salty and intensely spicy. Use only a tiny smear (1/4 tsp) to start, or it will overwhelm the delicate egg.",
     pairing: "Hot roasted green tea",
@@ -3263,11 +3263,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1/4", unit: "cup", item: "sugar" }
     ],
     method: [
-      { step: 1, text: "Stir the 1 cup whole milk ricotta cheese (separated) with the 1 tbsp yuzu juice and 1 tsp yuzu zest until smooth." },
-      { step: 2, text: "Fold the 3/4 cup all-purpose flour and 1/4 cup sugar into the ricotta mixture until no dry streaks remain, without overmixing." },
-      { step: 3, text: "Heat a dry 10-inch nonstick skillet over medium-low heat until evenly warm, then keep the batter made with 1 cup ricotta nearby." },
-      { step: 4, text: "Spoon the batter made with 3/4 cup all-purpose flour into the skillet and cook for about 3 minutes per side, until golden and set." },
-      { step: 5, text: "Transfer the pancakes to a plate and serve immediately while warm, with the 1 tsp yuzu zest and 1 tbsp yuzu juice already in the batter." }
+      { step: 1, text: "Stir the 1 cup whole-milk ricotta with the 3 egg yolks, 1 tbsp yuzu juice, and 1 tsp yuzu zest until smooth and creamy, reserving the whites. The ricotta gives these pancakes their signature moist, tender, almost cheesecake-like crumb, and the yuzu juice and zest lace the batter with a floral, tart citrus aroma that keeps the richness bright." },
+      { step: 2, text: "Gently fold the 3/4 cup all-purpose flour and 1/4 cup sugar into the ricotta mixture until no dry streaks remain, being careful not to overmix. A light hand keeps the gluten relaxed for a delicate crumb; overworking the batter now would make the finished pancakes dense and chewy instead of soft and pillowy." },
+      { step: 3, text: "In a clean bowl, beat the reserved 3 egg whites to soft peaks and fold them into the batter in two additions. This is the trick to a light ricotta pancake: the whipped whites trap air that puffs the dense batter as it cooks, so fold gently to keep that air intact and avoid deflating the meringue into flat batter." },
+      { step: 4, text: "Heat a nonstick skillet over medium-low heat and spoon on the batter, cooking about 3 minutes per side until golden and set. Low, steady heat is essential because this thick, cheese-rich batter needs time to cook through the center before the surface browns; higher heat scorches the outside while the middle stays raw and wet." },
+      { step: 5, text: "Serve the pancakes immediately while warm, finished with a little extra 1 tsp yuzu zest and a drizzle of the 1 tbsp yuzu juice. Adding fresh zest at the table releases its fragrant oils right under your nose, and serving hot keeps the ricotta crumb at its softest and most custardy before it firms as it cools." }
     ],
     chefNotes: "Do not over-mix the batter when folding in the egg whites, or you will lose the cloud-like texture.",
     pairing: "Hot Earl Grey tea",
@@ -3300,11 +3300,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "furikake" }
     ],
     method: [
-      { step: 1, text: "Place the 1/2 lb diced sashimi-grade tuna in a bowl and gently fold in the 2 tbsp warm spicy mayonnaise for 30 seconds." },
-      { step: 2, text: "Bring a small saucepan of water to a rolling boil at about 212°F, then lower in the 2 large eggs and boil for exactly 6 minutes." },
-      { step: 3, text: "Cool the 2 large eggs under cold running water for 2 minutes, then peel them carefully and slice each egg in half." },
-      { step: 4, text: "Divide the tuna mixture between two serving bowls and arrange the 2 large egg halves beside the tuna in each bowl." },
-      { step: 5, text: "Sprinkle the 1 tbsp furikake evenly over the tuna and eggs, then serve immediately while the mayonnaise remains warm." }
+      { step: 1, text: "Gently fold the 1/2 lb diced sashimi-grade tuna with the 2 tbsp spicy mayonnaise and 1 tsp sesame oil in a chilled bowl. Folding rather than stirring keeps the delicate tuna cubes intact and glossy, and coating them in the creamy, piquant mayo and nutty sesame oil seasons the fish evenly while preserving its clean, cold texture." },
+      { step: 2, text: "Bring a small saucepan of water to a rolling boil, lower in the 2 large eggs, and boil for exactly 6 to 7 minutes for a jammy center. Precise timing is what gives you soft-boiled eggs with set whites and molten yolks; the boiling water and a steady clock are the only way to hit that custardy middle reliably." },
+      { step: 3, text: "Cool the eggs under cold running water for 2 minutes, then peel carefully and halve each. The cold rinse halts the cooking instantly so the yolks stay soft and stops a grey ring forming, and peeling under water floats the shell away cleanly without gouging the tender set whites." },
+      { step: 4, text: "Divide the 2 cups warm sushi rice between two bowls, spoon the spicy tuna over one side, and nestle the egg halves beside it. The warm, seasoned rice is the cozy base that contrasts the cold tuna, and arranging the components in sections rather than mixing keeps each element distinct and the bowl looking vibrant." },
+      { step: 5, text: "Sprinkle the 1 tbsp furikake over the tuna and eggs and serve immediately. The furikake adds a final layer of toasted sesame and nori for savory crunch, and serving right away is essential with raw fish, keeping the tuna cold and fresh and the egg yolks warm and runny to fold into the rice." }
     ],
     chefNotes: "The tuna must be exceedingly fresh. If you cannot find sashimi-grade fish, substitute with high-quality canned tuna mixed with the same spicy mayo.",
     pairing: "Iced green tea",
@@ -3335,11 +3335,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "flaky sea salt" }
     ],
     method: [
-      { step: 1, text: "Arrange the 4 slices matcha chocolate babka in a single layer so each slice can toast evenly in the skillet." },
-      { step: 2, text: "Heat a dry 10-inch skillet over medium heat for 2 minutes, then place the 4 babka slices in the pan." },
-      { step: 3, text: "Toast the 4 babka slices for 2–3 minutes per side until crusty, golden at the edges, and visibly glossy where the chocolate melts." },
-      { step: 4, text: "Remove the 4 hot babka slices from the skillet and immediately distribute the 2 tbsp cold sliced unsalted butter over them." },
-      { step: 5, text: "Dust the 4 buttered babka slices with the 1 tsp cinnamon, then finish with the 1 tsp flaky sea salt while still hot." }
+      { step: 1, text: "Arrange the 4 slices of matcha chocolate babka in a single layer so each can toast evenly without overlapping. Laying them flat and separate ensures the heat reaches every surface at once, giving an even golden crust; stacked slices would steam against each other and toast unevenly, leaving some spots pale and soggy." },
+      { step: 2, text: "Heat a dry 10-inch skillet over medium heat for about 2 minutes, then lay the babka slices in the hot pan. A properly preheated dry skillet is what caramelizes the sugars in the babka's chocolate and matcha swirls on contact, creating a crisp, toasty exterior rather than slowly drying the bread out into something stale-tasting." },
+      { step: 3, text: "Toast the slices for 2 to 3 minutes per side until the edges are crusty and golden and the surface looks visibly crisp. Watch them closely, because the enriched, sugary babka browns fast and can scorch; you want a deep golden toast that crackles at the edge while the interior stays soft and the chocolate turns molten." },
+      { step: 4, text: "Pull the hot slices from the skillet and immediately dot them with the 2 tbsp cold sliced butter so it melts into the warm crumb. Adding cold butter to piping-hot toast lets it melt slowly and soak in, glazing the surface with richness; the residual heat does the work, seeping butter into every craggy pocket." },
+      { step: 5, text: "Dust the buttered slices with the 1 tsp cinnamon and finish with a pinch of the 1 tsp flaky sea salt, then serve immediately. The cinnamon echoes the warm spice of Mexican chocolate while the flaky salt punctuates the sweetness and deepens the chocolate; serving hot keeps the butter molten and the toast crisp before it cools." }
     ],
     chefNotes: "The contrast of cold butter melting against the hot, toasted sweet bread is the entire point of the dish. Serve immediately.",
     pairing: "Cortado",
@@ -3371,11 +3371,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "Japanese mayonnaise" }
     ],
     method: [
-      { step: 1, text: "Arrange the 3 slices thick-cut bacon in a 10-inch skillet and fry over medium heat for 8–10 minutes until crisp and deeply browned." },
-      { step: 2, text: "Transfer the 3 crisp bacon slices to a paper towel-lined plate and let them drain for 2 minutes while remaining visibly crisp." },
-      { step: 3, text: "Toast both cut sides of the 1 brioche bun in the skillet over medium heat for 1–2 minutes until golden and lightly crisp." },
-      { step: 4, text: "Spread the 1 tbsp Japanese mayonnaise evenly over the cut sides of the toasted 1 brioche bun." },
-      { step: 5, text: "Layer the 3 fresh shiso leaves and the 3 bacon slices on the bottom bun, close with the top bun, and serve hot." }
+      { step: 1, text: "Fry the 3 slices of thick-cut bacon in a 10-inch skillet over medium heat for 8 to 10 minutes, turning, until deeply crisp and the fat has rendered. Cooking bacon from a moderate heat lets the fat render slowly so the meat crisps evenly rather than burning; that rendered fat also flavors the pan for toasting the bun and frying the eggs." },
+      { step: 2, text: "Transfer the bacon to a paper-towel-lined plate to drain for about 2 minutes while you cook the rest. Draining on paper towels wicks away excess grease so the bacon stays crackling-crisp instead of turning soft and oily, and it keeps the finished sandwich from becoming slick and heavy with fat." },
+      { step: 3, text: "Fry the 2 large eggs over-medium in the bacon fat until the whites are fully set and the yolks are just barely runny, then toast the cut sides of the 1 brioche bun in the same skillet for 1 to 2 minutes until golden. Cooking the eggs and bun in the rendered fat layers smoky, savory flavor into every component." },
+      { step: 4, text: "Spread the 1 tbsp Japanese mayonnaise evenly over both toasted cut sides of the bun. Kewpie mayo is richer and tangier than standard mayonnaise, and spreading it on the warm, crisp bun adds a creamy, umami-laced layer that keeps the bread from tasting dry and helps hold the fillings in place." },
+      { step: 5, text: "Layer the 3 fresh shiso leaves and the crisp bacon on the bottom bun, add the over-medium eggs, and close with the top. The shiso brings a bright, minty-citrusy herbal note that cuts the richness of the bacon and yolk, and assembling right before eating keeps the bun crisp and the yolks warm to burst on the first bite." }
     ],
     chefNotes: "Shiso leaves are delicate; place them against the cold mayo, not directly against the hot eggs, so they don't wilt and turn black.",
     pairing: "Cold brew coffee",
@@ -3409,13 +3409,13 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "queso fresco" }
     ],
     method: [
-      { step: 1, text: "Heat a small saucepan over low heat, add the 1/2 cup refried black beans, and warm for 3 minutes until steaming." },
-      { step: 2, text: "Stir the 1 tsp red miso paste into the 1/2 cup refried black beans over low heat until fully dissolved and smooth." },
-      { step: 3, text: "Lightly fry the 2 corn tortillas in a skillet over medium heat for 1–2 minutes per side until pliable but firm." },
-      { step: 4, text: "Fry the 2 large eggs in a 10-inch skillet over medium-low heat until the whites are set and the yolks remain runny." },
-      { step: 5, text: "Warm the 1/4 cup salsa roja and 1/4 cup salsa verde separately over low heat for 2–3 minutes until steaming but not boiling." },
-      { step: 6, text: "Place the 2 corn tortillas side by side on a wide plate and spread the 1/2 cup miso black beans between them." },
-      { step: 7, text: "Top each tortilla with 1 large egg, cover one with the 1/4 cup salsa roja and one with the 1/4 cup salsa verde, then scatter the 2 tbsp queso fresco." }
+      { step: 1, text: "Warm the 1/2 cup refried black beans in a small saucepan over low heat for about 3 minutes, stirring, until loose and heated through. Gentle heat keeps the beans from scorching and drying out, and warming them fully makes them spreadable so they form a smooth, cohesive base layer under the eggs on each tortilla." },
+      { step: 2, text: "Stir the 1 tsp red miso paste into the warm beans until fully dissolved. The red miso adds a deep, savory umami and salt that amplifies the earthy beans, mimicking the richness of long-cooked frijoles; dissolving it completely over low heat spreads that savoriness evenly rather than leaving concentrated salty pockets." },
+      { step: 3, text: "Lightly fry the 2 corn tortillas in a skillet over medium heat for 1 to 2 minutes per side until pliable and lightly crisp at the edges. Quick-frying gives the tortillas structure and a toasty flavor so they hold the beans and egg without going soggy, while keeping them flexible enough to fold or cut easily." },
+      { step: 4, text: "Fry the 2 large eggs sunny-side up in a 10-inch skillet over medium-low heat until the whites are set but the yolks stay runny. Cooking them undisturbed on gentle heat keeps the delicate whites intact and the edges frilly while preserving the molten yolks, which are essential for the sauce-mixing that defines this dish." },
+      { step: 5, text: "Warm the 1/4 cup salsa roja and 1/4 cup salsa verde separately over low heat for 2 to 3 minutes. Heating them apart is the whole concept of huevos divorciados, or divorced eggs: the two sauces must stay distinct, one red and one green, so warming them in separate pans keeps their colors and flavors uncrossed." },
+      { step: 6, text: "Set the 2 tortillas side by side on a wide plate and spread the miso black beans over each. Spreading the beans first anchors the eggs and adds a savory foundation, and placing the tortillas next to each other sets up the signature two-sauce presentation with a bean divider running down the middle like a border." },
+      { step: 7, text: "Top each tortilla with a fried egg, spoon the salsa roja over one and the salsa verde over the other, and crumble the 2 tbsp queso fresco across both. Sauce one egg red and one green to complete the divorced-eggs look, and serve immediately so the yolks are runny and the sauces bright and hot." }
     ],
     chefNotes: "The beans act as a dam to prevent the salsas from mixing. Ensure they are thick enough to hold the line.",
     pairing: "Cafe de Olla",
@@ -3449,13 +3449,13 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "fresh cilantro" },
     ],
     method: [
-      { step: 1, text: "Heat a 10-inch oven-safe skillet over medium heat, add the 1 red bell pepper diced, and cook for 5 minutes until softened." },
-      { step: 2, text: "Add the 1 can crushed tomatoes (14 oz) to the skillet and simmer over medium heat for 5 minutes until visibly thickened." },
-      { step: 3, text: "Spoon some sauce into a small bowl, stir in the 1 tbsp red miso paste minced, and return the mixture to the skillet." },
-      { step: 4, text: "Stir the 1 tbsp red miso paste through the 1 can crushed tomatoes (14 oz) until the sauce is evenly colored and smooth." },
-      { step: 5, text: "Make 4 wells in the sauce with a spoon, crack the 4 large eggs into them, and cover the skillet over low heat." },
-      { step: 6, text: "Cook the covered 4-egg shakshuka for 5–7 minutes until the whites are just set while the yolks remain visibly soft." },
-      { step: 7, text: "Remove the skillet from the heat and scatter the 2 tbsp fresh cilantro over the hot tomato sauce and set eggs." }
+      { step: 1, text: "Heat a 10-inch oven-safe skillet over medium heat, add the diced 1 red bell pepper, and cook for about 6 minutes until softened and lightly charred at the edges. Sweating the pepper first draws out its natural sweetness and softens its texture, building a mellow, slightly smoky base that balances the heat and savory miso to come." },
+      { step: 2, text: "Stir the 1 tsp cumin and minced 1 serrano chile into the softened pepper and cook for a minute until fragrant, then add the 1 can (14 oz) crushed tomatoes and simmer for about 5 minutes. Toasting the cumin and chile in the hot pan blooms their aromas, and simmering the tomatoes begins to thicken the sauce." },
+      { step: 3, text: "Spoon a ladle of the hot sauce into a small bowl, whisk the 1 tbsp red miso paste into it until smooth, then return it to the skillet. Dissolving the miso in a little sauce first prevents lumps and protects it from scorching on the bare pan, so its deep, meaty umami disperses evenly through the whole dish." },
+      { step: 4, text: "Stir the miso mixture through the tomato sauce and continue simmering until it thickens enough to hold a spoon-drawn trench, about 3 to 5 minutes more. A thick sauce is essential so the wells you make will cradle the eggs; if it is too loose the eggs drift and scatter instead of poaching neatly in place." },
+      { step: 5, text: "Make 4 wells in the sauce with the back of a spoon and crack one of the 4 large eggs into each, keeping the yolks sitting proud above the sauce. Nestling the whites into the sauce while the yolks stay on top helps the whites poach and set while the yolks remain runny." },
+      { step: 6, text: "Cover the skillet and cook for 5 to 7 minutes until the whites are just set but the yolks still jiggle when nudged. The trapped steam sets the tops of the eggs without overcooking them, so pull the pan the moment the whites turn opaque and firm to keep the yolks molten." },
+      { step: 7, text: "Take the skillet off the heat and scatter the 2 tbsp fresh cilantro over the hot sauce, then serve straight from the pan. Adding the cilantro at the very end keeps it bright and fresh against the rich, savory tomato-miso base, and serving immediately means the eggs are still soft and the sauce bubbling." }
     ],
     chefNotes: "Cover the pan so steam sets the whites from above without overcooking the yolks.",
     pairing: "Warm pita or crusty bread",
@@ -3640,12 +3640,12 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "", item: "large egg" },
     ],
     method: [
-      { step: 1, text: "Sift the 1.5 cups all-purpose flour, 2 tbsp culinary matcha powder, 1 tbsp sugar, 1 tsp baking powder, and 1/2 tsp baking soda into a large bowl." },
-      { step: 2, text: "Whisk the 1.5 cups buttermilk and 1 large egg in a separate bowl until the egg is fully blended and no streaks remain." },
-      { step: 3, text: "Pour the 1.5 cups buttermilk mixture into the dry ingredients and fold until the batter is just combined, with a few lumps remaining." },
-      { step: 4, text: "Heat a 10-inch nonstick skillet over medium-low heat, then portion batter made with the 1.5 cups flour into evenly sized pancakes." },
-      { step: 5, text: "Cook each pancake made with the 1.5 cups buttermilk for about 2 minutes, until bubbles form across the surface and the edges look set." },
-      { step: 6, text: "Flip the pancakes made with the 2 tbsp matcha powder and cook for 90 seconds, until the undersides are lightly browned and the centers spring back." }
+      { step: 1, text: "Sift the 1.5 cups all-purpose flour, 2 tbsp culinary matcha powder, 1 tbsp sugar, 1 tsp baking powder, and 1/2 tsp baking soda together into a large bowl. Sifting is key here: it breaks up the notoriously clumpy matcha and distributes the leaveners evenly, so the pancakes bake up a uniform jade green with an all-over rise and no bitter powdery pockets." },
+      { step: 2, text: "Whisk the 1.5 cups buttermilk and 1 large egg in a separate bowl until fully blended. Buttermilk is essential to the recipe because its acidity reacts with the baking soda for extra lift and tang, and whisking the egg in fully creates a smooth liquid that will hydrate the dry ingredients evenly for a tender crumb." },
+      { step: 3, text: "Pour the wet into the dry and fold just until the batter comes together with a few lumps remaining, then rest it 5 minutes. Overmixing develops gluten and turns pancakes tough and flat, so stop while lumpy; the rest lets the flour hydrate and the leaveners start working, producing thicker, fluffier pancakes." },
+      { step: 4, text: "Heat a 10-inch nonstick skillet over medium-low heat and ladle on the batter. Medium-low is important for matcha pancakes because the green color scorches easily to an ugly brown at high heat; a gentle pan lets them cook through and stay vividly green with just a light golden freckling on the surface." },
+      { step: 5, text: "Cook each pancake for about 2 minutes, until bubbles form and pop across the surface and the edges look dry and set. Those popping bubbles are your signal the underside is golden and the structure has set enough to flip; turning too early tears the delicate, barely-set pancake." },
+      { step: 6, text: "Flip and cook about 90 seconds more until the underside is golden and the center springs back when pressed. The gentle press test confirms the interior has cooked through; serve the matcha pancakes warm and stacked so they stay soft and fluffy before the crumb firms up as they cool." }
     ],
     chefNotes: "Overmixing pancake batter develops gluten and produces tough, flat pancakes. Stir only until the dry ingredients disappear.",
     pairing: "Hot matcha latte",
@@ -3717,12 +3717,12 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "", item: "large egg" },
     ],
     method: [
-      { step: 1, text: "Whisk the 1 tbsp white miso paste, 3/4 cup oat milk or almond milk, and 1 large egg in a bowl until smooth." },
-      { step: 2, text: "Fold the 1 cup all-purpose flour (mashed) into the miso mixture until no dry streaks remain, keeping the batter thick and slightly lumpy." },
-      { step: 3, text: "Let the batter made with the 3/4 cup oat milk or almond milk stand briefly while you heat the skillet and prepare to cook." },
-      { step: 4, text: "Heat a 10-inch nonstick skillet over medium-low heat, then portion the batter containing the 1 tbsp white miso paste into pancakes." },
-      { step: 5, text: "Cook each pancake made with the 1 cup flour (mashed) for about 2 minutes, until bubbles appear and the edges look dry and set." },
-      { step: 6, text: "Flip the pancakes and cook for about 2 minutes more, until the second sides are lightly browned and the centers spring back when pressed." }
+      { step: 1, text: "Whisk the 1 tbsp white miso paste, 3/4 cup oat or almond milk, and 1 large egg in a bowl until the miso is fully dissolved and the mixture is smooth. Dissolving the miso completely into the wet ingredients spreads its salty, savory depth evenly through the batter, which is what gives these pancakes their intriguing salted-caramel-like flavor against the sweet banana." },
+      { step: 2, text: "Mash the 2 ripe bananas and fold them into the wet mixture, then add the 1 cup all-purpose flour and 1 tsp baking powder and stir just until no dry streaks remain. Ripe bananas add natural sweetness and moisture that keep the pancakes tender, and mixing only until combined avoids overworking the gluten and toughening the crumb." },
+      { step: 3, text: "Let the batter rest briefly while you heat the skillet. This short rest lets the flour hydrate and the baking powder begin activating, so the pancakes rise taller and fluffier; the banana-heavy batter also thickens slightly as it sits, making it easier to portion into neat rounds." },
+      { step: 4, text: "Heat a 10-inch nonstick skillet over medium-low heat and ladle on the batter. A moderate pan is essential because the sugars in the banana brown quickly; too-high heat scorches the outside before the dense, moist interior cooks through, leaving a raw, gummy center under a burnt surface." },
+      { step: 5, text: "Cook each pancake for about 2 minutes, until bubbles appear across the surface and the edges look set. The popping bubbles and dry-looking rim tell you the underside is golden and the pancake is stable enough to flip without the soft, banana-rich batter tearing apart." },
+      { step: 6, text: "Flip and cook about 2 minutes more until the second side is lightly browned and the center is set, then serve warm. Banana pancakes look done before the middle firms, so give them the full time; serving hot keeps them moist and fluffy while the miso-banana flavor is at its most fragrant." }
     ],
     chefNotes: "Use the ripest bananas you can find — black-spotted bananas are sweeter and mash to a smoother consistency.",
     pairing: "Black coffee",
@@ -3755,11 +3755,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "3", unit: "tbsp", item: "melted butter" },
     ],
     method: [
-      { step: 1, text: "Whisk the 1 cup masa harina, 1/2 cup all-purpose flour, and 1 tbsp baking powder in a large bowl." },
-      { step: 2, text: "Whisk the 1.5 cups whole milk, 2 large eggs, and 3 tbsp melted butter in a separate bowl until blended." },
-      { step: 3, text: "Stir the wet mixture into the dry mixture until smooth, then rest the batter for 5 minutes until slightly thickened." },
-      { step: 4, text: "Preheat the waffle iron to 375°F, pour in the batter made with 1 cup masa harina, and cook for 4–5 minutes until crisp." },
-      { step: 5, text: "Serve the golden waffles immediately, made with 1/2 cup all-purpose flour and 3 tbsp melted butter, while their edges remain crisp." }
+      { step: 1, text: "Whisk the 1 cup masa harina, 1/2 cup all-purpose flour, and 1 tbsp baking powder in a large bowl until evenly combined. Cutting the dense masa with lighter all-purpose flour keeps the waffles from turning heavy and gritty, while distributing the baking powder thoroughly ensures they rise and crisp evenly across the whole iron." },
+      { step: 2, text: "In a separate bowl whisk the 1.5 cups whole milk, 2 large eggs, and 3 tbsp melted butter until smooth. Whisking the fat and eggs fully into the milk creates an emulsion that keeps the waffles moist and rich, and the melted butter is what crisps the exterior into a golden, crackly shell in the hot iron." },
+      { step: 3, text: "Stir the wet into the dry until just smooth, then rest the batter for 5 minutes. Masa harina absorbs liquid slowly, so this rest lets it fully hydrate and swell into a thicker batter with true corn flavor; skipping it leaves the waffles gritty and thin-tasting rather than tender with a deep toasted-corn character." },
+      { step: 4, text: "Preheat the waffle iron to about 375F until fully hot, then ladle in the batter and cook for 4 to 5 minutes until the steam slows and the waffle is deep golden and crisp. A fully preheated iron is critical so the waffle sears instantly and releases cleanly; the dying steam is your cue it is done inside." },
+      { step: 5, text: "Serve the waffles immediately while hot and crisp, straight from the iron. Corn masa waffles are at their best in the first few minutes, when the outside is shatteringly crisp and the inside soft and steamy; letting them sit or stacking them traps steam that quickly softens that prized crunchy exterior." }
     ],
     chefNotes: "Let the batter rest — masa harina needs hydration time or the waffles will be gritty rather than smooth.",
     pairing: "Fresh orange juice or cold horchata",
@@ -3830,11 +3830,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "2", unit: "", item: "large eggs" },
     ],
     method: [
-      { step: 1, text: "Whisk the 1.5 cups all-purpose flour, 3 tbsp dark cocoa powder, 1/2 tsp chipotle powder, 2 tbsp sugar, and 2 tsp baking powder." },
-      { step: 2, text: "Whisk the 1.5 cups oat milk and 2 large eggs in a separate bowl until fully combined and slightly frothy." },
-      { step: 3, text: "Stir the 1.5 cups oat milk mixture into the dry ingredients until just smooth, taking care not to overmix the batter." },
-      { step: 4, text: "Preheat the waffle iron to 375°F, add the batter made with 3 tbsp dark cocoa powder, and cook for 4–5 minutes until crisp." },
-      { step: 5, text: "Serve the waffles immediately, made with 1/2 tsp chipotle powder and 2 tbsp sugar, when the edges are firm and the surface is crisp." }
+      { step: 1, text: "Whisk the 1.5 cups all-purpose flour, 3 tbsp dark cocoa powder, 1/2 tsp chipotle powder, 2 tbsp sugar, and 2 tsp baking powder in a large bowl until evenly combined and uniformly brown. Thorough mixing disperses the cocoa and the fiery chipotle so no single waffle gets an overpowering hit of heat, giving a balanced chocolate flavor with a slow, warming background burn." },
+      { step: 2, text: "In a separate bowl whisk the 1.5 cups oat milk and 2 large eggs until fully combined and slightly frothy. Whisking in some air and fully blending the eggs creates a smooth liquid that hydrates the dry mix evenly, and the frothiness helps the batter rise for a lighter waffle rather than a dense, cakey one." },
+      { step: 3, text: "Stir the wet into the dry until just smooth, taking care not to overmix. A few small lumps are fine; overworking the batter develops gluten and makes the waffles tough and chewy, whereas a gentle mix keeps them tender with a crisp exterior and a soft, chocolatey interior." },
+      { step: 4, text: "Preheat the waffle iron to about 375F until fully hot, then add the batter and cook for 4 to 5 minutes until the steam slows and the waffle is set and crisp. Chocolate batter is dark to begin with, so watch the steam and firmness rather than color as your doneness cues to avoid opening it too early." },
+      { step: 5, text: "Serve the waffles immediately while the edges are crisp and the chipotle heat is at its liveliest. These waffles are best straight from the iron, when the outside crackles and the warm chocolate and smoky-spicy chipotle bloom together; letting them sit traps steam that softens the crust and dulls the spice." }
     ],
     chefNotes: "Dark Dutch-process cocoa will give a richer, less bitter chocolate flavor than natural cocoa here.",
     pairing: "Strong black coffee",
@@ -3867,12 +3867,12 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1/4", unit: "cup", item: "cajeta", note: "for serving" },
     ],
     method: [
-      { step: 1, text: "Measure the 1 cup buckwheat flour and whisk it into the prepared pancake batter until no dry pockets remain." },
-      { step: 2, text: "Let the mixture containing the 1 cup buckwheat flour rest for 5 minutes, until it thickens slightly and looks evenly hydrated." },
-      { step: 3, text: "Heat a 10-inch nonstick skillet over medium heat until a drop of batter sizzles gently on contact." },
-      { step: 4, text: "Cook portions of the 1 cup buckwheat flour mixture in the skillet until bubbles cover the surface and the edges look set." },
-      { step: 5, text: "Flip each pancake once and cook for 1–2 minutes, until the second side is browned and the center springs back lightly." },
-      { step: 6, text: "Stack the cooked pancakes and serve them immediately, ensuring the full 1 cup buckwheat flour mixture is thoroughly cooked." }
+      { step: 1, text: "Whisk the 1 cup buckwheat flour, 1/2 cup all-purpose flour, and 1.5 tsp baking powder in a large bowl, then whisk in the 1.5 cups buttermilk and 1 large egg until no dry pockets remain. Cutting the earthy buckwheat with all-purpose flour lightens the texture, and the buttermilk's acidity reacts with the leavening for a tangy, tender rise." },
+      { step: 2, text: "Let the batter rest for about 5 minutes until it thickens slightly. Buckwheat flour absorbs liquid and needs a moment to hydrate, so this rest smooths the batter and lets the baking powder begin working; you will see it thicken and puff a little, a sign the pancakes will cook up fluffy rather than flat and dense." },
+      { step: 3, text: "Heat a 10-inch nonstick skillet over medium heat until a drop of batter sizzles gently on contact. That gentle sizzle confirms the pan is at the right temperature to set the pancake and form a golden crust without scorching; too hot and the nutty buckwheat burns quickly, too cool and the pancakes turn pale and tough." },
+      { step: 4, text: "Ladle portions of batter into the skillet and cook until bubbles cover the surface and the edges look dry and set, about 2 minutes. The buckwheat's darker color makes it harder to judge browning, so rely on the bubbles and set edges as your cue that the underside is done and it is safe to flip without tearing." },
+      { step: 5, text: "Flip each pancake once and cook 1 to 2 minutes more until the second side is browned and the center springs back. Flipping only once keeps them light, and the press test ensures the interior is cooked through; buckwheat pancakes can look done outside before the middle sets." },
+      { step: 6, text: "Stack the pancakes and drizzle generously with the 1/4 cup cajeta while still hot. The goat-milk caramel melts into the warm, earthy pancakes with a tangy, deep sweetness that perfectly offsets buckwheat's robust flavor; serve immediately so the cajeta stays fluid and glossy rather than stiffening as it cools." }
     ],
     chefNotes: "Cajeta is sold in glass jars at Mexican grocery stores. It is thicker and more complex than regular caramel.",
     pairing: "Cafe de olla",
@@ -3905,11 +3905,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "toasted sesame seeds" },
     ],
     method: [
-      { step: 1, text: "Brew the 2 tbsp loose leaf into strong green tea, then let the tea cool slightly while you prepare the rice." },
-      { step: 2, text: "Combine the 1/2 cup jasmine rice with the brewed green tea in a medium pot and bring the mixture to a boil." },
-      { step: 3, text: "Reduce the heat to low, cover the pot, and cook for 35–40 minutes until the 1/2 cup jasmine rice breaks into silky porridge." },
-      { step: 4, text: "Stir the 2 tbsp soy sauce into the hot congee until evenly distributed, and continue heating for 1 minute." },
-      { step: 5, text: "Ladle the congee into bowls and sprinkle the 1 tsp toasted sesame seeds over each serving before eating." }
+      { step: 1, text: "Brew the 2 tbsp loose-leaf green tea into 4 cups of strong tea and let it cool slightly. Using brewed green tea as the entire cooking liquid, rather than water, infuses the rice with a delicate grassy, toasty flavor and a pale jade tint; cooling it slightly first avoids over-steeping the leaves into harsh bitterness." },
+      { step: 2, text: "Combine the 1/2 cup jasmine rice with the brewed green tea in a medium pot and bring to a boil over high heat. Jasmine rice breaks down into a silky porridge, and starting over high heat kick-starts the grains opening; the tea's tannins gently season the rice from the very first minute of cooking." },
+      { step: 3, text: "Reduce the heat to low, cover, and cook for 35 to 40 minutes, stirring occasionally, until the rice grains burst and dissolve into a thick, creamy congee. Regular stirring releases the rice starch that thickens the porridge and prevents it from scorching on the bottom, while the long, gentle simmer coaxes out a velvety texture." },
+      { step: 4, text: "Stir the 2 tbsp soy sauce and 1 tsp sesame oil into the hot congee until evenly distributed and continue heating a minute. The soy adds savory depth that balances the tea's subtle bitterness while the sesame oil laces it with nutty aroma; stirring them through ensures every spoonful is seasoned rather than just the surface." },
+      { step: 5, text: "Ladle the congee into bowls and finish each with the 2 tbsp sliced scallions and 1 tsp toasted sesame seeds. The fresh scallions add a bright, sharp lift and the sesame seeds a toasty crunch against the smooth porridge; add them right before serving so they stay crisp and vivid, and eat while hot and steaming." }
     ],
     chefNotes: "The congee should be loose enough to pour slowly from a ladle. If it is too thick, thin it with more hot tea or water.",
     pairing: "Additional green tea alongside",
@@ -3942,11 +3942,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "sesame seeds" },
     ],
     method: [
-      { step: 1, text: "Combine the 1 cup rolled oats and 2 cups water or oat milk in a small saucepan over medium heat." },
-      { step: 2, text: "Cook the 1 cup rolled oats for 5–8 minutes, stirring occasionally, until the liquid is absorbed and the oats look creamy." },
-      { step: 3, text: "Remove the saucepan from the heat and stir in the 1 tbsp white miso paste until it dissolves completely into the oatmeal." },
-      { step: 4, text: "Transfer the oatmeal to a bowl and drizzle the 1 tbsp honey or agave evenly over the hot surface." },
-      { step: 5, text: "Sprinkle the 1/2 tsp Tajin and 1 tbsp sesame seeds over the oatmeal, then serve while visibly hot and thick." }
+      { step: 1, text: "Combine the 1 cup rolled oats and 2 cups water or oat milk in a small saucepan over medium heat. Using oat milk instead of water makes the porridge extra creamy and rich, and starting the oats in the liquid from cold lets them absorb it gradually as it heats, swelling into a smooth, cohesive oatmeal rather than a watery one." },
+      { step: 2, text: "Cook the oats for 5 to 8 minutes, stirring occasionally, until the liquid is absorbed and the mixture is thick and creamy. Stirring now and then releases the oats' starch to thicken the porridge and keeps it from catching on the bottom; pull it while still slightly loose since it firms up as it cools in the bowl." },
+      { step: 3, text: "Take the pan off the heat and stir the 1 tbsp white miso paste in until it dissolves completely. Adding the miso off the heat is important because boiling destroys its delicate flavor and probiotics; stirring it into the hot oatmeal spreads a savory, salty umami through the whole bowl that makes this a sweet-and-savory breakfast." },
+      { step: 4, text: "Spoon the oatmeal into a bowl and drizzle the 1 tbsp honey or agave over the hot surface. The touch of sweetener balances the salty miso into a moreish sweet-savory harmony, and adding it while the oatmeal is hot lets it melt and swirl in rather than sitting as a sticky, separate puddle on top." },
+      { step: 5, text: "Finish with the 1/2 tsp Tajin and 1 tbsp sesame seeds and serve while hot. The chili-lime Tajin adds a bright, tangy, mildly spicy pop that cuts the richness, and the sesame seeds bring nutty crunch; sprinkling them on last keeps them crisp and vivid, and eating immediately keeps the oatmeal warm and creamy." }
     ],
     chefNotes: "Never add miso to boiling oats directly — high heat destroys its fermented compounds. Always stir it in off-heat.",
     pairing: "Black coffee",
@@ -3978,11 +3978,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tsp", item: "furikake seasoning" },
     ],
     method: [
-      { step: 1, text: "Place the 1 cup freshly cooked white rice, still very hot, in a serving bowl and spread it into an even layer." },
-      { step: 2, text: "Crack the 1 very fresh large egg directly over the hot 1 cup rice, keeping the yolk and white together." },
-      { step: 3, text: "Beat the 1 very fresh large egg into the 1 cup rice with chopsticks for 60 seconds, until creamy and uniform." },
-      { step: 4, text: "Sprinkle the 1 tsp furikake seasoning evenly over the creamy 1 cup rice and blended 1 very fresh large egg." },
-      { step: 5, text: "Eat the 1 cup rice immediately while it remains steaming hot, creamy, and topped with the 1 tsp furikake seasoning." }
+      { step: 1, text: "Scoop the 1 cup freshly cooked, very hot white rice into a serving bowl and spread it into an even layer. The retained heat of just-cooked rice is what gently cooks the raw egg into a glossy, creamy coating, so work fast while it is piping hot; spreading it out gives the egg maximum hot surface to warm against." },
+      { step: 2, text: "Crack the 1 very fresh large egg directly over the hot rice, keeping the yolk and white together. A fresh egg holds a tight yolk and thick white that whip into a creamier emulsion, and dropping it straight onto the steaming rice lets the heat begin setting the white immediately for a silky rather than watery texture." },
+      { step: 3, text: "Add the 1 tsp soy sauce and 1 tsp chipotle-infused olive oil, then beat the egg into the rice vigorously with chopsticks for about 60 seconds until pale, creamy, and frothy. The fast whisking against the hot rice emulsifies the egg into a carbonara-like sauce, while the smoky chipotle oil brings a gentle Mexican heat." },
+      { step: 4, text: "Sprinkle the 1 tsp furikake evenly over the creamy rice. Adding the furikake after whisking keeps its toasted sesame and nori flakes crisp on top, layering a savory, briny crunch over the smooth egg-coated rice rather than dissolving it into the mixture and losing its texture." },
+      { step: 5, text: "Eat immediately while the rice is still steaming hot, creamy, and freshly topped. Tamago gohan waits for no one: the egg coating is at its silkiest in the first moments, and letting it sit lets the rice cool and the egg stiffen into clumps, so dig in the instant the furikake is on." }
     ],
     chefNotes: "The egg must be extremely fresh and of high quality since it is consumed raw. Pasteurized eggs can be used if preferred.",
     pairing: "Miso soup on the side",
@@ -4051,11 +4051,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "", item: "lime", note: "cut into wedges" },
     ],
     method: [
-      { step: 1, text: "Combine the 1/2 cup jasmine rice and 1 cup water in a covered 2-quart saucepan, stirring to distribute the rice evenly." },
-      { step: 2, text: "Set the 2-quart saucepan over medium-high heat and bring the 1/2 cup jasmine rice and 1 cup water to a full boil." },
-      { step: 3, text: "Reduce heat to the lowest setting, cover the 1/2 cup jasmine rice and 1 cup water, and simmer for 35–40 minutes." },
-      { step: 4, text: "Stir the 1/2 cup jasmine rice and 1 cup water occasionally during cooking, until the rice breaks down into a thick, opaque porridge." },
-      { step: 5, text: "Remove the cooked 1/2 cup jasmine rice from the heat when it is spoonable and porridge-like, then serve it immediately with the 1 cup water absorbed." }
+      { step: 1, text: "Combine the 1/2 cup jasmine rice, 3 cups birria consome, and 1 cup water in a 2-quart saucepan, stirring to disperse the grains. Cooking the rice in the rich, chile-spiced braising liquid rather than plain water is the whole idea, infusing every grain with deep birria flavor as it slowly breaks down into porridge." },
+      { step: 2, text: "Set the pan over medium-high heat and bring it to a boil. The initial hard boil jump-starts the rice grains opening up, which is what releases the starch that will thicken the congee; bringing it up quickly also saves time before you drop to the long, gentle simmer that follows." },
+      { step: 3, text: "Reduce the heat to its lowest setting, cover with the lid slightly cracked, and simmer for about 40 minutes. The cracked lid lets just enough steam escape to concentrate the consome while preventing a boil-over, and the low heat coaxes the rice into a silky porridge without scorching it against the bottom of the pan." },
+      { step: 4, text: "Stir occasionally throughout cooking, scraping the bottom, until the rice grains burst and dissolve into a thick, creamy, spoon-coating congee. Regular stirring is essential: it releases the rice starch that thickens the porridge and stops it sticking and burning, and the frequent motion is what develops that velvety, luscious texture." },
+      { step: 5, text: "Fold the 1/2 cup shredded birria beef through the hot congee, then ladle into bowls and finish with the 2 tbsp cilantro and the lime wedges. The tender beef adds savory heft, the cilantro a fresh lift, and a squeeze of lime cuts the richness; serve immediately while hot so the flavors stay bright and the porridge loose." }
     ],
     chefNotes: "This is best made the morning after a birria dinner while you still have the consome warm.",
     pairing: "More consome on the side for dipping",
@@ -4125,11 +4125,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "honey or agave" },
     ],
     method: [
-      { step: 1, text: "Place the 2 frozen bananas, sliced before freezing, and 1 tsp ceremonial grade matcha powder in a blender." },
-      { step: 2, text: "Add the 1 tbsp honey or agave and blend on high until thick, smooth, and vividly green, stopping to scrape as needed." },
-      { step: 3, text: "Check the blended 2 frozen bananas and 1 tsp ceremonial grade matcha powder for a spoonable texture that holds soft peaks." },
-      { step: 4, text: "Divide the mixture made from the 2 frozen bananas between two serving bowls, smoothing each surface with a spoon." },
-      { step: 5, text: "Serve the 2 bowls immediately, while the base remains cold, thick, and spoonable rather than melted." }
+      { step: 1, text: "Add the 2 sliced frozen bananas, 1 tsp ceremonial-grade matcha, and 1/4 cup coconut milk to a blender. Slicing the bananas before freezing lets the blades catch them so they blend into a thick, ice-cream-like base, and using only a little coconut milk keeps the mixture stiff enough to mound rather than turning drinkable." },
+      { step: 2, text: "Add the 1 tbsp honey or agave and blend on high until thick, smooth, and vividly green, stopping to scrape down the sides as needed. The sweetener balances matcha's natural grassy bitterness, and scraping ensures every frozen banana chunk gets pulled into the vortex for a uniform, lump-free base." },
+      { step: 3, text: "Check that the blended mixture is thick and spoonable, holding a peak when you lift the spoon rather than pouring. This soft-serve consistency is the goal of a smoothie bowl; if it is too runny, add a few more frozen banana slices, and if it stalls the blender, a tiny splash more coconut milk gets it moving again." },
+      { step: 4, text: "Divide the base between two chilled bowls and smooth each surface flat. Pre-chilling the bowls keeps the base cold and firm while you top it, and a level surface gives you a neat canvas so the granola and fruit sit attractively on top instead of sinking into a melting pool." },
+      { step: 5, text: "Arrange the 1/2 cup granola and 1 cup sliced fresh mango, strawberry, and kiwi over the top and serve immediately. The granola adds crucial crunch and the fresh fruit bright juiciness against the creamy matcha base; serve right away because the frozen base softens fast and the granola loses its crispness once it sinks in." }
     ],
     chefNotes: "Freeze bananas sliced — whole frozen bananas are nearly impossible to blend without a commercial blender.",
     pairing: "Iced matcha latte",
@@ -4162,11 +4162,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "cup", item: "mixed toppings", note: "granola, sliced mango, coconut flakes" },
     ],
     method: [
-      { step: 1, text: "Cut open the 2 packets frozen unsweetened acai, 100g each, and break the frozen contents into blender-sized chunks." },
-      { step: 2, text: "Add the 1 tbsp tamarind concentrate to the blender with the 2 packets frozen unsweetened acai." },
-      { step: 3, text: "Blend the 2 packets frozen unsweetened acai and 1 tbsp tamarind concentrate until completely smooth and very thick." },
-      { step: 4, text: "Stop and scrape the blender jar as needed, then blend the 2 packets and 1 tbsp concentrate until no icy pieces remain." },
-      { step: 5, text: "Divide the mixture from the 2 packets frozen unsweetened acai and 1 tbsp tamarind concentrate between two bowls." }
+      { step: 1, text: "Cut open the 2 packets of frozen unsweetened acai, break the contents into chunks, and drop them into a blender with the 1 frozen banana. Breaking the rock-hard puree into pieces lets the blades catch it, while the frozen banana adds creamy sweetness that softens acai's tart, earthy edge and gives the bowl its thick, scoopable body." },
+      { step: 2, text: "Add the 1 tbsp tamarind concentrate and 1/4 cup apple juice or water to the blender. The tamarind brings a bold sweet-sour tang that plays against the acai, and the small splash of juice is just enough liquid to get everything blending without thinning the mixture into a drinkable smoothie." },
+      { step: 3, text: "Blend on high until completely smooth and thick, stopping to scrape down the sides as needed. Scraping pulls every frozen chunk into the blades so there are no icy bits, and stopping while the mixture is still stiff, like soft-serve, keeps it firm enough to hold a peak and support the toppings." },
+      { step: 4, text: "Spoon the base into a chilled bowl and smooth the surface flat. A pre-chilled bowl slows melting so the base stays firm while you top it, and leveling it gives a clean canvas so the granola, mango, and coconut sit neatly on top rather than sliding into a soupy pool." },
+      { step: 5, text: "Scatter the 1 cup mixed toppings of granola, sliced mango, and coconut flakes over the top and dust with the 1/2 tsp Tajin, then serve immediately. The chili-lime Tajin adds a tangy, mildly spicy kick that makes the sweet-tart base pop, and eating right away keeps the base cold and thick before it melts." }
     ],
     chefNotes: "Tamarind concentrate varies wildly in sourness. Taste and adjust — you want sour but not face-puckering.",
     pairing: "Sparkling agua fresca",
@@ -4200,11 +4200,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "white onion", note: "finely diced" },
     ],
     method: [
-      { step: 1, text: "Heat a 10-inch skillet over medium heat, then add the 4 cups thick tortilla chips in an even layer." },
-      { step: 2, text: "Warm the 4 cups thick tortilla chips for 2–3 minutes, turning gently, until edges soften slightly while centers stay crisp." },
-      { step: 3, text: "Divide the warmed 4 cups thick tortilla chips between two plates, keeping the pieces evenly distributed." },
-      { step: 4, text: "Drizzle the 3 tbsp Mexican crema over the 4 cups thick tortilla chips, dividing it evenly between the plates." },
-      { step: 5, text: "Scatter the 2 tbsp finely diced white onion over both plates and serve immediately while the chips retain a bite." }
+      { step: 1, text: "Warm the 1.5 cups salsa roja in a wide 10-inch skillet over medium heat, then whisk the 1 tbsp red miso paste into it until fully dissolved. The miso lends a deep, meaty umami that amplifies the chile-tomato salsa, and dissolving it into the warm sauce spreads that savoriness evenly rather than leaving concentrated salty streaks." },
+      { step: 2, text: "Simmer the miso-salsa for about 5 minutes until it darkens slightly, thickens enough to coat a spoon, and smells roasted. Simmering concentrates the flavor and drives off any raw edge from jarred salsa, so the sauce clings to the chips and tastes rich and cooked rather than thin and sharp." },
+      { step: 3, text: "Add the 4 cups thick tortilla chips and toss gently but quickly for 1 to 2 minutes, until the edges soften and turn pliable while the centers still hold a crunch. Work fast and fold from the bottom up; the whole art of chilaquiles is pulling them the instant they go from stiff to tender-with-bite, before they turn to mush." },
+      { step: 4, text: "Divide the saucy chips between two plates while they still crackle and top each with a sunny-side-up fried egg. Serving them the moment they are coated preserves that essential crunch, and the runny yolk becomes a rich sauce that mingles with the miso-salsa when broken over the chips." },
+      { step: 5, text: "Drizzle the 3 tbsp Mexican crema over both plates, crumble the 1/4 cup cotija on top, and scatter the 2 tbsp finely diced white onion, then serve immediately. The cool crema and salty cotija balance the chile heat while the raw onion adds a sharp bite; eat at once before the chips lose their crunch." }
     ],
     chefNotes: "The window for perfect chilaquiles is narrow — soggy chips are the enemy. Serve the moment they are plated.",
     pairing: "Strong black coffee or a Michelada",
@@ -4312,11 +4312,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "cup", item: "plant-based milk or yogurt", note: "for serving" },
     ],
     method: [
-      { step: 1, text: "Preheat the oven to 325°F (165°C), line a baking sheet with parchment, and measure the 3 cups rolled oats." },
-      { step: 2, text: "Spread the 3 cups rolled oats in an even layer on the parchment, keeping the layer shallow for even browning." },
-      { step: 3, text: "Bake the 3 cups rolled oats for 10 minutes, then stir thoroughly so the edges do not brown faster." },
-      { step: 4, text: "Continue baking the 3 cups rolled oats for 5–10 minutes, until they are dry, crisp, and evenly golden." },
-      { step: 5, text: "Cool the 3 cups rolled oats completely on the baking sheet, then break up any clumps and serve as granola." }
+      { step: 1, text: "Preheat the oven to 325F (165C) and line a baking sheet with parchment. This moderate temperature toasts the oats to a golden crisp without scorching the honey and sesame paste; a hotter oven would burn the edges before the centers dry out, so the gentle heat is what yields an even, all-over crunch." },
+      { step: 2, text: "Warm the 2 tbsp black sesame paste, 3 tbsp honey, 1 tbsp coconut oil, and 1/2 tsp salt together until pourable, then toss with the 3 cups rolled oats and spread in a shallow, even layer. Loosening the thick sesame paste with the warm honey and oil lets it coat every oat evenly, which is what forms crunchy, flavorful clusters." },
+      { step: 3, text: "Bake for 10 minutes, then pull the sheet out and stir the oats thoroughly. Stirring midway is essential because the oats at the edges of the pan brown much faster than the center; redistributing them ensures the whole batch toasts evenly rather than leaving you with burnt rims and pale, soft middles." },
+      { step: 4, text: "Continue baking for another 5 to 10 minutes until the oats are dry, crisp, and evenly golden. Watch closely near the end, since the sesame and honey can go from toasty to burnt quickly; pull the granola while it is just golden because it crisps further as it cools, so it should look slightly underdone coming out." },
+      { step: 5, text: "Cool the granola completely on the sheet, undisturbed, then break up any clumps and serve over the 1 cup plant-based milk or yogurt. Cooling is when the honey and coconut oil set to lock the oats into crunchy clusters, so resist stirring; the nutty black sesame granola stays crisp against the creamy milk or yogurt when added just before eating." }
     ],
     chefNotes: "The granola will seem soft when it comes out of the oven. Do not overbake it trying to get it crispy — it hardens completely as it cools.",
     pairing: "Cold oat milk or fruit yogurt",
@@ -4349,11 +4349,11 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "toasted coconut flakes" },
     ],
     method: [
-      { step: 1, text: "Measure the 1/3 cup chia seeds (diced) and the 2 tbsp toasted coconut flakes into a clean pint jar." },
-      { step: 2, text: "Stir the 1/3 cup chia seeds (diced) and 2 tbsp toasted coconut flakes for 2 minutes until evenly combined." },
-      { step: 3, text: "Cover the jar and refrigerate the 1/3 cup chia seeds and 2 tbsp toasted coconut flakes at 40°F (4°C) for 4 hours." },
-      { step: 4, text: "Stir the chilled 1/3 cup chia seeds (diced) and 2 tbsp toasted coconut flakes until no clumps remain." },
-      { step: 5, text: "Serve the chilled 1/3 cup chia seeds (diced) with the 2 tbsp toasted coconut flakes, noting that no liquid is listed." }
+      { step: 1, text: "Whisk the 1 tsp matcha powder with a splash of the 1.5 cups coconut milk in a jar until it forms a smooth, lump-free paste. Matcha clumps stubbornly if dumped straight into liquid, so making a slurry first guarantees the green tea flavor and color disperse evenly throughout the pudding instead of leaving bitter powdery pockets." },
+      { step: 2, text: "Add the remaining coconut milk, the 1/3 cup chia seeds, and the 1 tbsp maple syrup to the jar and stir vigorously for a couple of minutes until fully combined. Stirring well now, and again a few minutes later, prevents the chia from clumping so it gels into an even, smooth pudding rather than a slimy clump at the bottom." },
+      { step: 3, text: "Cover the jar and refrigerate for at least 4 hours or overnight, until the chia swells and sets into a thick, spoonable pudding. This cold soak is what transforms the seeds into a tapioca-like gel that thickens the whole mixture; rushing it leaves the pudding soupy and the seeds crunchy rather than plump and soft." },
+      { step: 4, text: "Stir the chilled pudding to loosen and redistribute it, adding a splash more coconut milk if it has set too firmly. Overnight the chia thickens considerably, so a final stir restores a creamy, scoopable consistency and breaks up any pockets where the seeds settled and clumped together during the long rest." },
+      { step: 5, text: "Spoon the matcha chia pudding into bowls and top with the diced 1 large ripe mango and 2 tbsp toasted coconut flakes. The sweet, juicy mango cuts through the earthy matcha and the toasted coconut adds a crisp, nutty finish; add them right before serving so the coconut stays crunchy and the mango fresh and bright." }
     ],
     chefNotes: "If the matcha does not fully dissolve in the coconut milk, use an immersion blender for 30 seconds before adding the chia seeds.",
     pairing: "Cold green tea or sparkling water",
@@ -4386,12 +4386,12 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "1", unit: "tbsp", item: "butter" },
     ],
     method: [
-      { step: 1, text: "Heat a 10-inch nonstick skillet over medium heat, about 350°F (175°C), before adding the 1 tbsp butter." },
-      { step: 2, text: "Melt the 1 tbsp butter in the 10-inch skillet for 1–2 minutes, until fully liquid and lightly foaming." },
-      { step: 3, text: "Add the 1 cup all-purpose flour and stir constantly for 3–5 minutes, until it smells toasted and turns pale golden." },
-      { step: 4, text: "Add the 2 tbsp white miso paste to the skillet and stir for 1–2 minutes, until the flour mixture looks evenly coated." },
-      { step: 5, text: "Cook the 1 cup all-purpose flour with the 2 tbsp white miso paste for 1 minute more, until dry and lightly golden." },
-      { step: 6, text: "Cool the 1 tbsp butter, 1 cup all-purpose flour, and 2 tbsp white miso paste mixture for 5 minutes before serving." }
+      { step: 1, text: "Whisk the 1 cup all-purpose flour, 2 large eggs, and 1.5 cups whole milk in a bowl until completely smooth, then let the batter rest 15 minutes. Resting relaxes the gluten and lets air bubbles settle so the crepes cook up thin, tender, and lacy rather than rubbery; a smooth, lump-free batter is essential for even, delicate crepes." },
+      { step: 2, text: "Melt a little of the 1 tbsp butter in a 10-inch nonstick skillet over medium heat, pour in a thin ladle of batter, and swirl to coat the pan. Swirling immediately spreads the batter into a paper-thin round before it sets; cook about a minute until the edges lift and the underside is golden, then flip and cook 30 seconds more." },
+      { step: 3, text: "Repeat with the remaining batter, stacking the finished crepes, then wipe the pan and add the rest of the butter. Cooking all the crepes first lets you work in a rhythm, and stacking them keeps them warm and pliable; a fresh film of butter for the filling prevents the mushrooms from sticking and browning unevenly." },
+      { step: 4, text: "Add the 2 cups sliced mixed mushrooms to the buttery pan and cook over medium-high heat for 6 to 8 minutes, undisturbed at first, until deeply browned and their moisture has cooked off. Leaving them alone lets them sear rather than steam, which is what develops their savory, meaty depth instead of leaving them pale and watery." },
+      { step: 5, text: "Stir the 2 tbsp white miso paste into the mushrooms off the heat until they are glossy and coated. Adding the miso off the burner protects its delicate flavor from scorching, and its salty, fermented umami turns the earthy mushrooms into a deeply savory filling that needs no other seasoning." },
+      { step: 6, text: "Spoon the miso mushrooms down the center of each crepe, fold or roll them up, and serve immediately. Folding while the crepes are still warm keeps them supple so they do not crack, and serving right away means the delicate crepe stays tender and the mushroom filling hot and glossy rather than cooling and stiffening." }
     ],
     chefNotes: "The first crepe always sticks and looks terrible. It is simply the sacrificial crepe that seasons the pan — eat it yourself while cooking the rest.",
     pairing: "Strong black coffee or green tea",
@@ -4424,12 +4424,12 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "2", unit: "tbsp", item: "piloncillo or brown sugar" },
     ],
     method: [
-      { step: 1, text: "Combine the 1/2 cup jasmine rice, 3 cups whole milk, 1 cup water, 1 stick cinnamon, and 2 tbsp piloncillo in a heavy pot." },
-      { step: 2, text: "Heat the mixture over medium-low heat, stirring frequently, until the 3 cups whole milk reaches a gentle simmer without scorching." },
-      { step: 3, text: "Simmer the 1/2 cup jasmine rice mixture for 30–35 minutes, stirring often, until the rice breaks down and the congee thickens." },
-      { step: 4, text: "Remove the 1 stick cinnamon from the hot congee once the rice is fully tender and the mixture looks thick and porridge-like." },
-      { step: 5, text: "Turn off the heat, whisk the 1 tbsp white miso paste with 2 tbsp hot congee in a small bowl until completely smooth." },
-      { step: 6, text: "Stir the dissolved 1 tbsp white miso paste into the pot and serve the congee warm while it remains creamy." }
+      { step: 1, text: "Combine the 1/2 cup jasmine rice, 3 cups whole milk, 1 cup water, 1 cinnamon stick, and 2 tbsp piloncillo in a heavy saucepan. Cooking the rice in milk sweetened with piloncillo and infused with cinnamon builds an arroz-con-leche-style base, and adding the spice and sugar from the start lets their warmth steep deep into every grain." },
+      { step: 2, text: "Heat the mixture over medium-low heat, stirring frequently, until it reaches a gentle simmer. Milk scorches easily, so keeping the heat moderate and stirring constantly at this stage is crucial to prevent it from catching and burning on the bottom, which would give the whole congee an acrid, ruined flavor." },
+      { step: 3, text: "Simmer for 30 to 35 minutes, stirring often, until the rice grains burst and dissolve into a thick, creamy porridge. Frequent stirring both prevents the milk from scorching and releases the rice starch that thickens the congee; you will know it is ready when a spoon dragged across leaves a slowly-closing trench." },
+      { step: 4, text: "Remove and discard the cinnamon stick once the rice is fully tender and the mixture looks creamy. Pulling it now stops the cinnamon from turning bitter with prolonged cooking, leaving behind just its warm, sweet aroma; the congee should be lush and thick, loosening slightly if you prefer with a splash more milk." },
+      { step: 5, text: "Turn off the heat and whisk the 1 tbsp white miso paste with 2 tbsp of the hot congee in a small bowl until smooth. Dissolving the miso separately off the heat prevents lumps and protects its delicate flavor from boiling, so its subtle savory-salty depth balances the sweet cinnamon rice rather than clumping in." },
+      { step: 6, text: "Stir the dissolved miso back into the pot and serve the congee warm. The miso adds a quiet umami undertone that keeps the sweet, creamy porridge from being one-dimensional; serve it while warm and loose, since it thickens considerably as it cools and can be thinned with a little milk if needed." }
     ],
     chefNotes: "Milk burns on the bottom of the pot if you do not stir frequently. A heavy-bottomed pot reduces this risk significantly.",
     pairing: "Cafe de olla",
@@ -4461,12 +4461,12 @@ export const breakfastRecipes: Recipe[] = [
       { qty: "8", unit: "", item: "dried corn husks", note: "soaked in hot water 30 minutes" },
     ],
     method: [
-      { step: 1, text: "Use the 2 cups masa harina, soaked in hot water for 30 minutes, and knead it until the dough is smooth and pliable." },
-      { step: 2, text: "Divide the 2 cups masa harina dough into equal portions, shaping each portion into a compact, evenly sized tamale." },
-      { step: 3, text: "Spread each portion of the 2 cups masa harina dough evenly in the center of its prepared wrapper." },
-      { step: 4, text: "Fold the sides of each wrapper inward over the 2 cups masa harina dough, then fold the bottom upward to enclose it." },
-      { step: 5, text: "Stand the wrapped portions of the 2 cups masa harina upright in a steamer basket over boiling water." },
-      { step: 6, text: "Steam the 2 cups masa harina dough for 40–45 minutes, until firm and pulling cleanly away from each wrapper." }
+      { step: 1, text: "Beat the 4 tbsp lard or butter until fluffy, then work in the 2 cups masa harina, 1 tbsp white miso paste, and enough of the 1.5 cups warm broth to form a soft, spreadable dough. Whipping the fat first makes the tamales light, and the dough should be moist and fluffy, roughly the texture of thick frosting, so it steams tender rather than dense." },
+      { step: 2, text: "Divide the dough into equal portions, one for each of the drained 8 soaked corn husks. Portioning evenly ensures the tamales cook at the same rate and are uniformly sized, and the husks, softened by their 30-minute soak, are now pliable enough to fold without splitting around the filling." },
+      { step: 3, text: "Spread each portion in a thin, even layer across the center of a husk, leaving a border at the edges. A thin, even spread lets the masa steam through to the center and cook uniformly; leaving borders is what allows you to fold the husk cleanly around the dough so it does not squeeze out during steaming." },
+      { step: 4, text: "Fold the sides of each husk inward over the masa, then fold the bottom pointed end up to close. Folding the sides first encloses the dough while the folded-up bottom seals it in and lets steam circulate around the open top; a well-wrapped tamale holds its shape and cooks evenly without leaking." },
+      { step: 5, text: "Stand the wrapped tamales upright, open-end up, in a steamer basket over boiling water. Standing them vertically keeps the masa from sliding out the open end and lets the steam rise evenly around each one, which is the traditional way to ensure they cook through uniformly rather than unraveling in the pot." },
+      { step: 6, text: "Steam for 40 to 45 minutes until the masa is firm and pulls cleanly away from the husk when peeled. That clean release is the definitive doneness test: if the dough sticks to the husk it needs more time, whereas a tamale that peels away easily is fully set, fluffy, and ready to serve hot." }
     ],
     chefNotes: "The tamale is done when the masa feels firm and no longer sticks to the corn husk when you peel it back. Under-cooked tamales have a gummy, wet texture.",
     pairing: "Cafe de olla and salsa verde",
