@@ -1,3 +1,5 @@
 - [Mestizo Umami recipe data architecture](mestizo-umami-recipes.md) — 4 split files re-exported from recipes.ts; mealSlots union includes "brunch" and "side".
 - [Mestizo Umami GitHub push](mestizo-umami-github.md) — remote is ABBYCRM/Food-app.git; PAT stored as GITHUB_PAT secret; always set-url before push.
 - [Mestizo Umami auth architecture](mestizo-umami-auth.md) — OIDC+PKCE Google auth, scoped repos, Stripe, migration path quirk, key derivation quirk.
+- [Mestizo Umami Instacart integration](mestizo-umami-instacart.md) — Composio toolkit is NO_AUTH; isolate through the Mestizo session and accept only official Instacart URLs.
+- [Mestizo Umami releases](mestizo-umami-release.md) — resolve the DigitalOcean app by name and audit required runtime secret keys before declaring production ready.
