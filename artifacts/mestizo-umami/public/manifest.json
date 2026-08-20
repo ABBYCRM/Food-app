@@ -9,11 +9,11 @@
   "scope": "/",
   "start_url": "/",
   "icons": [
-    { "src": "/favicon-32.png",      "sizes": "32x32",   "type": "image/png" },
-    { "src": "/icon-192.png",         "sizes": "192x192", "type": "image/png" },
-    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
-    { "src": "/icon-512.png",         "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    { "src": "/favicon-32-v2.png",      "sizes": "32x32",   "type": "image/png" },
+    { "src": "/icon-192-v2.png",         "sizes": "192x192", "type": "image/png" },
+    { "src": "/apple-touch-icon-v2.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/icon-512-v2.png",         "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-maskable-512-v2.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ],
   "categories": ["food", "lifestyle"],
   "screenshots": [],
@@ -23,21 +23,21 @@
       "short_name": "Recipes",
       "description": "Browse all fusion recipes",
       "url": "/recipes",
-      "icons": [{ "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+      "icons": [{ "src": "/icon-192-v2.png", "sizes": "192x192", "type": "image/png" }]
     },
     {
       "name": "Meal Planner",
       "short_name": "Planner",
       "description": "Plan your weekly meals",
       "url": "/planner",
-      "icons": [{ "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+      "icons": [{ "src": "/icon-192-v2.png", "sizes": "192x192", "type": "image/png" }]
     },
     {
       "name": "My Notebook",
       "short_name": "Notebook",
       "description": "Your saved recipes",
       "url": "/notebook",
-      "icons": [{ "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+      "icons": [{ "src": "/icon-192-v2.png", "sizes": "192x192", "type": "image/png" }]
     }
   ]
 }
