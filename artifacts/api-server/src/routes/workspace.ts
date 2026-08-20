@@ -12,6 +12,7 @@
  * POST /api/import           → import user data
  *
  * POST /api/affiliate/click  → record an affiliate click
+ * GET  /api/instacart/status → identify the supported Instacart link flow
  * POST /api/instacart/shopping → create Instacart shopping link
  */
 import { Router } from "express";
@@ -88,6 +89,12 @@ function parseInput<T>(schema: z.ZodType<T>, body: unknown, res: import("express
 export function createWorkspaceRouter(auth: AuthMiddleware, instacartService: InstacartService | null): Router {
   const router = Router();
   const protect = requireEntitlement();
+  const instacartUnavailable = (res: import("express").Response) => res.status(503).json({
+    available: false,
+    connection: "not_required",
+    error: "Instacart shopping is temporarily unavailable. Please try again later.",
+    code: "INSTACART_UNAVAILABLE",
+  });
 
   // All workspace routes require authentication
   router.use(auth.resolveAuthentication, auth.requireAuthentication);
@@ -196,41 +203,54 @@ export function createWorkspaceRouter(auth: AuthMiddleware, instacartService: In
 
   // ── Instacart shopping ────────────────────────────────────────────────────
 
-  if (instacartService) {
-    router.get("/instacart/retailers", protect, async (req, res, next) => {
-      try {
-        const parsed = instacartRetailerQuerySchema.safeParse(req.query);
-        if (!parsed.success) {
-          return res.status(400).json({ error: "A valid US or Canadian postal code is required", code: "INVALID_INPUT" });
-        }
-        const retailers = await instacartService.getNearbyRetailers(
-          req.user!.id,
-          parsed.data.postalCode,
-          parsed.data.countryCode,
-        );
-        return res.json({ retailers });
-      } catch (err) { return next(err); }
+  // Composio's current Instacart toolkit is NO_AUTH. The authenticated Mestizo
+  // user is still always used to derive the server-side Composio identity, but
+  // their Instacart sign-in happens on the generated Instacart page. Returning
+  // this explicitly prevents the UI from inventing a connection state.
+  router.get("/instacart/status", protect, (_req, res) => {
+    if (!instacartService) return instacartUnavailable(res);
+    return res.json({
+      available: true,
+      connection: "not_required",
+      signInOnInstacart: true,
     });
+  });
 
-    router.post("/instacart/shopping", auth.requireCsrf, protect, async (req, res, next) => {
-      try {
-        const data = parseInput(instacartShoppingSchema, req.body, res);
-        if (!data) return;
+  router.get("/instacart/retailers", protect, async (req, res, next) => {
+    try {
+      if (!instacartService) return instacartUnavailable(res);
+      const parsed = instacartRetailerQuerySchema.safeParse(req.query);
+      if (!parsed.success) {
+        return res.status(400).json({ error: "A valid US or Canadian postal code is required", code: "INVALID_INPUT" });
+      }
+      const retailers = await instacartService.getNearbyRetailers(
+        req.user!.id,
+        parsed.data.postalCode,
+        parsed.data.countryCode,
+      );
+      return res.json({ retailers });
+    } catch (err) { return next(err); }
+  });
 
-        const hash   = requestHash(data as Parameters<typeof requestHash>[0]);
-        const cached = await repos.getInstacartLinkForUser(req.user!.id, hash);
-        if (cached) return res.json({ url: cached });
+  router.post("/instacart/shopping", auth.requireCsrf, protect, async (req, res, next) => {
+    try {
+      if (!instacartService) return instacartUnavailable(res);
+      const data = parseInput(instacartShoppingSchema, req.body, res);
+      if (!data) return;
 
-        const url = await instacartService.createShoppingPage(
-          req.user!.id,
-          data as Parameters<typeof instacartService.createShoppingPage>[1],
-        );
-        const expiresAt = new Date(Date.now() + 365 * 86_400_000);
-        await repos.putInstacartLinkForUser(req.user!.id, hash, url, expiresAt);
-        return res.json({ url });
-      } catch (err) { return next(err); }
-    });
-  }
+      const hash   = requestHash(data as Parameters<typeof requestHash>[0]);
+      const cached = await repos.getInstacartLinkForUser(req.user!.id, hash);
+      if (cached) return res.json({ url: cached });
+
+      const url = await instacartService.createShoppingPage(
+        req.user!.id,
+        data as Parameters<typeof instacartService.createShoppingPage>[1],
+      );
+      const expiresAt = new Date(Date.now() + 365 * 86_400_000);
+      await repos.putInstacartLinkForUser(req.user!.id, hash, url, expiresAt);
+      return res.json({ url });
+    } catch (err) { return next(err); }
+  });
 
   return router;
 }

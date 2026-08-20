@@ -7,6 +7,7 @@ export type TranslationKey =
   | "recipe.chefNotes" | "recipe.pairing" | "recipe.back"
   | "recipe.saveRecipe" | "recipe.saved" | "recipe.printList"
   | "recipe.shopInstacart" | "recipe.openingInstacart" | "recipe.instacartError"
+  | "recipe.instacartAccountInfo" | "recipe.instacartUnavailable"
   | "recipe.prepCook" | "recipe.difficulty" | "recipe.spice" | "recipe.umami"
   | "recipe.servings" | "recipe.serving" | "recipe.feedsPeople" | "recipe.feedsPerson"
   | "recipe.relatedTitle" | "recipe.notFound" | "recipe.returnCollection"
@@ -29,7 +30,7 @@ export type TranslationKey =
   | "stores.noStores" | "stores.tryOther" | "stores.openMaps"
   | "stores.comingSoon" | "stores.comingSoonDesc" | "stores.addIngredients" | "stores.joinWaitlist"
   | "stores.instacartTitle" | "stores.instacartDescription" | "stores.instacartAvailable"
-  | "stores.signInInstacart" | "stores.chooseRecipe" | "stores.providerUnavailable"
+  | "stores.signInInstacart" | "stores.chooseRecipe" | "stores.providerUnavailable" | "stores.instacartAccountInfo"
   // Common
   | "common.serves" | "common.downloadPdf";
 
@@ -58,6 +59,8 @@ export const translations: Record<"en" | "es" | "pt", LocaleTranslations> = {
     "recipe.shopInstacart": "Shop on Instacart",
     "recipe.openingInstacart": "Opening Instacart",
     "recipe.instacartError": "Instacart couldn't create this shopping list. Please try again.",
+    "recipe.instacartAccountInfo": "We'll take you to Instacart, where you can sign in to use your own account—Mestizo Umami never receives your Instacart credentials.",
+    "recipe.instacartUnavailable": "Instacart shopping is temporarily unavailable. Please try again later.",
     "recipe.prepCook": "Prep / Cook",
     "recipe.difficulty": "Difficulty",
     "recipe.spice": "Spice",
@@ -121,6 +124,7 @@ export const translations: Record<"en" | "es" | "pt", LocaleTranslations> = {
     "stores.signInInstacart": "Sign in to use Instacart",
     "stores.chooseRecipe": "Choose a Recipe",
     "stores.providerUnavailable": "Instacart retailers are temporarily unavailable.",
+    "stores.instacartAccountInfo": "No in-app connection is needed. We'll take you to Instacart, where you can securely sign in to your own account.",
     // Common
     "common.serves": "Serves",
     "common.downloadPdf": "Download PDF",
@@ -148,6 +152,8 @@ export const translations: Record<"en" | "es" | "pt", LocaleTranslations> = {
     "recipe.shopInstacart": "Comprar en Instacart",
     "recipe.openingInstacart": "Abriendo Instacart",
     "recipe.instacartError": "Instacart no pudo crear esta lista. Inténtalo de nuevo.",
+    "recipe.instacartAccountInfo": "Te llevaremos a Instacart, donde puedes iniciar sesión para usar tu propia cuenta; Mestizo Umami nunca recibe tus credenciales de Instacart.",
+    "recipe.instacartUnavailable": "Las compras con Instacart no están disponibles temporalmente. Inténtalo de nuevo más tarde.",
     "recipe.prepCook": "Prep / Cocción",
     "recipe.difficulty": "Dificultad",
     "recipe.spice": "Picante",
@@ -211,6 +217,7 @@ export const translations: Record<"en" | "es" | "pt", LocaleTranslations> = {
     "stores.signInInstacart": "Inicia sesión para usar Instacart",
     "stores.chooseRecipe": "Elegir una Receta",
     "stores.providerUnavailable": "Las tiendas de Instacart no están disponibles temporalmente.",
+    "stores.instacartAccountInfo": "No se necesita conexión dentro de la aplicación. Te llevaremos a Instacart, donde puedes iniciar sesión de forma segura con tu propia cuenta.",
     // Common
     "common.serves": "Porciones",
     "common.downloadPdf": "Descargar PDF",
@@ -238,6 +245,8 @@ export const translations: Record<"en" | "es" | "pt", LocaleTranslations> = {
     "recipe.shopInstacart": "Comprar no Instacart",
     "recipe.openingInstacart": "Abrindo o Instacart",
     "recipe.instacartError": "O Instacart não conseguiu criar esta lista. Tente novamente.",
+    "recipe.instacartAccountInfo": "Vamos levar você ao Instacart, onde poderá entrar para usar sua própria conta — o Mestizo Umami nunca recebe suas credenciais do Instacart.",
+    "recipe.instacartUnavailable": "As compras no Instacart estão temporariamente indisponíveis. Tente novamente mais tarde.",
     "recipe.prepCook": "Prep / Cozimento",
     "recipe.difficulty": "Dificuldade",
     "recipe.spice": "Picância",
@@ -301,6 +310,7 @@ export const translations: Record<"en" | "es" | "pt", LocaleTranslations> = {
     "stores.signInInstacart": "Entre para usar o Instacart",
     "stores.chooseRecipe": "Escolher uma Receita",
     "stores.providerUnavailable": "As lojas do Instacart estão temporariamente indisponíveis.",
+    "stores.instacartAccountInfo": "Não é preciso conectar uma conta dentro do app. Vamos levar você ao Instacart, onde poderá entrar com segurança na sua própria conta.",
     // Common
     "common.serves": "Porções",
     "common.downloadPdf": "Baixar PDF",

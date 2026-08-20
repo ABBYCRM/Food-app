@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Search, MapPin, ExternalLink, ShoppingCart, ShoppingBag } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
@@ -22,6 +22,13 @@ interface InstacartRetailer {
   logoUrl: string | null;
 }
 
+interface InstacartStatus {
+  available: boolean;
+  connection: "not_required";
+  signInOnInstacart?: boolean;
+  error?: string;
+}
+
 function distanceMiles(lat1: number, lon1: number, lat2: number, lon2: number): number {
   const R = 3958.8;
   const dLat = (lat2 - lat1) * Math.PI / 180;
@@ -40,6 +47,32 @@ export function StoresPage() {
   const [hasSearched, setHasSearched] = useState(false);
   const [instacartRetailers, setInstacartRetailers] = useState<InstacartRetailer[]>([]);
   const [providerError, setProviderError] = useState<string | null>(null);
+  const [instacartStatus, setInstacartStatus] = useState<InstacartStatus | null>(null);
+
+  useEffect(() => {
+    let active = true;
+    if (!authenticated) {
+      setInstacartStatus(null);
+      return () => { active = false; };
+    }
+
+    void authFetch("/api/instacart/status")
+      .then(async (response) => {
+        const data = await response.json().catch(() => ({})) as InstacartStatus;
+        if (!active) return;
+        setInstacartStatus({
+          available: response.ok && data.available === true,
+          connection: "not_required",
+          signInOnInstacart: data.signInOnInstacart,
+          error: data.error,
+        });
+      })
+      .catch(() => {
+        if (active) setInstacartStatus({ available: false, connection: "not_required" });
+      });
+
+    return () => { active = false; };
+  }, [authenticated, authFetch]);
 
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -228,6 +261,9 @@ export function StoresPage() {
           <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
             {t("stores.instacartDescription")}
           </p>
+            <p className="text-sm text-muted-foreground mb-8 leading-relaxed">
+              {t("stores.instacartAccountInfo")}
+            </p>
 
           {instacartRetailers.length > 0 && (
             <div className="mb-8 text-left">
@@ -245,20 +281,35 @@ export function StoresPage() {
             </div>
           )}
 
-          {providerError && <p role="alert" className="text-sm text-amber-300 mb-5">{providerError}</p>}
+          {(providerError || (authenticated && instacartStatus?.available === false)) && (
+            <p role="alert" className="text-sm text-amber-300 mb-5">
+              {providerError ?? instacartStatus?.error ?? t("stores.providerUnavailable")}
+            </p>
+          )}
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             {authenticated ? (
-              <Button
-                asChild
-                size="lg"
-                className="w-full sm:w-auto h-14 px-8 bg-[#FF5A1F] hover:bg-[#e94d16] text-white uppercase tracking-widest text-sm font-medium"
-              >
-                <Link href="/recipes">
+              instacartStatus?.available === false ? (
+                <Button
+                  disabled
+                  size="lg"
+                  className="w-full sm:w-auto h-14 px-8 bg-[#FF5A1F] text-white uppercase tracking-widest text-sm font-medium"
+                >
                   <ShoppingCart className="w-4 h-4 mr-2" />
-                  {t("stores.chooseRecipe")}
-                </Link>
-              </Button>
+                  {t("stores.providerUnavailable")}
+                </Button>
+              ) : (
+                <Button
+                  asChild
+                  size="lg"
+                  className="w-full sm:w-auto h-14 px-8 bg-[#FF5A1F] hover:bg-[#e94d16] text-white uppercase tracking-widest text-sm font-medium"
+                >
+                  <Link href="/recipes">
+                    <ShoppingCart className="w-4 h-4 mr-2" />
+                    {t("stores.chooseRecipe")}
+                  </Link>
+                </Button>
+              )
             ) : (
               <Button
                 onClick={() => login("/stores")}

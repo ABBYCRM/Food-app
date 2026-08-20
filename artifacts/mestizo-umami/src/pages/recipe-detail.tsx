@@ -91,6 +91,26 @@ export function RecipeDetail() {
   const [servings, setServings] = useState<number>(1);
   const [shopping, setShopping] = useState(false);
   const [shoppingError, setShoppingError] = useState<string | null>(null);
+  const [instacartAvailable, setInstacartAvailable] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    let active = true;
+    if (!authenticated) {
+      setInstacartAvailable(null);
+      return () => { active = false; };
+    }
+
+    void authFetch("/api/instacart/status")
+      .then(async (response) => {
+        const data = await response.json().catch(() => ({})) as { available?: boolean };
+        if (active) setInstacartAvailable(response.ok && data.available === true);
+      })
+      .catch(() => {
+        if (active) setInstacartAvailable(false);
+      });
+
+    return () => { active = false; };
+  }, [authenticated, authFetch]);
 
   useEffect(() => {
     if (recipe) {
@@ -625,7 +645,7 @@ export function RecipeDetail() {
             <div className="flex gap-3 flex-wrap md:justify-end">
               <Button
                 onClick={() => void shopWithInstacart()}
-                disabled={shopping}
+                disabled={shopping || instacartAvailable === false}
                 data-testid="button-shop-instacart"
                 size="lg"
                 className="shrink-0 bg-[#FF5A1F] hover:bg-[#e94d16] text-white h-12 md:h-14 px-6 md:px-8 text-xs tracking-widest uppercase transition-all"
@@ -635,6 +655,14 @@ export function RecipeDetail() {
                   : <ShoppingCart className="w-4 h-4 md:w-5 md:h-5 mr-2 md:mr-3" />}
                 {shopping ? t("recipe.openingInstacart") : t("recipe.shopInstacart")}
               </Button>
+              {instacartAvailable === false && (
+                <p role="alert" className="w-full text-right text-sm text-amber-300">
+                  {t("recipe.instacartUnavailable")}
+                </p>
+              )}
+              <p className="w-full text-right text-xs text-white/65 max-w-sm">
+                {t("recipe.instacartAccountInfo")}
+              </p>
               <Button
                 onClick={printRecipe}
                 size="lg"
